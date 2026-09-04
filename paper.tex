@@ -6,200 +6,630 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}[theorem]{Lemma}
-\title{Level-Six Alternating Lattices and a Hypothetical Complex Six-Sphere}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{The Level-Six Fibre Lattice in Engel's Torus Fibration}
 \author{Raeez Lorgat}
 \date{}
 \hypersetup{
-  pdftitle={Level-Six Alternating Lattices and a Hypothetical Complex Six-Sphere},
+  pdftitle={The Level-Six Fibre Lattice in Engel's Torus Fibration},
   pdfauthor={Raeez Lorgat},
-  pdfsubject={Discriminant pairings and finite Heisenberg representations}
+  pdfsubject={Integral monodromy, discriminant pairings, and two-fibre topology}
 }
 \begin{document}
 \maketitle
 
 \begin{abstract}
-An alternating rank-four integral lattice with elementary divisors $(1,6)$
-has discriminant group $(\mathbb Z/6\mathbb Z)^2$.  We construct its perfect
-discriminant pairing, an explicit finite Heisenberg group, and a
-six-dimensional irreducible representation with faithful central character.
-The calculation is purely arithmetic.  Its possible relation to a compact
-complex threefold diffeomorphic to $S^6$ is stated only conditionally; neither
-the existence of such a threefold nor a geometric origin for the lattice is
-assumed.
+For the lattice $\Lambda=H_1(F,\mathbb Z)$ of a smooth complex two-torus
+fibre in Engel's fibration, we recover the two integral monodromy markings
+and determine the unique primitive invariant alternating form $\xi$.  The
+distinguished circle class $\delta_0$ and invariant covector $\psi$ satisfy
+\[
+                 \iota_{\delta_0}\xi=-6\psi.
+\]
+An explicit unimodular basis puts $\xi$ in the form $J\oplus6J$; hence its
+discriminant group is $(\mathbb Z/6\mathbb Z)^2$, with a perfect alternating
+pairing and a six-dimensional irreducible finite Heisenberg representation.
+We also compute the complete Smith form of a two-fibre presentation,
+including the zero-determinant case, and identify its determinant with a
+denominator-cleared Seifert Euler number.  The Leray transgression is stated
+only for Engel's multiplicities $(3,4)$; no transgression formula for
+arbitrary multiplicities is asserted.
 \end{abstract}
 
-\section{The discriminant form}
+\section{The fibre calculation}
 
-Let $\Lambda$ be a free abelian group of rank four, and let
-$\xi:\Lambda\times\Lambda\to\mathbb Z$ be alternating.  Define
+The calculation to be explained is the contraction identity
 \[
- \xi^\flat:\Lambda\longrightarrow\Lambda^\vee,
- \qquad
- \xi^\flat(x)=\xi(x,-).
+                         \iota_{\delta_0}\xi=-6\psi.       \tag{1.1}
 \]
-Assume that there is a basis $e_1,f_1,e_2,f_2$ for which
+Its content is not the coefficient alone: $\delta_0$, $\xi$, and $\psi$
+must be carried by the same integral geometric lattice, with compatible
+markings and orientations.
+
+Let $f:Y(u)\to\mathbb P^1$ be the complex two-torus fibration described by
+Engel, and put
 \[
- [\xi]=
+ U=\mathbb P^1\setminus\{0,1,\infty\},\qquad
+ F=f^{-1}(t),\qquad \Lambda=H_1(F,\mathbb Z),\qquad
+ V=\Lambda^\vee
+\]
+for $t\in U$.  Over $U$ this is also the smooth fibre lattice of the
+unmodified fibration $X(u)\to\mathbb P^1$.  Engel's construction supplies
+the filtration
+\[
+ 0\longrightarrow\Lambda^\times\longrightarrow\Lambda
+   \mathrel{\mathop{\longrightarrow}^{\psi}}\mathbb Z\longrightarrow0,
+ \qquad
+ 0\longrightarrow\mathbb Z\delta_0\longrightarrow\Lambda^\times
+   \longrightarrow\Lambda'\longrightarrow0,                 \tag{1.2}
+\]
+where $\delta_0$ is the circle class of the principal
+$\mathbb G_m$-bundle in Engel's chosen marking
+\cite[Sections 2 and 4]{Engel}.
+
+We record the integral markings because every sign below depends on them.
+Let $\varrho=e^{2\pi i/3}$.  In the two good-reduction markings, and writing
+$\tau_0,\tau_1$ for the periods of the second elliptic factors, Engel takes
+\[
+\begin{aligned}
+ e_1&=(1,0),& e_2&=(\varrho,0),& \delta_0&=(0,1),&e_4&=(0,\tau_0),
+ &e_3&=\tfrac13(2+\varrho,1),\\
+ f_1&=(1,0),& f_2&=(i,0),& \delta_1&=(0,1),&f_4&=(0,\tau_1),
+ &f_3&=\tfrac12(1+i,1).
+\end{aligned}                                                   \tag{1.3}
+\]
+The first four entries in each row generate a direct-sum sublattice; after
+adjoining $e_3$, respectively $f_3$, the resulting overlattice $\Lambda$ has
+ordered bases
+\[
+             B_0=(e_1,e_2,e_3,e_4),\qquad
+             B_1=(f_1,f_2,f_3,f_4).
+\]
+For standard counterclockwise meridians
+$\gamma_0\gamma_1\gamma_\infty=1$, the matrices act on column coordinates
+and are
+\[
+ [T_0]_{B_0}=
  \begin{pmatrix}
- 0&1&0&0\\
- -1&0&0&0\\
- 0&0&0&6\\
- 0&0&-6&0
- \end{pmatrix}.
+ 0&-1&-1&0\\ 1&-1&0&0\\ 0&0&1&0\\ 0&0&0&1
+ \end{pmatrix},\qquad
+ [T_1]_{B_1}=
+ \begin{pmatrix}
+ 0&1&0&0\\ -1&0&-1&0\\ 0&0&1&0\\ 0&0&0&1
+ \end{pmatrix}.                                                  \tag{1.4}
+\]
+The complex orientations give multiplication by $\varrho$ at $0$ and by
+$-i$ at $1$.  The circle classes and the transition matrix are
+\[
+ \delta_0=-2e_1-e_2+3e_3,\qquad
+ \delta_1=-f_1-f_2+2f_3,\qquad
+ C=
+ \begin{pmatrix}
+ 1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1
+ \end{pmatrix},                                                   \tag{1.5}
+\]
+where the columns of $C$ express $B_1$ in $B_0$ and
+$C\delta_1=\delta_0$.  These are precisely the integral data of
+Engel's Theorem~4.1.  Its proof fixes the sign at infinity by taking a
+simple zero, rather than a pole, of the linearization for a counterclockwise
+meridian \cite[pp.~10--13]{Engel}.
+
+In the common basis $B_0$, direct conjugation and
+$T_0T_1T_\infty=I$ give
+\[
+ [T_1]_{B_0}=C[T_1]_{B_1}C^{-1}=
+ \begin{pmatrix}
+ -1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1
+ \end{pmatrix},                                                   \tag{1.6}
+\]
+\[
+ [T_\infty]_{B_0}=
+ \begin{pmatrix}
+ 2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1
+ \end{pmatrix}.                                                   \tag{1.7}
+\]
+Thus $T_0^3=T_1^4=I$, $(T_\infty-I)^2=0$, and
+\[
+ (T_\infty-I)\Lambda
+   =\langle e_1-e_3,e_3-e_2\rangle.                               \tag{1.8}
+\]
+
+\begin{theorem}[The geometric level-six lattice]
+Let $\Gamma=\langle T_0,T_1\rangle$.  For the fibre lattice and markings
+above,
+\[
+ \Lambda^\Gamma=\mathbb Z\delta_0,
+ \qquad V^\Gamma=\mathbb Z\psi,
+ \qquad (\textstyle\bigwedge^2 V)^\Gamma=\mathbb Z\xi,             \tag{1.9}
+\]
+where $\psi=e_4^\vee$ and
+\[
+ \xi=3e_1^\vee\wedge e_2^\vee+e_1^\vee\wedge e_3^\vee
+      -2e_2^\vee\wedge e_3^\vee-2e_3^\vee\wedge e_4^\vee.       \tag{1.10}
+\]
+With the contraction convention
+$(\iota_v\xi)(w)=\xi(v,w)$, identity \emph{(1.1)} holds.  Moreover, the
+ordered basis
+\[
+ a_1=e_1,\qquad b_1=e_3,\qquad
+ a_2=-\delta_0=2e_1+e_2-3e_3,\qquad b_2=e_4-2e_1             \tag{1.11}
+\]
+is unimodular and satisfies
+\[
+ [\xi]_{(a_1,b_1,a_2,b_2)}=J\oplus6J,\qquad
+ J=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\qquad
+ \delta_0=-a_2,\quad\psi=b_2^\vee.                             \tag{1.12}
+\]
+Consequently
+\[
+ \det(\xi^\flat)=36,\qquad
+ \operatorname{SNF}(\xi^\flat)=\operatorname{diag}(1,1,6,6),     \tag{1.13}
+\]
+and the elementary divisors of $\xi$ are $(1,6)$.
+\end{theorem}
+
+\begin{proof}
+Solving $T_iv=v$ for $i=0,1$ gives
+$v=q(-2,-1,3,0)^T$, and solving $T_i^{-T}u=u$ gives
+$u=q(0,0,0,1)^T$.  Integrality makes the two common invariant lattices
+exactly $\mathbb Z\delta_0$ and $\mathbb Z\psi$.
+
+Write the coefficients of an alternating form in the order
+\[
+ e_1^\vee\wedge e_2^\vee, e_1^\vee\wedge e_3^\vee,
+ e_1^\vee\wedge e_4^\vee, e_2^\vee\wedge e_3^\vee,
+ e_2^\vee\wedge e_4^\vee, e_3^\vee\wedge e_4^\vee.
+\]
+Row reduction of $T_i^TMT_i=M$ gives the integral solutions
+$q(3,1,0,-2,0,-2)$, proving the last equality in (1.9) and recovering
+Engel's invariant class from Lemma~6.2 \cite[p.~15]{Engel}.  Its matrix in
+$B_0$ is
+\[
+ [\xi]_{B_0}=
+ \begin{pmatrix}
+ 0&3&1&0\\-3&0&-2&0\\-1&2&0&-2\\0&0&2&0
+ \end{pmatrix}.                                                   \tag{1.14}
+\]
+Therefore
+\[
+       \delta_0^T[\xi]_{B_0}=(0,0,0,-6),
+\]
+which is (1.1).
+
+The columns of (1.11) form the matrix
+\[
+ P=\begin{pmatrix}1&0&2&-2\\0&0&1&0\\0&1&-3&0\\0&0&0&1\end{pmatrix},
+ \qquad \det P=-1.
+\]
+Multiplication gives $P^T[\xi]_{B_0}P=J\oplus6J$.  This proves the
+normal form and the Smith form.  Finally,
+\[
+ \operatorname{Pf}([\xi]_{B_0})=-6,\qquad
+ \tfrac12\xi\wedge\xi
+   =-6e_1^\vee\wedge e_2^\vee\wedge e_3^\vee\wedge e_4^\vee,
+\]
+so $\det[\xi]_{B_0}=(-6)^2=36$, as asserted.
+\end{proof}
+
+\begin{remark}[Basis and orientation]
+If the columns of $A\in\operatorname{GL}_4(\mathbb Z)$ are a new basis in
+an old one, then the simultaneous coordinate changes are
+\[
+ [\xi]'=A^T[\xi]A,\qquad [\delta]'=A^{-1}[\delta],\qquad
+ [\psi]'=A^T[\psi].                                               \tag{1.15}
+\]
+Thus (1.1) is tensorial.  The Pfaffian changes by $\det A$, which explains
+the signs $-6$ in $B_0$ and $+6$ in the orientation-reversing basis
+(1.11), while the determinant and Smith form do not change.  Reversing only
+$\delta_0$, only $\psi$, or the contraction convention reverses the sign in
+(1.1).  The abstract normal form alone does not select these classes: for
+example, in $J\oplus6J$, taking $\delta=a_1$ and $\psi=b_2^\vee$ gives
+$\iota_\delta\xi=b_1^\vee$, not $-6\psi$.
+\end{remark}
+
+\section{The discriminant pairing and Heisenberg module}
+
+Let $(L,\xi)$ be any rank-four alternating lattice with the normal form
+$J\oplus6J$ in a basis $(a_1,b_1,a_2,b_2)$.  Define
+\[
+ \xi^\flat:L\longrightarrow L^\vee,\qquad \xi^\flat(x)=\xi(x,-),
+ \qquad
+ \mathcal D_\xi=L^\vee/\xi^\flat(L).
 \]
 The rational extension
-$\phi=\xi^\flat\otimes\mathbb Q:\Lambda_{\mathbb Q}\to
-\Lambda_{\mathbb Q}^\vee$ is an isomorphism.  Put
-\[
- D_\xi=\Lambda^\vee/\xi^\flat(\Lambda).
-\]
-This is a finite abelian group because $\phi$ is an isomorphism.
+$\phi=\xi^\flat\otimes\mathbb Q$ is an isomorphism.
 
 \begin{lemma}[Discriminant pairing]
-For $u,v\in\Lambda^\vee$, the formula
+For $u,v\in L^\vee$, the formula
 \[
- b_\xi(\bar u,\bar v)=u(\phi^{-1}v)\pmod{\mathbb Z}
+ b_\xi(\bar u,\bar v)=u(\phi^{-1}v)\pmod{\mathbb Z}               \tag{2.1}
 \]
 defines a perfect alternating pairing
-$b_\xi:D_\xi\times D_\xi\to\mathbb Q/\mathbb Z$.
+$b_\xi:\mathcal D_\xi\times\mathcal D_\xi\to\mathbb Q/\mathbb Z$.
+Moreover, if
+\[
+ \alpha=[a_2^\vee],\qquad \beta=[b_2^\vee],
+\]
+then
+\[
+ \mathcal D_\xi=\langle\alpha\rangle\oplus\langle\beta\rangle
+ \cong(\mathbb Z/6\mathbb Z)^2,\qquad
+ b_\xi(\alpha,\beta)=\tfrac16,\quad
+ b_\xi(\beta,\alpha)=-\tfrac16.                                  \tag{2.2}
+\]
 \end{lemma}
 
 \begin{proof}
 Write $x=\phi^{-1}u$ and $y=\phi^{-1}v$.  Replacing $u$ by
-$u+\xi^\flat(\lambda)$ changes the displayed rational number by
-\[
- \xi(\lambda,y)=-v(\lambda)\in\mathbb Z,
-\]
-while replacing $v$ by $v+\xi^\flat(\mu)$ changes it by
-$u(\mu)\in\mathbb Z$.  The pairing is therefore well defined.  Moreover,
-\[
- u(\phi^{-1}v)=\xi(x,y)=-\xi(y,x)=-v(\phi^{-1}u),
-\]
-and the same expression vanishes when $u=v$; hence the pairing is alternating.
-
-Suppose that $b_\xi(\bar u,\bar v)=0$ for every $v\in\Lambda^\vee$.  Since
-$v(x)=-u(\phi^{-1}v)$, every integral functional takes an integral value on
-$x$.  Thus $x\in\Lambda$, so $u=\xi^\flat(x)$ and $\bar u=0$.  The induced
-map $D_\xi\to\operatorname{Hom}(D_\xi,\mathbb Q/\mathbb Z)$ is injective.
-Both finite groups have the same order, so it is an isomorphism.
+$u+\xi^\flat(\lambda)$ changes (2.1) by
+$\xi(\lambda,y)=-v(\lambda)\in\mathbb Z$; replacing $v$ by
+$v+\xi^\flat(\mu)$ changes it by $u(\mu)\in\mathbb Z$.  The pairing is
+therefore well defined and alternating.  If it annihilates $\bar u$ against
+every $\bar v$, then $v(x)=-u(\phi^{-1}v)$ is integral for every
+$v\in L^\vee$.  Hence $x\in L$, so $\bar u=0$.  The induced homomorphism
+to the Pontryagin dual is injective between finite groups of the same order,
+and is therefore an isomorphism.  Formula (2.2) follows directly from the
+normal form.
 \end{proof}
 
-The dual basis gives
+Put $K=\langle\alpha\rangle\cong\mathbb Z/6\mathbb Z$, let
+$\zeta_6=e^{2\pi i/6}$, and let $\chi\in\widehat K$ satisfy
+$\chi(\alpha)=\zeta_6$.  The map
 \[
- \xi^\flat(e_1)=f_1^\vee,
- \quad \xi^\flat(f_1)=-e_1^\vee,
- \quad \xi^\flat(e_2)=6f_2^\vee,
- \quad \xi^\flat(f_2)=-6e_2^\vee.
+          r\alpha+s\beta\longmapsto(r\alpha,\chi^s)
 \]
-Consequently, with
+is a polarization $\mathcal D_\xi\cong K\oplus\widehat K$.  Define
 \[
- a=[e_2^\vee],\qquad b=[f_2^\vee],
-\]
-one has
-\[
- D_\xi=\langle a\rangle\oplus\langle b\rangle
- \cong(\mathbb Z/6\mathbb Z)^2,
- \qquad
- b_\xi(a,b)=\frac16,
- \quad b_\xi(b,a)=-\frac16.
-\]
-
-\section{The finite Heisenberg representation}
-
-Let $A=\langle a\rangle\cong\mathbb Z/6\mathbb Z$, let
-$\zeta_6=e^{2\pi i/6}$, and let $\chi\in\widehat A$ be determined by
-$\chi(a)=\zeta_6$.  The identification
-\[
- ra+sb\longleftrightarrow(ra,\chi^s)
-\]
-is a polarization $D_\xi\cong A\oplus\widehat A$.  Define
-\[
- H_6=\mu_6\times A\times\widehat A
+ H_6=\mu_6\times K\times\widehat K
 \]
 with multiplication
 \[
- (\lambda,u,\psi)(\lambda',u',\psi')
- =\bigl(\lambda\lambda'\psi'(u),\,u+u',\,\psi\psi'\bigr).
-\]
-The bicharacter $(u,\psi')\mapsto\psi'(u)$ makes this multiplication
-associative.  Its identity is $(1,0,1)$, and
-\[
- (\lambda,u,\psi)^{-1}
- =\bigl(\lambda^{-1}\psi(u),-u,\psi^{-1}\bigr).
+ (z,u,\eta)(z',u',\eta')
+   =\bigl(zz'\eta'(u),u+u',\eta\eta'\bigr).                       \tag{2.3}
 \]
 
 \begin{theorem}[Level-six Heisenberg module]
-The center of $H_6$ is the displayed copy of $\mu_6$.  Under the polarization
-above, its commutator pairing is
+The center of $H_6$ is the displayed copy of $\mu_6$.  Its commutator
+pairing is
 \[
- [\,(1,u,\psi),(1,u',\psi')\,]
- =\bigl(\psi'(u)\psi(u')^{-1},0,1\bigr)
- =\bigl(e^{2\pi i b_\xi(d,d')},0,1\bigr),
+ [(1,u,\eta),(1,u',\eta')]
+  =\bigl(\eta'(u)\eta(u')^{-1},0,1\bigr)
+  =\bigl(e^{2\pi i b_\xi(d,d')},0,1\bigr),                        \tag{2.4}
 \]
-where $d\leftrightarrow(u,\psi)$ and
-$d'\leftrightarrow(u',\psi')$.  On the six-dimensional space
-$V=\mathbb C[A]$ of functions $A\to\mathbb C$, the formula
+where $d\leftrightarrow(u,\eta)$ and $d'\leftrightarrow(u',\eta')$.
+On the six-dimensional space $\mathcal H=\mathbb C[K]$, the formula
 \[
- [\rho(\lambda,u,\psi)f](t)
- =\lambda\psi(t)f(t+u)
+ [\rho(z,u,\eta)h](t)=z\eta(t)h(t+u)                              \tag{2.5}
 \]
-defines an irreducible representation.  The central $\mu_6$ acts through its
+defines an irreducible representation, and the central $\mu_6$ acts by its
 faithful tautological character.
 \end{theorem}
 
 \begin{proof}
-Direct multiplication gives the displayed commutator.  Its nondegeneracy
-shows that an element central in $H_6$ must have $u=0$ and $\psi=1$; hence the
-center is $\mu_6$.  The same multiplication shows that
-$\rho(gg')=\rho(g)\rho(g')$.
+The bicharacter in (2.3) makes the multiplication associative, and direct
+multiplication gives (2.4).  Its nondegeneracy forces a central element to
+have $u=0$ and $\eta=1$.  The same calculation verifies (2.5).
 
-It remains to prove irreducibility.  For $t\in A$, let $\delta_t$ be the
-delta-function at $t$.  The modulation subgroup $\widehat A$ acts diagonally,
-and
+For $t\in K$, let $\delta_t$ be the delta-function at $t$.  The operator
 \[
- P_t=\frac1{6}\sum_{\psi\in\widehat A}
- \psi(t)^{-1}\rho(1,0,\psi)
+ P_t=\frac16\sum_{\eta\in\widehat K}
+        \eta(t)^{-1}\rho(1,0,\eta)
 \]
-is the projection onto $\mathbb C\delta_t$.  If $0\neq W\subset V$ is
-$H_6$-invariant and $f\in W$ is nonzero, choose $t$ with $f(t)\neq0$; then
-$P_tf=f(t)\delta_t\in W$.  The translations $\rho(1,u,1)$ carry
-$\delta_t$ through all delta-functions.  They therefore span $V$ inside
-$W$, proving $W=V$.
+projects onto $\mathbb C\delta_t$.  A nonzero invariant subspace therefore
+contains some $\delta_t$, and translations carry it through every
+delta-function.  These span $\mathcal H$, proving irreducibility.
 \end{proof}
 
-\section{The conditional six-sphere question}
+Applied to Theorem~1.1, this construction belongs to the fibre lattice
+$H_1(F,\mathbb Z)$.  It is not constructed from the ordinary cohomology of
+the total six-manifold.
 
-The existence of a compact complex threefold diffeomorphic to $S^6$ is not a
-hypothesis of the lattice theorem.  Honda and Viaclovsky formulate this
-existence question as open~\cite{HondaViaclovsky}, whereas Etesi states an
-existence claim~\cite{Etesi}.  The conclusions above are independent of that
-discrepancy.
+\section{Two multiple fibres}
 
-If a compact complex threefold $X$, a diffeomorphism of its underlying smooth
-manifold with $S^6$, and a geometrically defined pair $(\Lambda_X,\xi_X)$
-isomorphic to $(\Lambda,\xi)$ are all given, then the preceding theorem
-produces $D_{\xi_X}$, $H_6$, and $V$.  None of those inputs follows from the
-integer $6$.  In particular,
+The topology of two logarithmic fillings leads to an elementary presentation
+whose full integral content is visible before any Leray differential is
+considered.  It is useful to include a global section integer from the start.
+
+\begin{theorem}[Two-fibre Smith form]
+Let $r,s>0$, let $m,n,b_0\in\mathbb Z$, and define
 \[
- H^j(X;\mathbb Z)=0\qquad(0<j<6),
+ G_{b_0}=\left\langle c,x_0,x_1\ \middle|\
+ c\text{ central},\ x_0x_1=c^{b_0},\ x_0^r=c^m,\ x_1^s=c^n
+ \right\rangle.                                                   \tag{3.1}
 \]
-so the rank-four lattice cannot be the ordinary positive-degree integral
-cohomology of $X$.  Any geometric realization must specify an auxiliary
-carrier, its integral structure, and the alternating form before the
-level-six calculation applies.
+Put
+\[
+ \Delta_{b_0}=rn+sm-rsb_0,\qquad d=\gcd(r,s,m,n).                \tag{3.2}
+\]
+Then
+\[
+ G_{b_0}\cong\operatorname{coker}
+ \begin{pmatrix}r&s\\-m&n-sb_0\end{pmatrix}.                     \tag{3.3}
+\]
+If $\Delta_{b_0}\ne0$, then
+\[
+ G_{b_0}\cong\mathbb Z/d\mathbb Z
+       \oplus\mathbb Z/(|\Delta_{b_0}|/d)\mathbb Z,\qquad
+ |G_{b_0}|=|\Delta_{b_0}|.                                        \tag{3.4}
+\]
+If $\Delta_{b_0}=0$, then
+\[
+                    G_{b_0}\cong\mathbb Z\oplus\mathbb Z/d\mathbb Z.
+                                                                    \tag{3.5}
+\]
+In either case $G_{b_0}$ is cyclic if and only if $d=1$.
+\end{theorem}
+
+\begin{proof}
+The product relation gives $x_1=x_0^{-1}c^{b_0}$, so the group is abelian.
+In additive notation its two remaining relation vectors in
+$\mathbb Zx_0\oplus\mathbb Zc$ are
+\[
+          rx_0-mc,\qquad sx_0+(n-sb_0)c,
+\]
+which proves (3.3).  The greatest common divisor of the entries is
+\[
+ \gcd(r,s,m,n-sb_0)=\gcd(r,s,m,n)=d,
+\]
+and the determinant is $\Delta_{b_0}$.  For nonzero determinant, the Smith
+invariants are $d$ and $|\Delta_{b_0}|/d$.  If the determinant vanishes, the
+matrix still has rank one because $r,s>0$, so its Smith form is
+$\operatorname{diag}(d,0)$.  The cyclicity assertions follow.
+\end{proof}
+
+\begin{proposition}[Section gauges and orientations]
+For $k_0,k_1\in\mathbb Z$, the generator change
+\[
+ x_0'=x_0c^{k_0},\qquad x_1'=x_1c^{k_1}                            \tag{3.6}
+\]
+sends
+\[
+ m'=m+rk_0,\qquad n'=n+sk_1,\qquad b_0'=b_0+k_0+k_1             \tag{3.7}
+\]
+and preserves both $d$ and $\Delta_{b_0}$.  In the gauge $b_0=0$, the
+presentation-preserving choice $k_1=-k_0=-k$ sends
+\[
+                         (m,n)\longmapsto(m+rk,n-sk).              \tag{3.8}
+\]
+Interchanging $(r,m,x_0)$ with $(s,n,x_1)$ preserves
+$\Delta_{b_0}$.  Replacing the oriented fibre generator by $c'=c^{-1}$
+sends $(m,n,b_0)$ to $(-m,-n,-b_0)$ and sends
+$\Delta_{b_0}$ to $-\Delta_{b_0}$.
+\end{proposition}
+
+\begin{proof}
+Substitution in the three defining relations gives (3.7), and
+\[
+ r(n+sk_1)+s(m+rk_0)-rs(b_0+k_0+k_1)=\Delta_{b_0}.
+\]
+The remaining statements follow by the indicated changes of generators.
+They also show why only $|\Delta_{b_0}|$ is intrinsic without fixed
+orientations.
+\end{proof}
+
+The hypotheses in Theorem~3.1 cannot be weakened silently.  For $b_0=0$,
+\[
+ (r,s;m,n)=(2,4;2,2)\quad\Longrightarrow\quad
+ G_0\cong\mathbb Z/2\mathbb Z\oplus\mathbb Z/6\mathbb Z,
+\]
+although $\Delta_0=12$.  Also
+\[
+ (2,4;2,-4)\quad\Longrightarrow\quad
+ G_0\cong\mathbb Z\oplus\mathbb Z/2\mathbb Z,\qquad \Delta_0=0.
+\]
+At the simplest zero-coefficient boundary, $m=n=0$ gives
+$G_0\cong\mathbb Z\oplus\mathbb Z/\gcd(r,s)\mathbb Z$.
+
+\begin{proposition}[Seifert Euler number]
+Let $M$ be an oriented Seifert manifold over $S^2$ with two normalized
+effective exceptional fibres, written in Wilkes's convention as
+\[
+       (b_0,S^2;(r,\beta_0),(s,\beta_1)),                          \tag{3.9}
+\]
+where $r,s\ge2$, $0<\beta_0<r$, $0<\beta_1<s$, and
+$\gcd(r,\beta_0)=\gcd(s,\beta_1)=1$.  With
+\[
+                 m=-\beta_0,\qquad n=-\beta_1,                   \tag{3.10}
+\]
+one has $\pi_1(M)\cong G_{b_0}$ and
+\[
+ e(M)=-\left(b_0+\frac{\beta_0}{r}+\frac{\beta_1}{s}\right)
+      =-b_0+\frac mr+\frac ns,\qquad
+ rs\,e(M)=\Delta_{b_0}.                                           \tag{3.11}
+\]
+In particular $d=1$, and hence
+\[
+ \pi_1(M)\cong
+ \begin{cases}
+  \mathbb Z/|\Delta_{b_0}|\mathbb Z,&e(M)\ne0,\\
+  \mathbb Z,&e(M)=0.
+ \end{cases}                                                       \tag{3.12}
+\]
+If $g=\gcd(r,s)$ and $L=\operatorname{lcm}(r,s)=rs/g$, then the smaller
+denominator clearing is
+\[
+             L e(M)=-Lb_0+\frac{s}{g}m+\frac{r}{g}n
+                    =\frac{\Delta_{b_0}}{g}\in\mathbb Z.          \tag{3.13}
+\]
+\end{proposition}
+
+\begin{proof}
+Wilkes's presentation has central regular fibre $h$, local relations
+$a_i^{\alpha_i}h^{\beta_i}=1$, and, over $S^2$ with two exceptional
+fibres, the product relation $a_0a_1=h^{b_0}$.  Setting
+$c=h$, $x_i=a_i$ gives (3.1) and (3.10).  His Euler-number convention gives
+(3.11) \cite[Proposition 4.3, p.~149]{Wilkes}.  Effectiveness implies
+$d=1$, and Theorem~3.1 gives (3.12).  Equation (3.13) is immediate.
+Hatcher's section-change calculation gives the geometric counterpart of
+(3.6): twists are added at one boundary torus and subtracted at another,
+leaving the Euler sum fixed \cite[Section 2.1, pp.~25--27]{Hatcher}.
+\end{proof}
+
+\begin{remark}
+The rational number $e(M)$ is orientation-sensitive.  Reversing the fibre
+orientation and renormalizing Wilkes's two local pairs sends
+\[
+ (b_0;\beta_0,\beta_1)
+   \longmapsto(-b_0-2;r-\beta_0,s-\beta_1),
+\]
+which negates both $e(M)$ and $\Delta_{b_0}$ but preserves the abstract
+group.  With exceptional fibres, $e(M)$ is a rational Seifert Euler number;
+only in the ordinary circle-bundle case is it itself the integral Euler
+class on the underlying base.
+\end{remark}
+
+\section{The Leray carrier in Engel's (3,4) case}
+
+Choose lifts of Engel's logarithmic-transform classes
+\[
+ a_0\in\tfrac13\Lambda^{T_0},\qquad
+ a_1\in\tfrac14\Lambda^{T_1},
+\]
+and put
+\[
+ v_0=3a_0,\qquad v_1=4a_1,\qquad
+ m=\psi(v_0),\qquad n=\psi(v_1),\qquad
+ p=12\psi(a_0+a_1)=4m+3n.                                        \tag{4.1}
+\]
+When the classes of $a_0,a_1$ are primitive torsion classes, the fibres at
+$0$ and $1$ have multiplicities $3$ and $4$, respectively
+\cite[Corollary 2.10]{Engel}.
+
+The carrier of the transgression is the cohomological Leray spectral
+sequence of the specific map $f:Y(u)\to\mathbb P^1$,
+\[
+ E_2^{a,b}=H^a(\mathbb P^1,R^bf_*\mathbb Z)
+       \Longrightarrow H^{a+b}(Y(u),\mathbb Z).                   \tag{4.2}
+\]
+Over $U$, the restriction of $R^1f_*\mathbb Z$ is a local system with
+fibre $V=H^1(F,\mathbb Z)$ and monodromy $T_i^{-T}$.  Across the three
+singular values, $R^1f_*\mathbb Z$ is the corresponding constructible
+sheaf, not a local system.  The fibres of $f$ are connected, so
+$R^0f_*\mathbb Z\cong\mathbb Z_{\mathbb P^1}$.  Thus the first relevant
+differential is precisely
+\[
+ d_2^{0,1}:H^0(\mathbb P^1,R^1f_*\mathbb Z)
+       \longrightarrow H^2(\mathbb P^1,R^0f_*\mathbb Z).          \tag{4.3}
+\]
+
+\begin{theorem}[Engel's integral transgression]
+Assume $|p|=1$, as in Engel's integral-homology calculation, and choose the
+common orientation for which
+$H^2(\mathbb P^1,R^0f_*\mathbb Z)=\mathbb Z\omega$.  Then
+\[
+ H^0(\mathbb P^1,R^1f_*\mathbb Z)=12\mathbb Z\psi,
+ \qquad
+                  d_2^{0,1}(12\psi)=p\omega.                      \tag{4.4}
+\]
+\end{theorem}
+
+\begin{proof}
+The extension lattice in (4.4) is Engel's Lemma~6.5.  For the differential,
+the two local affine lifts satisfy
+\[
+                  \widetilde\rho_0^{\,3}=t_{v_0},
+                  \qquad \widetilde\rho_1^{\,4}=t_{v_1}.
+\]
+Their oriented contributions to the obstruction for $12\psi$ are
+\[
+       \frac{12\psi(v_0)}3=4m,\qquad
+       \frac{12\psi(v_1)}4=3n.                                   \tag{4.5}
+\]
+The cusp gluing at infinity contributes zero in this marking.  Their sum is
+$p=4m+3n$, which is Engel's Lemma~6.6
+\cite[pp.~17--18]{Engel}.  Reversing either generator in (4.4) reverses the
+corresponding sign; simultaneous transport of the orientation preserves the
+identity.
+\end{proof}
+
+\begin{proposition}[The $(3,4)$ presentation]
+For the same geometric data,
+\[
+ \pi_1(Y(u))\cong
+ \langle c,x_0,x_1\mid c\text{ central},\ x_0x_1=1,
+          \ x_0^3=c^m,\ x_1^4=c^n\rangle.                         \tag{4.6}
+\]
+Consequently
+\[
+ \pi_1(Y(u))\cong
+ \begin{cases}
+  \mathbb Z/|p|\mathbb Z,&p\ne0,\\
+  \mathbb Z,&p=0.
+ \end{cases}                                                       \tag{4.7}
+\]
+In particular it is trivial when $|p|=1$.
+\end{proposition}
+
+\begin{proof}
+Engel's vanishing cycles at infinity kill $\ker\psi$ and leave the central
+class $c$ represented by $e_4$.  The two logarithmic fillings give (4.6)
+\cite[Proposition 5.1, pp.~13--14]{Engel}.  This is Theorem~3.1 with
+$(r,s;b_0)=(3,4;0)$, for which $d=1$ and $\Delta_0=p$.
+\end{proof}
+
+\subsection*{Limits of the coefficient}
+
+The presentation theorem does not by itself define a map $f$, the sheaves
+$R^bf_*\mathbb Z$, an extension lattice inside their generic invariants, or
+a Leray differential.  It therefore gives no transgression theorem for
+arbitrary $(r,s)$.
+
+There is also a numerical obstruction to replacing $(3,4)$ formally by
+arbitrary multiplicities while keeping the coefficient $rn+sm$.  In the
+Seifert setting, let $g=\gcd(r,s)$ and $L=\operatorname{lcm}(r,s)$.  Equation
+(3.13) gives
+\[
+ L e=-Lb_0+\frac{s}{g}m+\frac{r}{g}n
+     =\frac{rn+sm-rsb_0}{g}.                                     \tag{4.8}
+\]
+Thus a transgression normalized by the denominator-clearing carrier $L\psi$
+and by the rational Euler number would have coefficient
+$\Delta_{b_0}/g$, not $\Delta_{b_0}$, unless $g=1$.  For the normalized
+effective data
+\[
+ (r,s;\beta_0,\beta_1;b_0)=(2,2;1,1;0),
+\]
+one has $m=n=-1$, $L=2$, $e=-1$, and
+\[
+                   Le=-2\ne-4=\Delta_0.                           \tag{4.9}
+\]
+The global term $-Lb_0$ is another necessary contribution.  Engel's formula
+avoids both ambiguities because $\gcd(3,4)=1$, $L=12$, the section gauge has
+$b_0=0$, and the local extension lattice is computed geometrically.  A
+general result requires equally explicit local models, specialization maps,
+orientations, and a proof that the proposed carrier extends.
+
+Finally, $\Lambda=H_1(F,\mathbb Z)$ is an auxiliary fibre lattice.  In the
+case in which Engel's Theorem~3.1 identifies the total space with $S^6$, one
+has
+\[
+ H^j(Y(u),\mathbb Z)=0\qquad(0<j<6),
+\]
+so neither $\Lambda$ nor its discriminant group is ordinary positive-degree
+cohomology of the total space.
 
 \begin{thebibliography}{9}
 \raggedright
 
-\bibitem{HondaViaclovsky}
-N.~Honda and J.~Viaclovsky,
-\emph{Fibrations on the $6$-sphere and Clemens threefolds},
-\href{https://arxiv.org/abs/2403.05035v3}{arXiv:2403.05035v3}.
+\bibitem{Engel}
+P.~Engel,
+\emph{Complex structures on $S^6$},
+author's preprint, 2026,
+\href{https://philip-engel.github.io/S6.pdf}{philip-engel.github.io/S6.pdf}.
 
-\bibitem{Etesi}
-G.~Etesi,
-\emph{The complex structure on the six dimensional sphere},
-\href{https://arxiv.org/abs/1509.02300v6}{arXiv:1509.02300v6}.
+\bibitem{Hatcher}
+A.~Hatcher,
+\emph{Notes on Basic $3$-Manifold Topology},
+\href{https://pi.math.cornell.edu/~hatcher/3M/3M.pdf}
+{pi.math.cornell.edu/$\sim$hatcher/3M/3M.pdf}.
+
+\bibitem{Wilkes}
+G.~Wilkes,
+\emph{Profinite rigidity for Seifert fibre spaces},
+Geom. Dedicata \textbf{188} (2017), 141--163,
+\href{https://doi.org/10.1007/s10711-016-0209-6}
+{doi:10.1007/s10711-016-0209-6}.
 
 \end{thebibliography}
 

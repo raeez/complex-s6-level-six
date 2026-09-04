@@ -1,9 +1,8 @@
-# Level-Six Lattice Structures in Complex Geometry on S6
+# The Level-Six Fibre Lattice in Engel's Torus Fibration
 
-The initial note records a general integral-lattice consequence of elementary
-divisors `(1,6)` and formulates the geometric verification problem for complex
-threefolds diffeomorphic to the six-sphere. No application to a specific
-threefold, quotient map, degeneration, VOA, or quantum field theory is claimed
-until its source data are independently reconstructed.
-
-Build with `make check`.
+The note identifies Engel's smooth-fibre lattice `H_1(F,Z)`, reconstructs its
+integral monodromy and distinguished classes, and proves
+`iota_delta xi = -6 psi`. It derives the `(1,6)` discriminant pairing and finite
+Heisenberg module, computes the full Smith form and Seifert Euler numerator of
+a two-fibre presentation, and types the Leray transgression only in Engel's
+geometric `(3,4)` case. No general affine-transgression theorem is asserted.
