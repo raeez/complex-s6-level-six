@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}[theorem]{Open Problem}
+\title{Level-Six Alternating Lattices and Complex Geometry on the Six-Sphere}
+\author{Raeez Lorgat}
+\date{}
+\hypersetup{
+  pdftitle={Level-Six Alternating Lattices and Complex Geometry on the Six-Sphere},
+  pdfauthor={Raeez Lorgat},
+  pdfsubject={Discriminant modules and finite Heisenberg representations}
+}
+\begin{document}
+\maketitle
+\begin{abstract}
+An alternating rank-four lattice with elementary divisors $(1,6)$ has a
+canonical finite discriminant module of order $36$.  We compute this module
+and the associated finite Heisenberg representation abstractly.  Relating the
+calculation to a particular non-K\"ahler complex threefold requires a verified
+integral lattice and monodromy calculation and remains separate.
+\end{abstract}
+
+\section{The integral calculation}
+
+Let $\Lambda$ be free of rank four and let
+$\xi:\Lambda\times\Lambda\to\mathbb Z$ be alternating.  Assume there is a
+basis $e_1,f_1,e_2,f_2$ in which
+\[
+ [\xi]=\begin{pmatrix}0&1&0&0\\-1&0&0&0\\
+ 0&0&0&6\\0&0&-6&0\end{pmatrix}.
+\]
+The form induces $\xi^\flat:\Lambda\to\Lambda^\vee$.
+Since $\xi^\flat\otimes\mathbb Q$ is invertible, it also induces the perfect
+alternating discriminant pairing
+\[
+ \overline\xi([u],[v])=
+ \bigl\langle u,(\xi^\flat\otimes\mathbb Q)^{-1}v\bigr\rangle
+ \pmod{\mathbb Z}
+ \quad\text{on }\operatorname{coker}(\xi^\flat),
+\]
+where $u,v\in\Lambda^\vee$ and $\langle-,-\rangle$ is evaluation.
+
+\begin{theorem}
+The discriminant module $D_\xi=\operatorname{coker}(\xi^\flat)$ is
+isomorphic to $(\mathbb Z/6\mathbb Z)^2$.  In particular $|D_\xi|=36$.
+The finite Heisenberg group associated with $\overline\xi$ has, for a fixed
+faithful character of its central copy of $\mu_6$, an irreducible complex
+representation of dimension six.
+\end{theorem}
+
+\begin{proof}
+The two-by-two unimodular block contributes no cokernel.  The second block is
+$6J$, with $J$ unimodular, and its Smith normal form is
+$\operatorname{diag}(6,6)$.  Hence
+$D_\xi\cong(\mathbb Z/6\mathbb Z)^2$.
+
+Choose complementary cyclic isotropic subgroups $A$ and $A^\vee$, each of
+$A$, characters from $A^\vee$, and the prescribed scalar action of $\mu_6$.
+It is irreducible by the finite Stone--von Neumann argument, and its dimension
+is $|A|=6$.
+\end{proof}
+
+This theorem is a lattice statement.  It does not identify an exceptional
+root system, a vertex algebra, or a quantum field theory.
+
+\begin{problem}
+Recover the integral lattice and alternating form from an editable primary
+source for a complex threefold diffeomorphic to $S^6$, compute its full
+monodromy and Smith forms, and determine which geometric structures realize
+the abstract finite Heisenberg module.
+\end{problem}
+\end{document}
