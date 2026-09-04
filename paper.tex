@@ -4,72 +4,203 @@
 \usepackage[margin=1.15in]{geometry}
 \usepackage[hidelinks]{hyperref}
 \newtheorem{theorem}{Theorem}[section]
-\newtheorem{problem}[theorem]{Open Problem}
-\title{Level-Six Alternating Lattices and Complex Geometry on the Six-Sphere}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{Level-Six Alternating Lattices and a Hypothetical Complex Six-Sphere}
 \author{Raeez Lorgat}
 \date{}
 \hypersetup{
-  pdftitle={Level-Six Alternating Lattices and Complex Geometry on the Six-Sphere},
+  pdftitle={Level-Six Alternating Lattices and a Hypothetical Complex Six-Sphere},
   pdfauthor={Raeez Lorgat},
-  pdfsubject={Discriminant modules and finite Heisenberg representations}
+  pdfsubject={Discriminant pairings and finite Heisenberg representations}
 }
 \begin{document}
 \maketitle
+
 \begin{abstract}
-An alternating rank-four lattice with elementary divisors $(1,6)$ has a
-canonical finite discriminant module of order $36$.  We compute this module
-and the associated finite Heisenberg representation abstractly.  Relating the
-calculation to a particular non-K\"ahler complex threefold requires a verified
-integral lattice and monodromy calculation and remains separate.
+An alternating rank-four integral lattice with elementary divisors $(1,6)$
+has discriminant group $(\mathbb Z/6\mathbb Z)^2$.  We construct its perfect
+discriminant pairing, an explicit finite Heisenberg group, and a
+six-dimensional irreducible representation with faithful central character.
+The calculation is purely arithmetic.  Its possible relation to a compact
+complex threefold diffeomorphic to $S^6$ is stated only conditionally; neither
+the existence of such a threefold nor a geometric origin for the lattice is
+assumed.
 \end{abstract}
 
-\section{The integral calculation}
+\section{The discriminant form}
 
-Let $\Lambda$ be free of rank four and let
-$\xi:\Lambda\times\Lambda\to\mathbb Z$ be alternating.  Assume there is a
-basis $e_1,f_1,e_2,f_2$ in which
+Let $\Lambda$ be a free abelian group of rank four, and let
+$\xi:\Lambda\times\Lambda\to\mathbb Z$ be alternating.  Define
 \[
- [\xi]=\begin{pmatrix}0&1&0&0\\-1&0&0&0\\
- 0&0&0&6\\0&0&-6&0\end{pmatrix}.
+ \xi^\flat:\Lambda\longrightarrow\Lambda^\vee,
+ \qquad
+ \xi^\flat(x)=\xi(x,-).
 \]
-The form induces $\xi^\flat:\Lambda\to\Lambda^\vee$.
-Since $\xi^\flat\otimes\mathbb Q$ is invertible, it also induces the perfect
-alternating discriminant pairing
+Assume that there is a basis $e_1,f_1,e_2,f_2$ for which
 \[
- \overline\xi([u],[v])=
- \bigl\langle u,(\xi^\flat\otimes\mathbb Q)^{-1}v\bigr\rangle
- \pmod{\mathbb Z}
- \quad\text{on }\operatorname{coker}(\xi^\flat),
+ [\xi]=
+ \begin{pmatrix}
+ 0&1&0&0\\
+ -1&0&0&0\\
+ 0&0&0&6\\
+ 0&0&-6&0
+ \end{pmatrix}.
 \]
-where $u,v\in\Lambda^\vee$ and $\langle-,-\rangle$ is evaluation.
+The rational extension
+$\phi=\xi^\flat\otimes\mathbb Q:\Lambda_{\mathbb Q}\to
+\Lambda_{\mathbb Q}^\vee$ is an isomorphism.  Put
+\[
+ D_\xi=\Lambda^\vee/\xi^\flat(\Lambda).
+\]
+This is a finite abelian group because $\phi$ is an isomorphism.
 
-\begin{theorem}
-The discriminant module $D_\xi=\operatorname{coker}(\xi^\flat)$ is
-isomorphic to $(\mathbb Z/6\mathbb Z)^2$.  In particular $|D_\xi|=36$.
-The finite Heisenberg group associated with $\overline\xi$ has, for a fixed
-faithful character of its central copy of $\mu_6$, an irreducible complex
-representation of dimension six.
+\begin{lemma}[Discriminant pairing]
+For $u,v\in\Lambda^\vee$, the formula
+\[
+ b_\xi(\bar u,\bar v)=u(\phi^{-1}v)\pmod{\mathbb Z}
+\]
+defines a perfect alternating pairing
+$b_\xi:D_\xi\times D_\xi\to\mathbb Q/\mathbb Z$.
+\end{lemma}
+
+\begin{proof}
+Write $x=\phi^{-1}u$ and $y=\phi^{-1}v$.  Replacing $u$ by
+$u+\xi^\flat(\lambda)$ changes the displayed rational number by
+\[
+ \xi(\lambda,y)=-v(\lambda)\in\mathbb Z,
+\]
+while replacing $v$ by $v+\xi^\flat(\mu)$ changes it by
+$u(\mu)\in\mathbb Z$.  The pairing is therefore well defined.  Moreover,
+\[
+ u(\phi^{-1}v)=\xi(x,y)=-\xi(y,x)=-v(\phi^{-1}u),
+\]
+and the same expression vanishes when $u=v$; hence the pairing is alternating.
+
+Suppose that $b_\xi(\bar u,\bar v)=0$ for every $v\in\Lambda^\vee$.  Since
+$v(x)=-u(\phi^{-1}v)$, every integral functional takes an integral value on
+$x$.  Thus $x\in\Lambda$, so $u=\xi^\flat(x)$ and $\bar u=0$.  The induced
+map $D_\xi\to\operatorname{Hom}(D_\xi,\mathbb Q/\mathbb Z)$ is injective.
+Both finite groups have the same order, so it is an isomorphism.
+\end{proof}
+
+The dual basis gives
+\[
+ \xi^\flat(e_1)=f_1^\vee,
+ \quad \xi^\flat(f_1)=-e_1^\vee,
+ \quad \xi^\flat(e_2)=6f_2^\vee,
+ \quad \xi^\flat(f_2)=-6e_2^\vee.
+\]
+Consequently, with
+\[
+ a=[e_2^\vee],\qquad b=[f_2^\vee],
+\]
+one has
+\[
+ D_\xi=\langle a\rangle\oplus\langle b\rangle
+ \cong(\mathbb Z/6\mathbb Z)^2,
+ \qquad
+ b_\xi(a,b)=\frac16,
+ \quad b_\xi(b,a)=-\frac16.
+\]
+
+\section{The finite Heisenberg representation}
+
+Let $A=\langle a\rangle\cong\mathbb Z/6\mathbb Z$, let
+$\zeta_6=e^{2\pi i/6}$, and let $\chi\in\widehat A$ be determined by
+$\chi(a)=\zeta_6$.  The identification
+\[
+ ra+sb\longleftrightarrow(ra,\chi^s)
+\]
+is a polarization $D_\xi\cong A\oplus\widehat A$.  Define
+\[
+ H_6=\mu_6\times A\times\widehat A
+\]
+with multiplication
+\[
+ (\lambda,u,\psi)(\lambda',u',\psi')
+ =\bigl(\lambda\lambda'\psi'(u),\,u+u',\,\psi\psi'\bigr).
+\]
+The bicharacter $(u,\psi')\mapsto\psi'(u)$ makes this multiplication
+associative.  Its identity is $(1,0,1)$, and
+\[
+ (\lambda,u,\psi)^{-1}
+ =\bigl(\lambda^{-1}\psi(u),-u,\psi^{-1}\bigr).
+\]
+
+\begin{theorem}[Level-six Heisenberg module]
+The center of $H_6$ is the displayed copy of $\mu_6$.  Under the polarization
+above, its commutator pairing is
+\[
+ [\,(1,u,\psi),(1,u',\psi')\,]
+ =\bigl(\psi'(u)\psi(u')^{-1},0,1\bigr)
+ =\bigl(e^{2\pi i b_\xi(d,d')},0,1\bigr),
+\]
+where $d\leftrightarrow(u,\psi)$ and
+$d'\leftrightarrow(u',\psi')$.  On the six-dimensional space
+$V=\mathbb C[A]$ of functions $A\to\mathbb C$, the formula
+\[
+ [\rho(\lambda,u,\psi)f](t)
+ =\lambda\psi(t)f(t+u)
+\]
+defines an irreducible representation.  The central $\mu_6$ acts through its
+faithful tautological character.
 \end{theorem}
 
 \begin{proof}
-The two-by-two unimodular block contributes no cokernel.  The second block is
-$6J$, with $J$ unimodular, and its Smith normal form is
-$\operatorname{diag}(6,6)$.  Hence
-$D_\xi\cong(\mathbb Z/6\mathbb Z)^2$.
+Direct multiplication gives the displayed commutator.  Its nondegeneracy
+shows that an element central in $H_6$ must have $u=0$ and $\psi=1$; hence the
+center is $\mu_6$.  The same multiplication shows that
+$\rho(gg')=\rho(g)\rho(g')$.
 
-Choose complementary cyclic isotropic subgroups $A$ and $A^\vee$, each of
-$A$, characters from $A^\vee$, and the prescribed scalar action of $\mu_6$.
-It is irreducible by the finite Stone--von Neumann argument, and its dimension
-is $|A|=6$.
+It remains to prove irreducibility.  For $t\in A$, let $\delta_t$ be the
+delta-function at $t$.  The modulation subgroup $\widehat A$ acts diagonally,
+and
+\[
+ P_t=\frac1{6}\sum_{\psi\in\widehat A}
+ \psi(t)^{-1}\rho(1,0,\psi)
+\]
+is the projection onto $\mathbb C\delta_t$.  If $0\neq W\subset V$ is
+$H_6$-invariant and $f\in W$ is nonzero, choose $t$ with $f(t)\neq0$; then
+$P_tf=f(t)\delta_t\in W$.  The translations $\rho(1,u,1)$ carry
+$\delta_t$ through all delta-functions.  They therefore span $V$ inside
+$W$, proving $W=V$.
 \end{proof}
 
-This theorem is a lattice statement.  It does not identify an exceptional
-root system, a vertex algebra, or a quantum field theory.
+\section{The conditional six-sphere question}
 
-\begin{problem}
-Recover the integral lattice and alternating form from an editable primary
-source for a complex threefold diffeomorphic to $S^6$, compute its full
-monodromy and Smith forms, and determine which geometric structures realize
-the abstract finite Heisenberg module.
-\end{problem}
+The existence of a compact complex threefold diffeomorphic to $S^6$ is not a
+hypothesis of the lattice theorem.  Honda and Viaclovsky formulate this
+existence question as open~\cite{HondaViaclovsky}, whereas Etesi states an
+existence claim~\cite{Etesi}.  The conclusions above are independent of that
+discrepancy.
+
+If a compact complex threefold $X$, a diffeomorphism of its underlying smooth
+manifold with $S^6$, and a geometrically defined pair $(\Lambda_X,\xi_X)$
+isomorphic to $(\Lambda,\xi)$ are all given, then the preceding theorem
+produces $D_{\xi_X}$, $H_6$, and $V$.  None of those inputs follows from the
+integer $6$.  In particular,
+\[
+ H^j(X;\mathbb Z)=0\qquad(0<j<6),
+\]
+so the rank-four lattice cannot be the ordinary positive-degree integral
+cohomology of $X$.  Any geometric realization must specify an auxiliary
+carrier, its integral structure, and the alternating form before the
+level-six calculation applies.
+
+\begin{thebibliography}{9}
+\raggedright
+
+\bibitem{HondaViaclovsky}
+N.~Honda and J.~Viaclovsky,
+\emph{Fibrations on the $6$-sphere and Clemens threefolds},
+\href{https://arxiv.org/abs/2403.05035v3}{arXiv:2403.05035v3}.
+
+\bibitem{Etesi}
+G.~Etesi,
+\emph{The complex structure on the six dimensional sphere},
+\href{https://arxiv.org/abs/1509.02300v6}{arXiv:1509.02300v6}.
+
+\end{thebibliography}
+
 \end{document}
