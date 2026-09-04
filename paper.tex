@@ -32,9 +32,15 @@ discriminant group is $(\mathbb Z/6\mathbb Z)^2$, with a perfect alternating
 pairing and a six-dimensional irreducible finite Heisenberg representation.
 We also compute the complete Smith form of a two-fibre presentation,
 including the zero-determinant case, and identify its determinant with a
-denominator-cleared Seifert Euler number.  The Leray transgression is stated
-only for Engel's multiplicities $(3,4)$; no transgression formula for
-arbitrary multiplicities is asserted.
+denominator-cleared Seifert Euler number.  For an explicitly constructed
+effective rank-one Seifert $\mathbb C^*$-bundle with two multiple fibres, we
+prove that the primitive integral Leray carrier is indexed by
+$\operatorname{lcm}(r,s)$ and has coefficient
+$\Delta/\gcd(r,s)$.  The full global Seifert class also has a
+$\mathbb Z/\gcd(r,s)$ component which the coarse transgression does not see.
+This rank-one result does not identify a circle quotient of Engel's
+rank-four torus fibration; its transgression remains a separate $(3,4)$
+calculation.
 \end{abstract}
 
 \section{The fibre calculation}
@@ -479,6 +485,228 @@ only in the ordinary circle-bundle case is it itself the integral Euler
 class on the underlying base.
 \end{remark}
 
+\section{The rank-one Seifert transgression}
+
+The primitive coefficient is visible before passing to Engel's torus
+fibration.  If
+\[
+ g=\gcd(r,s),\qquad \ell=\operatorname{lcm}(r,s)=\frac{rs}{g},
+\]
+then the two natural integral normalizations are
+\[
+ d_2^{0,1}(\ell u)=\frac{\Delta_{b_0}}g\,\omega,
+ \qquad
+ d_2^{0,1}(rsu)=\Delta_{b_0}\,\omega.                            \tag{4.1}
+\]
+The first uses the primitive global section; the second is its $g$-fold
+multiple.  We now specify the map and conventions for which these equations
+hold.
+
+Let $r,s\ge2$, let $0<\beta_0<r$ and $0<\beta_1<s$, and assume
+\[
+ \gcd(r,\beta_0)=\gcd(s,\beta_1)=1.                              \tag{4.2}
+\]
+For $b_0\in\mathbb Z$, consider Koll\'ar's effective Seifert
+$\mathbb C^*$-bundle
+\[
+ q:Z=Y\left(\mathcal O_{\mathbb P^1}(b_0),
+       \frac{\beta_0}{r}[0]+\frac{\beta_1}{s}[1]\right)
+       \longrightarrow\mathbb P^1.                              \tag{4.3}
+\]
+Equivalently, this is the coarse map of the complement of the zero section
+in the corresponding line bundle on the labelled root orbisphere.  The local
+characters are faithful by (4.2), so $r$ and $s$ are the actual fibre
+multiplicities.  Give the base its complex orientation and put
+$\omega=c_1(\mathcal O_{\mathbb P^1}(1))$.  Koll\'ar's natural
+trivialization
+\[
+ \tau:R^1q_*\mathbb Q\xrightarrow{\sim}\mathbb Q_{\mathbb P^1}
+\]
+defines the normalized rational fibre class $u_K=\tau^{-1}(1)$.  We use the
+Wilkes-oriented class $u=-u_K$ and set
+\[
+ m=-\beta_0,\qquad n=-\beta_1,
+ \qquad e=-b_0+\frac mr+\frac ns,
+ \qquad \Delta_{b_0}=rn+sm-rsb_0.                               \tag{4.4}
+\]
+
+\begin{theorem}[Coarse two-fibre transgression]
+For the map \emph{(4.3)}, one has $R^0q_*\mathbb Z\cong
+\mathbb Z_{\mathbb P^1}$ and an exact sequence of constructible sheaves
+\[
+ 0\longrightarrow R^1q_*\mathbb Z\longrightarrow
+ \mathbb Z_{\mathbb P^1}\longrightarrow
+ (\mathbb Z/r\mathbb Z)_{\{0\}}\oplus
+ (\mathbb Z/s\mathbb Z)_{\{1\}}\longrightarrow0,                \tag{4.5}
+\]
+where the last map sends $1$ to $(1,1)$.  Consequently
+\[
+ H^0(\mathbb P^1,R^1q_*\mathbb Z)=\ell\mathbb Z u,
+ \qquad
+ H^1(\mathbb P^1,R^1q_*\mathbb Z)\cong\mathbb Z/g\mathbb Z.     \tag{4.6}
+\]
+In the integral Leray spectral sequence of $q$,
+\[
+ d_2^{0,1}:H^0(\mathbb P^1,R^1q_*\mathbb Z)
+       \longrightarrow H^2(\mathbb P^1,R^0q_*\mathbb Z),        \tag{4.7}
+\]
+the two equations in \emph{(4.1)} hold.
+\end{theorem}
+
+\begin{proof}
+Koll\'ar's multiplicity criterion gives the two multiplicities $r$ and $s$.
+His integral comparison map and its local cokernel give (4.5)
+\cite[Theorem~7 and Propositions~43 and 47]{Kollar}.  The long exact
+cohomology sequence of (4.5) begins with the diagonal reduction map
+\[
+ \mathbb Z\longrightarrow\mathbb Z/r\mathbb Z\oplus
+ \mathbb Z/s\mathbb Z.
+\]
+Its kernel is $\ell\mathbb Z$ and its cokernel is
+$\mathbb Z/g\mathbb Z$, proving (4.6).
+
+In Koll\'ar's convention the rational Chern class is
+\[
+ c_1^K(Z/\mathbb P^1)
+   =\left(b_0+\frac{\beta_0}{r}+\frac{\beta_1}{s}\right)\omega
+   =-e\omega.                                                     \tag{4.8}
+\]
+The quotient $Z\to Z/\mu_\ell$ induces a map of Leray spectral sequences,
+and $Z/\mu_\ell$ is an ordinary $\mathbb C^*$-bundle whose Chern class is
+$\ell c_1^K$.  Hence
+\[
+ d_2^{0,1}(\ell u_K)=\ell c_1^K(Z/\mathbb P^1)
+\]
+\cite[Definition~9, Map~13, and Corollary~44]{Kollar}.  Replacing $u_K$ by
+$u=-u_K$ and using
+\[
+ \ell e=-\ell b_0+\frac{s}{g}m+\frac{r}{g}n
+          =\frac{\Delta_{b_0}}g
+\]
+proves the first equation in (4.1).  Since $rs=g\ell$, the second follows.
+\end{proof}
+
+The coarse coefficient records only the free part of the global Seifert
+class.  To see the missing information integrally, let
+\[
+ \mathcal S_{r,s}
+ =\langle H,X_0,X_1\mid rX_0=H,\ sX_1=H\rangle,                  \tag{4.9}
+\]
+the line-bundle class group of the labelled root orbisphere.  Here $H$ is
+the pullback of the positive coarse class and $X_0,X_1$ are the two root
+classes.  In the orientation of (4.4), the Seifert class is
+\[
+                  \varepsilon=-b_0H+mX_0+nX_1.                  \tag{4.10}
+\]
+
+\begin{proposition}[The global class and its coarse shadow]
+There is an isomorphism
+\[
+                  \mathcal S_{r,s}\cong
+                  \mathbb Z\oplus\mathbb Z/g\mathbb Z.          \tag{4.11}
+\]
+The section gauges \emph{(3.7)} leave $\varepsilon$ fixed, and
+\[
+                 \ell\varepsilon=\frac{\Delta_{b_0}}gH.         \tag{4.12}
+\]
+Equivalently, on gauge classes
+\[
+ \kappa[b_0,m,n]
+   =-\ell b_0+\frac{\ell}{r}m+\frac{\ell}{s}n
+   =\frac{\Delta_{b_0}}g                                      \tag{4.13}
+\]
+is a surjection to $\mathbb Z$ whose kernel is the torsion subgroup
+$\mathbb Z/g\mathbb Z$.  Thus the rational Euler number, and hence the
+coarse differential, determines the full global class exactly when $g=1$.
+\end{proposition}
+
+\begin{proof}
+Koll\'ar's classification gives the representatives $(b_0,m,n)$, while a
+change of local section gives the relations
+\[
+ (b_0,m,n)\sim(b_0+k_0+k_1,m+rk_0,n+sk_1).
+\]
+The first determinantal divisor of the relation matrix is $1$, while the
+second is
+\[
+                         \gcd(r,s,rs)=g.
+\]
+Its Smith form therefore gives (4.11).  Relations $rX_0=H$ and $sX_1=H$
+prove both gauge invariance and (4.12).  The three coefficients in (4.13)
+have greatest common divisor $1$, so $\kappa$ is onto.  Its finite kernel has
+order $g$, proving the last assertion.
+\end{proof}
+
+The torsion is already present in the smallest rank-drop example.  For
+\[
+ r=s=2,\qquad b_0=-1,\qquad \beta_0=\beta_1=1,                 \tag{4.14}
+\]
+one has $e=\Delta_{b_0}=0$, so the coarse transgression vanishes, whereas
+\[
+ \varepsilon=H-X_0-X_1=X_0-X_1
+\]
+is the nonzero element of order two in $\mathcal S_{2,2}$.  Thus a zero
+rational Euler number need not mean that the global Seifert class is zero.
+
+\begin{proposition}[Effectivization and rank drop]
+For formal local data $(r,m)$ and $(s,n)$, put
+\[
+ a_0=\gcd(r,m),\quad a_1=\gcd(s,n),\quad
+ R=\frac r{a_0},\quad S=\frac s{a_1},\quad h=\gcd(R,S).          \tag{4.15}
+\]
+If the data arise from a rank-one Seifert construction after reducing the
+two local fractions, then the actual local orders are $R,S$, the primitive
+carrier is
+\[
+ Q=\operatorname{lcm}(R,S)=\frac{rs}{a_0a_1h},                  \tag{4.16}
+\]
+and
+\[
+       d_2^{0,1}(Qu)=\frac{\Delta_{b_0}}{a_0a_1h}\,\omega,
+       \qquad d_2^{0,1}(rsu)=\Delta_{b_0}\,\omega.              \tag{4.17}
+\]
+If the local pairs are effective and $\Delta_{b_0}=0$, then
+\[
+                 r=s,\qquad m+n=rb_0.                            \tag{4.18}
+\]
+For normalized pairs this says $b_0=-1$ and
+$\beta_0+\beta_1=r$; in this case $G_{b_0}\cong\mathbb Z$.
+\end{proposition}
+
+\begin{proof}
+The least positive integer $k$ for which $r\mid km$ and $s\mid kn$ is
+$\operatorname{lcm}(R,S)$, proving (4.16).  Writing
+$m=a_0M$ and $n=a_1N$ gives
+\[
+ Qe=\frac{\Delta_{b_0}}{a_0a_1h},
+ \qquad rs=(a_0a_1h)Q,
+\]
+which proves (4.17).  If the pairs are effective and $\Delta_{b_0}=0$, then
+reduction modulo $r$ gives $r\mid s$, and reduction modulo $s$ gives
+$s\mid r$.  This proves (4.18).  The normalized conclusion follows from
+$0<\beta_i<r$, and Theorem~3.1 gives the last assertion.
+\end{proof}
+
+\begin{remark}[Naturality, orientations, and scope]
+The naturality in Theorem~4.1 is the map of Leray spectral sequences induced
+by $Z\to Z/\mu_\ell$; the pullback of the ordinary fibre generator is
+$\ell u_K$.  More generally, a morphism of oriented Seifert bundles gives
+commuting Leray differentials.  If a base pullback has actual carrier
+$\ell'u'$ with $\ell'\mid\ell$, then the pullback of $\ell u$ is
+$(\ell/\ell')\ell'u'$, so primitive numerical coefficients must be compared
+with this index.  Reversing the fibre generator or the chosen generator
+$\omega$ reverses the displayed scalar.  Section gauges and interchange of
+the two labelled points preserve (4.1); the only changes of the oriented
+rank-one fibre basis are $u\mapsto\pm u$.
+
+This theorem is specific to the rank-one Seifert bundle (4.3).  An affine
+torus fibration has a higher-rank local system, and local multiplicities and
+a group presentation do not determine its extension across singular fibres
+or its rational transgression.  Transporting (4.1) to such a fibration would
+require an actual map over the base inducing the claimed morphism of
+constructible sheaves.  No such map is used below.
+\end{remark}
+
 \section{The Leray carrier in Engel's (3,4) case}
 
 Choose lifts of Engel's logarithmic-transform classes
@@ -490,7 +718,7 @@ and put
 \[
  v_0=3a_0,\qquad v_1=4a_1,\qquad
  m=\psi(v_0),\qquad n=\psi(v_1),\qquad
- p=12\psi(a_0+a_1)=4m+3n.                                        \tag{4.1}
+ p=12\psi(a_0+a_1)=4m+3n.                                        \tag{5.1}
 \]
 When the classes of $a_0,a_1$ are primitive torsion classes, the fibres at
 $0$ and $1$ have multiplicities $3$ and $4$, respectively
@@ -500,7 +728,7 @@ The carrier of the transgression is the cohomological Leray spectral
 sequence of the specific map $f:Y(u)\to\mathbb P^1$,
 \[
  E_2^{a,b}=H^a(\mathbb P^1,R^bf_*\mathbb Z)
-       \Longrightarrow H^{a+b}(Y(u),\mathbb Z).                   \tag{4.2}
+       \Longrightarrow H^{a+b}(Y(u),\mathbb Z).                   \tag{5.2}
 \]
 Over $U$, the restriction of $R^1f_*\mathbb Z$ is a local system with
 fibre $V=H^1(F,\mathbb Z)$ and monodromy $T_i^{-T}$.  Across the three
@@ -510,7 +738,7 @@ $R^0f_*\mathbb Z\cong\mathbb Z_{\mathbb P^1}$.  Thus the first relevant
 differential is precisely
 \[
  d_2^{0,1}:H^0(\mathbb P^1,R^1f_*\mathbb Z)
-       \longrightarrow H^2(\mathbb P^1,R^0f_*\mathbb Z).          \tag{4.3}
+       \longrightarrow H^2(\mathbb P^1,R^0f_*\mathbb Z).          \tag{5.3}
 \]
 
 \begin{theorem}[Engel's integral transgression]
@@ -520,12 +748,12 @@ $H^2(\mathbb P^1,R^0f_*\mathbb Z)=\mathbb Z\omega$.  Then
 \[
  H^0(\mathbb P^1,R^1f_*\mathbb Z)=12\mathbb Z\psi,
  \qquad
-                  d_2^{0,1}(12\psi)=p\omega.                      \tag{4.4}
+                  d_2^{0,1}(12\psi)=p\omega.                      \tag{5.4}
 \]
 \end{theorem}
 
 \begin{proof}
-The extension lattice in (4.4) is Engel's Lemma~6.5.  For the differential,
+The extension lattice in (5.4) is Engel's Lemma~6.5.  For the differential,
 the two local affine lifts satisfy
 \[
                   \widetilde\rho_0^{\,3}=t_{v_0},
@@ -534,11 +762,11 @@ the two local affine lifts satisfy
 Their oriented contributions to the obstruction for $12\psi$ are
 \[
        \frac{12\psi(v_0)}3=4m,\qquad
-       \frac{12\psi(v_1)}4=3n.                                   \tag{4.5}
+       \frac{12\psi(v_1)}4=3n.                                   \tag{5.5}
 \]
 The cusp gluing at infinity contributes zero in this marking.  Their sum is
 $p=4m+3n$, which is Engel's Lemma~6.6
-\cite[pp.~17--18]{Engel}.  Reversing either generator in (4.4) reverses the
+\cite[pp.~17--18]{Engel}.  Reversing either generator in (5.4) reverses the
 corresponding sign; simultaneous transport of the orientation preserves the
 identity.
 \end{proof}
@@ -548,7 +776,7 @@ For the same geometric data,
 \[
  \pi_1(Y(u))\cong
  \langle c,x_0,x_1\mid c\text{ central},\ x_0x_1=1,
-          \ x_0^3=c^m,\ x_1^4=c^n\rangle.                         \tag{4.6}
+          \ x_0^3=c^m,\ x_1^4=c^n\rangle.                         \tag{5.6}
 \]
 Consequently
 \[
@@ -556,49 +784,35 @@ Consequently
  \begin{cases}
   \mathbb Z/|p|\mathbb Z,&p\ne0,\\
   \mathbb Z,&p=0.
- \end{cases}                                                       \tag{4.7}
+ \end{cases}                                                       \tag{5.7}
 \]
 In particular it is trivial when $|p|=1$.
 \end{proposition}
 
 \begin{proof}
 Engel's vanishing cycles at infinity kill $\ker\psi$ and leave the central
-class $c$ represented by $e_4$.  The two logarithmic fillings give (4.6)
+class $c$ represented by $e_4$.  The two logarithmic fillings give (5.6)
 \cite[Proposition 5.1, pp.~13--14]{Engel}.  This is Theorem~3.1 with
 $(r,s;b_0)=(3,4;0)$, for which $d=1$ and $\Delta_0=p$.
 \end{proof}
 
-\subsection*{Limits of the coefficient}
+\subsection*{Comparison with the rank-one theorem}
 
-The presentation theorem does not by itself define a map $f$, the sheaves
-$R^bf_*\mathbb Z$, an extension lattice inside their generic invariants, or
-a Leray differential.  It therefore gives no transgression theorem for
-arbitrary $(r,s)$.
+For $(r,s;b_0)=(3,4;0)$, one has $g=1$, $\ell=12$, and
+$\Delta_0=4m+3n=p$.  Thus Theorem~4.1 and (5.4) have the same scalar after
+the rank-one class $u$ and Engel's invariant covector $\psi$ are given the
+same sign.  The equality is only numerical.  Engel's sheaf has generic fibre
+$H^1(F,\mathbb Z)$ of rank four, nontrivial monodromy, and an additional
+singular value at infinity.  No factorization of $f$ through (4.3), nor a
+morphism carrying $u$ to $\psi$ across all singular fibres, has been
+constructed here.  Engel's Lemmas~6.5--6.6, rather than Theorem~4.1, prove
+the carrier and differential in (5.4).
 
-There is also a numerical obstruction to replacing $(3,4)$ formally by
-arbitrary multiplicities while keeping the coefficient $rn+sm$.  In the
-Seifert setting, let $g=\gcd(r,s)$ and $L=\operatorname{lcm}(r,s)$.  Equation
-(3.13) gives
-\[
- L e=-Lb_0+\frac{s}{g}m+\frac{r}{g}n
-     =\frac{rn+sm-rsb_0}{g}.                                     \tag{4.8}
-\]
-Thus a transgression normalized by the denominator-clearing carrier $L\psi$
-and by the rational Euler number would have coefficient
-$\Delta_{b_0}/g$, not $\Delta_{b_0}$, unless $g=1$.  For the normalized
-effective data
-\[
- (r,s;\beta_0,\beta_1;b_0)=(2,2;1,1;0),
-\]
-one has $m=n=-1$, $L=2$, $e=-1$, and
-\[
-                   Le=-2\ne-4=\Delta_0.                           \tag{4.9}
-\]
-The global term $-Lb_0$ is another necessary contribution.  Engel's formula
-avoids both ambiguities because $\gcd(3,4)=1$, $L=12$, the section gauge has
-$b_0=0$, and the local extension lattice is computed geometrically.  A
-general result requires equally explicit local models, specialization maps,
-orientations, and a proof that the proposed carrier extends.
+Likewise, the presentation (3.1) alone defines neither a map, the sheaves
+$R^bf_*\mathbb Z$, nor a rational transgression.  It cannot imply a theorem
+for an arbitrary affine torus fibration.  Such a result requires the full
+local system, every specialization map, a global affine or Chern class, and
+compatible orientations.
 
 Finally, $\Lambda=H_1(F,\mathbb Z)$ is an auxiliary fibre lattice.  In the
 case in which Engel's Theorem~3.1 identifies the total space with $S^6$, one
@@ -623,6 +837,12 @@ A.~Hatcher,
 \emph{Notes on Basic $3$-Manifold Topology},
 \href{https://pi.math.cornell.edu/~hatcher/3M/3M.pdf}
 {pi.math.cornell.edu/$\sim$hatcher/3M/3M.pdf}.
+
+\bibitem{Kollar}
+J.~Koll\'ar,
+\emph{Seifert $\mathbb G_m$-bundles},
+arXiv:math/0404386v2, 2004,
+\href{https://arxiv.org/abs/math/0404386}{arXiv:math/0404386}.
 
 \bibitem{Wilkes}
 G.~Wilkes,
