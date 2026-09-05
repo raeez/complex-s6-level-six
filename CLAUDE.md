@@ -1,8 +1,6 @@
 # Repository Instructions
 
-## Golden rule: no project management at any scale whatsoever in the manuscript
+Read and follow [AGENTS.md](AGENTS.md), the canonical local contract.
+It includes inherited safety rules, manuscript boundaries, and research standards.
 
-Follow `AGENTS.md`. No project management may occur in a manuscript at any
-scale. The current lattice theorem is abstract; applying it to an Engel
-threefold requires independent recovery and verification of the geometric
-source data.
+For Claude model controls or loading behavior, consult `~/ecosystem/CLAUDE-HARNESS.md` when that guidance affects the task.
