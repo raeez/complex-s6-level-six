@@ -1,0 +1,1317 @@
+Geom Dedicata (2017) 188:141–163
+DOI 10.1007/s10711-016-0209-6
+
+ORIGINAL PAPER
+
+
+
+Profinite rigidity for Seifert fibre spaces
+
+Gareth Wilkes1
+
+
+
+
+Received: 15 January 2016 / Accepted: 15 November 2016 / Published online: 29 November 2016
+© The Author(s) 2016. This article is published with open access at Springerlink.com
+
+
+Abstract An interesting question is whether two 3-manifolds can be distinguished by com-
+puting and comparing their collections of finite covers; more precisely, by the profinite
+completions of their fundamental groups. In this paper, we solve this question completely
+for closed orientable Seifert fibre spaces. In particular, all Seifert fibre spaces are distin-
+guished from each other by their profinite completions apart from some previously-known
+examples due to Hempel. We also characterize when bounded Seifert fibre space groups have
+isomorphic profinite completions, given some conditions on the boundary.
+
+Keywords 3-Manifolds · Profinite rigidity · Seifert fibre spaces
+
+Mathematics Subject Classification (2010) 57M05 · 57M27 · 20E18
+
+
+1 Introduction
+
+One possible algorithm to solve the homeomorphism problem for 3-manifolds could run as
+follows. Given two triangulated 3-manifolds M1 and M2 , perform Pachner moves on M1
+to try to establish a homeomorphism with M2 . In parallel, compute a list of finite-sheeted
+covers of the two manifolds, along with regularity of the covers and the group of deck
+transformations. If at some covering degree a difference appears, the two manifolds will be
+shown to be non-homeomorphic.
+   The question arises, to what extent will this algorithm work? That is, could the collections
+of covers of two distinct 3-manifolds have the same structure? This is a manifestation of the
+wider question of when two groups have the same set of finite quotients. The naive statement in
+terms of sets of finite quotients is usually replaced with an equivalent formulation concerning
+
+
+
+B Gareth Wilkes
+    wilkes@maths.ox.ac.uk
+1   Mathematical Institute, University of Oxford, Andrew Wiles Building, Radcliffe Observatory Quarter,
+    Woodstock Road, Oxford OX2 6GG, UK
+
+
+                                                                                               123
+142                                                             Geom Dedicata (2017) 188:141–163
+
+
+the profinite completions of the two groups. The question is then one of ‘profinite rigidity’.
+We make the following definition:
+
+Definition 1.1 An (orientable) 3-manifold is profinitely rigid if the profinite completion
+distinguishes its fundamental group from all other fundamental groups of (orientable) 3-
+manifolds.
+
+In dimension 2, the analogous property is known to hold by work of Bridson et al. [6], who
+showed that the profinite completion distinguishes 2-orbifold groups not just from each other,
+but from all lattices in connected Lie groups.
+    For 3-manifolds, only a few examples are known to be profinitely rigid. Bridson and Reid
+[7] and Boileau and Friedl [5] have proved that the figure-eight knot group is profinitely rigid
+among 3-manifold groups, along with a handful of other knot groups. By contrast, there are
+large families known not to be profinitely rigid. Funar [11] built on work of Stebe [21] to give
+infinite families of Sol manifolds with the same finite quotients. Hempel [13] gave Seifert
+fibred families, with geometry H2 × R.
+    These examples notwithstanding, the profinite completion of the fundamental group of a
+low-dimensional manifold is known to contain a large amount of information. For instance,
+Wilton and Zalesskii [24] have shown that the geometry (if any) of a 3-manifold is detected
+by the profinite completion. In particular, Seifert fibre spaces are distinguished from all other
+3-manifolds. Lackenby [14] has shown that the pro-2 completion of a 3-manifold group
+determines whether that 3-manifold contains a pair of embedded surfaces which do not
+disconnect the manifold.
+    In this paper, we provide the full solution of the profinite rigidity question for closed
+orientable Seifert-fibred 3-manifolds. In effect, the above-cited examples of Hempel [13] are
+the only failures of profinite rigidity among these manifolds. The precise statement, when
+combined with the work in [24], is:
+
+Theorem 1.2 Let M be a (closed orientable) Seifert fibre space. Then either:
+ – M is profinitely rigid; or
+ – M has the geometry H2 × R, is a surface bundle with periodic monodromy φ and the
+   only 3-manifolds whose fundamental groups have the same finite quotients as π1 M are
+   the surface bundles with monodromy φ k , for k coprime to the order of φ.
+
+   The theorems of [24] are stated for closed manifolds, so we will be a little more circumspect
+about asserting profinite rigidity among all 3-manifolds. However we may still resolve the
+rigidity question among Seifert fibre spaces. For the precise statements see Theorems 5.8
+and 5.9; in summary
+
+Theorem 1.3 Let M1 , M2 be Seifert fibre spaces with non-empty boundary. Then the fol-
+lowing are equivalent:
+   
+ – π      ∼
+     1 M1 = π1 M2 , by an isomorphism inducing an isomorphism of peripheral systems.
+ – M1 is a surface bundle with periodic monodromy φ, and M2 is a bundle over the same
+   surface with monodromy φ k , where k is coprime to the order of φ.
+
+   The author would like to thank Marc Lackenby for suggesting this field of study and
+for many enlightening conversations during the development of this theorem. The author
+was supported by the EPSRC and by a Lamb and Flag Scholarship from St. John’s College,
+Oxford.
+
+123
+Geom Dedicata (2017) 188:141–163                                                            143
+
+
+Remark 1.4 In this document, we will use the following conventions:
+ – All manifolds and orbifolds will be assumed compact, connected and without boundary
+   unless otherwise stated; all 3-manifolds will be orientable;
+ – Abstract groups will be assumed finitely presented and will be denoted with Roman
+   letters G, H, . . .; they will be assumed to have the discrete topology.
+ – Profinite groups will be assumed topologically finitely generated and will be denoted
+   with capital Greek letters Γ, Δ, . . .
+ – The symbols f , o ,  p will denote ‘normal subgroup of finite index’, ‘open normal
+   subgroup’, ‘normal subgroup of index a power of p’ respectively; similar symbols will
+   be used for not necessarily normal subgroups.
+ – There is a divergence in notation between profinite group theorists, who use Z p to denote
+   the p-adic integers, and manifold theorists for whom Z p is usually the cyclic group of
+   order p. To avoid any doubt, the cyclic group of order p will be consistently denoted
+   Z / p or Z / p Z .
+
+
+2 Cohomology of profinite groups
+
+2.1 Goodness
+
+It will important to have control over the cohomology of profinite completions. We recall
+here certain theorems of this nature, which will be used freely without future reference. Serre
+[20] made the following definition:
+
+Definition 2.1 A finitely generated group G is good if for all finite G-modules A, the natural
+homomorphism
+                                   H n (Ĝ; A) → H n (G; A)
+induced by G → Ĝ is an isomorphism for all n.
+
+Theorem 2.2 (Grunewald et al. [12]) All finitely generated Fuchsian groups are good.
+
+Under certain finiteness assumptions which hold in our cases of interest, an extension of a
+good group by a good group is itself good (see [20]); furthermore, finite index subgroups of
+good groups are good. Hence:
+
+Corollary 2.3 The fundamental groups of Seifert fibre spaces are good.
+
+It will not be needed in the sequel, but it seems fitting to mention that in fact all 3-manifold
+groups are good. This theorem is of somewhat disputed attribution. It was proved by Wilton
+and Zalesskii [23] that a 3-manifold has good fundamental group if all pieces of its JSJ
+decomposition do. Seifert-fibred pieces are covered by the above corollary. That hyperbolic
+3-manifold groups are good follows from the Virtually Compact Special Theorem and its
+various consequences. There are numerous ways one may deduce this; one may use the Virtual
+Fibring Theorem of Agol [1] or another route as outlined in [10]. In stating the Theorem as
+due to Agol, Wilton–Zalesskii, and Wise we aim to recognise those who contributed most.
+A full account and list of references may be found in [4].
+
+Theorem 2.4 (Agol, Wilton–Zalesskii, Wise) Fundamental groups of compact 3-manifolds
+are good.
+
+
+                                                                                    123
+144                                                                     Geom Dedicata (2017) 188:141–163
+
+
+2.2 Chain complexes
+
+It will be necessary later to work with certain exact sequences of modules over the group
+ring of a profinite group. In this section we will recall and prove some of the necessary tools.
+Definition 2.5 Given a profinite abelian group A (usually Ẑ , Ẑ ( p) or a finite abelian group)
+and a profinite group Γ , the completed group ring A[[Γ ]] is defined as the inverse limit
+                                       lim A/A [Γ /N ]
+                                       ←
+                                          −
+                                       A ,N
+
+of group rings indexed over the finite index open normal subgroups A , N of A, Γ . It is a
+compact Hausdorff topological ring.
+   Modules over A[[Γ ]], together with continuous module maps, form an abelian category
+with the same formal properties as the category of R-modules for a ring R; so the machinery of
+homological algebra works and we can define profinite group cohomology by starting from
+an arbitrary resolution of Ẑ by projective (left) Ẑ [[Γ ]]-modules and applying the functor
+HomẐ [[Γ ]] (−, M) giving the continuous homomorphisms from a module to M. If M is a
+module with trivial Γ -action, we can factor this through the functor Ẑ ⊗Ẑ [[Γ ]] − which
+‘forgets the Γ -action’ on the chain complex.
+   We will need to show that, under certain conditions, a free resolution of Z by Z [G]-
+modules yields a free resolution of Ẑ by Ẑ [[Ĝ]]-modules. To this end we use the following
+propositions and definitions, which are adapted from results in [15].
+Definition 2.6 A discrete group G is of type FP(n) if there is a resolution of the trivial module
+Z by projective Z [G]-modules P• , such that Pi is finitely generated for 0 ≤ i ≤ n.
+Proposition 2.7 Let G be a discrete group which is good. Then:
+ – lim K ≤ G H q (K ; M) = 0 for every finite G-module M and all q ≥ 1
+   −→ f
+ – If G is of type FP(n), then lim K ≤ G Hq (K ; M) = 0 for every finite G-module M and all
+                               ← − f
+   1 ≤ q ≤ n.
+Proof First note we may restrict to the case of trivial modules in the conclusions, as any finite
+G-module M becomes trivial over K for a cofinal subset of {K ≤f G}. Thus we may view M
+                                                                                         
+interchangeably as a left or right module. The maps res K   K  : H (K ; M) → H (K ; M) are
+                                                                    q                q
+
+given by restriction of cochains. The direct limit in question (categorically a colimit) is zero if
+all elements of H q (K ; M) are ‘eventually zero’; that is, for all x ∈ H q (K ; M) there is some
+K  ≤ K such that x is mapped to zero under the restriction map H q (K ; M) → H q (K  ; M).
+By goodness of K , there is a natural identification H q (K ; M) ∼     = H q ( K̂ ; M) so we may
+represent x as a continuous cochain ξ : K̂ q → M (q > 0). The preimage of 0 under ξ is
+some open subset of K̂ q ; products of open subgroups of K̂ form a neighbourhood basis in
+K̂ q , so we may choose Δ ≤o K̂ such that ξ |Δq = 0; then setting K  = K ∩ Δ (so that
+Δ = K̂  ) the commuting diagram
+                                               res K
+                                                   K
+                               H q (K ; M)                H q (K  ; M)
+                                   ∼
+                                   =                          ∼
+                                                              =
+                                               res K̂ 
+                               H q ( K̂ ; M)       K̂
+                                                          H q ( K̂  ; M)
+
+               K  (x) = 0; hence that lim
+shows that res K
+                                       −→ K ≤f G
+                                                 H q (K ; M) = 0.
+
+123
+Geom Dedicata (2017) 188:141–163                                                             145
+
+
+    For the second conclusion, assume G is of type FP(n). Then Hq (K ; M) is finite for all
+0 ≤ q ≤ n, K ≤f G and M a finite G-module, and similarly for the cohomology. Recall that
+an inverse limit of finite abelian groups Ai is trivial if and only if for each i in the indexing
+set, there exists j ≥ i such that A j → Ai is the zero map; and similarly for a direct limit of
+finite abelian groups.
+    So let K be a finite index subgroup of G, and take K  such that the restriction map res K K
+is zero on each H q . We show that we can dualise this to find that the corestriction map is also
+zero. Note that a finite-index subgroup of a group of type FP(n) is also of type FP(n). Let P•
+be a projective resolution of Z by left Z K -modules, which is finitely generated in dimension
+at most n. There is a natural isomorphism (see [9], Proposition II.5.2)
+
+                 HomZ K (P• , HomZ (M, Q/Z )) ∼
+                                              = HomZ (M ⊗ P• , Q/Z )
+Now take homology; Q/Z is an injective abelian group, so Hom(−, Q/Z ) is an exact functor
+and commutes with homology; hence we get a natural isomorphism
+
+                                H q (K ; M ∗ ) ∼
+                                               = (Hq (K ; M))∗
+where N ∗ denotes the dual Hom(N , Q/Z ) of an abelian group. Finite abelian groups are
+isomorphic to their dual and canonically isomorphic to their double-dual; so we get a natural
+isomorphism
+
+                                   H q (K ; M ∗ )∗ ∼
+                                                   = Hq (K ; M)
+in dimensions 0 ≤ q ≤ n where the right hand side is finite. The inclusion K  → K induces
+the zero map on the left hand side by assumption, noting that M is isomorphic to M ∗ so the
+restriction map with M ∗ coefficients also vanishes. Hence the map on the right hand side,
+the corestriction map, is zero.                                                           
+
+   To prove the next proposition, we will need some exactness properties of the functor lim. In
+                                                                                        ← −
+general this functor will not be exact and so will not commute with homology. A well-known
+condition for exactness is the Mittag-Leffler condition; roughly, it is an ‘eventual stability’
+condition. See [22] for a full treatment; here we merely state the definition and consequence.
+
+Definition 2.8 An inverse system (Ai )i∈I , where (I, ≤) is a totally ordered inverse system
+(not merely partially ordered) satisfies the Mittag-Leffler condition if for all i there exists
+j ≥ i such that
+
+                              im(Ak → Ai ) = im(A j → Ai )
+
+for all k ≥ j. That is, the images of the transition maps into Ai are eventually stable.
+
+If all systems Cn,i (i ∈ I ) in an inverse system of chain complexes C•,i satisfy the Mittag-
+Leffler condition, then we will have
+
+                                lim Hn (C•,i ) = Hn (lim C•,i )
+                                ← −                  ← −
+                                   i                    i
+
+for all n. In our case, all the groups Cn,i will be finite, so that the Mittag-Leffler condition
+holds (a decreasing sequence of subsets of a finite set is eventually constant). Our indexing
+set I = {(m, K ) | m ∈ N, K ≤f G} will not be totally ordered; however by passing to the
+cofinal subset J = {(m!, K n )} where K n is the intersection of the finitely many subgroups
+of index at most n, we get a totally ordered indexing set without affecting the limit.
+
+                                                                                     123
+146                                                                     Geom Dedicata (2017) 188:141–163
+
+
+Proposition 2.9 Let (Ci )0≤i≤n → Z be a partial resolution of Z by free finitely generated
+Z [G]-modules Ci = Z [G]⊕ri where G is a good group. Then (Ĉi )0≤i≤n → Ẑ is a partial
+resolution of Ẑ by free Ẑ [[Ĝ]]-modules
+                                             Ĉi = Ẑ [[Ĝ]]⊕ri
+
+Proof For each m ∈ N and K ≤f G, set
+                     Ai,m,K = (Z /m)[G/K ] ⊗Z [G] Ci = (Z /m)[G/K ]⊕ri
+so that the new chain groups are
+                                           Ĉi = lim Ai,m,K
+                                                 ← −
+                                                   m,K
+
+The groups Ai,m,K are finite, so the homology of each chain complex (A•,m,K ) is finite; as
+described above we may now use the Mittag-Leffler condition to conclude
+                          Hi (Ĉ• ) = Hi (lim Ai,m,K ) = lim Hi (Ai,m,K )
+                                          ← −            ← −
+                                             m,K              m,K
+
+Regarding (C• ) as an exact complex of free finitely generated Z [K ]-modules and noting that
+                                     Ai,m,K = (Z /m) ⊗Z [K ] Ci
+these homology groups Hi (Ai,m,K ) are precisely Hi (K ; Z /m). By the goodness of G we
+can now use Proposition 2.7 to conclude
+                                  Hi (Ĉ• ) = lim Hi (K ; Z /m) = 0
+                                              ← −
+                                               m,K
+
+for n − 1 ≥ i ≥ 1; and for i = 0
+                          H0 (Ĉ• ) = lim H0 (K ; Z /m) = lim Z /m = Ẑ
+                                      ← −                 ← −
+                                       m,K                        m,K
+
+i.e. (Ĉ• ) is a free partial resolution of Ẑ .                                                      
+
+
+3 Profinite completions of 2-orbifold groups
+
+In this section we recall the results of Bridson et al. [6] concerning Fuchsian groups (i.e.
+orbifold fundamental groups of hyperbolic 2-orbifolds), and show that they extend to the
+case of Euclidean 2-orbifolds.
+
+Theorem 3.1 (Theorem 1.1 of [6]) Let G 1 be a finitely-generated Fuchsian group and G 2
+be a lattice in a connected Lie group. If Ĝ 1 ∼
+                                               = Ĝ 2 then G 1 ∼
+                                                               = G2.
+
+                                                         (O1 ) ∼   
+Corollary 3.2 Let O1 , O2 be closed 2-orbifolds. If π1orb       = π1orb (O2 ) then π1orb (O1 ) ∼
+                                                                                               =
+π1 (O2 ). If χ (O1 ) ≤ 0, then O1 and O2 are homeomorphic as orbifolds.
+ orb          orb
+
+
+Proof Since π1orb (O1 ) is finite if and only if the orbifold Euler characteristic is positive, we
+can safely ignore these cases as the profinite completion is then simply the original group.
+                      
+Otherwise, assume π1orb  (O1 ) ∼     
+                                = π1orb (O2 ). Recall that closed 2-orbifolds of nonpositive Euler
+characteristic are determined by their fundamental groups.
+
+123
+Geom Dedicata (2017) 188:141–163                                                              147
+
+
+   The orbifold has a finite cover which is a surface; take such a cover of O1 and the corre-
+sponding cover of O2 . If necessary pass to a further finite cover so that both O1 and O2 are
+covered with degree d by surfaces with isomorphic profinite completions. A surface group
+is determined by its first homology, which is seen by the profinite completion, so the two
+surfaces are homeomorphic to the same surface Σ. Orbifold Euler characteristic is multi-
+plicative under finite covers, so χ orb (O1 ) = χ(Σ)/d = χ orb (O2 ). Hence Euclidean and
+hyperbolic orbifolds are distinguished from each other.
+   It only remains, in light of the above theorem of Bridson–Conder–Reid, to distinguish the
+Euclidean 2-orbifolds from each other. The profinite completion detects first homology; a
+direct computation shows that this suffices to distinguish all the Euclidean 2-orbifolds except
+(S2 ; 2, 4, 4) and (P2 ; 2, 2). Recall that an isomorphism of profinite completions would induce
+a correspondence between the index 2 subgroups, with corresponding subgroups having the
+same profinite completions. But (P2 ; 2, 2) is covered by the Klein bottle with degree 2, and
+the Klein bottle is distinguished from the other 2-orbifolds by its profinite completion, but
+does not cover (S2 ; 2, 4, 4). So these two Euclidean orbifolds also have distinct profinite
+completions.                                                                                   
+
+Theorem 3.3 (Theorem 5.1 of [6]) Let G be a finitely generated Fuchsian group. Every
+finite subgroup of Ĝ is conjugate to a subgroup of G, and if two maximal finite subgroups of
+G are conjugate in Ĝ then they are already conjugate in G.
+
+Proposition 3.4 Let G be the fundamental group of a closed Euclidean 2-orbifold X . Every
+torsion element of Ĝ is conjugate to a torsion element of G, and if two torsion elements of
+G are conjugate in Ĝ then they are already conjugate in G.
+
+Proof The second statement is a special case of the fact that a virtually abelian group is
+conjugacy separable [21].
+   We proceed on a case-by-case basis. If X is a torus or Klein bottle, then G is good and
+has finite cohomological dimension, hence Ĝ has finite cohomological dimension and so is
+torsion free. If X = (S2 ; 2, 2, 2, 2) then G is the amalgamated free product of two copies of
+the infinite dihedral group. The result then holds by the same argument as in Theorem 5.1 of
+[6]; for a finite subgroup of the fundamental group of a graph of groups must be conjugate into
+one of the vertex groups, which here are the copies of Z /2. The same result holds profinitely.
+Similarly if X = (P2 ; 2, 2) then the fundamental group is an amalgamated free product.
+   In [6] the triangle orbifolds were dealt with by passing to certain finite covers which
+decompose as amalgams, and whose fundamental group contains the torsion element of
+interest. However for Euclidean orbifolds, it may happen that no such covers exist; indeed no
+orbifold whose fundamental group is an amalgam has any cone points of order greater than
+2. We will instead exploit the fact that our triangle groups are virtually abelian. We give in
+detail the proof for the orbifold X = (S2 ; 3, 3, 3); the other two triangle orbifolds are similar
+but involve checking
+                    more cases,   so it would be uninformative to include the proofs.
+   Let G = a, b  a 3 , b3 , (ab)3 . We have a short exact sequence
+
+
+                       1           N        G           H1 G           1
+                                    ∼
+                                    =         id           ∼
+                                                           =
+
+                       1           Z2       G          (Z /3)2         1
+
+
+                                                                                      123
+148                                                                             Geom Dedicata (2017) 188:141–163
+
+
+ The subgroup N is a subgroup of the translation subgroup of G. The translation subgroup
+is generated by the translations x = a −1 b, y = ba −1 . The action of conjugation is
+                                                          −1           −1
+                          x a = x b = y −1 x −1 , x a = x b = y etc
+                                   
+The subgroup N = aba −1 b−1 is then generated by the elements u = y −1 x, v = x 3 ; note
+that [a, b] = u 2 v −1 . To guide our calculations, note that an element au r v s of G acts on the
+plane by rotation about the centroid of a certain triangle, whose location is in fact that of the
+fixed point of the rotation a, translated by u r +s vr/3 . So in G, we have
+                                                   r+s vr/3          −r−s x s
+                                  au r v s = a u              = ay
+and we expect similar equations to hold in Ĝ.
+   We have a short exact sequence for Ĝ induced from the one above:
+                                 1 → Ẑ 2 → Ĝ → (Z /3)2 → 1
+and see that any torsion element of Ĝ is of the form a i b j u ρ v σ where i, j = 0, 1, 2 are not
+both zero and ρ, σ ∈ Ẑ . For example, take i = 1, j = 0; the other cases are very similar.
+We now calculate
+                              −ρ−σ x σ
+                         ay              = x −σ y ρ+σ · a · y −ρ−σ x σ
+                                         = a · (x −σ y ρ+σ )a y −ρ−σ x σ
+                                         = a · (y −1 x −1 )−σ x ρ+σ y −ρ−σ x σ
+                                         = a · y −ρ x ρ x 3σ = au ρ v σ
+
+
+So that torsion elements of this form are indeed conjugates of elements in G. The rest of the
+proof consists of similar calculations for other cases and can be safely omitted.           
+
+
+4 Seifert fibre spaces
+
+We first recall some information about the invariants of a Seifert fibre space before moving
+on to profinite matters. For a more comprehensive introduction to Seifert fibre spaces see [8]
+and [19].
+    Recall that a fibred solid torus is formed as a quotient of D2 × [0, 1] by identifying the two
+end discs by a rotation by 2πq/ p where p, q are coprime integers, called the fibre invariants
+of the fibred solid torus. The foliation of D2 × [0, 1] by lines {x} × [0, 1] descends to a
+foliation of the torus by circles. Such pieces form a local model for a Seifert fibre space. Note
+that the quotient of a fibred solid torus obtained by collapsing each fibre naturally has an
+orbifold structure, where the image of the exceptional fibre is a cone point of order p. After
+fixing an orientation for the disc and fibre, the number q becomes well-defined in the range
+0 < q < p; if no orientations are chosen, it is well-defined only in the range 0 < q ≤ p/2.
+To give the standard presentation for the fundamental group, it is conventional to define the
+Seifert invariants of the exceptional fibre to be (α, β) where α = p, and βq ≡ 1 mod p.
+    The orbifold quotients of neighbourhoods of each fibre piece together to form the quotient
+of the whole manifold M by the foliation; this is the base orbifold O of the Seifert fibre space.
+This quotient induces a short exact sequence
+                               1 →< h >→ π1 M → π1orb O → 1
+
+123
+Geom Dedicata (2017) 188:141–163                                                                        149
+
+
+where π1orb O is the orbifold fundamental group, and h is the element of π1 represented by a
+regular fibre. This subgroup < h > may be finite or infinite cyclic, and is either central (if O
+is orientable) or π1 M has an index 2 subgroup which contains h as a central element.
+    The final invariant has various different formulations; see [8,16,19]. It is in some sense
+the ‘obstruction to a section’, and coincides with the Euler number of the fibration when there
+are no exceptional fibres and the Seifert fibre space is a bona fide fibre bundle. In general it
+is still called the Euler number e of the Seifert fibre space, and is a rational number. The key
+properties of the Euler number are the above behaviour when there are no exceptional fibres,
+and the following naturality property:
+Proposition 4.1 If M̃ → M is a degree d cover, where the base orbifold cover Õ → O has
+degree m and a regular fibre of M̃ covers a regular fibre of M with degree l
+
+                    1            < h̃ >            π1 M̃           π1orb Õ           1
+                                     l                 d                m
+
+                    1            <h >              π1 M            π1orb O            1
+
+then
+                                               m
+                                          e( M̃) =· e(M)
+                                                l
+The Euler number has no well-defined sign a priori; given a choice of orientation on M,
+e acquires a sign, and reversing the orientation (by flipping the direction along the fibres)
+changes this sign. This is consistent with the interpretation as the obstruction to a section;
+when there are no exceptional fibres, circle bundles with orientable total space are classified by
+elements of H 2 (Σ; Z ), where the Z coefficients are twisted by the orientation homomorphism
+for Σ; this group is Z whether or not Σ is orientable.
+   The vanishing of the Euler number gives important topological information:
+Proposition 4.2 Let M be a Seifert fibre space. The Euler number e(M) vanishes if and only
+if M is virtually a surface bundle over the circle with periodic monodromy.
+Finally, we can state the classification results of Seifert fibre spaces and characterisations of
+their fundamental groups from these invariants.
+Proposition 4.3 A Seifert fibre space is uniquely determined by the symbol
+                                   (b, Σ; (α1 , β1 ), . . . , (αr , βr ))
+where
+                              
+ – b ∈ Z and e = −(b + βi /αi );
+ – Σ is the underlying surface of the base orbifold;
+ – (αi , βi ) are the Seifert invariants of the exceptional fibres, and 0 < βi < αi are coprime.
+If Σ is closed and orientable of genus g, π1 M has presentation
+                                                                  
+                 a1 , . . . , ar , u 1 , v1 , . . . , u g , vg , h 
+                                                                                                  
+                     h ∈ Z (π1 M), aiαi h βi , a1 . . . ar [u 1 , v1 ] · · · [u g , vg ] = h b
+If Σ is closed and non-orientable of genus g, then π1 M has presentation
+                                                       
+                  a1 , . . . , ar , v1 , . . . , vg , h 
+                                                                                              
+                        h ai = h, h vi = h −1 , aiαi h βi , a1 . . . ar v12 . . . vg2 = h b
+
+
+                                                                                                      123
+150                                                                    Geom Dedicata (2017) 188:141–163
+
+Table 1 The geometry of a
+                                                       χ orb > 0            χ orb = 0            χ orb < 0
+Seifert fibre space is determined
+by the base orbifold and Euler
+number                               e=0               S2 × R               E3                   H2 × R
+                                     e = 0            S3                   Nil                   
+                                                                                                 SL 2 (R)
+
+
+
+
+When the Seifert fibre space has boundary, we have similar presentations without the last
+relation; the base orbifold group is just a free product of (finite or infinite) cyclic groups.
+In these presentations, h represents the regular fibre; killing h gives a presentation of the
+orbifold fundamental group of the base. Note also that reversing the orientation of the fibre
+h and ‘renormalising’ to get the βi back into the correct range, there is an ambiguity in the
+above symbol for a Seifert fibre space, under the transformation
+      (b, Σ; (α1 , β1 ), . . . , (αr , βr )) → (−b − r, Σ; (α1 , α1 − β1 ), . . . , (αr , αr − βr ))
+which flips the sign of e. When the orbifold is orientable, this will be the only ambiguity
+provided there is a unique Seifert fibre space structure on the manifold.
+
+Proposition 4.4 If a closed manifold M has two distinct Seifert fibre space structures, then
+it is covered by S3 , S2 × R, or S1 × S1 × S1 .
+
+Proposition 4.5 If h is a regular fibre, then the subgroup < h > is infinite cyclic unless M is
+covered by S3 .
+
+Proposition 4.6 A manifold M is Seifert fibred if and only if it has one of the six geometries
+in Table 1. The geometry is determined by the Euler characteristic of the base orbifold and
+the Euler number of M.
+
+
+
+5 Theorems
+
+In this section we prove the following result, which with the work of [24] gives the theorem
+in the introduction.
+                                                                          
+Theorem 5.1 Let M1 , M2 be (closed orientable) Seifert fibre spaces. Then π       ∼
+                                                                            1 M 1 = π1 M 2
+if and only if one of the following holds:
+ – π1 M 1 ∼
+          = π1 M2 , so that unless they have S3 -geometry, M1 and M2 are homeomorphic;
+ – M1 , M2 have the geometry H2 × R, where for some hyperbolic surface S and some
+   periodic automorphism φ of S, the 3-manifolds M1 and M2 are S-bundles over the circle
+   with monodromy φ and φ κ respectively, where κ is coprime to order(φ).
+
+   The non-trivial part of the ‘if’ direction of this theorem was proved by Hempel [13].
+Alternatively one can apply the argument of Theorem 5.9 to get a new proof.
+   The solution of the problem will proceed in several stages. Firstly, we will show that,
+except in the ‘trivial’ geometries, an isomorphism of profinite completions of Seifert fibre
+spaces will induce an automorphism of the profinite completion of the base orbifold group B̂,
+which the two Seifert fibre spaces will share; and furthermore that both Seifert fibre spaces
+will have the same Euler number (up to sign). We will then constrain the automorphism of B̂
+and compute the action of such an automorphism on H 2 B̂. Intuitively we will be considering
+
+123
+Geom Dedicata (2017) 188:141–163                                                                 151
+
+
+what can happen to the ‘fundamental class’ of the orbifold. We will then be able to conclude
+the result by considering the cohomology classes giving the Seifert fibre spaces as central
+extensions of B̂.
+    The ‘trivial’ geometries mentioned above are S3 , E3 , S2 × R; they are trivial for the profinite
+rigidity problem in the sense that spherical manifolds have finite fundamental group, and
+there are only six and two orientable manifolds of the latter two geometries respectively,
+all distinguished by their first homology. For the rest of the section, a ‘generic’ Seifert fibre
+space will mean any Seifert fibre space not of the above geometries.
+    We will be using heavily the fact that the subgroup generated by a regular fibre is central;
+this is only true for orientable base orbifold, so first note that we can reduce to this case
+as follows. Suppose first that we have a closed Seifert fibre space. The orbifold group B
+has a canonical index 2 subgroup corresponding to the orientation cover of the underlying
+surface of the orbifold. This induces an index 2 cover of the Seifert fibre space. Note that
+this cover contains all the information needed to recover the original Seifert fibre space; in
+particular, for each exceptional fibre with Seifert invariants ( p, q) where 1 ≤ q < p/2 the
+cover has 2 exceptional fibres with the same invariant ( p, q), and has no other exceptional
+fibres. Because the index 2 subgroup is canonical, it will follow that any isomorphism of the
+profinite completions of the Seifert fibre space groups will induce an isomorphism for these
+characteristic covers, to which we may apply the theorem for orientable base orbifold, and
+then recover the original manifolds.
+    When the Seifert fibre space has boundary, the base orbifold group itself does not distin-
+guish orientable base orbifold from non-orientable, and hence has no obvious characteristic
+subgroup. However if we assume that the peripheral subgroups of the base orbifold groups
+are preserved under the isomorphism of profinite completions, we can collapse each of them
+to obtain a closed orbifold and take the canonical index 2 cover of this, and hence of the
+original orbifold, to recover the above situation.
+    Throughout we will freely use the fact that Seifert fibre space groups and Fuchsian groups
+are subgroup separable. In particular if M is a Seifert fibre space over a base orbifold O, we
+may take profinite completions to obtain a short exact sequence
+
+                                        
+                               1 → Ẑ → π       
+                                          1 M → π1 O → 1
+                                                 orb
+
+
+where Ẑ is generated by a regular fibre. these facts are theorems of Scott [18].
+
+5.1 Preservation of the fibre
+
+We first prove that the subgroup given by the fibre is still essentially unique for most Seifert
+fibre spaces. In the statement of the theorem, a ‘virtually central’ subgroup Z of a group G
+will mean that either Z is central in G or that the ambient group G has an index 2 subgroup
+containing Z in which Z is central. The fibre subgroup of a Seifert fibre space subgroup is
+such a subgroup; it is central when the base orbifold is orientable, or is central in the index
+2 subgroup corresponding to the orientation cover of a non-orientable base orbifold.
+
+Theorem 5.2 Let M, N be Seifert fibre spaces and suppose that π     ∼ 
+                                                               1 (M) = π1 (N ). Call this
+common completion Γ . Then:
+
+1. M and N have the same geometry;
+2. Γ has a unique maximal virtually central normal procyclic subgroup unless the geometry
+   of M is S3 , S2 × R, or E3 ; and
+
+                                                                                         123
+152                                                                  Geom Dedicata (2017) 188:141–163
+
+                                       
+3. If the geometry is Nil, H2 × R, or SL 2 (R), then M and N have the same base orbifold
+   and Euler number.
+
+
+Remark 5.3 The first conclusion of this theorem was already known by the above-cited
+theorem of [24]; the proof here, specific to Seifert fibre spaces, is different in some respects,
+so we include it for completeness.
+
+
+Proof As usual, spherical manifolds are distinguished by having finite fundamental groups,
+                                                                                    
+hence finite profinite completions. The four model geometries E3 , Nil, H2 ×R, and SL2 (R) are
+contractible, so the fundamental groups of all such manifolds have cohomological dimension
+exactly 3. All compact S2 × R-manifolds are finitely covered by S2 × S1 , hence have a finite
+index subgroup of cohomological dimension 1. All Seifert fibre space groups are good, so
+this fact is detected by the profinite completion, hence S2 × R is distinguished from the
+other geometries. Henceforth assume that M has one of the four relevant geometries with
+contractible universal cover.
+   Now suppose that Γ has two virtually central normal procyclic subgroups, < h > and
+< η >, where h is represented by a regular fibre of M and < η > is not contained in < h >.
+We will show first that the base orbifold O is Euclidean. Passing to the quotient by < h >,
+the image of < η > is a normal procyclic subgroup of π1 (O). By Corollary 5.2 of [6] and
+                                                       orb
+
+Proposition 3.4 above, profinite completions of non-positively curved orbifold groups have
+no finite normal subgroups, so < η > persists as an infinite procyclic subgroup of π1orb   (O).
+Hence also the subgroup < h > is still maximal even in the profinite completion i.e. is not
+contained in some larger normal procyclic subgroup.
+    We can now pass to a finite index subgroup of Γ whose intersections with < h >, < η > are
+central and non-trivial, and then to a further finite index subgroup Δ so that the corresponding
+cover of M has base orbifold an orientable surface Σ covering O. The image of < η > now
+gives a central subgroup of π   1 Σ. But the profinite completion of a surface group has no
+centre unless the surface is a torus (see [2,15] or [3]). Hence O is Euclidean.
+    The base orbifold Σ is now a torus. We know that < η > is a central procyclic subgroup
+of π   2 ∼ 2
+     1 T = Ẑ ; assume now that it is maximal. Using Theorem 4.3.5 of [17], the quotient
+Ẑ /< η > is Ẑ ; hence we can quotient by the closed subgroup Ẑ 2 generated by both h and η
+  2
+
+to get an exact sequence
+
+                                  1 → Ẑ 2 → Δ → Ẑ → 1
+
+   We now calculate that
+
+                                     H 1 (Δ; Z /n) ∼
+                                                   = (Z /n)3
+
+for all n. As described in Sect. 2 we can calculate this cohomology group using the spectral
+                    p,q
+sequence whose E 2 page is given by
+
+                                  p,q
+                                E2      = H p (Ẑ ; H q (Ẑ 2 ; Z /n))
+
+
+
+123
+Geom Dedicata (2017) 188:141–163                                                          153
+
+
+
+                               3         0              0     0
+
+                               2       Z /n           Z /n    0
+
+                         q     1     (Z /n)2        (Z /n)2   0
+
+                               0       Z /n           Z /n    0
+
+                                         0              1     2
+
+                                                        p
+
+ Now the only arrow that could alter the p + q = 1 diagonal is the arrow shown, which is
+trivial; so this diagonal is already stable and the first cohomology is (Z /n)3 as required.
+    But the finite index subgroup Δ ≤ Γ corresponds to a cover M̃ → M where the base
+orbifold of M̃ is a torus. Then we have
+                                                                           
+                        π1 M̃ = u 1 , v1 , h  [u 1 , v1 ] = h −e , h central
+
+where e is the Euler number of M̃; hence H1 M̃ = Z2g ⊕ Z /eZ and
+                  H 1 (Δ; Z /n) ∼
+                                = H 1 ( M̃; Z /n) ∼
+                                                  = (Z /n)2 ⊕ Z /hcf(e, n)
+for all n. Comparing with the above, we find that e must be zero; by naturality M also has
+trivial Euler number.
+    We now deal with the case where Γ has a unique maximal virtually central procyclic
+normal subgroup. Note that in this case, the isomorphism π        ∼ 
+                                                             1 (M) = π1 (N ) preserves < h >,
+and hence induces an isomorphism of the profinite completions of the base orbifold; then by
+Theorem 3.1 and Corollary 3.2, M and N have the same base orbifold O.
+    If we now show that M, N have the same Euler number, then we are finished as the
+geometries are distinguished by base orbifolds and whether the Euler number is non-zero.
+Again pass to an index d subgroup Δ of Γ with the corresponding cover of M being M̃ → M;
+where M has base orbifold a surface. Then, as above, for both N and M, the Euler number
+is given up to sign by the torsion part of H1 M̃, divided by d, because the Euler number has
+the naturality property in Proposition 4.1. First homology is a profinite invariant, hence N
+and M have the same Euler number and the proof is complete.                                 
+
+   Recall that the Euler number of the Seifert fibre space was of the form
+                                                βi 
+                                  e=− b+
+                                                     αi
+with b an integer. Thus given the base orbifold (hence the αi ) and the Euler number, the only
+further ambiguity is whether
+                             we can change the βi by values δi (with δi not congruent to 0
+modulo αi ) such that δi /αi is an integer. By the Chinese Remainder Theorem, there is no
+such collection of δi when all the αi are coprime. Hence we have the following corollary, in
+which we change notation to follow the usual conventions for cone points.
+
+Corollary 5.4 Let M be a Seifert fibre space whose base orbifold is an orbifold
+                                     (Σ; p1 , . . . , pk )
+
+                                                                                   123
+154                                                               Geom Dedicata (2017) 188:141–163
+
+
+where p1 , . . . , pk are coprime. Then π1 M is distinguished by its profinite completion from
+all other 3-manifold groups.
+
+   The above theorem was stated and proved for closed Seifert fibre spaces. A similar result
+holds for Seifert fibre spaces with boundary. Much of the above argument holds just as well
+when the Seifert fibre space has boundary, except that we must rule out some cases with more
+than one geometry, and the Euler number is no longer defined (a section of a surface-with-
+boundary always exists). Furthermore, surfaces are no longer determined by their profinite
+completion unless we have some information about the boundary.
+
+Theorem 5.5 Let M, N be Seifert fibre spaces with non-empty boundary. Suppose that
+π      ∼ 
+  1 (M) = π1 (N ). Call this common completion Γ . Furthermore assume that M and N have
+the same number of boundary components. Then:
+1. Γ has a unique maximal virtually central normal procyclic subgroup unless M (and
+   hence N ) is a solid torus, S1 × S1 × I or the orientable I-bundle over the Klein bottle;
+   and
+2. except in these cases, M and N have the same base orbifold.
+
+Proof The only positive Euler characteristic orbifolds with boundary are the disc with pos-
+sibly one cone point; the Seifert fibre space is then a fibred solid torus.
+     The only zero Euler characteristic orbifolds with boundary are the annulus (giving the
+Seifert fibre space S1 × S1 × I), the Möbius band and disc with two order 2 cone points (both
+giving the orientable I-bundle over the Klein bottle).
+     These three spaces all have different profinite completions of fundamental groups; one is
+Ẑ , one is Ẑ 2 and the other is non-abelian; and none of the Seifert fibre spaces with hyperbolic
+base orbifold have virtually abelian fundamental group, so we can safely proceed assuming
+M, N are not any of the three exceptional manifolds above.
+     Part 1 of the proposition now follows from the same argument as in Theorem 5.1, replacing
+“virtually a non-abelian surface group” with “virtually a non-abelian free group” to get the
+lack of central subgroups of the base orbifold group. Now the base orbifold groups have
+isomorphic profinite completions, so by [6], they are the same group. The ambiguity in the
+surface is now resolved by the knowledge that M and N and hence their base orbifolds have
+the same number of boundary components; and the fact that Γ detects whether the unique
+maximal virtually central normal subgroup < h > is genuinely central or merely virtually so,
+hence whether the base orbifold is orientable or not.                                            
+
+5.2 Central extensions
+
+A central extension of a group B by a (necessarily abelian) group A consists of a short exact
+sequence
+                                   1→ A→G→B→1
+where the image of A is contained in the centre of G. Two such extensions are regarded as
+equivalent if there is a commutative diagram
+
+                         1           A          G          B          1
+                                      id         ∼
+                                                 =           id
+
+                         1          A          G          B          1
+
+123
+Geom Dedicata (2017) 188:141–163                                                                  155
+
+
+ Equivalence classes of central extensions are classified by elements of H 2 (B; A). The proof
+of this fact proceeds directly via cochains, but for what follows it will also be convenient to
+have the following
+                      interpretation. 
+                             
+     Let B = x1 , . . . , xn  r1 , . . . , rm be a presentation for B, let F be the free group on the
+xi , and R the normal subgroup generated by the r j . From the Serre spectral sequence for the
+short exact sequence
+                                    1→R→F →B→1
+we obtain the five-term exact sequence
+    0 → H 1 (B; A) → H 1 (F; A) → (H 1 (R; A)) F → H 2 (B; A) → 0 = H 2 (F; A)
+where the third non-zero term denotes those elements of H 1 (R; A) invariant under the conju-
+gation action of F; in fact this is the group H 1 (R/[R, F]; A). Given an element of H 2 (B; A),
+lift to some
+                             ξ ∈ (H 1 (R; A)) F = (Hom(R, A)) F
+Then a central extension of B by A is given by the ‘presentation’ (abusing notation slightly):
+                                                                                   
+              G = Y, x1 , . . . , xn  S, Y ⊆ Z (G), r1 = ξ(r1 ), . . . , rm = ξ(rm )
+               
+where A = Y  S . The condition that A does genuinely include into this group is equivalent
+to the invariance of ξ under the action of F. The ambiguity under choice of lift to an element
+ξ is an element ψ ∈ H 1 (F; A). However this ambiguity corresponds precisely to changing
+the generating set of G to Y and the elements xi = xi · ψ(xi ). Conversely if two such G, G 
+given by ξ, ξ  are isomorphic by an isomorphism Φ fixing B and A, then ξ and ξ  differ by
+ψ ∈ H 1 (F; A) given by ψ(xi ) = xi · (Φ(xi ))−1 .
+    The question of when two central extensions G, G  of B by A given by ζ, ζ  ∈ H 2 (B; A)
+can be isomorphic allowing arbitrary automorphisms for B and A is more subtle; one needs
+to prove whether any automorphisms of B and A can carry ζ to ζ  by the induced maps on
+H 2 . This will be the central issue in the proof of Theorem 5.1.
+    The above theory of central extensions also holds for B̂ profinite, provided that the abelian
+group A is finite so that the cohomology group H 2 ( B̂, A) is reasonably well-behaved. See
+Sect. 6.8 of [17]. The fundamental groups of generic Seifert fibre spaces (over orientable
+base) are central extensions
+                                    1→Z→G→B→1
+classified by an element ηG ∈ H 2 (B; Z ), where B = π1orb O is the fundamental group of
+the base orbifold. The profinite completion of a generic Seifert fibre space group is a central
+extension of B̂ by the infinite group Ẑ . To avoid the complications raised by the presence
+of Ẑ , we restrict to a finite coefficient group as follows. Note that since an isomorphism of
+profinite completions of two Seifert fibre space groups G, G  preserves this central subgroup
+Ẑ by Theorem 5.2, and since Ẑ has a unique index t subgroup, any isomorphism Ĝ ∼       = Ĝ 
+induces an isomorphism
+                              Γ = Ĝ/< h t > ∼
+                                             = Ĝ  /< h t > = Γ 
+where Γ, Γ  are now central extensions of B̂ by Z /t. Hence they are classified by elements
+ζ, ζ  of H 2 ( B̂; Z /t). But B is a good group, hence H 2 ( B̂; Z /t) is canonically isomorphic
+to H 2 (B; Z /t); and ζG , ζG  are the images of ηG , ηG  under the maps
+                          H 2 (B; Z ) → H 2 (B; Z /t) ∼
+                                                      = H 2 ( B̂; Z /t)
+
+                                                                                          123
+156                                                                                       Geom Dedicata (2017) 188:141–163
+
+
+   It remains to show that no automorphisms of B̂ and Z /t can carry ζG to ζG  under the
+induced maps on H 2 ( B̂; Z /t) for all t unless the manifolds M1 , M2 are homeomorphic or
+are covered by the theorem of Hempel [13].
+   Before moving on, let us calculate the cohomology classes ηG in terms of the five-term
+exact sequence; this will be of use later. For a Seifert fibre space over orientable base with
+symbol
+
+                                               (b, Σ; ( p1 , q1 ), . . . , ( pr , qr ))
+
+the fundamental group has presentation
+                                                  
+ a1 , . . . , ar , u 1 , v1 , . . . , u g , vg , h 
+                                                                              p                                                      
+                                                         h ∈ Z (π1 M), ai i h qi , a1 . . . ar [u 1 , v1 ] . . . [u g , vg ] = h b
+
+Let 1 → R → F → B → 1 be the corresponding presentation of the base orbifold group.
+Now R/[R, F] is in fact the free Z -module on these relations y0 = a1 . . . vg−1 , yi = ai i ;
+                                                                                          p
+
+comparing to the above general theory we see that the cohomology class ηG is the image in
+H 2 (B; Z ) of the map
+
+                                                       y0  → b,    yi  → −qi
+
+in Hom(R/[R, F], A). The chain complexes in the following section make rigorous our
+treatment of R/[R, F] as a free abelian group on these generators. The calculation is similar
+for the bounded case, except that the y0 term does not appear.
+
+5.3 Action on cohomology
+
+We first constrain the possible automorphisms of base orbifold that we need to consider:
+
+Proposition 5.6 Let M1 , M2 be generic Seifert fibre spaces with π                                  ∼ 
+                                                                                           1 (M1 ) = π1 (M2 ). Let the
+base orbifold group be
+                                                    p                                                                 
+    B = a1 , . . . , ar , u 1 , v1 . . . , u g , vg  a1 1 , . . . , ar r , a1 . . . ar · [u 1 , v1 ] · · · [u g , vg ]
+                                                                       p
+
+
+Then some isomorphism of π                  
+                               1 (M1 ) with π1 (M2 ) induces an automorphism of B̂ mapping
+                           ki
+each ai to a conjugate of ai , where ki is coprime to pi .
+
+Proof This is a simple corollary of Proposition 3.4; for the induced automorphism of B̂
+from any given isomorphism of the π  1 (Mi ) must induce a bijection on conjugacy classes
+of maximal torsion elements; hence ai is sent to a conjugate of aσki(i) for some permutation
+σ with pσ (i) = pi and ki coprime to pi . Permuting the ai under the permutation σ −1 is
+an automorphism of B, hence of B̂, so we can force σ to be the identity; on the level of
+the Seifert fibre spaces we are simply relabelling the exceptional fibres and exploiting the
+invariance of the fundamental group under such relabellings.                               
+
+    Note that this proposition works just as well when there is boundary.
+
+Proposition 5.7 If φ is an automorphism of B as in Proposition 5.6, then for any n the action
+of φ ∗ on H 2 ( B̂; Z /n) is multiplication by κ for some profinite integer κ ∈ Ẑ such that for
+all 1 ≤ i ≤ r , κ is congruent to ki modulo pi .
+
+
+123
+Geom Dedicata (2017) 188:141–163                                                                                     157
+
+
+Proof We construct a partial resolution of Z by free Z B-modules, transport this to a partial
+resolution of Ẑ by free Ẑ [[ B̂]]-modules, and use this to compute the action on cohomology
+of the above automorphisms of B. Fix the presentation
+                                                     p                                                                 
+     B = a1 , . . . , ar , u 1 , v1 . . . , u g , vg  a1 1 , . . . , ar r , a1 · · · ar · [u 1 , v1 ] · · · [u g , vg ]
+                                                                        p
+
+
+of B, let F = F(ai , u i , vi ) and R = ker(F → B).
+   Set C0 = Z B, interpreted as the free Z -module on the vertices of the Cayley graph of B,
+with B-action by left translation on Cay(B); the map  : Z B → Z is the evaluation map.
+   Let C1 = Z B{xi , ū j , v̄ j }, the free Z B-module with generators xi (1 ≤ i ≤ r ), ū j , v̄ j (1 ≤
+ j ≤ g). The generator xi represents the edge in Cay(B) starting at 1 and labelled by ai ,
+and similarly ū j , v̄ j represent the edges labelled u j , v j . Thus C1 is the space of linear
+combinations of paths in Cay(B), with B-action given by left-translation.
+   The boundary map d1 : C1 → C0 sends each path to the sum of its endpoints, so that
+for example xi  → ai − 1 ∈ Z B. Certainly d1 = 0; exactness at C0 now follows by
+connectedness of the Cayley graph.
+   Let C2 = Z B{y0 , . . . , yr }. We can interpret C2 as representing ‘all the relations of B’;
+that is, all closed loops in the Cayley graph. The generator y0 will represent the relation
+a1 · · · vg−1 in the above presentation, and yi the relation ai i ; now define d2 : C2 → C1 by
+                                                                  p
+
+mapping each generator to the loop in the Cayley graph representing it; for instance,
+                                                                          p −1
+                   d2 (yi ) = xi + a1 · xi + a12 · xi + · · · + ai i             · xi
+                  d2 (y0 ) = x1 + a1 · x2 + · · · + a1 . . . ar −1 · xr
+                              + a1 . . . ar · u¯1 + · · · − a1 . . . ar [u 1 , v1 ] · · · [u g , vg ]v̄g
+Any loop in the Cayley graph represents some element of R, which can be expressed as a
+product of conjugates of the relations in the above presentation. Left conjugation of a relation
+corresponds to left-translating the loop around the Cayley graph; so any such product of
+conjugates can be realised in the Cayley graph as a Z B-linear combination of the d2 (yi ).
+Hence d1 d2 = 0 and the image of d2 is precisely the kernel of d1 .
+   Let us analyse the kernel of d2 ; let
+                                    
+                               s=            n ib b · yi ∈ ker(d2 )
+                                               i    b
+        
+            b n b b ∈ Z B for each i. The coefficient of x i in d2 (s) is
+where           i
+
+                                                                                        p −1
+                      0=          n 0b ba1 . . . ai−1 +        n ib b 1 + ai + · · · ai i
+                              b                            b
+
+Multiplying on the right by (ai − 1) kills the second sum; and reparametrising the first      sum
+yields n 0bai = n 0b for all b ∈ B. If r > 1, the ai generate an infinite subgroup of B; but n 0b b
+is a finite linear combination, so n 0b = 0 for all b. If r = 1, we can analyse the coefficient of
+u i instead as g > 0 for a non-spherical orbifold; or we can simply note that profinite rigidity
+in the cases r = 0, 1 was already covered by Corollary 5.4, so that we need not worry any
+                                                                                   p −1
+further about them. We are left to conclude that b n ib b(1 + ai + · · · ai i ) = 0, hence
+ i
+    b n b b is some multiple of (ai − 1) and the kernel of d2 is spanned by (ai − 1)yi .
+    Now set C3 = Z B{z 1 , . . . , zr } and d3 (z i ) = (ai − 1) · yi to find an exact sequence
+                                        C3 → C2 → C1 → C0 → Z
+i.e. a partial resolution of Z by free Z B-modules as desired.
+
+                                                                                                           123
+158                                                                              Geom Dedicata (2017) 188:141–163
+
+
+   By Proposition 2.9 we have a partial resolution
+                                       Ĉ3 → Ĉ2 → Ĉ1 → Ĉ0 → Ẑ
+where each Ĉi is the free Ẑ [[ B̂]]-module on the same generators as Ci , and the boundary
+maps are defined by the same formulae on these generators. We can thus use this resolution
+to compute the first and second (co)-homology on B̂.
+    Let φ : B̂ → B̂ be an automorphism of B̂ as in Proposition 5.6. Construct maps φ :
+Ĉi → Ĉi for i = 1, 2 as follows. Lift φ to φ̃ : F̂ → F̂ such that
+                                                                  −1
+                                              φ̃(ai ) = (aiki )gi
+for some gi ∈ F̂. Write the image of each generator of F̂ under φ̃ as a limit of words on these
+generators; then map the corresponding generator of Ĉ1 to the associated limit of paths in
+the Cayley graph. To define φ on Ĉ2 , note that each relation of B̂ is mapped to an element
+of R̄ under φ̃, hence can be written as a (limit of) products of conjugates of relations; now
+map this to an element of Ĉ2 just like before. We have made a choice of expression of an
+element of R̄ in terms of conjugates of relations; the ambiguity is by construction an element
+of ker(d̂2 ) = im(d̂3 ), which image will soon vanish. For definiteness, choose
+                                   φ (yi ) = ki gi · yi (1 ≤ i ≤ r )
+                                                           p
+coming from the obvious expression of φ̃(ai i ) from above. Because the map on R̄ was
+induced by the map on F̂ used to define φ : Ĉ1 → Ĉ1 , we get a commuting diagram
+
+                                 Ĉ3             Ĉ2           Ĉ1              Ĉ0
+                                                    φ           φ
+
+                                 Ĉ3             Ĉ2           Ĉ1              Ĉ0
+
+Now apply the functor Ẑ ⊗Ẑ [[ B̂]] —to the above diagram; i.e., factor out the action of B̂, to
+get a commuting diagram
+                            0                            d2                            0
+       Ẑ ⊗Ẑ [[ B̂]] Ĉ3        Ẑ {y0 , . . . , yr }         Ẑ {xi , ū j , v̄ j }       Ẑ ⊗Ẑ [[ B̂]] Ĉ0
+                                            φ                             φ
+
+                            0                            d2                            0
+       Ẑ ⊗Ẑ [[ B̂]] Ĉ3        Ẑ {y0 , . . . , yr }         Ẑ {xi , ū j , v̄ j }       Ẑ ⊗Ẑ [[ B̂]] Ĉ0
+
+with the rows no longer exact, but with the maps marked as zero becoming trivial because
+the image of each generator of the chain group had a factor (ai − 1). We have some good
+control over the maps in the above, viz.
+                                           φ (xi ) = ki xi
+                                           φ (yi ) = ki yi
+                                          d2 (y0 ) = x1 + · · · + xr
+                                           d2 (yi ) = pi xi
+                        
+If φ (y0 ) = κ y0 +        μi yi , then tracking this around the diagram we find
+                                                 κ + pi μi = ki
+for all i.
+
+123
+Geom Dedicata (2017) 188:141–163                                                                    159
+
+
+   For n ∈ N, we now apply HomẐ (−, Z /n) to the above diagram, to get a commuting
+diagram
+
+
+                    0
+                         (Z /n){y0∗ , . . . , yr∗ }            (Z /n){xi∗ , ū ∗j , v̄ ∗j }   0
+                                                       d2
+                                  φ                                    φ
+
+
+                    0
+                         (Z /n){y0∗ , . . . , yr∗ }            (Z /n){xi∗ , ū ∗j , v̄ ∗j }   0
+                                                       d2
+
+
+in which the homology of each row gives H 2 ( B̂; Z /n) and φ  gives an action on this coho-
+mology group.
+   First let us note that this action is genuinely the functorial map φ ∗ induced by φ. By
+construction Ẑ ⊗Ẑ [[ B̂]] Ĉ2 is the free Ẑ -module on our relations. In this construction for the
+discrete group, this would be R/[R, F]. In the profinite world, R̄/[ R̄, F̂] may not be free
+abelian, as not every closed subgroup of a free profinite group is free; however we do get a
+canonical surjection
+
+                                       Ẑ ⊗Ẑ [[ B̂]] Ĉ2  R̄/[ R̄, F̂]
+
+since our chosen set of relations is a generating set for this latter group. But now the map
+φ on Ẑ ⊗Ẑ [[ B̂]] Ĉ2 is easily seen to induce the natural map on R̄/[ R̄, F̂] given by φ̃; and
+naturality of the quotient map
+
+                              H 1 ( R̄/[ R̄, F̂]; Z /n)  H 2 ( B̂; Z /n)
+
+coming from the five-term exact sequence shows that φ  will indeed give the correct action
+on H 2 .
+   Finally, we can compute this action on H 2 ( B̂; Z /n). We have from above
+
+                                          φ  (y0∗ ) = κ y0∗
+                                          φ  (yi∗ ) = μi y0∗ + ki yi∗
+                                          d 2 (xi∗ ) = y0∗ + pi yi∗
+                                   d 2 (ū i∗ ) = 0 = d 2 (v̄i∗ )
+                                    
+so that, given a cochain ζ = by0∗ − i qi yi∗ , we have
+                                                          
+             φ ∗ ([ζ ]) = [φ  (ζ )] =         qi μi y0∗ −
+                                            κb −             qi ki yi∗
+                                                                              
+                                    = κ by0∗ −    qi yi∗ −   qi μi y0∗ + pi yi∗
+                                    = κ[ζ ]
+
+                                                                                                     
+
+Proof (Proof of Theorem 5.1) Recall that we have reduced to the case of orientable base
+orbifold. As discussed in Sect. 5.2, our manifolds M1 , M2 are determined by cohomology
+classes η1 , η2 ∈ H 2 (B; Z ). If
+
+                               M1 = (b, Σ; ( p1 , q1 ), . . . , ( pr , qr ))
+
+                                                                                                  123
+160                                                                 Geom Dedicata (2017) 188:141–163
+
+
+then as a cochain in the basis y0∗ , . . . , yr∗ of HomZ B (C2 , Z ) where C• is the partial resolution
+defined above, we have (see Sect. 5.2)
+                                             ⎡                     ⎤
+                                                       
+                                   η1 = ⎣by0∗ −             qi yi∗ ⎦
+                                                    1≤i≤r
+
+and similarly for η2 . From these we get cohomology classes ζi,n ∈ H 2 ( B̂; Z /n). Suppose that
+π        ∼ 
+  1 (M1 ) = π1 (M2 ). Then, after possibly reordering the exceptional fibres of M2 , we have that
+the exists κ ∈ Ẑ such that κζ1,n = ζ2,n for all n. It is a consequence of the previous proposition
+that an automorphism of the base induces such an effect on the cohomology groups; we may
+also rescale the fibres of the Mi by an automorphism of Ẑ , giving an automorphism of the
+coefficient ring of H 2 . But this is simply multiplication of the cohomology class by some
+element of Ẑ × , which we merge into κ.
+    If the Mi have non-zero Euler number e > 0 (by reversing theorientation on the fibres
+we can always force e > 0 for both manifolds), choose n = me pi for some integer m,
+and define a group homomorphism E : H 2 ( B̂; Z /n) → Z /n by
+                                                             
+                          E       ti yi∗ = −t0         pj +      ti   pj
+                                                            i=0   j=i
+                                                                                     
+so that E(κξ ) = κ E(ξ ). Since e = −(b +           qi / pi ), we have E(ζ1,n ) = e       p j modulo n;
+then
+                                                      
+                      E(κζ1,n − ζ2,n ) = (κ − 1)e         p j = 0 modulo n
+                                      
+so that κζ1,n = ζ2,n for all n = me p j can only hold if κ is congruent to 1 modulo m for
+all m, i.e. if κ = 1 and ζ1,n = ζ2,n for all n, so that η1 = η2 and M1 , M2 are homeomorphic.
+                                                                                     
+    If the Mi have Euler number zero, so that they are H2 × R manifolds, choose n = pi and
+k ∈ Z such that k is congruent to κ mod n. Then M2 is a Seifert fibre space with zero Euler
+characteristic and Seifert invariants ( pi , kqi ); there is only one such, and Hempel showed
+that these pairs of H2 × R manifolds are precisely those surface bundles in the statement of
+the theorem.                                                                                
+
+   Rather easier is the bounded case, given sensible conditions on the boundary.
+
+Theorem 5.8 Let M1 , M2 be orientable Seifert fibre spaces with boundary, and assume that
+there exists an isomorphism Φ : π1    M 1 → π1    M2 inducing an isomorphism of peripheral
+systems, in the following sense. The boundary components of M1 determine a conjugacy class
+of Z2 -subgroups in the fundamental group, which gives a conjugacy class of Ẑ 2 -subgroups
+in the profinite completion. The isomorphism Φ is required to send one such set of conjugacy
+classes to the other, inducing isomorphisms on the matched copies of Ẑ 2 .
+    Let M1 have Seifert invariants ( pi , qi ). Then for some k ∈ Z coprime to all pi , M2 is the
+Seifert fibre space with the same base orbifold and Seifert invariants ( pi , kqi ).
+
+Proof We can safely focus on hyperbolic base orbifolds, the other three Seifert fibre spaces
+with boundary being easily distinguished from these and each other by their first homology,
+hence by the profinite completion. As before, we have already reduced to the case of orientable
+base orbifold.
+   Note that two boundary components of the base orbifolds generate distinct free Ẑ factors
+of the base orbifold group, and the standard theory of free profinite products (see Theorem
+9.1.12 of [17]) shows that these are not conjugate in the profinite completion; so the number
+
+123
+Geom Dedicata (2017) 188:141–163                                                                     161
+
+
+of peripheral conjugacy classes remains the same as the number of boundary components.
+Then by Theorem 5.5 both Seifert fibre spaces share the same base orbifold O, and there is
+an induced automorphism of B̂ = π1orb           O. As before, we can now consider the Seifert fibre
+spaces as being represented by elements of H 2 ( B̂; Z /n) for arbitrary n.
+   Take a presentation
+                                                                                  p                p 
+              B = a1 , . . . , ar , b1 , . . . , bs , u 1 , v1 , . . . , u g , vg  a1 1 , . . . , ar r
+for the base orbifold, where the ai are the cone points and the (conjugacy classes of the) bi
+give all but one of the boundary components; the remaining boundary component is
+                         b0 = a1 . . . ar · b1 . . . bs · [u 1 , v1 ] · · · [u g , vg ]
+As before, we are at liberty to permute cone points with the same order, and permuting
+boundary components is also permitted. Thus given Proposition 5.6 and the conditions of the
+theorem we may assume that the automorphism φ of B̂ induced by Φ is of the form
+                                                   gi                    l     hj
+                                   ai  → aiki          , b j  → b jj
+
+for elements gi , h j of B̂, l j ∈ Ẑ × , and ki coprime to pi .
+   Now the induced automorphism of
+                                                  
+                                                  r                  
+                                                                     s
+                           H1 ( B̂) = B̂ab =              Z / pi ⊕             Ẑ ⊕ Ẑ 2g
+                                                  i=1                j=1
+
+sends the class of b0 to
+                               ⎛                ⎞
+                                                              
+               φ∗ ([b0 ]) = φ∗ ⎝ [ai ] +  [b j ]⎠ =   ki [ai ] +   l j [b j ]
+                                                  j =0                                     j=0
+
+and on the other hand to
+                                                                
+                                  l0 [b0 ] =        l0 [ai ] +           l0 [b j ]
+                                                                 j =0
+
+showing that all the ki are congruent to l0 modulo pi and that all the li are equal.
+   Using essentially the same chain complex as in the closed case we can now compute that
+the action on
+                                                                
+                                                                 r
+                                  H 2 B̂; Z /             pi =               Z / pi
+                                                                 i=1
+
+is multiplication by l0 , or equivalently multiplication by some k ∈ Z congruent to l0 modulo
+
+   pi , thus taking the element (q1 , . . . , qr ) representing M1 to the element representing M2 ,
+which we now see to be (kq1 , . . . , kqr ).                                                    
+
+   We finally prove the converse to the last theorem. A mild adjustment to this argument,
+with the appropriate modification of the cohomology group considered, provides another
+proof of Hempel’s theorem on closed Seifert fibre spaces.
+
+Theorem 5.9 Let M1 , M2 be Seifert fibre spaces with non-empty boundary and with the same
+base orbifold O. Suppose M1 has Seifert invariants ( pi , qi ) and M2 has Seifert invariants
+                                                                
+( pi , kqi ) where k is some integer coprime to every pi . Then π       ∼
+                                                                  1 M 1 = π1 M 2 .
+
+
+                                                                                                   123
+162                                                                         Geom Dedicata (2017) 188:141–163
+
+
+Proof Again it suffices to deal with the case of orientable base orbifold. Let Γi = π
+                                                                                     1 Mi , let
+h i be a generator of the centre of π1 Mi , and let
+                                            Γi,n = Γi /<h t >
+               
+where t = n pi .
+   Note that for each i the Γi,n form a natural inverse system with maps Γi,nm → Γi,n .
+Furthermore, any map from Γi to a finite group must kill some power of h, and hence factors
+through some Γi,n . It follows that
+                                        Γi = lim Γi,n
+                                               ←−
+                                                n
+                                                  
+   Now k maps to an invertible element of Z / pi ; then there is some invertible element
+κ of Ẑ congruent to k modulo each pi . One can prove this by noting that by the Chinese
+Remainder theorem the natural map (Z /mn)× → (Z /n)× is always surjective, hence so is
+the map Ẑ × → (Z /n)× .
+   As discussed in Sect. 5.2, Γi,n is classified by an element
+                                                             
+                                                             r
+                                    ζi ∈ H 2 ( B̂; Z /t) =         Z/ p j
+                                                             j=1
+
+where B is the base orbifold group; by assumption ζ2 = kζ1 = κζ1 . Multiplication of the
+coefficient group κ gives an automorphism of the cohomology group taking ζ1 to ζ2 , hence
+induces an isomorphism Γ1,n → Γ2,n . Moreover this isomorphism is compatible with the
+quotient maps Γi,nm → Γi,n ; hence we have an isomorphism
+                                   Γ1 = lim Γ1,n ∼
+                                                 = lim Γ2,n = Γ2
+                                        ← −
+                                          n
+                                                   ← −
+                                                     n
+
+as required.                                                                                                 
+
+
+
+Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 Interna-
+tional License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution, and
+reproduction in any medium, provided you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons license, and indicate if changes were made.
+
+
+
+References
+ 1. Agol, I.: The virtual Haken conjecture. Doc. Math. 18, 1045–1087 (2013)
+ 2. Anderson, M.P.: Exactness properties of profinite completion functors. Topology 13(3), 229–239 (1974)
+ 3. Asada, M.: On centerfree quotients of surface groups. Commun. Algebra 29(7), 2871–2875 (2001)
+ 4. Aschenbrenner, M., Friedl, S., Wilton, H.: 3-Manifold Groups. European Mathematical Society, Zurich
+    (2015)
+ 5. Boileau, M., Friedl, S.: The profinite completion of 3-manifold groups, fiberedness and the Thurston
+    norm. arXiv preprint arXiv:1505.07799 (2015)
+ 6. Bridson, M. R., Conder, D.E., Reid, A. W.: Determining Fuchsian groups by their finite quotients. arXiv
+    preprint arXiv:1401.3645 (2014)
+ 7. Bridson, M.R., Reid, A.W.: Profinite rigidity, fibering, and the figure-eight knot. arXiv preprint
+    arXiv:1505.07886 (2015)
+ 8. Brin, M.G.: Seifert fibered spaces: notes for a course given in the spring of 1993. arXiv preprint
+    arXiv:0711.1346 (2007)
+ 9. Cartan, H., Eilenberg, S.: Homological Algebra, vol. 19. Princeton University Press, Princeton (1999)
+
+
+123
+Geom Dedicata (2017) 188:141–163                                                                           163
+
+
+10. Cavendish, W.P.: Finite-sheeted covering spaces and solenoids over 3-manifolds. PhD Thesis, Princeton
+    (2012)
+11. Funar, L.: Torus bundles not distinguished by TQFT invariants. Geom.Topol. 17(4), 2289–2344 (2013)
+12. Grunewald, F., Jaikin-Zapirain, A., Zalesskii, P.A.: Cohomological goodness and the profinite completion
+    of Bianchi groups. Duke Math. J. 144(1), 53–72 (2008)
+13. Hempel, J.: Some 3-manifold groups with the same finite quotients. arXiv preprint arXiv:1409.3509
+    (2014)
+14. Lackenby, M.: Finding disjoint surfaces in 3-manifolds. Geom. Dedicata. 170(1), 385–401 (2014)
+15. Nakamura, H.: Galois rigidity of pure sphere braid groups and profinite calculus. J. Math. Sci. Univ.
+    Tokyo 1, 71–136 (1994)
+16. Neumann, W.D., Raymond, F.: Seifert manifolds, plumbing, μ-invariant and orientation reversing maps.
+    In: Algebraic and Geometric Topology. Lecture Notes in Mathematics, vol. 664, pp. 163–196. Springer
+    (1978)
+17. Ribes, L., Zalesskii, P.: Profinite Groups. Springer, Berlin (2000)
+18. Scott, P.: Subgroups of surface groups are almost geometric. J. Lond. Math. Soc. 2(3), 555–565 (1978)
+19. Scott, P.: The geometries of 3-manifolds. Bull. Lond. Math. Soc. 15(5), 401–487 (1983)
+20. Serre, J.-P.: Galois cohomology. Springer, Berlin (2013)
+21. Stebe, P.F.: Conjugacy separability of certain Fuchsian groups. Trans. Am. Math. Soc. 163, 173–188
+    (1972)
+22. Weibel, C.A.: An Introduction to Homological Algebra. Number 38. Cambridge university press, Cam-
+    bridge (1995)
+23. Wilton, H., Zalesskii, P.: Profinite properties of graph manifolds. Geom. Dedicata. 147(1), 29–45 (2010)
+24. Wilton, H., Zalesskii, P.: Distinguishing geometries using finite quotients. arXiv preprint arXiv:1411.5212
+    (2014)
+
+
+
+
+                                                                                                  123
+

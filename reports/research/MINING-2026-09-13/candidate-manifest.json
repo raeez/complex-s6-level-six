@@ -1,0 +1,310 @@
+{
+  "worktree": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913",
+  "base_commit": "5d9f632b5d9795e51075a9c15e2ee58d4cfb40af",
+  "branch": "repair/frontier-mine-s6-20260913",
+  "review_files": [
+    {
+      "path": "paper.tex",
+      "sha256": "0244e9a594c74174e312eae4bfd2e46e1924cd67a9ba4a5ea445fdc9cca70b2e",
+      "bytes": 49626
+    },
+    {
+      "path": "README.md",
+      "sha256": "07f82fd017fbeafac6908c2a3e21ceae51ac905fbfafa2cb50d1b6c33a1db990",
+      "bytes": 1788
+    },
+    {
+      "path": "Makefile",
+      "sha256": "7c5069b9050d62812dbbdab08c77b58f78a96cab6f90e621bb077c25db1538b8",
+      "bytes": 564
+    },
+    {
+      "path": "scripts/check_two_fibre.py",
+      "sha256": "57b81cc854550580645a6d28f8f7c30cd0c317da9e5142ffd30695ff591fc593",
+      "bytes": 6894
+    },
+    {
+      "path": "out/paper.pdf",
+      "sha256": "706a5c8b6ffec245905a79443af54a5eff4bf519ab1ff95034b6759aef474a16",
+      "bytes": 390384
+    }
+  ],
+  "all_owned_file_manifest": [
+    {
+      "path": "Makefile",
+      "sha256": "7c5069b9050d62812dbbdab08c77b58f78a96cab6f90e621bb077c25db1538b8",
+      "bytes": 564
+    },
+    {
+      "path": "README.md",
+      "sha256": "07f82fd017fbeafac6908c2a3e21ceae51ac905fbfafa2cb50d1b6c33a1db990",
+      "bytes": 1788
+    },
+    {
+      "path": "materials/raw/engel-2026-09-13.pdf",
+      "sha256": "81ad7344e61d2c3e53a829a41c43161f1d64edfe2d2a534db898cf2231d65bc1",
+      "bytes": 679852
+    },
+    {
+      "path": "materials/raw/hatcher-three-manifolds.pdf",
+      "sha256": "f3781c43b4ed981f98fab36761d5eefe92bb53cc1a7100a0146954f9af5a029b",
+      "bytes": 384715
+    },
+    {
+      "path": "materials/raw/hillman-linking-pairings.pdf",
+      "sha256": "1a34b4c8d250f2b854bac341cd730e050a46379c19a31d9b0fbf3345a4fb694d",
+      "bytes": 221662
+    },
+    {
+      "path": "materials/raw/kollar-math-0404386v2.pdf",
+      "sha256": "778c956d76dfe7e511423f2692bfdd6514e23f7155c3f833419e7f852bc296bf",
+      "bytes": 295858
+    },
+    {
+      "path": "materials/raw/wilkes-profinite-rigidity.pdf",
+      "sha256": "67c8b5de80b4985b26645195d573bba0233336298fdbae59a8c2eaaa3851d7b4",
+      "bytes": 555079
+    },
+    {
+      "path": "out/paper.pdf",
+      "sha256": "706a5c8b6ffec245905a79443af54a5eff4bf519ab1ff95034b6759aef474a16",
+      "bytes": 390384
+    },
+    {
+      "path": "paper.tex",
+      "sha256": "0244e9a594c74174e312eae4bfd2e46e1924cd67a9ba4a5ea445fdc9cca70b2e",
+      "bytes": 49626
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/README.md",
+      "sha256": "5fc5c0198906d5f960810d79ad37829950019f4901b299339b70d647b32068bb",
+      "bytes": 6084
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/all-topic-paths.txt",
+      "sha256": "85c3120167a0d2a31381b4c18fcc693fbb45f8953eacb904f8dab4626eb25409",
+      "bytes": 254412
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/build.log",
+      "sha256": "253d9a3529c87620eeb25aee8048f266740856de0d5fdb7583b7651e5422ddf4",
+      "bytes": 15117
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/candidate.patch",
+      "sha256": "58616e3405b0ae1accc977e77cd6c587c4ef9f3b7098c8af390a00cc568ce568",
+      "bytes": 35477
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/discovery-index.json",
+      "sha256": "010abc80e765b9a5c07926afeeb5327daef5816d13a68ca19fde0210a9eeb544",
+      "bytes": 70933
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/engel-2026-09-13.txt",
+      "sha256": "b5814be9cd438ff4eaaeee8828dc76a01046463f055d7ddad34950ed99bd5d43",
+      "bytes": 60706
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/exact-results.json",
+      "sha256": "ed50dedf79355675f6486dca4bea0d796cb8ba83b4b9da4cbff4c265b13bfbae",
+      "bytes": 5685
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/hatcher-three-manifolds.txt",
+      "sha256": "0484be97e440c24e6f8335abac5ea5762af52980d23625e2077c87efa23334e3",
+      "bytes": 197082
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/hillman-linking-pairings.txt",
+      "sha256": "c777a841580cb0cbf1b31dbcd84b986967e9cd1162360c5cc3ae3b70ebabc739",
+      "bytes": 50845
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/kollar-math-0404386v2.txt",
+      "sha256": "dfbdf0cc0aeb856834f3e426213285e45318e6eaf5d4ed84aa48b3040614ca7b",
+      "bytes": 73628
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/mining-dispositions.json",
+      "sha256": "8b36c76943382799ae564aca15ce6522efacaadb96676a9184f7698416f56610",
+      "bytes": 1020660
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/new-sections.tex",
+      "sha256": "52963d23669e18e0eb2364d51f279a96c34360f7514b3b1c19b98bdfefe026af",
+      "bytes": 15370
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/paper-text.txt",
+      "sha256": "c3da6908040ae2ba60cc307839d16c34a0c2bb85cb6b82f01e1ace429c7a6cec",
+      "bytes": 54592
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/primary-sources.json",
+      "sha256": "a0340d40898e7c13a8914f8a25c2060990423db889526b3caee97da5aa4304a9",
+      "bytes": 1129
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/relevant-returns.json",
+      "sha256": "f57f43d12df0821e7775685c9e53a926309fc3e1d8a8a443ccc855205af21619",
+      "bytes": 6836
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/contact-1.png",
+      "sha256": "1ed156baee3c27df600288e237230fdca88c1c66c33b0df66ecfe20e3de35657",
+      "bytes": 573743
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/contact-2.png",
+      "sha256": "8f477b71088b18ea5d3860d7b7112f669c8825589b1216ee979b8a80a2e80719",
+      "bytes": 555901
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/contact-3.png",
+      "sha256": "73d6b57a95fd2fffa9f9583ebcedfec407191675256f99a7f5359ab1f972c3e7",
+      "bytes": 645097
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/contact-4.png",
+      "sha256": "d6cbe201932d8f2a812f58dad32bdb9b3ef04c108278a56603338d6f36b4a10f",
+      "bytes": 723227
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/contact-5.png",
+      "sha256": "9c34ce71995e1195359d942c1511a6eb6477c61a01e554681d705d044e4316bf",
+      "bytes": 215593
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-01.png",
+      "sha256": "8d6c13877b44ea0028aea302d1d57a7e0d68ebf81a0fce2956f26d2b55dcedc5",
+      "bytes": 181019
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-02.png",
+      "sha256": "f0b398f2b27c873bee5798f3c2f23c1086dab01de4889e877934350c9328b439",
+      "bytes": 151047
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-03.png",
+      "sha256": "11eda0ab3080eb36d77cc5131f2bf1e1a879ceba402addace93355aebe8fa3c5",
+      "bytes": 148896
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-04.png",
+      "sha256": "ab2fdda06bc8ddde0e9c133cf9604f172621711bacc812156bb6c9c6f89fcfd4",
+      "bytes": 213746
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-05.png",
+      "sha256": "91dadfcd6ae4308d44a4c1aa166f2b2be2e10cc3721922999fbc10eb3e77ee7a",
+      "bytes": 165677
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-06.png",
+      "sha256": "b54dd09b212038f4482a52a70b8863a3901dc768c4faf87645a5d6c82c2dfbe9",
+      "bytes": 176933
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-07.png",
+      "sha256": "4fd5dd4cf3f6618a934021a5c523c550382cb052998a60039beca46a9df2454e",
+      "bytes": 182433
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-08.png",
+      "sha256": "67bb70b375dfe9314248bd5b982d2234b42e1177938fe9895779446cff8fc1df",
+      "bytes": 169501
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-09.png",
+      "sha256": "481b81c5dbd87f1beda9a9acd50b0c68e19c9e5ce475cd2b3450b7fdac3b8619",
+      "bytes": 155412
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-10.png",
+      "sha256": "d9e2a9d48db09a1a29f5018871369da72a66dc099440d239cf2c0f7558aad129",
+      "bytes": 200965
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-11.png",
+      "sha256": "d340c2b6964eaead4c03a235462a49e79e43aa477ea61000a15ef5064d742603",
+      "bytes": 235642
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-12.png",
+      "sha256": "8bbc85f109ade92d97be0214a31a88a6276c47a6f7b7bbd8c0c134b248ac4d81",
+      "bytes": 198759
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-13.png",
+      "sha256": "94014f041e4e8395f6dbd0d184d08709054446bd05e310811a7ceec1fae23f76",
+      "bytes": 201373
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-14.png",
+      "sha256": "e9dd2f7a2093c36417d40fd005fe4483b99a9f1747b52f9e214ef08695c7796c",
+      "bytes": 281974
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-15.png",
+      "sha256": "e758ae5f6a32f0b17157ae61d3fd5c231aaf94dd07f1d39e768f0dbe6ba56268",
+      "bytes": 207981
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-16.png",
+      "sha256": "7b4bb74a44ff533346a38996fabf272795870197af66135c116ad178530afc8d",
+      "bytes": 200015
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/render/page-17.png",
+      "sha256": "ccf773c36695d54170b72d1604050253d4df81ad4be6486ce6765997a5181433",
+      "bytes": 246323
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/source-baseline.json",
+      "sha256": "aa050e8e908c390d41a6b1c224474526963a0bae7ae1189ea8e0f852044bfabc",
+      "bytes": 482
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/topic-fragments.json",
+      "sha256": "8d17c1d591781bcefa883f90c79d7b69cf334a4667350ba5f3b1acf197ea267b",
+      "bytes": 2604476
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/topic-index.json",
+      "sha256": "0b621c3d83bdf8168f563f56c19837a4b441eaa9268dde4f1e491a6dcda17aa5",
+      "bytes": 87867250
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/verification.json",
+      "sha256": "2856475110cd5afe748852484e91a71eaf9b7330bd01bdbfa61a988791525eb4",
+      "bytes": 6928
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/wilkes-profinite-rigidity.txt",
+      "sha256": "3ccaf9c782dc02aca403cdc05b85f407607d2d72c8398cf41f63a42e5a1e9856",
+      "bytes": 80535
+    },
+    {
+      "path": "reports/research/MINING-2026-09-13/write_mining_ledger.py",
+      "sha256": "a2dc69ce65a20f32e1aa37407883475373a9124e3861843a97bf694cf21d7e6d",
+      "bytes": 10385
+    },
+    {
+      "path": "scripts/check_two_fibre.py",
+      "sha256": "57b81cc854550580645a6d28f8f7c30cd0c317da9e5142ffd30695ff591fc593",
+      "bytes": 6894
+    }
+  ],
+  "aggregate_manifest_sha256": "218efab5f67cb1b647558eff0b139abcff67e65f7aecff69a9aea6a1ce233413",
+  "source_diff_sha256": "58616e3405b0ae1accc977e77cd6c587c4ef9f3b7098c8af390a00cc568ce568",
+  "source_diff_scope": "Tracked source changes and new exact calculation script. Coordination evidence separately hashed in all_owned_file_manifest.",
+  "build_commands": [
+    "make check",
+    "python3 -B scripts/check_two_fibre.py",
+    "pdftoppm -scale-to 1200 -png out/paper.pdf reports/research/MINING-2026-09-13/render/page"
+  ],
+  "pdf_pages": 17,
+  "independent_acceptance": "pending",
+  "self_hash_rule": "This manifest is excluded from its own hash list."
+}

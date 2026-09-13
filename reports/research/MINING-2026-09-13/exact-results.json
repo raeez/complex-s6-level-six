@@ -1,0 +1,438 @@
+{
+  "python": "3.9.6",
+  "arithmetic_cases": 38720,
+  "zero_determinant_cases": 762,
+  "effective_cases": 17405,
+  "parameter_box": {
+    "r_s": [
+      1,
+      8
+    ],
+    "m_n": [
+      -5,
+      5
+    ],
+    "b0": [
+      -2,
+      2
+    ]
+  },
+  "examples": [
+    {
+      "parameters": [
+        2,
+        2,
+        -1,
+        -1,
+        0
+      ],
+      "A": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          -1
+        ]
+      ],
+      "extension_matrix": [
+        [
+          -2,
+          0
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "delta": -4,
+      "d": 1,
+      "k": -2,
+      "t": -1,
+      "gram_smith": [
+        1,
+        1,
+        4,
+        4
+      ],
+      "pairing_entries_verified": 16,
+      "alpha": 1,
+      "beta": 1,
+      "q": 3,
+      "linking": "3/4"
+    },
+    {
+      "parameters": [
+        2,
+        2,
+        -1,
+        -1,
+        -1
+      ],
+      "A": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "extension_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          -1,
+          2
+        ]
+      ],
+      "delta": 0,
+      "d": 1,
+      "k": 0,
+      "t": -1,
+      "gram_smith": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": [
+        2,
+        3,
+        1,
+        1,
+        0
+      ],
+      "A": [
+        [
+          2,
+          3
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "extension_matrix": [
+        [
+          5,
+          0
+        ],
+        [
+          -2,
+          1
+        ]
+      ],
+      "delta": 5,
+      "d": 1,
+      "k": 5,
+      "t": -2,
+      "gram_smith": [
+        1,
+        1,
+        5,
+        5
+      ],
+      "pairing_entries_verified": 25,
+      "alpha": 1,
+      "beta": 0,
+      "q": -1,
+      "linking": "1/5"
+    },
+    {
+      "parameters": [
+        2,
+        4,
+        2,
+        2,
+        0
+      ],
+      "A": [
+        [
+          2,
+          4
+        ],
+        [
+          -2,
+          2
+        ]
+      ],
+      "extension_matrix": [
+        [
+          6,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "delta": 12,
+      "d": 2,
+      "k": 6,
+      "t": 2,
+      "gram_smith": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "pairing_entries_verified": 144
+    },
+    {
+      "parameters": [
+        2,
+        4,
+        2,
+        -4,
+        0
+      ],
+      "A": [
+        [
+          2,
+          4
+        ],
+        [
+          -2,
+          -4
+        ]
+      ],
+      "extension_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "delta": 0,
+      "d": 2,
+      "k": 0,
+      "t": 2,
+      "gram_smith": [
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": [
+        3,
+        4,
+        1,
+        -1,
+        0
+      ],
+      "A": [
+        [
+          3,
+          4
+        ],
+        [
+          -1,
+          -1
+        ]
+      ],
+      "extension_matrix": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "delta": 1,
+      "d": 1,
+      "k": 1,
+      "t": 0,
+      "gram_smith": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "pairing_entries_verified": 1,
+      "alpha": 1,
+      "beta": 0,
+      "q": 1,
+      "linking": "0"
+    },
+    {
+      "parameters": [
+        3,
+        4,
+        3,
+        -2,
+        0
+      ],
+      "A": [
+        [
+          3,
+          4
+        ],
+        [
+          -3,
+          -2
+        ]
+      ],
+      "extension_matrix": [
+        [
+          6,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "delta": 6,
+      "d": 1,
+      "k": 6,
+      "t": -1,
+      "gram_smith": [
+        1,
+        1,
+        6,
+        6
+      ],
+      "pairing_entries_verified": 36
+    },
+    {
+      "parameters": [
+        6,
+        10,
+        2,
+        4,
+        1
+      ],
+      "A": [
+        [
+          6,
+          10
+        ],
+        [
+          -2,
+          -6
+        ]
+      ],
+      "extension_matrix": [
+        [
+          -8,
+          0
+        ],
+        [
+          8,
+          2
+        ]
+      ],
+      "delta": -16,
+      "d": 2,
+      "k": -8,
+      "t": 8,
+      "gram_smith": [
+        2,
+        2,
+        8,
+        8
+      ],
+      "pairing_entries_verified": 256
+    },
+    {
+      "parameters": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "A": [
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "extension_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "delta": 0,
+      "d": 1,
+      "k": 0,
+      "t": 0,
+      "gram_smith": [
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": [
+        3,
+        3,
+        0,
+        0,
+        0
+      ],
+      "A": [
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "extension_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "delta": 0,
+      "d": 3,
+      "k": 0,
+      "t": 0,
+      "gram_smith": [
+        3,
+        3,
+        0,
+        0
+      ]
+    }
+  ],
+  "fibre_smith": [
+    1,
+    1,
+    6,
+    6
+  ],
+  "fixed_point_counterexamples": "both exact rational identities verified",
+  "scope": "Exact finite checks; general claims depend on the manuscript proofs."
+}

@@ -1,0 +1,198 @@
+[
+  {
+    "task": "/root/ingested_instruction_mining/instruction_read_02",
+    "thread": "01a097f3-be3b-79a2-8b47-bf0c685859d0",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T06-28-48-01a097f3-be3b-79a2-8b47-bf0c685859d0.jsonl",
+    "line": 178,
+    "timestamp": "2026-09-12T23:34:39.992Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/ingested_instruction_mining--instruction_read_02-final-01.md",
+    "sha256": "b1cc781d5b49b508a2ebb3f856e9737296a01ece472f2ef1f344d534aafdf2d0",
+    "bytes": 11498,
+    "spans": [
+      [
+        108,
+        125
+      ]
+    ]
+  },
+  {
+    "task": "/root/ingested_instruction_mining/instruction_read_10",
+    "thread": "01a097f4-b741-7c21-be92-8781af64e83a",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T06-29-52-01a097f4-b741-7c21-be92-8781af64e83a.jsonl",
+    "line": 177,
+    "timestamp": "2026-09-12T23:42:48.066Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/ingested_instruction_mining--instruction_read_10-final-02.md",
+    "sha256": "35e3b934b92efc663a59e0fc4836ff9291075e127e935f4b6371142d9de2eaf6",
+    "bytes": 37221,
+    "spans": [
+      [
+        223,
+        237
+      ],
+      [
+        522,
+        536
+      ]
+    ]
+  },
+  {
+    "task": "/root/sw002_g08/p01",
+    "thread": "01a098a3-ff64-75d3-80b4-f2c6e2f748bf",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T09-41-19-01a098a3-ff64-75d3-80b4-f2c6e2f748bf.jsonl",
+    "line": 172,
+    "timestamp": "2026-09-13T02:52:31.897Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/sw002_g08--p01-final-01.md",
+    "sha256": "5f4919158e8c3c7241246675292a5a77373ffb5083d1bb4f671fadda7c58a5bd",
+    "bytes": 9374,
+    "spans": [
+      [
+        36,
+        50
+      ],
+      [
+        64,
+        107
+      ],
+      [
+        124,
+        134
+      ]
+    ]
+  },
+  {
+    "task": "/root/sw002_g04/p05",
+    "thread": "01a098a4-1bad-7191-a05d-cec9944297aa",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T09-41-26-01a098a4-1bad-7191-a05d-cec9944297aa.jsonl",
+    "line": 212,
+    "timestamp": "2026-09-13T02:55:36.462Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/sw002_g04--p05-final-01.md",
+    "sha256": "6aad16e48f30f55379fcf40f7cb4e07df98da9e557dc8ae9580ebe37747ed029",
+    "bytes": 17415,
+    "spans": [
+      [
+        226,
+        238
+      ]
+    ]
+  },
+  {
+    "task": "/root/wave002_disposition_ledger/map_g04",
+    "thread": "01a09a6e-a5c7-7182-9b9e-60cf480ee27e",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T18-02-17-01a09a6e-a5c7-7182-9b9e-60cf480ee27e.jsonl",
+    "line": 128,
+    "timestamp": "2026-09-13T11:25:02.966Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/wave002_disposition_ledger--map_g04-final-01.md",
+    "sha256": "c7cfc437aab84d26741e68e15e77105d82015685b33e2d7144d1ae3362b62beb",
+    "bytes": 133028,
+    "spans": [
+      [
+        0,
+        1
+      ]
+    ]
+  },
+  {
+    "task": "/root/wave002_disposition_ledger/map_g08",
+    "thread": "01a09a71-3496-71d1-b2db-7ed5e57bcb11",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T18-05-05-01a09a71-3496-71d1-b2db-7ed5e57bcb11.jsonl",
+    "line": 102,
+    "timestamp": "2026-09-13T11:24:41.248Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/wave002_disposition_ledger--map_g08-final-01.md",
+    "sha256": "16dcb7a837c78cf51bbdbf22996284b6b3d91cec3faa4199d263077748bf1a5f",
+    "bytes": 124022,
+    "spans": [
+      [
+        15,
+        34
+      ]
+    ]
+  },
+  {
+    "task": "/root/status_papers_exact_custody",
+    "thread": "01a09a85-ab0e-7de0-9b63-28d6b549652b",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T18-27-26-01a09a85-ab0e-7de0-9b63-28d6b549652b.jsonl",
+    "line": 108,
+    "timestamp": "2026-09-13T11:30:38.381Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/status_papers_exact_custody-final-01.md",
+    "sha256": "87150db64722901dd23a2e2c4e8be4d11413dfb3c9c1dc956a52059109af365d",
+    "bytes": 5418,
+    "spans": [
+      [
+        8,
+        32
+      ]
+    ]
+  },
+  {
+    "task": "/root/critique_groups_02_08/g05/p002",
+    "thread": "01a09ab7-1082-7082-a73c-030291bffb3b",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T19-21-23-01a09ab7-1082-7082-a73c-030291bffb3b.jsonl",
+    "line": 503,
+    "timestamp": "2026-09-13T13:05:42.765Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/critique_groups_02_08--g05--p002-final-02.md",
+    "sha256": "c9bf556ef187f41dc3751ed99cb39f28cfdc85acb5aa223bc7e735b3e68f340f",
+    "bytes": 40854,
+    "spans": [
+      [
+        0,
+        14
+      ],
+      [
+        30,
+        44
+      ],
+      [
+        359,
+        373
+      ],
+      [
+        382,
+        400
+      ]
+    ]
+  },
+  {
+    "task": "/root/critique_groups_02_08/g05/s001",
+    "thread": "01a09ac8-7121-75a3-9613-e8e7c5e01b10",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T19-40-22-01a09ac8-7121-75a3-9613-e8e7c5e01b10.jsonl",
+    "line": 309,
+    "timestamp": "2026-09-13T13:04:38.534Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/critique_groups_02_08--g05--s001-final-01.md",
+    "sha256": "ea46407fe21123c138fc6db2b1fbfe50f6268cd471ca7292d01110c0bd6b0651",
+    "bytes": 35513,
+    "spans": [
+      [
+        114,
+        128
+      ],
+      [
+        153,
+        169
+      ],
+      [
+        185,
+        203
+      ],
+      [
+        305,
+        319
+      ]
+    ]
+  },
+  {
+    "task": "/root/live_session_cross_reading",
+    "thread": "01a09ad2-8135-7c32-b992-882bcffa9edb",
+    "source": "/Users/raeez/.codex/sessions/2026/09/13/rollout-2026-09-13T19-51-22-01a09ad2-8135-7c32-b992-882bcffa9edb.jsonl",
+    "line": 606,
+    "timestamp": "2026-09-13T13:21:04.905Z",
+    "path": "/Users/raeez/mathematics/worktrees/frontier-recovery-astra-ultra-20260913/reports/research/RECOVERY-2026-09-13/returns/live_session_cross_reading-final-01.md",
+    "sha256": "72d72bb121b46d4c22170e75cffcce715398b166f7171ea2daa0cc8ec9d71535",
+    "bytes": 25843,
+    "spans": [
+      [
+        240,
+        254
+      ]
+    ]
+  }
+]

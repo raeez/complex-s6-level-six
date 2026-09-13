@@ -9,6 +9,7 @@ out/paper.pdf: paper.tex
 	@! grep -aEq 'Reference .* undefined|Citation .* undefined|There were undefined references' build/paper.log
 	@cp build/paper.pdf out/paper.pdf
 check: all
+	@python3 -B scripts/check_two_fibre.py > build/exact-results.json
 	@pdfinfo out/paper.pdf | grep '^Pages:'
 clean:
 	@rm -rf build out

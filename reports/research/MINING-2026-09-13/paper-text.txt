@@ -1,0 +1,939 @@
+    The Level-Six Fibre Lattice and Two-Fibre Linking Forms
+                                             Raeez Lorgat
+
+
+                                                Abstract
+          For the lattice Λ = H1 (F, Z) of a smooth complex two-torus fibre in Engel’s fibration, we
+      give the two integral monodromy markings and determine the primitive invariant alternating
+      form ξ, up to sign. The distinguished circle class δ0 and invariant covector ψ satisfy
+
+                                               ιδ0 ξ = −6ψ.
+
+     An explicit unimodular basis puts ξ in the form J ⊕ 6J; hence its discriminant group is
+     (Z/6Z)2 , with a perfect alternating pairing and a six-dimensional irreducible finite Heisenberg
+     representation. We also compute the complete Smith form of a two-fibre presentation,
+     including the zero-determinant case, and identify its determinant with a denominator-cleared
+     Seifert Euler number. For an explicitly constructed effective rank-one Seifert C∗ -bundle
+     with two multiple fibres, we prove that the primitive integral Leray carrier is indexed by
+     lcm(r, s) and has coefficient ∆/ gcd(r, s). The full global Seifert class also has a Z/ gcd(r, s)
+     component which the coarse transgression does not see. We resolve the integral extension
+     hidden by this differential and compute the symmetric torsion linking form of every effective
+     two-fibre filling. For arbitrary integral local data, the doubled presentation has alternating
+     elementary divisors (d, |∆|/d), where d = gcd(r, s, m, n). These pairings have specified,
+     distinct carriers. Engel’s rank-four transgression remains a separate (3, 4) calculation.
+
+
+1    The fibre calculation
+The calculation to be explained is the contraction identity
+
+                                              ιδ0 ξ = −6ψ.                                               (1.1)
+
+Its content is not the coefficient alone: δ0 , ξ, and ψ must be carried by the same integral
+geometric lattice, with compatible markings and orientations.
+    Let f : Y (u) → P1 be the complex two-torus fibration described by Engel, and put
+
+              U = P1 \ {0, 1, ∞},        F = f −1 (t),        Λ = H1 (F, Z),       V = Λ∨
+
+for t ∈ U . Over U this is also the smooth fibre lattice of the unmodified fibration X(u) → P1 .
+Engel’s construction supplies the filtration
+                                   ψ
+               0 −→ Λ× −→ Λ −→ Z −→ 0,                  0 −→ Zδ0 −→ Λ× −→ Λ′ −→ 0,                       (1.2)
+
+where δ0 is the circle class of the principal Gm -bundle in Engel’s chosen marking [1, Sections 2
+and 5].
+
+
+
+                                                    1
+    We record the integral markings because every sign below depends on them. Let ϱ = e2πi/3 .
+In the two good-reduction markings, and writing τ0 , τ1 for the periods of the second elliptic
+factors, Engel takes
+
+             e1 = (1, 0), e2 = (ϱ, 0), δ0 = (0, 1), e4 = (0, τ0 ), e3 = 31 (2 + ϱ, 1),
+                                                                                                   (1.3)
+             f1 = (1, 0), f2 = (i, 0),       δ1 = (0, 1), f4 = (0, τ1 ), f3 = 21 (1 + i, 1).
+
+The first four entries in each row generate a direct-sum sublattice; after adjoining e3 , respectively
+f3 , the resulting overlattice Λ has ordered bases
+
+                           B0 = (e1 , e2 , e3 , e4 ),       B1 = (f1 , f2 , f3 , f4 ).
+
+For standard counterclockwise meridians γ0 γ1 γ∞ = 1, the matrices act on column coordinates
+and are                                                                
+                          0 −1 −1 0                          0 1 0 0
+                         1 −1 0 0                        −1 0 −1 0
+               [T0 ]B0 =               ,       [T1 ]B1 =               .            (1.4)
+                                                                       
+                         0 0      1 0                     0 0 1 0
+                          0 0      0 1                       0 0 0 1
+The complex orientations give multiplication by ϱ at 0 and by −i at 1. The circle classes and
+the transition matrix are
+                                                                                              
+                                                                                 1 1 0    1
+                                                                               0 1 0     0
+          δ0 = −2e1 − e2 + 3e3 ,          δ1 = −f1 − f2 + 2f3 ,              C=            ,     (1.5)
+                                                                                           
+                                                                               0 −1 1    0
+                                                                                 0 0 0    1
+
+where the columns of C express B1 in B0 and Cδ1 = δ0 . These are precisely the integral data
+of Engel’s Theorem 5.1. Its proof fixes the sign at infinity by taking a simple zero, rather than
+a pole, of the linearization for a counterclockwise meridian [1, pp. 12–15].
+    In the common basis B0 , direct conjugation and T0 T1 T∞ = I give
+                                                                                 
+                                                     −1            1 −1 2
+                                                    −1            0 −1 1 
+                          [T1 ]B0 = C[T1 ]B1 C −1 =                      ,                       (1.6)
+                                                                         
+                                                     1            1 2 −1
+                                                      0            0 0  1
+                                                                        
+                                               2  1 1 0
+                                              0  1 0 −1
+                                   [T∞ ]B0 =           .                                         (1.7)
+                                                       
+                                             −1 −1 0 1 
+                                               0  0 0 1
+Thus T03 = T14 = I, (T∞ − I)2 = 0, and
+
+                                   (T∞ − I)Λ = ⟨e1 − e3 , e3 − e2 ⟩.                               (1.8)
+
+Theorem 1.1 (The geometric level-six lattice). Let Γ = ⟨T0 , T1 ⟩. For the fibre lattice and
+markings above,
+                    ΛΓ = Zδ0 ,     V Γ = Zψ,       ( 2 V )Γ = Zξ,
+                                                    V
+                                                                                        (1.9)
+
+
+                                                        2
+where ψ = e∨
+           4 and
+                             ξ = 3e∨    ∨    ∨    ∨     ∨    ∨     ∨    ∨
+                                   1 ∧ e2 + e1 ∧ e3 − 2e2 ∧ e3 − 2e3 ∧ e4 .                             (1.10)
+With the contraction convention (ιv ξ)(w) = ξ(v, w), identity (1.1) holds. Moreover, the ordered
+basis
+           a1 = e1 ,    b1 = e3 ,     a2 = −δ0 = 2e1 + e2 − 3e3 ,       b2 = e4 − 2e1     (1.11)
+is unimodular and satisfies
+                                                                    !
+                                                             0 1
+               [ξ](a1 ,b1 ,a2 ,b2 ) = J ⊕ 6J,        J=           ,            δ0 = −a2 ,     ψ = b∨
+                                                                                                   2.   (1.12)
+                                                             −1 0
+
+Consequently
+                               det(ξ ♭ ) = 36,          SNF(ξ ♭ ) = diag(1, 1, 6, 6),                   (1.13)
+and the elementary divisors of ξ are (1, 6).
+
+Proof. Solving Ti v = v for i = 0, 1 gives v = q(−2, −1, 3, 0)T , and solving Ti−T u = u gives
+u = q(0, 0, 0, 1)T . Integrality makes the two common invariant lattices exactly Zδ0 and Zψ.
+   Write the coefficients of an alternating form in the order
+
+                           e∨    ∨ ∨       ∨ ∨       ∨ ∨       ∨ ∨       ∨ ∨       ∨
+                            1 ∧ e2 , e1 ∧ e3 , e1 ∧ e4 , e2 ∧ e3 , e2 ∧ e4 , e3 ∧ e4 .
+
+Row reduction of TiT M Ti = M gives the integral solutions q(3, 1, 0, −2, 0, −2), proving the last
+equality in (1.9) and recovering Engel’s invariant class from Lemma 7.2 [1, p. 17]. Its matrix in
+B0 is                                                        
+                                             0 3 1          0
+                                          −3 0 −2 0 
+                                  [ξ]B0 =                    .                            (1.14)
+                                                             
+                                          −1 2 0 −2
+                                             0 0 2          0
+Therefore
+                                                δ0T [ξ]B0 = (0, 0, 0, −6),
+which is (1.1).
+   The columns of (1.11) form the matrix
+                                                               
+                                    1           0 2 −2
+                                   0           0 1  0
+                                P =                   ,               det P = −1.
+                                                      
+                                   0           1 −3 0 
+                                    0           0 0  1
+
+Multiplication gives P T [ξ]B0 P = J ⊕ 6J. This proves the normal form and the Smith form.
+Finally,
+                                           1            ∨    ∨    ∨    ∨
+                     Pf([ξ]B0 ) = −6,      2 ξ ∧ ξ = −6e1 ∧ e2 ∧ e3 ∧ e4 ,
+
+so det[ξ]B0 = (−6)2 = 36, as asserted.
+
+Remark 1.2 (Basis and orientation). If the columns of A ∈ GL4 (Z) are a new basis in an old
+one, then the simultaneous coordinate changes are
+
+                          [ξ]′ = AT [ξ]A,            [δ]′ = A−1 [δ],         [ψ]′ = AT [ψ].             (1.15)
+
+                                                            3
+Thus (1.1) is tensorial. The Pfaffian changes by det A, which explains the signs −6 in B0 and
++6 in the orientation-reversing basis (1.11), while the determinant and Smith form do not
+change. Reversing only δ0 , only ψ, or the contraction convention reverses the sign in (1.1). The
+abstract normal form alone does not select these classes: for example, in J ⊕ 6J, taking δ = a1
+and ψ = b∨                ∨
+          2 gives ιδ ξ = b1 , not −6ψ.
+
+Proposition 1.3 (Reduction along the invariant circle). Let K = ker ψ ⊂ Λ. The radical of
+ξ|K is Zδ0 , and the induced alternating form on K/Zδ0 is unimodular. The classes [e1 ], [e3 ]
+form an ordered basis with pairing ξ([e1 ], [e3 ]) = 1.
+                                                    ⊥
+Proof. The contraction identity gives K = δ0 ξ . In the basis (1.11), K = Za1 ⊕ Zb1 ⊕ Za2 , while
+δ0 = −a2 . The restriction of (1.12) to K is J ⊕ 0, proving every assertion.
+
+   Thus the factor six lies in the plane containing the invariant circle and a vector detected by
+ψ. Reduction by that circle leaves an integral symplectic plane with elementary divisor one.
+
+
+2      The discriminant pairing and Heisenberg module
+Let (L, ξ) be any rank-four alternating lattice with the normal form J ⊕ 6J in a basis
+(a1 , b1 , a2 , b2 ). Define
+                      ξ ♭ : L −→ L∨ ,        ξ ♭ (x) = ξ(x, −),             Dξ = L∨ /ξ ♭ (L).
+The rational extension ϕ = ξ ♭ ⊗ Q is an isomorphism.
+Lemma 2.1 (Discriminant pairing). For u, v ∈ L∨ , the formula
+                                     bξ (ū, v̄) = u(ϕ−1 v)        (mod Z)                            (2.1)
+defines a perfect alternating pairing bξ : Dξ × Dξ → Q/Z. Moreover, if
+                                          α = [a∨
+                                                2 ],           β = [b∨
+                                                                     2 ],
+
+then
+                Dξ = ⟨α⟩ ⊕ ⟨β⟩ ∼
+                               = (Z/6Z)2 ,                   bξ (α, β) = 16 ,    bξ (β, α) = − 16 .   (2.2)
+Proof. Write x = ϕ−1 u and y = ϕ−1 v. Replacing u by u + ξ ♭ (λ) changes (2.1) by ξ(λ, y) =
+−v(λ) ∈ Z; replacing v by v + ξ ♭ (µ) changes it by u(µ) ∈ Z. The pairing is therefore well
+defined and alternating. If it annihilates ū against every v̄, then v(x) = −u(ϕ−1 v) is integral
+for every v ∈ L∨ . Hence x ∈ L, so ū = 0. The induced homomorphism to the Pontryagin dual
+is injective between finite groups of the same order, and is therefore an isomorphism. Formula
+(2.2) follows directly from the normal form.
+
+    Put K = ⟨α⟩ ∼
+                = Z/6Z, let ζ6 = e2πi/6 , and let χ ∈ K
+                                                      c satisfy χ(α) = ζ6 . The map
+
+                                           rα + sβ 7−→ (rα, χs )
+is a polarization Dξ ∼
+                     =K⊕c
+                        K. Define
+
+                                             H6 = µ6 × K × K
+                                                           c
+
+with multiplication
+                             (z, u, η)(z ′ , u′ , η ′ ) = zz ′ η ′ (u), u + u′ , ηη ′ .
+                                                                                    
+                                                                                                      (2.3)
+
+                                                         4
+Theorem 2.2 (Level-six Heisenberg module). The center of H6 is the displayed copy of µ6 .
+Its commutator pairing is
+                                                                                       ′
+                    [(1, u, η), (1, u′ , η ′ )] = η ′ (u)η(u′ )−1 , 0, 1 = e2πibξ (d,d ) , 0, 1 ,
+                                                                                             
+                                                                                                    (2.4)
+
+where d ↔ (u, η) and d′ ↔ (u′ , η ′ ). On the six-dimensional space H = C[K], the formula
+
+                                       [ρ(z, u, η)h](t) = zη(t)h(t + u)                             (2.5)
+
+defines an irreducible representation, and the central µ6 acts by its faithful tautological character.
+
+Proof. The bicharacter in (2.3) makes the multiplication associative, and direct multiplication
+gives (2.4). Its nondegeneracy forces a central element to have u = 0 and η = 1. The same
+calculation verifies (2.5).
+    For t ∈ K, let δt be the delta-function at t. The operator
+                                                1 X
+                                         Pt =       η(t)−1 ρ(1, 0, η)
+                                                6
+                                                   η∈K
+                                                     b
+
+projects onto Cδt . A nonzero invariant subspace therefore contains some δt , and translations
+carry it through every delta-function. These span H, proving irreducibility.
+
+   Applied to Theorem 1.1, this construction belongs to the fibre lattice H1 (F, Z). It is not
+constructed from the ordinary cohomology of the total six-manifold.
+
+
+3      Two multiple fibres
+The topology of two logarithmic fillings leads to an elementary presentation whose full integral
+content is visible before any Leray differential is considered. It is useful to include a global
+section integer from the start.
+
+Theorem 3.1 (Two-fibre Smith form). Let r, s > 0, let m, n, b0 ∈ Z, and define
+                            D                                                                 E
+                    Gb0 = c, x0 , x1      c central, x0 x1 = cb0 , xr0 = cm , xs1 = cn .            (3.1)
+
+Put
+                            ∆b0 = rn + sm − rsb0 ,              d = gcd(r, s, m, n).                (3.2)
+Then                                                                      !
+                                                    r    s
+                                       Gb0 ∼
+                                           = coker            .                                     (3.3)
+                                                   −m n − sb0
+If ∆b0 ̸= 0, then
+                            Gb0 ∼
+                                = Z/dZ ⊕ Z/(|∆b0 |/d)Z,                |Gb0 | = |∆b0 |.             (3.4)
+If ∆b0 = 0, then
+                                               Gb0 ∼
+                                                   = Z ⊕ Z/dZ.                                      (3.5)
+In either case Gb0 is cyclic if and only if d = 1.
+
+
+
+                                                         5
+Proof. The product relation gives x1 = x−1 b0
+                                        0 c , so the group is abelian. In additive notation its
+two remaining relation vectors in Zx0 ⊕ Zc are
+
+                                  rx0 − mc,             sx0 + (n − sb0 )c,
+
+which proves (3.3). The greatest common divisor of the entries is
+
+                            gcd(r, s, m, n − sb0 ) = gcd(r, s, m, n) = d,
+
+and the determinant is ∆b0 . For nonzero determinant, the Smith invariants are d and |∆b0 |/d.
+If the determinant vanishes, the matrix still has rank one because r, s > 0, so its Smith form is
+diag(d, 0). The cyclicity assertions follow.
+
+Proposition 3.2 (Section gauges and orientations). For k0 , k1 ∈ Z, the generator change
+
+                                       x′0 = x0 ck0 ,        x′1 = x1 ck1                      (3.6)
+
+sends
+                    m′ = m + rk0 ,           n′ = n + sk1 ,            b′0 = b0 + k0 + k1      (3.7)
+and preserves both d and ∆b0 . In the gauge b0 = 0, the presentation-preserving choice k1 =
+−k0 = −k sends
+                                (m, n) 7−→ (m + rk, n − sk).                           (3.8)
+Interchanging (r, m, x0 ) with (s, n, x1 ) preserves ∆b0 . Replacing the oriented fibre generator by
+c′ = c−1 sends (m, n, b0 ) to (−m, −n, −b0 ) and sends ∆b0 to −∆b0 .
+
+Proof. Substitution in the three defining relations gives (3.7), and
+
+                       r(n + sk1 ) + s(m + rk0 ) − rs(b0 + k0 + k1 ) = ∆b0 .
+
+The remaining statements follow by the indicated changes of generators. They also show why
+only |∆b0 | is intrinsic without fixed orientations.
+
+   The hypotheses in Theorem 3.1 cannot be weakened silently. For b0 = 0,
+
+                      (r, s; m, n) = (2, 4; 2, 2)       =⇒       G0 ∼
+                                                                    = Z/2Z ⊕ Z/6Z,
+
+although ∆0 = 12. Also
+
+                       (2, 4; 2, −4)      =⇒       G0 ∼
+                                                      = Z ⊕ Z/2Z,             ∆0 = 0.
+
+At the simplest zero-coefficient boundary, m = n = 0 gives G0 ∼
+                                                              = Z ⊕ Z/ gcd(r, s)Z.
+
+Proposition 3.3 (Seifert Euler number). Let M be an oriented Seifert manifold over S 2 with
+two normalized effective exceptional fibres, written in Wilkes’s convention as
+
+                                         (b0 , S 2 ; (r, β0 ), (s, β1 )),                      (3.9)
+
+where r, s ≥ 2, 0 < β0 < r, 0 < β1 < s, and gcd(r, β0 ) = gcd(s, β1 ) = 1. With
+
+                                        m = −β0 ,            n = −β1 ,                        (3.10)
+
+                                                        6
+one has π1 (M ) ∼
+                = Gb0 and
+                              β0 β1                            m n
+                                              
+               e(M ) = − b0 +   +                  = −b0 +       + ,          rs e(M ) = ∆b0 .   (3.11)
+                              r   s                            r  s
+In particular d = 1, and hence
+                                              (
+                                                  Z/|∆b0 |Z,    e(M ) ̸= 0,
+                                  π1 (M ) ∼
+                                          =                                                      (3.12)
+                                                  Z,            e(M ) = 0.
+
+If g = gcd(r, s) and L = lcm(r, s) = rs/g, then the smaller denominator clearing is
+                                              s   r    ∆b0
+                               Le(M ) = −Lb0 + m + n =     ∈ Z.                                  (3.13)
+                                              g   g     g
+Proof. Wilkes’s presentation has central regular fibre h, local relations aαi i hβi = 1, and, over S 2
+with two exceptional fibres, the product relation a0 a1 = hb0 . Setting c = h, xi = ai gives (3.1)
+and (3.10). His Euler-number convention gives (3.11) [5, Proposition 4.3, p. 149]. Effectiveness
+implies d = 1, and Theorem 3.1 gives (3.12). Equation (3.13) is immediate. Hatcher’s section-
+change calculation gives the geometric counterpart of (3.6): twists are added at one boundary
+torus and subtracted at another, leaving the Euler sum fixed [2, Section 2.1, pp. 25–27].
+
+Remark 3.4. The rational number e(M ) is orientation-sensitive. Reversing the fibre orientation
+and renormalizing Wilkes’s two local pairs sends
+
+                               (b0 ; β0 , β1 ) 7−→ (−b0 − 2; r − β0 , s − β1 ),
+
+which negates both e(M ) and ∆b0 but preserves the abstract group. With exceptional fibres,
+e(M ) is a rational Seifert Euler number; only in the ordinary circle-bundle case is it itself the
+integral Euler class on the underlying base.
+
+
+4    The rank-one Seifert transgression
+The primitive coefficient is visible before passing to Engel’s torus fibration. If
+                                                                         rs
+                                g = gcd(r, s),         ℓ = lcm(r, s) =      ,
+                                                                         g
+then the two natural integral normalizations are
+                                             ∆b0
+                            d0,1
+                             2 (ℓu) =            ω,        d0,1
+                                                            2 (rsu) = ∆b0 ω.                      (4.1)
+                                              g
+The first uses the primitive global section; the second is its g-fold multiple. We now specify the
+map and conventions for which these equations hold.
+   Let r, s ≥ 2, let 0 < β0 < r and 0 < β1 < s, and assume
+
+                                      gcd(r, β0 ) = gcd(s, β1 ) = 1.                              (4.2)
+
+For b0 ∈ Z, consider Kollár’s effective Seifert C∗ -bundle
+                                                     β0    β1
+                                                                    
+                           q:Z=Y           OP1 (b0 ), [0] + [1] −→ P1 .                           (4.3)
+                                                     r     s
+
+                                                       7
+Equivalently, this is the coarse map of the complement of the zero section in the corresponding
+line bundle on the labelled root orbisphere. The local characters are faithful by (4.2), so r and s
+are the actual fibre multiplicities. Give the base its complex orientation and put ω = c1 (OP1 (1)).
+Kollár’s natural trivialization
+                                                      ∼
+                                         τ : R 1 q∗ Q −
+                                                      → Q P1
+defines the normalized rational fibre class uK = τ −1 (1). We use the Wilkes-oriented class
+u = −uK and set
+                                                       m n
+          m = −β0 ,       n = −β1 ,      e = −b0 +       + ,         ∆b0 = rn + sm − rsb0 .    (4.4)
+                                                       r  s
+Theorem 4.1 (Coarse two-fibre transgression). For the map (4.3), one has R0 q∗ Z ∼
+                                                                                 = ZP1 and
+an exact sequence of constructible sheaves
+
+                      0 −→ R1 q∗ Z −→ ZP1 −→ (Z/rZ){0} ⊕ (Z/sZ){1} −→ 0,                       (4.5)
+
+where the last map sends 1 to (1, 1). Consequently
+
+                       H 0 (P1 , R1 q∗ Z) = ℓZu,       H 1 (P1 , R1 q∗ Z) ∼
+                                                                          = Z/gZ.              (4.6)
+
+In the integral Leray spectral sequence of q,
+
+                            d0,1  0 1    1          2 1    0
+                             2 : H (P , R q∗ Z) −→ H (P , R q∗ Z),                             (4.7)
+
+the two equations in (4.1) hold.
+
+Proof. Kollár’s multiplicity criterion gives the two multiplicities r and s. His integral comparison
+map and its local cokernel give (4.5) [3, Theorem 7 and Propositions 43 and 47]. The long
+exact cohomology sequence of (4.5) begins with the diagonal reduction map
+
+                                        Z −→ Z/rZ ⊕ Z/sZ.
+
+Its kernel is ℓZ and its cokernel is Z/gZ, proving (4.6).
+    In Kollár’s convention the rational Chern class is
+                                                   β0 β1
+                                                            
+                             cK     1
+                              1 (Z/P ) = b0 +        +   ω = −eω.                              (4.8)
+                                                   r   s
+
+The quotient Z → Z/µℓ induces a map of Leray spectral sequences, and Z/µℓ is an ordinary
+C∗ -bundle whose Chern class is ℓcK
+                                  1 . Hence
+
+                                      d0,1          K     1
+                                       2 (ℓuK ) = ℓc1 (Z/P )
+
+[3, Definition 9, Map 13, and Corollary 44]. Replacing uK by u = −uK and using
+
+                                              s   r    ∆b 0
+                                   ℓe = −ℓb0 + m + n =
+                                              g   g     g
+
+proves the first equation in (4.1). Since rs = gℓ, the second follows.
+
+
+
+                                                   8
+   The coarse coefficient records only the free part of the global Seifert class. To see the
+missing information integrally, let
+
+                            Sr,s = ⟨H, X0 , X1 | rX0 = H, sX1 = H⟩,                             (4.9)
+
+the line-bundle class group of the labelled root orbisphere. Here H is the pullback of the
+positive coarse class and X0 , X1 are the two root classes. In the orientation of (4.4), the Seifert
+class is
+                                    ε = −b0 H + mX0 + nX1 .                                   (4.10)
+
+Proposition 4.2 (The global class and its coarse shadow). There is an isomorphism
+
+                                         Sr,s ∼
+                                              = Z ⊕ Z/gZ.                                     (4.11)
+
+The section gauges (3.7) leave ε fixed, and
+
+                                                   ∆b0
+                                            ℓε =       H.                                     (4.12)
+                                                    g
+Equivalently, on gauge classes
+
+                                                   ℓ   ℓ    ∆b0
+                              κ[b0 , m, n] = −ℓb0 + m + n =                                   (4.13)
+                                                   r   s     g
+
+is a surjection to Z whose kernel is the torsion subgroup Z/gZ. Thus the rational Euler number,
+and hence the coarse differential, determines the full global class exactly when g = 1.
+
+Proof. Kollár’s classification gives the representatives (b0 , m, n), while a change of local section
+gives the relations
+                           (b0 , m, n) ∼ (b0 + k0 + k1 , m + rk0 , n + sk1 ).
+The first determinantal divisor of the relation matrix is 1, while the second is
+
+                                         gcd(r, s, rs) = g.
+
+Its Smith form therefore gives (4.11). Relations rX0 = H and sX1 = H prove both gauge
+invariance and (4.12). The three coefficients in (4.13) have greatest common divisor 1, so κ is
+onto. Its finite kernel has order g, proving the last assertion.
+
+   The torsion is already present in the smallest rank-drop example. For
+
+                            r = s = 2,      b0 = −1,        β0 = β1 = 1,                      (4.14)
+
+one has e = ∆b0 = 0, so the coarse transgression vanishes, whereas
+
+                                  ε = H − X0 − X1 = X0 − X1
+
+is the nonzero element of order two in S2,2 . Thus a zero rational Euler number need not mean
+that the global Seifert class is zero.
+
+
+
+
+                                                   9
+Proposition 4.3 (Effectivization and rank drop). For formal local data (r, m) and (s, n), put
+                                                            r             s
+            a0 = gcd(r, m),    a1 = gcd(s, n),      R=         ,   S=        ,   h = gcd(R, S).   (4.15)
+                                                            a0            a1
+If the data arise from a rank-one Seifert construction after reducing the two local fractions,
+then the actual local orders are R, S, the primitive carrier is
+                                                               rs
+                                     Q = lcm(R, S) =                 ,                            (4.16)
+                                                             a0 a1 h
+and
+                                        ∆b0
+                           d0,1
+                            2 (Qu) =           ω,          d0,1
+                                                            2 (rsu) = ∆b0 ω.                      (4.17)
+                                       a0 a1 h
+If the local pairs are effective and ∆b0 = 0, then
+
+                                     r = s,         m + n = rb0 .                                 (4.18)
+
+For normalized pairs this says b0 = −1 and β0 + β1 = r; in this case Gb0 ∼
+                                                                         = Z.
+
+Proof. The least positive integer k for which r | km and s | kn is lcm(R, S), proving (4.16).
+Writing m = a0 M and n = a1 N gives
+
+                                        ∆b0
+                                Qe =           ,         rs = (a0 a1 h)Q,
+                                       a0 a1 h
+which proves (4.17). If the pairs are effective and ∆b0 = 0, then reduction modulo r gives r | s,
+and reduction modulo s gives s | r. This proves (4.18). The normalized conclusion follows from
+0 < βi < r, and Theorem 3.1 gives the last assertion.
+
+Remark 4.4 (Naturality, orientations, and scope). The naturality in Theorem 4.1 is the map of
+Leray spectral sequences induced by Z → Z/µℓ ; the pullback of the ordinary fibre generator is
+ℓuK . More generally, a morphism of oriented Seifert bundles gives commuting Leray differentials.
+If a base pullback has actual carrier ℓ′ u′ with ℓ′ | ℓ, then the pullback of ℓu is (ℓ/ℓ′ )ℓ′ u′ , so
+primitive numerical coefficients must be compared with this index. Reversing the fibre generator
+or the chosen generator ω reverses the displayed scalar. Section gauges and interchange of the
+two labelled points preserve (4.1); the only changes of the oriented rank-one fibre basis are
+u 7→ ±u.
+    This theorem is specific to the rank-one Seifert bundle (4.3). An affine torus fibration has a
+higher-rank local system, and local multiplicities and a group presentation do not determine
+its extension across singular fibres or its rational transgression. Transporting (4.1) to such
+a fibration would require an actual map over the base inducing the claimed morphism of
+constructible sheaves. No such map is used below.
+
+
+5     The Leray carrier in Engel’s (3,4) case
+Choose lifts of Engel’s logarithmic-transform classes
+
+                                    a0 ∈ 13 ΛT0 ,         a1 ∈ 14 ΛT1 ,
+
+
+                                                    10
+and put
+
+ v0 = 3a0 ,     v1 = 4a1 ,        m = ψ(v0 ),      n = ψ(v1 ),      p = 12ψ(a0 +a1 ) = 4m+3n. (5.1)
+
+We require the local cyclic affine actions on the good-reduction tori to be free. Their quotient
+fibres then have multiplicities 3 and 4. The condition |p| = 1 used below implies this freeness.
+Exact torsion order alone does not imply it.
+
+Proposition 5.1 (A free-action criterion). Let d > 0 be an integer, let T preserve a lattice
+Λ with T d = I, and let a ∈ d−1 ΛT . On the real torus ΛR /Λ, put ga (z) = T z + a. If θ ∈ Λ∨
+satisfies θT = θ and gcd(θ(da), d) = 1, then the action generated by ga is free and has order d.
+In the two markings above, both local actions are free if and only if gcd(m, 3) = gcd(n, 4) = 1,
+equivalently gcd(p, 12) = 1.
+
+Proof. Since T a = a, one has gak (z) = T k z + ka and gad = 1. A fixed point of gak would imply
+(T k − I)z + ka ∈ Λ. Applying the real extension of θ would give kθ(da)/d ∈ Z. The coprimality
+assumption therefore forces d | k.
+     In the first marking, direct solution of T0 v = v gives 3a0 = hδ0 + me4 with h ∈ Z.
+If 3 | m, then z = −h(e1 + e2 )/3 satisfies (T0 − I)z + a0 = he3 + (m/3)e4 ∈ Λ. In the
+second marking, similarly 4a1 = h′ δ1 + nf4 . If 2 | n, then z = −h′ (f1 + f2 )/4 satisfies
+(T12 − I)z + 2a1 = h′ f3 + (n/2)f4 ∈ Λ. These fixed points prove necessity. Sufficiency follows
+from the first assertion with θ = ψ. The final equivalence follows from p ≡ m (mod 3) and
+p ≡ −n (mod 4).
+
+   The class a0 = δ0 /3 has exact order three, but its affine action fixes z = −(e1 + e2 )/3, since
+
+                                       (T0 − I)z + a0 = e3 ∈ Λ.
+
+Likewise a1 = δ1 /4 has exact order four, but its square fixes z = −(f1 + f2 )/4, because
+
+                                       (T12 − I)z + 2a1 = f3 ∈ Λ.
+
+These computations specify the needed free-action hypothesis in the local quotient construction
+[1, Section 3.2, pp. 10–11].
+    The carrier of the transgression is the cohomological Leray spectral sequence of the specific
+map f : Y (u) → P1 ,
+                           E2a,b = H a (P1 , Rb f∗ Z) =⇒ H a+b (Y (u), Z).                 (5.2)
+Over U , the restriction of R1 f∗ Z is a local system with fibre V = H 1 (F, Z) and monodromy
+Ti−T . Across the three singular values, R1 f∗ Z is the corresponding constructible sheaf, not a
+local system. The fibres of f are connected, so R0 f∗ Z ∼
+                                                        = ZP1 . Thus the first relevant differential
+is precisely
+                            d0,1    0 1     1            2 1    0
+                             2 : H (P , R f∗ Z) −→ H (P , R f∗ Z).                             (5.3)
+
+Theorem 5.2 (Engel’s integral transgression). Assume |p| = 1, as in Engel’s integral-homology
+calculation, and choose the common orientation for which H 2 (P1 , R0 f∗ Z) = Zω. Then
+
+                             H 0 (P1 , R1 f∗ Z) = 12Zψ,    d0,1
+                                                            2 (12ψ) = pω.                     (5.4)
+
+
+
+                                                    11
+Proof. The extension lattice in (5.4) is Engel’s Lemma 7.5. For the differential, the two local
+affine lifts satisfy
+                                    ρe03 = tv0 ,  ρe14 = tv1 .
+Their oriented contributions to the obstruction for 12ψ are
+
+                                12ψ(v0 )                12ψ(v1 )
+                                         = 4m,                   = 3n.                        (5.5)
+                                   3                       4
+The cusp gluing at infinity contributes zero in this marking. Their sum is p = 4m + 3n, which is
+Engel’s Lemma 7.6 [1, pp. 20–21]. Reversing either generator in (5.4) reverses the corresponding
+sign; simultaneous transport of the orientation preserves the identity.
+
+Proposition 5.3 (The (3, 4) presentation). For the same geometric data,
+
+                π1 (Y (u)) ∼
+                           = ⟨c, x0 , x1 | c central, x0 x1 = 1, x30 = cm , x41 = cn ⟩.       (5.6)
+
+Consequently                                     (
+                                                     Z/|p|Z,   p ̸= 0,
+                                  π1 (Y (u)) ∼
+                                             =                                                (5.7)
+                                                     Z,        p = 0.
+In particular it is trivial when |p| = 1.
+
+Proof. Engel’s vanishing cycles at infinity kill ker ψ and leave the central class c represented by
+e4 . The two logarithmic fillings give (5.6) [1, Proposition 6.1, pp. 15–16]. This is Theorem 3.1
+with (r, s; b0 ) = (3, 4; 0), for which d = 1 and ∆0 = p.
+
+Comparison with the rank-one theorem
+For (r, s; b0 ) = (3, 4; 0), one has g = 1, ℓ = 12, and ∆0 = 4m + 3n = p. Thus Theorem 4.1 and
+(5.4) have the same scalar after the rank-one class u and Engel’s invariant covector ψ are given
+the same sign. The equality is only numerical. Engel’s sheaf has generic fibre H 1 (F, Z) of rank
+four, nontrivial monodromy, and an additional singular value at infinity. No factorization of f
+through (4.3), nor a morphism carrying u to ψ across all singular fibres, has been constructed
+here. Engel’s Lemmas 7.5–7.6, rather than Theorem 4.1, prove the carrier and differential in
+(5.4).
+    Likewise, the presentation (3.1) alone defines neither a map, the sheaves Rb f∗ Z, nor a
+rational transgression. It cannot imply a theorem for an arbitrary affine torus fibration. Such a
+result requires the full local system, every specialization map, a global affine or Chern class,
+and compatible orientations.
+    Finally, Λ = H1 (F, Z) is an auxiliary fibre lattice. In the case in which Engel’s Theorem 4.1
+identifies the total space with S 6 , one has
+
+                                H j (Y (u), Z) = 0        (0 < j < 6),
+
+so neither Λ nor its discriminant group is ordinary positive-degree cohomology of the total
+space.
+
+
+
+
+                                                  12
+6    The integral extension of the two-fibre class
+The coefficient ∆b0 /g determines the coarse transgression. The total integral group can still be
+a nonsplit extension. For example, r = s = 2, b0 = 0, and m = n = −1 give a cyclic group of
+order four, although both successive quotients have order two.
+   Retain the group Sr,s in (4.9), for arbitrary r, s > 0 and m, n, b0 ∈ Z. Write
+
+            g = gcd(r, s),      R = r/g,         S = s/g,          ℓ = gRS,      k = ∆b0 /g.
+
+Choose integers a, b with aS + bR = 1, and put
+
+                   U = aX0 + bX1 ,          T = RX0 − SX1 ,            t = bm − an.            (6.1)
+
+The letters a, b in this section denote Bézout coefficients.
+Theorem 6.1 (Integral extension and splitting). One has
+
+                     Sr,s = ZU ⊕ (Z/gZ)T,              H = ℓU,        ε = kU + tT.             (6.2)
+
+Consequently, for E = Sr,s /Zε,
+
+                               E = ⟨U, T | gT = 0, kU + tT = 0⟩.                               (6.3)
+
+If k ̸= 0, this gives an exact sequence
+                                          17→T    U 7→1, T 7→0
+                             0 −→ Z/gZ −→ E            −→        Z/|k|Z −→ 0.                  (6.4)
+
+It splits if and only if gcd(g, k) divides t. Moreover, with d = gcd(r, s, m, n),
+                                                 (
+                                                     Z/dZ ⊕ Z/(|∆b0 |/d)Z,      k ̸= 0,
+                   gcd(g, k, t) = d,      E∼
+                                           =
+                                                     Z ⊕ Z/dZ,                  k = 0.
+
+Thus E and Gb0 have the same invariant factors. This assertion alone specifies no canonical
+isomorphism between their generators.
+Proof. Eliminate H from (4.9). The remaining relation is g(RX0 − SX1 ) = 0. The change of
+generators in (6.1) has determinant −aS − bR = −1, with inverse
+
+                               X0 = SU + bT,              X1 = RU − aT.
+
+It follows that T has exact order g and H = rX0 = ℓU . Substitution in (4.10) gives (6.2) and
+(6.3).
+     If k ̸= 0, no nonzero multiple of the relation kU + tT lies in ZT . Thus the indicated cyclic
+subgroup injects, and the quotient is Z/|k|Z. A lift of its generator has form U + jT and is
+killed by k precisely when kj ≡ t (mod g). This congruence is soluble exactly under the stated
+divisibility condition.
+    The matrix sending (m, n) to (Sm + Rn, bm − an) is unimodular. Since g | ℓ, this gives
+
+                  gcd(g, k, t) = gcd(g, Sm + Rn, bm − an) = gcd(g, m, n) = d.
+
+The relation matrix in (6.3) has nonzero entry g, determinant of absolute value g|k| = |∆b0 |,
+and first determinantal divisor d. Its Smith form proves both cases.
+
+                                                     13
+   Replacing (a, b) by (a + Rj, b − Sj) changes U to U + jT and changes t to t − jk modulo g.
+The presentation and the splitting condition are therefore independent of the Bézout choice.
+The section gauges (3.7) change t by a multiple of g and leave k fixed.
+Proposition 6.2 (The coarse Leray extension). For the effective rank-one Seifert bundle (4.3),
+let M be its oriented unit-circle subbundle. If k ̸= 0, the integral Leray filtration gives
+                         0 −→ Z/|k|Z −→ H 2 (M, Z) −→ Z/gZ −→ 0.                             (6.5)
+Its middle group is cyclic of order |∆b0 |. The extension splits if and only if gcd(g, k) = 1. For
+                                                           ±g
+k = 0, the middle group is Z and the sequence is 0 → Z −−→ Z → Z/g → 0.
+Proof. A neighbourhood of each fibre retracts onto a circle, so Rj q∗ Z = 0 for j > 1. The
+base has cohomological dimension two. Hence the only terms contributing to total degree two
+are E∞ 2,0 = coker d0,1 and E 1,1 = Z/gZ. Equation (4.1) gives the left group in (6.5). Radial
+                    2          ∞
+contraction from Z to M preserves the base and its Leray filtration.
+    Effectiveness implies d = 1. Theorem 3.1 and abelianity give H1 (M, Z) = Gb0 , and integral
+Poincaré duality gives H 2 (M, Z) =∼ H1 (M, Z). If k ̸= 0, a direct sum of cyclic groups of orders
+g and |k| is cyclic exactly when those orders are coprime. Conversely, a cyclic group of order
+g|k| has complementary subgroups of these orders when they are coprime. This proves the
+splitting assertion. If k = 0, Theorem 3.1 gives the middle group Z. Its subgroup with quotient
+Z/gZ is gZ.
+
+    The algebraic sequence (6.4) places the two cyclic groups in the opposite order from (6.5).
+Their middle groups have the same invariant factors. No identification of the two filtrations is
+asserted. For r = s = 2, m = n = −1, choose a = 1, b = 0. Then t = 1 and k = −2(b0 + 1). At
+b0 = 0, both extensions have middle group Z/4Z and do not split. At b0 = −1, the nonzero
+torsion class ε = T has zero coarse coefficient, and quotienting by it leaves E ∼
+                                                                                = Z.
+
+
+7    The linking form of an effective filling
+A group presentation determines the orders of cycles. Their linking also uses the oriented filling
+slopes. We retain this geometric data explicitly, without selecting a convention for naming lens
+spaces.
+    Let T 2 have oriented basis (x, c) with intersection x · c = 1. Set ν = n − sb0 and regard
+                                µ0 = rx − mc,        µ1 = sx + νc                            (7.1)
+as curves on T 2 . Suppose gcd(r, m) = gcd(s, n) = 1. Both curves are then primitive. Take
+an oriented solid torus V0 whose meridian is µ0 , identifying T 2 with its boundary with the
+boundary orientation. Glue a second solid torus V1 with meridian µ1 by an orientation-reversing
+boundary map. Denote the resulting oriented closed manifold by MA . The slope c specifies its
+regular Seifert fibre. The intersection numbers with the two meridians have absolute values r, s.
+The section relation x1 = −x + b0 c identifies the second local relation with −µ1 . Thus these
+fillings realize the data of (3.1), with the stated orientation on T 2 . The gluing description is
+the two-fibre case of the solid-torus construction in [2, Section 2.1, pp. 25–27].
+     For disjoint torsion cycles z, w in an oriented closed three-manifold, our convention is
+                                     C ·w
+                   λM ([z], [w]) =          (mod Z),     ∂C = N z,     N ̸= 0.
+                                      N
+
+                                                14
+This is the symmetric torsion linking pairing [4, Section 1, pp. 2–3].
+
+Theorem 7.1 (Two-fibre linking coefficient). Choose integers α, β with mα + rβ = 1, and put
+
+                   λ0 = αx + βc,           q = sβ − να,       ∆ = rn + sm − rsb0 .            (7.2)
+
+Then
+                              µ1 = qµ0 + ∆λ0 ,            gcd(q, ∆) = 1.
+If ∆ ̸= 0, the class γ = [λ0 ] generates H1 (MA , Z) ∼
+                                                     = Z/|∆|Z, and
+                                     qij
+                  λMA (iγ, jγ) = −           (mod Z),       [x] = mγ,      [c] = rγ.          (7.3)
+                                     ∆
+The pairing is nonsingular. For ∆ = 0, one has H1 (MA , Z) ∼
+                                                           = Z and the torsion pairing is
+trivial.
+
+Proof. The columns (µ0 , λ0 ) form a unimodular matrix of determinant rβ + mα = 1. Taking
+determinants in this basis gives
+
+                                µ1 = (sβ − να)µ0 + (rν + sm)λ0 .
+
+Primitivity of µ1 proves gcd(q, ∆) = 1. The inverse change of basis is
+
+                             x = βµ0 + mλ0 ,            c = −αµ0 + rλ0 .
+
+The two meridional disks kill µ0 and µ1 in first homology, so the resulting presentation has the
+single relation ∆γ = 0.
+    Let D0 , D1 be the oriented meridional disks with respective boundaries µ0 , µ1 . On T 2 , the
+cycle µ1 − qµ0 − ∆λ0 bounds an integral singular 2-chain B, because its homology class is zero.
+Consequently
+                              C = D1 − qD0 − B,        ∂C = ∆λ0 .
+Push a representative of λ0 into the interior of V0 . It is disjoint from D1 and B and intersects
+D0 with sign +1. The sign follows from the boundary orientation and µ0 · λ0 = 1. Therefore
+C · λ0 = −q, which proves (7.3). Bilinearity gives all values. Since q is a unit modulo ∆, this
+pairing identifies the cyclic group with its character group. If ∆ = 0, its first homology is
+infinite cyclic and has no torsion.
+
+    Replacing (α, β) by (α + rj, β − mj) replaces λ0 by λ0 + jµ0 and q by q − j∆. Thus neither γ
+nor the linking value changes. Reversing the orientation of MA negates the pairing. A different
+cyclic generator multiplies its displayed coefficient by a unit square modulo |∆|. These rules
+state the full dependence on choices, including even orders.
+    For (r, s; m, n; b0 ) = (2, 2; −1, −1; 0), take (α, β) = (−1, 0). Then ∆ = −4, q = −1, and
+λMA (γ, γ) = −1/4. For (r, s; m, n; b0 ) = (2, 3; 1, 1; 0), take (α, β) = (1, 0). Now ∆ = 5, q = −1,
+and the value is 1/5. The nonsingular symmetric form on Z/5Z cannot be an alternating form:
+every alternating bilinear form on a cyclic group vanishes. The next construction specifies the
+larger group on which an alternating form does exist.
+
+
+
+
+                                                   15
+8    Alternating doubles of the arithmetic presentation
+Return to arbitrary r, s > 0 and m, n, b0 ∈ Z, without local coprimality assumptions. Regard
+the actual relation matrix                         !
+                                       r       s
+                               A=                    : Z2 → Z2
+                                     −m n − sb0
+
+as an integral map. On LA = Z2 ⊕ Z2 , define
+                                                                                            !
+                               ′   ′       T     ′      ′ T                        0       A
+                ΩA ((u, v), (u , v )) = u Av − (u ) Av,                [ΩA ] =               .   (8.1)
+                                                                                  −AT      0
+
+This construction uses the full presentation matrix and both copies of Z2 as specified. It is an
+alternating lattice associated with the presentation, independently of a geometric fibre lattice.
+
+Theorem 8.1 (Arithmetic discriminant and its pairing). Put d = gcd(r, s, m, n) and ∆ = det A.
+If ∆ ̸= 0, set N = |∆|/d. Then
+
+                  (LA , ΩA ) ∼
+                             = (Z4 , dJ ⊕ N J),                  ∼ (Z/dZ)2 ⊕ (Z/N Z)2 .
+                                                              DA =
+
+Here DA = L∨   ♭            ♭
+           A /ΩA (LA ) and ΩA (z) = ΩA (z, −). In the coordinates
+
+                                       DA = coker A ⊕ coker AT ,
+
+its perfect alternating pairing is
+
+                     bA ((x̄, ȳ), (x̄′ , ȳ ′ )) = xT A−T y ′ − (x′ )T A−T y   (mod Z).         (8.2)
+
+Its exponent is N and its order is ∆2 . If ∆ = 0, the radical of ΩA is primitive of rank two, and
+its quotient lattice has form dJ and discriminant group (Z/dZ)2 .
+
+Proof. Choose unimodular matrices P, Q with P AQ = diag(d, N ) when ∆ ̸= 0. The change of
+basis diag(P T , Q) in (8.1), followed by interleaving the two factors, gives dJ ⊕ N J. The integer
+d divides N because d2 divides det A. In the original coordinates the matrix of Ω♭A is −[ΩA ].
+Its inverse over Q is                                    !
+                                              0     A−T
+                                                           ,
+                                            −A−1      0
+
+which gives (8.2) by (2.1). More explicitly, xT A−T y is integral on either relation lattice: replace
+x by x + Az or y by y + AT w. If it is integral for every integral y, then A−1 x is integral, so
+x ∈ AZ2 . The same argument applies to y. This proves perfectness directly and determines the
+stated orders.
+    If ∆ = 0, the matrix A has rank one since r, s > 0. Its Smith form is diag(d, 0), so the same
+change of basis gives dJ ⊕ 02 . The last summand is the radical and is a direct summand of LA .
+Taking its quotient proves the last assertion. The unreduced cokernel also has a free summand
+Z2 . It is not the finite discriminant group of a nondegenerate lattice.
+
+    Let K = coker A when ∆ ̸= 0. The character
+
+                                       χȳ (x̄) = exp(2πixT A−T y)
+
+                                                       16
+identifies coker AT with K.
+                         c Thus (8.2) is the standard alternating pairing on K ⊕ K.
+                                                                                 c Define
+
+              HA = µN × K × K,
+                            c            (z, u, η)(z ′ , u′ , η ′ ) = (zz ′ η ′ (u), u + u′ , ηη ′ ).
+
+On C[K], the formula
+                                 [ρ(z, u, η)h](v) = zη(v)h(v + u)
+gives a representation of dimension |∆|. Its central character is tautological, its commutator
+is exp(2πibA ), and its center is µN . Indeed, perfectness forces any central element to have
+u = 0 and η = 1. Character averaging projects onto each delta-function, and translations act
+transitively on those functions. This proves irreducibility exactly as in Section 2, for every
+finite abelian K, including groups of even exponent. For ∆ = 0, the nondegenerate quotient
+instead gives K = Z/dZ and a representation of dimension d.
+    For the non-effective data (2, 4; 2, 2; 0), one has d = 2, ∆ = 12, and alternating elementary
+divisors (2, 6). Thus DA ∼= (Z/2)2 ⊕ (Z/6)2 , and the representation has dimension twelve and
+central order six. For (2, 4; 2, −4; 0), the radical has rank two and the quotient has form 2J.
+The resulting finite group is (Z/2)2 . These are arithmetic constructions. Nonprimitive filling
+slopes do not bound meridional disks of a solid torus, so Theorem 7.1 does not apply to these
+unreduced data.
+
+Proposition 8.2 (Separation from the level-six fibre). For effective two-fibre data with (r, s) =
+(3, 4) and b0 = 0, the arithmetic double has elementary divisors (1, |p|), and gcd(p, 12) = 1. In
+particular, it never has elementary divisors (1, 6). When |p| = 1, its discriminant group is zero,
+while the fibre lattice of Theorem 1.1 has discriminant group (Z/6)2 .
+
+Proof. Here d = 1 and ∆ = p = 4m + 3n. Effectiveness makes m a unit modulo three and n a
+unit modulo four. Reduction of p modulo three and four proves gcd(p, 12) = 1. Theorem 8.1
+now gives the result.
+
+   The abstract data (3, 4; 3, −2; 0) do have ∆ = 6 and d = 1. Their doubled lattice is therefore
+isometric to J ⊕ 6J, but both local pairs are non-effective. This is an equality of abstract lattice
+types. It supplies no map to Engel’s fibre or to its Leray sheaf.
+
+
+References
+[1] P. Engel, Complex structures on S 6 , author’s preprint, 2026, 25-page text consulted 13
+    September 2026, philip-engel.github.io/S6.pdf.
+
+[2] A. Hatcher, Notes on Basic 3-Manifold Topology,
+    pi.math.cornell.edu/∼hatcher/3M/3M.pdf.
+
+[3] J. Kollár, Seifert Gm -bundles, arXiv:math/0404386v2, 2004, arXiv:math/0404386.
+
+[4] J. A. Hillman, The linking pairings of orientable Seifert manifolds, arXiv:1004.0034, 2010,
+    arXiv:1004.0034.
+
+[5] G. Wilkes, Profinite rigidity for Seifert fibre spaces, Geom. Dedicata 188 (2017), 141–163,
+    doi:10.1007/s10711-016-0209-6.
+
+
+
+                                                   17
+

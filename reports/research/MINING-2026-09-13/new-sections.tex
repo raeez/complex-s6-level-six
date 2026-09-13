@@ -1,0 +1,359 @@
+\section{The integral extension of the two-fibre class}
+
+The coefficient $\Delta_{b_0}/g$ determines the coarse transgression.
+The total integral group can still be a nonsplit extension.  For example,
+$r=s=2$, $b_0=0$, and $m=n=-1$ give a cyclic group of order four,
+although both successive quotients have order two.
+
+Retain the group $\mathcal S_{r,s}$ in (4.9), for arbitrary $r,s>0$ and
+$m,n,b_0\in\mathbb Z$.  Write
+\[
+ g=\gcd(r,s),\qquad R=r/g,\qquad S=s/g,\qquad
+ \ell=gRS,\qquad k=\Delta_{b_0}/g.
+\]
+Choose integers $a,b$ with $aS+bR=1$, and put
+\begin{equation}\label{eq:seifert-split}
+ U=aX_0+bX_1,\qquad T=RX_0-SX_1,\qquad t=bm-an.
+\end{equation}
+The letters $a,b$ in this section denote B\'ezout coefficients.
+
+\begin{theorem}[Integral extension and splitting]\label{thm:extension}
+One has
+\begin{equation}\label{eq:class-coordinates}
+ \mathcal S_{r,s}=\mathbb ZU\oplus(\mathbb Z/g\mathbb Z)T,
+ \qquad H=\ell U,\qquad \varepsilon=kU+tT.
+\end{equation}
+Consequently, for $E=\mathcal S_{r,s}/\mathbb Z\varepsilon$,
+\begin{equation}\label{eq:extension-presentation}
+ E=\langle U,T\mid gT=0,\ kU+tT=0\rangle.
+\end{equation}
+If $k\ne0$, this gives an exact sequence
+\begin{equation}\label{eq:extension-sequence}
+ 0\longrightarrow\mathbb Z/g\mathbb Z
+ \mathrel{\mathop{\longrightarrow}^{1\mapsto T}}E
+ \mathrel{\mathop{\longrightarrow}^{U\mapsto1,\ T\mapsto0}}
+ \mathbb Z/|k|\mathbb Z\longrightarrow0.
+\end{equation}
+It splits if and only if $\gcd(g,k)$ divides $t$.
+Moreover, with $d=\gcd(r,s,m,n)$,
+\[
+ \gcd(g,k,t)=d,\qquad
+ E\cong
+ \begin{cases}
+ \mathbb Z/d\mathbb Z\oplus\mathbb Z/(|\Delta_{b_0}|/d)\mathbb Z,
+       &k\ne0,\\
+ \mathbb Z\oplus\mathbb Z/d\mathbb Z,&k=0.
+ \end{cases}
+\]
+Thus $E$ and $G_{b_0}$ have the same invariant factors.
+This assertion alone specifies no canonical isomorphism between their generators.
+\end{theorem}
+
+\begin{proof}
+Eliminate $H$ from (4.9).  The remaining relation is
+$g(RX_0-SX_1)=0$.  The change of generators in
+\eqref{eq:seifert-split} has determinant $-aS-bR=-1$, with inverse
+\[
+             X_0=SU+bT,\qquad X_1=RU-aT.
+\]
+It follows that $T$ has exact order $g$ and $H=rX_0=\ell U$.
+Substitution in (4.10) gives \eqref{eq:class-coordinates} and
+\eqref{eq:extension-presentation}.
+
+If $k\ne0$, no nonzero multiple of the relation $kU+tT$ lies in
+$\mathbb ZT$.  Thus the indicated cyclic subgroup injects, and the
+quotient is $\mathbb Z/|k|\mathbb Z$.  A lift of its generator has
+form $U+jT$ and is killed by $k$ precisely when
+$kj\equiv t\pmod g$.  This congruence is soluble exactly under the
+stated divisibility condition.
+
+The matrix sending $(m,n)$ to $(Sm+Rn,bm-an)$ is unimodular.
+Since $g\mid\ell$, this gives
+\[
+ \gcd(g,k,t)=\gcd(g,Sm+Rn,bm-an)=\gcd(g,m,n)=d.
+\]
+The relation matrix in \eqref{eq:extension-presentation} has nonzero
+entry $g$, determinant of absolute value $g|k|=|\Delta_{b_0}|$,
+and first determinantal divisor $d$.  Its Smith form proves both cases.
+\end{proof}
+
+Replacing $(a,b)$ by $(a+Rj,b-Sj)$ changes $U$ to $U+jT$ and changes
+$t$ to $t-jk$ modulo $g$.  The presentation and the splitting condition
+are therefore independent of the B\'ezout choice.
+The section gauges (3.7) change $t$ by a multiple of $g$ and leave $k$ fixed.
+
+\begin{proposition}[The coarse Leray extension]\label{prop:leray-extension}
+For the effective rank-one Seifert bundle (4.3), let $M$ be its oriented
+unit-circle subbundle.  If $k\ne0$, the integral Leray filtration gives
+\begin{equation}\label{eq:leray-extension}
+ 0\longrightarrow\mathbb Z/|k|\mathbb Z
+ \longrightarrow H^2(M,\mathbb Z)
+ \longrightarrow\mathbb Z/g\mathbb Z\longrightarrow0.
+\end{equation}
+Its middle group is cyclic of order $|\Delta_{b_0}|$.
+The extension splits if and only if $\gcd(g,k)=1$.
+For $k=0$, the middle group is $\mathbb Z$ and the sequence is
+$0\to\mathbb Z\xrightarrow{\,\pm g\,}\mathbb Z\to\mathbb Z/g\to0$.
+\end{proposition}
+
+\begin{proof}
+A neighbourhood of each fibre retracts onto a circle, so
+$R^jq_*\mathbb Z=0$ for $j>1$.  The base has cohomological dimension
+two.  Hence the only terms contributing to total degree two are
+$E_\infty^{2,0}=\operatorname{coker}d_2^{0,1}$ and
+$E_\infty^{1,1}=\mathbb Z/g\mathbb Z$.  Equation (4.1) gives the
+left group in \eqref{eq:leray-extension}.  Radial contraction from $Z$
+to $M$ preserves the base and its Leray filtration.
+
+Effectiveness implies $d=1$.  Theorem~3.1 and abelianity give
+$H_1(M,\mathbb Z)=G_{b_0}$, and integral Poincar\'e duality gives
+$H^2(M,\mathbb Z)\cong H_1(M,\mathbb Z)$.
+If $k\ne0$, a direct sum of cyclic groups of orders $g$ and $|k|$ is
+cyclic exactly when those orders are coprime.  Conversely, a cyclic group
+of order $g|k|$ has complementary subgroups of these orders when they
+are coprime.  This proves the splitting assertion.
+If $k=0$, Theorem~3.1 gives the middle group $\mathbb Z$.
+Its subgroup with quotient $\mathbb Z/g\mathbb Z$ is $g\mathbb Z$.
+\end{proof}
+
+The algebraic sequence \eqref{eq:extension-sequence} places the two
+cyclic groups in the opposite order from \eqref{eq:leray-extension}.
+Their middle groups have the same invariant factors.  No identification
+of the two filtrations is asserted.
+For $r=s=2$, $m=n=-1$, choose $a=1,b=0$.  Then $t=1$ and
+$k=-2(b_0+1)$.  At $b_0=0$, both extensions have middle group
+$\mathbb Z/4\mathbb Z$ and do not split.
+At $b_0=-1$, the nonzero torsion class $\varepsilon=T$ has zero
+coarse coefficient, and quotienting by it leaves $E\cong\mathbb Z$.
+
+\section{The linking form of an effective filling}
+
+A group presentation determines the orders of cycles.  Their linking
+also uses the oriented filling slopes.  We retain this geometric data
+explicitly, without selecting a convention for naming lens spaces.
+
+Let $T^2$ have oriented basis $(x,c)$ with intersection $x\cdot c=1$.
+Set $\nu=n-sb_0$ and regard
+\begin{equation}\label{eq:filling-slopes}
+       \mu_0=rx-mc,\qquad \mu_1=sx+\nu c
+\end{equation}
+as curves on $T^2$.  Suppose
+$\gcd(r,m)=\gcd(s,n)=1$.  Both curves are then primitive.
+Take an oriented solid torus $V_0$ whose meridian is $\mu_0$, identifying
+$T^2$ with its boundary with the boundary orientation.
+Glue a second solid torus $V_1$ with meridian $\mu_1$ by an
+orientation-reversing boundary map.  Denote the resulting oriented
+closed manifold by $M_A$.
+The slope $c$ specifies its regular Seifert fibre.  The intersection
+numbers with the two meridians have absolute values $r,s$.
+The section relation $x_1=-x+b_0c$ identifies the second local
+relation with $-\mu_1$.  Thus these fillings realize the data of (3.1),
+with the stated orientation on $T^2$.
+The gluing description is the two-fibre case of the solid-torus
+construction in \cite[Section~2.1, pp.~25--27]{Hatcher}.
+
+For disjoint torsion cycles $z,w$ in an oriented closed three-manifold,
+our convention is
+\[
+ \lambda_M([z],[w])=\frac{C\cdot w}{N}\pmod{\mathbb Z},
+             \qquad \partial C=Nz,\quad N\ne0.
+\]
+This is the symmetric torsion linking pairing
+\cite[Section~1, pp.~2--3]{Hillman}.
+
+\begin{theorem}[Two-fibre linking coefficient]\label{thm:linking}
+Choose integers $\alpha,\beta$ with $m\alpha+r\beta=1$, and put
+\begin{equation}\label{eq:linking-coordinates}
+ \lambda_0=\alpha x+\beta c,\qquad
+ q=s\beta-\nu\alpha,\qquad \Delta=rn+sm-rsb_0.
+\end{equation}
+Then
+\[
+       \mu_1=q\mu_0+\Delta\lambda_0,\qquad
+       \gcd(q,\Delta)=1.
+\]
+If $\Delta\ne0$, the class $\gamma=[\lambda_0]$ generates
+$H_1(M_A,\mathbb Z)\cong\mathbb Z/|\Delta|\mathbb Z$, and
+\begin{equation}\label{eq:linking-formula}
+ \lambda_{M_A}(i\gamma,j\gamma)=-\frac{qij}{\Delta}
+            \pmod{\mathbb Z},\qquad
+ [x]=m\gamma,\qquad[c]=r\gamma.
+\end{equation}
+The pairing is nonsingular.  For $\Delta=0$, one has
+$H_1(M_A,\mathbb Z)\cong\mathbb Z$ and the torsion pairing is trivial.
+\end{theorem}
+
+\begin{proof}
+The columns $(\mu_0,\lambda_0)$ form a unimodular matrix of determinant
+$r\beta+m\alpha=1$.  Taking determinants in this basis gives
+\[
+ \mu_1=(s\beta-\nu\alpha)\mu_0+(r\nu+sm)\lambda_0.
+\]
+Primitivity of $\mu_1$ proves $\gcd(q,\Delta)=1$.
+The inverse change of basis is
+\[
+               x=\beta\mu_0+m\lambda_0,\qquad
+               c=-\alpha\mu_0+r\lambda_0.
+\]
+The two meridional disks kill $\mu_0$ and $\mu_1$ in first homology,
+so the resulting presentation has the single relation $\Delta\gamma=0$.
+
+Let $D_0,D_1$ be the oriented meridional disks with respective
+boundaries $\mu_0,\mu_1$.  On $T^2$, the cycle
+$\mu_1-q\mu_0-\Delta\lambda_0$ bounds an integral singular
+2-chain $B$, because its homology class is zero.  Consequently
+\[
+                   C=D_1-qD_0-B,\qquad
+                   \partial C=\Delta\lambda_0.
+\]
+Push a representative of $\lambda_0$ into the interior of $V_0$.
+It is disjoint from $D_1$ and $B$ and intersects $D_0$ with sign $+1$.
+The sign follows from the boundary orientation and
+$\mu_0\cdot\lambda_0=1$.  Therefore $C\cdot\lambda_0=-q$,
+which proves \eqref{eq:linking-formula}.  Bilinearity gives all values.
+Since $q$ is a unit modulo $\Delta$, this pairing identifies the cyclic
+group with its character group.  If $\Delta=0$, its first homology
+is infinite cyclic and has no torsion.
+\end{proof}
+
+Replacing $(\alpha,\beta)$ by $(\alpha+rj,\beta-mj)$ replaces
+$\lambda_0$ by $\lambda_0+j\mu_0$ and $q$ by $q-j\Delta$.
+Thus neither $\gamma$ nor the linking value changes.
+Reversing the orientation of $M_A$ negates the pairing.
+A different cyclic generator multiplies its displayed coefficient by a
+unit square modulo $|\Delta|$.
+These rules state the full dependence on choices, including even orders.
+
+For $(r,s;m,n;b_0)=(2,2;-1,-1;0)$, take
+$(\alpha,\beta)=(-1,0)$.  Then $\Delta=-4$, $q=-1$, and
+$\lambda_{M_A}(\gamma,\gamma)=-1/4$.
+For $(r,s;m,n;b_0)=(2,3;1,1;0)$, take $(\alpha,\beta)=(1,0)$.
+Now $\Delta=5$, $q=-1$, and the value is $1/5$.
+The nonsingular symmetric form on $\mathbb Z/5\mathbb Z$ cannot
+be an alternating form: every alternating bilinear form on a cyclic
+group vanishes.  The next construction specifies the larger group
+on which an alternating form does exist.
+
+\section{Alternating doubles of the arithmetic presentation}
+
+Return to arbitrary $r,s>0$ and $m,n,b_0\in\mathbb Z$, without
+local coprimality assumptions.  Regard the actual relation matrix
+\[
+ A=\begin{pmatrix}r&s\\-m&n-sb_0\end{pmatrix}:\mathbb Z^2\to\mathbb Z^2
+\]
+as an integral map.  On $L_A=\mathbb Z^2\oplus\mathbb Z^2$, define
+\begin{equation}\label{eq:doubled-form}
+ \Omega_A((u,v),(u',v'))=u^TAv'-(u')^TAv,\qquad
+ [\Omega_A]=\begin{pmatrix}0&A\\-A^T&0\end{pmatrix}.
+\end{equation}
+This construction uses the full presentation matrix and both copies of
+$\mathbb Z^2$ as specified.  It is an alternating lattice associated
+with the presentation, independently of a geometric fibre lattice.
+
+\begin{theorem}[Arithmetic discriminant and its pairing]\label{thm:double}
+Put $d=\gcd(r,s,m,n)$ and $\Delta=\det A$.
+If $\Delta\ne0$, set $N=|\Delta|/d$.  Then
+\[
+ (L_A,\Omega_A)\cong (\mathbb Z^4,dJ\oplus NJ),\qquad
+ \mathcal D_A\cong(\mathbb Z/d\mathbb Z)^2
+                    \oplus(\mathbb Z/N\mathbb Z)^2.
+\]
+Here $\mathcal D_A=L_A^\vee/\Omega_A^\flat(L_A)$ and
+$\Omega_A^\flat(z)=\Omega_A(z,-)$.  In the coordinates
+\[
+ \mathcal D_A=\operatorname{coker}A\oplus\operatorname{coker}A^T,
+\]
+its perfect alternating pairing is
+\begin{equation}\label{eq:arithmetic-pairing}
+ b_A((\bar x,\bar y),(\bar x',\bar y'))
+     =x^TA^{-T}y'-(x')^TA^{-T}y\pmod{\mathbb Z}.
+\end{equation}
+Its exponent is $N$ and its order is $\Delta^2$.
+If $\Delta=0$, the radical of $\Omega_A$ is primitive of rank two,
+and its quotient lattice has form $dJ$ and discriminant group
+$(\mathbb Z/d\mathbb Z)^2$.
+\end{theorem}
+
+\begin{proof}
+Choose unimodular matrices $P,Q$ with $PAQ=\operatorname{diag}(d,N)$
+when $\Delta\ne0$.  The change of basis
+$\operatorname{diag}(P^T,Q)$ in \eqref{eq:doubled-form}, followed by
+interleaving the two factors, gives $dJ\oplus NJ$.
+The integer $d$ divides $N$ because $d^2$ divides $\det A$.
+In the original coordinates the matrix of $\Omega_A^\flat$ is
+$-[\Omega_A]$.  Its inverse over $\mathbb Q$ is
+\[
+        \begin{pmatrix}0&A^{-T}\\-A^{-1}&0\end{pmatrix},
+\]
+which gives \eqref{eq:arithmetic-pairing} by (2.1).
+More explicitly, $x^TA^{-T}y$ is integral on either relation lattice:
+replace $x$ by $x+Az$ or $y$ by $y+A^Tw$.
+If it is integral for every integral $y$, then $A^{-1}x$ is integral,
+so $x\in A\mathbb Z^2$.  The same argument applies to $y$.
+This proves perfectness directly and determines the stated orders.
+
+If $\Delta=0$, the matrix $A$ has rank one since $r,s>0$.
+Its Smith form is $\operatorname{diag}(d,0)$, so the same change of
+basis gives $dJ\oplus0_2$.  The last summand is the radical and is a
+direct summand of $L_A$.  Taking its quotient proves the last assertion.
+The unreduced cokernel also has a free summand $\mathbb Z^2$.
+It is not the finite discriminant group of a nondegenerate lattice.
+\end{proof}
+
+Let $K=\operatorname{coker}A$ when $\Delta\ne0$.
+The character
+\[
+ \chi_{\bar y}(\bar x)=\exp(2\pi i x^TA^{-T}y)
+\]
+identifies $\operatorname{coker}A^T$ with $\widehat K$.
+Thus \eqref{eq:arithmetic-pairing} is the standard alternating pairing
+on $K\oplus\widehat K$.
+Define
+\[
+ H_A=\mu_N\times K\times\widehat K,\qquad
+ (z,u,\eta)(z',u',\eta')=(zz'\eta'(u),u+u',\eta\eta').
+\]
+On $\mathbb C[K]$, the formula
+\[
+                 [\rho(z,u,\eta)h](v)=z\eta(v)h(v+u)
+\]
+gives a representation of dimension $|\Delta|$.
+Its central character is tautological, its commutator is
+$\exp(2\pi i b_A)$, and its center is $\mu_N$.
+Indeed, perfectness forces any central element to have $u=0$ and
+$\eta=1$.  Character averaging projects onto each delta-function,
+and translations act transitively on those functions.
+This proves irreducibility exactly as in Section~2, for every finite
+abelian $K$, including groups of even exponent.
+For $\Delta=0$, the nondegenerate quotient instead gives
+$K=\mathbb Z/d\mathbb Z$ and a representation of dimension $d$.
+
+For the non-effective data $(2,4;2,2;0)$, one has
+$d=2$, $\Delta=12$, and alternating elementary divisors $(2,6)$.
+Thus $\mathcal D_A\cong(\mathbb Z/2)^2\oplus(\mathbb Z/6)^2$,
+and the representation has dimension twelve and central order six.
+For $(2,4;2,-4;0)$, the radical has rank two and the quotient has
+form $2J$.  The resulting finite group is $(\mathbb Z/2)^2$.
+These are arithmetic constructions.  Nonprimitive filling slopes do
+not bound meridional disks of a solid torus, so Theorem~\ref{thm:linking}
+does not apply to these unreduced data.
+
+\begin{proposition}[Separation from the level-six fibre]\label{prop:separation}
+For effective two-fibre data with $(r,s)=(3,4)$ and $b_0=0$, the
+arithmetic double has elementary divisors $(1,|p|)$, and
+$\gcd(p,12)=1$.  In particular, it never has elementary divisors
+$(1,6)$.  When $|p|=1$, its discriminant group is zero, while the
+fibre lattice of Theorem~1.1 has discriminant group $(\mathbb Z/6)^2$.
+\end{proposition}
+
+\begin{proof}
+Here $d=1$ and $\Delta=p=4m+3n$.
+Effectiveness makes $m$ a unit modulo three and $n$ a unit modulo four.
+Reduction of $p$ modulo three and four proves $\gcd(p,12)=1$.
+Theorem~\ref{thm:double} now gives the result.
+\end{proof}
+
+The abstract data $(3,4;3,-2;0)$ do have $\Delta=6$ and $d=1$.
+Their doubled lattice is therefore isometric to $J\oplus6J$, but
+both local pairs are non-effective.  This is an equality of abstract
+lattice types.  It supplies no map to Engel's fibre or to its Leray sheaf.

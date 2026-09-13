@@ -1,0 +1,800 @@
+                                          THE LINKING PAIRINGS OF ORIENTABLE SEIFERT
+                                                          MANIFOLDS
+
+
+
+
+arXiv:1004.0034v2 [math.GT] 15 Oct 2010
+                                                                    JONATHAN A. HILLMAN
+
+                                                 Abstract. We compute the p-primary components of the linking
+                                                 pairings of orientable 3-manifolds admitting a fixed-point free S 1 -
+                                                 action. Using this, we show that any linking pairing on a finite
+                                                 abelian group with homogeneous 2-primary summand is realized
+                                                 by such a manifold. However some pairings on inhomogeneous
+                                                 2-groups are not realizable by any Seifert fibred 3-manifold.
+
+
+                                             The linking pairings of oriented 3-manifolds which are Seifert fibred
+                                          over non-orientable base orbifolds were computed in [4]. Here we shall
+                                          consider the remaining case, when the base orbifold is also orientable.
+                                          Thus the Seifert fibration is induced by a fixed-point free S 1 -action
+                                          on the manifold. (We shall henceforth call such a space a “Seifert
+                                          manifold”, for brevity.)
+                                             Every linking pairing on a finite abelian group is realized by a closed
+                                          orientable 3-manifold [7]. Bryden and Deloup have used the cohomo-
+                                          logical formulation (recalled below) to show that if the group has odd
+                                          order the pairing is realised by a Seifert manifold which is a Q-homology
+                                          sphere [2]. We shall work directly with the geometric definition, giving
+                                          a new proof of this result, and showing that there are pairings on 2-
+                                          primary groups which are not realized by any orientable Seifert fibred
+                                          3-manifold at all (i.e., even if we allow non-orientable base orbifolds).
+                                             We give presentations for the localization of the torsion at a prime p
+                                          in §2, which lead to explicit formulae for the localized linking pairings
+                                          in §3. We then study the cases p odd and p = 2 separately, in §§4-5
+                                          and §§6-7, respectively. Every linking pairing on a finite abelian group
+                                          whose 2-primary subgroup is isomorphic to (Z/2k Z)ρ (for some k, ρ)
+                                          is realized by some Seifert manifold. The manifold may be either an
+                                                                    f
+                                          H2 × E1 -manifold, or a SL-manifold     or a Q-homology sphere. Theorem
+                                          10 gives some constraints on the 2-primary component of the pairing.
+                                          Pairings satisfying these constraints and a further “gap” condition are
+                                          realizable, by Theorem 11. The final section §8 summarizes briefly the
+                                          earlier work of Oh on the Witt classes of such pairings [9].
+                                            1991 Mathematics Subject Classification. 57M27, 57N10.
+                                            Key words and phrases. linking pairing, Seifert manifold.
+                                                                                  1
+2                           JONATHAN A. HILLMAN
+
+                            1. linking pairings
+    A linking pairing on a finite abelian group N is a symmetric bilinear
+function ℓ : N × N → Q/Z which is nonsingular in the sense that
+ℓ̃ : n 7→ ℓ(−, n) defines an isomorphism from N to Hom(N, Q/Z). If
+N1 is a subgroup of N then N1⊥ = {n ∈ N | ℓM (n, n1 ) = 0 ∀n1 ∈ N1 }.
+Such a pairing is metabolic if there is a subgroup P with P = P ⊥ , split
+[7] if also P is a direct summand and hyperbolic if N is the direct sum
+of two such subgroups. If ℓ is split N is a direct double. A linking
+pairing ℓ is even if 2k−1 ℓ(x, x) ∈ Z for all x ∈ N such that 2k x = 0,
+and odd otherwise. Hyperbolic pairings are even.
+    Every linking pairing splits uniquely as the orthogonal sum (over
+primes p) of its restrictions to the p-primary subgroups of N, and so
+our basic strategy is to localize at a prime. Linking pairings on finite
+abelian p-groups may be further decomposed as the orthogonal sum of
+pairings on homogeneous summands. If N is homogeneous we shall say
+that ℓ is homogeneous, while if ℓ =⊥ti=1 ℓi , where ℓi is a pairing on an
+homogeneous group of exponent pki , and k1 > · · · > kt > 0 we shall
+say that each ℓi is a component of ℓ. When p is odd the decomposition
+into such components is essentially unique. In particular, every link-
+ing pairing on an abelian group of odd order is an orthogonal sum of
+pairings on cyclic groups. However, if the order is even we need also
+pairings E0k on (Z/2k Z)2 , for each k ≥ 1, and E1k on (Z/2k Z)2 , for each
+k > 1. The pairings E0k are hyperbolic, while the E1k s are even but not
+hyperbolic. (See [7, 10].
+    Let ℓ be a linking pairing on N ∼ = (Z/pk Z)ρ and L ∈ GL(ρ, Z/pk Z) be
+                                k
+the matrix with (i, j) entry p ℓ(ei , ej ), where e1 , . . . , eρ is some basis for
+N. The rank of ℓ is rk(ℓ) = dimFp N/pN = ρ. If p is odd then a linking
+pairing ℓ on a free Z/pk Z-module N is determined up to isomorphism
+                                                         × 2
+by rk(ℓ) and the image d(ℓ) of det(L) in F×      p /(Fp ) = Z/2Z. (This is
+independent of the choice of basis for N.) If p = 2 and k ≥ 3 then ℓ
+is determined by the image of L in GL(ρ, Z/8Z); if moreover ℓ is even
+and k ≥ 2 then ρ is even and ℓ is determined by the image of L in
+GL(ρ, Z/4Z). (See [5, 7, 10].)
+    If w = pq ∈ Q× (where (p, q) = 1) let ℓw be the pairing on Z/qZ given
+by ℓw (n, n′ ) = [nn′ w] ∈ Q/Z. Then ℓw ∼    = ℓw′ if and only if a2 w ′ = b2 w
+for some integers a, b with (a, q) = (b, q) = 1. In particular, if q = 2k
+then ℓw ∼ = ℓw′ if and only if 2k w ′ ≡ 2k w mod (2k , 8).
+    If M is a closed oriented 3-manifold Poincaré duality determines a
+linking pairing ℓM : T (M) × T (M) → Q/Z, which may be described
+as follows. Let w, z be disjoint 1-cycles representing elements of T (M)
+and suppose that mz = ∂C for some nonzero m ∈ Z and some 2-chain
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                    3
+
+C which is transverse to w. Then ℓM ([w], [z]) = (w • C)/m ∈ Q/Z. It
+follows easily from the Mayer-Vietoris theorem and duality that if M
+embeds in R4 then ℓM is hyperbolic. (If X and Y are the closures of the
+components of R4 − M and TX and TY are the kernels of the induced
+homomorphisms from T (M) to H1 (X; Z) and H1 (Y ; Z) (respectively)
+then T (M) ∼  = TX ⊕ TY and the restriction of ℓM to each of these
+summands is trivial [7]).
+   The linking pairing has a dual formulation, in terms of cohomology.
+Let βQ/Z : H 1 (M; Q/Z) → H 2(M; Z) be the Bockstein homomorphism
+associated with the coefficient sequence
+                          0 → Z → Q → Q/Z → 0,
+and let D : H1 (M; Z) → H 2 (M; Z) be the Poincaré duality isomor-
+phism. Then ℓM may be given by the equation
+                                  −1
+               ℓ(w, z) = (D(w) ∪ βQ/Z D(z))([M]) ∈ Q/Z.
+The cup-product and Bockstein structure on H ∗ (M; Fp ) for M a Seifert
+manifold have been computed in [3], and this approach was used in [2]
+to show that pairings on abelian groups of odd order may be realized
+by Seifert fibred Q-homology spheres.
+
+                        2. the torsion subgroup
+   Assume now that M = M(g; S) is a Seifert manifold with Seifert
+data S = ((α1 , β1 ), . . . , (αr , βr )), where r ≥ 1 and αi > 1 for all i ≤ r.
+Let Ni be a torus neighborhood of the ith exceptional fibre, and let Bo
+be a section of the restriction of the Seifert fibration to M \ ∪intNi .
+Then Bo is homeomorphic to the surface of genus g with r open 2-discs
+deleted. Let ξi and θi be simple closed curves on ∂Ni , corrresponding
+to the ith boundary component of Bo and a regular fibre on Ni , respec-
+tively. The fibres are naturally oriented, as orbits of the S 1 -action. We
+may assume that Bo is oriented so that regular fibres have negative in-
+tersection with Bo , and the ξi are oriented compatibly with ∂Bo = Σξi .
+Then there are 2-discs Di in Ni such that ∂Di = αi ξi + βi θi , since
+αi qi + βi h = 0 in H1 (Ni ; Z). Hence H1 (M; Z) ∼     = Z2g ⊕ H, where H has
+a presentation
+             hq1 , . . . , qr , h | Σqi = 0, αi qi + βi h = 0, ∀i ≥ 1i.
+(Here qi represents the image of ξi , and h represents the image of regular
+fibres such as θi .) The torsion subgroup T (M) is a subgroup of H. Let
+εS = −Σ αβii be the generalized Euler invariant of the Seifert fibration.
+   We shall modify this presentation to obtain one with more conve-
+nient generators. Our approach involves localizing at a prime p. After
+4                           JONATHAN A. HILLMAN
+
+reordering the Seifert data, if necessary, we may assume that αi+1 di-
+vides αi in Z(p) , for all i ≥ 1. (Note that v = α1 εS is then in Z(p) , while
+if εS = 0 then αα12 is invertible in Z(p) .) Localization loses nothing, since
+ℓM is uniquely the orthogonal sum of pairings on the p-primary sum-
+mands of T (M). (We shall often write ℓM rather than Z(p) ⊗ ℓM , for
+simplicity of notation.)
+   Using the relation Σqi = 0 to eliminate the generator q1 , we see that
+Z(p) ⊗ H has the equivalent presentation
+           hq2 , . . . , qr , h | α1 εS h = 0, αi qi + βi h = 0, ∀i ≥ 2i.
+If r = 1 this group is cyclic, generated by the image of h. We shall
+asume henceforth that r ≥ 2, since all pairings on cyclic groups are
+realizable by such Seifert manifolds. Then there are integers m, n such
+that mα2 + nβ2 = 1, since α2 and β2 are relatively prime. Let γi = αα2i βi
+and qi′ = γ2 qi − γi q2 , for all i. (Then q2′ = 0.) Let s = −mh + nq2 and
+t = α2 q2 + β2 h. Then h = −α2 s + nt and q2 = β2 s + mt. Since t = 0
+in H this simplifies to
+             hq3′ , . . . , qr′ , s | α1 α2 εS s = 0, αi qi′ = 0, ∀i ≥ 3i.
+In particular, M(0; S) is a Q-homology sphere (i.e., H = T (M)) if and
+only if εS 6= 0.
+  If exactly rp of the cone point orders αi are divisible by p and εS = 0
+then T (M) has nontrivial p-torsion if and only if rp ≥ 3, in which case
+Z(p) ⊗ T (M) is the direct sum of rp − 2 nontrivial cyclic submodules,
+while if εS 6= 0 and rp ≥ 2 then Z(p) ⊗ T (M) is the direct sum of rp − 1
+nontrivial cyclic submodules. (Note however that if rp ≤ 1 and εS 6= 0
+then Z(p) ⊗ T (M) ∼ = Z(p) /α1 εS Z(p) , and may be non-trivial.)
+
+                          3. the linking pairing
+   The Seifert structure gives natural 2-chains relating the 1-cycles rep-
+resenting the generators of H. We may choose disjoint annuli Ai in M ∗
+with ∂Ai = θ2 − θi , for i 6= 2. For convenience in our formulae, we shall
+also let A2 = 0. Then
+                         Ci = β2 Di − βi D2 + β2 βi Ai
+is a singular 2-chain with ∂Ci = αi β2 ξi − α2 βi ξ2 .
+   Let ξi′ = γ2 ξi − γi ξ2 , for i ≥ 3, σ = −mθ2 + nξ2 and
+                                               α1
+                U = −α1 Bo + α1 εS nD2 + Σ (Di + βi Ai ).
+                                               αi
+Then ξi is a singular 1-chain representing qi′ and ∂Ci = αi ξi′ , for all
+        ′
+
+i ≥ 3, σ is a singular 1-chain representing s and U is a singular 2-chain
+with ∂U = α1 α2 εS σ.
+        THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS               5
+
+   In order to calculate intersections and self-intersections of the 1-
+cycles ξi with the 2-chains Ci and U in M, we may push each ξi off
+Ni and Bo . Then ξi and Dj are disjoint, for all i, j, while ξ2 • Ai = 1,
+ξi • Ai = −1 and ξj • Ai = 0, if i, j 6= 2 and j 6= i. Similarly, we may
+assume that θ2 is disjoint from the discs Dj (for all j) and the annuli
+Ak (for all k 6= 2). We also have θ2 • Bo = −1, by the orientation
+conventions of §2. Hence
+                           ξi′ • Ci = −β2 βi (γ2 + γi ),
+                               ξi′ • Cj = −β2 βj γi ,
+and
+                               ξi′ • U = α1 εS γi
+for all i, j ≥ 3 with j 6= i, while
+                                  σ • Ci = nβ2 βi
+for all i ≥ 3 and
+                                          α1
+                            σ•U =−           − nα1 εS .
+                                          α2
+Then
+                                              αi β2 + α2 βi
+                  ℓM (qi′ , qi′ ) = [−β2 βi                 ] ∈ Q/Z
+                                                   αi2
+and
+                                         α2
+                    ℓM (qi′ , qj′ ) = [−β2 βi βj
+                                              ] ∈ Q/Z.
+                                        αi αj
+  If εS 6= 0 then the above calculations of ξi′ • U and σ • Ci each give
+                                               βi
+                            ℓM (s, qi′ ) = [      ] ∈ Q/Z,
+                                               αi
+while
+                                   α1 + nα1 α2 εS
+                    ℓM (s, s) = [−                 ] ∈ Q/Z.
+                                      α1 α22 εS
+In particular, the linking pairings depend only on S and not on g.
+(We could arrange that the denominators are powers of p, after further
+rescaling the basis elements. However that would tend to obscure the
+dependence on the Seifert data.)
+  Let S and S ′ be two systems of Seifert data, with concatenation S ′′ ,
+and let M ′′ = M(g + g ′ ; S ′′ ) be the fibre-sum of M = M(g; S) and
+M ′ = M(g ′ ; S ′ ). Then εS ′′ = εS + εS ′ . The next result is clear.
+Lemma 1. Let M = M(g; S) and M ′ = M(g ′ ; S ′ ) be Seifert manifolds
+such that all the cone point orders of S ′ are relatively prime to all the
+cone point orders of S and εS ′ = εS = 0, and let M ′′ = M(g + g ′ ; S ′′ ).
+Then εS ′′ = 0 and ℓM ′′ = ℓM ⊥ ℓM ′ .                                   
+6                         JONATHAN A. HILLMAN
+
+   Thus if every p-primary summand of a linking pairing ℓ can be real-
+ized by some M(0; S) with all cone point orders powers of p and εS = 0
+then ℓ can also be realized by a Seifert manifold.
+   If one of the hypotheses fails, it is not clear how the linking pairings
+of M, M ′ and M ′′ are related. In order to realize pairings by Seifert
+manifolds with εS 6= 0 we shall need another approach.
+
+                 4. the homogeneous case: p odd
+   In this section we shall show that when p is odd and the p-primary
+component of T (M) is homogeneous the structure of the p-primary
+component of ℓM may be read off the Seifert data. Our results shall
+later be extended to the inhomogeneous cases.
+   Let ui = p−k αi , for 1 ≤ i ≤ rp .
+Lemma 2. Let M = M(g; S) be a Seifert manifold and p a prime.
+Then Z(p) ⊗ T (M) is homogeneous of exponent pk if and only if either
+   (1) εS = 0 and ui = p−k αi is invertible in Z(p) , for 1 ≤ i ≤ rp ; or
+   (2) p−k α1 εS and ui are invertible in Z(p) , for 2 ≤ i ≤ rp ; or
+   (3) rp ≤ 2 and p−k α1 α2 εS is invertible in Z(p) .
+Proof. This follows immediately from the calculations in §2, with the
+folowing observations. If εS = 0 then α1 and α2 must have the same
+p-adic valuation. If rp > 2 then u2 = p−k α2 and v = α1 εS are in Z(p) .
+Hence if u2 v = p−k α1 α2 εS is invertible in Z(p) then u2 and v are also
+invertible in Z(p) .                                                   
+  Note that if Z(p) ⊗ T (M) is homogeneous of exponent pk and εS 6= 0
+then u1 may be divisible by p.
+Theorem 3. Let M = M(g; S) be a Seifert manifold and p an odd
+prime such that Z(p) ⊗ T (M) is homogeneous of exponent pk . Then
+   (1) if εS = 0 then d(ℓM ) = [(−1)rp −1 αα21 (Π1≤i≤r βi )(Π3≤j≤r uj )];
+   (2) if εS 6= 0 then d(ℓM ) = [(−1)rp −1 (Π1≤i≤rp βi )(Π2≤j≤rp uj )v].
+Proof. Suppose first that εS = 0. Then αα12 = uu21 is also invertible
+in Z(p) , and Z(p) ⊗ T (M) ∼
+                           = (Z/pk Z)rp −2 , with basis ei = qi+2
+                                                              ′
+                                                                  , for
+1 ≤ i ≤ rp − 2. We apply row operations
+                                       α3 βi+2
+                      rowi 7→ rowi −           row1
+                                       αi+2 β3
+for 2 ≤ i ≤ n, and then
+                                      α2 β3
+                     row1 7→ row1 −         Σi≥2 rowi .
+                                      α3 β2
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                          7
+
+This gives a lower triangular matrix with diagonal
+                  β3          βi      β4          βr −2
+              [−β2 (β2 + µΣ ), −β22 , . . . , −β22 p ].
+                  u3          ui      u4          urp −2
+Therefore
+                                                             βi βi
+                    det(L) = (−1)n β22n−1 (β2 + µΣ             )Π ,
+                                                             ui ui
+and so
+                                    α1
+                 d(ℓM ) = [(−1)rp −1    (Π1≤i≤r βi )(Π3≤j≤r uj )].
+                                    α2
+   A similar argument applies if εS 6= 0. In this case u2 and v = α1 εS
+are also invertible in Z(p) , and Z(p) ⊗ T (M) ∼    = (Z/pk Z)rp −1 , with basis
+       ′
+ei = qi+2 , for 1 ≤ i ≤ rp − 2, and erp −1 = s. We now have n = rp − 1
+and the final row and column of the matrix L have a slightly different
+form. If we perform the same row operations on the first n − 1 rows,
+and then the column operation col1 7→ col1 + Σ2≤i≤rp −2 coli we obtain
+a bordered matrix
+                                                              β3 
+               −β2 βu33 (β2 + µΣ∗ )     0     ...       0      u3
+                         0         −β22 uβ44 . . .     0      0
+                                                                  
+                         ..                  . .        ..        
+                          .            0         .       .        ,
+                                                                  
+                         0           . . .     0   −β  2 β rp
+                                                               0   
+                                                       2 urp      
+                             ∗         β4              β rp      ∗
+                         Σ             u4
+                                              ...      ur
+                                                               d
+                                                                    p
+
+
+where Σ  ∗
+             = Σ3≤i≤rp uβii   and d   ∗
+                                          = − u1 +nu
+                                                 u22 v
+                                                       2v
+                                                          . Hence
+                β3                  β3                2(r −3)    βi
+   det(L) = −(β2   (β2 + µΣ∗ )d∗ + Σ∗ )(−1)rp −3 β2 p Π4≤i≤rp
+                u3                  u3                           ui
+                                              2(r −3)         βi
+       = (−β2 d∗ (β2 + µΣ∗ ) + Σ∗ )(−1)rp −2 β2 p Π3≤i≤rp .
+                                                              ui
+          ∗         ∗     ∗
+Now (−β2 d (β2 + µΣ ) + Σ ) =
+               = −(β2 (u1 + nu2 v)(−β2 + u2 Σ∗ ) − u22vΣ∗ )/u22 v
+       = (β2 (u1 β2 + u1 u2 Σ∗ + nβ2 u2 v) + (nβ2 − 1)u2 vΣ∗ )/u22 v
+                 ≡ β2 (u1 β2 + u1 u2 Σ∗ + u2 v) mod (p)
+                          ≡ −β1 β2 u2 mod (p),
+since nβ2 ≡ 1 mod (p) and v = −β1 − βu2 u2 1 − u1 Σ∗ . Therefore
+                               2(r −3)
+    det(L) ≡ (−1)rp −1 β2 p               (Π1≤j≤rp βi )/(Π2≤j≤rp uj )v   mod (p),
+and so we now have
+                 d(ℓM ) = [(−1)rp −1 (Π1≤i≤rp βi )(Π2≤j≤rp uj )v].
+8                           JONATHAN A. HILLMAN
+
+                                                                                 
+      When all the cone point orders have the same p-adic valuation (i.e.,
+u1 and u2 are also invertible in Z(p) ) then these formulae for d(ℓM )
+are invariant under permutation of the indices. For if εS = 0 then
+[ αα21 ] = [u1 u2 ] in F×    × 2                                  k         k
+                        p /(Fp ) , while if εS 6= 0 then v = u1 p εS (and p εS
+is also invertible).
+      A linking pairing ℓ on a free Z/pk Z-module N is hyperbolic if and
+                                                        ρ
+only if ρ = rk(ℓ) is even and d(ℓ) = [(−1) 2 ]. Thus Z(p) ⊗ ℓM is
+hyperbolic if and only if either εS = 0, rp = ρ + 2 is even and
+                                            rp
+[ αα21 (Π1≤i≤rp βi )(Π3≤j≤rp uj )] = [(−1) 2 −1 ] or εS 6= 0, rp = ρ + 1 is odd
+                                             rp −1
+and [(Π1≤i≤rp βi )(Π2≤j≤rp uj )v] = [(−1) 2 ].
+
+      5. realization of pairings on groups of odd order
+   In this section we shall show that every linking pairing on a finite
+group of odd order may be realized by a Seifert manifold M(0; S).
+   Suppose first that we localize ℓM at a prime p. Let pk be the ex-
+ponent of Z(p) ⊗ T (M), and let L be the Z/pk Z-matrix with entries
+pk ℓ(qi′ , qj′ ). (If εS 6= 0 we need also a row and column corresponding to
+the generator s.) Then
+                                                              
+                                  D1     pκ2 B2 . . . pκt Bt
+                               κ2 tr κ2                    .. 
+                              p B       p D2 . . .          . 
+                         L= . 2                ..         ..   ,
+                               ..        ...       .       . 
+                                pκt Bttr   0    . . . p κ t Dt
+where Di is a ρi × ρ1 block with det(Di ) 6≡ 0 mod (p), for 1 ≤ i ≤ t,
+and 0 < κ2 < · · · < κt < k. We may partition L more coarsely
+as L = BA
+
+                 B
+              tr D , where A = D1 and B = [B2 . . . Bt ].             Let Q =
+       −1 κ2
+  I −D1 p B            ′                κ2 tr −1             tr        A     0
+                                                                                  
+  0     I
+                 and D   =   D    −   p   B  A   B.  Then  Q    LQ =    0 p κ2 D ′ .
+
+Block-diagonalizing L in this fashion does not change the residues
+mod (p) of the diagonal blocks Di or decrease the p-divisibility of
+the off-diagonal blocks. We may iterate this process, and we find
+that ℓM is an orthogonal sum of pairings on homogeneous groups
+(Z/pk Z)ρ1 , (Z/pk−κ2 Z)ρ2 , . . . , (Z/pk−κt Z)ρt . If εS = 0 or if α1 εS is in-
+vertible in Z(p) then the determinantal invariants of the first summand
+(with the maximal exponent pk ) may be computed from the block A as
+in §4, while we may read off the determinantal invariants of the other
+summands from the corresponding diagonal elements of the original
+matrix L. (We shall not need to consider the possibility that p divides
+the numerator of εS in justifying our constructions below.)
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                   9
+
+   With these reductions in mind, we may now contruct Seifert mani-
+folds realizing given pairings.
+Theorem 4. Let p be an odd prime, and let ℓ be a linking pairing
+on a finite p-primary abelian group. Then there is a Seifert manifold
+M = M(0; S) such that the cone point orders αi are all powers of p,
+εS = 0 and ℓM ∼ = ℓ.
+Proof. The pairing ℓ is the orthogonal sum ⊥tj=1 ℓj , where ℓj is a pairing
+on (Z/pkj Z)ρj , with ρj > 0 for 1 ≤ j ≤ t and 0 < kj < kj−1 for
+2 ≤ j ≤ t. Let d(ℓj ) = [wj ] for 1 ≤ j ≤ t, and let k = k1 .
+   If p ≥ 5 we let αi = pk for 1 ≤ i ≤ m1 = ρ1 + 2, αi = pk2 for
+m1 < i ≤ m2 = m1 + ρ2 , . . . , and αi = pkt for mt−1 < i ≤ (Σρj ) + 2.
+For each 1 ≤ j ≤ t we let βi = 1 for mj < i < mj+1 and βmj+1 = wj .
+We must then choose βi for 1 ≤ i ≤ m1 so that [Π1≤i≤m1 βi ] = [w1 ] and
+Σ1≤i≤m1 βi = −Σm1 <i≤r pk αβii . It is in fact sufficient to solve the equation
+Σ1≤i≤m1 βi = 0 with all βi ∈ (Z/pk Z)× , and [Π1≤i≤m1 βi ] = [w1 ], for
+subtracting Σm1 <i≤r pk αβii from β1 will not change its residue mod (p).
+   If m1 is odd the equation Σβi = 0 always has solutions with all
+βi ∈ (Z/pk Z)× . If ξ is a nonsquare in (Z/pk Z)× setting βi′ = ξβi for
+all i gives another solution, and [Πβi′ ] = [ξ][Πβi ]. (If p ≡ 3 mod (4) we
+may take ξ = −1, which corresponds to a change of orientation of the
+3-manifold.)
+   If m1 = 4t and w 6≡ 1 mod (p) there is an integer x such that
+x ≡ 21 (w − 1) mod (p). The images of x and w − 1 − x are invertible in
+Z/pk Z. Let β1 = 1, β2 = −w, β3 = x and β4 = w − 1 − x and β2i+1 = 1
+and β2i+2 = −1 for 2 ≤ i < 2t. Then Σβi = 0, β4 ≡ β3 mod (p) and
+[(−1)r−1 Πβi ] = [w].
+   If m1 = 4t + 2 and w 6≡ 1 mod (p) let β1 = 1, β2 = w, β3 = β4 =
+β5 = y, β6 = w − 1 − 3y and β2i+1 = 1 and β2i+2 = −1 for 3 ≤ i ≤ 2t,
+where y ≡ − 14 (1 + w) mod (p). Then Σβi = 0, β6 ≡ β3 mod (p) and
+[(−1)r−1 Πβi ] = [w].
+   These choices work equally well for all p ≥ 3, if [w] 6= 1. If m1 is
+even, w ≡ 1 mod (p) and p > 3 there is an integer n such that n2 6= 0
+or 1 mod (p), and we solve as before, after replacing w by ŵ = n2 w.
+   However if p = 3 and [w] = 1 we must vary our choices. If m1 = 4t
+with t > 1 let β1 = β2 = β3 = β4 = 1, β5 = β6 = −2 and β2i+1 = 1 and
+β2i+2 = −1 for 3 ≤ i < 2t. If m1 = 4t + 2 let β2i−1 = 1 and β2i = −1
+for 1 ≤ i ≤ 2t + 1. In the remaining case (when m1 = 4) we find that
+if Σ1≤i≤4 βi = 0 then [−Πβi ] = [−1]. In this case we must use instead
+S = ((3k+1, 1), (3k+1, 5), (3k , −1), (3k , −1)) to realize the pairing with
+[w] = [1].                                                                    
+10                        JONATHAN A. HILLMAN
+
+   The manifolds with Seifert data as above are H2 × E1 -manifolds,
+except when ρ = 1 and p = 3, in which case they are the flat man-
+ifold G3 (with its two possible orientations). The manifold M =
+M(1; (3, 1), (3, 1), (3, −2)) is an H2 × E1 -manifold with T (M) ∼
+                                                                 = Z/3Z
+and base orbifold a torus with cone points.
+   It follows immediately from Theorem 4 and Lemma 1 that every
+linking pairing on a finite abelian group of odd order is realized by
+some Seifert manifold M(0; S) with εS = 0. All such pairings may also
+be realized by Seifert fibred manifolds which are Q-homology spheres
+(which have εS 6= 0). However we must be carefull to ensure that the
+numerator of εS does not provide unexpected torsion.
+Theorem 5. Let ℓ be a linking pairing on a finite abelian group A of
+odd order. Then there is a Seifert manifold M = M(0; S) such that
+εS 6= 0 and ℓM ∼
+               = ℓ.
+Proof. Let A = ⊕p∈P A(p) and ℓ =⊥p∈P ℓ(p) be the primary decom-
+positions of A and ℓ. For each p ∈ P we shall define a Seifert data
+                                                                t(p)
+set S(p) as follows. Suppose that ℓ(p) is a pairing on ⊕j=1 (Z/pkj Z)ρj ,
+with ρj > 0 for 1 ≤ j ≤ t(p) and kj ≥ kj+1 > 0 for 1 ≤ j < t.
+Then ℓ(p) =⊥ ℓbi /ai , where the ai are powers of p, with ai ≥ ai+1
+                          (p)  (p)           (p)     (p)             (p)
+for all i. Let S(p) = ((α1 , β1 ), . . . , (αt(p) , βt(p) )), where αi = ai ,
+ (p)                      (p)                             t(p)
+β1 = (−1)ρ1 +1 b1 and βi    = bi , for 2 ≤ i ≤ ρ(p) = Σj=1 ρj . Finally let
+                                                                          (p)
+                                                                   t(p) β
+e = eΠp∈P p, where e is the exponent of A, and βe = −1−e
+α                                                        αΣp∈P Σi=1 i(p) .
+                                                                        αi
+   Let S be the concatenation of {(e  e and the S(p)s for p ∈ P , and
+                                   α, β)}
+                               1
+let M = M(0; S). Then εS = αe . For each p ∈ P there are ρ(p) + 1 cone
+points with order divisible by p, and Z(p) ⊗ T (M) ∼
+                                                          t(p)
+                                                     = ⊕j=1 (Z/pkj Z)ρj .
+Since βe ≡ −1 mod (eα), the determinantal invariant of the component of
+Z(p) ⊗ ℓM of maximal exponent a1 = pk1 is [Πbi ]. Therefore Z(p) ⊗ ℓM ∼
+                                                                      =
+ (p)                             ∼
+ℓ , for each p ∈ P , and so ℓM = ℓ.                                   
+                                                        f
+  The manifolds with Seifert data as above are SL-manifolds,           except
+when A ∼ =  Z/p k
+                  Z and so there  are  just two   cone  points, in which case
+                        3
+they are lens spaces (S -manifolds).
+  In the homogeneous p-primary case we may arrange that all cone
+points have order pk , except when p = 3, ρ = 2 and d(ℓ) = [1]. (This
+case is realized by M(0; (3k+1 , 7), (3k , −1), (3k , −1)).)
+       6. realization of homogeneous 2-primary pairings
+  The situation is more complicated when p = 2. A linking pairing ℓ
+on (Z/2k Z)ρ is determined by its rank ρ and certain invariants σj (ℓ) ∈
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                 11
+
+Z/8Z ∪ {∞}, for ρ − 2 ≤ j ≤ ρ. (See §3 of [7], and [5].) We shall not
+calculate these invariants here. Instead, we shall take advantage of the
+particular form of the pairings given in §3.
+   If a linking pairing ℓ on (Z/2k Z)ρ is even then ρ is also even, and
+either ℓ is hyperbolic (and is the orthogonal sum of ρ2 copies of the
+pairing E0k ) or it is the orthogonal direct sum of a hyperbolic pairing
+of rank ρ − 2 with the pairing E1k (if k > 1) [7, 10]. When k = 1 all
+even pairings are hyperbolic. Otherwise, ℓ is determined by the image
+of the matrix L = 2k ℓ(ei , ej ) in GL(ρ, Z/4Z). In particular, if k > 1
+and L = ( 0c dc ) with c odd and d even the pairing is hyperbolic.
+   We shall say that an element pq ∈ Z(2) is even or odd if p is even or
+odd, respectively. (Thus pq is odd if and only if it is invertible in Z(2) .)
+   The following result complements the criterion for homogeneity given
+in Lemma 2.
+Lemma 6. Let M = M(g; S) be a Seifert manifold and let ℓ = Z(2) ⊗
+ℓM . Assume that the Seifert data are ordered so that αi+1 divides αi in
+Z(2) . Then
+    (1) ℓ is even if and only if αα1i is odd for 1 ≤ i ≤ r2 and either
+        εS = 0 or α1 εS is odd;
+    (2) if αα1i is odd for 1 ≤ i ≤ r2 then α1 εS ≡ r2 mod (2).
+Proof. If Z(2) ⊗ ℓM is even then β2 + αα2i βi is even for all 3 ≤ i ≤ r2 .
+Hence αα2i is odd, since the βi are all odd. If moreover εS = 0 then αα21 is
+odd. If εS 6= 0 then αα21 + nα1 εS is even. Hence αα12 must again be odd,
+and so α1 εS is also odd. In each case, the converse is clear.
+  The second assertion holds since βi is odd for 1 ≤ i ≤ r2 and ααii is
+even for all i > r2 .                                                     
+   We shall suppose for the remainder of this section that Z(2) ⊗ T (M)
+is homogeneous of exponent 2k > 1.
+   Suppose first that Z(2) ⊗ ℓM is even. Then it is homogeneous and
+of even rank ρ = 2s. The diagonal entries of L are all even and the
+off-diagonal entries are all odd. If k = 1 then Z(2) ⊗ ℓM is hyperbolic,
+so we may assume that k > 1.
+Theorem 7. Let M = M(g; S) be a Seifert manifold such that the
+even cone point orders αi all have the same 2-adic valuation k > 1.
+Assume that either εS = 0 or α1 εS is odd. Let t be the number of
+diagonal entries of L which are divisible by 4. Then whether Z(2) ⊗ ℓM
+is hyperbolic or not depends only on the images of t and ρ in Z/4Z.
+Proof. The linking pairing is even, by Lemma 6, and so ρ is even. We
+may reorder the basis of T (M) so that Lii ≡ 0 mod (4), for all i ≤ t and
+12                        JONATHAN A. HILLMAN
+
+Lii ≡ 2 mod (4) for t < i ≤ ρ. Let t = 4a + x and ρ − t = 4b + y, where
+0 ≤ x, y ≤ 3. Then E = LL21 11 L12
+                                L22   is invertible. We may partition L
+as L = FEtr G
+            F
+               , where G is a (ρ − 2) × (ρ − 2) submatrix
+                                                           and F is a
+                                                        I2 −E −1 F
+2 × (ρ − 2) submatrix. If we conjugate by J =           0 Iρ−2       to obtain
+J tr LJ = ( E0 G0′ ), then G′ = G − F tr E −1 F . The entries of F are all
+odd and so the entries of F tr E −1 F are all congruent to 2 mod (4).
+Therefore G′ ≡ G mod (2), and so the off-diagonal entries of G′ are
+still odd, but the residues mod (4) of the diagonal entries are changed.
+An application of this process to G′ then restores the residue classes of
+the diagonal entries of the corresponding (ρ − 4) × (ρ − 4)-submodule.
+Iterating this process, we find that ℓM ∼    = (a + b)(E0k ⊥ E1k ) ⊥ ℓ′ , where
+ℓ has rank x + y and the off-diagonal entries of the matrix for ℓ′ are
+ ′
+
+odd. We also find that ℓ′ ∼    = (x + y)E0 , unless (x, y) = (1, 3) or (0,2),
+in which case ℓ′ ∼  = E0k ⊥ E1k or E1k , respectively. Since 2E1k ∼= 2E0k [10],
+and the pairing with matrix congruent to ( 01 12 ) mod (4) is hyperbolic,
+it follows that ℓ is hyperbolic if and only if either a + b is even and
+(x, y) 6= (1, 3) or (0,2), or if a + b is odd and (x, y) = (1, 3) or (0,2). 
+  It follows immediately from the calculations in §3 that
+                             α2 βi + αi β2
+              t = #{i ≥ 3 |                ≡ 0 mod (4)} + δ,
+                                   2k
+where δ = 1 if εS 6= 0 and β2 + α2 εS ≡ 0 mod (4), and δ = 0 otherwise.
+  In particular, if t and ρ are divisible by 4 then ℓM is hyperbolic.
+  Lemmas 2 and 6 also imply that if Z(2) ⊗ T (M) is homogeneous of
+exponent 2k then Z(2) ⊗ ℓM is odd if and only if either
+   (1) εS = 0, 2−k αi is even for i = 1 and 2, and is odd for 2 < i ≤ r2 ;
+        or
+   (2) α1 εS and 2−k αi are odd for 1 < i ≤ r2 , and either 2−k α1 or r2
+        is even.
+Odd forms on homogeneous 2-groups can be diagonalized. In the
+present situation, this follows easily from the next lemma.
+Lemma 8. Let ℓ be an odd linking pairing on N = (Z/2k Z)2 . Then ℓ
+is diagonizable.
+Proof. Let e, f be the standard basis for N. Since ℓ is odd we may
+assume that ℓ(e, e) = [2−k a], where a is odd. Let ℓ(e, f ) = [2−k b]
+and ℓ(f, f ) = [2−k d]. (Then b is even and d is odd, or vice-versa, by
+nonsingularity of the pairing.) Let f ′ = −a−1 be + f . Then ℓ(e, f ′) = 0
+and ℓ(f ′ , f ′ ) = [2−k d′ ], where d′ ≡ d − a−1 b2 mod (2k ). Therefore
+ℓ∼= ℓ ak ⊥ ℓ d′ .                                                       
+     2      2k
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                        13
+
+  Note that if b ≡ 0 mod (4) then ℓ d′ ∼ = ℓ dk .
+                                      2k     2
+  Suppose now that Z(2) ⊗ ℓM is odd and εS = 0. Then the diagonal
+entries of L are odd and the off-diagonal elements are odd multiples of
+2−k α1 . We may assume also that r2 ≥ 4,for otherwise Z(2) ⊗ T (M) is
+cyclic. We may partition L as L = FEtr FG , where E ∈ GL(2, Z(2) ), F is
+a 2 × (r2 − 4) submatrix with even entries and G is a (r2 − 4) × (r2 − 4)
+                                −1 F
+submatrix. Let J = I02 −E    Ir2 −4  . Then det(J) = 1 and J tr LJ =
+( E0 G0′ ), where G′ = G − F tr E −1 F . The columns of F are proportional,
+and the ratio u3 /u4 is odd. Since the entries of F are odd multiples of
+2−k α1 and since E − I2 has even entries, G′ ≡ G mod (8). Iterating this
+process, we may replace L by a block-diagonal matrix, where the blocks
+are all 2 × 2 or 1 × 1, and are congruent mod (8) to the corresponding
+blocks of L. Each such 2 × 2 block is diagonalizable, by Lemma 8, and
+so we may easily represent ℓM as an orthogonal sum of pairings of rank
+1.
+    If εS 6= 0 then ℓ(qi′ , s) = [2−k uβii ] and ℓM (s, s) = [2−k z], where βi , ui
+and z are odd, and we first replace each qi′ by q̃i = qi′ − z −1 u−1   i βi s. We
+                               ∼
+then see that Z(2) ⊗ ℓM = ℓ2−k z ⊥ ℓ̃, where the matrix for ℓ̃ has odd
+diagonal entries and even off-diagonal entries, and we may continue as
+before.
+
+Theorem 9. Let ℓ be a linking pairing on (Z/2k Z)ρ . Then there is a
+Seifert manifold M = M(0; S) such that the cone point orders αi are
+all powers of 2 and ℓM ∼
+                       = ℓ. We may have either εS = 0 or εS 6= 0.
+Proof. Suppose first that ℓ is even. Then ρ is also even, and ℓM ∼
+                                                                                    ρ
+                                                                           = (E0k ) 2
+          ρ
+or (E0k ) 2 −1 ⊥ E1k . Let S = ((2k , β1 ), . . . , (2k , βr )) with βi = (−1)i for
+1 ≤ i ≤ r. Then εS = − 21k if r is odd and εS = 0 if r is even, and
+ℓM ∼
+              ρ
+    = (E0k ) 2 .
+   If ρ ≡ 2 mod (4) let β1 = −3, β2 = β3 = 1 and βi = (−1)i for
+4 ≤ i ≤ r, where r = ρ + 1 or ρ + 2. If ρ ≡ 0 mod (4) let β1 = −5,
+β2 = · · · = β5 = 1 and βi = (−1)i for 6 ≤ i ≤ r, where r = ρ + 1 or
+ρ + 2. In each case εS = − 21k if r is odd and εS = 0 if r is even, and
+ℓM ∼
+              ρ
+    = (E0k ) 2 −1 ⊥ E1k .
+   Now suppose that ℓ is odd. Then ℓ ∼              ρ
+                                             =⊥i=1 ℓwi , where wi = 2−k bi for
+1 ≤ i ≤ ρ. If εS = 0 we let r = ρ + 2 and S = ((α1 , β1 ), . . . , (αr , βr )),
+where α1 = α2 = 2k+2 , αi = 2k for 3 ≤ i ≤ r, β2 = 1, βi = 3bi for
+3 ≤ i ≤ r and β1 = −1 − 4Σi≥3 βi . Then ℓM ∼          = ℓ. (Here we may use the
+observation following Lemma 8.)
+   If εS 6= 0 we let r = ρ+1. Here we must take into account the change
+of basis suggested in the paragraph before the theorem. Suppose first
+14                         JONATHAN A. HILLMAN
+
+that some bi ≡ ±3 mod (8). We may then arrange that z = 3 and the
+matrix for ℓ̃ is congruent mod (4) to a diagonal matrix. After reordering
+the summands, and allowing for a change of orientation, we may assume
+that b1 ≡ 3 mod (8). Then we let S = ((α1 , β1 ), . . . , (αr , βr )), where
+α1 = 2k+2 , αi = 2k for 2 ≤ i ≤ r, β2 = 1, βi = 4 − bi for 3 ≤ i ≤ r and
+β1 = 1 − 4Σri=2 βi . Then εS = − 21k and ℓM ∼   = ℓ.
+  Finally, suppose that bi ≡ ±1 mod (8) for all i. If ρ = 1 let S =
+((2k+1, 1), (2k , 1)). If ρ = 2 and b1 ≡ −b2 ≡ 1 mod (8), let S =
+((2k+1, 1), (2k , 1), (2k , −1). Otherwise we may assume that b1 ≡ b2 mod
+(8). But then ℓw1 ⊥ ℓw2 ∼        = 2ℓw′ , where w ′ = 2−k .3 [7], and we are
+done.                                                                     
+Corollary. Let ℓ be a linking pairing on a finite abelian group with
+homogeneous 2-primary subgroup. Then there is a Seifert manifold
+M = M(0; S) such that ℓM ∼= ℓ. We may have either εS = 0 or εS 6= 0.
+Proof. The case with εS = 0 follows immediately from Theorems 4 and
+9 and Lemma 1. If εS 6= 0 we must argue as in Theorem 5.          
+
+   The manifolds constructed in this section are either H2 ×E1 -manifolds
+(if εS = 0), or f
+                SL-manifolds (if εS 6= 0), with the exceptions of the
+half-turn flat manifold M(0; (2, −1), (2, 1), (2, −1), (2, 1)) and the S3 -
+manifolds M(0; (2, 1), (2, 1), (2, β)) and M(0; (4, 1), (2, 1), (2, β)).
+
+
+                 7. the inhomogeneous case: p = 2
+  The next theorem suffices to show that there are pairings which
+cannot be realized by orientable Seifert fibred 3-manifolds. (These are
+counter-examples to a conjecture raised in [2].)
+Theorem 10. Let M = M(g; S) be a Seifert manifold, and let S(2) =
+((α1 , β1 ), . . . , (αt , βt )) be the subset of the Seifert data with even cone
+point orders αi , in descending order of divisibility by 2. Then Z(2) ⊗ ℓM
+has a nontrivial even component if and only if α1 , α2 and α3 have the
+same 2-adic valuation and α1 εS = 0 or is oddn. The even component
+has exponent α1 , and all the other components are diagonalizable.
+Proof. The block-diagonalization process of §5 does not change the
+parity of the entries in the diagonal blocks Di . The first assertion then
+follows easily from the calculations of §3. (In particular, note that if
+α1 and α2 have the same 2-adic valuation but α3 properly divides α2 in
+Z(2) then α1 εS is even, while if αi and αj properly divide α2 and i 6= j
+then αi ℓM (qi′ , qi′ ) is odd and αi ℓM (qi′ , qj′ ) is even.)         
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                   15
+
+   In particular, if α1 εS is even but nonzero then the image of s in
+Z(2) ⊗ T (M) has order greater than α1 , and the component of highest
+exponent is cyclic.
+   For example, ℓ 1 ⊥ E01 is the linking pairing of the Nil3 -manifold
+                     4
+M(0; (2, 1), (2, 1), (2, 1), (2, −1)), but is not realizable by a Seifert man-
+ifold with εS = 0. The pairing E02 ⊥ E01 is not realized by any Seifert
+manifold (as defined above, i.e., with orientable base orbifold).
+   Let M = M(−k; S) be the orientable 3-manifold which is Seifert fi-
+bred over a non-orientable base orbifold with underlying surface #k RP 2 ,
+for some k ≥ 1. If S = ((2, 1), (2, 1), (2, 1), (2, 1)) and k = 2 then
+ℓM ∼ = E02 ⊥ E01 . However if Z(2) ⊗ T (M) has exponent divisible by 16
+and a direct summand of order 2 then there are cone point orders α1
+and αm such that α1 is divisible by 4 and αm = 2um with um odd,
+by Lemma 3.4 of [4]. It then follows from Theorem 3.7 of [4] that
+Z(2) ⊗ ℓM ∼  = ℓ′ ⊥ ℓ 21 , for some pairing ℓ′ . In particular, E04 ⊥ E01 is not
+realized by any orientable Seifert fibred 3-manifold at all.
+   On the other hand every linking pairing ℓ on a finite abelian group
+is realized by some oriented 3-manifold. (In [7] the manifold is con-
+structed by connect-summing simple pieces, but such a manifold may
+also be obtained by surgery on a framed link, with linking matrix de-
+termined by ℓ. See [1] or Exercise 5.3.13(g) of [6].) Since every closed
+orientable 3-manifold is homology cobordant to a hyperbolic 3-manifold
+[8], ℓ is also the linking pairing of an aspherical 3-manifold.
+   We expect that the conditions of Theorem 10 are the only constraint
+on the class of linking pairings realized by Seifert manifolds. However
+we have only been able to confirm this under a “gap” condition on the
+2-primary torsion.
+
+Theorem 11. Let ℓ =⊥tj=1 ℓj be a linking pairing on a finite abelian
+2-group, where ℓj is a pairing on (Z/2kj Z)ρj , with ρj > 0 for 1 ≤ j ≤ t,
+kj ≥ kj+1 + 2 for 1 ≤ j < t and kt > 0. Suppose also that ℓj is odd for
+all 2 ≤ j ≤ t. Then there is a Seifert manifold M = M(0; S) such that
+the cone point orders αi are all powers of 2 and ℓM ∼  = ℓ. We may have
+either εS = 0 or εS 6= 0.
+
+Proof. We may assume that t > 1, since the homogeneous case is cov-
+ered by Theorem 9. Let k = k1 be the exponent of T (M).
+  In order to realize ℓ by a Seifert manifold with εS = 0, we must have
+two cone points of order at least 2k , and ρj cone points of order 2kj , for
+1 ≤ j ≤ t. If we set β2 = 1 and choose the βi with i > 2 compatibly
+with ℓ, then we may set β1 = −2k Σi≥2 αβii .
+16                        JONATHAN A. HILLMAN
+
+    If ℓ1 is even then ρ1 is even and we must have α1 = α2 = 2k also.
+If ℓ1 is hyperbolic let βi = (−1)i for 1 ≤ i ≤ ρ1 + 2; if ℓ1 is even
+but not hyperbolic and ρ1 ≡ 2 mod (4) let β3 = 1 and βi = (−1)i for
+4 ≤ i ≤ ρ1 + 2; and if ℓ1 is even but not hyperbolic and ρ1 ≡ 0 mod (4)
+β3 = β4 = β5 = 1 and βi = (−1)i for 6 ≤ i ≤ ρ1 + 2.
+    When p = 2 the block-diagonalization process of §5 does not change
+the parity of the entries of the blocks Bm and Dn . In our situation
+this process allows a more refined reduction. The block A = D1 has
+diagonal entries −βi (1 + βi ) and off-diagonal entries −βi βj , for 3 ≤
+                               tr −1
+i, j ≤ ρ1 + 2. Therefore [Bm     A Bn ]pq = −βp βq ((Σβi2 )2 + Σβi3 ), which
+is even (for any 3 ≤ p, q ≤ ρ). Hence the first step of the reduction
+does not change the image of the complementary blocks mod (4), and
+the change mod (8) depends only on ρ1 , since −4 ≡ 4 mod (8). In
+particular, if k1 − k2 ≥ 2 this step does not change the images mod (8)
+at all.
+    The subsequent blocks have odd diagonal elements and even off-
+diagonal elements. Nevertheless a similar reduction applies, and further
+changes depend only on the ranks of the homogeneous terms, provided
+that kj − kj+1 ≥ 2 for all j. It is clear that (knowing these ranks) we
+may then choose the numerators βi to realize all the pairings ℓj .
+    If ℓ1 is odd then ℓ1 ∼   ρ1
+                         =⊥i=1   ℓwi , where wi = 2−k bi for 1 ≤ i ≤ ρ. Let
+               k+2
+α1 = α2 = 2 , and βi = 3bi for 3 ≤ i ≤ ρ1 + 2. Then we may continue
+as before.
+    A similar argument applies when εS 6= 0.                              
+
+                             8. Witt classes
+   Two pairings ℓ and ℓ′ are Witt equivalent if there are metabolic pair-
+ings µ and µ′ such that ℓ ⊥ µ ∼     = ℓ′ ⊥ µ′ . The set of Witt equivalence
+classes is an abelian group W (Q/Z) with respect to orthogonal sum of
+pairings. The canonical decomposition into primary summands gives
+an isomorphism
+                         W (Q/Z) ∼  = ⊕p prime W (Fp )
+where W (F2 ) = Z/2Z, W (Fp ) = Z/4Z if p ≡ 3 mod (4) and W (Fp ) ∼
+                                   ∼                                       =
+(Z/2Z)2 if p ≡ 1 mod (4). If a, b are relatively prime nonzero integers let
+w( ab ) be the Witt class of the pairing ℓ b . The summands are generated
+                                           a
+by the classes of such pairings.
+   In [9] bordism arguments are used to compute the Witt class of ℓM ,
+for M = M(0; S) a Seifert manifold. If εS = 0 the Witt class of ℓM is
+−Σw( αβii ), while if εS = pq (in lowest form) then it is −w( pq
+                                                               1
+                                                                 ) − Σw( αβii )
+[9]. In particular, the image of ℓM in W (Fp ) is nontrivial if εS = 0 and
+rp is odd or if εS 6= 0 and rp is even.
+      THE LINKING PAIRINGS OF ORIENTABLE SEIFERT MANIFOLDS                    17
+
+   Remark. The definition of Witt equivalence given here is appropriate
+for obtaining bordism invariants, as in [1, 9]. However the Witt groups
+defined in [7] use a finer equivalence relation, involving stabilization by
+split pairings (rather than by metabolic pairings).
+                                References
+ [1] Alexander, J. P., Hamrick, G. C. and Vick, J. W. Linking forms and maps of
+     odd prime order, Trans. Amer. Math. Soc. 221 (1976), 169–185.
+ [2] Bryden, J. and Deloup, F. A linking form conjecture for 3-manifolds,
+     in Advances in topological quantum field theory,
+     NATO Sci. Ser. II Math. Phys. Chem., 179,
+     Kluwer Acad. Publ., Dordrecht (2004), 253–265.
+ [3] Bryden, J. and Zvengrowski, P. The cohomology ring of the orientable Seifert
+     manifolds, II, Topology Appl. 127 (2003), 213–257.
+ [4] Crisp, J. S. and Hillman, J. A. Embedding Seifert fibred and Sol3 -manifolds
+     in 4-space, Proc. London Math. Soc. 76 (1998), 685–710.
+ [5] Deloup, F. Monoide des enlacements et facteurs orthogonaux,
+     Alg. Geom. Top. 5 (2005), 419–442.
+ [6] Gompf, R. and Stipsicz, A. 4-Manifolds and Kirby Calculus,
+     Graduate Texts in Mathematics 20,
+     American Mathematical Society, Providence (1999).
+ [7] Kawauchi, A. and Kojima, S. Algebraic classification of linking pairings on
+     3-manifolds, Math. Ann. 253 (1980), 29–42.
+ [8] Myers, R. Homology cobordisms, link concordances, and hyperbolic 3-
+     manifolds, Trans. Amer. Math. Soc. 278 (1983), 271–288.
+ [9] Oh, H. S. Witt classes of torsion linking forms,
+     in Combinatorial Methods in Topology and Algebraic Geometry,
+     CONM 44, American Mathematical Society (1985), 179–188.
+[10] Wall, C. T. C. Quadratic forms on finite groups, and related topics,
+     Topology 2 (1964), 471–495.
+
+  School of Mathematics and Statistics, University of Sydney, NSW
+2006, Australia
+  E-mail address: jonathan.hillman@sydney.edu.au
+

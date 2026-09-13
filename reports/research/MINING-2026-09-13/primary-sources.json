@@ -1,0 +1,32 @@
+[
+  {
+    "path": "materials/raw/engel-2026-09-13.pdf",
+    "url": "https://philip-engel.github.io/S6.pdf",
+    "bytes": 679852,
+    "sha256": "81ad7344e61d2c3e53a829a41c43161f1d64edfe2d2a534db898cf2231d65bc1"
+  },
+  {
+    "path": "materials/raw/kollar-math-0404386v2.pdf",
+    "url": "https://arxiv.org/pdf/math/0404386v2",
+    "bytes": 295858,
+    "sha256": "778c956d76dfe7e511423f2692bfdd6514e23f7155c3f833419e7f852bc296bf"
+  },
+  {
+    "path": "materials/raw/hatcher-three-manifolds.pdf",
+    "url": "https://pi.math.cornell.edu/~hatcher/3M/3M.pdf",
+    "bytes": 384715,
+    "sha256": "f3781c43b4ed981f98fab36761d5eefe92bb53cc1a7100a0146954f9af5a029b"
+  },
+  {
+    "path": "materials/raw/hillman-linking-pairings.pdf",
+    "url": "https://arxiv.org/pdf/1004.0034",
+    "bytes": 221662,
+    "sha256": "1a34b4c8d250f2b854bac341cd730e050a46379c19a31d9b0fbf3345a4fb694d"
+  },
+  {
+    "path": "materials/raw/wilkes-profinite-rigidity.pdf",
+    "url": "https://link.springer.com/content/pdf/10.1007/s10711-016-0209-6.pdf",
+    "bytes": 555079,
+    "sha256": "67c8b5de80b4985b26645195d573bba0233336298fdbae59a8c2eaaa3851d7b4"
+  }
+]

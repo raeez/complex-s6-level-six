@@ -1,0 +1,1133 @@
+                                                                        SEIFERT Gm -BUNDLES
+
+
+
+
+arXiv:math/0404386v2 [math.AG] 25 May 2004
+                                                                               JÁNOS KOLLÁR
+
+
+
+                                                Seifert fibered 3–manifolds were introduced and studied in [Sei32]. (See [ST80]
+                                             for an English translation.) Roughly speaking, these are 3–manifolds M which
+                                             admit a differentiable map f : M → F to a surface F such that every fiber is a
+                                             circle. Higher dimensional Seifert fibered manifolds were investigated in [OW75].
+                                             The authors observed that in many cases of interest Seifert fibered manifolds corre-
+                                             spond to holomorphic Seifert C∗ -bundles, and started to develop a general theory
+                                             of holomorphic Seifert G-bundles for any complex Lie group G.
+                                             Definition 1. Let X be a normal variety (or algebraic space) over a field k and G
+                                             a (reduced) algebraic group over k. A Seifert G-bundle over X is a normal variety
+                                             (or algebraic space) Y together with a morphism f : Y → X and a G-action on Y
+                                             satisfying the following two conditions.
+                                                 (1) f is affine and G-equivariant (with respect to the trivial action on X).
+                                                 (2) For every x ∈ X, the G-action on the reduced fiber Yx := red f −1 (x)
+                                                     G × Yx → Yx is G-equivariantly isomorphic to the natural (left) G-action
+                                                     on G/Ix for some finite subgroup Ix ⊂ G.
+                                                 Let G × Y → Y be a proper G-action on a normal variety (or algebraic space).
+                                             The geometric quotient Y /G exists as an algebraic space (cf. [Kol97, KM97]) and
+                                             f : Y → Y /G is a Seifert G-bundle. As with many quotient problems, even if Y is
+                                             a quasi projective variety, X need not be quasi projective. (Many such examples
+                                             are given in [Cox95].) Thus it is natural to work with algebraic spaces. This is,
+                                             however, a purely technical point, and makes no difference for our purposes. In the
+                                             questions motivating this work, X is always projective.
+                                                 One can thus view the theory of Seifert G-bundles as a special chapter of the
+                                             study of algebraic group actions. The emphasis is, however, quite different. [OW75]
+                                             studied Seifert S 1 -bundles over CPn in order to construct exotic spheres, extending
+                                             and reformulating earlier results of [Bri66].
+                                                 In a series of papers, Boyer and Galicki developed a method to construct Ein-
+                                             stein metrics on links of certain weighted homogeneous singularities [BG01, BGN02,
+                                             BGN03a, BGN03b, BG03, BGK03]. These links are Seifert S 1 -bundles over the
+                                             corresponding projective hypersurfaces in weighted projective spaces. Seifert S 1 -
+                                             bundles over smooth rational surfaces were used to construct Einstein metrics on
+                                             connected sums of S 2 × S 3 [Kol04a], but further results need the study of Seifert
+                                             S 1 -bundles over singular surfaces as well [Kol04b].
+                                                 The main aim of this paper is to provide the necessary foundations on Seifert
+                                             C∗ -bundles to continue work in this direction, but Seifert Gm -bundles are also
+                                             interesting from other points of view, see [Dol75, Pin77, Dem88, FZ03].
+                                                 Ultimately one is mostly interested in Seifert S 1 -bundles f : M → X where M
+                                             is a manifold and X an orbifold, but the general theory is the same for any normal
+                                             variety X.
+                                                                                      1
+2                                  JÁNOS KOLLÁR
+
+
+   A complete classification of holomorphic Seifert C∗ -bundles over smooth projec-
+tive varieties X such that H1 (X, Z) is torsion free is given in [OW75]. In section
+1 this is extend to any normal variety in any characteristic (7). The local struc-
+ture of Seifert Gm -bundles is studied in section 2. For applications a key point is
+the smoothness criterion given in (29). Section 3 is devoted to investigating the
+relationship between holomorphic and topological Seifert C∗ -bundles. The most
+interesting Seifert Gm -bundles, those with a smooth total space, are studied in sec-
+tion 4. Finally Section 5 contains some information about the topology of Seifert
+C∗ -bundles. The computation of the cohomology groups H i (Y, Q) is easy, but the
+much more interesting torsion in H i (Y, Z) remains mostly unexplored.
+
+                  1. Classification of Seifert Gm -bundles
+Notation 2. Gm denotes the multiplicative group GL(1). As a scheme, it is
+Speck k[t, t−1 ]. The M th roots of unity form the subgroup scheme
+                          µM := Speck k[t, t−1 ]/(tM − 1).
+These are all the subgroup schemes of Gm . µM is nonreduced when char k divides
+M.
+   Every linear representation ρ : Gm → GL(W ) is completely reducible, and the
+same holds for any subgroup G ⊂ Gm (see, for instance, [DG70, I.4.7.3]). The set
+of vectors {v : ρ(λ)(v) = λi v} is called the λi -eigenspace. We use this terminology
+also for µM -actions. In this case i is determined modulo M .
+   If a group G acts on a scheme X via ρ : G → Aut(X), we get an action on
+rational functions on X given by f 7→ f ◦ ρ(g −1 ). (The inverse is needed mostly for
+noncommutative groups only.)
+   Thus if Gm acts on itself by multiplication, we get an induced action on k[t, t−1 ]
+where λ ∈ Gm (k̄) acts as ti 7→ λ−i ti . Thus ti spans the λ−i -eigenspace.
+                                                                       P
+   A Gm -action on a k-algebra A is equivalent to a Z grading A = i∈Z Ai where
+Ai is the λ−i -eigenspace.                                                P        ∼
+   The natural Gm -action on Gm /µM corresponds to the algebra              i∈MZ k =
+   M −M
+k[t , t    ].
+Definition 3. Let f : Y → X be a Seifert Gm -bundle. For every x ∈ X, the
+Gm -action on the reduced fiber Yx := red f −1 (x) is isomorphic to the natural Gm -
+action on Gm /µm(x) for some m(x), called the multiplicity of the fiber over x. We
+always assume that m(x) = 1 for all x in some dense open subset of X. That is,
+we assume that the Gm action is effective.
+Definition 4. Let X be a normal variety. A rank 1 reflexive sheaf is a coherent
+sheaf L such that L is locally free of rank 1 over a dense open set and the natural
+map from L to its double dual L → (L∗ )∗ is an isomorphism.
+   Rank 1 reflexive sheaves on X form a group, called the class group of X, denoted
+by Cl(X). The group operation is given by the double dual of the tensor product
+(L ⊗ M )∗∗ . For tensor powers we use the notation
+                                  L[k] := (L⊗k )∗∗ .
+  Let D be a Weil divisor on X. Then OX (D) is a rank 1 reflexive sheaf and we
+obtain an isomorphism
+                    Cl(X) ∼= Weil(X)/(linear equivalence).
+                                SEIFERT Gm -BUNDLES                                   3
+
+
+For a real number s its round down (or integral part) is denoted by ⌊s⌋.
+  Our first aim is to classify Seifert Gm -bundles over X in terms of more familiar
+objects on X.
+Definition 5. (cf. [Pin77, Dem88]) Let X be a normal variety, L a rank 1 reflexive
+sheaf on X, Di distinct irreducible divisors and 0 < si < 1 rational numbers. Define
+                       P                P       [j]
+                                                    P        
+                  S(L, si Di ) :=         j∈Z L       ⌊js ⌋D      and
+                       P                            Pi i i
+                  Y (L, si Di ) := SpecX S(L, si Di ).
+                                            P                     P
+There is a natural Gm -action on S(L, si Di ) where L[j] ( i ⌊jsi ⌋Di ) is the λj
+eigensubsheaf.
+         P        (See (6) for chosing λj instead of λ−j .) This induces a Gm -action
+on Y (L, si Di ).
+   When using the abovePnotation we always assume that the multiplicative struc-
+ture of the algebra S(L, si Di ) is given by the tensor product
+            P                     P                       P                  
+       L[n]    i ⌊nsi ⌋Di ⊗ L
+                               [m]
+                                     i ⌊msi ⌋Di → L
+                                                      [n+m]
+                                                               i ⌊(n + m)si ⌋Di .
+
+(This map exists since ⌊a⌋ + ⌊b⌋ ≤ ⌊a + b⌋ for any a, b.)
+Remark 6. [Sign choices]
+   Let f : L → X be a line bundle with zero section X ⊂ L. One usually identifies L
+with its sheaf of sections, temporarily denoted by L. There is a natural Gm -action
+on Y := L \ X coming from the standard GL(1) action on  P the fibers of f .
+   The push forward of the structure sheaf is f∗ OL = i≥0 L−i and L−i is the
+λ−i -eigensubsheaf. Thus
+                                          P
+                                 f∗ OY = i∈Z Li ,
+and L is naturally identified with L, which is the λ1 -eigensubsheaf.
+   Special cases of the classification of Seifert Gm -bundles can be found in the
+papers [Dol75, Pin77, Dem88, FZ03]. The proof of the general case is essentially
+the same.
+Theorem 7. Let X be a normal variety (or algebraic space).
+    (1) EveryPSeifert Gm -bundle f : P   Y → X can be uniquely written as Y ∼        =
+        Y (L, siP  Di ) for some L and      si Di as in (5).          P
+    (2) f : Y (L, si Di ) → X is a Seifert Gm -bundle iff L[M] ( i (M si )Di ) is
+        locally free for some M > 0 and M si is an integer for every i.
+    (3) The multiplicity of thePSeifert fiber Yx is the smallest natural number M =
+        m(x) such that L[M] ( i (M si )Di ) is locally free at x and M si is an integer
+        for every i such that x ∈ Di .
+Remark 8. (1) One can easily see that the proof also works for nomal analytic
+spaces. Thus we obtain that if X is a normal and proper variety over C then one
+can naturally identify algebraic and analytic Seifert C∗ -bundles over X.
+   (2) The result suggests that  Pcodimension 1 fixed points of the Gm -action are
+encoded in the divisorial part      si Di while information about higher codimension
+fixed point sets is carried by the sheaf part L. This is, however, probably the wrong
+interpretation.                                                         P
+   From the stacky point of view of (21) one can identify the pair (L, si Di ) with
+a single rank one reflexive sheaf on the quotient stack Y /Gm .
+4                                   JÁNOS KOLLÁR
+
+
+   (3) WithoutP the local freeness assumption in (7.2), the finite generation of the al-
+gebra S(L, si Di ) is a very subtle question, closely intertwined with the existence
+of flips, cf. [KM98, Sec.6.1].
+   (4) The Theorem implies that all Seifert Gm -bundles over X form a group iso-
+morphic to
+                  Weil(X)Q × Cl(X)/h(D, O(−D)) : D ∈ Weil(X)i,
+but I did not find the group structure useful.
+                                              P
+Definition 9. [OW75,   P Vis89] Let Y ∼
+                                      = Y (L, si Di ) → X be a Seifert Gm -bundle
+over X. Then L[M] ( i (M si )Di ) is locally free and so it is an element of Pic(X).
+We can formally divide this by M and get an element, called the Chern class of
+Y /X
+                                   1 [M]
+                                          P
+                  c1 (Y /X) := M     L ( Pi (M si )Di ) ∈ Pic(X)Q
+                              = c1 (L) + i si [Di ].
+If we are over C, we also get a topological Chern class
+                                         P             
+                              1
+                 c1 (Y /X) := M c1 L[M] ( i (M si )Di ) ∈ H 2 (X, Q).
+There is very little chance of confusion by using the same notation.
+   Note that although c1 (Y /X) is a rational class, M · c1 (Y /X) is a well defined
+class in H 2 (X, Z) or in Pic(X). More generally, if j : U ֒→ X is an open set and
+m(U ) := lcm{m(x) : x ∈ U } then there is a well defined class
+                                              P                
+          m(U ) · c1 (Y /X) = c1 j ∗ L[m(U)] ( i (m(U )si )Di ) ∈ H 2 (U, Z)
+or in Pic(U ).
+   Similarly, if s(U ) := lcm{(denominator of si ) : Di ∩ U 6= ∅} then there is a well
+defined class s(U ) · c1 (Y /X) ∈ Cl(U ).
+10 (Proof of (7). Let f : Y → X be a Seifert Gm -bundle. Since f : Y → X is
+affine, f∗ OY is a quasicoherent sheaf with a Gm -action. Thus it decomposes as a
+sum of Gm -eigensubsheaves
+                                          P
+                                 f∗ OY = j∈Z Lj ,                          (10.1)
+where Lj is the λj eigensubsheaf, with multiplication maps mab : La ⊗ Lb → La+b .
+   Pick any point x ∈ X. By assumption Yx ∼      = Gm /µm(x) , thus t−m(x) on Gm
+descends to an invertible function hx on Yx which is a Gm -eigenfunction with eigen-
+character m(x). There is an affine neighborhood x ∈ U ⊂ X such that hx lifts to an
+invertible function hU on f −1 (U ) which is a Gm -eigenfunction with eigencharacter
+m(x). This hU is a generator of Lm(x) on U and hsU is a generator of L⊗s      m(x) on
+U . Thus for M = m(X) := lcm{m(x) : x ∈ X}, LM is locally free on X and the
+multiplication maps L⊗s M → LsM are isomorphisms for every s ∈ Z.
+                                                                 [M] P
+   Taking M th power gives a map L⊗M  1    → LM , hence LM ∼  = L1 ( di Di ) where
+the Di are distinct irreducible divisors and di > 0.
+                                                                         [j] P
+   For j > 0, the jth power map L⊗j 1 → Lj shows that Lj ⊂ (Lj )
+                                                                  ∗∗
+                                                                     = L1 ( dij Di )
+for some dik (where a priori we may have divisors Di that do not appear in the
+                                                                      [jM] P
+expression for LM above) and the M th power map L⊗M   j   → LjM ∼  = L1 ( jdi Di )
+             P           P
+shows that     dij Di ≤ ⌊jdi /M ⌋Di .
+   This also holdsP for j < 0 as shown by the isomorphisms
+                                                     P       Lj ∼
+                                                                = Lj+M ⊗ L−1  M .
+   Thus f∗ OY = j∈Z Lj is a subalgebra of S(L, (di /M )Di ) and the two agree
+                                                               P
+in all degrees divisible by M . Therefore we get that Y (L, (di /M )Di ) → Y is
+                                  SEIFERT Gm -BUNDLES                                 5
+
+
+birational and finite, hence normalization. We have assumed that Y is normal,
+           P                                     [1] P
+thus Y (L, (di /M )Di ) ∼ = Y . Since L1 = L1 ( ⌊di /M ⌋Di ), we conclude that
+si := di /M < 1. This proves (1). P
+   Conversely, assume that L[M] ( i (M si )Di ) is locally free for
+                                                                 P some M > 0 and
+M si is an integer for every i. We need to prove that S(L, si Di ) is a Seifert
+Gm -bundle. The question is local, so letP  us fix a point x ∈ X and let M be the
+smallest positive number such that L[M] ( i (M si )Di ) is locally free at x and M si
+                      Pi such that x ∈ Di .
+is an integer for every
+   The fiber of Y (L, si Di ) → X over x is the spectrum of
+                      P                   P [j] P
+                 S(L,   isi Di ) ⊗ k(x) ∼
+                                        =    L ( (jsi )Di ) ⊗ k(x),
+                                              j       i
+
+where k(x) is the residue field of x.                                     P
+   By (11), the summands corresponding to those j such that L[j] ( i (jsi )Di ) is
+not locally free are nilpotent, and also those summands where M si is not an integer
+for every i such that x ∈ Di . Thus
+                                 X        P                   
+             Yx = Speck(x)          L[j] ( i (jsi )Di ) ⊗ k(x) /(nilpotents)
+                                  j
+                                 X
+                 =    Speck(x)          k(x) ∼
+                                             = Gm /µM .
+                                 j∈MZ
+
+This proves parts (2) and (3).                                                        
+Lemma 11. Let L, M be rank 1 torsion free sheaves and assume that there is a
+surjective map h : L ⊗ M ։ OX . Then L, M are both locally free.
+   Proof. Pick x ∈ X. By assumption there is an affine nieghborhood x ∈ U and
+sections α ∈ H 0 (U, L), β ∈ H 0 (U, M ) such that h(α ⊗ β) is invertible.
+   Let γ ∈ H 0 (U, L) be arbitrary. Then h(γ ⊗ β) = f · h(α ⊗ β) for some f ∈ OU ,
+thus h((γ − f α) ⊗ β) = 0. Thus γ − f α is zero on the open set where M is locally
+free, hence it is zero since L is torsion free. Thus α generates L|U and so L is locally
+free.                                                                                 
+Example 12 (Seifert Gm -bundles over curves). Given relatively prime natural
+numbers 0 < b < c, let 0 < e < c be the unique solution of be ≡ 1 mod c.
+   Consider k[s, s−1 , u] with a Gm -action s 7→ λ−c s, u 7→ λe u. The Gm -invariants
+form the polynomial ring = k[se uc ].
+   Set X := Speck [se uc ] and Y := Speck k[s, s−1 , u] → X. This is a Seifert Gm -
+bundle with Lc = s−1 k[se uc ] and L1 = ub s(be−1)/c k[se uc ]. Therefore
+                             b (be−1)/c c
+                      L⊗c
+                       1 = (u s        ) k[se uc ] = (se uc )b Lc .
+Thus, over the line X we get the Seifert Gm -bundle Y ∼  = Y (OX , cb (origin)).
+                                                b (be−1)/c
+   The local generating section of L1 is h = u s           , thus, as a function on Y ,
+h vanishes along the central fiber with multiplicity b.
+   Etale locally, this describes Seifert Gm -bundles over curves. More generally, by
+replacing k with the quotient field of a divisor D ⊂ X, this construction describes
+the behaviour of an arbitrary Seifert Gm -bundle generically (étale locally) along
+divisors.
+                                                             P
+13 (Maps between Seifert Gm -bundles). Let Y = SpecX j∈Z Lj be a Seifert Gm -
+                                                                     P
+bundle as in (10.1). For any natural number M , YM := SpecX j∈MZ Lj is also
+6                                       JÁNOS KOLLÁR
+
+
+a Seifert Gm -bundle, which can also be viewed as Y /µM , the quotient of Y by the
+action of µM ⊂ Gm . Note that c1 ((Y /µM )/X) = M c1 (Y /X).      P
+   The case when M = m(X) is especially interesting, as SpecX j∈m(X)Z Lj is a
+Gm -bundle. We denote this by Y /µX with quotient map π : Y → Y /µX .
+   Thus we see that every Seifert Gm -bundle can be realized as a (ramified) cover
+of a Gm -bundle. This observation was a key step in the classification of [OW75].
+14 (Compactification of Seifert Gm -bundles). Seifert Gm -bundles can be com-
+pactified by adding the missingP        zero and infinity sections. Adding the zero sec-
+tion corresponds to SpecX j≤0 Lj and adding the infinity section corresponds to
+         P
+SpecX j≥0 Lj in the notation of (10.1). Their union gives a proper morphism
+f¯ : Ȳ → X which is a P1 -bundle over the set where m(x) = 1. We have the zero
+section X0 ⊂ Ȳ and the infinity section X∞ ⊂ Ȳ . Although Ȳ is almost always
+singular, it is a very useful compactification.
+    For instance, if X is proper, the zero section X0 ⊂ Ȳ can be contracted to a
+point P iff c1 (Y /X) is negative. The result of the contraction is the affine variety
+Speck j≤0 H 0 (X, Lj ).
+    Similarly, if c1 (Y /X) is positive, then the infinity section X∞ ⊂ Ȳ can be con-
+tracted.
+    Thus Seifert Gm -bundles with c1 (Y /X) negative or positive can all be viewed as
+a singularity with a good Gm -action (minus the singular point itself). This is the
+point of view in [Dol75, Pin77, Dem88].
+                                                                             P bi
+15 (The class group of Seifert bundles). Let f : Y = Y (L,                       ai Di ) → X be a
+Seifert bundle. Our aim is to compute the class group Cl(Y ) of divisors modulo
+                                                      P bi
+linear equivalence in terms of Cl(X), L and              ai D i .
+    Note first that there is a natural pull back map f ∗ : Cl(X) → Cl(Y ) since f is
+equidimensional. Set DiY := red f −1 (Di ).
+                                                             P bi
+Proposition 16. [FZ03, 4.22] Let f : Y = Y (L,                    ai Di ) → X be a Seifert Gm -
+bundle. Then
+                                                                                 X
+         Cl(Y ) = hf ∗ Cl(X), D1Y , . . . , Dm
+                                             Y
+                                               i/(f ∗ [Di ] − ai DiY , f ∗ [L] +     bi DiY ).
+It is somewhat less precise but more transparent to write this as
+                 Cl(Y ) ∼
+                        = hCl(X), 1 [D1 ], . . . , 1 [Dn ]i/(c1 (Y /X)).
+                                        a1           an
+    Proof. By [FMSS95], if a connected solvable group G acts on a scheme Y
+then Cl(Y ) is generated by G-invariant divisors and the relations are given by
+G-eigenfunctions.
+    The Gm -invariant divisors on Y are the pull backs of divisors on X, except that
+f ∗ Di becomes ai DiY .
+    A Gm -equivariant rational function on Y can be identified with a G-equivariant
+rational section of f∗ OY . Let h be any nonzero rational section of L1 . Then every
+Gm -equivariant rational section of f∗ OY is of the form φ(x)hk for some k ∈ Z,
+hence (h) = 0 gives all other relations.
+    Choose h such that it has neither zero nor pole along the divisors Di . As we
+computed in (12), h,Pas a function on Y , has a bi -fold zero along DiY . This gives
+the relation f ∗ [L] + bi DiY = 0.                                                
+   All the rational Chow groups of arbitrary Seifert G-bundles are computed in
+[Vis89, 4.4].
+                                    SEIFERT Gm -BUNDLES                                          7
+
+
+17 (Seifert Gnm -bundles). The description of all Seifert Gnm -bundles for n ≥ 2 is
+very similar.
+P Let X be a normal variety, L1 , . . . , Ln rank 1 reflexive sheaves on X and ∆i =
+  j sij Dij Q-divisors such that ⌊∆i ⌋ = 0. Define
+                                           P                 j1            jn ∗∗
+                                                                                     P        
+ S(L1 , . . . , Ln , ∆1 , . . . , ∆n ) :=    j1 ,...,jn ∈Z (L1 ⊗ · · · ⊗ Ln )      ⌊ i ji ∆i ⌋ , and
+ Y (L1 , . . . , Ln , ∆1 , . . . , ∆n ) := SpecX S(L1 , . . . Ln , ∆1 , . . . , ∆n ).
+This is a Seifert Gnm -bundle iff the set of all multi indices (j1 , . . . , jn ) such that
+                                                             P       
+                                (Lj11 ⊗ · · · ⊗ Ljnn )∗∗ ⌊ i ji ∆i ⌋
+                    P
+is locally free and i ji ∆i is an integral divisor, is a subgroup of rank n of Zn .
+    Exactly as in (7) we obtain that every Seifert Gnm -bundle f : Y → X can be
+written as Y ∼ = Y (L1 , . . . , Ln , ∆1 , . . . , ∆n ) for some Li and ∆i .
+               2. Local classification of Seifert Gm -bundles
+                                        P
+18 (Quotient description). Let f : Y (L, si Di ) → X be a Seifert Gm -bundle and
+x ∈ X a point. Set M = m(x). By replacing X by a smaller open neighborhood
+of x if necessary, we may assume that LM is free and LjM ∼    ⊗j
+                                                           = LM for every j ∈ Z.
+                             ∼
+Fix an isomorphism φ : LM = OX .
+                                     P
+   φ defines an algebra structure on M−1
+                                       j=0 Lj by the rules
+                 ab m
+         La ⊗ Lb →  La+b         if a + b < M , and
+                    mab                             φ⊗1
+        La ⊗ Lb → La+b = LM ⊗ La+b−M → La+b−M if a + b ≥ M .
+                                 P
+We denote this algebra by S(L, si Di )/(φ), the notation suggesting the natural
+quotient map                   P               P
+                       Φ : S(L, si Di ) → S(L, si Di )/(φ).
+         P                          P                                           P
+Set Z(L, si Di , φ) := SpecX S(L,P si Di )/(φ). It is a Cartier divisor in Y (L, si Di ).
+  It should be noted that Z(L, si Di , φ) depends only sligtly on the choice of φ.
+Any other choice of φ can be written as u · φ where u ∈ OX is invertible near x. If
+                                        m(x)
+char k does not dividePm(x) then∼ u = v P for some v (at least étale locally) and
+we obtain that Z(L, si Di , φ) = Z(L, si Di , u · φ) by the map L → L which is
+multiplication by v.             P
+  There is a µM -action on S(L, si Di )/(φ) where Lj is the λj -eigensubsheaf.
+  There is also a natural injection
+                          P               P
+                Φ̄ : S(L, si Di ) ֒→ S(L, si Di )/(φ) ⊗k k[t, t−1 ]
+given by Φ̄(Lj ) = Φ(Lj ) ⊗ tjP
+                              .
+   The µM -action on Z(L, Psi Di , φ) and the natural µM -action on Gm give a
+diagonal µM action on Z(L, si Di , φ) × Gm given by
+                            Li ⊗ tj 7→ λi−j · Li ⊗ tj .
+                                              P                      P
+Proposition 19. The induced map Φ̄∗ : Z(L, si Di , φ) × Gm → Y (L, si Di ) is
+the quotient map by the above µM action. The quotient map Φ̄∗ is étale if char k
+does not divide M .
+    Proof. Li ⊗ tj is µM -invariant iff i ≡ j mod M . These form exactly the image
+of Φ̄.
+    The µM action on Gm P   is fixed point free if char k does not divide M , hence so
+is the µM action on Z(L, si Di , φ) × Gm . Thus Φ̄∗ is étale.                      
+8                                      JÁNOS KOLLÁR
+
+                          P                                                     P
+Proposition 20. Y (L,         si Di ) is smooth along f −1 (x) iff Z(L,             si Di , φ) is smooth
+above x.
+   Proof. If char k does not divide m(x) then this follows directly from (19).
+   To see the general case, note thatP we have computed inP(10) that the reduced
+fiber Yx can be identified as Spec j∈MZ k(x). Since S(L, si Di )/(φ) is the sum
+                                                      P
+of terms
+      P of degree les that PM , we see that Yx ⊂ Y (L, si Di ) and the hypersurface
+Z(L, si D  Pi , φ) ⊂ Y (L,  si Di ) intersect schemeP
+                                                    theoretically in oneP
+                                                                        point only.
+   If Z(L, si Di , φ) is smooth then so is Y (L, si Di ) since Z(L, si Di , φ) is
+Cartier divisor. Conversely, in a smooth variety, a Cartier divisor transversal to a
+smooth curve is again smooth.                                                      
+21 (Stacky viewpoint). Instead of considering the geometric quotient Y /Gm as
+a variety, one can also view it is a stack (see, forPinstance, [Fan01] for a short
+introduction). Then we have proved that the Z(L, si Di , φ)/µM give local charts
+for the quotient stack. This approach P will be especially useful when Y is smooth
+and char k = 0. In this case the Z(L, si Di , φ) are smooth and so the quotient
+stack Y /Gm is an orbifold. This case is studied in detail beginning (25).
+   While (20) is a smoothness criterion in principle, it is difficult to apply in practice.
+Our next aim is to develop a smoothness criterion that is truly transparent.
+   It is easier to work from the other direction. First we recall the local classifica-
+tion of cyclic group actions near a fixed point, then we see how these give actions
+on a P(smooth variety) × Gm . Then we compute the corresponding description as
+Y (L, si Di ).
+Notation 22. We consider µm -actions on a smooth variety near a fixed point. We
+always assume that char k does not divide m.
+    Etale locally the action is isomorphic to the induced action on the tangent space
+of the fixed point. Thus we need to classify linear µm -actions on An and their
+quotients. The action of µm can be diagonalized and described on k[z1 , . . . , zn ] by
+zi 7→ λai zi . We always assume that gcd(a1 , . . . , an , m) = 1. The quotient of An by
+this action of µm is denoted by
+                                    An /µm (a1 , . . . , an ).
+(It would be more consistent to denote this by An /µm (−a1 , . . . , −an ) instead. The
+two actions have the same invariants, so it is probably not worth while to carry the
+extra minus sign around.)
+   This representation is unique, except that we are allowed to permute the ai and
+the µm action can be given by any generator. That is, if gcd(s, m) = 1 then
+                     An /µm (a1 , . . . , an ) ∼
+                                               = An /µm (sa1 , . . . , san ).
+We write Anz if we need to indicate that we are working with an affine space with
+coordinates zi .
+  Given a1 , . . . , an and m set
+                                                                           Y
+     ci := gcd(a1 , . . . , abi , . . . , an , m), di := ai ci /C and C :=   ci . (22.1)
+
+Note that the ci are pairwise relatively prime and C/ci divides ai . Observe that
+µci ⊂ µm acts trivially on all but the ith coordinate of An , so it is a quasi reflection.
+                                      SEIFERT Gm -BUNDLES                                     9
+
+                                                Q
+Therefore the quotient of Anz by µC ∼         =    µci is again an affine space Anx with
+      ci
+xi = zi . Thus, as a variety,
+                    An /µm (a1 , . . . , an ) ∼
+                        z                     = An /µm/C (d1 , . . . , dn ).
+                                                    x
+
+23 (The class group of a quotient singularity). Set X := Anx /µM (d1 , . . . , dn ) where
+gcd(d1 , . . . , dbi , . . . , dn , M ) = 1 for any i. Define furthermore
+                       Di : (xi = 0)/µM (d1 , . . . , dbi , . . . , dn ) ⊂ X,
+and let
+                   OX (j) := ǫj - eigenspace of k[x1 , . . . , xn ],
+as an OX -module. Thus
+                         Y                X
+               OX (j) = h xvi i : vi ≥ 0,    di vi ≡ j mod M i.
+Observe that
+                         Q i                              P
+      OX (Dj ) =        h xviQ : vj ≥ −1, vi P
+                                             ≥ 0 (i 6= j), di vi ≡ 0 mod M i
+               =        x−1
+                         j h   xwi : wi ≥ 0,
+                                  i
+                                               di wi ≡ dj mod M i ∼ = OX (dj ).
+Claim 24. The map j 7→ OX (j) gives an isomorphism Z/M ∼       = Cl(X). Its inverse
+is denoted by c1 , called the local Chern class. (The “natural” Chern class maps
+Cl(X) to the group of characters of µM . We have identified the latter with Z/M ,
+but it is probably not a good idea to think of our c1 as a truly canonical map.)
+   Proof. This has been known in various forms for a long time; for instance the
+computations of [Bri68, Mum61] both easily generalize to this case.
+   It is probably quickest to note that the natural Gnm -action on An descends to
+X. By [FMSS95], Weil(X) is generated by Gnm -invariant divisors, the Di , with
+Gnm -eigenfunctions giving the relations.                                      
+25 (Local classification of smooth Seifert bundles). From (19) we see that a Seifert
+Gm -bundle f : Y → X such that Y is smooth along f −1 (x) is étale locally isomor-
+phic to a Seifert Gm -bundle of the form
+                f : Gm × An /µM (r, a1 , . . . , an ) → An /µM (a1 , . . . , an ),
+where r, a1 , . . . , an ∈ Z/M , gcd(a1 , . . . , an , M ) = 1. As before, the Seifert Gm -
+bundle determines the numbers r, a1 , . . . , an modulo M , except that (r, a1 , . . . , an )
+and (sr, sa1 , . . . , san ) correspond to the same Seifert Gm -bundle for any s which is
+relatively prime to M .
+   The µM -action on the coordinate ring of Gm × An is given by
+                                  Y                 P         Y
+                               ts   ziui 7→ ǫ−(rs+ ai ui ) ts   ziui .
+Thus the coordinate ring of Gm × An /µM (r, a1 , . . . , an ) is
+                    Y                         X
+               k[ts    ziui : s, ui ≥ 0, rs +   ai ui ≡ 0 mod M ].
+The Gm -action is                     Y                    Y
+                                 ts       ziui 7→ λ−s ts       ziui .
+                                                                                     Q ui
+In the notation of (10.1), Lj is generated by monomials of the form t−j               zi , thus
+                         Y                X
+                   Lj = h ziui : ui ≥ 0,     ai ui ≡ rj mod M i.
+
+Claim 26. The total space Gm × An /µM (r, a1 , . . . , an ) is smooth iff either
+10                                     JÁNOS KOLLÁR
+
+
+     (1) r is relatively prime to M , or
+     (2) r = 0 and An /µM (a1 , . . . , an ) is smooth.
+   Proof. If char k 6 |M then the µM -action is base point free if r is relatively prime
+to M , and so the quotient is smooth. Conversely, if r 6= 0, the action of some
+elment of µM has a codimension at least 2 fixed point set, so the quotient can not
+be smooth by the purity of branch loci.
+   This settles the problem is characteristic 0. The positive characteristic cases can
+all be lifted to characteristic 0, hence the conditions are necessary.
+   We still need to show that if r is relatively prime to M then Gm ×An /µM (r, a1 , . . . , an )
+is smooth. Choose ei such that rei ≡ ai mod M . Then the coordinate ring of the
+quotient can be written as
+                          k[x1 t−e1 , . . . , xn t−en , tM , t−M ]
+and so Gm × An /µM (r, a1 , . . . , an ) ∼
+                                         = Gm × An .                                      
+                                                                     n
+   We would like
+             P to identify L1 as a reflexive sheaf over A /µM (a1 , . . . , an ) and
+also compute   si Di . We start with some remarks on congruences.
+Claim 27. Let ci and C be as in (22.1).
+                                                   P
+    (1) One can write r uniquely as r ≡ lC + ai bi mod M where 0 ≤ bi < ci
+        forPevery i.
+    (2) If    ai ui ≡ r mod M then uj ≡ bj mod cj for every j.
+                                                                P
+   Proof. Since gcd(a1 , . . . , an , M ) = 1, we can write r ≡    Bi ai mod M . ci
+divides every aj except ai , so Bi modulo ci is uniquely determined by ai Bi ≡ r
+mod ci . Let bi bePthe remainderPof Bi modulo ci .
+   Assume that       ai vi ≡ lC + ai bi mod M . Since cj |C and cj |ai for i 6= j, we
+conclude that aj vj ≡ aj bj mod cj . Furthermore, aj is relatively prime to cj , hence
+vj ≡ bj mod cj . This proves (2) and the uniqueness part of (1).                    
+  In order to identify L1 as module over An /µM (a1 , . . . , an ) we use (27.1–2) to
+write it as
+              Q                         P
+     L1 = h ziui : ui ≥ 0, ai ui ≡ r mod M i
+              Q bi Q ui −bi                           P              P
+           =       z h z                   : ui ≥ bi , ai ui ≡ lC + ai bi mod M i
+              Q ibi  Q i(ui −bi )/ci                         P
+           =       z h x                        : ui − bi ≥ 0, ai ci uic−b i
+                                                                             ≡ lC mod M i
+              Q ibi  Q ivi                       P                     i
+           =       zi h xi : vi ≥ 0, di vi ≡ l mod M/Ci.
+          ∼
+Thus L1 = OX (l).
+                           P
+  The divisorial part           si Di is computed from the map L⊗M        1   → LM .
+                         b
+P Since gcd(d1 , . . . , dj , . . . , dn , M/C) = 1 for every j, the congruence condition
+  di vi ≡ l mod M/C has solutions where vj = 0. This implies that the M -fold
+product map
+                Y                          X
+               h xvi i : vi ≥ 0,               di vi ≡ l mod M/Ci⊗M → OX
+is an isomorphism generically along the Dj , hence its kernel and cokernel are both
+supported on a codimension 2 set. Thus we conclude that
+                     [M]
+                             Y M             Y Mb /c 
+                   L1 =         zibi LM =        xi i i LM .
+Thus the divisorial
+               P bipart of the representation of our Seifert Gm -bundle is given by
+1 P Mbi
+M     ci D i =    ci Di . We can summarize our computations:
+                                        SEIFERT Gm -BUNDLES                                              11
+
+
+Proposition 28. The Seifert Gm -bundle
+ Gm × Anz /µM (r, a1 , . . . , an ) → An /µM (a1 , . . . , an ) ∼
+                                                                = An /µM/C (d1 , . . . , dn ) = X
+is isomorphic to                                   P bi
+                                      Y (OX (l),      ci Di ) → X,
+whereQci := P
+            gcd(a1 , . . . , abi , . . . an , M ) and l, b1 , . . . , bn are the unique solutions to
+r ≡ l ci + ai bi mod M satisfying 0 ≤ bi < ci for every i.                                        
+   We are ready to formulate a smoothness criterion that is easy to use in practice.
+Proposition 29. Let X = An /µM (d1 , . . . , dn ) be a quotient singularity such that
+gcd(d1 , . . . , dbi , . . . dn , M ) = 1 for every i. Let Di = (xi = 0)/µM (d1 , . . . , dbi , . . . , dn ) ⊂
+X. Assume that we have integers 0 ≤ bi < ci such that gcd(bi , ci ) = 1 for every i.
+The following are equivalent.
+                                     P bi
+    (1) Y := Y (OX (l),                 ci Di ) is smooth.
+    (2) (a) gcd(ciQ           , cj ) = P
+                                       1 forQevery i 6= j, and
+           (b) OX (l i ci )( i ( j6=i cj )bi Di ) generates Cl(X).
+    (3) (a) gcd(c    Q i , cj ) = 1 for every i 6= j, and
+           (b) ( i ci )c1 (Y /X) (cf. (9)) is relatively prime to M .
+    Proof. In the quotient representation Y = Gm × Anz /µm (r, a1 , . . . , an ) the ci are
+pairwiseQrelatively
+                  Pprime
+                     Q and di is relatively prime to ci . Furthermore,
+                                                                    Q        Y is smooth
+iff r = ( ci )l + i ( j6=i cj )bi di is relatively prime to m = M ci .
+ QPick a P  prime
+                Q p dividing ck . Then
+                                     Q      p 6 |bk dk and p divides every summand of
+( ci )l + i ( j6=i cj )bi di save ( j6=k cj )bk dk . Thus r being relatively prime to
+         Q
+m = M ci is equivalent to being relatively prime to M .
+    The conditions (b) also imply that gcd(ci , di ) = 1 for every i.                    
+
+                           3. Topological Seifert C∗ -bundles
+Definition 30. [OW75] Let X be a nomal analytic space and G a real Lie group.
+  A topological Seifert G-bundle over X is a topological space Y together with a
+G-action and a continuous map f : Y → X such that X has an open covering
+X = ∪i Ui such that for every i the preimage f : f −1 (Ui ) → Ui is fiber preserving
+G-equivariantly homeomorphic to a “standard local Seifert G-bundle”
+                                       fi : (G × Vi )/Gi → Ui .
+Here Vi is a normal analytic space, Gi a finite group of biholomorphisms such that
+Vi /Gi ∼= Ui and the Gi -action on G × Vi is the diagonal action given on G by a
+homomorphism φi : Gi → G composed with the right action of G on itself. The
+left G-action of G on itself gives the G action on Y .
+    In order to avoid nontrivial orbifold structures on Y , we always assume that the
+Gi -action on G × Vi is fixed point free outside a codimension 2 set.
+    Every analytic Seifert G-bundle corresponds to a topological Seifert G-bundle
+by ignoring the analytic structure.
+Remark 31. From the topological point of view it is rather unnatural to require
+that the Vi be complex spaces and it may be interesting to develop a purely topo-
+logical theory without any analytic assumptions. Our main interest, however, lies
+in understanding the analytic and topological properties of holomorphic Seifert
+C∗ -bundles.
+12                                  JÁNOS KOLLÁR
+
+
+  Aside from some smoothness questions, the above definition is equivalent to the
+one in [OW75].
+Lemma 32. Let fi : Yi → X be two holomorphic Seifert C∗ -bundles which are C∗ -
+equivariantly homeomorphic. Then there is an open covering X = ∪Uj such that
+f1−1 (Uj ) → Uj and f2−1 (Uj ) → Uj are C∗ -equivariantly biholomorphic for every j.
+    Proof. For sufficiently divisible M , consider the quotient Seifert C∗ -bundles
+Yi /µM → X defined in (13).
+    Both are C∗ -bundles, hence there is a covering X = ∪Uj such that the Yi /µM →
+X are trivial over every Uj .
+    The quotient maps Yi → Yi /µM are finite degree ramified coverings which are
+C∗ -equivariantly homeomorphic to each other.
+    The biholomorphisms Y1 /µM |Uj ∼   = Y2 /µM |Uj differ from the global homeomor-
+phism Y1 /µM ∼ Y2 /µM by a translation by a continuous function Uj → C∗ . Thus
+by suitably changing the C∗ -equivariant homeomorphism over Uj we get a commu-
+tative diagram
+                                Y1 |Uj    ∼       Y2 |Uj
+                                   ↓                ↓
+                              Y1 /µM |Uj ∼=   Y 2 /µ M |Uj ,
+
+where ∼ is a homeomorphism, ∼      = a biholomorphism and the vertical arrows are
+finite degree ramified coverings of analytic spaces. Thus Y1 |Uj is biholomorphic to
+Y2 |Uj by the uniqueness of analytic structures on finite coverings.              
+   The following rather standard result provides an alternate approach to the de-
+scription of Seifert C∗ -bundles. It also provides an efficient way to compare holo-
+morphic and topological Seifert C∗ -bundles.
+Definition 33. Let X be a normal analytic space and G a commutative complex
+Lie group. Holomorphic sections of G × X → X form a sheaf, denoted by Gan      X . Its
+cohomology groups are denoted by H i (X, Gan ). Similarly, continuous sections of
+G × X → X form a sheaf, denoted by Gtop   X . Its cohomology groups are denoted by
+H i (X, Gtop ). There are natural “forgetful” maps H i (X, Gan ) → H i (X, Gtop ).
+   Note that (C∗ )an
+                   X is usually denoted by OX .
+                                               ∗
+
+
+Proposition 34. Let X be a normal analytic space and G a commutative complex
+(resp. real) Lie group. Let X = ∪Ui be an open cover and assume that over each
+Ui we have an analytic (resp. topological) Seifert G-bundle Yi → Ui and there are
+G-equivariant biholomorphisms (resp. homeomorphisms) φij : Yj |Uij ∼
+                                                                   = Yi |Uij .
+     (1) There is an obstruction element in the torsion subgroup Htors   2
+                                                                             (X, Gan )
+                  2        top
+         (resp. Htors (X, G )) such that there is a global Seifert G-bundle Y → X
+         compatible with these local structures iff the obstruction element is zero.
+     (2) The set of all such global Seifert G-bundles, up to G-equivariant biholo-
+         morphisms (resp. homeomorphisms), is either empty or forms a principal
+         homogeneous space under H 1 (X, Gan ) (resp. H 1 (X, Gtop )).
+     (3) Both of the constructions commute with the forgetful maps H i (X, Gan ) →
+         H i (X, Gtop ).
+   Proof. The analytic and topological proofs are exactly the same. We write
+H i (X, G) to indicate that we can work in either settings.
+                                 SEIFERT Gm -BUNDLES                                  13
+
+
+  The isomorphisms φij can be changed to αij φij for any αij ∈ H 0 (Uij , G). These
+patchings define a global Seifert G-bundle iff
+                     αik φik = αij φij αjk φjk      for every i, j, k.
+This is equivalent to
+                   αij αjk αki = (φij φjk φki )−1     for every i, j, k.         (34.4)
+                           −1         0
+The products (φij φjk φki ) ∈ H (Uijk , G) satisfy the cocycle condition, and they
+define an element of H 2 (X, G), called the obstruction. One can find {αij } satisfying
+(34.4) iff the obstruction is zero.
+   Replacing the Yj by Yj /µM changes the isomorphisms over Ui ∩ Uj to φM     ij , hence
+the obstruction corresponding to the Seifert C∗ -bundles Yj /µM is the M th power
+of the original obstruction.
+   If M is sufficiently divisible, the quotients Yj /µM are all C∗ -bundles, and these
+can always be globalized to the trivial C∗ -bundle. Thus the obstruction is always
+torsion.
+   Two choices {αij } and {α′ij } give isomorphic Seifert bundles iff there are iso-
+morphisms δi : Yi ∼ = Yi (viewed as elements of H 0 (Ui , G)) such that
+                                  α′ij α−1       −1
+                                        ij = δi δj |Uij .
+
+Thus {α′ij α−1                              1
+            ij } corresponds to a class in H (X, G).                                  
+Example 35. Consider P1 × P1 . Blow up the 4 points all of whose coordinates are
+in {0, ∞} and contract the resulting 4 rational curves of selfintersection −2. We get
+a surface S with 4 ordinary double points pi . The local class group of the points is
+Z/2.
+    By looking at all curves on P1 ×P1 we easily see that if C ⊂ S isP
+                                                                     any curve and [C]i
+is the corresponding element in the local class group of pi then i [C]i = 0 ∈ Z/2.
+In particular we obtain that any Seifert C∗ bundle which is trivial on S \ {p1 } is
+trivial.
+    Here H 3 (S, Z) ∼
+                    = Z/2 and there is a nontrivial obtsruction.
+Lemma 36. Notation as above.
+  (1) H i (X, (C∗ )top ) ∼
+                         = H i+1 (X, Z) for i ≥ 1.
+  (2) If H (X, OX ) = 0 for i = 1, 2 then H 1 (X, (C∗ )an ) ∼
+           i
+                                                            = H 2 (X, Z) and there is
+                        2      ∗ an        3
+      an injection H (X, (C ) ) ֒→ H (X, Z).
+   Proof. Let Ctop
+                 X denote the sheaf of continuous complex valued functions. This
+sheaf is soft and so it has no higher cohomologies (cf. [Bre67, II.9]). Thus the long
+exact cohomology sequence of the exponential sequence
+                                      2πi    exp
+                            0 → Z → Ctop   ∗ top
+                                     X → (C )X → 0
+proves (1).
+   The second part follows similarly from the holomorphic exponential sequence
+                                   2πi   ∗  exp
+                           0 → Z → OX → OX → 0. 
+Remark 37. Let X be a normal analytic space with rational singularities such
+that H i (X, OX ) = 0 for i = 1, 2.
+  Let f : X ′ → hX be any resolution of singularities.
+                                           i           It is not hard to see (cf.
+                  3              f∗
+                                 3
+[AM72]) that ker Htors (X, Z) → Htors (X ′ , Z) is independent of the choice of X ′ .
+14                                  JÁNOS KOLLÁR
+
+
+  One can show that the obstructions in (34.1) are in this smaller group. We do
+not use this in the sequel.
+Theorem 38. Let X be a normal analytic space such that H i (X, OX ) = 0 for
+i = 1, 2. Then the forgetful map
+                                                              
+                     holomorphic                 topological
+                                        −→
+                  Seifert C∗ -bundles        Seifert C∗ -bundles
+is an isomorphism.
+   Proof. First we consider injectivity. By (32) if fi : Yi → X are two holomorphic
+Seifert C∗ -bundles which are homeomorphic then they are locally biholomorphic to
+each other.
+   Thus, by (34) they differ by an element of H 1 (X, (C∗ )an ), which is isomorphic to
+H 2 (X, Z) by (36). Hence they are also different as topological Seifert C∗ -bundles,
+again by (34) and (36).
+   In order to prove that every topological Seifert C∗ -bundle has a holomorphic
+structure, consider the quotient Seifert C∗ -bundle Y /µX defined in (13). (Although
+these were considered in the algebraic case, the construction can be also performed
+topologically.)
+   The quotient Y /µX is a topological C∗ -bundle, and these are classified by H 2 (X, Z).
+By our assumptions and (36), every toplogical C∗ -bundle has a unique analytic C∗ -
+bundle structure.
+   The quotient map Y → Y /µX is a finite degree ramified covering map, and it
+ramifies along the preimages of the branch divisors of Vi → Ui which are analytic
+subvarieties. Thus Y has a unique analytic structure which makes the quotient
+map Y → Y /µX holomorphic.                                                           
+
+
+                                    4. Orbifolds
+Definition 39 (Orbifolds). An orbifold is a normal variety X covered by étale
+charts ∪Ui ։ X where each Ui is written as a quotient of a smooth variety by a
+finite group. That is, for each Ui there is a smooth variety Vi and a finite (reduced)
+group Gi acting on Vi such that Ui is isomorphic to the quotient space Vi /Gi . The
+quotient maps are denoted by φi : Vi → Ui .
+   We denote an orbifold by X orb .
+   The compatibility condition between the charts that one needs to assume is that
+the coordinate projections from the normalization of the fiber products
+                                    Vi ×X Vj → Vi
+are all étale.
+   To avoid complications, we only consider the case when the orders |Gi | are not
+divisible by the characteristic.
+   Since the transition maps between the charts are étale, the cotangent bundles
+Ω1Vi glue together to the orbifold cotangent bundle Ω1X orb .
+   Although we write X = ∪Ui , we are always allowed to replace the covering {Ui }
+by a suitable finer covering {Uij }.
+   We allow the case when there are codimension 1 fixed point sets. Then the
+quotient map φi : Vi → Ui has branch divisors Dij ⊂ Ui and ramification divisors
+                                     SEIFERT Gm -BUNDLES                                   15
+
+
+Rij ⊂ Vi . Let mij denote the ramification index over Dij . Locally near a general
+point of Rij the map φi looks like
+                                                     m
+              φi : (x1 , x2 , . . . , xn ) 7→ (z1 = x1 ij , z2 = x2 , . . . , zn = xn ).
+The compatibility condition between the charts implies that there are global divisors
+Dj ⊂ X and ramification indices mj such that Dij = Ui ∩ Dj and mij = mj (after
+suitable re-indexing).
+   It will be convenient to codify these data by a single Q-divisor, called the branch
+divisor of the orbifold,              X
+                                ∆ :=      (1 − m1j )Dj .
+   The orbifold is uniquely determined by the pair (X, ∆). Indeed, given a point
+v ∈ Vi , set u = φi (v) ∈ Ui . Then étale locally the quotient map φi : (v ∈ Vi ) →
+(u ∈ Ui ) is uniquely determined by the following condition:
+                                                     S
+    (1) φ is unramified over Ui \ (Sing Ui ∪ j Dj ).
+    (2) The ramification index of φ over Dj divides mj .
+    (3) φi : (v ∈ Vi ) → (u ∈ Ui ) is the maximal covering satisfying the above 2
+         conditions.
+   Slightly inaccurately, we sometimes identify the orbifold with the pair (X, ∆).
+   An orbifold (X, ∆) is called locally cyclic if all the local charts Ui ⊂ X are
+quotients of the Vi by cyclic groups Gi . Thus, étale locally, it can be given by
+charts
+                                      Anz /µM (a1 , . . . , an ),
+where gcd(a1 , . . . , an , M ) = 1.
+   Let f : Y → X be a Seifert Gm -bundle and assume that char k = 0. By (20),
+this defines an orbifoldP structure      on X, denoted by (X, ∆). Note that the divisors
+appearing in ∆ =            (1 − m1j )Dj are the same as the divisors appearing in the
+                               P bj
+representation Y = Y (L,          cj Dj ). Furthermore, cj = mj but the orbifold does not
+carry any information about the bj or about L.
+   We write a Seifert Gm -bundle as
+                                         f : Y → (X, ∆)
+if we want to emphasize the orbifold structure on the base.
+   From the point of view of [OW75, Kol04b] it is very natural to choose first (X, ∆)
+and then consider the effect of various choices of bi and L later.
+Proposition 40. Let f : Y → (X, ∆) be a Seifert Gm -bundle over a field of
+characteristic 0, Y smooth. There is an exact sequence
+                             0 → f ∗ Ω1X orb → Ω1Y → OY → 0.
+   Proof. For any orbifold chart U = V /µM of (X, ∆) we get an étale chart Gm ×
+V /µM on Y . Choose coordinates (t, x1 , . . . , xn ), then
+                          Ω1      ∼
+                                  = dt OG ×V + f ∗ Ω1 .
+                                 Gm ×V        t     m              V
+This decomposition is invariant under the µM -action, but the representation of
+Gm × V as a direct product is not unique, as we can replace t by φ(x)t where
+φ ∈ OV is any invertible function. Since
+                       d(φ(x)t)    dt X 1 ∂φ(x)
+                                =     +              dxi ,
+                         φ(x)t      t    i
+                                           φ(x) ∂xi
+16                                  JÁNOS KOLLÁR
+
+
+we conclude that dt                                          1   ∗ 1
+                 t gives a well defined global generator of ΩY /f ΩX orb .         
+Corollary 41. [FZ03] Let f : Y → (X, ∆) be a Seifert Gm -bundle over a field of
+characteristic 0. Then
+                                     X
+                       KY = f ∗ KX +    (ai − 1)DiY .
+   Proof. Linear equivalence of divisors is not affected by throwing away a subset
+of codimension 2, thus we may assume that Y and X are   P smooth. This case follows
+directly from (40) by noting that f ∗ KX orb = f ∗ KX + (ai − 1)DiY .            
+   This may seem a little unexpected since for the total space g : Z → X of a line
+bundle L the canonical bundle formula is KZ = g ∗ (KX + L). We are, however,
+looking only at Y := Z \ (zero section), and this exactly kills the g ∗ L part of the
+formula.
+42. Let f : Y → (X, ∆) be a Seifert Gm -bundle over a field of characteristic 0 such
+that c1 (Y /X) is ample. As noted in (14), this implies that the section at infinity
+X∞ ⊂ Ȳ is contractible and we obtain a singularity 0 ∈ W with a good Gm -action.
+   From (41) and (15) we conclude that KW is Q-Cartier iff KX + ∆ is a rational
+multiple of c1 (Y /X).
+   Furthermore, if (X, ∆) is an orbifold, then applying the generalized adjunction
+formula (as developed in [Kol92, Sec.16]) to X∞ ⊂ Ȳ we conclude that 0 ∈ W is
+log terminal (cf. [KM98, 2.34]) iff −(KX + ∆) is ample.
+
+                     5. Topology of Seifert C∗ -bundles
+   In this section the base field is C.
+   Our aim is to obtain information about the integral cohomology groups and the
+fundamental group of a Seifert bundle f : Y → (X, ∆) in terms of (X, ∆) and the
+Chern class of Y → X.
+   The cohomology groups H i (Y, Z) are computed by a Leray spectral sequence
+whose E2 term is
+                         E2i,j = H i (X, Rj f∗ ZY ) ⇒ H i+j (Y, Z).
+Every fiber of f is C∗ , so R2 f∗ ZY = 0 and the only interesting higher direct image
+is R1 f∗ ZY . Our first task is to compute this sheaf and its cohomology groups.
+   Next we consider the simplest edge homomorphism in the spectral sequence
+                          δ : H 0 (X, R1 f∗ ZY ) → H 2 (X, Z),
+and identify it with the Chern class m(X)c1 (Y /X).
+   In some cases of interest, these data completely determine the cohomology
+groups, and even the topology, of Y . Some of these instances are discussed in
+[OW75, Kol04a].
+Proposition 43. Let f : Y → X be a Seifert C∗ -bundle.
+   (1) There is a natural isomorphism τ : R1 f∗ QY ∼     = QX .
+   (2) There is a natural injection τ : R1 f∗ ZY ֒→ ZX which is an isomorphism
+       over points where m(x) = 1.
+   (3) If U ⊂ X is connected then
+               τ (H 0 (U, R1 f∗ ZY )) = m(U ) · H 0 (U, Z) ∼
+                                                           = m(U ) · Z,
+        where m(U ) is the lcm of the multiplicities of all fibers over U .
+                                  SEIFERT Gm -BUNDLES                                    17
+
+
+   Proof. Pick x ∈ X and a contractible neighborhood x ∈ V ⊂ X. Then f −1 (V )
+retracts to S 1 ⊂ f −1 (x) and (together with the orientation) this gives a distin-
+guished generator ρ ∈ H 1 (f −1 (V ), Z). This in turn determines a cohomology class
+  1         1 −1
+m(x) ρ ∈ H (f    (V ), Q). These normalized cohomology classes are compatible with
+each other and give a global section of R1 f∗ QY . Thus R1 f∗ QY = QX and we also
+obtain the injection τ : R1 f∗ ZY ֒→ ZX as in (2).
+   If U ⊂ X is connected, a section b ∈ Z ∼   = H 0 (U, ZU ) is in τ (R1 f∗ ZY ) iff m(x)
+divides b for every x ∈ U . This is exactly (3).                                       
+Corollary 44. The quotient map π : Y → Y /µX (defined in (13)) induces an
+isomorphism
+                H 0 (X, R1 f∗ ZY ) ∼
+                                   = π ∗ H 0 (X, R1 (f /µX )∗ ZY /µX ).
+Under this isomorphism, the edge homomorphism
+                           δ : H 0 (X, R1 f∗ QY ) → H 2 (X, Q)
+is identified with the Chern class c1 (Y /X). Thus the image of
+                           δ : H 0 (X, R1 f∗ ZY ) → H 2 (X, Z)
+is generated by c1 (Y /µX ) = m(X)c1 (Y /X).
+  Proof. If m(X) is the lcm of the multiplicities of all fibers then
+                 τ (π ∗ H 0 (X, R1 (f /µX )∗ ZY /µX )) = m(X) · H 0 (X, Z)
+and so it agrees with τ (H 0 (X, R1 f∗ ZY )).
+  The map π induces a map between the spectral sequences
+   H i (X, Rj f∗ ZY /µX ) ⇒ H i+j (Y /µX , Z)   and H i (X, Rj f∗ ZY ) ⇒ H i+j (Y, Z),
+thus δ is identified with the corresponding edge homomorphism
+                      δ : H 0 (X, R1 (f /µX )∗ ZY /µX ) → H 2 (X, Z).
+For a C∗ -bundle this is exactly the Chern class of Y /µX .                              
+Corollary 45. The quotient map π : Y → Y /µX induces an isomorphism on
+rational cohomologies. Thus Y is a rational homology sphere iff
+           H ∗ (X, Q) ∼
+                      = Q[c1 (Y /X)]/(c1 (Y /X)n+1 ) where n = dim X.
+   Proof. We have seen that π induces an isomorphism betwen the spectral se-
+quences with Q-coefficients, giving the first claim. A circle bundle M → X is an
+integral (resp. rational) homology sphere iff c1 (M/X) generates H ∗ (X, Z) (resp.
+H ∗ (X, Q)).                                                                    
+Note 46. The only simply connected smooth projective variety such that H ∗ (X, Z)
+is generated by a degree 2 element that I know is Pn . All Seifert bundles Y → Pn
+homeomorphic to S 2n+1 were described in [OW75].
+   On the other hand, there are many other Seifert bundles over singular varieties
+Y → X such that Y is homeomorphic to S 2n+1 . These give interesting examples
+of Einstein metrics on S 2n+1 , see [BGK03].
+    We see that (43) describes the sheaf R1 f∗ ZY completely in terms of (X, ∆), but
+it is not always easy to compute its cohomologies based on this description. There
+are, however, some cases where this is quite straightforward.
+18                                   JÁNOS KOLLÁR
+
+                                  P
+Proposition 47. Let f : Y → (X, (1 − m1i )Di ) be a Seifert bundle and assume
+that X is smooth. Then there is an exact sequence
+                                  τ
+                                           X
+                    0 → R1 f∗ ZY → ZX →        ZDi /mi → 0.
+                                                    i
+
+   Proof. Note that mi and mPj are relatively prime if Di ∩ Dj 6= ∅. It is now
+clear that the kernel of ZX → i ZDi /mi has the same sections as described in
+(43.3).                                                                      
+   We get a slightly more complicated description if X has only isolated singulari-
+ties.
+                                    P
+Proposition 48. Let f : Y → (X, (1 − m1i )Di ) be a Seifert bundle. Assume that
+X has only isolated singularities of type An /µnj at Pj ∈ X as in (22). Then there
+is an exact sequence
+                                         τ
+                          0 → R1 f∗ ZY → ZX → Q → 0.
+and in turn Q sits in another exact sequence
+                       X                    X
+                   0→      ZPj /nj → Q →        ZDi /mi → 0. 
+                          j                     i
+                           P
+Definition 49. Let (X, i (1 − m1i )Di ) be an orbifold and X 0 ⊂ X the smooth
+locus of X. The orbifold fundamental group π1orb (X, ∆) is the fundamental group
+of X 0 \ Supp ∆ modulo the relations: if γ is any small loop around Di at a general
+             mi
+point then γ = 1.
+   Note that π1orb (X, 0) is usually different from π1 (X).
+   The abelianization of π1orb (X 0 , ∆) is denoted by H1orb (X 0 , ∆), called the abelian
+orbifold fundamental group. (I do not know how to define analogous orbifold ho-
+mology groups Hiorb for i ≥ 2.)
+  The following is a straightforward generalization of the computation of the fun-
+damental group of 3–dimensional Seifert bundles, cf. [Sei32].
+Proposition 50. Let f : Y → (X, ∆) be a Seifert bundle and let X 0 ⊂ X denote
+the smooth locus. Assume that Y is smooth. There is an exact sequence
+                         π1 (S 1 ) → π1 (Y ) → π1orb (X, ∆) → 1.
+   Proof. Removing a real codimension 4 set f −1 (X \ X 0 ) from Y does not change
+the fundamental group, thus we may assume that X is smooth.
+   We have a surjection
+                    f∗ : π1 (f −1 (X \ Supp ∆)) ։ π1 (X \ Supp ∆).
+Let γi be a small loop around Di at a general point. Then γi lifts to a loop around
+f −1 (Di ) and the lifting of γimi contracts in Y . Thus f∗ descends to a surjection
+                               f∗ : π1 (Y ) ։ π1orb (X, ∆).
+In order to compute the kernel, we can pass to the universal orbifold cover of (X, ∆)
+and so we assume that π1orb (X, ∆) = 1.
+    Let γ ∈ Y be a closed loop. We can perturb it and assume that it is contained
+in Y \ f −1 (Supp ∆). The image f (γ) ∈ X \ Supp ∆ need not be contractible, but it
+is in the normal subgroup generated by the above γimi . The latter are all images of
+loops that are contractible in Y , thus by composing γ with these we may assume
+                                      SEIFERT Gm -BUNDLES                                            19
+
+
+that f (γ) is contractible in X \ Supp ∆. Since Y \ f −1 (Supp ∆) → X \ Supp ∆ is
+a circle bundle, γ is thus homotopic to a multiple of the fiber.               
+51. The determination of π1orb (X, ∆) seems rather tricky in general, but its abelian-
+ization is fully computable. The case when H1 (X 0 , Z) = 0 is especially easy to
+state.
+Proposition 52. [OW75, 4.6] Let X be a complex manifold such that H1 (X, Z) = 0
+and let D1 , . . . , Dn ⊂ X be smooth divisors intersecting transversally.
+                      P
+   (1) H1orb (X, (1 − c1i )Di ) is given by generators g1 , . . . , gn and relations
+         (a) cP  i gi = 0 for i = 1, . . . , n, and
+         (b)         gi ([Di ] ∩ η) = 0 for every Pηbi∈ H2 (X, Z).
+   (2) For any line bundle L, H1 (Y (L,               ci Di ), Z) is given by generators k, g1 , . . . , gn
+        and relations
+         (a) ci gi + bi k = 0 for   P i = 1, . . . , n, and
+         (b) k(c1 (L) ∩ η) − gi ([Di ] ∩ η) = 0 for every η ∈ H2 (X, Z).                            
+Proposition 53. Yet (X, ∆) be an orbifold and assume that H1orb (X, ∆) = 0.
+Then a Seifert C∗ -bundle f : Y → (X, ∆) is uniquely determined by its Chern class
+c1 (Y /X) ∈ H 2 (X, Q).
+  Proof. Let Y j → (X, ∆) be two Seifert C∗ -bundles constructed from the invari-
+      P
+ants ( (bji /ci )Di , Lj ) as in (7). The equality of their Chern classes means that
+                           X b1                      X b2
+                                                2                  2
+                c1 (L1 ) +      ci [Di ] = c1 (L ) +
+                                 i
+                                                       ci [Di ] ∈ H (X, Q).
+                                                        i
+
+
+
+Let X 0 ⊂ X denote the smooth locus and set M := lcm{ci }. Since H1 (X 0 , Z) = 0,
+there is no torsion in H 2 (X 0 , Z), and so after restricting to X 0 we get an equality
+in integral cohomology
+                                     X
+                                                                     2  0
+         M · (c1 (L1 ) − c1 (L2 )) +    (b1i − b2i ) M
+                                                     ci [Di ] = 0 ∈ H (X , Z).    (53.1)
+H1 (X, Z) = 0 also implies that H 1 (X, OX ) = 0, hence the Picard group of X 0
+injects into H 2 (X 0 , Z), and so (53.1) is also a linear equivalence.
+   Set βi = b1i − b2i if b1i − b2i ≥ 0 and βi = ci + b1i − b2i if b1i − b2i < 0. Then (53.1)
+can be rearranged to              X
+                                     βi M
+                                        ci [Di ] = M · c1 (N ),
+where N is some line bundle on X 0 and 0 ≤ βi < ci . This corresponds to
+an M -sheeted covering of X 0 which ramifies along Di with ramification index
+= ci / gcd(βi , ci ). This covering represents a nontrivial element of H1orb (X, ∆), un-
+less ci |βi for every i. This is only possible if βi = 0 for every i. Thus b1i = b2i for
+every i and hence also L1 ∼   = L2 .                                                  
+Acknowledgments . I thank Ch. Boyer, K. Galicki, S. Keel, T. Pantev, A. Vistoli
+and M. Zaidenberg for many useful conversations, e-mails and references. Research
+was partially supported by the NSF under grant number DMS-0200883.
+
+                                           References
+[AM72]     M. Artin and D. Mumford, Some elementary examples of unirational varieties which
+           are not rational, Proc. London Math. Soc. (3) 25 (1972), 75–95. MR 48 #299
+[BG01]     Charles P. Boyer and Krzysztof Galicki, New Einstein metrics in dimension five, J.
+           Differential Geom. 57 (2001), no. 3, 443–463. MR 2003b:53047
+20                                      JÁNOS KOLLÁR
+
+
+[BG03]           , New Einstein metrics on 8#(S 2 × S 3 ), Differential Geom. Appl. 19 (2003),
+         no. 2, 245–251. MR 2 002 662
+[BGK03] Charles P. Boyer, Krzysztof Galicki, and János Kollár, Einstein metrics on spheres, to
+         appear (2003).
+[BGN02] Charles P. Boyer, Krzysztof Galicki, and Michael Nakamaye, Sasakian-Einstein struc-
+         tures on 9#(S 2 × S 3 ), Trans. Amer. Math. Soc. 354 (2002), no. 8, 2983–2996 (elec-
+         tronic). MR 2003g:53061
+[BGN03a]         , On the geometry of Sasakian-Einstein 5-manifolds, Math. Ann. 325 (2003),
+         no. 3, 485–524. MR 2004b:53061
+[BGN03b]         , Sasakian geometry, homotopy spheres and positive Ricci curvature, Topology
+         42 (2003), no. 5, 981–1002. MR 1 978 045
+[Bre67]  Glen E. Bredon, Sheaf theory, McGraw-Hill Book Co., New York, 1967. MR 36 #4552
+[Bri66]  Egbert Brieskorn, Beispiele zur Differentialtopologie von Singularitäten, Invent. Math.
+         2 (1966), 1–14. MR 34 #6788
+[Bri68]          , Rationale Singularitäten komplexer Flächen, Invent. Math. 4 (1967/1968),
+         336–358. MR 36 #5136
+[Cox95]  David A. Cox, The homogeneous coordinate ring of a toric variety, J. Algebraic Geom.
+         4 (1995), no. 1, 17–50. MR 95i:14046
+[Dem88] Michel Demazure, Anneaux gradués normaux, Introduction à la théorie des singularités,
+         II, Travaux en Cours, vol. 37, Hermann, Paris, 1988, pp. 35–68. MR 91k:14004
+[DG70]   M. Demazure and A. Grothendieck, Schémas en groupes. I: Propriétés générales des
+         schémas en groupes, Séminaire de Géométrie Algébrique du Bois Marie 1962/64 (SGA
+         3). Lecture Notes in Mathematics, Vol. 151, Springer-Verlag, Berlin, 1970. MR 43
+         #223a
+[Dol75]  I. V. Dolgachev, Automorphic forms, and quasihomogeneous singularities, Funkcional.
+         Anal. i Priložen. 9 (1975), no. 2, 67–68. MR 58 #27958
+[Fan01]  Barbara Fantechi, Stacks for everybody, European Congress of Mathematics, Vol. I
+         (Barcelona, 2000), Progr. Math., vol. 201, Birkhäuser, Basel, 2001, pp. 349–359. MR
+         2003h:14003
+[FMSS95] W. Fulton, R. MacPherson, F. Sottile, and B. Sturmfels, Intersection theory on spher-
+         ical varieties, J. Algebraic Geom. 4 (1995), no. 1, 181–193. MR 95j:14004
+[FZ03]   Hubert Flenner and Mikhail Zaidenberg, Normal affine surfaces with C∗ -actions, Os-
+         aka J. Math. 40 (2003), no. 4, 981–1009. MR 2 020 670
+[KM97]   Seán Keel and Shigefumi Mori, Quotients by groupoids, Ann. of Math. (2) 145 (1997),
+         no. 1, 193–213. MR 97m:14014
+[KM98]   János Kollár and Shigefumi Mori, Birational geometry of algebraic varieties, Cam-
+         bridge Tracts in Mathematics, vol. 134, Cambridge University Press, Cambridge, 1998,
+         With the collaboration of C. H. Clemens and A. Corti, Translated from the 1998 Japan-
+         ese original. MR 2000b:14018
+[Kol92]  János Kollár (ed.), Flips and abundance for algebraic threefolds, Paris, Société
+         Mathématique de France, 1992, Papers from the Second Summer Seminar on Alge-
+         braic Geometry held at the University of Utah, Salt Lake City, Utah, August 1991,
+         Astérisque No. 211 (1992). MR 94f:14013
+[Kol97]          , Quotient spaces modulo algebraic groups, Ann. of Math. (2) 145 (1997), no. 1,
+         33–79. MR 97m:14013
+[Kol04a]         , Einstein metrics on connected sums of S 2 × S 3 , to appear (2004).
+[Kol04b]         , in preparation, to appear (2004).
+[Mum61] David Mumford, The topology of normal singularities of an algebraic surface and a
+         criterion for simplicity, Inst. Hautes Études Sci. Publ. Math. (1961), no. 9, 5–22. MR
+         27 #3643
+[OW75]   Peter Orlik and Philip Wagreich, Seifert n-manifolds, Invent. Math. 28 (1975), 137–
+         159. MR 50 #13596
+[Pin77]  H. Pinkham, Normal surface singularities with C ∗ action, Math. Ann. 227 (1977),
+         no. 2, 183–193. MR 55 #5623
+[Sei32]  Herbert Seifert, Topologie dreidimensionaler gefaserte Räume, Acta Math. 60 (1932),
+         148–238.
+                                  SEIFERT Gm -BUNDLES                                       21
+
+
+[ST80]    Herbert Seifert and William Threlfall, Seifert and Threlfall: a textbook of topology,
+          Pure and Applied Mathematics, vol. 89, Academic Press Inc. [Harcourt Brace Jo-
+          vanovich Publishers], New York, 1980. MR 82b:55001
+[Vis89]   Angelo Vistoli, Characteristic classes of principal bundles in algebraic intersection
+          theory, Duke Math. J. 58 (1989), no. 2, 299–315. MR 90k:14052
+
+
+
+
+Princeton University, Princeton NJ 08544-1000
+kollar@math.princeton.edu
+

@@ -1,0 +1,1038 @@
+               COMPLEX STRUCTURES ON S6
+
+                               PHILIP ENGEL
+
+       Abstract. A recent manuscript produced by Claude under the
+       direction of Levent Alpöge constructs a 1-parameter family of com-
+       pact complex threefolds diffeomorphic to S6 [AC26]. Our goal is to
+       describe the geometric ideas behind the construction, give a self-
+       contained proof, and remark on possible future research directions.
+
+
+
+
+                                 Contents
+  1. Introduction                                                             1
+  2. Initial construction                                                     3
+  3. Logarithmic modification at 0 and 1                                      8
+  4. Main result                                                             12
+  5. The monodromy representation                                            12
+  6. The fundamental group                                                   15
+  7. The integral homology                                                   17
+  8. Additional remarks                                                      22
+  References                                                                 24
+
+
+                             1. Introduction
+1.1. History. In 1948, Hopf proved that S4 and S8 do not admit com-
+plex structures [Hop48] and in 1953, Borel and Serre [BS53] used topo-
+logical methods to prove that only S2 and S6 admit an almost complex
+structure. Since S2 ≃ P1 , this raises the question:
+Question 1.1 (Hopf Problem). Does S6 admit a complex structure?
+  Yau asked whether every compact almost complex manifold of di-
+mension at least 6 also admits a complex structure [Yau93, Prob. 52].
+  Both negative and positive answers to Question 1.1 have been pro-
+posed, but these works were found not to be fully mathematically
+sound, see [ABGKR18] and [Bry21] for discussions. Thus, the problem
+acquired a certain degree of notoriety. Hypothetical properties of such
+a complex structure, for instance, Dolbeault cohomology groups and
+algebraic dimension, were studied in [Gra97], [CDP98].
+                                       1
+2                               PHILIP ENGEL
+
+   In 2026, L. Alpöge1 posted a 108-page manuscript [AC26] produced
+by an artificial intelligence, Anthropic’s “Claude”, claiming to construct
+a complex structure on S6 . Perhaps the most remarkable aspect of the
+construction is that it fibers holomorphically over the Riemann sphere
+P1 , contradicting a nearly 30-year-old result in the literature that the
+algebraic dimension of such a complex structure must be zero [CDP98,
+Cor. 4.2]. See [AC26, § 10] for a further discussion.
+
+1.2. Outline. We begin with the rational elliptic surface S having
+singular fibers of Kodaira types IV ∗ , III, I1 . From a line bundle
+M ∈ Pic(S), one forms a principal Gm -bundle over S, then quotients
+it by a lift of translation along a section of S → P1 . This lineariza-
+tion acquires a zero along ∞ ∈ P1 where one fills the quotient family
+by a Mumford construction. The result is a compact complex 3-fold
+X(u) fibering over P1 , with complex 2-torus fibers away from 0, 1, ∞.
+It depends on a single complex parameter u ∈ ∆∗ . See Section 2.
+   Using the potential good reduction of S over 0, 1 ∈ P1 to perform
+logarithmic transforms, one can modify the family over 0, 1. The re-
+placed fibers have multiplicities 3, 4 respectively, and their reductions
+are bielliptic surfaces. The result is a compact complex 3-fold Y = Y (u)
+fibering over P1 . See Section 3. The monodromy representation of the
+fibration Y → P1 is computed in Section 5. Using this, one checks by
+van Kampen that Y is simply connected (Section 6), and by the Leray
+spectral sequence, that Y is a Z-homology sphere (Section 7). Hence
+Y is diffeomorphic to S6 (Section 4).
+   We speculate about possible future research directions in Section 8.
+
+1.3. Relation to the original manuscript. In [AC26], the geometry
+of the construction is somewhat obscured. Rather, the periods of the
+complex 2-tori are the central focus, encoded by a period matrix
+                                              
+                              6µ(z) τ (z) 1 0
+                    Π(z) =                       .
+                              β(z) µ(z) 0 1
+
+Here z is a coordinate on the universal cover of P1 \ {0, 1, ∞}. Roughly,
+the relation to this paper is that τ is the period of the elliptic fibration
+S → P1 , µ encodes the third period arising from the circle of the prin-
+cipal Gm -bundle, and β encodes the fourth period, from the quotient
+by the Z-action of the lifted translation.
+
+    1The precise nature of the interaction between Alpöge and Claude is not, at
+present, documented.
+                               COMPLEX S6                                 3
+
+   This paper recasts several arguments in [AC26], such as the van
+Kampen and Leray computations. Since our geometric approach dif-
+fers substantially from a period-theoretic presentation, we give a self-
+contained account of the construction and proof. We have omitted
+some material from the original text, such as a detailed discussion of
+[CDP98] and computations of Dolbeault cohomology groups.
+1.4. AI disclosure. The exploration of the original paper and several
+of the computations were performed in collaboration with ChatGPT
+5.6-Sol. The mathematical content was independently verified by the
+author, who takes full responsibility for the manuscript below.
+
+                      2. Initial construction
+   Let π : S → P1 be a rational elliptic surface whose j-map has degree
+1, so that in suitable coordinates, j = 1728t, and for which there are
+three singular fibers, of Kodaira types IV ∗ , III, I1 [Mir90, p. 206]. See
+Figure 1. The singular fibers correspond respectively to the order 3, 4,
+∞ corners of the (3, 4, ∞) triangle. Concretely,
+                  y 2 = x3 − 3t3 (t − 1)x + 2t4 (t − 1)2 .
+   There is a zero section O, and the Mordell–Weil group is infinite
+cyclic [OS91, Main Thm., no. 49]. Let P ∈ MW(S) be a generator. The
+section P passes through non-identity components on both the IV ∗ and
+III fibers, whose component groups are Z/3Z and Z/2Z respectively.
+   Consider the line bundle M = OS (P − O). Translation by 6P de-
+fines an automorphism t6P : S → S. Since 2 and 3 both divide 6, the
+automorphism t6P acts in a manner preserving the components of the
+IV ∗ and III Kodaira fibers.
+Lemma 2.1. Hom(t∗6P M, M ) ≃ π ∗ OP1 (1).
+Proof. For a general fiber St over t ∈ P1 \ {0, 1, ∞}, we have that Mt ∈
+Pic0 (St ). It follows that t∗6P Mt ≃ Mt for all t ∈ P1 \ {0, 1, ∞}. Hence
+t∗6P M ⊗ M −1 is expressible as the line bundle associated to a linear
+combination of vertical divisors. Since t6P acts by an element of Aut0
+of every fiber, the line bundle L := Hom(t∗6P M, M ) has multidegree 0
+on every fiber. Thus, L ≃ π ∗ OP1 (n) for some integer n, seeing as π has
+no multiple fibers.
+    We compute n via Shioda’s height pairing. Since S is rational elliptic,
+we have χ(OS ) = 1, O2 = −1, and P · O = 0. The local contributions
+at the IV ∗ and III fibers are 34 and 12 , respectively [Shi90, Thm. 8.6
+and Table 8.9]. Hence
+                        hP, P i = 2 − 43 − 12 = 16 .
+4                            PHILIP ENGEL
+
+
+
+
+       Figure 1. Rational elliptic surface S with IV ∗ , III,
+       I1 singular fibers in blue (respectively: E
+                                                 e6 configuration,
+       tacnode, and irreducible nodal curve). Origin section O
+       in red, generator P of the Mordell-Weil group in green.
+
+Consider the section Q = 6P . By bilinearity,
+                        hQ, Qi = 36hP, P i = 6.
+Since Q meets the identity component of every reducible fiber, all local
+contributions involving Q vanish, and Shioda’s height formula gives
+                      6 = hQ, Qi = 2 + 2(Q · O).
+It follows that (6P ) · O = Q · O = 2. Similarly, hP, Qi = 6hP, P i = 1
+and in turn P · (6P ) = P · Q = 2.
+   Finally, restricting L = t∗6P M −1 ⊗ M to the zero section gives
+                  n=L·O
+                    = (O − P ) · (6P ) − (O − P ) · O
+                    = (2 − 2) − ((−1) − 0) = 1.                       
+Corollary 2.2. There is, up to scale, a unique section
+                        φ ∈ Hom(t∗6P M, M )(S)
+which over A1 is an isomorphism, i.e. a linearization of the action of
+t6P on M , and having a simple zero along the fiber over ∞ ∈ P1 .
+  Let M × := M \ {zero section}. It is a threefold, which is a principal
+Gm -bundle over the rational elliptic surface S. Let S ◦ := S \ S∞ and
+M ×,◦ := M × |S ◦ .
+                               COMPLEX S6                                  5
+
+Definition 2.3. We define a Z-action on M ×,◦ by acting by the trans-
+lation (t6P )−1 on the base S ◦ and the linearizing isomorphism φ on
+M ×,◦ . That is, the generator of Z acts by the lift of t−1
+                                                         6P defined by φ.
+
+  So in particular, the automorphism of M ×,◦ induced by φ lifts the
+automorphism t−1       ◦
+                6P of S .
+
+Proposition 2.4. Fix a reference linearization φ as in Corollary 2.2.
+There exists a constant c such that for all linearizations uφ, u ∈ C∗ ,
+with |u| < c, the Z-action of Definition 2.3 is properly discontinuous.
+Proof. Consider the map φ : t∗6P M → M which is an isomorphism away
+from S∞ . Choose a smooth Hermitian metric on M . With respect to
+this metric, the operator norm x 7→ kφx k is a continuous function on
+the compact surface S, equal to zero exactly along S∞ . It is therefore
+bounded. Set C = maxx∈S kφx k and choose c > 0 such that cC < 1.
+   Fix u ∈ C∗ with |u| < c. Then, uφ also defines a self-map of M
+covering (t6P )−1 as in Definition 2.3. Since the operator norm of uφx
+is strictly less than 1, the action is contracting with respect to the
+Hermitian norm function M ×,◦ → R>0 . The Z-action on this open set
+is therefore properly discontinuous.                                 
+Definition 2.5. Let φ0 be a linearization as in Corollary 2.2 and let
+φ = uφ0 with |u| < c, u ∈ C∗ as in Proposition 2.4. We define a smooth
+threefold as the quotient
+                           X ◦ (u) := M ×,◦ /Z
+of the Z-action of Definition 2.3 associated to the linearization φ.
+Proposition 2.6. X ◦ (u) → A1 is a fibration with smooth complex
+2-torus fibers over A1 \ {0, 1}.
+Proof. Over t ∈ A1 \ {0, 1} we have an exact sequence
+                      1 → C∗ → Mt× → St → 0,                           (2.1)
+i.e. the fiber of M × over t is a semiabelian variety. So the universal
+cover of Mt× is C2 , and its fundamental group is isomorphic to Z3 .
+   Quotienting by the additional Z-action associated to the linearization
+φ gives a complex 2-torus, because the action is properly discontinuous,
+see Proposition 2.4, and the additional Z-factor increases the rank of
+the subgroup of C2 from 3 to 4.                                         
+Proposition 2.7. In a punctured neighborhood of ∞ ∈ P1 with coor-
+dinate q, X ◦ (u)q is biholomorphic to
+                       (C∗ )2 /h(c1 q, c2 ), (c3 , c4 q)i
+for holomorphic units ci ∈ C∗ + O(q) on ∆.
+6                              PHILIP ENGEL
+
+Proof. Since S∞ is an I1 Kodaira fiber, the restriction of S to ∆∗ admits
+a Tate uniformization Sq ≃ C∗ /q Z . After pulling M × back to the partial
+cover C∗ → Sq and choosing a trivialization, its total space is (C∗ )2 .
+The deck transformation defining the Tate curve acts by
+                (z, w) 7→ (c1 qz, c2 w), for (z, w) ∈ (C∗ )2 .
+Here c1 and c2 are holomorphic units. The first scaling factor has order
+one in q because it is the Tate period, while the second has order zero
+because M has degree zero and extends across the I1 fiber.
+   The linearization φ gives a second transformation of (C∗ )2 . It covers
+translation by −6P on the Tate curve. Since 6P specializes to a point
+of the smooth locus of the I1 fiber, its multiplicative Tate coordinate
+is a holomorphic unit. Thus the first component of this transformation
+has the form z 7→ c3 z. Moreover, φ vanishes to first order along S∞ so
+its action in the fiber direction of M × has the form w 7→ c4 qw, where
+c4 is a holomorphic unit. Hence the second transformation is
+                (z, w) 7→ (c3 z, c4 qw), for (z, w) ∈ (C∗ )2 .
+  Quotienting (C∗ )2 by these two commuting transformations gives the
+asserted description of X ◦ (u)q for q ∈ ∆∗ .                      
+Proposition 2.8. A Z2 -periodic tiling of R2 by lattice simplices of area
+1
+2
+  determines a Kulikov (K-trivial, semistable) filling
+                              X ◦ (u) ,→ X(u)
+over ∞ ∈ P1 . For example, one may take the tiling by triangles in Fig-
+ure 2. In this case, the fiber X(u)∞ is the result of gluing the opposite
+sides of a hexagon of (−1)-curves on a del Pezzo surface dP6 .
+Proof. This follows from a simple Mumford fan construction [Mum72].
+By Proposition 2.7, the fiber over the punctured disk is (C∗ )2 modulo
+the subgroup generated by the rows of the matrix
+                                               
+                         ( 1 0)           c1 c2
+                      c·q 01 ,      c=           ,
+                                             c3 c4
+where · denotes entrywise multiplication. Thus, a Z(1, 0) ⊕ Z(0, 1) ≃
+Z2 -periodic tiling of R2 provides a Mumford construction filling the
+family over q = 0. Take the triangulation of the unit square into two
+triangles. Extending Z2 -periodically gives such a tiling T . Put T at
+height 1 in R3 , i.e. R2 ×{1} ⊂ R2 ×R ≃ R3 , and take the cone Cone(T ).
+The result is a Z2 -periodic fan in R3 with standard affine cones.
+   This fan defines a one-parameter Mumford construction of degener-
+ating complex 2-tori, as in [EGFS25, Constr. 3.3 and Rem. 3.5]: we
+take the Z2 -quotient of the toric variety of Cone(T ), for which the
+                              COMPLEX S6                                7
+
+
+
+
+       Figure 2. Left: Z2 -periodic tiling T of the plane R2 .
+       Middle: Z2 -periodic infinite quilt of smooth toric sur-
+       faces. Right: Its Z2 -quotient and the central fiber of
+       Mumford construction, a glued dP6 . Two 0-dimensional
+       torus orbits in white and grey, three 1-dimensional torus
+       orbits in black; the 2-dimensional torus orbit in blue.
+
+fiber (C∗ )2 over q ∈ ∆∗ of the natural map to A1 is quotiented by the
+Z2 -action of Proposition 2.7.
+   Before quotienting, the central fiber is an infinite periodic quilt of
+smooth toric surfaces, whose components are isomorphic to dP6 (see
+Figure 2). The passage to the Z2 -quotient has the effect of taking
+a single such dP6 and gluing the opposite sides of its anticanonical
+hexagon, as described in the proposition.                              
+
+Proposition 2.9. The fibration X(u) → P1 admits a holomorphic
+section. Over P1 \ {0, 1, ∞}, this section may be taken as the origin of
+the smooth complex 2-torus fibers.
+Proof. The restriction of M to the zero section O admits a section e
+which is non-vanishing over A1 and has a first order zero at ∞, because
+M ·O = 1. Hence e defines a section of M |O → O, valued in M × |O away
+from ∞. Its image under the quotient map of Definition 2.5 defines a
+section of X ◦ (u) = M ×,◦ /Z → A1 .
+   Near ∞, the condition that e vanishes to first order implies that it
+defines a local section of the uniformization of Proposition 2.7. Indeed,
+we may first translate e by the period (c−1      −1 −1
+                                            3 , c4 q ). This translated
+section has nonzero limit at q = 0, and so extends as a section of the
+Mumford construction. It coincides with e in the quotient X ◦ (u). 
+  We have thus completed the summary of the “initial construction”:
+We have produced a smooth, compact complex threefold X(u) for all
+sufficiently small u ∈ C∗ , which is a complex 2-torus fibration, with
+section, and three singular fibers.
+8                             PHILIP ENGEL
+
+            3. Logarithmic modification at 0 and 1
+   We now fill the family X(u) → P1 at 0 and 1 in a new way. This
+logarithmic transform changes the fiber without changing the torus
+family over the punctured neighborhoods of 0 and 1, see e.g. [BHPV04,
+Ch. V, §13], [EFGMS25, §5.3].
+   To this end, we first describe the family X(u) over a neighborhood
+of 0 and 1. Observe that the SL2 (Z) monodromies of S → P1 about 0
+and 1 have orders 3 and 4, respectively.
+
+Proposition 3.1. Let ∆0 3 0, ∆1 3 1 be disks. Consider the order 3,
+resp. 4 base change ∆ → ∆0 , s 7→ s3 = t or ∆ → ∆1 , s 7→ s4 = t.
+    (1) S ×∆i ∆ admits a smooth elliptic reduction S 0 for i = 0, 1 iso-
+        morphic over the origin of ∆ to, respectively, the triangular or
+        square elliptic curve E4 or E .
+    (2) The linearization, viewed as a biholomorphism φ : M ×,◦ → M ×,◦ ,
+        lifts to a biholomorphism φ0 of M 0 := OS 0 (P 0 −O0 ) where P 0 and
+        O0 are the transforms of P and O.
+           Furthermore, the action of φ0 on E4 or E is trivial, and φ0
+        acts on the Gm -torsor M 0× (which over E4 or E corresponds
+        to either a 3-torsion or a 2-torsion line bundle L× , respectively)
+        by a scalar in C∗ .
+
+Proof. The smooth reduction of IV ∗ and III Kodaira fibers after a
+monodromy-trivializing base change is a well-known base change com-
+putation, see [BHPV04, Ch. V, §10]. Let S 00 be a resolution of inde-
+terminacy of S ×∆i ∆ 99K S 0 . The biholomorphism φ pulls back to a
+biholomorphism of the Gm -torsor M 00× over S 00 corresponding to the
+pullback of M . Since t6P defines an element of Aut0 of every fiber,
+the lift of φ to a biholomorphism of M 00× preserves the components
+contracted over the morphism S 00 → S 0 (on which M 00 is trivial).
+  Hence this lift descends to a linearization φ0 of M 0× , which is equi-
+variant over the action of t6P 0 on S 0 . By an explicit computation of S 00
+and the smooth model S 0 , it is easily seen that P 0 intersects a 3-torsion
+point of E4 and a 2-torsion point of E . Hence t6P 0 acts trivially on
+the central fiber E4 or E and the line bundle M 0 |E4 or E is either a
+3-torsion or 2-torsion element L ∈ Pic0 (E4 or E ) of the Picard group.
+  It follows that on the central fiber, φ0 is simply an automorphism of
+the Gm -torsor L× (acting trivially on the base).                          
+
+Corollary 3.2. The quotient L× /Z arising from Proposition 3.1 is an
+                 e4 × E 0 )/µ3 or (E
+abelian surface (E                 e × E 0 )/µ2 .
+                       0                 1
+                               COMPLEX S6                                     9
+
+Proof. As L is a 3- or 2-torsion bundle over E4 or E , its pullback to
+an étale µ3 - or µ2 -cover
+                          Ee4 → E4 or E
+                                      e → E
+is trivial. Along this pullback, the Z-action lifts to an action on C∗ ,
+whose quotient is an elliptic curve Ei0 . The deck group of the étale
+cover acts by translation on both the vertical and horizontal factors.
+So the quotient is an abelian surface (rather than bielliptic).      
+              e4 ≃ E4 and E
+  Abstractly, E              e ≃ E . We retain the tildes because the
+covering maps are nontrivial isogenies of degrees 3 and 2, respectively.
+Corollary 3.3. The order 3, resp. 4, base change of X(u) → P1 locally
+near 0, resp. 1, admits a bimeromorphic modification X 0 → ∆ to a
+smooth complex 2-torus fibration, with filling as in Corollary 3.2.
+  The deck group µ3 , resp. µ4 , acts on the smooth reduction S 0 → ∆,
+and we may recover S|∆i as a relatively minimal model of the quotient.
+The same holds for X(u) and the filling of Corollary 3.3.
+  Let Λ := H1 (X(u)t , Z) be a smooth complex 2-torus fiber, for a base
+point t ∈ P1 \{0, 1, ∞}. Let γ0 , γ1 , γ∞ ∈ π1 (P1 \{0, 1, ∞}, t) be standard
+counterclockwise based meridians, ordered so that γ0 γ1 γ∞ = 1. Write
+the monodromy representation as
+                    Ti := Mon(γi ) ∈ SL(Λ) ≃ SL4 (Z).
+  Let us comment a bit more on the structure of Λ and the rank 4,
+weight −1 VHS on the corresponding local system. By construction,
+the complex 2-tori over a general point of P1 are Z-quotients of the
+semiabelian variety Mt× which fit into the exact sequence (2.1). Thus
+we have a natural filtration:
+                                         ψ
+                         0 → Λ× → Λ −
+                                    →Z→0                                  (3.1)
+where Λ× = π1 (Mt× ) and a further exact sequence
+                         0 → Z → Λ× → Λ0 → 0                              (3.2)
+where Λ0 is the rank 2, weight −1 local system underlying the Z-VHS
+of the elliptic fibration S → P1 . After good reduction at 0 or 1, it
+specializes to H1 (E4 , Z) or H1 (E , Z).
+Proposition 3.4. We have conjugacies
+                                                                       
+       0 −1 0 0         0                1   0   0        1       0   1    0
+      1 −1 0 0      −1                0   0   0      0       1   0    1
+T0 ∼Q           ,T ∼                               ,T ∼                      .
+       0 0 1 0 1 Q  0                  0   1   0 ∞ Z 0        0   1    0
+       0 0 0 1          0                0   0   1        0       0   0    1
+10                            PHILIP ENGEL
+
+Proof. After the cyclic base changes of orders 3 and 4, the family has
+good reduction at 0 and 1. Let F0 and F1 denote the resulting smooth
+central fibers. The isogenies in Corollary 3.2 give decompositions
+                                    e4 or  , Z) ⊕ H1 (Ei0 , Z).
+              Λ ≃ H1 (Fi , Z) ⊃ H1 (E                              (3.3)
+Put ρ = e2πi/3 . With the complex orientations, the deck transformation
+acts on the first summand by multiplication by ρ in the basis (1, ρ) at
+0 (type IV ∗ ), and by multiplication by −i in the basis (1, i) at 1 (type
+III). It acts trivially on the second summand. Hence
+                                                          
+                    0 −1 0 0             0           1   0   0
+                  1 −1 0 0           −1           0   0   0
+            T0 ∼Q           and T1 ∼Q 
+                    0 0 1 0             0           0   1   0
+                    0 0 0 1              0           0   0   1
+with the Z-conjugacy class determined in Section 5 from the explicit
+overlattice Λ. At ∞, Proposition 2.7 identifies the family with the quo-
+tient of (C∗ )2 by the Tate period and the linearization period, having
+respective q-orders (1, 0) and (0, 1). So
+                                            
+                                   1 0 1 0
+                               0 1 0 1
+                         T∞ ∼Z           .
+                                 0 0 1 0
+                                   0 0 0 1
+We determine the monodromy representation exactly in Section 5. 
+     Denote the local monodromy invariants by
+                      ΛTi = {λ ∈ Λ : Ti (λ) = λ}.
+The finite group 13 ΛT0 /ΛT0 consists of the 3-torsion translations on the
+base change X(u) ×∆0 ∆, which are invariant under the µ3 deck action,
+while the finite group 41 ΛT1 /ΛT1 consists of the 4-torsion translations
+on the base change X(u) ×∆1 ∆, which are invariant under the µ4 deck
+action. These groups of torsion sections play an important role in the
+following construction.
+Construction 3.5 (Log transform). Given a0 ∈ 31 ΛT0 /ΛT0 we may
+define a twisted µ3 -action ρe on the smooth reduction X 0 → ∆ of the
+base change X(u) ×∆0 ∆ by setting
+                           ρe(x) = ρ(x) + a0 .
+Here ρ is the generator of the original deck action of µ3 coming from
+the base change ∆ → ∆0 . We may then form the twisted quotient
+                                 X 0 /he
+                                       ρi.
+We require the following lemma:
+                               COMPLEX S6                              11
+
+Lemma 3.6. The twisted quotient X 0 /he   ρi is biholomorphic over the
+punctured neighborhood ∆∗0 to X(u)|∆∗0 . Furthermore, a lift of a0 to
+some a0 ∈ 31 ΛT0 determines explicitly such a biholomorphism.
+Proof. Put v0 = 3a0 ∈ ΛT0 and choose the generator of the deck group
+so that it acts on the base by s 7→ ζ3 s. Over ∆∗ define the section
+                                log s      3 log s
+                      σa0 (s) =       v0 =         a0 .
+                                 2πi        2πi
+Although log s is multivalued, moving to a new branch changes σa0
+by an integral multiple of v0 ∈ Λ. It therefore defines a single-valued
+holomorphic section of the family of complex tori over ∆∗ . Let
+                       Ψa0 (x, s) = (x + σa0 (s), s)
+be translation by this section.
+  Since v0 is fixed by T0 , analytic continuation gives
+                        σa0 (ζ3 s) = T0 σa0 (s) + a0 .
+Consequently,
+                            Ψa0 ◦ ρ = ρe ◦ Ψa0 .
+Thus Ψa0 descends to a biholomorphism between the quotients by ρ and
+ρe over ∆∗0 . The quotient by ρ is X(u)|∆∗0 which proves the lemma. 
+   There is an exactly analogous construction given an element a1 ∈
+1 T1
+4
+  Λ /ΛT1 and a lift a1 ∈ 14 ΛT1 .
+                               The ai encode the “multiplicity class”
+of [EFGMS25, Def. 5.22].
+Definition 3.7. We define the analytic space X(u, a0 , a1 ) by gluing
+to X(u)|P1 \{0,1} the twisted quotients of Lemma 3.6 associated to a0 ∈
+  Λ and a1 ∈ 41 ΛT1 .
+1 T0
+3
+
+Remark 3.8. By construction, X(u, 0, 0) is bimeromorphic to X(u).
+Corollary 3.9. When a0 and a1 are primitive 3-, resp. 4-torsion, the
+twisted action of ρe on Xi0 , for i = 0, 1, is free. Thus, the fiber of
+                            X(u, a0 , a1 ) → P1
+is multiple, of
+    (1) multiplicity 3 over 0, with reduced fiber a bielliptic surface of
+        Bagnera-de Franchis type µ3 × µ3 .
+    (2) multiplicity 4 over 1, with reduced fiber a bielliptic surface of
+        Bagnera-de Franchis type µ2 × µ4 .
+  See [BHPV04, Ch. V, §5] for the classification of bielliptic surfaces.
+Proof. See Construction 3.5 and Corollary 3.2.                         
+12                               PHILIP ENGEL
+
+Lemma 3.10. The space of globally monodromy-invariant linear func-
+tionals Λ → Z has rank 1, generated by the map ψ : Λ → Z of (3.1).
+Proof. This is immediate from the monodromy matrices [T0 ]B0 , [T1 ]B1 ,
+and change of basis C computed in Theorem 5.1.                       
+  We will see the significance of this global invariant covector in the
+course of the proof of the main theorem.
+
+                              4. Main result
+Theorem 4.1. Let Y := X(u, a0 , a1 ) where local monodromy invari-
+ants a0 ∈ 31 ΛT0 and a1 ∈ 14 ΛT1 are chosen so that:
+   (1) a0 and a1 are, respectively, primitive 3- and 4-torsion,
+   (2) |12ψ(a0 + a1 )| = 1.
+Then for all u ∈ ∆∗ in a sufficiently small punctured disk,
+                                  Y ≃diffeo S6
+is a compact complex manifold, diffeomorphic to the 6-sphere.
+  Conditions (1) and (2) can in fact be satisfied. For instance, we may
+take a0 = 31 e4 and a1 = − 41 f4 in the notation of Theorem 5.1.
+Proof. By Section 6, Y is simply connected. By Section 7, it has the
+integral homology of S6 . The Hurewicz theorem implies that Y is a
+homotopy 6-sphere. Smale’s generalized Poincaré theorem identifies it
+topologically with S6 [Sma61].
+   By the h-cobordism theorem, oriented diffeomorphism classes of ho-
+motopy 6-spheres are classified by the group Θ6 [Mil65]. This group is
+trivial by the computation of Kervaire–Milnor [KM63, §7]. Hence Y is
+also diffeomorphic to the standard 6-sphere.                        
+
+               5. The monodromy representation
+  The overlattice Λ in (3.3) is explicitly computable, with the con-
+tainment in (3.3) of index 3 and 2 respectively. We now compute this
+overlattice, record integral normal forms of T0 and T1 in an appropri-
+ate oriented basis of Λ, and determine the change of basis between the
+bases expressing these two normal forms.
+  These computations are necessary for later steps, computing the fun-
+damental group and integer homology of Y . Recall ρ = e2πi/3 .
+Theorem 5.1. Let
+           e1 , e2 , δ0 , e4 = (1, 0), (ρ, 0), (0, 1), (0, τ (E00 )) ∈ C2
+                                   COMPLEX S6                                        13
+
+                    e4 , Z) ⊕ H1 (E 0 , Z), and let
+be a Z-basis of H1 (E              0
+
+            f1 , f2 , δ1 , f4 = (1, 0), (i, 0), (0, 1), (0, τ (E10 )) ∈ C2
+be a Z-basis of H1 (E     e , Z) ⊕ H1 (E10 , Z). The lattices of the two good
+reduction fibers are, respectively, the overlattices obtained by adjoining
+                    e3 = 13 (2 + ρ, 1),      f3 = 12 (1 + i, 1).
+In the local bases B0 = (e1 , e2 , e3 , e4 ) and B1 = (f1 , f2 , f3 , f4 ) of Λ,
+                                                                         
+                   0 −1 −1 0                              0     1 0 0
+                 1 −1 0 0                              −1     0 −1 0
+       [T0 ]B0 =            ,               [T1 ]B1 =                 .
+                                                       
+                   0 0  1 0                              0     0 1 0
+                   0 0  0 1                               0     0 0 1
+The circle classes of the principal Gm -bundle M × are
+              δ0 = −2e1 − e2 + 3e3 ,          δ1 = −f1 − f2 + 2f3 .
+Furthermore, the columns of the matrix
+                                                   
+                                 1 1 0             1
+                                0 1 0             0
+                              C=
+                                 0 −1 1            0
+                                 0 0 0             1
+express B1 in the basis B0 , and C(δ1 ) = δ0 .
+Proof. The adjoining vectors e3 and f3 are determined by the require-
+ment that their coordinates in E e4 or E e are non-zero and fixed by the
+order 3, resp. 4, automorphism, and that δ0 and δ1 represent the circle
+class of the principal Gm -bundle M × .
+   Multiplication by ρ sends e1 7→ e2 and e2 7→ −e1 − e2 , while fixing
+δ0 and e4 . Since δ0 = 3e3 − 2e1 − e2 , it follows that
+  T0 e1 = e2 ,      T0 e2 = −e1 − e2 ,        T0 e3 = e3 − e1 ,       T0 e4 = e4 .
+This gives the displayed matrix for T0 . Similarly, multiplication by −i
+sends f1 7→ −f2 and f2 7→ f1 . Using δ1 = 2f3 − f1 − f2 , we obtain
+    T1 f1 = −f2 ,        T 1 f2 = f1 ,     T 1 f3 = f3 − f2 ,       T 1 f4 = f4 ,
+which gives the displayed matrix for T1 .
+   It remains to compare the two local markings in which we have the
+displayed normal forms. In Λ0 = Λ× /Zδi , the monodromy representa-
+tion of the underlying elliptic surface S → P1 gives an equality
+                                             [e1 ] + 2[e2 ]
+                     [f1 ] = [e1 ],  [f2 ] =
+                                                    3
+in Λ0 ⊗Q (rational coefficients arise because [e1 ], [e2 ] and [f1 ], [f2 ] gener-
+ate sublattices of indices 3 and 2 in the homology lattices of the smooth
+14                                 PHILIP ENGEL
+
+reductions E4 and E over 0 and 1). Since 3[e3 ] = 2[e1 ] + [e2 ] in Λ0 ,
+the second equality is equivalently
+                  [f1 ] = [e1 ],      [f2 ] = [e1 + e2 − e3 ].       (5.1)
+It remains to lift this identification through (3.2) and (3.1).
+   The restriction of C to Λ× is determined up to shears which act
+trivially on Zδ0 and on Λ0 . Thus there are integers a, c such that
+             Cf1 = e1 + aδ0 ,         Cf2 = e1 + e2 − e3 + cδ0 .
+The condition Cδ1 = δ0 , together with δ1 = −f1 − f2 + 2f3 , then gives
+                          Cf3 = e3 + 21 (a + c)δ0 .
+Since δ0 is primitive, a + c is even. Writing a + c = 2b, and then lifting
+from Λ× to Λ in a manner respecting (3.1), one obtains
+                    Cf1 = e1 + aδ0 ,
+                    Cf2 = e1 + e2 − e3 + (2b − a)δ0 ,
+                    Cf3 = e3 + bδ0 ,
+                    Cf4 = e4 + pe1 + qe2 + re3
+for some a, b ∈ Z, with p, q, r ∈ Z determining the further lift from Λ×
+to Λ. Equivalently,
+                                                     
+                        1 − 2a       1 − 4b + 2a  −2b       p
+                  −a                1 − 2b + a    −b       q
+               C=                                            .
+                   3a               −1 + 6b − 3a 1 + 3b     r
+                           0              0        0        1
+  We now use the integral monodromy of the Mumford construction
+at ∞ to determine these five integers. Put
+                        N∞ = (T0 CT1 C −1 )−1 − I.
+The description in Proposition 3.4 of the monodromy of the Mumford
+                            2
+degeneration implies that N∞  = 0 and that im(N∞ ) is a primitive rank
+2 sublattice of Λ. Direct multiplication gives
+                         2
+                        N∞ ej = aδ0       (j = 1, 2, 3),
+so a = 0. After setting a = 0, its remaining column is
+            2
+           N∞ e4 = (3q + r)((1 − 4b)e1 − 2be2 + (6b − 1)e3 ),
+and hence r = −3q. Set m = p − 2q. The matrix of N∞ now becomes
+                                              
+                  1 − 4b 1 − 4b 1 − 4b    4bm
+                  −2b    −2b    −2b (2b − 1)m
+                 6b − 1 6b − 1 6b − 1 (1 − 6b)m.
+                     0      0      0       0
+                                  COMPLEX S6                                15
+
+The greatest common divisor of its 2 × 2 minors is |m(1 − 6b)|. Primi-
+tivity of im(N∞ ) therefore implies b = 0 and m = ±1. Since b = 0,
+       N∞ ej = e1 − e3        (j = 1, 2, 3),      N∞ e4 = ±(e3 − e2 ).
+The first vanishing cycle comes from the I1 monodromy of the elliptic
+surface, while the second comes from the linearization. For a counter-
+clockwise meridian, the condition ord∞ (φ) = 1 gives m = 1; a pole
+would give m = −1 and negate precisely the second contribution to
+the monodromy of the Mumford construction. It follows that
+                         p = 2q + 1,           r = −3q,
+and therefore
+                              Cf4 = e4 + e1 − qδ0 .
+The remaining integer q is precisely the freedom to replace e4 7→ e4 +
+kδ0 . This shear commutes with the local monodromy at 0, as both e4
+and δ0 are fixed. Thus, we may adjust the marking so that q = 0. Then
+                Cf1 = e1 ,                 Cf2 = e1 + e2 − e3 ,
+                Cf3 = e3 ,                 Cf4 = e1 + e4 ,
+which proves the displayed formula for C.                                   
+  Since X(u) → P1 has a section, the two local monodromy matrices,
+together with the change of basis C, determine the topology of the real
+4-torus bundle arising from restricting to P1 \ {0, 1, ∞}.
+
+                     6. The fundamental group
+  Put U = P1 \ {0, 1, ∞}, and J = Y |U = X(u)|U . The section of
+Proposition 2.9 gives a base point in every fiber. Hence
+                              π1 (J) = Λ o π1 (U ),
+where the action on Λ is the monodromy representation. Write B0 =
+(e1 , e2 , e3 , e4 ) for the basis of Theorem 5.1, normalized so that
+                ψ(e4 ) = 1,       ψ(e1 ) = ψ(e2 ) = ψ(e3 ) = 0.
+We use the same letter ψ for its extension to Λ ⊗ Q. In the common
+basis B0 we have
+                                                   
+                                           −1      1 −1 2
+                                          −1      0 −1 1 
+                [T1 ]B0 = C[T1 ]B1 C −1 =                  .            (6.1)
+                                            1      1 2 −1
+                                            0      0 0  1
+In particular, ψ is fixed by both monodromies.
+16                                 PHILIP ENGEL
+
+     Since T∞ = (T0 T1 )−1 , the preceding matrices give
+
+                    (T∞ − I)Λ = he1 − e3 , e3 − e2 i =: K∞ .
+
+These are precisely the two vanishing cycles (i.e. generators of W−2 H1 )
+of the Mumford construction at ∞. Thus K∞ ⊂ π1 (J) is killed by
+filling the fiber at ∞ (these cycles collapse to points at either of the
+two 0-dimensional toric strata of the glued dP6 ). Since
+
+                            T0 (e1 − e3 ) = e1 + e2 − e3 ,
+
+the three vectors e1 − e3 , e3 − e2 , and e1 + e2 − e3 form a basis of ker ψ.
+Hence the normal closure of K∞ is exactly
+
+                                ker ψ = he1 , e2 , e3 i.
+
+Thus the image of Λ in π1 of the extension of J over ∞ is infinite cyclic,
+generated by the image c of e4 . Because ψ is monodromy invariant, c
+is central.
+   Put v0 = 3a0 ∈ ΛT0 , v1 = 4a1 ∈ ΛT1 , and set
+
+          m = ψ(v0 ) = 3ψ(a0 ) ∈ Z,            n = ψ(v1 ) = 4ψ(a1 ) ∈ Z.
+
+Let x0 , x1 be the meridians γ0 , γ1 about 0, 1 lifted to the section of
+J. Since the section extends over the Mumford construction at ∞, we
+have the relation x0 x1 = 1. At the multiple fibers, the two logarithmic
+fillings locally impose
+
+                               x30 = v0 ,      x41 = v1 .
+
+Including the neighborhood of the logarithmic filling into the total
+space Y , we in turn get the relation
+
+                              x30 = cm ,       x41 = cn .
+
+Proposition 6.1. Let p := 12ψ(a0 + a1 ). The fundamental group of
+Y is finite cyclic of order |p|, when p 6= 0. In particular, under the
+hypotheses of Theorem 4.1, Y is simply connected.
+
+Proof. The preceding discussion gives
+
+     π1 (Y ) = c, x0 , x1   c central,      x0 x1 = 1,      x30 = cm ,   x41 = cn .
+
+Eliminating x1 = x−10 makes the group abelian, generated by x0 and c,
+and the remaining relations reduce this abelian group to a cyclic group
+of order |4m + 3n|.                                                   
+                                    COMPLEX S6                                        17
+
+                        7. The integral homology
+   Let f : Y → P1 be the torus fibration and put V = Hom(Λ, Z). Let
+(e∗1 , e∗2 , e∗3 , e∗4 ) be the basis of V dual to B0 = (e1 , e2 , e3 , e4 ) (see Theorem
+5.1). The filtration Zδ0 ⊂ Λ× ⊂ Λ induces the dual filtration
+     0 ⊂ W0 ⊂ W1 ⊂ W2 = V,                 W0 = (Λ× )⊥ ,           W1 = (Zδ0 )⊥ .
+Thus W0 = Ze∗4 = Zψ and, since δ0 = −2e1 − e2 + 3e3 ,
+                         W1 = he∗1 − 2e∗2 , 3e∗2 + e∗3 , e∗4 i .
+Over U , the local system Rk f∗ Z has fiber ∧k V . Recall that the fibers
+over 0, 1 are multiple with bielliptic reductions, while the fiber at ∞
+is the Mumford construction central fiber of Section 2.
+Proposition 7.1. χtop (Y ) = 2.
+Proof. Since a complex 2-torus and both reduced bielliptic fibers have
+Euler characteristic zero, additivity of the Euler characteristic reduces
+the computation to the central fiber Y∞ of the Mumford construc-
+tion. Its toric stratification has exactly two zero-dimensional strata.
+Positive-dimensional strata contain a factor C∗ and hence have Euler
+characteristic zero. So χtop (Y ) = χtop (Y∞ ) = 2.                    
+Lemma 7.2. The monodromy preserves the primitive alternating form
+                 ξ = 3e∗1 ∧ e∗2 + e∗1 ∧ e∗3 − 2e∗2 ∧ e∗3 − 2e∗3 ∧ e∗4 .
+Its elementary divisors are (1, 6).
+Proof. Taking inverse transposes of the matrices of Theorem 5.1 shows
+directly that Ti∗ ξ = ξ for i = 0, 1, ∞. Computing 21 ξ ∧ ξ = −6e∗1 ∧ e∗2 ∧
+e∗3 ∧ e∗4 proves that the elementary divisors are (1, 6).                 
+Lemma 7.3. The monodromy-invariant classes over U are
+                       H 0 (U, R1 f∗ Z) = Zψ (= W0 ),
+                       H 0 (U, R2 f∗ Z) = Zξ,
+                       H 0 (U, R3 f∗ Z) = Zθ       (= ∧3 W1 ),
+where θ := ξ ∧ ψ.
+Proof. The first equality is Lemma 3.10. The invariance of ξ is Lemma
+7.2, and the invariance of θ = ξ ∧ ψ follows. Note that ∧3 W1 is also
+monodromy invariant by general principle. Performing a linear algebra
+check with the matrices [T0 ]B0 and [T1 ]B0 of Theorem 5.1 and (6.1), one
+can also directly compute that the classes ψ, ξ, θ integrally generate
+the monodromy invariants in ∧k V , for k = 1, 2, 3, respectively.      
+18                                    PHILIP ENGEL
+
+  We next determine what multiples of these invariant classes extend
+over the three singular fibers.
+Lemma 7.4. Suppose |p| = 1. For i = 0, 1, let πi : Fi → Gi be the
+unramified cover from the smooth good reduction fiber to the reduced
+bielliptic fiber. Write
+            spki := πi∗ : H k (Gi , Z) → H k (Fi , Z)Ti = (∧k V )Ti .
+Then
+                                                     i\k 1 2 3
+                       k       Ti
+                   [(∧ V )          : im(spki )] =    0 3 1 1                (7.1)
+                                                      1 4 2 2
+with cokernel generated by the image of ψ, ξ, θ in degrees k = 1, 2, 3.
+At ∞, the specialization image is the full T∞ -invariant lattice (∧k V )T∞
+in all three degrees k = 1, 2, 3.
+Proof. The local invariant lattices are
+          V T0 = he∗3 , e∗4 i,            (∧2 V )T0 = he∗3 ∧ e∗4 , ξi,
+                                                                             (7.2)
+          V T1 = he∗2 + e∗3 , e∗4 i, (∧2 V )T1 = h(e∗2 + e∗3 ) ∧ e∗4 , ξi.
+  Let d0 = 3 and d1 = 4. The affine group π1 (Gi ) is generated by the
+translations tλ and by ρei (see Construction 3.5), with relations
+                           ρei tλ ρei−1 = tTi λ ,    ρeidi = tvi
+where, recall, vi = di ai for i = 0, 1. Thus
+                      im(sp1i ) = {α ∈ V Ti : di | α(vi )}.
+Since |p| = 1, e∗4 (v0 ) = m is a unit modulo 3 and e∗4 (v1 ) = n is a unit
+modulo 4. Evaluation on vi therefore gives
+                               V Ti /im(sp1i ) ≃ Z/di Z,
+generated by the class of e∗4 . The first column of (7.1) follows.
+   The indices in degree 2 follow from computing the intersection pair-
+ings on H 2 (Fi , Z) and H 2 (Gi , Z). The Gram matrices of the intersec-
+tion pairing of the bases (7.2) of H 2 (Fi , Z)Ti are
+                                                
+                         0 3               0 2
+                                    ,                 .
+                         3 −12             2 −12
+The Bagnera–de Franchis types of Gi ensure that H 2 (Gi , Z) is free of
+rank 2 [Ser90, Rem. 1.6]. By Poincaré duality, the intersection pairing
+on its middle cohomology is unimodular.
+                                  COMPLEX S6                               19
+
+  Write (πi )∗ for proper pushforward. It satisfies (πi )∗ πi∗ = di and so
+every spki is injective. Since pullback multiplies the intersection pairing
+by di , comparison of determinants gives
+
+         [(∧2 V )T0 : im(sp20 )] = 1,       [(∧2 V )T1 : im(sp21 )] = 2.
+
+The latter cokernel is generated by ξ: if ξ descended at the order 4
+fiber, its square downstairs would be ξ 2 /4 = −3, but the intersection
+form of G1 is even (as KG1 ∼Q 0). The second column of (7.1) follows.
+   Finally, we make the cohomology degree 3 computation. The local
+invariant lattices in degree 3 are
+
+               (∧3 V )T0 = he∗1 ∧ e∗2 ∧ e∗3 , θi ,
+               (∧3 V )T1 = he∗1 ∧ e∗2 ∧ e∗3 − e∗2 ∧ e∗3 ∧ e∗4 , θi .
+
+Pairing these bases with the respective bases of V Ti in (7.2) gives
+                                           
+                         0 3             0 2
+                                ,               .
+                        −1 0            −1 0
+
+Let bi = [(∧3 V )Ti : im(sp3i )]. The pairing between H 1 (Gi , Z) and
+H 3 (Gi , Z) is unimodular, whereas pullback to Fi multiplies it by di .
+Since both groups have rank 2, the determinant of the pulled-back
+pairing is therefore d2i . On the other hand, replacing the two invariant
+lattices by sublattices of indices di and bi multiplies the determinant
+by di bi . The two displayed pairing matrices therefore give
+
+                     3 · b0 · 3 = 3 2 ,     4 · b1 · 2 = 4 2 .
+
+Thus b0 = 1 and b1 = 2. Finally, the description of im(sp11 ) allows us
+to choose ` ∈ Z so that e∗2 + e∗3 − `e∗4 descends to G1 . Its pairing with
+θ is 2. If θ also descended, this pairing would be divisible by d1 = 4,
+a contradiction. Hence the degree 3 cokernel at 1 is generated by the
+class of θ. This proves the third column of (7.1).
+   At ∞, we have im N∞ = ker N∞ = ker(T∞ −I), where N∞ := T∞ −I.
+Indeed, the q-order matrix ( 10 01 ) ∈ GL2 (Z) of Proposition 2.8 is uni-
+modular. The last sentence of the lemma follows for k = 1. A computa-
+tion of the Mayer–Vietoris spectral sequence for the toric stratification
+of Y∞ shows that the specialization maps to the monodromy invariant
+classes are also surjective for k = 2, 3.                               
+
+  We now take cohomology on the base.
+20                              PHILIP ENGEL
+
+Lemma 7.5. Suppose |p| = 1. Then
+                          H 0 (P1 , R1 f∗ Z) = 12Zψ,
+                          H 0 (P1 , R2 f∗ Z) = 2Zξ,
+                          H 0 (P1 , R3 f∗ Z) = 2Zθ,
+and H 1 (P1 , R1 f∗ Z) = H 1 (P1 , R2 f∗ Z) = 0. If H 2 (P1 , Z) = Zω, then
+                   H 2 (P1 , R0 f∗ Z) = Zω,
+                   H 2 (P1 , R1 f∗ Z) = Zω[e∗1 − e∗2 ],
+                   H 2 (P1 , R2 f∗ Z) = Zω[(e∗1 − e∗2 ) ∧ ψ].
+Proof. Intersecting the three specialization lattices of Lemma 7.4 inside
+the invariant lattices of Lemma 7.3 gives the asserted H 0 groups.
+  For j : U ,→ P1 there is an exact sequence
+               0 → Rk f∗ Z → j∗ (∧k V ) → Qk → 0, where
+                                                                          (7.3)
+           Q1 = (Z/3Z)0 ⊕ (Z/4Z)1 and Q2 = Q3 = (Z/2Z)1 .
+Local-coefficient duality on the pair of pants gives
+                           H 2 (P1 , j∗ L) = LhT0 ,T1 i
+where the subscript denotes coinvariants. Row reduction gives
+                       VhT0 ,T1 i = Z[e∗1 − e∗2 ],
+                     (∧2 V )hT0 ,T1 i = Z[(e∗1 − e∗2 ) ∧ ψ],
+                                [ξ] = 12[(e∗1 − e∗2 ) ∧ ψ].
+Since the skyscraper sheaf Qk has no higher cohomology, this proves
+the assertions about H 2 .
+   Finally we check the vanishing of the H 1 groups. We have a sur-
+jection H 0 (P1 , j∗ (∧k V )) → H 0 (P1 , Qk ), for k = 1, 2—the classes ψ, ξ
+map to generators of H 0 (P1 , Q1 ) = Z/3Z ⊕ Z/4Z, H 0 (P1 , Q2 ) = Z/2Z
+respectively by Lemma 7.4. From the long exact sequence of (7.3), it
+suffices to prove vanishing of H 1 (P1 , j∗ (∧k V )). For L = V and ∧2 V ,
+respectively, this group is identified with
+                             (T0 − I)L ∩ (T∞ − I)L
+                                  (T0 − I)(LT1 )
+if we normalize cocycles to vanish on γ1 ∈ π1 (U ). For L = V the
+numerator and denominator are Z(e∗1 + e∗2 + e∗3 ); for L = ∧2 V they are
+Z((e∗1 + e∗2 + e∗3 ) ∧ ψ). Thus both groups vanish.                   
+  We now compute the differentials d2 on the E2 -page of the Leray
+spectral sequence that contribute in total degree at most 3.
+                                   COMPLEX S6                                     21
+
+Lemma 7.6. We have
+d2 (12ψ) = pω,      d2 (2ξ) = −pω[e∗1 − e∗2 ],       d2 (2θ) = pω[(e∗1 − e∗2 ) ∧ ψ].
+Proof. The first differential measures the incompatibility of local lifts
+of 12ψ. The relations
+                             ρe03 = tv0 ,      ρe14 = tv1
+show that the contributions from the two finite fibers are
+                 12ψ(v0 )            12ψ(v1 )
+                          = 4m,               = 3n.
+                    3                   4
+The fiber at ∞ contributes zero as ψ extends. Hence, after fixing the
+common orientation, d2 (12ψ) = pω, where recall, p = 4m + 3n. Write
+        d2 (2ξ) = −p0 ω[e∗1 − e∗2 ],        d2 (2θ) = p00 ω[(e∗1 − e∗2 ) ∧ ψ].
+The Leray spectral sequence is multiplicative and d2 is a derivation.
+Hence, applying d2 to
+                              (2ξ)(12ψ) = 12(2θ)
+and using the identities
+                   ξ ∧ ψ = θ,          [ξ] = 12[(e∗1 − e∗2 ) ∧ ψ]
+gives p00 = 2p − p0 . If ν = e∗1 ∧ e∗2 ∧ e∗3 ∧ e∗4 , then
+             (e∗1 − e∗2 ) ∧ θ = −ν,         ξ ∧ (e∗1 − e∗2 ) ∧ ψ = −ν.
+Applying d2 to (2ξ)(2θ) = 0 therefore gives 2(p0 − p00 )ων = 0. Hence
+p0 = p00 , and consequently p0 = p00 = p.                          
+Theorem 7.7. If |12ψ(a0 + a1 )| = 1, then
+                               (
+                    k            Z, k = 0, 6,
+                  H (Y, Z) =
+                                 0, 1 ≤ k ≤ 5.
+Thus Y is an integral homology 6-sphere.
+Proof. The only differentials relevant in total degrees at most 3 are the
+three maps of Lemma 7.6. When |p| = 1, all three are isomorphisms.
+Lemma 7.5 then gives directly
+                   H 1 (Y, Z) = H 2 (Y, Z) = H 3 (Y, Z) = 0.
+Since Y is closed and oriented of real dimension 6, Poincaré duality
+and universal coefficient theorem determine the remaining groups. 
+22                            PHILIP ENGEL
+
+                       8. Additional remarks
+Remark 8.1. Other than the discrete parameters in Theorem 4.1,
+there is the continuous parameter u ∈ ∆∗ . We may thus build a proper,
+holomorphic submersion Y ∗ → ∆∗ whose fiber over u is X(u, a0 , a1 ),
+and similarly, for the untwisted version, a proper holomorphic submer-
+sion X ∗ → ∆∗ whose fiber over u is X(u).
+   For varying values of u, the complex manifold X(u) is indeed deform-
+ing: Its algebraic dimension is 1 so the map to P1 is unique, rigidified
+by demanding that the singular fibers map over 0, 1, ∞. Then, the
+periods of the fiber over t ∈ P1 \ {0, 1, ∞} vary. Alternatively, the sec-
+ond elliptic curves E00 and E10 involved in the bielliptic fibers (Corollary
+3.2) vary depending on the action of Z on L× and hence depend on the
+scaling parameter uφ0 of the linearization, see Definition 2.5.
+   Does this family of complex manifolds degenerate in a nice way over
+the origin 0 ∈ ∆? The geometric construction is suggestive: The pa-
+rameter u is a rescaling parameter for the linearization φ : t∗6P M → M
+discussed in Section 2. Thus as we take the limit |u| → 0, the modulus
+of the annular fundamental domain for multiplication by u on Gm grows
+to infinity. Since, furthermore, the linearization φ lifts the translation
+t−1
+ 6P , this strongly suggests that the limit
+
+                            X(0) := lim X(u)
+                                     u→0
+
+can be constructed as follows: Take the P1 -bundle PS (O ⊕ M ) and glue
+the zero section to the infinity section by t6P . This can thus be viewed
+fiberwise over t ∈ P1 as a “compactified semiabelian” degeneration of
+the corresponding family of complex 2-tori Xt (u) as u → 0.
+Conjecture 8.2. There is a flat, proper filling X → ∆ and the central
+fiber X(0) is non-normal. The normalization is PS (O ⊕ M ) and the
+normalization map glues the zero and infinity sections via t6P .
+   For Y ∗ → ∆∗ , which is particularly appealing, given that it is a
+smooth S6 -bundle over the punctured disk, it is less clear what the limit
+should be, but it is natural to guess that it is a logarithmic transform
+of X(0), whose fibers over 0 and 1 have multiplicity 3 and 4, and whose
+reductions are “semiabelian type” degenerations of bielliptic surfaces.
+Remark 8.3. The rank 4 local system of first homology groups of the
+fibers of Y → P1 contains a natural rank 3 sub-local system, given by
+the kernel of the unique invariant (up to scale) covector ψ of Lemma
+3.10. Geometrically, this rank 3 sub-local system corresponds to a
+real 3-dimensional subtorus of the fibers. Quotienting fiberwise by the
+                                COMPLEX S6                                 23
+
+translational action of this subtorus, we reduce the fibers Yt to circles,
+but some care must be taken at t = 0, 1, ∞ ∈ P1 .
+    At t = ∞, the kernel of ψ contains the vanishing cycles W−2 H1 of
+the nearby fiber. The quotient by the vanishing cycles torus can be
+interpreted in the following manner: Take the Clemens collapse [Cle77]
+from the nearby fiber to Y∞ and then compose with the moment map-
+ping on the glued dP6 to a glued hexagon (which is a polytope of this
+Mumford construction).
+    There is, in the construction, a distinguished edge of the glued
+hexagon. Indeed, Aut0 (Y ) ≃ C∗ (acting by scaling on the prequo-
+tient M × as a Gm -torsor) and the fixed locus of this C∗ -action is one
+of the three glued edges. This distinguished edge determines a further
+quotient of the hexagonal torus to a circle. Thus over ∞, this quotient
+map of the first paragraph extends continuously to the composition of
+the moment mapping with a further quotient to a circle.
+    At 0 or 1, the situation is different. Here, the rank 3 sub-local system
+contains the local rank 2 sub-local system on which the monodromy
+about 0 or 1 is nontrivial. Quotienting by the corresponding subtorus
+gives a multiple elliptic curve E 0 /µ3 or E 0 /µ4 because the twisted action
+defining the logarithmic transform producing the bielliptic multiple
+fiber acts by a torsion translation on E 0 . The further quotient collapses
+E 0 /µ3 or E 0 /µ4 to a circle, with multiplicity 3 or 4.
+    The conclusion is that the quotient by the torus associated to this
+natural rank 3 sub-local system is a map S6 → Q where Q is a Seifert
+fibered 3-manifold over P1 ≃ S2 with a multiple circle of multiplicity 3
+over 0 and multiplicity 4 over 1. The condition |12ψ(a0 + a1 )| = 1 in
+Theorem 4.1 translates exactly into the condition Q ≃ S3 with S3 → S2
+the Seifert fibration with multiplicities 3 and 4 over two points [Orl72,
+Ch. 1]. Thus the quotient map is a map S6 → S3 .
+
+Remark 8.4. A very general smooth fiber F of X(u) → P1 , or equiva-
+lently Y → P1 , is not an abelian variety, but does admit a monodromy
+invariant Hodge class
+
+                         ξ ∈ H 1,1 (F ) ∩ H 2 (F, Z).
+
+The class ξ (see Lemma 7.2) is thus the first Chern class of a line
+bundle. Its type, as a symplectic form, is (1, 6). On F 0 H1 (F, C), the
+signature of the associated Hodge form iξ(v, v̄) is indefinite signature
+(1, 1). Thus we have a natural period mapping
+
+              P1 \ {0, 1, ∞} → Sp(Z4 , ξ)\Sp4 (R)/U(1, 1).
+24                                PHILIP ENGEL
+
+The difference with the abelian case is that the action of Sp(Z4 , ξ) on
+the domain of complex tori D := Sp4 (R)/U(1, 1) is not properly discon-
+tinuous. But, after all, the monodromy is not all of Sp(Z4 , ξ)—indeed,
+the monodromy preserves the filtration (3.1, 3.2) and so lies in a par-
+abolic subgroup PZ ⊂ Sp(Z4 , ξ). B. Klingler suggested the possibility
+that the monodromy group could act on D properly discontinuously (or
+at least does so, on an analytic open set containing the period image).
+Remark 8.5. The construction in Section 2 (and 3) works in signif-
+icantly greater generality than this one example. Indeed, consider an
+elliptic surface π : S → C with section, a line bundle M ∈ Pic(S) which
+lies in Pic0 of the general fiber, and a translation t ∈ Aut(S/C). Sup-
+pose Hom(t∗ M, M ) ≃ π ∗ OC (±E) for E an effective divisor (e.g. this
+holds when C ≃ P1 and t preserves the components of the Kodaira
+fibers). We get an associated linearization φ ∈ Aut(M ×,◦ ) of the prin-
+cipal Gm bundle M × over the complement of the fibers over E.
+    Then φ acquires either zeroes or poles along the inverse image of
+E, respectively. Scale φ by either a very small, or very large, complex
+number u ∈ C∗ , respectively. This action is properly discontinuous by
+the argument of Proposition 2.4 (since the linearization has only zeroes
+or only poles, some scaling is uniformly contracting or expanding).
+Furthermore, we can fill the quotient by a Mumford construction, as in
+Proposition 2.7. One may then perform log transforms, if desired. It is
+unclear what class of 6-manifolds can arise from such a construction.
+    A simple case of this is moving the zero of the linearization in the
+S construction above away from ∞ ∈ P1 . This has the effect, it
+  6
+
+appears, of contracting the (−1, −1)-curve in the Mumford fiber and
+then smoothing the resulting threefold ordinary double point. That
+is: X(u) (and Y ) admit a conifold transition.
+
+                                 References
+[ABGKR18] I. Agricola, G. Bazzoni, O. Goertsches, P. Konstantis, and S. Rol-
+   lenske, On the history of the Hopf problem, Differential Geom. Appl. 57, 1–9,
+   2018.
+[AC26] Claude and L. Alpöge, The (3, 4, ∞) modular family of 2-tori, completed
+    at its three special points, is a complex structure on S 6 , available at https:
+    //alpo.ge/s6.pdf, 2026.
+[BHPV04] W. Barth, K. Hulek, C. Peters, and A. Van de Ven, Compact Com-
+   plex Surfaces, second ed., Ergebnisse der Mathematik und ihrer Grenzgebiete,
+   vol. 4, Springer-Verlag, Berlin, 2004.
+[BS53] A. Borel and J.-P. Serre, Groupes de Lie et puissances réduites de Steenrod,
+    Amer. J. Math. 75, 409–448, 1953.
+                                   COMPLEX S6                                      25
+
+[Bry21] R. L. Bryant, S.-S. Chern’s study of almost-complex structures on the six-
+     sphere, Internat. J. Math. 32, no. 12, 2140006, 2021.
+[CDP98] F. Campana, J.-P. Demailly, and T. Peternell, The algebraic dimension
+     of compact complex threefolds with vanishing second Betti number, Compositio
+     Math. 112, 77–91, 1998.
+[Cle77] C. H. Clemens, Degeneration of Kähler manifolds, Duke Math. J. 44, 215–
+     290, 1977.
+[EFGMS25] P. Engel, S. Filipazzi, F. Greer, M. Mauri, and R. Svaldi, Boundedness
+     of some fibered K-trivial varieties, arXiv:2507.00973, 2025.
+[EGFS25] P. Engel, O. de Gaay Fortman, and S. Schreieder, Combinatorics and
+     Hodge theory of degenerations of abelian varieties: A survey of the Mumford
+     construction, arXiv:2507.15695, 2025.
+[Gra97] A. Gray, A property of a hypothetical complex structure on the six sphere,
+     Boll. Un. Mat. Ital. B (7) 11, suppl. fasc. 2, 251–255, 1997.
+[Hop48] H. Hopf, Zur Topologie der komplexen Mannigfaltigkeiten, in Studies and
+     Essays Presented to R. Courant on his 60th Birthday, Interscience Publishers,
+     New York, 167–185, 1948.
+[KM63] M. A. Kervaire and J. W. Milnor, Groups of homotopy spheres. I, Ann. of
+     Math. (2) 77, 504–537, 1963.
+[Mil65] J. Milnor, Lectures on the h-Cobordism Theorem, Princeton University
+     Press, Princeton, 1965.
+[Mir90] R. Miranda, Persson’s list of singular fibers for a rational elliptic surface,
+     Math. Z. 205, 191–211, 1990.
+[Mum72] D. Mumford, An analytic construction of degenerating abelian varieties
+     over complete rings, Compositio Math. 24, 239–272, 1972.
+[OS91] K. Oguiso and T. Shioda, The Mordell–Weil lattice of a rational elliptic
+     surface, Comment. Math. Univ. St. Pauli 40, 83–99, 1991.
+[Orl72] P. Orlik, Seifert Manifolds, Lecture Notes in Mathematics, vol. 291,
+     Springer-Verlag, Berlin–New York, 1972.
+[Ser90] F. Serrano, Divisors of bielliptic surfaces and embeddings in P4 , Math. Z.
+     203, 527–534, 1990.
+[Shi90] T. Shioda, On the Mordell–Weil lattices, Comment. Math. Univ. St. Pauli
+     39, 211–240, 1990.
+[Sma61] S. Smale, Generalized Poincaré’s conjecture in dimensions greater than
+     four, Ann. of Math. (2) 74, 391–406, 1961.
+[Yau93] S.-T. Yau, Open problems in geometry, in Differential Geometry: Partial
+     Differential Equations on Manifolds (Los Angeles, CA, 1990), Proc. Sympos.
+     Pure Math., vol. 54, part 1, Amer. Math. Soc., Providence, RI, 1–28, 1993.
+

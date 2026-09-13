@@ -1,0 +1,1302 @@
+[
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/01/019f52a37a2323b0c5ce1ce3e7d404eae6c9c31498fafea08b19612df36d0fdf.txt",
+      "sha256": "019f52a37a2323b0c5ce1ce3e7d404eae6c9c31498fafea08b19612df36d0fdf",
+      "bytes": 1015
+    },
+    "origins": [
+      {
+        "id": "95fa83d62345d94cbfb577708093ba3f6b9503af0c23642340f24f8eeaccfa63",
+        "document_sha": "019f52a37a2323b0c5ce1ce3e7d404eae6c9c31498fafea08b19612df36d0fdf",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 156,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "019f52a37a2323b0c5ce1ce3e7d404eae6c9c31498fafea08b19612df36d0fdf",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/07/0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3.txt",
+      "sha256": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+      "bytes": 2499
+    },
+    "origins": [
+      {
+        "id": "58f80215a8a590c0fb8573781aa260966b4ee73672c9618f527b4d0db31aa128",
+        "document_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 894,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "transform": "[]"
+      },
+      {
+        "id": "e6075185357eadca0853a6d33c980409a6c29038343dc93e841494ecc36bb6c4",
+        "document_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 894,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "transform": "[]"
+      },
+      {
+        "id": "e56c4d578c49842e48a8e33f0752709b990ebb66c43d64d5306073ccedab7a1e",
+        "document_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 894,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "0705c2d0482343081d3f32556d49f4931593b8cdc49b6aac4a289b406186ebe3",
+        "transform": "[]"
+      }
+    ],
+    "lines": 81
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/10/10a58d6815493a440e704dd53114c32dbf137e2bcf4ec42737c5ee5a504fba57.txt",
+      "sha256": "10a58d6815493a440e704dd53114c32dbf137e2bcf4ec42737c5ee5a504fba57",
+      "bytes": 1624
+    },
+    "origins": [
+      {
+        "id": "a28c74513cc5573f0be44d239437410ae7ec7b9e33746985cc9cfe163bfa7d91",
+        "document_sha": "10a58d6815493a440e704dd53114c32dbf137e2bcf4ec42737c5ee5a504fba57",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 107,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "10a58d6815493a440e704dd53114c32dbf137e2bcf4ec42737c5ee5a504fba57",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/11/11513ce6e7fff7abc70ac31498aba85648103459271cd287b39d2e87a0e6f8b5.txt",
+      "sha256": "11513ce6e7fff7abc70ac31498aba85648103459271cd287b39d2e87a0e6f8b5",
+      "bytes": 1408
+    },
+    "origins": [
+      {
+        "id": "a5211613080980f053eb2a9ffc8c272c3d1523bb4ce95395a5470fdc2877dff1",
+        "document_sha": "11513ce6e7fff7abc70ac31498aba85648103459271cd287b39d2e87a0e6f8b5",
+        "file_sha": "905f016c23841bfbae4811d49dc6d749bba264fbcace53df27e157aedae49f2e",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a4e3a507b29f42836.jsonl",
+        "record_seq": 120,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "11513ce6e7fff7abc70ac31498aba85648103459271cd287b39d2e87a0e6f8b5",
+        "transform": "[]"
+      }
+    ],
+    "lines": 36
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/13/13de2d41fca7308f5452ce7d1b56b3ddc43b02bdff37a56018c817021b5d5d7e.txt",
+      "sha256": "13de2d41fca7308f5452ce7d1b56b3ddc43b02bdff37a56018c817021b5d5d7e",
+      "bytes": 1513
+    },
+    "origins": [
+      {
+        "id": "9628cc200f15ed7b0e975d7417dcb66953e0271253e50341f8e7d6b0f29b63db",
+        "document_sha": "13de2d41fca7308f5452ce7d1b56b3ddc43b02bdff37a56018c817021b5d5d7e",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 101,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "13de2d41fca7308f5452ce7d1b56b3ddc43b02bdff37a56018c817021b5d5d7e",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/1c/1cd6c09d97ca015dbb1f5ad7dc7df8d035d89677037eeb446c8d5738abb6de99.txt",
+      "sha256": "1cd6c09d97ca015dbb1f5ad7dc7df8d035d89677037eeb446c8d5738abb6de99",
+      "bytes": 658
+    },
+    "origins": [
+      {
+        "id": "4b1a464309d65cca3ea77998f7ba6cfe572865afc5986de219060ff33724e538",
+        "document_sha": "1cd6c09d97ca015dbb1f5ad7dc7df8d035d89677037eeb446c8d5738abb6de99",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 7493,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "1cd6c09d97ca015dbb1f5ad7dc7df8d035d89677037eeb446c8d5738abb6de99",
+        "transform": "[]"
+      }
+    ],
+    "lines": 7
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/1e/1e14b07098cf6d6e5e0673e42f809dac8dda1c8fb174224fb94da02b42c42e3d.txt",
+      "sha256": "1e14b07098cf6d6e5e0673e42f809dac8dda1c8fb174224fb94da02b42c42e3d",
+      "bytes": 1891
+    },
+    "origins": [
+      {
+        "id": "2f707bfb03644b8874f203a8bf7bb1398edfa2df29db39a577029ec2ad356dcd",
+        "document_sha": "1e14b07098cf6d6e5e0673e42f809dac8dda1c8fb174224fb94da02b42c42e3d",
+        "file_sha": "c158fd46312966a3bc8b76cc775025d409f128cf403cf91122f7843ca2afc51f",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-ac1360cce37476b2f.jsonl",
+        "record_seq": 66,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "1e14b07098cf6d6e5e0673e42f809dac8dda1c8fb174224fb94da02b42c42e3d",
+        "transform": "[]"
+      }
+    ],
+    "lines": 61
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/22/225c31b797eba2894c49341b8341919562d213487e2e1dbc6b88dffbffc0e2ad.txt",
+      "sha256": "225c31b797eba2894c49341b8341919562d213487e2e1dbc6b88dffbffc0e2ad",
+      "bytes": 1135
+    },
+    "origins": [
+      {
+        "id": "5654efa0e55d295d108167f9d0937b23d01e2e99f12371020cc482117c162041",
+        "document_sha": "225c31b797eba2894c49341b8341919562d213487e2e1dbc6b88dffbffc0e2ad",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 108,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "225c31b797eba2894c49341b8341919562d213487e2e1dbc6b88dffbffc0e2ad",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/24/24dcb25b086decfcf6526301cbd343b2979672f235f2dd655ae652a11a9fb58b.txt",
+      "sha256": "24dcb25b086decfcf6526301cbd343b2979672f235f2dd655ae652a11a9fb58b",
+      "bytes": 1650
+    },
+    "origins": [
+      {
+        "id": "60a686deebf576b9b9c50567e6a9293811f3f5695c141a75e15ff21c37e7e36f",
+        "document_sha": "24dcb25b086decfcf6526301cbd343b2979672f235f2dd655ae652a11a9fb58b",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 258,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "24dcb25b086decfcf6526301cbd343b2979672f235f2dd655ae652a11a9fb58b",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/2e/2eefc4c38969102447c5aaeae1b1d210e97794f6aebe2a9e15ab1102db82a5b5.txt",
+      "sha256": "2eefc4c38969102447c5aaeae1b1d210e97794f6aebe2a9e15ab1102db82a5b5",
+      "bytes": 1903
+    },
+    "origins": [
+      {
+        "id": "85477c3625765ab0909b77eee024c280e1ec352bfa25be053413f2a084b0cb02",
+        "document_sha": "2eefc4c38969102447c5aaeae1b1d210e97794f6aebe2a9e15ab1102db82a5b5",
+        "file_sha": "2a35ac3437efce50e0dbb70584e6f80cc80eb1e727b4aaf1d528bac5ee6f75a0",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a6b3815e4127fad22.jsonl",
+        "record_seq": 133,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "2eefc4c38969102447c5aaeae1b1d210e97794f6aebe2a9e15ab1102db82a5b5",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/33/33c1398706aad44930c3dd00cf1ce92b013be2593d2d5f3dd38aed474143a7d4.txt",
+      "sha256": "33c1398706aad44930c3dd00cf1ce92b013be2593d2d5f3dd38aed474143a7d4",
+      "bytes": 1658
+    },
+    "origins": [
+      {
+        "id": "be60a400b8675ace533769cf5a2af738ef5d10157d0170bcb26c28f0ce474995",
+        "document_sha": "33c1398706aad44930c3dd00cf1ce92b013be2593d2d5f3dd38aed474143a7d4",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 160,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "33c1398706aad44930c3dd00cf1ce92b013be2593d2d5f3dd38aed474143a7d4",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/3e/3ebe7d4dc9156d1a3b1d3cc118e0b1913e370a205a74f060aad1df32813ed244.txt",
+      "sha256": "3ebe7d4dc9156d1a3b1d3cc118e0b1913e370a205a74f060aad1df32813ed244",
+      "bytes": 2012
+    },
+    "origins": [
+      {
+        "id": "87ac6bf74d8cf8710028a507ac772f69e36a14187d7b1eb53e11438c7ff2e665",
+        "document_sha": "3ebe7d4dc9156d1a3b1d3cc118e0b1913e370a205a74f060aad1df32813ed244",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 293,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "3ebe7d4dc9156d1a3b1d3cc118e0b1913e370a205a74f060aad1df32813ed244",
+        "transform": "[]"
+      }
+    ],
+    "lines": 58
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/42/4264b6cd7dc0fa41ac9c1caba97843fd34b481ed83718993fe5c33fc764cc986.txt",
+      "sha256": "4264b6cd7dc0fa41ac9c1caba97843fd34b481ed83718993fe5c33fc764cc986",
+      "bytes": 1168
+    },
+    "origins": [
+      {
+        "id": "d7cf264138ff2e3db27f142dc115cc714e92b5346a4e8b33751717a8bb8a0950",
+        "document_sha": "4264b6cd7dc0fa41ac9c1caba97843fd34b481ed83718993fe5c33fc764cc986",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 7495,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "4264b6cd7dc0fa41ac9c1caba97843fd34b481ed83718993fe5c33fc764cc986",
+        "transform": "[]"
+      }
+    ],
+    "lines": 25
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/46/469920f1c79337e4597599439cbc3a338471447ca562cdc33f402c0dd57c23c9.txt",
+      "sha256": "469920f1c79337e4597599439cbc3a338471447ca562cdc33f402c0dd57c23c9",
+      "bytes": 1019
+    },
+    "origins": [
+      {
+        "id": "92c530fcfb72c55959d5e2210f1512cbfde6c1be3e2bd8e97d0cdebda4366706",
+        "document_sha": "469920f1c79337e4597599439cbc3a338471447ca562cdc33f402c0dd57c23c9",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 167,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "469920f1c79337e4597599439cbc3a338471447ca562cdc33f402c0dd57c23c9",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/48/48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800.txt",
+      "sha256": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+      "bytes": 4403
+    },
+    "origins": [
+      {
+        "id": "d44e28dc227620919fba4613fcea5d6dffc20ec145904efa0f75ff89567cd70f",
+        "document_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 1215,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "transform": "[]"
+      },
+      {
+        "id": "e8a432050d5b1a5669a9066e143f4eca19cc457a59778428bc68a4ce97227d9b",
+        "document_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 1215,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "transform": "[]"
+      },
+      {
+        "id": "3ceee11608a17ddd1cc39e673400fd852968c2c5217b94ffe623024b8ac9863a",
+        "document_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 1215,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "48a0634041863ec83cbae3a89e63af1cbae658a4d6c9192e2655bddd9d152800",
+        "transform": "[]"
+      }
+    ],
+    "lines": 84
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/4c/4c9aa3dca09ee41090296cd29ddbed9e768da1684bb5bd4e80040e3d722c1e9f.txt",
+      "sha256": "4c9aa3dca09ee41090296cd29ddbed9e768da1684bb5bd4e80040e3d722c1e9f",
+      "bytes": 1844
+    },
+    "origins": [
+      {
+        "id": "7ae37161ce58b261bc1107358e575265babc7d879ea2ab7af836e135f54301db",
+        "document_sha": "4c9aa3dca09ee41090296cd29ddbed9e768da1684bb5bd4e80040e3d722c1e9f",
+        "file_sha": "6ccedf892093b872ca7ab5c6df0580fea6e3ac94e099522dd26f4b3a149e4c12",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a35e7058c9c4768f7.jsonl",
+        "record_seq": 206,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "4c9aa3dca09ee41090296cd29ddbed9e768da1684bb5bd4e80040e3d722c1e9f",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/52/5214404cd42e266f78863750aee20b3101ad2d05ec2196674cab6e8c0327b1c9.txt",
+      "sha256": "5214404cd42e266f78863750aee20b3101ad2d05ec2196674cab6e8c0327b1c9",
+      "bytes": 1013
+    },
+    "origins": [
+      {
+        "id": "495064d15118dbe46ac161207b2bb191550daba969835dc0ab51713cd3a500e5",
+        "document_sha": "5214404cd42e266f78863750aee20b3101ad2d05ec2196674cab6e8c0327b1c9",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 102,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "5214404cd42e266f78863750aee20b3101ad2d05ec2196674cab6e8c0327b1c9",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/52/52516769f3122d9639e0990c8b0b2ee8f08f4c13a75026ea134f10979622a2cb.txt",
+      "sha256": "52516769f3122d9639e0990c8b0b2ee8f08f4c13a75026ea134f10979622a2cb",
+      "bytes": 2240
+    },
+    "origins": [
+      {
+        "id": "c70dfa53a05441fc8fc811554412922de740109723a27475d57a132e32b1ff67",
+        "document_sha": "52516769f3122d9639e0990c8b0b2ee8f08f4c13a75026ea134f10979622a2cb",
+        "file_sha": "0512e8e25f02f05653c5fbae6aabec577051af310cb96f3b78990f51b98b86bb",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/a329a975-f99a-4ae3-9fdf-cf4dcf165b37/subagents/agent-a48ac85ab09494e83.jsonl",
+        "record_seq": 98,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "52516769f3122d9639e0990c8b0b2ee8f08f4c13a75026ea134f10979622a2cb",
+        "transform": "[]"
+      }
+    ],
+    "lines": 74
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/62/629a175841cb85bc8b247413621b00f888d386ade822623d7f0425f3b3177c48.txt",
+      "sha256": "629a175841cb85bc8b247413621b00f888d386ade822623d7f0425f3b3177c48",
+      "bytes": 1157
+    },
+    "origins": [
+      {
+        "id": "7cd7ce946a64c01f521fea556eff6b2218e0aef2e5e859a0fd537a0cd2fcd94a",
+        "document_sha": "629a175841cb85bc8b247413621b00f888d386ade822623d7f0425f3b3177c48",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 276,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "629a175841cb85bc8b247413621b00f888d386ade822623d7f0425f3b3177c48",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/66/66173a22320576680060807858be3a9766f3908395f9d14b857c5175b649d46f.txt",
+      "sha256": "66173a22320576680060807858be3a9766f3908395f9d14b857c5175b649d46f",
+      "bytes": 1658
+    },
+    "origins": [
+      {
+        "id": "490d6cf1bcc3c2e576e90a8fe5b47b78be53d95508ef473e0e3a99507afa704e",
+        "document_sha": "66173a22320576680060807858be3a9766f3908395f9d14b857c5175b649d46f",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 155,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "66173a22320576680060807858be3a9766f3908395f9d14b857c5175b649d46f",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/67/678566c10633fb467f8965d10270b045b1cf8c308d84890319009764ad5acc2c.txt",
+      "sha256": "678566c10633fb467f8965d10270b045b1cf8c308d84890319009764ad5acc2c",
+      "bytes": 1880
+    },
+    "origins": [
+      {
+        "id": "f5066b4ef1ad235e638b331df766399599451a2736f4f6775bfbc23ed3566b03",
+        "document_sha": "678566c10633fb467f8965d10270b045b1cf8c308d84890319009764ad5acc2c",
+        "file_sha": "01eb39dafc6750437ae2b8d2aeb804edec3b674bc3603fac81f1610b0298bfcf",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-abf69930cc1785be3.jsonl",
+        "record_seq": 387,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "678566c10633fb467f8965d10270b045b1cf8c308d84890319009764ad5acc2c",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/68/68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209.txt",
+      "sha256": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+      "bytes": 11673
+    },
+    "origins": [
+      {
+        "id": "c0aef8c915b65944aa000c758d728da9cbd09a91fa77a87b3bd4c885ce6e28d6",
+        "document_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 4093,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "transform": "[]"
+      },
+      {
+        "id": "9eba45294a3157c2d92e0845045cd3df88f6783ce76e4ce2f6d1936403c98d7f",
+        "document_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 4093,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "transform": "[]"
+      },
+      {
+        "id": "bf1ea2214c8ddb086d5376954de72275b3dece5aeec2b60fe7dbb65401d8b375",
+        "document_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 4093,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "68d8cb81758607c343defccc2c5b4c6c89000b9be098c29986ca5a4f2f3dd209",
+        "transform": "[]"
+      }
+    ],
+    "lines": 118
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/6a/6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41.txt",
+      "sha256": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+      "bytes": 2451
+    },
+    "origins": [
+      {
+        "id": "874c1ee622e8d6ccc3d214a63709f22b8cf2c38285226695944e9458287f277d",
+        "document_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 840,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "transform": "[]"
+      },
+      {
+        "id": "6ea73996acda5f585f7de3c44647cd3c913e3d07e3885652c8441f274c20e8aa",
+        "document_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 840,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "transform": "[]"
+      },
+      {
+        "id": "01ba6b6378d3515442fa01533b3aa27df5a9d8462304b761e9e63be92d8ef6d6",
+        "document_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 840,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6a26f754a526d1cc46eeb34da91c1cb9d4c21bb4736777c8fb8273da35e53f41",
+        "transform": "[]"
+      }
+    ],
+    "lines": 80
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/6c/6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3.txt",
+      "sha256": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+      "bytes": 14723
+    },
+    "origins": [
+      {
+        "id": "becefa4fed2226fc1849f244ff3dfa6f9315467b00ca404ff55ea954b4e6e815",
+        "document_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 4113,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "transform": "[]"
+      },
+      {
+        "id": "927654cb2d584c6328e806c0433d8e26f21d94c7031a1e2034376ffb9882c9a0",
+        "document_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 4113,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "transform": "[]"
+      },
+      {
+        "id": "e610ba0458dfcfff50b2bda98991642b9fb9cb85efcf849fa1f881c9b7bf277e",
+        "document_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 4113,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "6c905b6a7a07e885a050a3d5be1703a4abeaa2d547a769916472ea35ab8f93e3",
+        "transform": "[]"
+      }
+    ],
+    "lines": 227
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/71/71f8f699859e7b49d159c986244e855002c098d0a14dc21cdec4307383cedb3f.txt",
+      "sha256": "71f8f699859e7b49d159c986244e855002c098d0a14dc21cdec4307383cedb3f",
+      "bytes": 1513
+    },
+    "origins": [
+      {
+        "id": "e2900918f2babb9a9312cb82499b3189befd07f2b74c6b23ad292cbc2416a450",
+        "document_sha": "71f8f699859e7b49d159c986244e855002c098d0a14dc21cdec4307383cedb3f",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 149,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "71f8f699859e7b49d159c986244e855002c098d0a14dc21cdec4307383cedb3f",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/76/76095adfb118b4c5db41a904c3036bb65cbd18ef3e05b8208a3bdbe1929f8856.txt",
+      "sha256": "76095adfb118b4c5db41a904c3036bb65cbd18ef3e05b8208a3bdbe1929f8856",
+      "bytes": 1777
+    },
+    "origins": [
+      {
+        "id": "6594da6985ea876eaa56e42ffd7c86b6466b3c45f8219ae940a8e10cd4b064a7",
+        "document_sha": "76095adfb118b4c5db41a904c3036bb65cbd18ef3e05b8208a3bdbe1929f8856",
+        "file_sha": "6ccedf892093b872ca7ab5c6df0580fea6e3ac94e099522dd26f4b3a149e4c12",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a35e7058c9c4768f7.jsonl",
+        "record_seq": 211,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "76095adfb118b4c5db41a904c3036bb65cbd18ef3e05b8208a3bdbe1929f8856",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/79/798b19373552c03cedb48ec07bee355d7be21bafc0ef52ec68e6cb4263a6940b.txt",
+      "sha256": "798b19373552c03cedb48ec07bee355d7be21bafc0ef52ec68e6cb4263a6940b",
+      "bytes": 1806
+    },
+    "origins": [
+      {
+        "id": "b7985ecbff5bdc28b55e0a2537b5239ec1287aa34e791849a3bd0255bc94a41b",
+        "document_sha": "798b19373552c03cedb48ec07bee355d7be21bafc0ef52ec68e6cb4263a6940b",
+        "file_sha": "0512e8e25f02f05653c5fbae6aabec577051af310cb96f3b78990f51b98b86bb",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/a329a975-f99a-4ae3-9fdf-cf4dcf165b37/subagents/agent-a48ac85ab09494e83.jsonl",
+        "record_seq": 203,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "798b19373552c03cedb48ec07bee355d7be21bafc0ef52ec68e6cb4263a6940b",
+        "transform": "[]"
+      }
+    ],
+    "lines": 53
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/7b/7be91b89022601760ba1d6cf172120f8a59d0549afb80db1d5b660c1aae39653.txt",
+      "sha256": "7be91b89022601760ba1d6cf172120f8a59d0549afb80db1d5b660c1aae39653",
+      "bytes": 1659
+    },
+    "origins": [
+      {
+        "id": "c6ad32569fa3717d61146545f6f715fa5c61089442f04a7357680c545d659ab4",
+        "document_sha": "7be91b89022601760ba1d6cf172120f8a59d0549afb80db1d5b660c1aae39653",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 165,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "7be91b89022601760ba1d6cf172120f8a59d0549afb80db1d5b660c1aae39653",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/7e/7e24fefb356de4922c029c07d9bd6a5f873bc8985c8fa4256adf35b6dfe112fc.txt",
+      "sha256": "7e24fefb356de4922c029c07d9bd6a5f873bc8985c8fa4256adf35b6dfe112fc",
+      "bytes": 1732
+    },
+    "origins": [
+      {
+        "id": "ec11ceaae58709c84624ba42cd1efc155ee9afad8b57a24e5153604dceee4bda",
+        "document_sha": "7e24fefb356de4922c029c07d9bd6a5f873bc8985c8fa4256adf35b6dfe112fc",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 255,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "7e24fefb356de4922c029c07d9bd6a5f873bc8985c8fa4256adf35b6dfe112fc",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/7e/7eb601b9c0e1e25ec2606b33d862b87ae102c31e1900caa4b96fc5f4a66a5e38.txt",
+      "sha256": "7eb601b9c0e1e25ec2606b33d862b87ae102c31e1900caa4b96fc5f4a66a5e38",
+      "bytes": 5564
+    },
+    "origins": [
+      {
+        "id": "3a3e2d8438af70aa0e5bb8036046b4a65deb54956951792d31d85420d7c64ec5",
+        "document_sha": "7eb601b9c0e1e25ec2606b33d862b87ae102c31e1900caa4b96fc5f4a66a5e38",
+        "file_sha": "bcc6c931d8acdad9d1fbda2a99340c44cb1d410412cb893c73c943de51ef5e50",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/a329a975-f99a-4ae3-9fdf-cf4dcf165b37.jsonl",
+        "record_seq": 1405,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "7eb601b9c0e1e25ec2606b33d862b87ae102c31e1900caa4b96fc5f4a66a5e38",
+        "transform": "[]"
+      }
+    ],
+    "lines": 100
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/87/87b432130c818f80ac78cbdb1030498f422f531556589bb5a9c35459e4c590f0.txt",
+      "sha256": "87b432130c818f80ac78cbdb1030498f422f531556589bb5a9c35459e4c590f0",
+      "bytes": 1729
+    },
+    "origins": [
+      {
+        "id": "937ee289547ba9778956684161ee66a0bf28f749474a74f80c97bf04f267f607",
+        "document_sha": "87b432130c818f80ac78cbdb1030498f422f531556589bb5a9c35459e4c590f0",
+        "file_sha": "6ccedf892093b872ca7ab5c6df0580fea6e3ac94e099522dd26f4b3a149e4c12",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a35e7058c9c4768f7.jsonl",
+        "record_seq": 319,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "87b432130c818f80ac78cbdb1030498f422f531556589bb5a9c35459e4c590f0",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/8b/8b10df2feee7d13a7e0884f182debe79ca2aa9e82940181ff35a93d5d91fb123.txt",
+      "sha256": "8b10df2feee7d13a7e0884f182debe79ca2aa9e82940181ff35a93d5d91fb123",
+      "bytes": 7338
+    },
+    "origins": [
+      {
+        "id": "53ba29ded36d839dafdeca7ab53d0ebd950d4267e792d81d49a72486f10bf58f",
+        "document_sha": "8b10df2feee7d13a7e0884f182debe79ca2aa9e82940181ff35a93d5d91fb123",
+        "file_sha": "bcc6c931d8acdad9d1fbda2a99340c44cb1d410412cb893c73c943de51ef5e50",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/a329a975-f99a-4ae3-9fdf-cf4dcf165b37.jsonl",
+        "record_seq": 748,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "8b10df2feee7d13a7e0884f182debe79ca2aa9e82940181ff35a93d5d91fb123",
+        "transform": "[]"
+      }
+    ],
+    "lines": 108
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/8d/8dd0deb6d8d4dc9d3c2320791fe8dcac4ce556da8c0be9d790e315df01a1b047.txt",
+      "sha256": "8dd0deb6d8d4dc9d3c2320791fe8dcac4ce556da8c0be9d790e315df01a1b047",
+      "bytes": 1654
+    },
+    "origins": [
+      {
+        "id": "d3b38fe74ba79bae42bd2d3a3f1ac3549483215a27689ad20da89e45341d5278",
+        "document_sha": "8dd0deb6d8d4dc9d3c2320791fe8dcac4ce556da8c0be9d790e315df01a1b047",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 146,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "8dd0deb6d8d4dc9d3c2320791fe8dcac4ce556da8c0be9d790e315df01a1b047",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/90/90463f43c3e1e454e572cacf219d185abf1eab513f59d3866939719e8e77ffe8.txt",
+      "sha256": "90463f43c3e1e454e572cacf219d185abf1eab513f59d3866939719e8e77ffe8",
+      "bytes": 1019
+    },
+    "origins": [
+      {
+        "id": "b268af38fdc3b3c7fe37784d09dd2ea459fa113777c9796862882ebc83c4389d",
+        "document_sha": "90463f43c3e1e454e572cacf219d185abf1eab513f59d3866939719e8e77ffe8",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 161,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "90463f43c3e1e454e572cacf219d185abf1eab513f59d3866939719e8e77ffe8",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/98/989b2733226d9c07e72c807fdb57de8d17db492688fe009ba494f026f5ec6cf2.txt",
+      "sha256": "989b2733226d9c07e72c807fdb57de8d17db492688fe009ba494f026f5ec6cf2",
+      "bytes": 1686
+    },
+    "origins": [
+      {
+        "id": "3d53ebe74b2644086451b75447d2e6e906cf5569734841cac54739ef5b699547",
+        "document_sha": "989b2733226d9c07e72c807fdb57de8d17db492688fe009ba494f026f5ec6cf2",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 33,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "989b2733226d9c07e72c807fdb57de8d17db492688fe009ba494f026f5ec6cf2",
+        "transform": "[]"
+      }
+    ],
+    "lines": 35
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/a4/a435cbf3a738629837366ac4521982b72f721063cc468d6989c66e3785807410.txt",
+      "sha256": "a435cbf3a738629837366ac4521982b72f721063cc468d6989c66e3785807410",
+      "bytes": 1097
+    },
+    "origins": [
+      {
+        "id": "78eb4c201d8f9679540ae2fa78368ce2d6dd2bf32f839fe9cb76843947b26a31",
+        "document_sha": "a435cbf3a738629837366ac4521982b72f721063cc468d6989c66e3785807410",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 128,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "a435cbf3a738629837366ac4521982b72f721063cc468d6989c66e3785807410",
+        "transform": "[]"
+      }
+    ],
+    "lines": 26
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/a7/a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a.txt",
+      "sha256": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+      "bytes": 2409
+    },
+    "origins": [
+      {
+        "id": "5627bd3cfa03a058c06fc0286cb93e4f2fb02377e067b6b76a7b4a3ddb24428c",
+        "document_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 933,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "transform": "[]"
+      },
+      {
+        "id": "45f85641885cd04a875ec0f36ca6e17fa28fba0340ad3810e7b369fcf9503f62",
+        "document_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 933,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "transform": "[]"
+      },
+      {
+        "id": "267231f73a37e275970d0768f4f3d0413d4174cbcbaa43fe8e4358ca6e0aa5dc",
+        "document_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 933,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "a7af2b07319470b4e6a2f4cad3a31754a0f996ac02006ba3d26e867930909d1a",
+        "transform": "[]"
+      }
+    ],
+    "lines": 73
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/a9/a9bbbb3ef9764df676905f1792b90470e8c32ee6ec9144db04cdd3d8da0aeca1.txt",
+      "sha256": "a9bbbb3ef9764df676905f1792b90470e8c32ee6ec9144db04cdd3d8da0aeca1",
+      "bytes": 1719
+    },
+    "origins": [
+      {
+        "id": "d0ee9c539c26b31ac6853d72149a58e24d395c8520f3bd8ec0406aadb3933f1d",
+        "document_sha": "a9bbbb3ef9764df676905f1792b90470e8c32ee6ec9144db04cdd3d8da0aeca1",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 320,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "a9bbbb3ef9764df676905f1792b90470e8c32ee6ec9144db04cdd3d8da0aeca1",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/b2/b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67.txt",
+      "sha256": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+      "bytes": 24198
+    },
+    "origins": [
+      {
+        "id": "d6c4eae1a416edeaf111b865f03d2b5c8f784a499c9e63154f5a623f3d94ffd0",
+        "document_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 3831,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "transform": "[]"
+      },
+      {
+        "id": "a9140d6d7aabf2d2a215f72ba441382104871e457f1926bfed87c82a344b8d17",
+        "document_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 3831,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "transform": "[]"
+      },
+      {
+        "id": "21853064180799c8e0b6cad8abf132b5e32b186472bef5edafd123e05965496f",
+        "document_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 3831,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "b2f03b69e2184e289b398776bbd9651a92602febd350b112bae5a0ca04119a67",
+        "transform": "[]"
+      }
+    ],
+    "lines": 331
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/b8/b858c5d053636e62ad5ef3675aa847ea8254780f69576c7696d33c8257498ea9.txt",
+      "sha256": "b858c5d053636e62ad5ef3675aa847ea8254780f69576c7696d33c8257498ea9",
+      "bytes": 1858
+    },
+    "origins": [
+      {
+        "id": "6946c4b65ed3edcd7aea431fa14ff9084b5e210eb1690b44394957e9602944de",
+        "document_sha": "b858c5d053636e62ad5ef3675aa847ea8254780f69576c7696d33c8257498ea9",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 238,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "b858c5d053636e62ad5ef3675aa847ea8254780f69576c7696d33c8257498ea9",
+        "transform": "[]"
+      }
+    ],
+    "lines": 60
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/bb/bb4fd0df2ad90a97d59d42be1120fb4ecb047d82fb2c05953ea2aa0f6f3253aa.txt",
+      "sha256": "bb4fd0df2ad90a97d59d42be1120fb4ecb047d82fb2c05953ea2aa0f6f3253aa",
+      "bytes": 1691
+    },
+    "origins": [
+      {
+        "id": "32954888b021ae61e0524402d0d9b1475e668e8ce88d5085337fea6a78dae2e6",
+        "document_sha": "bb4fd0df2ad90a97d59d42be1120fb4ecb047d82fb2c05953ea2aa0f6f3253aa",
+        "file_sha": "c158fd46312966a3bc8b76cc775025d409f128cf403cf91122f7843ca2afc51f",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-ac1360cce37476b2f.jsonl",
+        "record_seq": 68,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "bb4fd0df2ad90a97d59d42be1120fb4ecb047d82fb2c05953ea2aa0f6f3253aa",
+        "transform": "[]"
+      }
+    ],
+    "lines": 29
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/c8/c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd.txt",
+      "sha256": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+      "bytes": 1975
+    },
+    "origins": [
+      {
+        "id": "3c1922ea831c7cb1d86774311686e5c44bb109ef9ed4103a16046cd56ff8b5bc",
+        "document_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 3548,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "transform": "[]"
+      },
+      {
+        "id": "93ca67f0ac6f2104f63e2a57613bdf617db9d97d0addce83e5460731c69fbd6a",
+        "document_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 3548,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "transform": "[]"
+      },
+      {
+        "id": "eb422a35bca79e8c90096a2c3f3ccb17e8b8ade68cf2708dc8013218f82628cc",
+        "document_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 3548,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "c849cbeb7899dad4cad97a20bf957e42ac66a31960cc64d51dfd9721680ab7fd",
+        "transform": "[]"
+      }
+    ],
+    "lines": 35
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/ca/cabe2675e04192449ff9a6ede8efd2f4ed4f3443cdc3ee6b52c3ea05833ad492.txt",
+      "sha256": "cabe2675e04192449ff9a6ede8efd2f4ed4f3443cdc3ee6b52c3ea05833ad492",
+      "bytes": 1517
+    },
+    "origins": [
+      {
+        "id": "9f6d30fc4e7992a0a7c6dd74bdf4e71214b76c1617407b0b6276718a8951597c",
+        "document_sha": "cabe2675e04192449ff9a6ede8efd2f4ed4f3443cdc3ee6b52c3ea05833ad492",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 155,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "cabe2675e04192449ff9a6ede8efd2f4ed4f3443cdc3ee6b52c3ea05833ad492",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/cb/cb0fc6e93153a7b43bc6144c7cabe1a643b173e011281f2738007e8c17686b9b.txt",
+      "sha256": "cb0fc6e93153a7b43bc6144c7cabe1a643b173e011281f2738007e8c17686b9b",
+      "bytes": 2004
+    },
+    "origins": [
+      {
+        "id": "cf823bdc70376479d2c8cc2e25e198a593c54d92233c80411729a4690925c5d8",
+        "document_sha": "cb0fc6e93153a7b43bc6144c7cabe1a643b173e011281f2738007e8c17686b9b",
+        "file_sha": "18de6e195413239a293b48d5aee98644c6090ac2a4db6a0eab3fa83d71c17d2a",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-af39d3d6ed6257b7d.jsonl",
+        "record_seq": 71,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "cb0fc6e93153a7b43bc6144c7cabe1a643b173e011281f2738007e8c17686b9b",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/cd/cd082f4a7ee471eabc5aab5652b6d9847ed89cb41bbc8aad1ec46b254cf5ebb7.txt",
+      "sha256": "cd082f4a7ee471eabc5aab5652b6d9847ed89cb41bbc8aad1ec46b254cf5ebb7",
+      "bytes": 1730
+    },
+    "origins": [
+      {
+        "id": "cfe79bbe5560d5e0f1d1fc531461be7a303869409528b886f1e7678d6c19f6df",
+        "document_sha": "cd082f4a7ee471eabc5aab5652b6d9847ed89cb41bbc8aad1ec46b254cf5ebb7",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 256,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "cd082f4a7ee471eabc5aab5652b6d9847ed89cb41bbc8aad1ec46b254cf5ebb7",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/d8/d8e4e42aa9c2d05422f632ddf735909250f02a50ed620e61f95528902e6f194f.txt",
+      "sha256": "d8e4e42aa9c2d05422f632ddf735909250f02a50ed620e61f95528902e6f194f",
+      "bytes": 2424
+    },
+    "origins": [
+      {
+        "id": "024f38678fd17c22d3d5ee7dfc04619ea5feeaca5214a1611c7d4ab3695ad456",
+        "document_sha": "d8e4e42aa9c2d05422f632ddf735909250f02a50ed620e61f95528902e6f194f",
+        "file_sha": "dbf6bb6a62d21f408287dd696503d6f12e679587d60daec588d8228478d8e71c",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/a329a975-f99a-4ae3-9fdf-cf4dcf165b37/subagents/agent-a9255b088d039c6d6.jsonl",
+        "record_seq": 58,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "d8e4e42aa9c2d05422f632ddf735909250f02a50ed620e61f95528902e6f194f",
+        "transform": "[]"
+      }
+    ],
+    "lines": 75
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/dd/dd90132ba942464b76331a905edd8d605073046d9624608bac6788b72438dd7c.txt",
+      "sha256": "dd90132ba942464b76331a905edd8d605073046d9624608bac6788b72438dd7c",
+      "bytes": 1924
+    },
+    "origins": [
+      {
+        "id": "f9d16f2b5d5390a57ce1eb7e547c453ac8c1315f0186a38c2caeb2f5857b9d78",
+        "document_sha": "dd90132ba942464b76331a905edd8d605073046d9624608bac6788b72438dd7c",
+        "file_sha": "5b47bd44ee28d4558dfc3d6f9deb39e1ff013da049a05088874b9a617c60cc10",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-abe19c49ab1c83175.jsonl",
+        "record_seq": 64,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "dd90132ba942464b76331a905edd8d605073046d9624608bac6788b72438dd7c",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/e3/e3fc8946ff59b13471b20a616e63cd9f76e56d13dd68c190a65b38ec28c4573d.txt",
+      "sha256": "e3fc8946ff59b13471b20a616e63cd9f76e56d13dd68c190a65b38ec28c4573d",
+      "bytes": 1597
+    },
+    "origins": [
+      {
+        "id": "f239999f538bf3d5107a0997ce167bbbe42c06d59fc8422148d3c1c06ec4b8c1",
+        "document_sha": "e3fc8946ff59b13471b20a616e63cd9f76e56d13dd68c190a65b38ec28c4573d",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 127,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "e3fc8946ff59b13471b20a616e63cd9f76e56d13dd68c190a65b38ec28c4573d",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/e5/e571ead9201ade7dd1db706aecfb2cd513e25043f268792750b67c6a2a86e28e.txt",
+      "sha256": "e571ead9201ade7dd1db706aecfb2cd513e25043f268792750b67c6a2a86e28e",
+      "bytes": 1582
+    },
+    "origins": [
+      {
+        "id": "ea715eca28c9c7b682f7505704ee3db3918a7d2aac2ee7a19c1f686130b454ca",
+        "document_sha": "e571ead9201ade7dd1db706aecfb2cd513e25043f268792750b67c6a2a86e28e",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 198,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "e571ead9201ade7dd1db706aecfb2cd513e25043f268792750b67c6a2a86e28e",
+        "transform": "[]"
+      }
+    ],
+    "lines": 46
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/e5/e581d395653aa09cc9354d39db7efc06654847ffcfbfc09a5978c9d9774f808d.txt",
+      "sha256": "e581d395653aa09cc9354d39db7efc06654847ffcfbfc09a5978c9d9774f808d",
+      "bytes": 1897
+    },
+    "origins": [
+      {
+        "id": "bec012ee16f75a7f8787b619a7f293d06d1c0d74e5885f0a1a67f7c270834d03",
+        "document_sha": "e581d395653aa09cc9354d39db7efc06654847ffcfbfc09a5978c9d9774f808d",
+        "file_sha": "c158fd46312966a3bc8b76cc775025d409f128cf403cf91122f7843ca2afc51f",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-ac1360cce37476b2f.jsonl",
+        "record_seq": 174,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "e581d395653aa09cc9354d39db7efc06654847ffcfbfc09a5978c9d9774f808d",
+        "transform": "[]"
+      }
+    ],
+    "lines": 61
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/e9/e9a6de151954713314dbcbc3f5e494c922463d2c7e8b1d92d841a2156e4dc8a5.txt",
+      "sha256": "e9a6de151954713314dbcbc3f5e494c922463d2c7e8b1d92d841a2156e4dc8a5",
+      "bytes": 1823
+    },
+    "origins": [
+      {
+        "id": "ce2e371dab63eb9837f7cfc793d195de4b77539f3228be3c35d481d292de95aa",
+        "document_sha": "e9a6de151954713314dbcbc3f5e494c922463d2c7e8b1d92d841a2156e4dc8a5",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 191,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "e9a6de151954713314dbcbc3f5e494c922463d2c7e8b1d92d841a2156e4dc8a5",
+        "transform": "[]"
+      }
+    ],
+    "lines": 60
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/ea/eafa7b4ac23e661fa9ee13d393245cf5ec75a674cd4e2b804f18973053d6b5a2.txt",
+      "sha256": "eafa7b4ac23e661fa9ee13d393245cf5ec75a674cd4e2b804f18973053d6b5a2",
+      "bytes": 1517
+    },
+    "origins": [
+      {
+        "id": "a19e05602805496c51fe087cf75345c56810e718a846243b87f12e547de754f0",
+        "document_sha": "eafa7b4ac23e661fa9ee13d393245cf5ec75a674cd4e2b804f18973053d6b5a2",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 166,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "eafa7b4ac23e661fa9ee13d393245cf5ec75a674cd4e2b804f18973053d6b5a2",
+        "transform": "[]"
+      }
+    ],
+    "lines": 54
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/ee/ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7.txt",
+      "sha256": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+      "bytes": 2419
+    },
+    "origins": [
+      {
+        "id": "8b0fbe4b27fa4dfe2e0b0d7abf707b50f260b023da70952f9296003a9ecf1df6",
+        "document_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "file_sha": "3283ebd8fcb743c32b6480fbbfb96b60aabc0c51c6304a6086cba46bb6bf7b8e",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/worktrees/theory-synthesis-20260909/materials/raw/2026-09-09-programme-session/session.jsonl",
+        "record_seq": 290,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "transform": "[]"
+      },
+      {
+        "id": "f6e8b72ee3051419c177e318ff5a31272f57d0a3ef0b5d883fc7d07df97fd95f",
+        "document_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "file_sha": "be1f912adfa6fd8af16ba1438f17c773b7b9f560f8cb1ba4a4dd70aa1cc99734",
+        "path": "/Users/raeez/mathematics/worktrees/frontier-live-snapshot-20260913/materials/raw/2026-09-13-live-snapshot/tree/Users/raeez/mathematics/coordination/materials/raw/2026-09-08-programme-session/session.jsonl",
+        "record_seq": 290,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "transform": "[]"
+      },
+      {
+        "id": "5f27f13a686f6f6041674c0928e81eb767314c34c8321ffae0f57dbc806251d6",
+        "document_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "file_sha": "e387ddf78fd8c095e75b4e571eeb9b308fc07ef5b7af9da9ec92ec1b679c5175",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6.jsonl",
+        "record_seq": 290,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "ee5b1314b80999db425212f65766205a0cf64125e942e3e4771f62100fa13dd7",
+        "transform": "[]"
+      }
+    ],
+    "lines": 74
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/ef/efca1931865333a54f606e4c45146260945453f96c73d37ca00662a9ee6f2b19.txt",
+      "sha256": "efca1931865333a54f606e4c45146260945453f96c73d37ca00662a9ee6f2b19",
+      "bytes": 1445
+    },
+    "origins": [
+      {
+        "id": "04afa1bad167ab780daa81b7ea3884d81a883f452abf84e2c9f5965d5fdf7658",
+        "document_sha": "efca1931865333a54f606e4c45146260945453f96c73d37ca00662a9ee6f2b19",
+        "file_sha": "c6d0391d3326f5b67aae7677712fe61d6c4be68bc7285a22cf5219b5b08575b1",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a026b7e460e877e19.jsonl",
+        "record_seq": 110,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "efca1931865333a54f606e4c45146260945453f96c73d37ca00662a9ee6f2b19",
+        "transform": "[]"
+      }
+    ],
+    "lines": 34
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/f5/f5239735c04b735ab3e325da3e07cde00ce18d9ee1c8544ced4d3fe32398e67e.txt",
+      "sha256": "f5239735c04b735ab3e325da3e07cde00ce18d9ee1c8544ced4d3fe32398e67e",
+      "bytes": 1963
+    },
+    "origins": [
+      {
+        "id": "b6f67028cc9d16d0c54302c91a831b21281faa59adc7cfc86c1d47c39530308f",
+        "document_sha": "f5239735c04b735ab3e325da3e07cde00ce18d9ee1c8544ced4d3fe32398e67e",
+        "file_sha": "6ccedf892093b872ca7ab5c6df0580fea6e3ac94e099522dd26f4b3a149e4c12",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-a35e7058c9c4768f7.jsonl",
+        "record_seq": 145,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "f5239735c04b735ab3e325da3e07cde00ce18d9ee1c8544ced4d3fe32398e67e",
+        "transform": "[]"
+      }
+    ],
+    "lines": 55
+  },
+  {
+    "text": {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-catalogue-20260913/reports/research/COVERAGE-2026-09-13/semantic/documents/fc/fcef3a7a4b631138510bcbc99d4b902050ec5c3b4ed1c64580d8fe017c597982.txt",
+      "sha256": "fcef3a7a4b631138510bcbc99d4b902050ec5c3b4ed1c64580d8fe017c597982",
+      "bytes": 1922
+    },
+    "origins": [
+      {
+        "id": "f75e6a702112c5777979bb811c9c2da8bab1028afde316ee33291db3845f84fd",
+        "document_sha": "fcef3a7a4b631138510bcbc99d4b902050ec5c3b4ed1c64580d8fe017c597982",
+        "file_sha": "c158fd46312966a3bc8b76cc775025d409f128cf403cf91122f7843ca2afc51f",
+        "path": "/Users/raeez/mathematics/worktrees/research-intake-20260912/materials/raw/2026-09-13-live-sessions/snapshot-01/42bfd6bb-cdef-4a18-9062-3174e6391af6/subagents/agent-ac1360cce37476b2f.jsonl",
+        "record_seq": 299,
+        "pointer": "$record_envelope_v1",
+        "leaf_sha": "fcef3a7a4b631138510bcbc99d4b902050ec5c3b4ed1c64580d8fe017c597982",
+        "transform": "[]"
+      }
+    ],
+    "lines": 61
+  }
+]
