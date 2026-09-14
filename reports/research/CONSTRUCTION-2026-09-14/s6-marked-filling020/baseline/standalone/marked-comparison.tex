@@ -1,0 +1,255 @@
+\section{The quotient with the prescribed positive transport}
+
+Keep the lattice, the oriented basis $(u_0,u_1,u_2,e_4)$, and the
+cell groups $D_k$ already defined. Now take $R=P^{-1}$ as the deck
+action on $X$, with the same translation $a=e_4/3$. Define
+\begin{equation}\label{eq:positive-quotient}
+ N^+=(X\times S^1_t\times D)/
+ \bigl((x,t,s)\sim(Rx,t+1/3,\zeta s)\bigr),
+ \qquad q[x,t,s]=s^3.
+\end{equation}
+This action is free by its fourth coordinate, just as for $N$.
+Here $t$ is again the fibre circle coordinate; $q$ denotes the
+coordinate on the quotient disk. Let $G_P$ be the mapping torus
+with relation $[x,\tau+1]=[Px,\tau]$.
+
+\begin{theorem}\label{thm:positive-geometry}
+There is an orientation-preserving diffeomorphism
+\begin{equation}\label{eq:positive-product}
+ \Phi^+:N^+\longrightarrow G_P\times D,
+ \qquad [x,t,s]\longmapsto([x,3t],e^{-2\pi it}s).
+\end{equation}
+In these coordinates $q=e^{2\pi i\tau}z^3$.
+The positively oriented boundary, with fibre marking at $q=1$,
+is identified with $B_M$, where $M=P\times I$, by
+\begin{equation}\label{eq:positive-native-boundary}
+ j:B_M\longrightarrow\partial N^+,
+ \qquad [x,t,v]\longmapsto[x,t+v/3,e^{2\pi iv/3}].
+\end{equation}
+The fibre map and the boundary map followed by retraction are
+\begin{equation}\label{eq:positive-geometric-maps}
+ f^+(x,t)=[x,3t],\qquad
+ k^+([x,t,v])=[x,3t+v].
+\end{equation}
+Thus the positive transport in this marking is exactly $T$.
+\end{theorem}
+\begin{proof}
+Under the quotient generator,
+$[Rx,3t+1]=[PRx,3t]=[x,3t]$, and the factors
+$e^{-2\pi i/3}$ and $\zeta$ cancel in the disk coordinate.
+The formula is therefore well defined. A lift of $\tau$ gives
+$t=\tau/3$ and $s=e^{2\pi i\tau/3}z$; changing the lift is exactly
+the quotient relation. This proves that the formula and its inverse
+are smooth, including at $z=0$. Its real Jacobian has positive
+factor $3$ in the $t$ direction and a rotation in the disk.
+The formula for $q$ follows by cubing $s$.
+
+At $v=1$ in \eqref{eq:positive-native-boundary}, applying the inverse
+deck generator gives $[Px,t,1]$. This is the endpoint identification
+of $B_M$, and $qj=e^{2\pi iv}$. Under $\Phi^+$ the map is
+$([x,3t+v],e^{-2\pi it})$. The two circle coordinates have matrix
+$\left(\begin{smallmatrix}3&1\\-1&0\end{smallmatrix}\right)$
+of determinant one. Solving these coordinates as before gives a
+smooth inverse compatible with the mapping-torus relations.
+The boundary orientation is therefore preserved. Setting the disk
+coordinate equal to zero gives both maps in
+\eqref{eq:positive-geometric-maps}.
+\end{proof}
+
+No reversal of the positive base circle was used. For comparison,
+the map $\mathcal J:B_M\to B_{M^{-1}}$ given by
+$\mathcal J([x,t,v])=[Px,t,1-v]$ satisfies
+$j_+\mathcal J=j_-$ for the earlier quotient $N$. It reverses the
+base circle. There cannot be a comparison between these two earlier
+markings covering the identity on the oriented base and inducing
+the identity on fibre homology: it would intertwine $P$ and $R$
+by the identity. But $Pu_0=u_1$ and $Ru_0=u_2$.
+
+\section{Integral maps for positive transport}
+
+The cell model for the core of $N^+$ is
+\begin{equation}\label{eq:Q-positive}
+ Q^+_n=D_n\oplus D_{n-1},\qquad
+ d_+(x,y)=((P_{n-1}-I)y,0).
+\end{equation}
+The fibre complex remains $C$ and its boundary mapping torus remains
+$B$, with differential $(a,b)\mapsto((M-I)b,0)$.
+Set $S=I+P+P^2=I+R+R^2$ in each exterior degree.
+
+\begin{theorem}\label{thm:positive-chains}
+With the interval-first cell orientation, the geometric maps
+\eqref{eq:positive-geometric-maps} induce
+\begin{equation}\label{eq:positive-FHK}
+ \begin{split}
+ F^+_n(x,y)&=(x,S_{n-1}y),\\
+ H^+_n(x,y)&=(0,x),\\
+ K^+_n(x,y,z,w)&=(x,S_{n-1}y+z).
+ \end{split}
+\end{equation}
+They satisfy
+\begin{equation}\label{eq:positive-identities}
+ d_+F^+=0,\qquad d_+H^++H^+d_C=F^+(M-I),
+ \qquad d_+K^+=K^+d_B.
+\end{equation}
+These are maps on the actual fibre, core and boundary cell complexes,
+not merely maps on their homology.
+\end{theorem}
+\begin{proof}
+The cover $f^+$ traverses three core intervals in the positive
+direction. The successive transports are $I,P,P^2$, which give
+$S$ on the suspended summand and the identity on fibre cells.
+The homotopy $[x,3t+v]$ traverses one positive core interval on
+a cell at $t=0$. Its chain is $\sigma x$, giving $H^+(x,0)=(0,x)$.
+On the $t$-prism of a $k$-cell, subdivide the $(t,v)$ square along
+integer values of $3t+v$. Each image lies in the product of a
+permuted $k$-cell and a core interval, hence in the $(k+1)$-skeleton.
+Its degree-$(k+2)$ cellular component is zero. This proves the second
+formula on every summand. The subdivisions agree on faces, so these
+are cellular representatives of the covering and its stated homotopy.
+Combining their fibre and boundary-interval components gives $K^+$.
+
+For the chain identities, $(P-I)S=S(P-I)=0$ and
+$d_+H^+(x,y)=((P-I)x,0)=F^+(M-I)(x,y)$.
+The equality for $K^+$ follows by applying these two identities to
+the fibre and suspended boundary summands separately.
+\end{proof}
+
+All entries through degree four can be read without an implicit
+exterior operation. The groups $D_0,D_3$ have rank one and
+$P_0=P_3=1$; $D_1,D_2$ have rank three and
+\[
+ P_1=P_2=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix},
+ \qquad S_0=S_3=3,\qquad
+ S_1=S_2=\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}.
+\]
+Thus $Q^+$ has ranks $1,4,6,4,1$, with only $d_{+,2}$ and
+$d_{+,3}$ nonzero, each using the displayed $P-I$ on its suspended
+triple. In particular $F^+_4$ is multiplication by three, $H^+_3$
+sends the top fibre cell $\omega$ to its core prism, and $H^+_4=0$.
+This also specifies all maps in the requested adjacent degrees.
+
+\begin{proposition}\label{prop:positive-splitting}
+The positive boundary map has chain section
+$s^+_n(x,b)=(x,0,b,0)$. Its kernel consists exactly of
+$(0,y,-Sy,w)$, with differential $(y,w)\mapsto((P-I)w,0)$.
+The map $(a,b)\mapsto(-a,b)$ identifies $Q^+[1]$ with this kernel.
+Consequently $B\cong Q^+\oplus Q^+[1]$ as integral chain complexes.
+\end{proposition}
+\begin{proof}
+The formula for $K^+$ gives $K^+s^+=I$. Since the boundary of
+its third component is $(P-I)b$, $s^+$ commutes with boundaries.
+The equation $K^+=0$ forces $x=0,z=-Sy$. Its boundary has
+second component $(P-I)w$ and third component zero, because
+$(P-I)S=0$. This proves the kernel formula. On $Q^+[1]$ the
+differential is $-d_+$; multiplication by $-1$ on its first
+summand changes this to the displayed kernel differential.
+All changes of basis are integral and invertible.
+\end{proof}
+
+The section is the actual normal-circle section $z=1$ in
+$G_P\times S^1_z$: a positive core interval traverses the positive
+boundary interval, with no inverse transport. The kernel carries
+the extra normal circle. The image of $P-I$, like that of $R-I$,
+is the full sum-zero lattice in each cyclic triple, and its kernel
+is generated by the sum. Hence the proof of
+\eqref{eq:Q-homology} applies with $P$ in place of $R$: explicitly
+$H_n(Q^+)=\coker(P_n-I)\oplus\ker(P_{n-1}-I)$, with the same
+integral generators $1,[u_0],[w_0],\omega$ and $1,U,W,\omega$.
+The covering uses exactly the same $S$. Every homology matrix in
+\eqref{eq:F-homology} therefore gives $F^+_*$ in these stated bases.
+Its kernels are the indicated sum-zero lattices, and its only
+nonzero cokernels are $\mathbb Z/3\mathbb Z$ in degrees one and four.
+The groups of $N^+$ are torsion-free, of ranks $1,2,2,2,1$.
+The boundary groups are torsion-free, of ranks $1,3,4,4,3,1$,
+and $K^+_*$ is the split projection. Dualizing these free groups
+gives specialization indices $3,1,1,3$ and degree-one image
+$\mathbb Ze_3^*\oplus3\mathbb Ze_4^*$ in the unchanged fibre marking.
+
+\section{The affine comparison required by a prescribed filling}
+
+A marking of homology does not specify an origin of a torus.
+In period coordinates an affine transformation has the form
+$x\mapsto Ax+b$, where $b$ is a point of the torus. Changing the
+origin by $c$ changes its translation to $b+(A-I)c$.
+It does not change its homology matrix. A comparison of fillings
+with a chosen boundary section must retain that section as well
+as the integral periods.
+
+\begin{proposition}\label{prop:marked-comparison}
+Let a proper smooth torus group family over the $s$ disk have
+the marked periods \eqref{eq:period-lattice}. Suppose its original
+deck transformation over $s\mapsto\zeta s$ preserves its zero
+section, has matrix $A=T^{-1}$, and the chosen origin on the
+punctured quotient is the descent of that zero section. Twist the
+deck transformation by the section $e_4(s)/3$. Then its quotient
+is smoothly identified with $N^+$, with the same positive fibre
+marking and boundary map \eqref{eq:positive-native-boundary}.
+In particular \eqref{eq:Q-positive} and
+\eqref{eq:positive-FHK} give its integral filling data.
+\end{proposition}
+\begin{proof}
+The periods trivialize the real Lie algebras and exponentiate to
+smooth group identifications with $\mathbb R^4/\mathbb Z^4$.
+The deck matrix is locally constant, hence $A$ throughout the disk.
+Preservation of zero makes its affine translation zero. The twisted
+action is therefore $(x,s)\mapsto(Ax+e_4/3,\zeta s)$.
+In the oriented $u$ basis this is \eqref{eq:positive-quotient}.
+On the lifted positive boundary path $s=e^{2\pi iv/3}$,
+the logarithmic translation
+$(\log s)/(2\pi i)\,e_4$ is $ve_4/3$. It vanishes at $v=0$
+and gives exactly \eqref{eq:positive-native-boundary}.
+All subsequent geometric and chain comparisons have already been
+constructed for this quotient. No reversal or change of periods is
+involved.
+\end{proof}
+
+The zero-section hypothesis is substantive. To see its effect while
+retaining the complex torus \eqref{eq:period-lattice}, let
+$b\in\{0,1,2\}$ and define three holomorphic deck actions
+\begin{equation}\label{eq:affine-ambiguity}
+ \rho_b(x,s)=(Ax+be_4/3,\zeta s).
+\end{equation}
+All have order three, all have the same linear action on the full
+integral lattice, and all induce the same action on the elliptic
+coordinate. The descended punctured families are isomorphic as
+marked torus families. In fact, on the universal logarithm cover put
+\[
+ \sigma_b(s)=\frac{b\log s}{2\pi i}\,e_4\in\mathbb C^2/\Lambda.
+\]
+A change of logarithm adds the integral period $be_4$, so this is a
+single-valued holomorphic torus section on the punctured disk.
+Since $Ae_4=e_4$, it satisfies
+$\sigma_b(\zeta s)=A\sigma_b(s)+be_4/3$.
+Translation by $\sigma_b$ consequently intertwines $\rho_0$ and
+$\rho_b$, induces the identity on homology, and at $s=1$ fixes the
+marked fibre point. It carries the descended zero section to a
+section of the other punctured quotient.
+
+Nevertheless twisting each action by the same specified $a=e_4/3$
+produces translation $(b+1)e_4/3$. The cases $b=0,1$ are free,
+whereas $b=2$ has fixed points on the central fibre: the translation
+is then an integral period and the origin is fixed by $A$.
+Thus positive integral monodromy, the elliptic deck calculation,
+the increment $a$, and even an identified punctured family do not
+imply freeness or select an affine filling. The examples establish
+this precise failure of inference; they do not identify any one
+of these alternative descents with a separately prescribed geometric
+construction.
+
+There is a further ambiguity even when the affine central action is
+fixed. For an integer $r$, the formula
+\[
+ L_r([x,t,v])=[x,t+rv,v]
+\]
+defines a diffeomorphism of $B_M$ covering the identity on the
+positive base and restricting to the identity on its marked fibre
+at $v=0$. The endpoint condition holds because $r$ is integral
+and $M$ fixes the $t$ circle. However the two boundary maps $j$
+and $jL_r$ have distinct filling effects. Their retractions are
+$[x,3t+v]$ and $[x,3t+(3r+1)v]$.
+On the loop with $x=t=0$, they give respectively $[\tau]$ and
+$(3r+1)[\tau]$ in $H_1(G_P;\mathbb Z)$, where $[\tau]$ has
+infinite order. Thus an unspecified change of section along the
+meridian changes a genuine attachment map while preserving the
+linear monodromy and the marked starting fibre.
+

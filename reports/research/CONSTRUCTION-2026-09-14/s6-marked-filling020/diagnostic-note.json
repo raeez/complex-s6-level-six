@@ -1,0 +1,10 @@
+{
+  "initial_source_delta_check": "failed",
+  "cause": "Patch tool removed one final blank line from each edited source.",
+  "repair": "Append the original final newline after asserting this is the only extra delta.",
+  "final_source_delta_check": "pass",
+  "expansion_diagnostic": {
+    "initial": "failed by one leading newline because the diagnostic sliced after the abstract newline",
+    "correction": "Slice immediately after the end-abstract command, retaining every body byte. Exact native equality passes. No source mutation."
+  }
+}

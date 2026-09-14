@@ -1,0 +1,93 @@
+[
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/Makefile",
+    "candidate": "research-candidates/s6-marked-filling020/Makefile",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "cba01f5363b16851f5cd2924c578dacd58ec34cd04d76d16edef82b4ef8d3bca",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/Makefile"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/build.py",
+    "candidate": "research-candidates/s6-marked-filling020/build.py",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "4998fc0f8daff3d2b5f35d7a6d999f4aa2ceb20f979e6b5659b6d9de94dac0e4",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/build.py"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/check_filling.py",
+    "candidate": "research-candidates/s6-marked-filling020/check_filling.py",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "bd69a2bfa3dc432686bd0002b3416140a64fbd2a3e1c0c66945c6ace0eee247c",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/check_filling.py"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/check_marked.py",
+    "candidate": "research-candidates/s6-marked-filling020/check_marked.py",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "b57314aee99cd04a40d3604ee07c0acac7e6dc37eb4399596a2209453de11fb6",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/check_marked.py"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/divisor-comparison.tex",
+    "candidate": "research-candidates/s6-marked-filling020/divisor-comparison.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "8bcbc9e727443d0f72fccf06798b7600baaf11876a5cebcda64d92e5a5c92bf0",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/divisor-comparison.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/marked-comparison.tex",
+    "candidate": "research-candidates/s6-marked-filling020/marked-comparison.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "9ff42a44db54893bb01b4de69af392435243a620c3f0eabb29a268ddee56a951",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/marked-comparison.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/paper.tex",
+    "candidate": "research-candidates/s6-marked-filling020/paper.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "5e6debf1965cbaa2a9311eaa4b5d6674251cae2af3f24c71f4e1d0c02892d995",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/paper.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/positive-descent.tex",
+    "candidate": "research-candidates/s6-marked-filling020/positive-descent.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "e2c14458da79ff242af683fd72d2326ab338e168c19d6c93cb1741851df711dc",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/positive-descent.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone/raeez-math-template.sty",
+    "candidate": "research-candidates/s6-marked-filling020/raeez-math-template.sty",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-marked-filling002/raeez-math-template.sty"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/native/marked-filling.tex",
+    "candidate": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "1fab02bccdd5858c95b4d5609c3b0b0bf38d5f78818e735c64a9d248a6f61260",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/marked-filling.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/native/native-gluing.tex",
+    "candidate": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/native-gluing.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "ce2eefc2bc1ecd7afa143990caa5f3587711f1cd72523fe0a0c758b388ef0fb8",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/native-gluing.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/native/paper.tex",
+    "candidate": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/paper.tex",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "ef7b5ec0282e710e4632673a24952f0e7e7696d0cb1409aaebed0f5a26898c32",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/paper.tex"
+  },
+  {
+    "baseline": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/native/raeez-math-template.sty",
+    "candidate": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/raeez-math-template.sty",
+    "decision": "source-only file at new assigned path; retain exact bytes and symlink target",
+    "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+    "source": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/raeez-math-template.sty"
+  }
+]

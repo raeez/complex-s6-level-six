@@ -1,0 +1,27 @@
+{
+  "automated_source_scan": "prebuild-reader-scan.json",
+  "pdf_text_and_metadata": [
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/candidate-standalone-text.txt",
+      "sha256": "8ef8fcc0af5648cb8c737c151f2c276f757ce9ad8247864a9a32f92bccfc863f",
+      "hits": []
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/candidate-standalone-pdf-info.txt",
+      "sha256": "ffa9fb29715d78a4bec70cb44ff2b8a7ff718e62e57dabdb45328266670ef6f2",
+      "hits": []
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/candidate-native-text.txt",
+      "sha256": "46d2a9a566b98b382b76b78b0f6c51b2ea466fff8184d2b6c8354b71655f8403",
+      "hits": []
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/candidate-native-pdf-info.txt",
+      "sha256": "9ce643595c048769efa8fdd18099c48f7510fa45c222b8413613a06bf0786aea",
+      "hits": []
+    }
+  ],
+  "visible_inspection": "visual-inspection.json",
+  "status": "Writer diagnostics pass for the specified correction; root acceptance pending."
+}

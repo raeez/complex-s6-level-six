@@ -1,0 +1,46 @@
+{
+  "baseline-standalone": {
+    "pages": 17,
+    "passes": 4,
+    "pdf_sha256": "720248d2a14b29402ca7cf946ebe035ef7ba05c9934c08b4d38010d719c47614",
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled."
+    ],
+    "equals_frozen002_pdf": true
+  },
+  "baseline-native": {
+    "pages": 45,
+    "passes": 4,
+    "pdf_sha256": "3af180c516f339b81b0792fbcb57b7147cebf31691ee375a4d11519a3d2bca2a",
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled.",
+      "Package amsrefs Warning: The form \\cite{...}*{...} is recommended"
+    ],
+    "equals_frozen002_pdf": true
+  },
+  "candidate-standalone": {
+    "pages": 17,
+    "passes": 4,
+    "pdf_sha256": "2198759c18d02c72728d943891e25cf7a9bffddcfe95f8e63acb976be02ab418",
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled."
+    ],
+    "aux_equals_baseline": true,
+    "changed_text_pages": [
+      12
+    ]
+  },
+  "candidate-native": {
+    "pages": 45,
+    "passes": 4,
+    "pdf_sha256": "371b51d557d0096d17140f92d85f52aad036c34bfa56d458a54bc80050dcd637",
+    "warnings": [
+      "Package epstopdf Warning: Shell escape feature is not enabled.",
+      "Package amsrefs Warning: The form \\cite{...}*{...} is recommended"
+    ],
+    "aux_equals_baseline": true,
+    "changed_text_pages": [
+      39
+    ]
+  }
+}

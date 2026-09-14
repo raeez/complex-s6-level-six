@@ -1,0 +1,872 @@
+{
+  "archive": {
+    "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/preserved/candidate002-complete.zip",
+    "sha256": "8c57a10adfcf3e9a3c024e911ca8b442f94c6ddb929bdfb6c9370baa5d7fc16f"
+  },
+  "files": [
+    {
+      "bytes": 101,
+      "path": "research-candidates/s6-marked-filling002/Makefile",
+      "sha256": "cba01f5363b16851f5cd2924c578dacd58ec34cd04d76d16edef82b4ef8d3bca"
+    },
+    {
+      "bytes": 2052,
+      "path": "research-candidates/s6-marked-filling002/build.py",
+      "sha256": "4998fc0f8daff3d2b5f35d7a6d999f4aa2ceb20f979e6b5659b6d9de94dac0e4"
+    },
+    {
+      "bytes": 8070,
+      "path": "research-candidates/s6-marked-filling002/check_filling.py",
+      "sha256": "bd69a2bfa3dc432686bd0002b3416140a64fbd2a3e1c0c66945c6ace0eee247c"
+    },
+    {
+      "bytes": 6278,
+      "path": "research-candidates/s6-marked-filling002/check_marked.py",
+      "sha256": "b57314aee99cd04a40d3604ee07c0acac7e6dc37eb4399596a2209453de11fb6"
+    },
+    {
+      "bytes": 13622,
+      "path": "research-candidates/s6-marked-filling002/divisor-comparison.tex",
+      "sha256": "8bcbc9e727443d0f72fccf06798b7600baaf11876a5cebcda64d92e5a5c92bf0"
+    },
+    {
+      "bytes": 11964,
+      "path": "research-candidates/s6-marked-filling002/marked-comparison.tex",
+      "sha256": "9ff42a44db54893bb01b4de69af392435243a620c3f0eabb29a268ddee56a951"
+    },
+    {
+      "bytes": 12590,
+      "path": "research-candidates/s6-marked-filling002/out/paper.aux",
+      "sha256": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3"
+    },
+    {
+      "bytes": 48367,
+      "path": "research-candidates/s6-marked-filling002/out/paper.fls",
+      "sha256": "898bdc3b8222de574f8df1097579ab910c695e8c9a8235e8bf47c013324199ce"
+    },
+    {
+      "bytes": 0,
+      "path": "research-candidates/s6-marked-filling002/out/paper.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 75995,
+      "path": "research-candidates/s6-marked-filling002/out/paper.log",
+      "sha256": "e58224ae87672b871d787de7f596cc8fe3e69eec44a942aede25f6dd171b4af3"
+    },
+    {
+      "bytes": 209292,
+      "path": "research-candidates/s6-marked-filling002/out/paper.pdf",
+      "sha256": "720248d2a14b29402ca7cf946ebe035ef7ba05c9934c08b4d38010d719c47614"
+    },
+    {
+      "bytes": 19843,
+      "path": "research-candidates/s6-marked-filling002/out/pass-01.log",
+      "sha256": "0835c25278ba762b6814334a741cf6f34a01bfc6c7ea87a051052d091f72e580"
+    },
+    {
+      "bytes": 19696,
+      "path": "research-candidates/s6-marked-filling002/out/pass-02.log",
+      "sha256": "414f9aecb4836b46e160bdf2704cde6ae7aad5663a8758aa4b19a344da5b9807"
+    },
+    {
+      "bytes": 19614,
+      "path": "research-candidates/s6-marked-filling002/out/pass-03.log",
+      "sha256": "bf67e89ad8e14fbbe820b093b558b2a54a7df13b4627e829b78b82063f75c331"
+    },
+    {
+      "bytes": 19614,
+      "path": "research-candidates/s6-marked-filling002/out/pass-04.log",
+      "sha256": "bf67e89ad8e14fbbe820b093b558b2a54a7df13b4627e829b78b82063f75c331"
+    },
+    {
+      "bytes": 24418,
+      "path": "research-candidates/s6-marked-filling002/paper.tex",
+      "sha256": "5e6debf1965cbaa2a9311eaa4b5d6674251cae2af3f24c71f4e1d0c02892d995"
+    },
+    {
+      "bytes": 4707,
+      "path": "research-candidates/s6-marked-filling002/positive-descent.tex",
+      "sha256": "e2c14458da79ff242af683fd72d2326ab338e168c19d6c93cb1741851df711dc"
+    },
+    {
+      "bytes": 43118,
+      "kind": "symlink",
+      "path": "research-candidates/s6-marked-filling002/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "target": "/Users/raeez/latex-template/worktrees/manuscript-source-clean-20260914/coordination/source-clean-20260914/candidate002/source/raeez-math-template.sty"
+    },
+    {
+      "bytes": 7663,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/README.md",
+      "sha256": "786b769aaaded9a87841e115f3e5023215d94d1b6e6e60b1adaff0c0800f4a79"
+    },
+    {
+      "bytes": 3793,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/argument-dispositions.json",
+      "sha256": "37fb770181f2345c470df11f41699326785eb7ccd3b6bafced35da546c47e731"
+    },
+    {
+      "bytes": 101,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/Makefile",
+      "sha256": "cba01f5363b16851f5cd2924c578dacd58ec34cd04d76d16edef82b4ef8d3bca"
+    },
+    {
+      "bytes": 2052,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/build.py",
+      "sha256": "4998fc0f8daff3d2b5f35d7a6d999f4aa2ceb20f979e6b5659b6d9de94dac0e4"
+    },
+    {
+      "bytes": 8070,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/check_filling.py",
+      "sha256": "bd69a2bfa3dc432686bd0002b3416140a64fbd2a3e1c0c66945c6ace0eee247c"
+    },
+    {
+      "bytes": 5597,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/paper.aux",
+      "sha256": "d98037274c723e4c3fe430ae48e7dbdf22154afcf83ec8cc0059047b33aeebe5"
+    },
+    {
+      "bytes": 47571,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/paper.fls",
+      "sha256": "0be0540540928a1e4321e689823fa927740a19ed6b651717e712322459624fe7"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/paper.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 75289,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/paper.log",
+      "sha256": "e681d33db494b7a01cb736b3cd8fc37156b58a8e4553b7ce51e241e6e86c7a17"
+    },
+    {
+      "bytes": 155158,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/paper.pdf",
+      "sha256": "9dc71a9907e9b14029ae66f705c783149ca08a4c94234fcbac22cd943019c0eb"
+    },
+    {
+      "bytes": 21277,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/pass-01.log",
+      "sha256": "7ff720902c5e2b2962b83ea7f0876159fe1311a04a2f15e6b8a216da018b32b5"
+    },
+    {
+      "bytes": 19723,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/pass-02.log",
+      "sha256": "939e7dc3de7725238b990b48b8825f78c23f5611eb0e2af6829156047e9972ea"
+    },
+    {
+      "bytes": 18885,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/pass-03.log",
+      "sha256": "cac76bc589d40a18ec49914d09b32e92196ca7474748ba0582bc115567134ead"
+    },
+    {
+      "bytes": 18885,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/out/pass-04.log",
+      "sha256": "cac76bc589d40a18ec49914d09b32e92196ca7474748ba0582bc115567134ead"
+    },
+    {
+      "bytes": 24084,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/paper.tex",
+      "sha256": "069ee10bcc7ac2cedd2d9b503936333ccaefdafef3eddf4dca4ec1e99111ecf2"
+    },
+    {
+      "bytes": 43118,
+      "kind": "symlink",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "target": "/Users/raeez/latex-template/worktrees/manuscript-source-clean-20260914/coordination/source-clean-20260914/candidate002/source/raeez-math-template.sty"
+    },
+    {
+      "bytes": 1590,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-build.json",
+      "sha256": "f6458988327b5676f7a503292db1e09e2d7aca806cad67d821b79519e29ae922"
+    },
+    {
+      "bytes": 28032,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/paper-text.txt",
+      "sha256": "7cda4ca6fb89777c0bb1baab18f0cf733aa8af2ee3b91ddd71d1bc7afe1d4eec"
+    },
+    {
+      "bytes": 1222,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/pdf-fonts.txt",
+      "sha256": "16c589224afc737a3e720cc2fec1bd40ddf1d96c83f547ea1c2aa8a78d902a43"
+    },
+    {
+      "bytes": 678,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/pdf-info.txt",
+      "sha256": "cf07ce7832ba10b487a92e44b90f68a933edd8e23f9a73ea6c1014ea2152b6b2"
+    },
+    {
+      "bytes": 234786,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-1.png",
+      "sha256": "95edc5dd93031c10112146e41cf0bd3e4c2e030393e2295077872ee38e09de4c"
+    },
+    {
+      "bytes": 302738,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-2.png",
+      "sha256": "887ebbc759ce7a3955bd732d3c37c8ac4830c22b8616713fa2e3ec96a0d904a6"
+    },
+    {
+      "bytes": 266444,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-3.png",
+      "sha256": "fd5828ab6b0f1edbdfc248fa6d26b89dd42478f782abe1d516562f6d7de5adc2"
+    },
+    {
+      "bytes": 263472,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-4.png",
+      "sha256": "fd7640aeb91922f598e160cffbf55617585ceef84b66ec31cf5700a24fb8287d"
+    },
+    {
+      "bytes": 260918,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-5.png",
+      "sha256": "49028bd69d44580a63a70fffb3ccf4a01629c888c70bf26cd81e7af76638b2e5"
+    },
+    {
+      "bytes": 252289,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-6.png",
+      "sha256": "2fe56b862a362019068c4760b2f41844bfe90f37126d878300185cba948702d0"
+    },
+    {
+      "bytes": 258700,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-7.png",
+      "sha256": "bf214443d27fc04de4af596ff2554be38309ef1545b433eff9781edc834f760c"
+    },
+    {
+      "bytes": 246143,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/baseline-evidence/render/page-8.png",
+      "sha256": "bd15bf9f7246a18ccac607d6369ff7da23fbfb86d3cd213ea3cb9e061bd84426"
+    },
+    {
+      "bytes": 197703,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/build-inputs.json",
+      "sha256": "8b60fae43c7eaa95141e1d96de859f0d60ea927b6b1a770a0a4283c0f3d336b6"
+    },
+    {
+      "bytes": 1560,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/build.json",
+      "sha256": "ce0befcce060c8785bb0266912150c01e5d309198745df8f3e72a357670f799b"
+    },
+    {
+      "bytes": 45288,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/candidate-manifest.json",
+      "sha256": "2a8df4bdac7cc8f916e055c02a083fff26fd2175f5ab7da5a5e2288962242a0b"
+    },
+    {
+      "bytes": 1133,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/commands-and-versions.json",
+      "sha256": "9b2e34598b2ba5649143bde42fca77486bba76ec0aefd9d58496df16ec3d7bc7"
+    },
+    {
+      "bytes": 41771,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/exact-results.json",
+      "sha256": "7aa437ddd76e9d8d774a47c7bd81abd9177748d3b98a10a31f2e84d2cfb5bbe3"
+    },
+    {
+      "bytes": 31,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/final-render-changes.json",
+      "sha256": "cf763607a20a43cfb836fce6eb5a6f274ded782d333f5ec571747f5b7695406b"
+    },
+    {
+      "bytes": 8045,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/freeze.py",
+      "sha256": "bc7d9dc715879c36f0a0b9c869b45ea4801200f86ec24a23e72615690df6c1de"
+    },
+    {
+      "bytes": 1010,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/gate-checks.json",
+      "sha256": "7c419344ed671d7c0e3bfb10c1abf98a66a1b3d17a852a87f91cd36ee3952020"
+    },
+    {
+      "bytes": 1606,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/build.json",
+      "sha256": "4b2a679725c3b2286dd9f11411b8716a662c496cc3c4d034a9cc273c163af634"
+    },
+    {
+      "bytes": 31,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/final-render-changes.json",
+      "sha256": "6af6908ce1740cd7dee0e95a520a3bb411a35e1cecf685ad0c061b14d73c1d5d"
+    },
+    {
+      "bytes": 164900,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/paper-text.txt",
+      "sha256": "964415e638eca89352b7dcebf1b14db908ba8b06d23f02c268e2d9f8a1476f1c"
+    },
+    {
+      "bytes": 810,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/patch-check.json",
+      "sha256": "b4d319e8c1777cd3b70e66d2a7da9ecaa9575c4b32e10150947851d0a1d6b5ce"
+    },
+    {
+      "bytes": 1504,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/pdf-fonts.txt",
+      "sha256": "e5a1226c09ca4c176d709db4ee2d1eeef077201a5a1b93bc2a32dd3ea48e3d9e"
+    },
+    {
+      "bytes": 677,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/pdf-info.txt",
+      "sha256": "141d335467cb7f4bd257682342cb390720cca2e15a969ab556f73148a0ebd23f"
+    },
+    {
+      "bytes": 3743,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/pre-propagation-render-hashes.json",
+      "sha256": "dcebcebdc91a460688542a429d371170c51b29b5bc4c45af283dd26528c80bcf"
+    },
+    {
+      "bytes": 547369,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-01.png",
+      "sha256": "a73a3e73940e4f0d015b5783e2653833019b02d501e0b44f50ffbc58dc8a5645"
+    },
+    {
+      "bytes": 493393,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-02.png",
+      "sha256": "30f0e122b857ea2a19d72add4364fe4153947091579d76beef34afc4e436e23d"
+    },
+    {
+      "bytes": 609797,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-03.png",
+      "sha256": "12ee7ad99e0a940f1dffcf1b4ddf643edd47c0a2f05fa7c8f61f1b850fad65c8"
+    },
+    {
+      "bytes": 669370,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-04.png",
+      "sha256": "9efb24ceb614664ce8c4bf409bc08cea38ee16a816e3dc67eeb0b22f686db645"
+    },
+    {
+      "bytes": 742849,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-05.png",
+      "sha256": "9c88d72409375971867c7abd28259121a51fd69f30da882aff7c37697842f5c7"
+    },
+    {
+      "bytes": 740207,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-06.png",
+      "sha256": "498ee8a06eddfef448b9ca8b78e6c4b6efbfadcf93e360a30dfa982d400cb9db"
+    },
+    {
+      "bytes": 725211,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-07.png",
+      "sha256": "098a8aa2bc06da93d7c6d5aa00824da248134cb6445e64dca1ca6084739c798f"
+    },
+    {
+      "bytes": 703039,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-08.png",
+      "sha256": "adbdf0b351ce94a9ffbb3ec93aa18ada704a760f78c5720dc65148ecb8ecb0d4"
+    },
+    {
+      "bytes": 654453,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-09.png",
+      "sha256": "7e0b5d78afc3d11f59d1cfef5b532e061d30ab2fe9e232776c8a7a3ee7aa576c"
+    },
+    {
+      "bytes": 770539,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-10.png",
+      "sha256": "a00cf2d02ded3279eaa075af5a911fca160f99bee2b59d285c6c505305320a93"
+    },
+    {
+      "bytes": 815593,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-11.png",
+      "sha256": "d8cdf96d5446f09e1fc4e232c4c4d53ef2c994d20169e79345131b6b1c12767d"
+    },
+    {
+      "bytes": 115711,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/contact-12.png",
+      "sha256": "ee2d16fa1c3e944df0e2aa20eea1773af70bbe55f7f08d8dda23c67567deef4e"
+    },
+    {
+      "bytes": 252282,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-01.png",
+      "sha256": "0806d5ed4bedce223df508c2ad9c326754b5a2530421d90c95831d773ca5a151"
+    },
+    {
+      "bytes": 168615,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-02.png",
+      "sha256": "35d169e7baf33b3522e1ce2b706a358faa45e596a4c0e55128b4f2d4ceeaaae8"
+    },
+    {
+      "bytes": 173193,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-03.png",
+      "sha256": "c74d1484a68d1d1bbe0d8e52c67e56e6eec9a5a656dbbe373cab15b64aae10c7"
+    },
+    {
+      "bytes": 274021,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-04.png",
+      "sha256": "868611b859406953dbfe357dceb5f4351f785732f5e9ea7211f94a57509966ec"
+    },
+    {
+      "bytes": 196081,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-05.png",
+      "sha256": "33b4f78353c04ab20de9ef008ac023099a3ba1a7998a84f08949fb10e37ace5f"
+    },
+    {
+      "bytes": 198234,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-06.png",
+      "sha256": "399c455cfb14a3c9173b334ed4cb9b5efb0cf436bd229e7ceee0943f05cfc2c0"
+    },
+    {
+      "bytes": 212909,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-07.png",
+      "sha256": "cb8d82e1968f13f50f0a41d21e2a8d3e0b83137532b8b8835a29994d3b158314"
+    },
+    {
+      "bytes": 206791,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-08.png",
+      "sha256": "191db70537e2e451e98774120930e34233d3cf69112d9cdd5650da7ed646d5f1"
+    },
+    {
+      "bytes": 185235,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-09.png",
+      "sha256": "d93d72ea70cf34dba735a68331f0ab1695cd186650e8269b5f4f3c74b35235de"
+    },
+    {
+      "bytes": 235068,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-10.png",
+      "sha256": "6d907b1e8a7276bead6dea09695b7c99ca6f2cafa5f87b1a4eb4bcdf98dae4e2"
+    },
+    {
+      "bytes": 286991,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-11.png",
+      "sha256": "5ddc90a7afcf80b7aba5eb8559674132bf7680554c7291d084603303b89e6f25"
+    },
+    {
+      "bytes": 272277,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-12.png",
+      "sha256": "b42ebeab2fb9ddd3e719432d19d9c23a13fef2fb82b79e04dd09a1660ddb446b"
+    },
+    {
+      "bytes": 242409,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-13.png",
+      "sha256": "6912354cf21804d85d88804dd9acc08f67d733c9ed5a73cd5b27eba98490e199"
+    },
+    {
+      "bytes": 324530,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-14.png",
+      "sha256": "7bbb39aaf881c2c22b4af0a8557c83179e859255b1b6d715484567ba1454ed3a"
+    },
+    {
+      "bytes": 233237,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-15.png",
+      "sha256": "e936bfe010907d196376f7bc42c89444372b4a13ba7d1eb46bb02e63bb0baf72"
+    },
+    {
+      "bytes": 256314,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-16.png",
+      "sha256": "9f620df854edb7093d1b0854ea3c22d84c2e40fac9fa443d2361c229dcbafcd5"
+    },
+    {
+      "bytes": 299750,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-17.png",
+      "sha256": "58cc40a86dfc0314a1d470380abca6c78a5d38e98ad76021c1dbd5b219063970"
+    },
+    {
+      "bytes": 229892,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-18.png",
+      "sha256": "21749e9d1d7535fec5d93ff120370f2993a7812f323386c2bcc577a90da786a0"
+    },
+    {
+      "bytes": 282488,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-19.png",
+      "sha256": "b7833be71546d51f70b8aaf483fd14797181b5f237d3ca6b0b9df64329289f3d"
+    },
+    {
+      "bytes": 308507,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-20.png",
+      "sha256": "77526ae639b0da9afca90dc9eec49ab7c1a34b23c08c2960b94ae94454fbc0b7"
+    },
+    {
+      "bytes": 236002,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-21.png",
+      "sha256": "9d626718868700bf4a525a77f1205eaba3af6ef3888a012aa3bacf1706b3178e"
+    },
+    {
+      "bytes": 278088,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-22.png",
+      "sha256": "cab30a7e071485937e22ecd4d2465ce24b20ee260b3eb65e0bbb91ece8f6ca00"
+    },
+    {
+      "bytes": 336380,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-23.png",
+      "sha256": "2940d964c348645d5492bc9840976fd53e8c3487e0e41f72c65b429d63a6a978"
+    },
+    {
+      "bytes": 281803,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-24.png",
+      "sha256": "98c43bbc3ab6e8c4d4be5afcd6e3660f3b513076aa342f561f31a4d0a4a132aa"
+    },
+    {
+      "bytes": 247581,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-25.png",
+      "sha256": "2476ae012b408c6abdcc1e99fdb96542e6c0d59f4c8c4b64165f4c3dbfb05d66"
+    },
+    {
+      "bytes": 292545,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-26.png",
+      "sha256": "9409f987b374d6c362abe5c53c3ecee1186348b36a164417deddb48365b375d6"
+    },
+    {
+      "bytes": 335913,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-27.png",
+      "sha256": "0db648d26c27c5f2ee6b1e6f8daa9d6dfe0a7d3a84b7c5025d57acb793cceaa0"
+    },
+    {
+      "bytes": 213482,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-28.png",
+      "sha256": "8551a92a74a46d6bd1d4df8e307df1b690f60b66c515ede55c7c05942bfd971f"
+    },
+    {
+      "bytes": 274888,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-29.png",
+      "sha256": "4366a29080b94cc03141349481c4d38ca856cf37df6bac469ada2f4ce0e2faa9"
+    },
+    {
+      "bytes": 221485,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-30.png",
+      "sha256": "087343f4d8bf004907daf2eb6c108fe35ab2de1dcf7f97d9effff6a18c2692da"
+    },
+    {
+      "bytes": 309546,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-31.png",
+      "sha256": "bd3ceecad2324750e69f29277c3bdb73a04ceef1b7ff48a74782dbb64641ef8f"
+    },
+    {
+      "bytes": 257901,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-32.png",
+      "sha256": "b6442394426f28315aed456caf72f5755903c66c5a1f87962b5f22ec2d8bd6c3"
+    },
+    {
+      "bytes": 274857,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-33.png",
+      "sha256": "6c4b89049f0e998bb91946c2de74d8049dd3271c96383bbd378a7d166aa49ff8"
+    },
+    {
+      "bytes": 230472,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-34.png",
+      "sha256": "2beea111834363345ce2fb1cf647aa643fd6a88e6a8262f0e933aa70a411335d"
+    },
+    {
+      "bytes": 277476,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-35.png",
+      "sha256": "37a6be9e30308ad2cd52e72db8a2ce676752e2adf08666682ba9b24518a52817"
+    },
+    {
+      "bytes": 230539,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-36.png",
+      "sha256": "ecb72ba14fe806f60cea34d710180a4dae006a24f12427c7d025d8adb7769bd4"
+    },
+    {
+      "bytes": 298892,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-37.png",
+      "sha256": "b543aa1ee133ed48736e0cbc42442811b9a908689caee4c27c7a4cd659e974f5"
+    },
+    {
+      "bytes": 285222,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-38.png",
+      "sha256": "bf28a17d65733f00a94a87d68ad5833c14a77ffcb7865a5f93efa75efdd307a8"
+    },
+    {
+      "bytes": 270588,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-39.png",
+      "sha256": "28ffe6aeea80b07e6b15355a70a7d495929ffa79089292b183a0b056be8cb49a"
+    },
+    {
+      "bytes": 336987,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-40.png",
+      "sha256": "23ece7ed6b9f802d6c619ebe86f52b2cd6b25f1a231de87c6dbb975273c58269"
+    },
+    {
+      "bytes": 341329,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-41.png",
+      "sha256": "270ca5a291e7f902b2f4eb76f3e7dc5cc4843928c46df3f9812604ed540e7cee"
+    },
+    {
+      "bytes": 332370,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-42.png",
+      "sha256": "9321087d706d6c33f16ab3898b81ec23cb543aedbd3b74f4eabc38112f5b8dad"
+    },
+    {
+      "bytes": 240839,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-43.png",
+      "sha256": "80b1677c700d1c38a6cd8414e1653c0452968697b91bb97e73656ad8dd8a5951"
+    },
+    {
+      "bytes": 313239,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-44.png",
+      "sha256": "62a7bb7df71b57beb661e09a153a908ed18fed8fe356362e196185a78b31f7b9"
+    },
+    {
+      "bytes": 159722,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render/page-45.png",
+      "sha256": "ee23c639aba05a4e0bef9e0a6780f31ced88adc0654bd568f1dd9a8fd9200b8b"
+    },
+    {
+      "bytes": 37,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/render-changed-after-propagation.json",
+      "sha256": "e912914e031afc47bf52b3f66adb528713f2b90a7b2e9750d0b9aea426e76908"
+    },
+    {
+      "bytes": 54716,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/marked-filling.tex",
+      "sha256": "1fab02bccdd5858c95b4d5609c3b0b0bf38d5f78818e735c64a9d248a6f61260"
+    },
+    {
+      "bytes": 33601,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/native-gluing.tex",
+      "sha256": "ce2eefc2bc1ecd7afa143990caa5f3587711f1cd72523fe0a0c758b388ef0fb8"
+    },
+    {
+      "bytes": 30989,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/paper.aux",
+      "sha256": "b8f41a548014de1fb32941ca3f513799b158ad14d3a45314667dfed1fa7b51cf"
+    },
+    {
+      "bytes": 65177,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/paper.fls",
+      "sha256": "c923697cb297cd442b55a942c26420f085e03d2aa4cd9b3f4fff5eb31563aaa9"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/paper.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 232843,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/paper.log",
+      "sha256": "d7c5b483da4f390523fafeba535815f583c89470b32344fc293e1a0a09c5b624"
+    },
+    {
+      "bytes": 417677,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/paper.pdf",
+      "sha256": "3af180c516f339b81b0792fbcb57b7147cebf31691ee375a4d11519a3d2bca2a"
+    },
+    {
+      "bytes": 21525,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/pass-01.log",
+      "sha256": "4519ddc0375aa522f3bd1ca0dca6b66474de59ea613f01eb2b348230ff04c7c9"
+    },
+    {
+      "bytes": 21364,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/pass-02.log",
+      "sha256": "736ebeb23b7367dec1f28740b2ad549246a150c2283fae4b795c8e046fec81b1"
+    },
+    {
+      "bytes": 21283,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/pass-03.log",
+      "sha256": "83cb2d877b255bcf28d3ae37b946c8ccda1e45b093d50f0ba603436fef7b3c20"
+    },
+    {
+      "bytes": 21283,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/out/pass-04.log",
+      "sha256": "83cb2d877b255bcf28d3ae37b946c8ccda1e45b093d50f0ba603436fef7b3c20"
+    },
+    {
+      "bytes": 51099,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/paper.tex",
+      "sha256": "ef7b5ec0282e710e4632673a24952f0e7e7696d0cb1409aaebed0f5a26898c32"
+    },
+    {
+      "bytes": 43118,
+      "kind": "symlink",
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/source/raeez-math-template.sty",
+      "sha256": "07336dc2503195a619a5b566e8730e891d4c81b2465530873214d7087b83e4b5",
+      "target": "/Users/raeez/latex-template/worktrees/manuscript-source-clean-20260914/coordination/source-clean-20260914/candidate002/source/raeez-math-template.sty"
+    },
+    {
+      "bytes": 60152,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/native-comparison/unapplied-native.patch",
+      "sha256": "f6754645958dd79133c077ab2cc7d551113d300cc43441e4eda9a8410d6ed48d"
+    },
+    {
+      "bytes": 73582,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/new-source.patch",
+      "sha256": "189d912501538ea4e08ef437bde618ab81d02168336207ad3f12f4ce8a59731c"
+    },
+    {
+      "bytes": 63476,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/paper-text.txt",
+      "sha256": "ce09d6f8b54f5bb88ed3574661af3929f8f6034a33d9cd10dfc9f8c26009cebf"
+    },
+    {
+      "bytes": 1316,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/pdf-fonts.txt",
+      "sha256": "e2000210f38b87bca5984c651cdc33e17961117f1c7907f70a7d28b3cd4c6b8c"
+    },
+    {
+      "bytes": 686,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/pdf-info.txt",
+      "sha256": "3cfd06897536813ac85f7768130667672b2c0ee84087aad5691f842a972cbb7b"
+    },
+    {
+      "bytes": 12234,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved/filling019-manifest.json",
+      "sha256": "bf09432c87e94cc46ee219681a1ba5cf766dd871841f11ace322933b4c889030"
+    },
+    {
+      "bytes": 155158,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved/filling019-paper.pdf",
+      "sha256": "9dc71a9907e9b14029ae66f705c783149ca08a4c94234fcbac22cd943019c0eb"
+    },
+    {
+      "bytes": 24084,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved/filling019-paper.tex",
+      "sha256": "069ee10bcc7ac2cedd2d9b503936333ccaefdafef3eddf4dca4ec1e99111ecf2"
+    },
+    {
+      "bytes": 22411,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved/filling019-source-closure.zip",
+      "sha256": "6543d5af154ef9a20c6975451f0b261c2fa13055a44b080e34c68edc05a632db"
+    },
+    {
+      "bytes": 11109,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved/geometry-review-full-final.md",
+      "sha256": "8475a9a4d9682a68cec629d7d4ccba4cdcbd47547d8ca8a92db80eee36b957dd"
+    },
+    {
+      "bytes": 100478,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/preserved-inputs.json",
+      "sha256": "cfd2828b1c5565025cb529aeeb847d298866a4ea64ac7c9352a7e16f250316ae"
+    },
+    {
+      "bytes": 2428,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/primary-source-correspondence.json",
+      "sha256": "9ae02727db48aa524451f9a42f4a1f34f9808bd7d555d62e5f4df849eefc5667"
+    },
+    {
+      "bytes": 699762,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/contact-01.png",
+      "sha256": "9c43d6a0dd76be1dd0957b3af5da429a757b181d7681529374d9991fdda7443a"
+    },
+    {
+      "bytes": 649389,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/contact-02.png",
+      "sha256": "d9e60115d2da8792721f66cee593bf103184d57ecc2289255a2b718d922a478a"
+    },
+    {
+      "bytes": 773699,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/contact-03.png",
+      "sha256": "7ededd40b68729d4939956dc1ebd659a448ddb17c8cb3e56c9fe3c09c28932b2"
+    },
+    {
+      "bytes": 796760,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/contact-04.png",
+      "sha256": "d04ec443fca96a7cd152e533c6d4feb1a23c9fd0551ed16c5c84a0a5246060b3"
+    },
+    {
+      "bytes": 171748,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/contact-05.png",
+      "sha256": "caf5ecb3de44e20350b6a1687d8e5f351835cdc8aeb216706f8aedeccc0c0bde"
+    },
+    {
+      "bytes": 276279,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-01.png",
+      "sha256": "77e3f66dfdd1926bb3b3e8bba9bbdbe2b3b142e4d17b243c3f4e8acf84bffdac"
+    },
+    {
+      "bytes": 223203,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-02.png",
+      "sha256": "ef23bfe19af3222007de293b56f956290d8bfea943103b563d94335deacf340f"
+    },
+    {
+      "bytes": 287887,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-03.png",
+      "sha256": "a26c9eeabfb0a11d45e190d8a084b6e26ba269f3f8ab53ed6f72cc62892aa029"
+    },
+    {
+      "bytes": 259063,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-04.png",
+      "sha256": "894d0044e694fd2fe216b5fdb5c02ab4afe38312b40930bafe5762c3653ac69f"
+    },
+    {
+      "bytes": 276947,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-05.png",
+      "sha256": "73fda428d6b8c6d2b17c033f8342a2a0210f987a0769c6ad1bfb828654d539b5"
+    },
+    {
+      "bytes": 247107,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-06.png",
+      "sha256": "db0ea5347a172a840c7d310e8a8037899874d67640b82d5453d1b86b23be461a"
+    },
+    {
+      "bytes": 295985,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-07.png",
+      "sha256": "a5bdc80a9b1c86466ac2842afe0970254b6837f299b5e7173df1ee51ac47448e"
+    },
+    {
+      "bytes": 194108,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-08.png",
+      "sha256": "717dff4815cdcb6f746e7838c1fd048e047c7aae131adc4b2a86575e1dbbaf40"
+    },
+    {
+      "bytes": 267799,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-09.png",
+      "sha256": "4d6453ba1ff2f0719fc9a55441b50caefd4e9022a6f9658852a626f5dc9eaf0b"
+    },
+    {
+      "bytes": 288750,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-10.png",
+      "sha256": "c35b00910a86c6a701206c95e1d2816c8bb6a59748b2ca013cc447ccb76a48a9"
+    },
+    {
+      "bytes": 295125,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-11.png",
+      "sha256": "08fcbd5317657b19bc51aac0652cc4b24ff2c93c10eb6e071ad148a299d2e2bd"
+    },
+    {
+      "bytes": 341971,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-12.png",
+      "sha256": "9996ddf6e9dabf5d97ed983d7facbe212241406639d09437862203675e420a63"
+    },
+    {
+      "bytes": 307977,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-13.png",
+      "sha256": "42772ed89fb4aad79e2cc3bf32bf070d9b96e48dc915404e96f9e5a6d353d9a2"
+    },
+    {
+      "bytes": 344939,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-14.png",
+      "sha256": "7142c1a15115bbbea80fd54a9b66900e4f9801f30e83587d19d172402cd98d7e"
+    },
+    {
+      "bytes": 250134,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-15.png",
+      "sha256": "028b16fe8966fe4e2f006244532e41348338be85be50864e447151d013286443"
+    },
+    {
+      "bytes": 297680,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-16.png",
+      "sha256": "4de91fa8136f3363a470fbbcf504cd446f09fd41e3fb78ceee7bfda6c7fc8450"
+    },
+    {
+      "bytes": 227011,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render/page-17.png",
+      "sha256": "bdc8f2c9006a9ac75b53ceaee6930c0627799185549e8bd77038fa2c16bbcbbe"
+    },
+    {
+      "bytes": 7350,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/render-and-firewall.json",
+      "sha256": "6a6cdb9191f1fdffce72a9ed22b2e3ed825030bf00c77c6afdbef17ca088cbd3"
+    },
+    {
+      "bytes": 205,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/runtime.json",
+      "sha256": "c9ce646b19f5d462cb5be172cd46bb48436ae185b76d562566732899ec9b1911"
+    },
+    {
+      "bytes": 95927,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/source-closure.zip",
+      "sha256": "296b05116b90e67d71ec51b3b40ec8ff2c37c159cb323edbaf35aefe3c596a89"
+    },
+    {
+      "bytes": 10344,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/source-proof-correspondence.json",
+      "sha256": "34efb880ce010c4441a4f5210138f9bf6aa3909526a79e20789cc46ae242d1ec"
+    },
+    {
+      "bytes": 1111,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/target-and-scope.json",
+      "sha256": "e24ab1536e5967919c51386ef9d258c5e3635e7d4abd8e928bd6a960b90051fa"
+    }
+  ],
+  "manifest_entries_verified": 170,
+  "manifest_sha256": "2a8df4bdac7cc8f916e055c02a083fff26fd2175f5ab7da5a5e2288962242a0b",
+  "root": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913"
+}

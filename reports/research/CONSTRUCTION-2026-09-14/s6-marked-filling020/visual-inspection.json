@@ -1,0 +1,55 @@
+{
+  "resolution_dpi": 110,
+  "inspected": [
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/baseline-standalone/page-12.png",
+      "sha256": "c74f32164753c38916e2dadb3bde7918b4de2c65eaea74b4d077685b51387873",
+      "page": 12,
+      "inspection": "Original sentence visibly present; baseline matches the reviewed original PDF."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-standalone/page-11.png",
+      "sha256": "7076b057852c463ec37e50c6cc0070fe0d66f94fa49ed8ccb68f61916eea90d0",
+      "page": 11,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-standalone/page-12.png",
+      "sha256": "8ef8705da61633fc82d1c1544df20b67e4ea782e5d88966d44a83baede90447e",
+      "page": 12,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-standalone/page-13.png",
+      "sha256": "22d494be732c30fb1194b63db7e6ce0c1d99321a13983920e14050e3fe0f4014",
+      "page": 13,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/baseline-native/page-39.png",
+      "sha256": "46bdf6eba767ef61323210e0aea7312fec60dd206bcc7cbd22af360d543918e0",
+      "page": 39,
+      "inspection": "Original sentence visibly present; baseline matches the reviewed original PDF."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-native/page-38.png",
+      "sha256": "e79965b9c1bab36e5771fd0e7a11b52a05b94253d2332cebcfaef351ac88f490",
+      "page": 38,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-native/page-39.png",
+      "sha256": "723ea076756f4fb1be62a104886377349914d1530988a8d8fe3c09c360b07729",
+      "page": 39,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    },
+    {
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/render/candidate-native/page-40.png",
+      "sha256": "643177842450291d8269bbbc25e79b74e403627ea47b1bad12335d96be51dc44",
+      "page": 40,
+      "inspection": "Visible prescribed sentence, legible formulas and labels, clean margins, no clipped or overlapping content. Neighboring transitions agree with the baseline raster."
+    }
+  ],
+  "native_local_equals_expanded_standalone_after_namespace": true,
+  "scope": "Changed pages and their immediate transitions only. All other candidate pages are raster-byte-identical to the rebuilt reviewed baseline."
+}

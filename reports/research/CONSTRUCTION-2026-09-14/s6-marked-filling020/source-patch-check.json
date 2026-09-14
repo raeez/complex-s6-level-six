@@ -1,0 +1,13 @@
+{
+  "command": [
+    "git",
+    "apply",
+    "--check",
+    "--directory=reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/patch-check-target",
+    "/Users/raeez/mathematics/worktrees/frontier-resume-s6-wording-020-20260914/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/new-source.patch"
+  ],
+  "effect": "Read-only applicability check in an absent assigned destination; no patch application.",
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": ""
+}

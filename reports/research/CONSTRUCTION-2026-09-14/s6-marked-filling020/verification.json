@@ -1,0 +1,22 @@
+{
+  "source_files": 13,
+  "changed_reader_files": [
+    "research-candidates/s6-marked-filling020/marked-comparison.tex",
+    "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex"
+  ],
+  "complete_proof_environments_byte_identical": 50,
+  "predecessor_scope_files_unchanged": 171,
+  "inherited_preserved_inputs_unchanged": 360,
+  "standalone_pages": 17,
+  "native_pages": 45,
+  "changed_raster_pages": {
+    "standalone": [
+      12
+    ],
+    "native": [
+      39
+    ]
+  },
+  "native_expansion_equal": true,
+  "result": "PASS"
+}

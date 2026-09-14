@@ -1,0 +1,11 @@
+--- baseline
++++ candidate
+@@ -584,7 +584,7 @@
+                              «0 1 0¬                                            «1 1 1¬
+ Thus 𝑄 + has ranks 1, 4, 6, 4, 1, with only 𝑑+,2 and 𝑑+,3 nonzero, each using the displayed 𝑃 − 𝐼 on its
+ suspended triple. In particular 𝐹4+ is multiplication by three, 𝐻3+ sends the top fibre cell 𝜔 to its core
+-prism, and 𝐻4+ = 0. This also specifies all maps in the requested adjacent degrees.
++prism, and 𝐻4+ = 0. These formulas specify the maps in every degree.
+ Proposition 9.2. The positive boundary map has chain section 𝑠𝑛+ ( 𝑥, 𝑏 ) = ( 𝑥, 0, 𝑏, 0). Its ker-
+ nel consists exactly of (0, 𝑦, − 𝑆𝑦, 𝑤 ), with differential ( 𝑦, 𝑤 ) ↦→ (( 𝑃 − 𝐼 ) 𝑤, 0). The map ( 𝑎, 𝑏 ) ↦→
+ (− 𝑎, 𝑏 ) identifies 𝑄 + [1] with this kernel. Consequently 𝐵  𝑄 + ⊕ 𝑄 + [1] as integral chain complexes.

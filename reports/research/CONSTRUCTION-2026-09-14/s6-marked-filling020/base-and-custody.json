@@ -1,0 +1,15 @@
+{
+  "authority": "Bounded wording repair only; no staging, commit, push, native principal integration, or acceptance.",
+  "base_commit": "5d9f632b5d9795e51075a9c15e2ee58d4cfb40af",
+  "branch": "intake/resume-s6-wording-020-20260914",
+  "composition": "Both assigned destination trees were absent at the principal base. Import the frozen source-only closure into these new paths. Preserve all predecessor source and report files separately. No overlapping file content is replaced.",
+  "created_utc": "2026-09-14T11:29:27.655950+00:00",
+  "initial_worktree_status": "",
+  "predecessor_head": "cb1611a23477a2743135bad8531cd0a7ef51afa0",
+  "predecessor_scoped_status": "?? reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling002/\n?? research-candidates/s6-marked-filling002/\n",
+  "predecessor_worktree": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913",
+  "principal_branch": "main",
+  "principal_path": "/Users/raeez/complex-s6-level-six",
+  "principal_status": "",
+  "worktree": "/Users/raeez/mathematics/worktrees/frontier-resume-s6-wording-020-20260914"
+}

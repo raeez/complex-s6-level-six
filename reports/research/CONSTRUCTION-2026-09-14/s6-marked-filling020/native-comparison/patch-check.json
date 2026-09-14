@@ -1,0 +1,49 @@
+{
+  "command": [
+    "git",
+    "-C",
+    "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913",
+    "apply",
+    "--check",
+    "/Users/raeez/mathematics/worktrees/frontier-resume-s6-wording-020-20260914/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/unapplied-native.patch"
+  ],
+  "exit_code": 0,
+  "preserved_inputs": [
+    {
+      "original_path": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-native018/paper.tex",
+      "preserved": {
+        "bytes": 50557,
+        "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/preserved/native018-source/paper.tex",
+        "sha256": "f0aa6cdc4a35cb7bbfb62324412bd2cc460601ccbbeec83d27e59a44b8124bb2"
+      }
+    },
+    {
+      "original_path": "/Users/raeez/mathematics/worktrees/frontier-mine-s6-20260913/research-candidates/s6-native018/native-gluing.tex",
+      "preserved": {
+        "bytes": 33104,
+        "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/preserved/native018-source/native-gluing.tex",
+        "sha256": "811325b7f4ef0c81175aff087ed11b65e3a643ab72ba40512e47c80d6f34d7b5"
+      }
+    }
+  ],
+  "reconstructed_targets": [
+    {
+      "bytes": 51099,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/paper.tex",
+      "sha256": "ef7b5ec0282e710e4632673a24952f0e7e7696d0cb1409aaebed0f5a26898c32"
+    },
+    {
+      "bytes": 33601,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/native-gluing.tex",
+      "sha256": "ce2eefc2bc1ecd7afa143990caa5f3587711f1cd72523fe0a0c758b388ef0fb8"
+    },
+    {
+      "bytes": 54701,
+      "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex",
+      "sha256": "129e0dec9d150a87c2d3bf25f8ca5671e841c62b49b56f2ec96d269aa5e0bbd3"
+    }
+  ],
+  "scope": "Unapplied patch against preserved native018 source. Not a patch against current principal paper.tex.",
+  "stderr": "",
+  "stdout": ""
+}

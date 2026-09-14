@@ -1,0 +1,15 @@
+{
+  "requested_model": "gpt-6-astra",
+  "requested_effort": "ultra",
+  "thread_id": "01a09fab-7106-7643-9351-3778df4140fa",
+  "observed_public_turn_contexts": [
+    {
+      "timestamp": "2026-09-14T11:26:53.369Z",
+      "model": "gpt-6-astra",
+      "effort": "ultra",
+      "source": "/Users/raeez/.codex/sessions/2026/09/14/rollout-2026-09-14T18-26-48-01a09fab-7106-7643-9351-3778df4140fa.jsonl"
+    }
+  ],
+  "host_independent_attestation": "unverified",
+  "work": "Exact wording and reproducibility diagnostics; no new proof acceptance."
+}

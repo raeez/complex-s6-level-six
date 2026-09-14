@@ -1,0 +1,53 @@
+{
+  "directory": "/Users/raeez/mathematics/worktrees/frontier-resume-s6-wording-020-20260914/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/baseline/standalone",
+  "command": [
+    "pdflatex",
+    "-no-shell-escape",
+    "-recorder",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-output-directory=out",
+    "paper.tex"
+  ],
+  "environment": {
+    "SOURCE_DATE_EPOCH": "1789344000",
+    "FORCE_SOURCE_DATE": "1"
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "0d2c53280c78e1468a72340290a0e973fa7a49103ad86191f691b293daed5812",
+        "paper.pdf": "e5b8a313ccf259a3d212b31d0aa2ec05d86fe6c3b75c303eab993dc4c78136c4"
+      }
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "fe54cb6907b77195cab54f1ec0fdc95743f6f43e15ef1ded8bf38e25dc260802"
+      }
+    },
+    {
+      "pass": 3,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "720248d2a14b29402ca7cf946ebe035ef7ba05c9934c08b4d38010d719c47614"
+      }
+    },
+    {
+      "pass": 4,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "720248d2a14b29402ca7cf946ebe035ef7ba05c9934c08b4d38010d719c47614"
+      }
+    }
+  ],
+  "converged": true,
+  "final_pdf_sha256": "720248d2a14b29402ca7cf946ebe035ef7ba05c9934c08b4d38010d719c47614"
+}

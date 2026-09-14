@@ -1,0 +1,285 @@
+\section{The origin section in the line-bundle reduction}
+
+We now specify the local geometric hypotheses under which the
+four-torus filling is obtained from \eqref{eq:weierstrass}.
+Let $O$ be its origin section, let $P_0$ be a section disjoint
+from $O$ near $t=0$, and put $\mathcal M=\mathcal O(P_0-O)$.
+Write $\mathcal M^\times$ for the complement of its zero section.
+Suppose a specified lifted translation acts on $\mathcal M^\times$
+and its quotient over the punctured disk is a family of complex
+two-tori. Choose the origin of these tori using a nonzero section
+$e$ of $\mathcal M|_O$ over the disk.
+
+After $t=s^3$, let $P'_0,O'$ be the transformed sections on
+\eqref{eq:good-equation}, and put
+$\mathcal M'=\mathcal O(P'_0-O')$. We assume the following smooth
+reduction data: $P'_0$ is disjoint from $O'$ near zero; the specified
+lifted translation extends to $(\mathcal M')^\times$ and commutes
+with the natural deck action; its quotient is a proper smooth
+family $\mathcal F$ of complex two-tori over the $s$ disk. The
+period marking is \eqref{eq:period-lattice}, with $\delta$ the
+positive circle of the multiplicative fibre and $e_4$ the stated
+second vertical period. The positive monodromy is
+\eqref{eq:positive-T}.
+
+These are hypotheses on the local smooth reduction and its lifted
+translation. The calculation below constructs their marked filling
+and attachment maps; it does not establish the existence of that
+reduction or of the lifted translation from an arbitrary elliptic
+family. In particular it does not replace the needed commutation
+or properness by a lattice calculation.
+
+\begin{lemma}\label{lem:conormal-comparison}
+There is a nonzero section $e'$ of $\mathcal M'|_{O'}$ such that
+the canonical divisor identification over the punctured disk sends
+the pulled-back section $e$ to $s^{-2}e'$. The natural deck action
+sends $e'(s)$ to $\zeta e'(\zeta s)$.
+\end{lemma}
+\begin{proof}
+Since $P_0$ does not meet $O$ in this neighbourhood,
+$\mathcal O(P_0-O)$ is canonically the ideal line bundle of $O$
+there. Restricting this ideal to $O$ gives its conormal line:
+the ideal modulo its square. Similarly $\mathcal M'|_{O'}$ is
+the conormal line of $O'$, because $P'_0$ is disjoint from it.
+
+The local parameters transverse to the origin sections are
+$w=-x/y$ and $W=-X/Y$. To check this at infinity, use the
+projective chart with $Y\ne0$: the cubic equation solves $Z/Y$
+as a holomorphic function of $X/Y$ near the origin, so $-X/Y$
+is a local parameter. The Weierstrass substitution gives the
+exact equality
+\begin{equation}\label{eq:conormal-coordinate}
+                         w=s^{-2}W.
+\end{equation}
+The nonzero section $e$ can therefore be written as $u(t)w$ in
+the conormal line, for a holomorphic unit $u$ on a sufficiently
+small disk. Define $e'(s)=u(s^3)W$. This is holomorphic and
+nonzero, and the canonical divisor identification on $s\ne0$
+gives $e=s^{-2}e'$. No choice of a comparison multiplied by an
+extra power of $s$ is made here: the parameters are identified
+by the actual birational coordinate substitution.
+
+The original pulled-back section is equivariant for the deck
+action. If $\rho e'(s)=\lambda(s)e'(\zeta s)$, applying $\rho$
+to $e=s^{-2}e'$ consequently yields
+$\lambda(s)=(\zeta s)^{-2}/s^{-2}=\zeta$.
+The equality extends to zero. Equivalently, the forward action on
+the conormal line is the inverse of the normal-coordinate factor
+$\zeta^2$ in \eqref{eq:actual-elliptic-deck}.
+\end{proof}
+
+Use the image of $e'$ as the origin of the smooth torus family
+$\mathcal F$. An automorphism between compact complex tori is
+affine in these origins: a lift to their complex vector spaces
+has lattice-periodic derivative, whose entries are holomorphic
+functions on a compact torus and hence constant. Subtracting its
+linear part leaves a constant translation. Its linear part is
+determined by its map on periods. Lemma~\ref{lem:inverse-descent}
+therefore gives linear part $A=T^{-1}$, while
+Lemma~\ref{lem:conormal-comparison} gives translation $\delta/3$.
+Indeed multiplication by $e^{2\pi i/3}$ in the multiplicative
+fibre is precisely one third of its positive period $\delta$.
+
+Period coordinates make these maps constant over the smooth disk:
+their integral linear matrices are locally constant, and the
+translation is the specified torsion section $\delta(s)/3$.
+Consequently the original deck transformation and its twist by
+the unchanged $a_0=e_4/3$ are, respectively,
+\begin{equation}\label{eq:actual-affine-actions}
+ (z,s)\longmapsto(Az+\delta/3,\zeta s),\qquad
+ (z,s)\longmapsto(Az+(\delta+e_4)/3,\zeta s).
+\end{equation}
+Thus the central affine term does not vanish in the origin $e'$.
+The second action is free: in the original $e_4$ coordinate its
+first two powers translate by $1/3$ and $2/3$.
+
+Along a positive root $s=e^{2\pi iv/3}$ the original origin $e$
+differs from $e'$ by $-2v\delta/3$. The logarithmic twist adds
+$ve_4/3$. A small nonunit boundary radius can be absorbed by a
+constant rescaling of the chosen frame; the angular formula is
+unchanged. At the initial point $s=1$ the two origins coincide.
+This determines the marked boundary path, including its original
+section, and not only the homology monodromy.
+
+\section{The marked local filling and its integral chains}
+
+Write $\delta=U=u_0+u_1+u_2$ and retain the original coordinates
+$(x,t)$ in the basis $(u_0,u_1,u_2,e_4)$. Under the preceding
+smooth reduction hypotheses, the twisted local filling is
+\begin{equation}\label{eq:marked-native-quotient}
+ N_0=(X\times S^1_t\times D)/
+ \bigl((x,t,s)\sim(Rx+U/3,t+1/3,\zeta s)\bigr).
+\end{equation}
+Its boundary is marked by the original section $e$ and the
+counterclockwise meridian. The formula just derived is
+\begin{equation}\label{eq:marked-native-j}
+ j_0([x,t,v])=[x-2vU/3,t+v/3,e^{2\pi iv/3}].
+\end{equation}
+At $v=1$, the inverse of the generator in
+\eqref{eq:marked-native-quotient} sends the endpoint to
+$[Px-U,t,1]=[Px,t,1]$. Thus its return is $P$, as required in
+the original period marking; $qj_0=e^{2\pi iv}$.
+
+\begin{theorem}\label{thm:marked-native-filling}
+The filling \eqref{eq:marked-native-quotient} has the following
+explicit orientation-preserving disk trivialization:
+\begin{equation}\label{eq:marked-native-Phi}
+ \Phi_0[x,t,s]=([x+2tU,3t],e^{-2\pi it}s)
+                 \in G_P\times D.
+\end{equation}
+Here $q=e^{2\pi i\tau}z^3$. The marked fibre and positive
+boundary maps followed by retraction are
+\begin{equation}\label{eq:marked-native-FK}
+ f_0(x,t)=[x+2tU,3t],\qquad
+ k_0([x,t,v])=[x+2tU,3t+v].
+\end{equation}
+The integral fibre basis
+\begin{equation}\label{eq:marked-cell-basis}
+             u_0,u_1,u_2,v_4,\qquad v_4=e_4-2\delta
+\end{equation}
+has determinant one relative to $(e_1,e_2,e_3,e_4)$ and is
+preserved by $T$, which acts as $P\times I$. In its actual
+product cells the filling complex and maps are
+\begin{equation}\label{eq:marked-final-chains}
+ \begin{aligned}
+ Q_{0,n}&=D_n\oplus D_{n-1},&d_0(x,y)&=((P-I)y,0),\\
+ F_{0,n}(x,y)&=(x,Sy),&H_{0,n}(x,y)&=(0,x),\\
+ K_{0,n}(x,y,z,w)&=(x,Sy+z).&&
+ \end{aligned}
+\end{equation}
+In particular $d_0H_0+H_0d_C=F_0(M-I)$ with the positive
+native monodromy and the actual marked boundary section.
+\end{theorem}
+\begin{proof}
+Set $y=x+2tU$. The change $(x,t)\mapsto(y,t)$ is an integral
+torus diffeomorphism of determinant one, with inverse
+$x=y-2tU$. Under the generator of \eqref{eq:marked-native-quotient},
+\[
+ y\longmapsto Rx+U/3+2(t+1/3)U=Ry+U=Ry
+                         \quad\text{in }X.
+\]
+It therefore identifies this quotient with
+\eqref{eq:positive-quotient} in the $y$ coordinates, without
+changing $s$ or the orientation of its disk. It also sends the
+marked boundary path to
+$[y,t+v/3,e^{2\pi iv/3}]$, since the terms $-2vU/3$ and
+$2(v/3)U$ cancel. Applying Theorem~\ref{thm:positive-geometry}
+gives \eqref{eq:marked-native-Phi} and
+\eqref{eq:marked-native-FK}, with their orientations and inverses.
+
+In the original coordinates, the $t$ loop with $y=0$ has vector
+$e_4-2U$. Hence its product-cell basis is exactly
+\eqref{eq:marked-cell-basis}. Its matrix of columns is
+\begin{equation}\label{eq:marked-basis-matrix}
+ V=\begin{pmatrix}
+ 0&-1&-1&4\\0&0&-1&2\\1&1&1&-6\\0&0&0&1
+ \end{pmatrix}.
+\end{equation}
+It is obtained from the previously verified determinant-one
+permutation basis by adding $-2(u_0+u_1+u_2)$ to the last
+column, so its determinant is one. Since $T$ fixes both
+$e_4$ and $U$, it fixes $v_4$ and permutes the other cells.
+These are therefore genuine transported product cells, obtained
+by an integral diffeomorphism, in every degree.
+
+In these cells the maps in \eqref{eq:marked-native-FK} are
+$[y,3t]$ and $[y,3t+v]$. Their interval subdivisions are exactly
+those in Theorem~\ref{thm:positive-chains}, which proves all
+formulas in \eqref{eq:marked-final-chains} and all their chain
+identities. Proposition~\ref{prop:positive-splitting} gives the
+section and kernel of the full boundary map. In particular the
+degree-four map and all adjacent prism terms are included.
+\end{proof}
+
+The original twist has not been changed: in this cell basis
+$e_4/3=(v_4+2U)/3$. Its sum with the original central translation
+$U/3$ is $v_4/3+U$, which equals $v_4/3$ as a torus translation.
+Both contributions are needed for the integral comparison.
+
+For a homology class written in the original period basis, the
+same maps are explicit as well. In degree $n$, change its exterior
+coordinates by $\bigwedge^nV^{-1}$, express the $u$-pairs in
+$(w_0,w_1,w_2)$, and move $v_4$ to the front in the suspended
+terms before applying \eqref{eq:marked-final-chains}. Moving it
+past $n-1$ fibre vectors contributes $(-1)^{n-1}$.
+Thus this is an integral change of actual geometric
+cells, with no rational replacement of the lattice.
+For example, write $c=[u_0]=[u_1]=[u_2]$ and let $h$ be the
+positive core interval in $H_1(G_P;\mathbb Z)$. Then
+\begin{equation}\label{eq:marked-degree-one}
+ f_{0*}(e_1)=f_{0*}(e_2)=0,\qquad
+ f_{0*}(e_3)=c,\qquad f_{0*}(e_4)=6c+3h,
+ \qquad k_{0*}(\gamma_0)=h.
+\end{equation}
+Indeed $e_1=u_0-u_1$, $e_2=u_1-u_2$, $e_3=u_0$,
+and $e_4=v_4+2U$. This gives a deciding distinction from the
+zero-origin descent in the unchanged original marking.
+At the level of the fundamental group, three traversals of
+the marked meridian satisfy
+\begin{equation}\label{eq:marked-meridian-relation}
+                   \gamma_0^3=f_{0\#}(e_4-2\delta).
+\end{equation}
+To verify it directly, lift \eqref{eq:marked-native-j} to the
+universal vector coordinates. Its endpoint is the affine deck
+generator followed by translation by $-\delta$. Cubing adds
+$e_4+\delta-3\delta=e_4-2\delta$. Equivalently in $G_P$, the
+marked loop is its positive core interval, while the $v_4$ fibre
+loop covers three such intervals. The image of $\delta$ is
+$3c$ and is not zero in this local filling. Consequently the
+local relation cannot be replaced by $\gamma_0^3=f_{0\#}(e_4)$.
+
+For the higher degrees, abbreviate $e_i\wedge e_j$ by $e_{ij}$
+and similarly for three or four indices. In the ordered domain
+bases $(e_{12},e_{13},e_{14},e_{23},e_{24},e_{34})$ and
+$(e_{123},e_{124},e_{134},e_{234})$, the degree-two and
+degree-three maps are, respectively,
+\begin{equation}\label{eq:marked-higher-matrices}
+ f_{0*,2}=\begin{pmatrix}3&1&0&-2&0&0\\0&0&0&0&0&-1\end{pmatrix},
+ \qquad
+ f_{0*,3}=\begin{pmatrix}1&6&2&-4\\0&3&1&-2\end{pmatrix}.
+\end{equation}
+The target bases are $([w_0],\sigma U)$ and
+$(\omega,\sigma W)$ in the core complex. For example,
+$e_{12}=w_0+w_1+w_2$ gives the first coefficient $3$.
+The term $e_3\wedge v_4=-v_4\wedge u_0$ gives the last
+coefficient $-1$ in degree two. In degree three,
+$e_{124}=v_4\wedge e_{12}+2e_{12}\wedge U$
+gives $3\sigma W+6\omega$. Expanding the other columns
+in the same stated basis gives \eqref{eq:marked-higher-matrices}.
+Both maps are integrally surjective: $e_{13},-e_{34}$ map to
+the two target generators in degree two, and
+$e_{123},e_{134}-2e_{123}$ do so in degree three.
+Their kernels have the following full integral bases:
+\[
+ \begin{array}{c|l}
+ 2&e_{12}-3e_{13},\quad e_{14},\quad 2e_{13}+e_{23},\quad e_{24},\\
+ 3&e_{124}-3e_{134},\quad 2e_{134}+e_{234}.
+ \end{array}
+\]
+Indeed the two equations in each displayed matrix solve for the
+remaining coordinates with integer coefficients. In degree four,
+$e_{1234}=-v_4\wedge\omega$, so its image is $-3\sigma\omega$.
+The covering has geometric degree $+3$: the interval-first target
+cell $\sigma\omega$ is the negative of the fibre-first core
+orientation. These formulas retain both the signs and the complete
+integral images in the original periods.
+
+All homology groups, kernel ranks, and cokernels in
+Theorem~\ref{thm:homology} remain valid in the stated cell basis.
+The invariant degree-one core covector pulls back to
+$e_3^*+6e_4^*$, and the core-circle covector pulls back to
+$3e_4^*$. Their image is still
+$\mathbb Ze_3^*\oplus3\mathbb Ze_4^*$. The higher-degree
+specialization indices remain $1,1,3$ in degrees two, three,
+and four, by the explicit unimodular change of cells.
+Equal indices therefore do not imply equal marked attachment maps.
+
+This local conclusion depends on the smooth line-bundle reduction,
+its commuting lifted translation, and its stated period marking.
+Within those hypotheses the conormal comparison constructs the
+affine deck action and the positive boundary map. Comparisons with
+a common chain complex carrying the other local monodromies still
+require explicit maps and homotopies. The other finite-order filling,
+the cusp attachments, and their global integral gluing have not been
+constructed here. No conclusion about the homology of their union
+or a complex structure on a sphere follows from this local calculation.

@@ -1,0 +1,100 @@
+\section{Positive transport and cyclic descent}
+
+Let $t$ be the coordinate on a complex disk, oriented by increasing
+argument. A positive meridian is the loop $t=\epsilon e^{2\pi iv}$,
+$0\le v\le1$, with $\epsilon>0$. The integral monodromy of a family
+along this loop is the map on the homology of the starting fibre
+obtained by transporting cycles and identifying the ending fibre
+with the starting fibre. Fix the cyclic change of coordinates $t=s^3$
+and the generator $s\mapsto\zeta s$, where
+$\zeta=e^{2\pi i/3}$. A deck transformation is an automorphism of
+the pulled-back family covering this rotation and acting trivially
+on its quotient.
+
+\begin{lemma}\label{lem:inverse-descent}
+Suppose a smooth family over the $s$ disk has a deck transformation
+$\rho$ of order three. Mark its integral first homology by parallel
+continuation over the disk, and let $A$ be the matrix of $\rho$ in
+that marking. The positive monodromy of the quotient over $t\ne0$
+is $A^{-1}$.
+\end{lemma}
+\begin{proof}
+The positive meridian lifts from $s=\epsilon^{1/3}$ to
+$s=\zeta\epsilon^{1/3}$. A homology class remains constant in the
+disk marking along this lifted path. To express its endpoint in the
+starting fibre of the quotient one applies $\rho^{-1}$. This acts
+by $A^{-1}$. A translation of a torus is homotopic to the identity
+through translations, so the same argument applies to an affine
+deck transformation on its first homology. It makes no assertion
+that the affine translation itself vanishes.
+\end{proof}
+
+The inverse can be seen without a monodromy table. Consider the
+projective elliptic family whose affine equation is
+\begin{equation}\label{eq:weierstrass}
+ y^2=x^3-3t^3(t-1)x+2t^4(t-1)^2.
+\end{equation}
+Its origin is the point at infinity. For $s\ne0$, put
+$t=s^3$, $x=s^4X$, and $y=s^6Y$. Dividing by $s^{12}$ gives
+\begin{equation}\label{eq:good-equation}
+ Y^2=X^3-3s(s^3-1)X+2(s^3-1)^2.
+\end{equation}
+For an equation $Y^2=X^3+aX+b$ its discriminant is
+$-16(4a^3+27b^2)$; it vanishes exactly when the cubic and its
+derivative have a common root. Here it is
+$1728(s^3-1)^3$, so the projective fibres are smooth on a
+sufficiently small disk around zero. The central curve is
+$Y^2=X^3+2$. The deck transformation that fixes $x,y,t$ is
+\begin{equation}\label{eq:actual-elliptic-deck}
+ (X,Y,s)\longmapsto(\zeta^2X,Y,\zeta s).
+\end{equation}
+Substitution in \eqref{eq:good-equation} verifies the transformation
+on the whole smooth family, including the origin section.
+
+On the central curve its pullback on the holomorphic differential
+$dX/Y$ is multiplication by $\zeta^2$. Thus for any cycle $c$,
+\[
+ \int_{\rho_*c}\frac{dX}{Y}=\zeta^2\int_c\frac{dX}{Y}.
+\]
+In a period marking with basis $(1,\zeta)$ the central deck matrix
+is consequently
+$\left(\begin{smallmatrix}-1&1\\-1&0\end{smallmatrix}\right)$.
+The positive return matrix is its inverse. This calculation fixes
+both the disk orientation and the direction of action on periods.
+
+For the four-torus, retain the following explicit marked lattice
+in $\mathbb C^2$. Choose $\tau$ with $\operatorname{Im}\tau>0$ and set
+\begin{equation}\label{eq:period-lattice}
+ e_1=(1,0),\quad e_2=(\zeta,0),\quad
+ e_3=\tfrac13(2+\zeta,1),\quad e_4=(0,\tau),
+ \qquad \Lambda=\sum_{j=1}^4\mathbb Ze_j.
+\end{equation}
+The vector $\delta=(0,1)=-2e_1-e_2+3e_3$ is an integral
+period. The map multiplying the first coordinate by $\zeta$ and
+fixing the second preserves $\Lambda$ and has matrix
+\begin{equation}\label{eq:positive-T}
+ T=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}.
+\end{equation}
+Indeed its values on the four basis vectors are
+$e_2,-e_1-e_2,e_3-e_1,e_4$. Its inverse is the integral map
+\begin{equation}\label{eq:inverse-T}
+ A=T^{-1}=
+ \begin{pmatrix}-1&1&-1&0\\-1&0&-1&0\\0&0&1&0\\0&0&0&1\end{pmatrix},
+\end{equation}
+with values $-e_1-e_2,e_1,e_3-e_1-e_2,e_4$.
+In particular it fixes $\delta$ and $e_4$.
+
+If \eqref{eq:positive-T} is the prescribed positive monodromy in
+this unchanged disk marking, Lemma~\ref{lem:inverse-descent}
+forces \eqref{eq:inverse-T} as the linear central deck action.
+The elliptic calculation \eqref{eq:actual-elliptic-deck} agrees
+with its action on the first complex coordinate. Conversely, the
+elliptic calculation alone does not construct the lift to a
+four-torus or identify an affine origin there. The distinction
+between the linear map and an affine lift will matter below.
+
+We first compute the complete chains for the quotient with deck
+matrix $T$. We then use the inverse deck matrix to obtain positive
+transport $T$ with the same fibre marking. Both quotients are
+explicit geometric spaces; their identification with any prescribed
+degeneration requires the corresponding affine descent data.

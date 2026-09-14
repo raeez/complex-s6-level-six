@@ -1,0 +1,53 @@
+{
+  "directory": "/Users/raeez/mathematics/worktrees/frontier-resume-s6-wording-020-20260914/research-candidates/s6-marked-filling020",
+  "command": [
+    "pdflatex",
+    "-no-shell-escape",
+    "-recorder",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-output-directory=out",
+    "paper.tex"
+  ],
+  "environment": {
+    "SOURCE_DATE_EPOCH": "1789344000",
+    "FORCE_SOURCE_DATE": "1"
+  },
+  "passes": [
+    {
+      "pass": 1,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "0d2c53280c78e1468a72340290a0e973fa7a49103ad86191f691b293daed5812",
+        "paper.pdf": "321b22e33b73cbece4c16f782d256ec901ab088cfa0e76943c3e69491ddc6614"
+      }
+    },
+    {
+      "pass": 2,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "046a625ebd3e9ae6391e2407fb8a6f1013589fe51846ecf577832b78d7aa8db1"
+      }
+    },
+    {
+      "pass": 3,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "2198759c18d02c72728d943891e25cf7a9bffddcfe95f8e63acb976be02ab418"
+      }
+    },
+    {
+      "pass": 4,
+      "exit_code": 0,
+      "state": {
+        "paper.aux": "d0dd20ce71fbc7adda809ace98421966356a3726d90d8407a3bc8d6c2128afd3",
+        "paper.pdf": "2198759c18d02c72728d943891e25cf7a9bffddcfe95f8e63acb976be02ab418"
+      }
+    }
+  ],
+  "converged": true,
+  "final_pdf_sha256": "2198759c18d02c72728d943891e25cf7a9bffddcfe95f8e63acb976be02ab418"
+}

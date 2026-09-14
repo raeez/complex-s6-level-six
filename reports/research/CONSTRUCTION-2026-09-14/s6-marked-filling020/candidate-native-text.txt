@@ -1,0 +1,2286 @@
+    The Level-Six Fibre Lattice, Linking Forms, and Torus Gluing
+
+                                                   Raeez Lorgat
+
+                                                      Abstract
+           For the lattice Λ = 𝐻1 ( 𝐹 , ℤ) of a smooth complex two-torus fibre in Engel’s fibration, we give
+       the two integral monodromy markings and determine the primitive invariant alternating form 𝜉 ,
+       up to sign. The distinguished circle class 𝛿0 and invariant covector 𝜓 satisfy
+
+                                                    𝜄𝛿0 𝜉 = −6𝜓 .
+
+       An explicit unimodular basis puts 𝜉 in the form 𝐽 ⊕ 6 𝐽 ; hence its discriminant group is (ℤ/6ℤ) 2 ,
+       with a perfect alternating pairing and a six-dimensional irreducible finite Heisenberg representa-
+       tion. We also compute the complete Smith form of a two-fibre presentation, including the zero-
+       determinant case, and identify its determinant with a denominator-cleared Seifert Euler number.
+       For an explicitly constructed effective rank-one Seifert ℂ∗ -bundle with two multiple fibres, we prove
+       that the primitive integral Leray carrier is indexed by lcm( 𝑟, 𝑠 ) and has coefficient Δ/gcd( 𝑟, 𝑠 ). The
+       full global Seifert class also has a ℤ/gcd( 𝑟, 𝑠 ) component which the coarse transgression does not
+       see. We resolve the integral extension hidden by this differential and compute the symmetric torsion
+       linking form of every effective two-fibre filling. For arbitrary integral local data, the doubled presen-
+       tation has alternating elementary divisors ( 𝑑, | Δ |/ 𝑑 ), where 𝑑 = gcd( 𝑟, 𝑠, 𝑚, 𝑛). These pairings
+       have specified, distinct carriers. Engel’s rank-four transgression remains a separate (3, 4) calculation.
+       For the same rank-four monodromy, we construct integral chains for gluing three torus bound-
+       aries with specified filling maps and their homotopies. The cusp boundary with transport 𝑇∞ℎ has
+       𝐻2 = 𝐻3 = ℤ6 ⊕ (ℤ/| ℎ |ℤ) 2 for ℎ ≠ 0. Explicit transported cycles determine its prime-coefficient
+       connecting homomorphisms. These boundary groups and the complete gluing differential specify
+       the further attachments needed for the singular fibres.
+
+
+1    The fibre calculation
+The calculation to be explained is the contraction identity
+
+                                                    𝜄𝛿0 𝜉 = −6𝜓 .                                                   (1.1)
+
+Its content is not the coefficient alone: 𝛿0 , 𝜉 , and 𝜓 must be carried by the same integral geometric lattice,
+with compatible markings and orientations.
+    Let 𝑓 : 𝑌 ( 𝑢) → ℙ1 be the complex two-torus fibration described by Engel, and put
+
+                𝑈 = ℙ1 \ {0, 1, ∞},           𝐹 = 𝑓 −1 ( 𝑡 ) ,       Λ = 𝐻1 ( 𝐹 , ℤ) ,       𝑉 = Λ∨
+
+for 𝑡 ∈ 𝑈 . Over 𝑈 this is also the smooth fibre lattice of the unmodified fibration 𝑋 ( 𝑢) → ℙ1 . Engel’s
+construction supplies the filtration
+                                       𝜓
+                0 −→ Λ × −→ Λ −→ ℤ −→ 0,                         0 −→ ℤ𝛿0 −→ Λ× −→ Λ′ −→ 0,                         (1.2)
+
+
+                                                           1
+where 𝛿0 is the circle class of the principal 𝔾𝑚 -bundle in Engel’s chosen marking [1, Sections 2 and 5].
+   We record the integral markings because every sign below depends on them. Let 𝜚 = 𝑒 2𝜋 𝑖 /3 . In the
+two good-reduction markings, and writing 𝜏0 , 𝜏1 for the periods of the second elliptic factors, Engel takes
+
+                𝑒1 = (1, 0) , 𝑒2 = ( 𝜚, 0) , 𝛿0 = (0, 1) , 𝑒4 = (0, 𝜏0 ) , 𝑒3 = 31 (2 + 𝜚, 1) ,
+                                                                                                                    (1.3)
+                𝑓1 = (1, 0) ,   𝑓2 = ( 𝑖, 0) ,      𝛿1 = (0, 1) ,     𝑓4 = (0, 𝜏1 ) ,        𝑓3 = 21 (1 + 𝑖, 1) .
+
+The first four entries in each row generate a direct-sum sublattice; after adjoining 𝑒3 , respectively 𝑓3 , the
+resulting overlattice Λ has ordered bases
+
+                                𝐵 0 = ( 𝑒1 , 𝑒2 , 𝑒3 , 𝑒4 ) ,       𝐵1 = ( 𝑓1 , 𝑓2 , 𝑓3 , 𝑓4 ) .
+
+For standard counterclockwise meridians 𝛾0 𝛾1 𝛾∞ = 1, the matrices act on column coordinates and are
+
+                                    0 −1 −1 0                                     0       1 0 0
+                                   ©         ª                                  ©                ª
+                                   ­ 1 −1 0 0®                                  ­−1       0 −1 0®®
+                       [𝑇0 ] 𝐵0 = ­­         ®,                     [𝑇1 ] 𝐵1 = ­­                  .                (1.4)
+                                   ­0 0 1 0®                                    ­0        0 1 0®®
+                                             ®
+
+                                   «0 0 0 1 ¬                                   «0        0 0 1¬
+
+The complex orientations give multiplication by 𝜚 at 0 and by − 𝑖 at 1. The circle classes and the transition
+matrix are
+
+                                                                                            1 1 0            1
+                                                                                          ©                    ª
+                                                                                          ­0 1 0             0®®
+                𝛿0 = −2𝑒1 − 𝑒2 + 3𝑒3 ,            𝛿1 = − 𝑓1 − 𝑓2 + 2 𝑓3 ,            𝐶 = ­­                     ,   (1.5)
+                                                                                          ­0 −1 1            0®®
+                                                                                          «0 0 0             1¬
+
+where the columns of 𝐶 express 𝐵 1 in 𝐵 0 and 𝐶 𝛿1 = 𝛿0 . These are precisely the integral data of En-
+gel’s Theorem 5.1. Its proof fixes the sign at infinity by taking a simple zero, rather than a pole, of the
+linearization for a counterclockwise meridian [1, pp. 12–15].
+    In the common basis 𝐵 0 , direct conjugation and 𝑇0𝑇1𝑇∞ = 𝐼 give
+
+                                                                −1          1 −1 2
+                                                               ©                    ª
+                                                                −1          0 −1 1 ®®
+                                 [𝑇1 ] 𝐵0 = 𝐶 [𝑇1 ] 𝐵1 𝐶 −1 = ­­
+                                                               ­
+                                                                                     ,                              (1.6)
+                                                               ­1           1 2 −1®®
+                                                               «0           0 0 1¬
+
+                                                         2 1 1 0
+                                                       ©          ª
+                                                       ­ 0 1 0 −1®
+                                           [𝑇∞ ] 𝐵0 = ­­          ®.                                                (1.7)
+                                                       ­−1 −1 0 1 ®
+                                                                  ®
+
+                                                       «0 0 0 1 ¬
+Thus 𝑇03 = 𝑇14 = 𝐼 , (𝑇∞ − 𝐼 ) 2 = 0, and
+
+                                         (𝑇∞ − 𝐼 ) Λ = ⟨𝑒1 − 𝑒3 , 𝑒3 − 𝑒2 ⟩ .                                       (1.8)
+
+
+
+
+                                                                2
+Theorem 1.1 (The geometric level-six lattice). Let Γ = ⟨𝑇0 , 𝑇1 ⟩. For the fibre lattice and markings
+above,
+                     ΛΓ = ℤ𝛿0 ,       𝑉 Γ = ℤ𝜓 ,       ( 2 𝑉 ) Γ = ℤ𝜉 ,
+                                                        V
+                                                                                                 (1.9)
+where 𝜓 = 𝑒4∨ and
+                                 𝜉 = 3𝑒1∨ ∧ 𝑒2∨ + 𝑒1∨ ∧ 𝑒3∨ − 2𝑒2∨ ∧ 𝑒3∨ − 2𝑒3∨ ∧ 𝑒4∨ .                             (1.10)
+With the contraction convention ( 𝜄𝑣 𝜉 )( 𝑤 ) = 𝜉 ( 𝑣, 𝑤 ), identity (1.1) holds. Moreover, the ordered basis
+
+                𝑎1 = 𝑒 1 ,         𝑏 1 = 𝑒3 ,          𝑎2 = −𝛿0 = 2𝑒1 + 𝑒2 − 3𝑒3 ,             𝑏 2 = 𝑒4 − 2 𝑒1      (1.11)
+
+is unimodular and satisfies
+                                                                    !
+                                                               0 1
+                [ 𝜉 ] ( 𝑎1 ,𝑏1 ,𝑎2 ,𝑏2 ) = 𝐽 ⊕ 6 𝐽 ,       𝐽 =        ,              𝛿0 = − 𝑎2 ,        𝜓 = 𝑏2∨ .   (1.12)
+                                                               −1 0
+
+Consequently
+                                  det( 𝜉 ♭ ) = 36,           SNF( 𝜉 ♭ ) = diag(1, 1, 6, 6) ,                        (1.13)
+and the elementary divisors of 𝜉 are (1, 6).
+
+Proof. Solving 𝑇𝑖 𝑣 = 𝑣 for 𝑖 = 0, 1 gives 𝑣 = 𝑞 (−2, −1, 3, 0)𝑇 , and solving 𝑇𝑖−𝑇 𝑢 = 𝑢 gives 𝑢 =
+𝑞 (0, 0, 0, 1)𝑇 . Integrality makes the two common invariant lattices exactly ℤ𝛿0 and ℤ𝜓 .
+   Write the coefficients of an alternating form in the order
+
+                              𝑒1∨ ∧ 𝑒2∨ , 𝑒1∨ ∧ 𝑒3∨ , 𝑒1∨ ∧ 𝑒4∨ , 𝑒2∨ ∧ 𝑒3∨ , 𝑒2∨ ∧ 𝑒4∨ , 𝑒3∨ ∧ 𝑒4∨ .
+
+Row reduction of 𝑇𝑖𝑇 𝑀𝑇𝑖 = 𝑀 gives the integral solutions 𝑞 (3, 1, 0, −2, 0, −2), proving the last equal-
+ity in (1.9) and recovering Engel’s invariant class from Lemma 7.2 [1, p. 17]. Its matrix in 𝐵 0 is
+
+                                                              0        3 1  0
+                                                            ©                  ª
+                                                            ­−3        0 −2 0 ®®
+                                                [ 𝜉 ] 𝐵0 = ­­                    .                                  (1.14)
+                                                            ­ −1       2 0 −2®®
+                                                            «0         0 2 0¬
+
+Therefore
+                                                 𝛿0𝑇 [ 𝜉 ] 𝐵0 = (0, 0, 0, −6) ,
+which is (1.1).
+  The columns of (1.11) form the matrix
+
+                                             1         0 2 −2
+                                           ©                   ª
+                                           ­0          0 1 0 ®®
+                                      𝑃 = ­­                    ,            det 𝑃 = −1.
+                                           ­0          1 −3 0 ®®
+                                           «0          0 0 1¬
+
+Multiplication gives 𝑃 𝑇 [ 𝜉 ] 𝐵0 𝑃 = 𝐽 ⊕ 6 𝐽 . This proves the normal form and the Smith form. Finally,
+                                                           1            ∨    ∨    ∨    ∨
+                             Pf ( [ 𝜉 ] 𝐵0 ) = −6,         2 𝜉 ∧ 𝜉 = −6𝑒1 ∧ 𝑒2 ∧ 𝑒3 ∧ 𝑒4 ,
+
+
+
+                                                                   3
+so det[ 𝜉 ] 𝐵0 = (−6) 2 = 36, as asserted.
+
+Remark 1.2 (Basis and orientation). If the columns of 𝐴 ∈ GL4 (ℤ) are a new basis in an old one, then
+the simultaneous coordinate changes are
+
+                       [ 𝜉 ] ′ = 𝐴𝑇 [ 𝜉 ] 𝐴,          [ 𝛿 ] ′ = 𝐴−1 [ 𝛿 ] ,          [ 𝜓 ] ′ = 𝐴𝑇 [ 𝜓 ] .         (1.15)
+
+Thus (1.1) is tensorial. The Pfaffian changes by det 𝐴, which explains the signs −6 in 𝐵 0 and +6 in the
+orientation-reversing basis (1.11), while the determinant and Smith form do not change. Reversing only
+𝛿0 , only 𝜓 , or the contraction convention reverses the sign in (1.1). The abstract normal form alone does
+not select these classes: for example, in 𝐽 ⊕ 6 𝐽 , taking 𝛿 = 𝑎1 and 𝜓 = 𝑏2∨ gives 𝜄𝛿 𝜉 = 𝑏1∨ , not −6𝜓 .
+Proposition 1.3 (Reduction along the invariant circle). Let 𝐾 = ker 𝜓 ⊂ Λ. The radical of
+𝜉 | 𝐾 is ℤ𝛿0 , and the induced alternating form on 𝐾 /ℤ𝛿0 is unimodular. The classes [ 𝑒1 ] , [ 𝑒3 ] form an
+ordered basis with pairing 𝜉 ( [ 𝑒1 ] , [ 𝑒3 ]) = 1.
+                                                          ⊥
+Proof. The contraction identity gives 𝐾 = 𝛿0 𝜉 . In the basis (1.11), 𝐾 = ℤ 𝑎1 ⊕ ℤ𝑏1 ⊕ ℤ 𝑎2 , while
+𝛿0 = − 𝑎2 . The restriction of (1.12) to 𝐾 is 𝐽 ⊕ 0, proving every assertion.
+   Thus the factor six lies in the plane containing the invariant circle and a vector detected by 𝜓 . Reduc-
+tion by that circle leaves an integral symplectic plane with elementary divisor one.
+
+
+2      The discriminant pairing and Heisenberg module
+Let ( 𝐿, 𝜉 ) be any rank-four alternating lattice with the normal form 𝐽 ⊕ 6 𝐽 in a basis ( 𝑎1 , 𝑏1 , 𝑎2 , 𝑏2 ).
+Define
+                     𝜉 ♭ : 𝐿 −→ 𝐿 ∨ ,      𝜉 ♭ ( 𝑥 ) = 𝜉 ( 𝑥, −) , D𝜉 = 𝐿 ∨ / 𝜉 ♭ ( 𝐿 ) .
+The rational extension 𝜙 = 𝜉 ♭ ⊗ ℚ is an isomorphism.
+Lemma 2.1 (Discriminant pairing). For 𝑢, 𝑣 ∈ 𝐿 ∨ , the formula
+
+                                        𝑏 𝜉 ( ¯𝑢, 𝑣¯ ) = 𝑢 ( 𝜙 −1 𝑣 )    (mod ℤ)                                  (2.1)
+
+defines a perfect alternating pairing 𝑏 𝜉 : D𝜉 × D𝜉 → ℚ/ℤ. Moreover, if
+
+                                               𝛼 = [ 𝑎2∨ ] ,         𝛽 = [ 𝑏2∨ ] ,
+
+then
+                  D𝜉 = ⟨ 𝛼 ⟩ ⊕ ⟨ 𝛽 ⟩  (ℤ/6ℤ) 2 ,                  𝑏 𝜉 ( 𝛼, 𝛽 ) = 61 ,    𝑏 𝜉 ( 𝛽, 𝛼 ) = − 61 .   (2.2)
+
+Proof. Write 𝑥 = 𝜙 −1 𝑢 and 𝑦 = 𝜙 −1 𝑣 . Replacing 𝑢 by 𝑢 + 𝜉 ♭ ( 𝜆) changes (2.1) by 𝜉 ( 𝜆, 𝑦 ) = −𝑣 ( 𝜆) ∈ ℤ;
+replacing 𝑣 by 𝑣 + 𝜉 ♭ ( 𝜇) changes it by 𝑢 ( 𝜇) ∈ ℤ. The pairing is therefore well defined and alternating.
+If it annihilates 𝑢¯ against every 𝑣¯ , then 𝑣 ( 𝑥 ) = −𝑢 ( 𝜙 −1 𝑣 ) is integral for every 𝑣 ∈ 𝐿 ∨ . Hence 𝑥 ∈ 𝐿 , so
+𝑢¯ = 0. The induced homomorphism to the Pontryagin dual is injective between finite groups of the
+same order, and is therefore an isomorphism. Formula (2.2) follows directly from the normal form.
+
+    Put 𝐾 = ⟨ 𝛼 ⟩  ℤ/6ℤ, let 𝜁6 = 𝑒 2𝜋 𝑖 /6 , and let 𝜒 ∈ 𝐾
+                                                           b satisfy 𝜒 ( 𝛼 ) = 𝜁6 . The map
+
+                                                 𝑟 𝛼 + 𝑠 𝛽 ↦−→ ( 𝑟 𝛼, 𝜒 𝑠 )
+
+
+                                                               4
+is a polarization D𝜉  𝐾 ⊕ 𝐾
+                           b . Define
+
+                                                  𝐻6 = 𝜇6 × 𝐾 × 𝐾
+                                                                b
+
+with multiplication
+                               ( 𝑧, 𝑢, 𝜂 ) ( 𝑧 ′ , 𝑢′ , 𝜂 ′ ) = 𝑧𝑧 ′ 𝜂 ′ ( 𝑢) , 𝑢 + 𝑢′ , 𝜂𝜂 ′ .
+                                                                                             
+                                                                                                              (2.3)
+Theorem 2.2 (Level-six Heisenberg module). The center of 𝐻6 is the displayed copy of 𝜇6 . Its
+commutator pairing is
+                                                                                                ′
+                   [(1, 𝑢, 𝜂 ) , (1, 𝑢′ , 𝜂 ′ )] = 𝜂 ′ ( 𝑢) 𝜂 ( 𝑢′ ) −1 , 0, 1 = 𝑒 2𝜋 𝑖𝑏 𝜉 ( 𝑑,𝑑 ) , 0, 1 ,
+                                                                                                        
+                                                                                                              (2.4)
+
+where 𝑑 ↔ ( 𝑢, 𝜂 ) and 𝑑 ′ ↔ ( 𝑢′ , 𝜂 ′ ). On the six-dimensional space H = ℂ[ 𝐾 ], the formula
+
+                                       [ 𝜌 ( 𝑧, 𝑢, 𝜂 ) ℎ] ( 𝑡 ) = 𝑧𝜂 ( 𝑡 ) ℎ ( 𝑡 + 𝑢)                         (2.5)
+
+defines an irreducible representation, and the central 𝜇6 acts by its faithful tautological character.
+
+Proof. The bicharacter in (2.3) makes the multiplication associative, and direct multiplication gives (2.4).
+Its nondegeneracy forces a central element to have 𝑢 = 0 and 𝜂 = 1. The same calculation verifies (2.5).
+    For 𝑡 ∈ 𝐾 , let 𝛿𝑡 be the delta-function at 𝑡 . The operator
+                                                   1 ∑︁
+                                           𝑃𝑡 =         𝜂 ( 𝑡 ) −1 𝜌 (1, 0, 𝜂 )
+                                                   6 b
+                                                      𝜂∈𝐾
+
+projects onto ℂ𝛿𝑡 . A nonzero invariant subspace therefore contains some 𝛿𝑡 , and translations carry it
+through every delta-function. These span H , proving irreducibility.
+
+   Applied to Theorem 1.1, this construction belongs to the fibre lattice 𝐻1 ( 𝐹 , ℤ). It is not constructed
+from the ordinary cohomology of the total six-manifold.
+
+
+3     Two multiple fibres
+The topology of two logarithmic fillings leads to an elementary presentation whose full integral content
+is visible before any Leray differential is considered. It is useful to include a global section integer from
+the start.
+Theorem 3.1 (Two-fibre Smith form). Let 𝑟, 𝑠 > 0, let 𝑚, 𝑛, 𝑏0 ∈ ℤ, and define
+                       D                                                        E
+                𝐺𝑏0 = 𝑐, 𝑥0 , 𝑥1 𝑐 central, 𝑥0 𝑥1 = 𝑐 𝑏0 , 𝑥0𝑟 = 𝑐 𝑚 , 𝑥1𝑠 = 𝑐 𝑛 .                            (3.1)
+
+Put
+                             Δ𝑏0 = 𝑟𝑛 + 𝑠𝑚 − 𝑟 𝑠𝑏0 ,                 𝑑 = gcd( 𝑟, 𝑠, 𝑚, 𝑛) .                   (3.2)
+Then                                                             !
+                                                       𝑟    𝑠
+                                          𝐺𝑏0  coker              .                                          (3.3)
+                                                      −𝑚 𝑛 − 𝑠𝑏0
+
+
+
+
+                                                              5
+If Δ𝑏0 ≠ 0, then
+                           𝐺𝑏0  ℤ/ 𝑑 ℤ ⊕ ℤ/(| Δ𝑏0 |/ 𝑑 )ℤ,                 | 𝐺𝑏 0 | = | Δ𝑏 0 | .          (3.4)
+If Δ𝑏0 = 0, then
+                                               𝐺𝑏0  ℤ ⊕ ℤ/ 𝑑 ℤ.                                            (3.5)
+In either case 𝐺𝑏0 is cyclic if and only if 𝑑 = 1.
+
+Proof. The product relation gives 𝑥1 = 𝑥0−1 𝑐 𝑏0 , so the group is abelian. In additive notation its two
+remaining relation vectors in ℤ 𝑥0 ⊕ ℤ𝑐 are
+
+                                     𝑟 𝑥0 − 𝑚𝑐,             𝑠𝑥0 + ( 𝑛 − 𝑠𝑏0 ) 𝑐,
+
+which proves (3.3). The greatest common divisor of the entries is
+
+                               gcd( 𝑟, 𝑠, 𝑚, 𝑛 − 𝑠𝑏0 ) = gcd( 𝑟, 𝑠, 𝑚, 𝑛) = 𝑑,
+
+and the determinant is Δ𝑏0 . For nonzero determinant, the Smith invariants are 𝑑 and | Δ𝑏0 |/ 𝑑 . If the
+determinant vanishes, the matrix still has rank one because 𝑟, 𝑠 > 0, so its Smith form is diag( 𝑑, 0). The
+cyclicity assertions follow.
+
+Proposition 3.2 (Section gauges and orientations). For 𝑘0 , 𝑘1 ∈ ℤ, the generator change
+
+                                          𝑥0′ = 𝑥0 𝑐 𝑘0 ,        𝑥1′ = 𝑥1 𝑐 𝑘1                             (3.6)
+
+sends
+                        𝑚 ′ = 𝑚 + 𝑟 𝑘0 ,         𝑛′ = 𝑛 + 𝑠𝑘1 ,           𝑏0′ = 𝑏0 + 𝑘0 + 𝑘1                (3.7)
+and preserves both 𝑑 and Δ𝑏0 . In the gauge 𝑏0 = 0, the presentation-preserving choice 𝑘1 = −𝑘0 = −𝑘
+sends
+                                    ( 𝑚, 𝑛) ↦−→ ( 𝑚 + 𝑟 𝑘, 𝑛 − 𝑠𝑘 ) .                           (3.8)
+Interchanging ( 𝑟, 𝑚, 𝑥0 ) with ( 𝑠, 𝑛, 𝑥1 ) preserves Δ𝑏0 . Replacing the oriented fibre generator by 𝑐 ′ = 𝑐 −1
+sends ( 𝑚, 𝑛, 𝑏0 ) to (−𝑚, −𝑛, −𝑏0 ) and sends Δ𝑏0 to −Δ𝑏0 .
+
+Proof. Substitution in the three defining relations gives (3.7), and
+
+                           𝑟 ( 𝑛 + 𝑠𝑘1 ) + 𝑠 ( 𝑚 + 𝑟 𝑘0 ) − 𝑟 𝑠 ( 𝑏0 + 𝑘0 + 𝑘1 ) = Δ𝑏0 .
+
+The remaining statements follow by the indicated changes of generators. They also show why only | Δ𝑏0 |
+is intrinsic without fixed orientations.
+
+   The hypotheses in Theorem 3.1 cannot be weakened silently. For 𝑏0 = 0,
+
+                        ( 𝑟, 𝑠 ; 𝑚, 𝑛) = (2, 4; 2, 2)       =⇒      𝐺0  ℤ/2ℤ ⊕ ℤ/6ℤ,
+
+although Δ0 = 12. Also
+
+                          (2, 4; 2, −4)     =⇒       𝐺0  ℤ ⊕ ℤ/2ℤ,                   Δ0 = 0 .
+
+At the simplest zero-coefficient boundary, 𝑚 = 𝑛 = 0 gives 𝐺0  ℤ ⊕ ℤ/gcd( 𝑟, 𝑠 )ℤ.
+
+
+                                                            6
+Proposition 3.3 (Seifert Euler number). Let 𝑀 be an oriented Seifert manifold over 𝑆 2 with two
+normalized effective exceptional fibres, written in Wilkes’s convention as
+
+                                            ( 𝑏0 , 𝑆 2 ; ( 𝑟, 𝛽0 ) , ( 𝑠, 𝛽1 )) ,                          (3.9)
+
+where 𝑟, 𝑠 ≥ 2, 0 < 𝛽0 < 𝑟 , 0 < 𝛽1 < 𝑠 , and gcd( 𝑟, 𝛽0 ) = gcd( 𝑠, 𝛽1 ) = 1. With
+
+                                            𝑚 = − 𝛽0 ,             𝑛 = − 𝛽1 ,                              (3.10)
+
+one has 𝜋1 ( 𝑀 )  𝐺𝑏0 and
+                                        
+                                   𝛽0 𝛽1            𝑚 𝑛
+                  𝑒 ( 𝑀 ) = − 𝑏0 +   +     = −𝑏 0 +   + ,                           𝑟 𝑠 𝑒 ( 𝑀 ) = Δ𝑏 0 .   (3.11)
+                                   𝑟   𝑠            𝑟  𝑠
+
+In particular 𝑑 = 1, and hence
+                                                  (
+                                                      ℤ/| Δ𝑏0 |ℤ,        𝑒 ( 𝑀 ) ≠ 0,
+                                    𝜋1 ( 𝑀 )                                                              (3.12)
+                                                      ℤ,                 𝑒 ( 𝑀 ) = 0.
+
+If 𝑔 = gcd( 𝑟, 𝑠 ) and 𝐿 = lcm( 𝑟, 𝑠 ) = 𝑟 𝑠 / 𝑔 , then the smaller denominator clearing is
+
+                                                            𝑠    𝑟   Δ𝑏
+                               𝐿𝑒 ( 𝑀 ) = − 𝐿𝑏0 +             𝑚 + 𝑛 = 0 ∈ ℤ.                               (3.13)
+                                                            𝑔    𝑔    𝑔
+
+Proof. Wilkes’s presentation has central regular fibre ℎ, local relations 𝑎𝑖𝛼𝑖 ℎ 𝛽𝑖 = 1, and, over 𝑆 2 with
+two exceptional fibres, the product relation 𝑎0 𝑎1 = ℎ𝑏0 . Setting 𝑐 = ℎ, 𝑥 𝑖 = 𝑎𝑖 gives (3.1) and (3.10).
+His Euler-number convention gives (3.11) [5, Proposition 4.3, p. 149]. Effectiveness implies 𝑑 = 1, and
+Theorem 3.1 gives (3.12). Equation (3.13) is immediate. Hatcher’s section-change calculation gives the
+geometric counterpart of (3.6): twists are added at one boundary torus and subtracted at another, leaving
+the Euler sum fixed [2, Section 2.1, pp. 25–27].
+
+Remark 3.4. The rational number 𝑒 ( 𝑀 ) is orientation-sensitive. Reversing the fibre orientation and
+renormalizing Wilkes’s two local pairs sends
+
+                                  ( 𝑏0 ; 𝛽0 , 𝛽1 ) ↦−→ (−𝑏0 − 2; 𝑟 − 𝛽0 , 𝑠 − 𝛽1 ) ,
+
+which negates both 𝑒 ( 𝑀 ) and Δ𝑏0 but preserves the abstract group. With exceptional fibres, 𝑒 ( 𝑀 ) is a
+rational Seifert Euler number; only in the ordinary circle-bundle case is it itself the integral Euler class
+on the underlying base.
+
+
+4    The rank-one Seifert transgression
+The primitive coefficient is visible before passing to Engel’s torus fibration. If
+                                                                                    𝑟𝑠
+                                   𝑔 = gcd( 𝑟, 𝑠 ) ,          ℓ = lcm( 𝑟, 𝑠 ) =        ,
+                                                                                    𝑔
+
+
+
+
+                                                             7
+then the two natural integral normalizations are
+
+                                                Δ𝑏 0
+                               𝑑20,1 ( ℓ 𝑢) =        𝜔,       𝑑20,1 ( 𝑟 𝑠𝑢) = Δ𝑏0 𝜔.                    (4.1)
+                                                 𝑔
+
+The first uses the primitive global section; the second is its 𝑔 -fold multiple. We now specify the map and
+conventions for which these equations hold.
+   Let 𝑟, 𝑠 ≥ 2, let 0 < 𝛽0 < 𝑟 and 0 < 𝛽1 < 𝑠 , and assume
+
+                                         gcd( 𝑟, 𝛽0 ) = gcd( 𝑠, 𝛽1 ) = 1.                              (4.2)
+
+For 𝑏0 ∈ ℤ, consider Kollár’s effective Seifert ℂ∗ -bundle
+                                                             
+                                                     𝛽0    𝛽1
+                           𝑞 : 𝑍 = 𝑌 Oℙ1 ( 𝑏0 ) , [0] + [1] −→ ℙ1 .                                     (4.3)
+                                                     𝑟     𝑠
+Equivalently, this is the coarse map of the complement of the zero section in the corresponding line
+bundle on the labelled root orbisphere. The local characters are faithful by (4.2), so 𝑟 and 𝑠 are the
+actual fibre multiplicities. Give the base its complex orientation and put 𝜔 = 𝑐1 (Oℙ1 (1)). Kollár’s natural
+trivialization
+                                                            ∼
+                                               𝜏 : 𝑅 1 𝑞∗ ℚ −
+                                                            → ℚℙ1
+defines the normalized rational fibre class 𝑢 𝐾 = 𝜏 −1 (1). We use the Wilkes-oriented class 𝑢 = −𝑢 𝐾 and
+set
+                                                         𝑚 𝑛
+            𝑚 = − 𝛽0 ,     𝑛 = − 𝛽1 ,       𝑒 = −𝑏 0 + + ,             Δ𝑏0 = 𝑟𝑛 + 𝑠𝑚 − 𝑟 𝑠𝑏0 .       (4.4)
+                                                         𝑟     𝑠
+Theorem 4.1 (Coarse two-fibre transgression). For the map (4.3), one has 𝑅0 𝑞∗ ℤ  ℤℙ1 and an
+exact sequence of constructible sheaves
+
+                     0 −→ 𝑅1 𝑞∗ ℤ −→ ℤℙ1 −→ (ℤ/𝑟 ℤ) {0} ⊕ (ℤ/ 𝑠 ℤ) {1} −→ 0,                            (4.5)
+
+where the last map sends 1 to (1, 1). Consequently
+
+                        𝐻 0 (ℙ1 , 𝑅1 𝑞∗ ℤ) = ℓ ℤ𝑢,            𝐻 1 (ℙ1 , 𝑅1 𝑞∗ ℤ)  ℤ/ 𝑔 ℤ.             (4.6)
+
+In the integral Leray spectral sequence of 𝑞 ,
+
+                              𝑑20,1 : 𝐻 0 (ℙ1 , 𝑅1 𝑞∗ ℤ) −→ 𝐻 2 (ℙ1 , 𝑅0 𝑞∗ ℤ) ,                       (4.7)
+
+the two equations in (4.1) hold.
+
+Proof. Kollár’s multiplicity criterion gives the two multiplicities 𝑟 and 𝑠 . His integral comparison map
+and its local cokernel give (4.5) [3, Theorem 7 and Propositions 43 and 47]. The long exact cohomology
+sequence of (4.5) begins with the diagonal reduction map
+
+                                           ℤ −→ ℤ/𝑟 ℤ ⊕ ℤ/ 𝑠 ℤ.
+
+Its kernel is ℓ ℤ and its cokernel is ℤ/ 𝑔 ℤ, proving (4.6).
+
+
+
+
+                                                          8
+   In Kollár’s convention the rational Chern class is
+                                                           
+                                𝐾       1            𝛽0 𝛽1
+                               𝑐1 ( 𝑍 /ℙ ) = 𝑏0 +       +     𝜔 = −𝑒𝜔.                                  (4.8)
+                                                      𝑟   𝑠
+The quotient 𝑍 → 𝑍 / 𝜇ℓ induces a map of Leray spectral sequences, and 𝑍 / 𝜇ℓ is an ordinary ℂ∗ -bundle
+whose Chern class is ℓ 𝑐1𝐾 . Hence
+                                    𝑑20,1 ( ℓ 𝑢 𝐾 ) = ℓ 𝑐1𝐾 ( 𝑍 /ℙ1 )
+[3, Definition 9, Map 13, and Corollary 44]. Replacing 𝑢 𝐾 by 𝑢 = −𝑢 𝐾 and using
+
+                                                      𝑠   𝑟  Δ𝑏
+                                     ℓ 𝑒 = −ℓ 𝑏 0 +     𝑚+ 𝑛= 0
+                                                      𝑔   𝑔   𝑔
+
+proves the first equation in (4.1). Since 𝑟 𝑠 = 𝑔ℓ , the second follows.
+
+   The coarse coefficient records only the free part of the global Seifert class. To see the missing informa-
+tion integrally, let
+                              S𝑟,𝑠 = ⟨ 𝐻 , 𝑋0 , 𝑋1 | 𝑟 𝑋0 = 𝐻 , 𝑠𝑋1 = 𝐻 ⟩ ,                              (4.9)
+the line-bundle class group of the labelled root orbisphere. Here 𝐻 is the pullback of the positive coarse
+class and 𝑋0 , 𝑋1 are the two root classes. In the orientation of (4.4), the Seifert class is
+
+                                        𝜀 = −𝑏0 𝐻 + 𝑚𝑋0 + 𝑛𝑋1 .                                        (4.10)
+
+Proposition 4.2 (The global class and its coarse shadow). There is an isomorphism
+
+                                              S𝑟,𝑠  ℤ ⊕ ℤ/ 𝑔 ℤ.                                        (4.11)
+
+The section gauges (3.7) leave 𝜀 fixed, and
+
+                                                        Δ𝑏 0
+                                                 ℓ𝜀 =        𝐻.                                        (4.12)
+                                                         𝑔
+
+Equivalently, on gauge classes
+
+                                                         ℓ   ℓ   Δ𝑏
+                                 𝜅 [ 𝑏0 , 𝑚, 𝑛] = −ℓ 𝑏0 + 𝑚 + 𝑛 = 0                                    (4.13)
+                                                         𝑟   𝑠    𝑔
+
+is a surjection to ℤ whose kernel is the torsion subgroup ℤ/ 𝑔 ℤ. Thus the rational Euler number, and
+hence the coarse differential, determines the full global class exactly when 𝑔 = 1.
+
+Proof. Kollár’s classification gives the representatives ( 𝑏0 , 𝑚, 𝑛), while a change of local section gives
+the relations
+                             ( 𝑏0 , 𝑚, 𝑛) ∼ ( 𝑏0 + 𝑘0 + 𝑘1 , 𝑚 + 𝑟 𝑘0 , 𝑛 + 𝑠𝑘1 ) .
+The first determinantal divisor of the relation matrix is 1, while the second is
+
+                                              gcd( 𝑟, 𝑠, 𝑟 𝑠 ) = 𝑔.
+
+
+
+
+                                                        9
+Its Smith form therefore gives (4.11). Relations 𝑟 𝑋0 = 𝐻 and 𝑠𝑋1 = 𝐻 prove both gauge invariance and
+(4.12). The three coefficients in (4.13) have greatest common divisor 1, so 𝜅 is onto. Its finite kernel has
+order 𝑔 , proving the last assertion.
+
+   The torsion is already present in the smallest rank-drop example. For
+
+                                  𝑟 = 𝑠 = 2,          𝑏0 = −1,            𝛽0 = 𝛽1 = 1,                       (4.14)
+
+one has 𝑒 = Δ𝑏0 = 0, so the coarse transgression vanishes, whereas
+
+                                         𝜀 = 𝐻 − 𝑋0 − 𝑋1 = 𝑋0 − 𝑋1
+
+is the nonzero element of order two in S2,2 . Thus a zero rational Euler number need not mean that the
+global Seifert class is zero.
+Proposition 4.3 (Effectivization and rank drop). For formal local data ( 𝑟, 𝑚) and ( 𝑠, 𝑛), put
+                                                                   𝑟             𝑠
+              𝑎0 = gcd( 𝑟, 𝑚) ,     𝑎1 = gcd( 𝑠, 𝑛) ,      𝑅=         ,     𝑆=      ,    ℎ = gcd( 𝑅, 𝑆 ) .   (4.15)
+                                                                   𝑎0            𝑎1
+If the data arise from a rank-one Seifert construction after reducing the two local fractions, then the
+actual local orders are 𝑅, 𝑆 , the primitive carrier is
+                                                                       𝑟𝑠
+                                          𝑄 = lcm( 𝑅, 𝑆 ) =                  ,                               (4.16)
+                                                                     𝑎0 𝑎1 ℎ
+and
+                                            Δ𝑏 0
+                               𝑑20,1 ( 𝑄𝑢) =       𝜔,              𝑑20,1 ( 𝑟 𝑠𝑢) = Δ𝑏0 𝜔.                    (4.17)
+                                           𝑎0 𝑎1 ℎ
+If the local pairs are effective and Δ𝑏0 = 0, then
+
+                                           𝑟 = 𝑠,          𝑚 + 𝑛 = 𝑟𝑏0 .                                     (4.18)
+
+For normalized pairs this says 𝑏0 = −1 and 𝛽0 + 𝛽1 = 𝑟 ; in this case 𝐺𝑏0  ℤ.
+
+Proof. The least positive integer 𝑘 for which 𝑟 | 𝑘𝑚 and 𝑠 | 𝑘𝑛 is lcm( 𝑅, 𝑆 ), proving (4.16). Writing
+𝑚 = 𝑎0 𝑀 and 𝑛 = 𝑎1 𝑁 gives
+
+                                                Δ𝑏 0
+                                     𝑄𝑒 =              ,        𝑟 𝑠 = ( 𝑎0 𝑎1 ℎ) 𝑄,
+                                               𝑎0 𝑎1 ℎ
+which proves (4.17). If the pairs are effective and Δ𝑏0 = 0, then reduction modulo 𝑟 gives 𝑟 | 𝑠 , and
+reduction modulo 𝑠 gives 𝑠 | 𝑟 . This proves (4.18). The normalized conclusion follows from 0 < 𝛽𝑖 < 𝑟 ,
+and Theorem 3.1 gives the last assertion.
+
+Remark 4.4 (Naturality, orientations, and scope). The naturality in Theorem 4.1 is the map of Leray
+spectral sequences induced by 𝑍 → 𝑍 / 𝜇ℓ ; the pullback of the ordinary fibre generator is ℓ 𝑢 𝐾 . More
+generally, a morphism of oriented Seifert bundles gives commuting Leray differentials. If a base pull-
+back has actual carrier ℓ ′ 𝑢′ with ℓ ′ | ℓ , then the pullback of ℓ 𝑢 is ( ℓ /ℓ ′ ) ℓ ′ 𝑢′ , so primitive numerical
+coefficients must be compared with this index. Reversing the fibre generator or the chosen generator 𝜔
+
+
+
+                                                           10
+reverses the displayed scalar. Section gauges and interchange of the two labelled points preserve (4.1); the
+only changes of the oriented rank-one fibre basis are 𝑢 ↦→ ±𝑢.
+   This theorem is specific to the rank-one Seifert bundle (4.3). An affine torus fibration has a higher-
+rank local system, and local multiplicities and a group presentation do not determine its extension across
+singular fibres or its rational transgression. Transporting (4.1) to such a fibration would require an actual
+map over the base inducing the claimed morphism of constructible sheaves. No such map is used below.
+
+
+5       The Leray carrier in Engel’s (3,4) case
+Choose lifts of Engel’s logarithmic-transform classes
+
+                                          𝑎0 ∈ 31 Λ𝑇0 ,         𝑎1 ∈ 41 Λ𝑇1 ,
+
+and put
+
+    𝑣0 = 3 𝑎 0 ,    𝑣1 = 4 𝑎1 ,     𝑚 = 𝜓 ( 𝑣0 ) ,        𝑛 = 𝜓 ( 𝑣1 ) ,        𝑝 = 12𝜓 ( 𝑎0 + 𝑎1 ) = 4𝑚 + 3𝑛. (5.1)
+
+We require the local cyclic affine actions on the good-reduction tori to be free. Their quotient fibres then
+have multiplicities 3 and 4. The condition | 𝑝 | = 1 used below implies this freeness. Exact torsion order
+alone does not imply it.
+Proposition 5.1 (A free-action criterion). Let 𝑑 > 0 be an integer, let 𝑇 preserve a lattice Λ with
+𝑇 𝑑 = 𝐼 , and let 𝑎 ∈ 𝑑 −1 Λ𝑇 . On the real torus Λℝ /Λ, put 𝑔𝑎 ( 𝑧 ) = 𝑇 𝑧 + 𝑎. If 𝜃 ∈ Λ∨ satisfies 𝜃𝑇 = 𝜃
+and gcd( 𝜃 ( 𝑑𝑎) , 𝑑 ) = 1, then the action generated by 𝑔𝑎 is free and has order 𝑑 . In the two markings
+above, both local actions are free if and only if gcd( 𝑚, 3) = gcd( 𝑛, 4) = 1, equivalently gcd( 𝑝, 12) = 1.
+
+Proof. Since 𝑇 𝑎 = 𝑎, one has 𝑔𝑎𝑘 ( 𝑧 ) = 𝑇 𝑘 𝑧 + 𝑘𝑎 and 𝑔𝑎𝑑 = 1. A fixed point of 𝑔𝑎𝑘 would imply
+(𝑇 𝑘 − 𝐼 ) 𝑧 + 𝑘𝑎 ∈ Λ. Applying the real extension of 𝜃 would give 𝑘𝜃 ( 𝑑𝑎)/ 𝑑 ∈ ℤ. The coprimality
+assumption therefore forces 𝑑 | 𝑘 .
+    In the first marking, direct solution of 𝑇0 𝑣 = 𝑣 gives 3 𝑎0 = ℎ𝛿0 + 𝑚𝑒4 with ℎ ∈ ℤ. If 3 | 𝑚, then
+𝑧 = −ℎ ( 𝑒1 + 𝑒2 )/3 satisfies (𝑇0 − 𝐼 ) 𝑧 + 𝑎0 = ℎ𝑒3 + ( 𝑚/3) 𝑒4 ∈ Λ. In the second marking, similarly
+4 𝑎1 = ℎ′ 𝛿1 + 𝑛𝑓4 . If 2 | 𝑛, then 𝑧 = −ℎ′ ( 𝑓1 + 𝑓2 )/4 satisfies (𝑇12 − 𝐼 ) 𝑧 + 2 𝑎1 = ℎ′ 𝑓3 + ( 𝑛/2) 𝑓4 ∈ Λ.
+These fixed points prove necessity. Sufficiency follows from the first assertion with 𝜃 = 𝜓 . The final
+equivalence follows from 𝑝 ≡ 𝑚 (mod 3) and 𝑝 ≡ −𝑛 (mod 4).
+
+      The class 𝑎0 = 𝛿0 /3 has exact order three, but its affine action fixes 𝑧 = −( 𝑒1 + 𝑒2 )/3, since
+
+                                           (𝑇0 − 𝐼 ) 𝑧 + 𝑎0 = 𝑒3 ∈ Λ.
+
+Likewise 𝑎1 = 𝛿1 /4 has exact order four, but its square fixes 𝑧 = −( 𝑓1 + 𝑓2 )/4, because
+
+                                           (𝑇12 − 𝐼 ) 𝑧 + 2 𝑎1 = 𝑓3 ∈ Λ.
+
+These computations give the freeness criterion for the stated affine maps. A positively marked quotient
+also requires its actual deck transformation and the continuation of its origin section. For 𝑎0 = 𝑒4 /3,
+these are computed in Theorem 27.1; its action includes the central conormal translation and is free by
+the fourth coordinate.
+
+
+
+                                                           11
+    The carrier of the transgression is the cohomological Leray spectral sequence of the specific map
+𝑓 : 𝑌 ( 𝑢 ) → ℙ1 ,
+                            𝐸2𝑎,𝑏 = 𝐻 𝑎 (ℙ1 , 𝑅𝑏 𝑓∗ ℤ) =⇒ 𝐻 𝑎+𝑏 (𝑌 ( 𝑢) , ℤ) .                    (5.2)
+Over 𝑈 , the restriction of 𝑅1 𝑓∗ ℤ is a local system with fibre 𝑉 = 𝐻 1 ( 𝐹 , ℤ) and monodromy 𝑇𝑖−𝑇 .
+Across the three singular values, 𝑅1 𝑓∗ ℤ is the corresponding constructible sheaf, not a local system. The
+fibres of 𝑓 are connected, so 𝑅0 𝑓∗ ℤ  ℤℙ1 . Thus the first relevant differential is precisely
+
+                                 𝑑20,1 : 𝐻 0 (ℙ1 , 𝑅1 𝑓∗ ℤ) −→ 𝐻 2 (ℙ1 , 𝑅0 𝑓∗ ℤ) .                           (5.3)
+
+Theorem 5.2 (Engel’s integral transgression). Assume | 𝑝 | = 1, as in Engel’s integral-homology
+calculation, and choose the common orientation for which 𝐻 2 (ℙ1 , 𝑅0 𝑓∗ ℤ) = ℤ 𝜔. Then
+
+                               𝐻 0 (ℙ1 , 𝑅1 𝑓∗ ℤ) = 12ℤ𝜓 ,             𝑑20,1 (12𝜓 ) = 𝑝𝜔.                     (5.4)
+
+Proof. The extension lattice in (5.4) is Engel’s Lemma 7.5. The differential uses the invariant covector 𝜓 :
+the local translation contributions have 𝜓 -values 𝑚 and 𝑛. Their vector representatives depend on the
+marked section before passing to this covector. For example, with 𝑎0 = 𝑒4 /3, equation (27.7) gives the
+positive local relation with vector 𝑒4 − 2𝛿0 . Since 𝜓 ( 𝛿0 ) = 0, it has the same 𝜓 -value as 𝑣0 = 𝑒4 . Thus
+the oriented contributions to the obstruction for 12𝜓 are
+
+                                      12𝜓 ( 𝑣0 )                12𝜓 ( 𝑣1 )
+                                                 = 4𝑚,                     = 3𝑛.                              (5.5)
+                                         3                         4
+
+The cusp gluing at infinity contributes zero in this marking. Their sum is 𝑝 = 4𝑚 + 3𝑛, which is
+Engel’s Lemma 7.6 [1, pp. 20–21]. Reversing either generator in (5.4) reverses the corresponding sign;
+simultaneous transport of the orientation preserves the identity.
+
+Proposition 5.3 (The (3 , 4) presentation). For the same geometric data,
+
+                      𝜋1 (𝑌 ( 𝑢))  ⟨𝑐, 𝑥0 , 𝑥1 | 𝑐 central, 𝑥0 𝑥1 = 1, 𝑥03 = 𝑐 𝑚 , 𝑥14 = 𝑐 𝑛 ⟩ .             (5.6)
+
+Consequently                                           (
+                                                           ℤ/| 𝑝 |ℤ,     𝑝 ≠ 0,
+                                       𝜋1 (𝑌 ( 𝑢))                                                           (5.7)
+                                                           ℤ,            𝑝 = 0.
+In particular it is trivial when | 𝑝 | = 1.
+
+Proof. Engel’s vanishing cycles at infinity kill ker 𝜓 and leave the central class 𝑐 represented by 𝑒4 . The two
+logarithmic fillings give (5.6) [1, Proposition 6.1, pp. 15–16]. This is Theorem 3.1 with ( 𝑟, 𝑠 ; 𝑏0 ) = (3, 4; 0),
+for which 𝑑 = 1 and Δ0 = 𝑝.
+
+Comparison with the rank-one theorem
+For ( 𝑟, 𝑠 ; 𝑏0 ) = (3, 4; 0), one has 𝑔 = 1, ℓ = 12, and Δ0 = 4𝑚 + 3𝑛 = 𝑝. Thus Theorem 4.1 and
+(5.4) have the same scalar after the rank-one class 𝑢 and Engel’s invariant covector 𝜓 are given the same
+sign. The equality is only numerical. Engel’s sheaf has generic fibre 𝐻 1 ( 𝐹 , ℤ) of rank four, nontrivial
+monodromy, and an additional singular value at infinity. No factorization of 𝑓 through (4.3), nor a
+
+
+
+                                                           12
+morphism carrying 𝑢 to 𝜓 across all singular fibres, has been constructed here. Engel’s Lemmas 7.5–7.6,
+rather than Theorem 4.1, prove the carrier and differential in (5.4).
+   Likewise, the presentation (3.1) alone defines neither a map, the sheaves 𝑅𝑏 𝑓∗ ℤ, nor a rational trans-
+gression. It cannot imply a theorem for an arbitrary affine torus fibration. Such a result requires the full
+local system, every specialization map, a global affine or Chern class, and compatible orientations.
+   Sections 9–15 construct integral chains for these same monodromy matrices. The additional data are
+the chains of each filling, the inclusion of fibre chains, and the images of chains transported around the
+boundary loop. Theorem 11.1 gives their full boundary operator. Theorem 14.2 computes the actual cusp
+boundary mapping tori, without identifying them with the filled six-manifold.
+   Finally, Λ = 𝐻1 ( 𝐹 , ℤ) is an auxiliary fibre lattice. In the case in which Engel’s Theorem 4.1 identifies
+the total space with 𝑆 6 , one has
+
+                                    𝐻 𝑗 (𝑌 ( 𝑢) , ℤ) = 0         (0 < 𝑗 < 6) ,
+
+so neither Λ nor its discriminant group is ordinary positive-degree cohomology of the total space.
+
+
+6    The integral extension of the two-fibre class
+The coefficient Δ𝑏0 / 𝑔 determines the coarse transgression. The total integral group can still be a nonsplit
+extension. For example, 𝑟 = 𝑠 = 2, 𝑏0 = 0, and 𝑚 = 𝑛 = −1 give a cyclic group of order four, although
+both successive quotients have order two.
+   Retain the group S𝑟,𝑠 in (4.9), for arbitrary 𝑟, 𝑠 > 0 and 𝑚, 𝑛, 𝑏0 ∈ ℤ. Write
+
+             𝑔 = gcd( 𝑟, 𝑠 ) ,      𝑅 = 𝑟 / 𝑔,      𝑆 = 𝑠 / 𝑔,           ℓ = 𝑔 𝑅𝑆,       𝑘 = Δ𝑏0 / 𝑔.
+
+Choose integers 𝑎, 𝑏 with 𝑎𝑆 + 𝑏𝑅 = 1, and put
+
+                       𝑈 = 𝑎𝑋0 + 𝑏𝑋1 ,           𝑇 = 𝑅𝑋0 − 𝑆 𝑋1 ,             𝑡 = 𝑏𝑚 − 𝑎𝑛.              (6.1)
+
+The letters 𝑎, 𝑏 in this section denote Bézout coefficients.
+Theorem 6.1 (Integral extension and splitting). One has
+
+                       S𝑟,𝑠 = ℤ𝑈 ⊕ (ℤ/ 𝑔 ℤ)𝑇 ,             𝐻 = ℓ𝑈 ,           𝜀 = 𝑘𝑈 + 𝑡𝑇 .             (6.2)
+
+Consequently, for 𝐸 = S𝑟,𝑠 /ℤ 𝜀 ,
+
+                                    𝐸 = ⟨𝑈 , 𝑇 | 𝑔𝑇 = 0, 𝑘𝑈 + 𝑡𝑇 = 0⟩ .                                 (6.3)
+
+If 𝑘 ≠ 0, this gives an exact sequence
+
+                                             1↦→𝑇       𝑈 ↦→1, 𝑇 ↦→0
+                                 0 −→ ℤ/ 𝑔 ℤ −→ 𝐸          −→          ℤ/| 𝑘 |ℤ −→ 0.                   (6.4)
+
+It splits if and only if gcd( 𝑔, 𝑘 ) divides 𝑡 . Moreover, with 𝑑 = gcd( 𝑟, 𝑠, 𝑚, 𝑛),
+                                                    (
+                                                        ℤ/ 𝑑 ℤ ⊕ ℤ/(| Δ𝑏0 |/ 𝑑 )ℤ,      𝑘 ≠ 0,
+                    gcd( 𝑔, 𝑘, 𝑡 ) = 𝑑,      𝐸
+                                                        ℤ ⊕ ℤ/ 𝑑 ℤ,                     𝑘 = 0.
+
+
+                                                         13
+Thus 𝐸 and 𝐺𝑏0 have the same invariant factors. This assertion alone specifies no canonical isomorphism
+between their generators.
+
+Proof. Eliminate 𝐻 from (4.9). The remaining relation is 𝑔 ( 𝑅𝑋0 − 𝑆 𝑋1 ) = 0. The change of generators
+in (6.1) has determinant − 𝑎𝑆 − 𝑏𝑅 = −1, with inverse
+
+                                  𝑋0 = 𝑆𝑈 + 𝑏𝑇 ,              𝑋1 = 𝑅𝑈 − 𝑎𝑇 .
+
+It follows that 𝑇 has exact order 𝑔 and 𝐻 = 𝑟 𝑋0 = ℓ𝑈 . Substitution in (4.10) gives (6.2) and (6.3).
+    If 𝑘 ≠ 0, no nonzero multiple of the relation 𝑘𝑈 + 𝑡𝑇 lies in ℤ𝑇 . Thus the indicated cyclic subgroup
+injects, and the quotient is ℤ/| 𝑘 |ℤ. A lift of its generator has form 𝑈 + 𝑗𝑇 and is killed by 𝑘 precisely
+when 𝑘𝑗 ≡ 𝑡 (mod 𝑔 ). This congruence is soluble exactly under the stated divisibility condition.
+    The matrix sending ( 𝑚, 𝑛) to ( 𝑆𝑚 + 𝑅𝑛, 𝑏𝑚 − 𝑎𝑛) is unimodular. Since 𝑔 | ℓ , this gives
+
+                   gcd( 𝑔, 𝑘, 𝑡 ) = gcd( 𝑔, 𝑆𝑚 + 𝑅𝑛, 𝑏𝑚 − 𝑎𝑛) = gcd( 𝑔, 𝑚, 𝑛) = 𝑑.
+
+The relation matrix in (6.3) has nonzero entry 𝑔 , determinant of absolute value 𝑔 | 𝑘 | = | Δ𝑏0 |, and first
+determinantal divisor 𝑑 . Its Smith form proves both cases.
+
+    Replacing ( 𝑎, 𝑏 ) by ( 𝑎 + 𝑅𝑗, 𝑏 − 𝑆𝑗 ) changes 𝑈 to 𝑈 + 𝑗𝑇 and changes 𝑡 to 𝑡 − 𝑗 𝑘 modulo
+𝑔 . The presentation and the splitting condition are therefore independent of the Bézout choice. The
+section gauges (3.7) change 𝑡 by a multiple of 𝑔 and leave 𝑘 fixed.
+Proposition 6.2 (The coarse Leray extension). For the effective rank-one Seifert bundle (4.3), let
+𝑀 be its oriented unit-circle subbundle. If 𝑘 ≠ 0, the integral Leray filtration gives
+
+                           0 −→ ℤ/| 𝑘 |ℤ −→ 𝐻 2 ( 𝑀 , ℤ) −→ ℤ/ 𝑔 ℤ −→ 0.                                  (6.5)
+
+Its middle group is cyclic of order | Δ𝑏0 |. The extension splits if and only if gcd( 𝑔, 𝑘 ) = 1. For 𝑘 = 0, the
+                                                    ±𝑔
+middle group is ℤ and the sequence is 0 → ℤ −−−→ ℤ → ℤ/ 𝑔 → 0.
+
+Proof. A neighbourhood of each fibre retracts onto a circle, so 𝑅𝑗 𝑞∗ ℤ = 0 for 𝑗 > 1. The base has coho-
+                                                                                             2,0
+mological dimension two. Hence the only terms contributing to total degree two are 𝐸∞            = coker 𝑑20,1
+       1,1
+and 𝐸∞     = ℤ/ 𝑔 ℤ. Equation (4.1) gives the left group in (6.5). Radial contraction from 𝑍 to 𝑀 preserves
+the base and its Leray filtration.
+   Effectiveness implies 𝑑 = 1. Theorem 3.1 and abelianity give 𝐻1 ( 𝑀 , ℤ) = 𝐺𝑏0 , and integral Poincaré
+duality gives 𝐻 2 ( 𝑀 , ℤ)  𝐻1 ( 𝑀 , ℤ). If 𝑘 ≠ 0, a direct sum of cyclic groups of orders 𝑔 and | 𝑘 | is
+cyclic exactly when those orders are coprime. Conversely, a cyclic group of order 𝑔 | 𝑘 | has complemen-
+tary subgroups of these orders when they are coprime. This proves the splitting assertion. If 𝑘 = 0,
+Theorem 3.1 gives the middle group ℤ. Its subgroup with quotient ℤ/ 𝑔 ℤ is 𝑔 ℤ.
+
+   The algebraic sequence (6.4) places the two cyclic groups in the opposite order from (6.5). Their
+middle groups have the same invariant factors. No identification of the two filtrations is asserted. For
+𝑟 = 𝑠 = 2, 𝑚 = 𝑛 = −1, choose 𝑎 = 1, 𝑏 = 0. Then 𝑡 = 1 and 𝑘 = −2( 𝑏0 + 1). At 𝑏0 = 0, both extensions
+have middle group ℤ/4ℤ and do not split. At 𝑏0 = −1, the nonzero torsion class 𝜀 = 𝑇 has zero coarse
+coefficient, and quotienting by it leaves 𝐸  ℤ.
+
+
+
+
+                                                         14
+7    The linking form of an effective filling
+A group presentation determines the orders of cycles. Their linking also uses the oriented filling slopes.
+We retain this geometric data explicitly, without selecting a convention for naming lens spaces.
+   Let 𝑇 2 have oriented basis ( 𝑥, 𝑐 ) with intersection 𝑥 · 𝑐 = 1. Set 𝜈 = 𝑛 − 𝑠𝑏0 and regard
+
+                                       𝜇0 = 𝑟 𝑥 − 𝑚𝑐,              𝜇1 = 𝑠𝑥 + 𝜈𝑐
+
+as curves on 𝑇 2 . Suppose gcd( 𝑟, 𝑚) = gcd( 𝑠, 𝑛) = 1. Both curves are then primitive. Take an oriented
+solid torus 𝑉0 whose meridian is 𝜇0 , identifying 𝑇 2 with its boundary with the boundary orientation.
+Glue a second solid torus 𝑉1 with meridian 𝜇1 by an orientation-reversing boundary map. Denote the
+resulting oriented closed manifold by 𝑀 𝐴 . The slope 𝑐 specifies its regular Seifert fibre. The intersection
+numbers with the two meridians have absolute values 𝑟, 𝑠 . The section relation 𝑥1 = − 𝑥 + 𝑏0 𝑐 identifies
+the second local relation with − 𝜇1 . Thus these fillings realize the data of (3.1), with the stated orientation
+on 𝑇 2 . The gluing description is the two-fibre case of the solid-torus construction in [2, Section 2.1,
+pp. 25–27].
+    For disjoint torsion cycles 𝑧, 𝑤 in an oriented closed three-manifold, our convention is
+
+                                            𝐶 ·𝑤
+                    𝜆 𝑀 ( [ 𝑧 ] , [𝑤 ]) =             (mod ℤ) ,          𝜕𝐶 = 𝑁 𝑧,    𝑁 ≠ 0.
+                                             𝑁
+This is the symmetric torsion linking pairing [4, Section 1, pp. 2–3].
+Theorem 7.1 (Two-fibre linking coefficient). Choose integers 𝛼, 𝛽 with 𝑚𝛼 + 𝑟 𝛽 = 1, and put
+
+                      𝜆0 = 𝛼𝑥 + 𝛽𝑐,               𝑞 = 𝑠 𝛽 − 𝜈 𝛼,       Δ = 𝑟𝑛 + 𝑠𝑚 − 𝑟 𝑠𝑏0 .
+
+Then
+                                    𝜇1 = 𝑞𝜇0 + Δ𝜆0 ,               gcd( 𝑞, Δ) = 1.
+If Δ ≠ 0, the class 𝛾 = [ 𝜆0 ] generates 𝐻1 ( 𝑀 𝐴 , ℤ)  ℤ/| Δ |ℤ, and
+
+                                            𝑞𝑖𝑗
+                  𝜆 𝑀𝐴 ( 𝑖 𝛾, 𝑗 𝛾 ) = −            (mod ℤ) ,          [ 𝑥 ] = 𝑚𝛾,    [𝑐] = 𝑟 𝛾 .          (7.1)
+                                             Δ
+The pairing is nonsingular. For Δ = 0, one has 𝐻1 ( 𝑀 𝐴 , ℤ)  ℤ and the torsion pairing is trivial.
+
+Proof. The columns ( 𝜇0 , 𝜆0 ) form a unimodular matrix of determinant 𝑟 𝛽 + 𝑚𝛼 = 1. Taking determi-
+nants in this basis gives
+                                  𝜇1 = ( 𝑠 𝛽 − 𝜈 𝛼 ) 𝜇0 + ( 𝑟 𝜈 + 𝑠𝑚) 𝜆0 .
+Primitivity of 𝜇1 proves gcd( 𝑞, Δ) = 1. The inverse change of basis is
+
+                                   𝑥 = 𝛽𝜇0 + 𝑚𝜆0 ,              𝑐 = − 𝛼𝜇0 + 𝑟 𝜆0 .
+
+The two meridional disks kill 𝜇0 and 𝜇1 in first homology, so the resulting presentation has the single
+relation Δ𝛾 = 0.
+
+
+
+
+                                                           15
+   Let 𝐷0 , 𝐷1 be the oriented meridional disks with respective boundaries 𝜇0 , 𝜇1 . On 𝑇 2 , the cycle
+𝜇1 − 𝑞𝜇0 − Δ𝜆0 bounds an integral singular 2-chain 𝐵 , because its homology class is zero. Consequently
+
+                                     𝐶 = 𝐷1 − 𝑞𝐷0 − 𝐵,                  𝜕𝐶 = Δ𝜆0 .
+
+Push a representative of 𝜆0 into the interior of 𝑉0 . It is disjoint from 𝐷1 and 𝐵 and intersects 𝐷0 with
+sign +1. The sign follows from the boundary orientation and 𝜇0 · 𝜆0 = 1. Therefore 𝐶 · 𝜆0 = − 𝑞 , which
+proves (7.1). Bilinearity gives all values. Since 𝑞 is a unit modulo Δ, this pairing identifies the cyclic group
+with its character group. If Δ = 0, its first homology is infinite cyclic and has no torsion.
+
+    Replacing ( 𝛼, 𝛽 ) by ( 𝛼 + 𝑟𝑗, 𝛽 − 𝑚𝑗 ) replaces 𝜆0 by 𝜆0 + 𝑗 𝜇0 and 𝑞 by 𝑞 − 𝑗Δ. Thus neither 𝛾
+nor the linking value changes. Reversing the orientation of 𝑀 𝐴 negates the pairing. A different cyclic
+generator multiplies its displayed coefficient by a unit square modulo | Δ |. These rules state the full
+dependence on choices, including even orders.
+    For ( 𝑟, 𝑠 ; 𝑚, 𝑛; 𝑏0 ) = (2, 2; −1, −1; 0), take ( 𝛼, 𝛽 ) = (−1, 0). Then Δ = −4, 𝑞 = −1, and
+𝜆 𝑀𝐴 ( 𝛾, 𝛾 ) = −1/4. For ( 𝑟, 𝑠 ; 𝑚, 𝑛; 𝑏0 ) = (2, 3; 1, 1; 0), take ( 𝛼, 𝛽 ) = (1, 0). Now Δ = 5, 𝑞 = −1, and
+the value is 1/5. The nonsingular symmetric form on ℤ/5ℤ cannot be an alternating form: every
+alternating bilinear form on a cyclic group vanishes. The next construction specifies the larger group on
+which an alternating form does exist.
+
+
+8    Alternating doubles of the arithmetic presentation
+Return to arbitrary 𝑟, 𝑠 > 0 and 𝑚, 𝑛, 𝑏0 ∈ ℤ, without local coprimality assumptions. Regard the actual
+relation matrix                                        !
+                                           𝑟       𝑠
+                                   𝐴=                    : ℤ2 → ℤ2
+                                          −𝑚 𝑛 − 𝑠𝑏0
+as an integral map. On 𝐿 𝐴 = ℤ2 ⊕ ℤ2 , define
+                                                                                                       !
+                                                                                           0         𝐴
+                Ω 𝐴 (( 𝑢, 𝑣 ) , ( 𝑢′ , 𝑣 ′ )) = 𝑢𝑇 𝐴𝑣 ′ − ( 𝑢′ )𝑇 𝐴𝑣,           [Ω 𝐴 ] =                 .   (8.1)
+                                                                                         − 𝐴𝑇        0
+
+This construction uses the full presentation matrix and both copies of ℤ2 as specified. It is an alternating
+lattice associated with the presentation, independently of a geometric fibre lattice.
+Theorem 8.1 (Arithmetic discriminant and its pairing). Put 𝑑 = gcd( 𝑟, 𝑠, 𝑚, 𝑛) and Δ = det 𝐴.
+If Δ ≠ 0, set 𝑁 = | Δ |/ 𝑑 . Then
+
+                  ( 𝐿 𝐴 , Ω 𝐴 )  (ℤ4 , 𝑑 𝐽 ⊕ 𝑁 𝐽 ) ,            D 𝐴  (ℤ/ 𝑑 ℤ) 2 ⊕ (ℤ/ 𝑁 ℤ) 2 .
+
+Here D 𝐴 = 𝐿 ∨𝐴 /Ω♭𝐴 ( 𝐿 𝐴 ) and Ω♭𝐴 ( 𝑧 ) = Ω 𝐴 ( 𝑧, −). In the coordinates
+
+                                           D 𝐴 = coker 𝐴 ⊕ coker 𝐴𝑇 ,
+
+its perfect alternating pairing is
+
+                     𝑏 𝐴 (( ¯𝑥, 𝑦¯ ) , ( 𝑥¯ ′ , 𝑦¯ ′ )) = 𝑥 𝑇 𝐴−𝑇 𝑦 ′ − ( 𝑥 ′ )𝑇 𝐴−𝑇 𝑦   (mod ℤ) .           (8.2)
+
+
+
+                                                            16
+Its exponent is 𝑁 and its order is Δ2 . If Δ = 0, the radical of Ω 𝐴 is primitive of rank two, and its quotient
+lattice has form 𝑑 𝐽 and discriminant group (ℤ/ 𝑑 ℤ) 2 .
+
+Proof. Choose unimodular matrices 𝑃 , 𝑄 with 𝑃 𝐴𝑄 = diag( 𝑑, 𝑁 ) when Δ ≠ 0. The change of basis
+diag( 𝑃 𝑇 , 𝑄 ) in (8.1), followed by interleaving the two factors, gives 𝑑 𝐽 ⊕ 𝑁 𝐽 . The integer 𝑑 divides 𝑁
+because 𝑑 2 divides det 𝐴. In the original coordinates the matrix of Ω♭𝐴 is −[ Ω 𝐴 ]. Its inverse over ℚ is
+                                                            !
+                                                    0   𝐴−𝑇
+                                                              ,
+                                                  − 𝐴−1  0
+
+which gives (8.2) by (2.1). More explicitly, 𝑥 𝑇 𝐴−𝑇 𝑦 is integral on either relation lattice: replace 𝑥 by
+𝑥 + 𝐴𝑧 or 𝑦 by 𝑦 + 𝐴𝑇 𝑤 . If it is integral for every integral 𝑦 , then 𝐴−1 𝑥 is integral, so 𝑥 ∈ 𝐴ℤ2 . The
+same argument applies to 𝑦 . This proves perfectness directly and determines the stated orders.
+    If Δ = 0, the matrix 𝐴 has rank one since 𝑟, 𝑠 > 0. Its Smith form is diag( 𝑑, 0), so the same change
+of basis gives 𝑑 𝐽 ⊕ 02 . The last summand is the radical and is a direct summand of 𝐿 𝐴 . Taking its
+quotient proves the last assertion. The unreduced cokernel also has a free summand ℤ2 . It is not the
+finite discriminant group of a nondegenerate lattice.
+
+   Let 𝐾 = coker 𝐴 when Δ ≠ 0. The character
+
+                                        𝜒𝑦¯ ( 𝑥¯ ) = exp(2 𝜋 𝑖 𝑥 𝑇 𝐴−𝑇 𝑦 )
+
+                         b . Thus (8.2) is the standard alternating pairing on 𝐾 ⊕ 𝐾
+identifies coker 𝐴𝑇 with 𝐾                                                         b . Define
+
+              𝐻𝐴 = 𝜇 𝑁 × 𝐾 × 𝐾
+                             b,               ( 𝑧, 𝑢, 𝜂 ) ( 𝑧 ′ , 𝑢′ , 𝜂 ′ ) = ( 𝑧𝑧 ′ 𝜂 ′ ( 𝑢) , 𝑢 + 𝑢′ , 𝜂𝜂 ′ ) .
+
+On ℂ[ 𝐾 ], the formula
+                                    [ 𝜌 ( 𝑧, 𝑢, 𝜂 ) ℎ] ( 𝑣 ) = 𝑧𝜂 ( 𝑣 ) ℎ ( 𝑣 + 𝑢)
+gives a representation of dimension | Δ |. Its central character is tautological, its commutator is
+exp(2 𝜋 𝑖𝑏 𝐴 ), and its center is 𝜇 𝑁 . Indeed, perfectness forces any central element to have 𝑢 = 0 and
+𝜂 = 1. Character averaging projects onto each delta-function, and translations act transitively on
+those functions. This proves irreducibility exactly as in Section 2, for every finite abelian 𝐾 , including
+groups of even exponent. For Δ = 0, the nondegenerate quotient instead gives 𝐾 = ℤ/ 𝑑 ℤ and a
+representation of dimension 𝑑 .
+    For the non-effective data (2, 4; 2, 2; 0), one has 𝑑 = 2, Δ = 12, and alternating elementary divisors
+(2, 6). Thus D 𝐴  (ℤ/2) 2 ⊕ (ℤ/6) 2 , and the representation has dimension twelve and central order
+six. For (2, 4; 2, −4; 0), the radical has rank two and the quotient has form 2 𝐽 . The resulting finite group
+is (ℤ/2) 2 . These are arithmetic constructions. Nonprimitive filling slopes do not bound meridional
+disks of a solid torus, so Theorem 7.1 does not apply to these unreduced data.
+Proposition 8.2 (Separation from the level-six fibre). For effective two-fibre data with ( 𝑟, 𝑠 ) =
+(3, 4) and 𝑏0 = 0, the arithmetic double has elementary divisors (1, | 𝑝 |), and gcd( 𝑝, 12) = 1. In particular,
+it never has elementary divisors (1, 6). When | 𝑝 | = 1, its discriminant group is zero, while the fibre lattice
+of Theorem 1.1 has discriminant group (ℤ/6) 2 .
+
+
+
+
+                                                          17
+Proof. Here 𝑑 = 1 and Δ = 𝑝 = 4𝑚 + 3𝑛. Effectiveness makes 𝑚 a unit modulo three and 𝑛 a unit
+modulo four. Reduction of 𝑝 modulo three and four proves gcd( 𝑝, 12) = 1. Theorem 8.1 now gives the
+result.
+
+   The abstract data (3, 4; 3, −2; 0) do have Δ = 6 and 𝑑 = 1. Their doubled lattice is therefore isometric
+to 𝐽 ⊕ 6 𝐽 , but both local pairs are non-effective. This is an equality of abstract lattice types. It supplies
+no map to Engel’s fibre or to its Leray sheaf.
+
+
+9    A boundary that remembers transport
+We return to the fibre lattice Λ in Section 1 and write 𝐿 = Λ in its ordered marking 𝐵 0 = ( 𝑒1 , 𝑒2 , 𝑒3 , 𝑒4 ).
+Let 𝕋 4 = ( 𝐿 ⊗ ℝ)/ 𝐿 . An invertible integer matrix 𝑇 acts on the torus by [ 𝑥 ] ↦→ [𝑇 𝑥 ]. Its mapping
+torus is
+                                 𝑌𝑇 = (𝕋 4 × [0, 1])/(( 𝑥, 1) ∼ (𝑇 𝑥, 0)) .
+We orient the interval in the increasing direction and put the interval before the orientation of a trans-
+ported fibre chain. A prism over a cycle 𝑧 then has boundary 𝑇 𝑧 − 𝑧 . Thus a nontrivial 𝑇 changes the
+relations among higher-dimensional cycles, even when a chosen circle inside the fibre is fixed.
+    The three monodromy matrices from Section 1, now all in the common marking 𝐵 0 , act on column
+vectors in 𝐿 :
+                                   0 −1 −1 0                −1 1 −1 2
+                                 ©                ª        ©                 ª
+                                 ­ 1 −1 0 0®               ­−1 0 −1 1 ®
+                            𝑇0 = ­
+                                 ­
+                                                  ®, 𝑇1 = ­ 1 1 2 −1®,
+                                                  ®        ­                 ®
+                                 ­0 0 1 0®                 ­                 ®
+                                 « 0   0    0   1 ¬        « 0   0   0     1 ¬
+                                                                                                     (9.1)
+                                   2 1 1 0
+                                 ©                 ª
+                                 ­ 0 1 0 −1®
+                           𝑇∞ = ­­                 ®.
+                                 ­ −1  −1   0    1 ®
+                                                   ®
+                                 « 0    0   0    1 ¬
+They have determinant one, and direct multiplication gives
+
+                          𝑇03 = 𝑇14 = 𝐼 ,        𝑇0𝑇1𝑇∞ = 𝐼 ,              (𝑇∞ − 𝐼 ) 2 = 0.
+
+These are legitimate transport maps for a flat torus bundle over an oriented sphere with three disks
+removed. Choose paths from one base point to its boundary circles. Orient and order the resulting based
+loops so that their relation is 𝛾0 𝛾1 𝛾∞ = 1. Our word convention is that the product 𝑢𝑣 acts by 𝑀𝑢 𝑀𝑣 ;
+equivalently, geometric paths in this notation are traversed from right to left. Reversing a boundary
+parametrization inverts its transport and reverses its interval orientation.
+   The difference from a product is visible in the third matrix alone. Put
+
+                          𝑎 = 𝑒1 − 𝑒3 ,       𝑏 = 𝑒1 ,         𝑐 = 𝑒3 − 𝑒2 ,       𝑑 = 𝑒4 .                (9.2)
+
+The matrix with these columns has determinant one. This is a different basis from the determinant-
+minus-one basis (1.11) for the alternating form. In the present integral basis the action is
+
+                         𝑇∞ 𝑎 = 𝑎,        𝑇∞ 𝑏 = 𝑏 + 𝑎,        𝑇∞ 𝑐 = 𝑐,     𝑇∞ 𝑑 = 𝑑 + 𝑐.                 (9.3)
+
+
+
+                                                          18
+We will prove
+                                    𝐻2 (𝑌𝑇∞ ; ℤ) = 𝐻3 (𝑌𝑇∞ ; ℤ) = ℤ6 .
+For the identity matrix the mapping torus is 𝕋 5 , and both ranks are ten. Any filling calculation using a
+product in place of this boundary therefore requires a comparison map; agreement on one fixed circle
+cannot provide it.
+    The full gluing problem has one further ingredient. An inclusion of a boundary mapping torus into
+a filling contains information about both fibre chains and their transported prisms. We first describe
+exactly how this information enters the differential, then compute the boundary groups and their torsion.
+
+
+10      Chains over a graph
+A chain complex of free abelian groups is a collection 𝐶𝑗 , zero for 𝑗 < 0, with homomorphisms 𝑑 :
+𝐶𝑗 → 𝐶𝑗 −1 satisfying 𝑑 2 = 0. Its homology is 𝐻𝑗 ( 𝐶 ) = ker 𝑑𝑗 /im 𝑑𝑗 +1 . A chain map commutes with
+𝑑 . A degree-one map 𝐻 : 𝐶𝑗 → 𝑄𝑗 +1 is a chain homotopy from 𝑔 to 𝑓 when 𝑑𝑄 𝐻 + 𝐻 𝑑 = 𝑓 − 𝑔 .
+    For a space we may use singular chains, the free groups generated by continuous maps from oriented
+simplices, with the alternating face boundary. A homeomorphism acts on these chains strictly: composi-
+tion of homeomorphisms is composition of chain maps. This avoids making simultaneous choices of
+cellular approximations for several transport maps.
+    Here 𝐶 denotes a chain complex; the change-of-marking matrix in (1.5) retains its meaning only
+in the earlier lattice calculation. Fix chain automorphisms 𝑀0 , 𝑀1 of 𝐶 , and set 𝑀∞ = ( 𝑀0 𝑀1 ) −1 .
+They are the chain form of transport. On the fibre homology 𝐻𝑘 (𝕋 𝑟 ; ℤ) = 𝑘 ℤ𝑟 , transport by an
+                                                                                      V
+                            V𝑘
+integer matrix 𝑇𝑖 induces       𝑇𝑖 ; a proof of this identification appears in Section 13. On cohomology the
+contragredient transport is 𝑇𝑖−T in degree one. The homological and cohomological conventions should
+not be interchanged.
+Deﬁnition 10.1. The chain complex of one loop with transport 𝑀𝑖 is
+
+                    ( 𝐵 𝑖 )𝑛 = 𝐶𝑛 ⊕ 𝐶𝑛−1 ,         𝑑𝐵 𝑖 ( 𝑢, 𝑣 ) = ( 𝑑𝑢 + ( 𝑀𝑖 − 𝐼 ) 𝑣, − 𝑑𝑣 ) .
+
+The first component is in a fibre over the vertex; the second is the oriented prism over a fibre chain. For
+the graph consisting of two loops with a common vertex, put
+
+     𝐸𝑛 = 𝐶𝑛 ⊕ 𝐶𝑛−1 ⊕ 𝐶𝑛−1 ,        𝑑𝐸 ( 𝑎, 𝑏0 , 𝑏1 ) = ( 𝑑𝑎 + ( 𝑀0 − 𝐼 ) 𝑏0 + ( 𝑀1 − 𝐼 ) 𝑏1 , − 𝑑𝑏0 , − 𝑑𝑏1 ) .
+                                                                                                           (10.1)
+    The signs follow from 𝜕 ( [0, 1] × 𝑧 ) = (1 × 𝑧 ) − (0 × 𝑧 ) − [0, 1] × 𝜕 𝑧 . After identifying the
+ends of the prism, the first two terms become ( 𝑀𝑖 − 𝐼 ) 𝑧 . Since 𝑀𝑖 commutes with 𝑑 , both displayed
+differentials square to zero.
+Lemma 10.2. The three boundary maps into the graph complex are the chain maps
+
+                                     𝐽0 ( 𝑢, 𝑣 ) = ( 𝑢, 𝑣, 0) ,
+                                      𝐽1 ( 𝑢, 𝑣 ) = ( 𝑢, 0, 𝑣 ) ,                                         (10.2)
+                                    𝐽∞ ( 𝑢, 𝑣 ) = ( 𝑢, − 𝑀0−1 𝑣, − 𝑀∞ 𝑣 ) .
+
+The last map represents the boundary word 𝛾∞ = ( 𝛾0 𝛾1 ) −1 with the preceding orientation convention.
+
+
+
+                                                          19
+Proof. An inverse path transports a chain by 𝑀𝑖−1 and traverses its prism backwards. Its coefficient in
+the original oriented edge is therefore − 𝑀𝑖−1 . Traversing 𝛾0−1 followed by 𝛾1−1 gives coefficient − 𝑀0−1 in
+the first edge and − 𝑀1−1 𝑀0−1 = − 𝑀∞ in the second. The endpoints cancel at the intermediate vertex.
+Algebraically this is the identity
+
+                          ( 𝑀0 − 𝐼 ) (− 𝑀0−1 ) + ( 𝑀1 − 𝐼 ) (− 𝑀∞ ) = 𝑀∞ − 𝐼 ,
+
+because 𝑀1 𝑀∞ = 𝑀0−1 . This identity verifies the vertex component of 𝑑 𝐸 𝐽∞ = 𝐽∞ 𝑑𝐵∞ . The two edge
+components agree because 𝑀0−1 and 𝑀∞ commute with 𝑑 . The other two chain-map identities follow
+directly from their formulas.
+
+    We explain the topological content of these complexes. Cut a loop at its vertex. The bundle becomes
+a product over an interval; its two end inclusions are the identity and transport. Chains on the vertex
+fibre, together with prisms, give the complex 𝐵 𝑖 . For two loops the same construction gives 𝐸 . It applies
+to a sphere with three boundary circles after a deformation retraction to its two-loop graph, retaining
+the chosen paths to the boundary circles.
+    One can verify this chain model without assuming a special subdivision of the torus. Use collars
+of the cut fibres. Subdivide singular simplices until each lies in a collar or in an interval product. The
+alternating sum of the subdivision prisms is a chain homotopy between subdivision and the identity.
+The interval products retract to a fibre; keeping the retraction prisms leaves one copy of 𝐶 at each vertex
+and one shifted copy along each edge. Their boundary is exactly the end difference minus the prism over
+𝑑 . Gluing the cuts gives (10.1). For a boundary path, the successive interval prisms give the coefficients in
+(10.2). A lift to the universal covering tree makes the cancellation literal: each traversed edge occurs once
+with its transported coefficient. This also gives a chain comparison for the boundary maps, not just an
+isomorphism of the resulting homology groups.
+    Changing a retraction or a subdivision changes this comparison by a chain homotopy. The filling
+maps must be transported through the same comparison. This compatibility will be part of the geometric
+hypotheses of the gluing theorem.
+
+
+11    What a filling must specify
+Let 𝑄 𝑖 be a free chain complex for a proposed filling of the 𝑖 th boundary, for 𝑖 = 0, 1, ∞. We write 𝑑𝑖
+for its differential. The map from the boundary complex to 𝑄 𝑖 consists of maps
+
+                              𝐹𝑖 : 𝐶𝑛 −→ ( 𝑄 𝑖 )𝑛 ,        𝐻𝑖 : 𝐶𝑛 −→ ( 𝑄 𝑖 )𝑛+1 .                        (11.1)
+
+Here 𝐹𝑖 is inclusion of a fibre, and 𝐻𝑖 describes how its transport prism lies in the filling. Define
+𝐾𝑖 ( 𝑢, 𝑣 ) = 𝐹𝑖 𝑢 + 𝐻𝑖 𝑣 . The condition that 𝐾𝑖 commute with boundaries is precisely
+
+                              𝑑𝑖 𝐹𝑖 = 𝐹𝑖 𝑑,      𝑑𝑖 𝐻𝑖 + 𝐻𝑖 𝑑 = 𝐹𝑖 ( 𝑀𝑖 − 𝐼 ) .                           (11.2)
+
+Indeed, comparison of the coefficients of 𝑢 and 𝑣 in 𝑑𝑖 𝐾𝑖 ( 𝑢, 𝑣 ) = 𝐾𝑖 𝑑𝐵 𝑖 ( 𝑢, 𝑣 ) gives these two equations
+separately.
+     In particular, 𝐹𝑖 kills monodromy minus the identity on homology. The dual pullback from the
+filling therefore lands in invariant fibre cohomology. Specifying the image of that pullback is weaker
+
+
+
+
+                                                      20
+than specifying 𝐹𝑖 , and even the chain map 𝐹𝑖 does not specify 𝐻𝑖 . The second equation of (11.2) is the
+next attachment equation that a filling has to solve.
+Theorem 11.1 (The gluing differential). Let 𝐶, 𝑄 𝑖 , 𝑀𝑖 , 𝐹𝑖 , 𝐻𝑖 satisfy the hypotheses and equations
+above. Set
+                    M                M                                                      
+           𝐴=𝐸⊕                                     𝐿 ((𝑤 𝑖 ) 𝑖 ) = 𝑖 𝐽𝑖 𝑤 𝑖 , (− 𝐾𝑖 𝑤 𝑖 ) 𝑖 .
+                                                                   P
+                       𝑄𝑖 ,     𝐵=       𝐵𝑖 ,
+                           𝑖                          𝑖
+
+Then 𝐿 : 𝐵 → 𝐴 is a chain map, and the groups 𝐺𝑛 = 𝐴𝑛 ⊕ 𝐵 𝑛−1 with differential
+
+                                          𝐷 ( 𝑥, 𝑦 ) = ( 𝑑 𝐴 𝑥 + 𝐿𝑦, − 𝑑𝐵 𝑦 )                       (11.3)
+
+form a chain complex. In coordinates
+
+                                        ( 𝑎, 𝑏0 , 𝑏1 , ( 𝑞𝑖 ) 𝑖 , ( 𝑢𝑖 ) 𝑖 , ( 𝑣𝑖 ) 𝑖 ) ∈ 𝐺𝑛 ,
+
+where 𝑎 ∈ 𝐶𝑛 , 𝑏𝑗 , 𝑢𝑖 ∈ 𝐶𝑛−1 , 𝑞𝑖 ∈ ( 𝑄 𝑖 )𝑛 , and 𝑣𝑖 ∈ 𝐶𝑛−2 , its differential is
+
+                          𝑎′ = 𝑑𝑎 + ( 𝑀0 − 𝐼 ) 𝑏0 + ( 𝑀1 − 𝐼 ) 𝑏1 + 𝑢0 + 𝑢1 + 𝑢∞ ,
+                         𝑏0′ = − 𝑑𝑏0 + 𝑣0 − 𝑀0−1 𝑣∞ ,
+                          𝑏1′ = − 𝑑𝑏1 + 𝑣1 − 𝑀∞ 𝑣∞ ,
+                                                                                                    (11.4)
+                          𝑞𝑖′ = 𝑑𝑖 𝑞𝑖 − 𝐹𝑖 𝑢𝑖 − 𝐻𝑖 𝑣𝑖 ,
+                          𝑢′𝑖 = − 𝑑𝑢𝑖 − ( 𝑀𝑖 − 𝐼 ) 𝑣𝑖 ,
+                          𝑣𝑖′ = 𝑑𝑣𝑖 .
+
+If these chain data represent a torus bundle over the three-holed sphere, its three boundary inclusions,
+and inclusions into three fillings, then 𝐻∗ ( 𝐺 ) is the integral homology of their gluing by collars. In
+particular this conclusion applies to ordinary gluing along collared boundaries. For arbitrary attachment
+maps it computes the gluing with mapping cylinders inserted.
+
+Proof. Lemma 10.2 and (11.2) show that 𝑑 𝐴 𝐿 = 𝐿𝑑𝐵 . Consequently
+
+                               𝐷 2 ( 𝑥, 𝑦 ) = ( 𝑑 2𝐴 𝑥 + 𝑑 𝐴 𝐿𝑦 − 𝐿𝑑𝐵 𝑦, 𝑑𝐵2 𝑦 ) = 0.
+
+Substitution gives (11.4). It is useful to check the two components where the attachment data matter. In
+the vertex component, the remaining coefficient of 𝑣∞ is
+
+                           −( 𝑀0 − 𝐼 ) 𝑀0−1 − ( 𝑀1 − 𝐼 ) 𝑀∞ − ( 𝑀∞ − 𝐼 ) = 0.
+
+In the 𝑖 th filling component it is − 𝑑𝑖 𝐻𝑖 − 𝐻𝑖 𝑑 + 𝐹𝑖 ( 𝑀𝑖 − 𝐼 ) = 0. The other terms cancel by 𝑑 2 =
+𝑑𝑖2 = 0 and commutation of transport with 𝑑 .
+    For the geometric assertion, replace each attachment by its mapping cylinder. A cylinder has two end
+copies of the boundary chains and a prism over them. The end copies attach by 𝐽𝑖 and 𝐾𝑖 ; its oriented
+boundary gives 𝐽𝑖 − 𝐾𝑖 . The boundary on the prism summand is − 𝑑𝐵 . After retracting the two halves of
+the collars to their ends, these are exactly the summands and differential of (11.3). The same subdivision
+and prism argument used for the graph applies to this two-piece decomposition: sufficiently small chains
+
+
+
+                                                                 21
+belong to one side or the overlap, and the duplicate overlap chains are removed by their cylinder prisms. It
+produces a chain comparison inducing isomorphisms on homology. If the attaching maps are boundary
+inclusions with collars, compressing the inserted cylinders gives a homotopy equivalence to the usual
+glued space. For other maps, the cylinders are part of the stated construction.
+
+   For clarity, in degree two the variables are
+
+                            𝑎 ∈ 𝐶2 ,    𝑏𝑗 , 𝑢𝑖 ∈ 𝐶1 ,        𝑞𝑖 ∈ ( 𝑄 𝑖 )2 ,   𝑣𝑖 ∈ 𝐶0 .
+
+Thus 𝐻𝑖 : 𝐶0 → ( 𝑄 𝑖 )1 already occurs in 𝐷2 . In degree three, 𝑣𝑖 ∈ 𝐶1 , so 𝐻𝑖 : 𝐶1 → ( 𝑄 𝑖 )2 occurs in
+𝐷3 . Computing 𝐻3 also requires 𝐷4 , hence 𝐻𝑖 : 𝐶2 → ( 𝑄 𝑖 )3 . The formula neither discards these terms
+nor replaces them by their induced maps on homology.
+Proposition 11.2 (Compatible maps). Suppose 𝑓 : 𝐶 → 𝐶e and 𝑔𝑖 : 𝑄 𝑖 → 𝑄
+                                                                      e𝑖 are chain maps
+with
+                    𝑓 𝑀𝑖 = 𝑀
+                           f𝑖 𝑓 ,    𝑔𝑖 𝐹𝑖 = 𝐹e𝑖 𝑓 , 𝑔𝑖 𝐻𝑖 = 𝐻
+                                                             e𝑖 𝑓 .
+
+Applying 𝑓 to all fibre and prism coordinates and 𝑔𝑖 to 𝑞𝑖 gives a chain map 𝐺 → 𝐺
+                                                                                 e. These maps
+preserve identities and composition.
+
+Proof. The first identity also holds for inverses and products of transport maps. Each of the six lines of
+(11.4) therefore commutes with the proposed map. Identity maps and composites satisfy the same three
+equations.
+
+   There is also a controlled change of attachment representative. If 𝐿 ′ − 𝐿 = 𝑑 𝐴 𝑆 + 𝑆 𝑑𝐵 for a degree-
+one map 𝑆 : 𝐵 → 𝐴, then
+
+                        Cone( 𝐿 ′ ) −→ Cone( 𝐿 ) ,               ( 𝑥, 𝑦 ) ↦−→ ( 𝑥 + 𝑆𝑦, 𝑦 )
+
+is a chain isomorphism with inverse ( 𝑥, 𝑦 ) ↦→ ( 𝑥 − 𝑆𝑦, 𝑦 ). Substituting into (11.3) proves the assertion.
+Thus a specified homotopy between attachments permits a comparison. Equality of maps on homology
+alone does not supply such a homotopy.
+Example 11.3 (The prism map can change torsion). Let 𝐶0 = ℤ, 𝐶𝑗 = 0 for 𝑗 ≠ 0, and 𝑀 = 𝐼 . Then 𝐵
+is the cellular complex of a circle, with one vertex and one edge. Take 𝑄 0 = 𝑄1 = ℤ and 𝑑𝑄 = 0, also
+a circle. Set 𝐹0 = 1 and let 𝐻0 be multiplication by an integer 𝑘 . Equation (11.2) holds for every 𝑘 . The
+resulting 𝐾 : 𝐵 → 𝑄 is the chain map of a degree-𝑘 map of circles. Its mapping cone has differential
+𝑘 from the degree-two prism to the degree-one circle, while the degree-one prism over the vertex maps
+isomorphically to the degree-zero vertex. Hence
+
+                     𝐻1 (Cone 𝐾 ) = ℤ/𝑘 ℤ,           𝐻2 (Cone 𝐾 ) = ker( 𝑘 : ℤ → ℤ) .
+
+These are the reduced homology groups of the circle with a disk attached by the degree-𝑘 map. The map
+𝐹 is identical for all 𝑘 . For 𝑘 = 0 both displayed groups are ℤ; for | 𝑘 | = 1 both vanish. The missing prism
+map changes the homology, even with the fibre inclusion fixed at chain level.
+
+
+
+
+                                                         22
+12     Integral torsion and prime coefficients
+When 𝐶 and the 𝑄 𝑖 are finite free in each degree, the differential in (11.4) is an integer matrix in every
+degree. There is a direct way to read its integral information without changing coefficients prematurely.
+Lemma 12.1. An integer matrix can be changed, by invertible integer row and column operations, to a
+diagonal matrix with positive nonzero entries 𝑠1 , . . . , 𝑠𝑡 satisfying 𝑠1 | 𝑠2 | · · · | 𝑠𝑡 , and all other entries
+zero. The gcd of all its 𝑗 -rowed minors is 𝑠1 · · · 𝑠𝑗 for 𝑗 ≤ 𝑡 ; all larger minors vanish.
+
+Proof. Move a nonzero entry to the first diagonal position. Divide entries in its column by it, subtract
+multiples of the first row, and interchange rows when a smaller nonzero remainder occurs. Do the
+corresponding operations on its row. Positive remainders strictly decrease, so this process reaches an
+entry that clears its row and column. If that entry does not divide some entry in the remaining block,
+adding that entry’s row to the first row and repeating Euclidean division produces a smaller positive
+pivot. This also terminates. The final pivot divides the remaining block. Induction on the block gives
+the diagonal form and the divisibility chain. These operations and their inverses have integer entries and
+determinant ±1.
+   Each minor after an elementary operation is an integer linear combination of the old minors of the
+same size. Applying the inverse operation proves equality of their gcds. For the diagonal form the gcd is
+the product of its first 𝑗 entries, by divisibility. This proves the formula.
+
+   To compute 𝐻𝑛 ( 𝐺 ), first apply the lemma to 𝐷𝑛 and retain the integer change of basis in 𝐺𝑛 . The
+columns corresponding to zero diagonal entries give an integral basis of ker 𝐷𝑛 . The equation 𝐷𝑛 𝐷𝑛+1 =
+0 puts every column of 𝐷𝑛+1 in that basis. Apply the lemma again to this restricted matrix, say with
+nonzero factors 𝑠1 , . . . , 𝑠𝑡 . If 𝑧 = rank ker 𝐷𝑛 , then
+                                                                𝑡
+                                                                M
+                                         𝐻𝑛 ( 𝐺 ) = ℤ 𝑧 − 𝑡 ⊕           ℤ/ 𝑠𝑗 ℤ.                               (12.1)
+                                                                 𝑗 =1
+
+This is a finite calculation for specified finite chain data. A single Smith form of 𝐷𝑛+1 in an unrelated
+basis is insufficient; its image must be expressed inside the integral kernel of 𝐷𝑛 .
+   Let 𝑝 be prime. Reduction modulo 𝑝 gives a complex 𝐺 / 𝑝𝐺 . For a mod- 𝑝 cycle 𝑥¯ in degree 𝑛, choose
+an integral lift 𝑥 . There is an integral chain 𝑦 with 𝐷𝑥 = 𝑝𝑦 , since every coordinate of 𝐷𝑥 is divisible
+by 𝑝. Define
+                           𝛽 𝑝 : 𝐻𝑛 ( 𝐺 / 𝑝𝐺 ) −→ 𝐻𝑛−1 ( 𝐺 ) ,    𝛽 𝑝 [ 𝑥¯ ] = [ 𝐷𝑥 / 𝑝] .          (12.2)
+Freeness of the chain groups gives 𝐷𝑦 = 0 from 𝑝𝐷𝑦 = 𝐷 2 𝑥 = 0. Replacing 𝑥 by 𝑥 + 𝑝𝑧 changes 𝑦
+by 𝐷𝑧 . Replacing 𝑥¯ by a homologous cycle has the same effect after lifting its boundary. Thus (12.2) is
+well-defined. Its image consists exactly of the classes killed by 𝑝: its values are killed by 𝑝, and if 𝑝 [ 𝑦 ] = 0,
+choose 𝑥 with 𝐷𝑥 = 𝑝𝑦 and reduce 𝑥 modulo 𝑝. This is the integral connecting homomorphism, often
+called the Bockstein homomorphism.
+                                           𝑠
+    In a two-term direct summand ℤ 𝑥 −    → ℤ𝑦 , a prime 𝑝 | 𝑠 gives a mod- 𝑝 class [ 𝑥¯ ] and
+
+                                          𝛽 𝑝 [ 𝑥¯ ] = ( 𝑠 / 𝑝) [ 𝑦 ] ∈ ℤ/ 𝑠 ℤ.                               (12.3)
+
+For 𝑠 ≠ 0 this element has order 𝑝. If 𝑝 does not divide 𝑠 , the two-term complex is acyclic modulo 𝑝. If
+𝑠 = 0, both classes are free integrally and their connecting homomorphisms vanish. These three cases
+distinguish torsion, an invertible relation, and a genuine rank increase.
+
+
+                                                           23
+13    The torus mapping-torus complex
+The torus 𝕋 𝑟 has one vertex and one oriented edge in each circle factor. Taking products gives one 𝑘 -cell
+for each increasing 𝑘 -tuple of coordinate circles. Opposite faces cancel, so the cellular differential is zero.
+Denote the resulting group of cells by 𝐿 𝑘 = 𝑘 ℤ𝑟 , with basis 𝑒 𝑖1 ∧ · · · ∧ 𝑒 𝑖𝑘 . It follows directly that
+                                                V
+𝐻𝑘 (𝕋 𝑟 ; ℤ) = 𝐿 𝑘 .
+    The map [ 𝑥 ] ↦→ [𝑇 𝑥 ] induces 𝑘 𝑇 on these groups. Indeed, its coefficient from the coordinate
+                                      V
+torus indexed by columns 𝐽 to the class indexed by rows 𝐼 is found by projecting onto the coordinates in 𝐼 .
+The resulting map between oriented 𝑘 -tori has integer matrix 𝑇𝐼 , 𝐽 and degree det 𝑇𝐼 , 𝐽 . For a nonsingular
+integer matrix, this follows by counting its kernel, the quotient of the integer lattice by its image, with
+the common local orientation sign; integer row and column operations reduce the count to a diagonal
+matrix. A singular matrix factors through a real subspace of smaller dimension, so its degree is zero. These
+are exactly the minors defining the exterior power.
+Proposition 13.1. For 𝑇 ∈ GL( 𝑟, ℤ), the additive integral homology of 𝑌𝑇 is computed by the finite
+free chain complex
+                                                                      𝑛
+                                                                      ^ −1
+                          𝑃𝑛 = 𝐿𝑛 ⊕ 𝐿𝑛−1 ,         𝑑𝑃 ( 𝑥, 𝑦 ) = ((          𝑇 − 𝐼 ) 𝑦, 0) .              (13.1)
+
+Consequently
+                                                   𝑛
+                                                   ^                         𝑛 −1
+                                                                             ^
+                            𝐻𝑛 (𝑌𝑇 ; ℤ)  coker(       𝑇 − 𝐼 ) ⊕ ker(               𝑇 − 𝐼 ),             (13.2)
+where exterior powers outside 0, . . . , 𝑟 are zero.
+
+Proof. Use the product cell structure just described and replace the single torus map by a homotopic
+cellular map. Such a replacement is made one skeleton at a time: move the image of each cell off the
+interiors of target cells of larger dimension by a small deformation and radial retraction, extending the
+deformation over the cell using its collar. The deformations agree on faces by induction. A homotopy
+of the map gives a homotopy equivalence of the two mapping-torus constructions, by inserting the
+homotopy as a cylinder between their end gluings.
+                                 V
+    The cellular map acts by 𝑘 𝑇 , because cellular chains already equal cellular homology when all
+differentials vanish. Attach one prism for every fibre cell. Its ends contribute ( 𝑘 𝑇 − 𝐼 ) 𝑦 and its
+                                                                                      V
+side boundary is zero in cellular chains. This proves (13.1). A cycle consists of an arbitrary 𝑥 ∈ 𝐿𝑛 and
+𝑦 ∈ ker( 𝑛−1 𝑇 − 𝐼 ). Boundaries lie entirely in the first component and form im( 𝑛 𝑇 − 𝐼 ). Taking
+          V                                                                            V
+the quotient gives (13.2).
+
+    This proposition concerns one transport map and additive homology. It does not identify singular
+chains simultaneously with ∗ 𝐿 while preserving all transport maps, filling maps, and their chain ho-
+                           V
+motopies. The general gluing theorem retains 𝐶 and its differential. A finite exterior-power replacement
+in that theorem requires compatible comparisons for every displayed map.
+
+
+
+
+                                                       24
+14    Two integral shears and their covers
+For ℎ ∈ ℤ, let 𝑇ℎ = 𝑇∞ℎ . Since (𝑇∞ − 𝐼 ) 2 = 0, we have 𝑇ℎ = 𝐼 + ℎ (𝑇∞ − 𝐼 ), also for negative ℎ. The
+basis (9.2) gives
+
+                  𝑇ℎ 𝑎 = 𝑎,          𝑇ℎ 𝑏 = 𝑏 + ℎ𝑎,           𝑇ℎ 𝑐 = 𝑐,         𝑇ℎ 𝑑 = 𝑑 + ℎ𝑐.
+
+For ℎ > 0, 𝑌𝑇ℎ is the pullback of 𝑌𝑇∞ through the degree-ℎ cover of its base circle. Concatenating ℎ
+interval trivializations multiplies their end maps, which proves the claim. For ℎ < 0 one also reverses
+the parametrization of the base circle. For ℎ = 0 we simply mean the identity transport and 𝕋 5 .
+   Write 𝑎𝑏 for 𝑎 ∧ 𝑏 , and use the same convention for longer products. Set 𝐴𝑘 = 𝑘 𝑇ℎ − 𝐼 . In degree
+                                                                                  V
+one,
+                            𝐴1 𝑏 = ℎ𝑎,        𝐴1 𝑑 = ℎ𝑐,     𝐴1 𝑎 = 𝐴1 𝑐 = 0 .                    (14.1)
+In degree two the complete list of nonzero images is
+
+             𝐴2 ( 𝑎𝑑 ) = ℎ 𝑎𝑐,            𝐴2 ( 𝑏𝑐 ) = ℎ 𝑎𝑐,         𝐴2 ( 𝑏𝑑 ) = ℎ ( 𝑎𝑑 + 𝑏𝑐 ) + ℎ2 𝑎𝑐.   (14.2)
+
+Indeed, ( 𝑏 + ℎ𝑎) ∧ 𝑐 = 𝑏𝑐 + ℎ𝑎𝑐 , while ( 𝑏 + ℎ𝑎) ∧ ( 𝑑 + ℎ𝑐 ) = 𝑏𝑑 + ℎ𝑏𝑐 + ℎ𝑎𝑑 + ℎ2 𝑎𝑐 . The other
+three basis elements 𝑎𝑏, 𝑎𝑐, 𝑐𝑑 are fixed. The quadratic term comes from transporting both factors of
+𝑏𝑑 ; discarding it would change the chain map, even though it will not change its Smith factors. In degree
+three,
+              𝐴3 ( 𝑎𝑏𝑑 ) = ℎ 𝑎𝑏𝑐,       𝐴3 ( 𝑏𝑐𝑑 ) = ℎ 𝑎𝑐𝑑,     𝐴3 ( 𝑎𝑏𝑐 ) = 𝐴3 ( 𝑎𝑐𝑑 ) = 0.         (14.3)
+Finally, 𝐴0 = 𝐴4 = 0.
+Lemma 14.1. For ℎ ≠ 0, each of 𝐴1 , 𝐴2 , 𝐴3 has precisely two nonzero Smith factors, both equal to | ℎ |.
+Their kernel ranks are respectively 2, 4, 2. The images are
+
+                           ℎ ⟨ 𝑎, 𝑐 ⟩ ,       ℎ ⟨ 𝑎𝑐, 𝑎𝑑 + 𝑏𝑐 ⟩ ,        ℎ ⟨ 𝑎𝑏𝑐, 𝑎𝑐𝑑 ⟩ .
+
+Each pair in angle brackets extends to an integral basis of the corresponding exterior lattice; such a
+sublattice is called primitive.
+
+Proof. Equations (14.1) and (14.3) are already diagonal after ordering their source and target bases. In
+degree two, replace the source vector 𝑏𝑑 by 𝑏𝑑 − ℎ𝑎𝑑 . Its image is ℎ ( 𝑎𝑑 + 𝑏𝑐 ). The six source vectors
+
+                           𝑎𝑑,       𝑏𝑑 − ℎ𝑎𝑑,         𝑎𝑏,    𝑎𝑐,      𝑐𝑑,    𝑎𝑑 − 𝑏𝑐
+
+form an integral basis: they recover 𝑏𝑐 = 𝑎𝑑 − ( 𝑎𝑑 − 𝑏𝑐 ) and 𝑏𝑑 = ( 𝑏𝑑 − ℎ𝑎𝑑 ) + ℎ𝑎𝑑 , as well as the
+other four original basis vectors. The last four vectors lie in the kernel. In the target, 𝑎𝑐 and 𝑎𝑑 + 𝑏𝑐
+extend to an integral basis by adding 𝑎𝑏, 𝑎𝑑, 𝑏𝑑, 𝑐𝑑 . In these independent source and target bases the
+only nonzero entries are ℎ, ℎ. Changing signs makes them positive. This proves all assertions, including
+primitivity. Notice that the source and target bases are different; no decomposition into invariant and
+image lattices over ℤ has been assumed.
+
+
+
+
+                                                         25
+Theorem 14.2. For ℎ ≠ 0, put 𝐴ℎ = ℤ/| ℎ |ℤ. The integral homology groups of 𝑌𝑇ℎ are
+
+                             𝑛       0    1      2      3   4 5
+                                                                                                               (14.4)
+                        𝐻𝑛 (𝑌𝑇ℎ ; ℤ) ℤ ℤ ⊕ 𝐴ℎ ℤ ⊕ 𝐴ℎ ℤ ⊕ 𝐴ℎ ℤ3 ℤ.
+                                        3   2  6   2  6   2
+
+
+All other homology groups vanish. For ℎ = 0, they are ℤ ( 𝑛) in degrees 0 ≤ 𝑛 ≤ 5.
+                                                          5
+
+
+
+
+Proof. The ranks of 𝐿 𝑘 are 1, 4, 6, 4, 1. For ℎ ≠ 0, the ranks of 𝐴𝑘 are 0, 2, 2, 2, 0. Subtracting gives
+cokernel free ranks 1, 2, 4, 2, 1 and kernel ranks 1, 2, 4, 2, 1. The only torsion is the pair of factors in
+Lemma 14.1, in cokernel degrees 1, 2, 3. Adding the cokernel in degree 𝑛 and the kernel in degree 𝑛 − 1 as
+                                                                                                          
+in (13.2) gives the table. When ℎ = 0 every differential in (13.1) vanishes. Its degree-𝑛 rank is 𝑛4 + 𝑛4−1 =
+ 5
+ 𝑛 .
+
+    At ℎ = 1 the integral homology is torsion-free, with free ranks, or Betti numbers, (1, 3, 6, 6, 3, 1).
+Thus the transport in (9.3) can remove four free classes from each of degrees two and three without
+introducing torsion. At ℎ = 2 the same free ranks remain, but there are two order-two classes in each of
+degrees one, two, and three. At ℎ = 6 these become two order-six classes. The index of the image lattice,
+rather than its rational span, distinguishes the three cases.
+Proposition 14.3. Let ℎ ≠ 0 and let 𝑝 be prime. If 𝑝 ∤ ℎ, the dimensions of 𝐻𝑛 (𝑌𝑇ℎ ; 𝔽 𝑝 ) are
+(1, 3, 6, 6, 3, 1) and 𝛽 𝑝 = 0. If 𝑝 | ℎ, they are (1, 5, 10, 10, 5, 1). In this second case 𝛽 𝑝 has rank two over 𝔽 𝑝
+from degree 𝑗 + 1 to the order- 𝑝 subgroup of 𝐻𝑗 (𝑌𝑇ℎ ; ℤ), for each 𝑗 = 1, 2, 3, and is zero in the other
+degrees.
+
+Proof. Use the diagonal bases of Lemma 14.1 in the fibre and suspended summands of (13.1). They are
+independent bases of independent chain summands, so they decompose the complex into free zero-
+differential summands and six two-term complexes with differential ℎ. For 𝑝 ∤ ℎ these six summands
+are acyclic modulo 𝑝. For 𝑝 | ℎ the entire displayed differential is zero modulo 𝑝, giving the ranks of the
+five-torus chain groups. Formula (12.3) proves the rank assertion. More explicitly, write 𝜎 𝑧 = (0, 𝑧 ) for
+a suspended fibre chain. The two source and target pairs in each degree are
+
+                      𝑗 mod- 𝑝 sources in degree 𝑗 + 1 integral targets in degree 𝑗
+                      1             𝜎 𝑏, 𝜎 𝑑                       𝑎, 𝑐
+                      2   𝜎 ( 𝑎𝑑 ) , 𝜎 ( 𝑏𝑑 − ℎ𝑎𝑑 )           𝑎𝑐, 𝑎𝑑 + 𝑏𝑐
+                      3      𝜎 ( 𝑎𝑏𝑑 ) , 𝜎 ( 𝑏𝑐𝑑 )              𝑎𝑏𝑐, 𝑎𝑐𝑑.
+
+Each listed source has integral boundary ℎ times its listed target, so its connecting image is ( ℎ/ 𝑝) times
+that target. These are independent classes of order 𝑝. All remaining mod- 𝑝 classes have integral cycle
+lifts in the diagonal complex and hence connecting image zero.
+
+   At ℎ = 𝑝 = 2, the degree-three suspended chain has boundary
+
+                   𝜕 𝜎 ( 𝑏𝑑 − 2 𝑎𝑑 ) = 2( 𝑎𝑑 + 𝑏𝑐 ) ,         𝛽2 [ 𝜎 ( 𝑏𝑑 − 2 𝑎𝑑 )] = [ 𝑎𝑑 + 𝑏𝑐 ] .
+
+The coefficient of 𝑏𝑐 modulo two defines a homomorphism 𝐿2 → 𝔽 2 that vanishes on im 𝐴2 and takes
+𝑎𝑑 + 𝑏𝑐 to one. Thus [ 𝑎𝑑 + 𝑏𝑐 ] is nonzero in coker 𝐴2 and has order exactly two. Define ℓ : 𝐿2 → ℤ
+
+
+
+
+                                                         26
+by ℓ ( 𝑎𝑑 ) = 1, ℓ ( 𝑏𝑐 ) = −1, and zero on 𝑎𝑏, 𝑎𝑐, 𝑏𝑑, 𝑐𝑑 . It vanishes on im 𝐴2 and hence descends to the
+cokernel. Since ℓ ( 𝑎𝑑 − 𝑏𝑐 ) = 2, the class [ 𝑎𝑑 − 𝑏𝑐 ] has infinite order.
+    The degree-two class [ 𝜎 𝑏 ] at ℎ = 6 maps under 𝛽2 to 3[ 𝑎] ∈ ℤ/6ℤ and under 𝛽3 to 2[ 𝑎]. The
+degree-three classes over 𝑎𝑑 and 𝑏𝑑 − 6 𝑎𝑑 detect the two torsion generators in 𝐻2 in exactly the same
+way. These formulas retain the integral normalization of the cycles, including the quadratic term in
+(14.2).
+
+
+15    The remaining attachment equations
+In the geometric setting of Section 5, choose disjoint closed disks 𝐷 𝑖 ⊂ ℙ1 around 𝑖 = 0, 1, ∞ and set
+
+                    Σ = ℙ1 \                                           𝐸𝑓 = 𝑓 −1 ( Σ) .
+                               [
+                                  int 𝐷 𝑖 ,     𝑁𝑖 = 𝑓 −1 ( 𝐷 𝑖 ) ,
+                                   𝑖
+
+Choose collars of the boundary circles and paths from a common base point, with the loop and interval
+orientations of Section 9. The five-dimensional space 𝑌𝑇𝑖 denotes the corresponding boundary map-
+ping torus. It is distinct from the six-dimensional total space 𝑌 ( 𝑢). An application of Theorem 11.1
+to 𝑌 ( 𝑢) requires chain comparisons for 𝐸𝑓 , each 𝜕 𝑁𝑖 , and each 𝑁𝑖 , compatible with these boundary
+identifications.
+    For each 𝑖 , 𝑄 𝑖 must represent integral chains on 𝑁𝑖 , with its actual differential 𝑑𝑖 . The map 𝐹𝑖 :
+𝐶𝑛 → ( 𝑄 𝑖 )𝑛 must represent the inclusion of a nearby fibre into 𝑁𝑖 . The map 𝐻𝑖 : 𝐶𝑛 → ( 𝑄 𝑖 )𝑛+1 must
+represent its oriented boundary prism inside 𝑁𝑖 . In particular, 𝐹𝑖 and 𝐻𝑖 are required with their integer
+coefficients and chain comparisons, not only with their induced maps on cohomology. The necessary
+degrees are 0 ≤ 𝑛 ≤ 4 for 𝑄 𝑖 , 0 ≤ 𝑛 ≤ 3 for 𝐹𝑖 , and 0 ≤ 𝑛 ≤ 2 for 𝐻𝑖 , together with the fibre complex
+through degree four and the transport maps in those degrees. These data determine 𝐷2 , 𝐷3 , 𝐷4 .
+    At 0 and 1, the logarithmic classes 𝑎0 , 𝑎1 in (5.1) are increments of the original deck actions. A positive
+boundary monodromy must be distinguished from the inverse linear deck action and from the affine
+term determined by the origin section. For 𝑎0 = 𝑒4 /3, Theorem 27.1 constructs these data from the stated
+smooth line-bundle reduction: it gives 𝑄 0 , 𝑑0 , 𝐹0 , 𝐻0 in the actual integral cell basis 𝑢0 , 𝑢1 , 𝑢2 , 𝑒4 − 2𝛿0 .
+The action is free by its fourth coordinate. A finite chain model must retain this translation and section
+comparison as well as the linear transport. It must still be compared with the common fibre complex
+and the global transport maps. No analogous comparison for the other finite-order filling is supplied by
+this local calculation.
+    At infinity, the two-shear calculation determines the boundary; a chain model for the degeneration
+and its nearby-fibre inclusion is still required. The first-degree transgression (5.4) and the fundamental-
+group presentation (5.6) retain the geometric hypotheses and external dependencies stated in Section 5.
+Neither calculation alone specifies these higher chain maps.
+    The matrices (9.1) determine the flat torus bundle over the three-holed sphere and all three boundary
+mapping-torus complexes. They do not determine the spaces that fill those boundaries. To complete a
+particular filling calculation one must specify, for each 𝑖 , the chain groups ( 𝑄 𝑖 )𝑛 , their boundary maps,
+and the maps 𝐹𝑖,𝑛 , 𝐻𝑖,𝑛 in (11.1), with the following equations in every required degree:
+
+                                                   𝑑𝑖,𝑛 𝐹𝑖,𝑛 = 𝐹𝑖,𝑛−1 𝑑𝑛 ,
+                                                                                                               (15.1)
+                                  𝑑𝑖,𝑛+1 𝐻𝑖,𝑛 + 𝐻𝑖,𝑛−1 𝑑𝑛 = 𝐹𝑖,𝑛 ( 𝑀𝑖,𝑛 − 𝐼 ) .
+
+
+
+
+                                                         27
+Here 𝑀𝑖,𝑛 means the chain action in degree 𝑛, not merely its induced action on homology. For 𝐻2
+and 𝐻3 the resulting matrices 𝐷2 , 𝐷3 , 𝐷4 and their common bases are needed. Their kernel and image
+calculation is (12.1).
+    A degeneration with a toric central fibre offers a concrete way to construct 𝑄 ∞ : choose chains on the
+components, on their pairwise intersections, and on their multiple intersections, and record every inclu-
+sion and every gluing identification with signs. The alternating face maps and the internal boundaries
+form a total complex. If a component is identified with itself along different boundary curves, those two
+maps must be retained separately. A description of the incidence pattern alone gives neither their integer
+matrices nor the specialization prism from a nearby smooth torus. The latter is exactly the information
+in 𝐹∞ , 𝐻∞ , together with a comparison of this total complex to the filling. The equations in (15.1) express
+the required compatibility.
+    At a finite-order boundary, the linear part of an affine torus action also does not determine its quotient.
+For instance, translation by 𝑎 on a circle has order dividing 𝑚 when 𝑚𝑎 ∈ ℤ; its order is smaller if the
+denominator of 𝑎 is smaller. In a higher torus an affine map 𝑥 ↦→ 𝑇 𝑥 + 𝑎 has a fixed point precisely when
+(𝑇 − 𝐼 ) 𝑥 + 𝑎 lies in the integral lattice. One must check every nonidentity group element to conclude
+that a quotient is free. If the action is not free, a singular quotient, its resolution, and a homotopy quotient
+are different possible filling spaces. The gluing theorem can use a chain complex of any specified choice,
+but does not identify those choices or reduce their higher attachments to a primitive slope on a single
+circle.
+    Thus the computed groups in (14.4) are groups of the actual nontrivial boundary mapping tori.
+Theorem 11.1 provides the full boundary formula for a filling once its chain attachments are given. Neither
+statement supplies the unprovided attachments of a singular fibre, nor does it imply that a resulting
+six-dimensional space has sphere homology or admits a complex structure. Those questions require the
+specified geometric fillings and the comparisons in (15.1).
+
+
+
+
+                                                      28
+16     Positive transport and cyclic descent
+Let 𝑡 be the coordinate on a complex disk, oriented by increasing argument. A positive meridian is the
+loop 𝑡 = 𝜖𝑒 2𝜋 𝑖𝑣 , 0 ≤ 𝑣 ≤ 1, with 𝜖 > 0. The integral monodromy of a family along this loop is the map
+on the homology of the starting fibre obtained by transporting cycles and identifying the ending fibre
+with the starting fibre. Fix the cyclic change of coordinates 𝑡 = 𝑠 3 and the generator 𝑠 ↦→ 𝜁 𝑠 , where
+𝜁 = 𝑒 2𝜋 𝑖 /3 . A deck transformation is an automorphism of the pulled-back family covering this rotation
+and acting trivially on its quotient.
+Lemma 16.1. Suppose a smooth family over the 𝑠 disk has a deck transformation 𝜌 of order three. Mark
+its integral first homology by parallel continuation over the disk, and let 𝐴 be the matrix of 𝜌 in that
+marking. The positive monodromy of the quotient over 𝑡 ≠ 0 is 𝐴−1 .
+
+Proof. The positive meridian lifts from 𝑠 = 𝜖 1/3 to 𝑠 = 𝜁 𝜖 1/3 . A homology class remains constant in
+the disk marking along this lifted path. To express its endpoint in the starting fibre of the quotient one
+applies 𝜌 −1 . This acts by 𝐴−1 . A translation of a torus is homotopic to the identity through translations,
+so the same argument applies to an affine deck transformation on its first homology. It makes no assertion
+that the affine translation itself vanishes.
+
+    The inverse can be seen without a monodromy table. Consider the projective elliptic family whose
+affine equation is
+                                 𝑦 2 = 𝑥 3 − 3𝑡 3 ( 𝑡 − 1) 𝑥 + 2𝑡 4 ( 𝑡 − 1) 2 .                (16.1)
+Its origin is the point at infinity. For 𝑠 ≠ 0, put 𝑡 = 𝑠 3 , 𝑥 = 𝑠 4 𝑋 , and 𝑦 = 𝑠 6𝑌 . Dividing by 𝑠 12 gives
+
+                                    𝑌 2 = 𝑋 3 − 3 𝑠 ( 𝑠 3 − 1) 𝑋 + 2( 𝑠 3 − 1) 2 .                          (16.2)
+
+For an equation 𝑌 2 = 𝑋 3 + 𝑎𝑋 + 𝑏 its discriminant is −16(4 𝑎3 + 27𝑏 2 ); it vanishes exactly when the
+cubic and its derivative have a common root. Here it is 1728( 𝑠 3 − 1) 3 , so the projective fibres are smooth
+on a sufficiently small disk around zero. The central curve is 𝑌 2 = 𝑋 3 + 2. The deck transformation that
+fixes 𝑥, 𝑦, 𝑡 is
+                                      ( 𝑋 , 𝑌 , 𝑠 ) ↦−→ ( 𝜁 2 𝑋 , 𝑌 , 𝜁 𝑠 ) .                             (16.3)
+Substitution in (16.2) verifies the transformation on the whole smooth family, including the origin
+section.
+   On the central curve its pullback on the holomorphic differential 𝑑𝑋 /𝑌 is multiplication by 𝜁 2 .
+Thus for any cycle 𝑐 ,                   ∫              ∫
+                                                𝑑𝑋    2    𝑑𝑋
+                                                   =𝜁         .
+                                           𝜌∗ 𝑐 𝑌        𝑐 𝑌
+
+In a period marking with basis (1, 𝜁 ) the central deck matrix is consequently ( −1    1
+                                                                                    −1 0 ). The positive return
+matrix is its inverse. This calculation fixes both the disk orientation and the direction of action on periods.
+    For the four-torus, retain the following explicit marked lattice in ℂ2 . Choose 𝜏 with Im 𝜏 > 0 and
+set
+                                                                                         4
+                                                                                 Λ=
+                                                                                       ∑︁
+         𝑒1 = (1, 0) , 𝑒2 = ( 𝜁 , 0) , 𝑒3 = 31 (2 + 𝜁 , 1) , 𝑒4 = (0, 𝜏 ) ,                 ℤ 𝑒𝑗 .        (16.4)
+                                                                                         𝑗 =1
+
+
+
+
+                                                         29
+The vector 𝛿 = (0, 1) = −2𝑒1 − 𝑒2 + 3𝑒3 is an integral period. The map multiplying the first coordinate
+by 𝜁 and fixing the second preserves Λ and has matrix
+
+                                                   0 −1 −1 0
+                                                  ©         ª
+                                                  ­ 1 −1 0 0®
+                                             𝑇 = ­­         ®.                                               (16.5)
+                                                  ­0 0 1 0®
+                                                            ®
+
+                                                  «0 0 0 1 ¬
+Indeed its values on the four basis vectors are 𝑒2 , −𝑒1 − 𝑒2 , 𝑒3 − 𝑒1 , 𝑒4 . Its inverse is the integral map
+
+                                                      −1     1 −1 0
+                                                     ©              ª
+                                                      −1     0 −1 0®®
+                                         𝐴 = 𝑇 −1 = ­­
+                                                     ­
+                                                                     ,                                       (16.6)
+                                                     ­0      0 1 0®®
+                                                     «0      0 0 1¬
+
+with values −𝑒1 − 𝑒2 , 𝑒1 , 𝑒3 − 𝑒1 − 𝑒2 , 𝑒4 . In particular it fixes 𝛿 and 𝑒4 .
+    If (16.5) is the prescribed positive monodromy in this unchanged disk marking, Lemma 16.1 forces
+(16.6) as the linear central deck action. The elliptic calculation (16.3) agrees with its action on the first
+complex coordinate. Conversely, the elliptic calculation alone does not construct the lift to a four-torus
+or identify an affine origin there. The distinction between the linear map and an affine lift will matter
+below.
+    We first compute the complete chains for the quotient with deck matrix 𝑇 . We then use the inverse
+deck matrix to obtain positive transport 𝑇 with the same fibre marking. Both quotients are explicit
+geometric spaces; their identification with any prescribed degeneration requires the corresponding affine
+descent data.
+
+
+17     The affine quotient
+Let 𝐹 = (ℤ4 ⊗ ℝ)/ℤ4 , with ordered lattice basis ( 𝑒1 , 𝑒2 , 𝑒3 , 𝑒4 ). Consider the matrix and translation
+
+                                        0 −1 −1 0
+                                       ©         ª
+                                       ­ 1 −1 0 0®
+                                    𝑇 =­
+                                       ­         ®,                 𝑎 = 31 𝑒4 .                              (17.1)
+                                       ­0 0 1 0®
+                                                 ®
+
+                                       «0 0 0 1 ¬
+The affine map 𝑔 : 𝐹 → 𝐹 is 𝑔 ( 𝑥 ) = 𝑇 𝑥 + 𝑎. Since 𝑇 3 = 𝐼 , 𝑇 𝑎 = 𝑎, and 3 𝑎 = 𝑒4 is an integral period,
+𝑔 3 = 1. Its first and second powers translate the fourth coordinate by 1/3 and 2/3, so neither has a fixed
+point. Thus 𝑔 generates a free action of the cyclic group of order three.
+    Write 𝐷 = { 𝑠 ∈ ℂ : | 𝑠 | ≤ 1} and 𝜁 = exp(2 𝜋 𝑖 /3). The filling considered here is the smooth quotient
+                                                      
+                𝑁 = ( 𝐹 × 𝐷 )/ ( 𝑥, 𝑠 ) ∼ ( 𝑔 𝑥, 𝜁 𝑠 ) ,        𝑞 : 𝑁 −→ 𝐷,         𝑞 [ 𝑥, 𝑠 ] = 𝑠 3 .       (17.2)
+
+The action on the product is free because its action on 𝐹 is free. Local quotient charts are therefore
+ordinary smooth charts, and 𝜕 𝑁 = ( 𝐹 × 𝑆 1 )/⟨( 𝑔, 𝜁 )⟩. The central fibre has reduced space 𝐺 = 𝐹 /⟨ 𝑔 ⟩.
+In the transverse disk coordinate the map is 𝑠 ↦→ 𝑠 3 , which is the meaning of its multiplicity three.
+
+
+
+                                                        30
+   In (17.2), the matrix 𝑇 is explicitly the action of the deck generator over 𝑠 ↦→ 𝜁 𝑠 . This convention
+specifies a local quotient. It does not identify 𝑇 with positive boundary transport. Choosing the transla-
+tion 𝑎 = 𝑒4 /3 fixes its affine action. The freeness follows from this translation and is used throughout.
+An order-three translation in a different invariant direction need not give a free affine action.
+   Introduce the following integral basis of the first three coordinates:
+
+                            𝑢0 = 𝑒3 ,       𝑢1 = −𝑒1 + 𝑒3 ,         𝑢2 = −𝑒1 − 𝑒2 + 𝑒3 .
+
+Their column matrix has determinant one. Direct multiplication gives 𝑇 𝑢0 = 𝑢1 , 𝑇 𝑢1 = 𝑢2 , and 𝑇 𝑢2 =
+𝑢0 . Let 𝑃 denote this cyclic permutation of the three-torus 𝑋 = (ℝ/ℤ) 3 , and set 𝑅 = 𝑃 −1 . If 𝑡 ∈ ℝ/ℤ
+denotes the 𝑒4 coordinate, then
+
+                                  𝐹 = 𝑋 × 𝑆𝑡1 ,         𝑔 ( 𝑥, 𝑡 ) = ( 𝑃 𝑥, 𝑡 + 1/3) .                          (17.3)
+
+The invariant circle 𝑢0 + 𝑢1 + 𝑢2 is −2𝑒1 − 𝑒2 + 3𝑒3 ; thus this basis retains the integral overlattice.
+   The computations below apply to the actual neighbourhood of a smooth good reduction with the
+specified central action. The precise smooth comparison is as follows.
+Proposition 17.1. Let F → 𝐷 be a proper smooth family of four-tori, equipped with an order-three
+diffeomorphism covering 𝑠 ↦→ 𝜁 𝑠 . Suppose its action on the central fibre, in the stated marking, is 𝑔 .
+Then there is a smooth equivariant trivialization F  𝐹 × 𝐷 whose action is ( 𝑔, 𝜁 ). Consequently its
+quotient neighbourhood is diffeomorphic to 𝑁 .
+
+Proof. Choose a smooth Riemannian metric on the total space and average it over the finite group. The
+orthogonal complement to the tangent spaces of the fibres is a group-invariant horizontal distribution.
+Lift each radial path 𝑣 ↦→ 𝑣𝑠 , 0 ≤ 𝑣 ≤ 1, horizontally from the central fibre. Properness on the closed
+disk ensures that these lifts exist for the entire interval. Smooth dependence for the differential equation
+gives a smooth trivialization, with inverse obtained by lifting the reversed radial paths. Rotation sends
+the radial path to 𝑠 to the radial path to 𝜁 𝑠 . Invariance of the horizontal distribution therefore makes the
+trivialization equivariant. On the central fibre it is the identity, so the fibre action is exactly 𝑔 . Taking
+the free finite quotients gives the claimed diffeomorphism.
+
+    For a family with its torus group structure, there is a useful choice that also preserves the marked
+translations. The kernels of the exponential maps from the real Lie algebras of the fibres form a locally
+constant lattice of rank four. Over the disk choose its four marked periods 𝑣𝑗 ( 𝑠 ). They form a real basis
+of each Lie algebra. The map
+                                                                                 !
+                                                                  ∑︁
+                                  ( 𝑐1 , 𝑐2 , 𝑐3 , 𝑐4 ) ↦−→ exp 𝑠    𝑐𝑗 𝑣𝑗 ( 𝑠 )
+                                                                   𝑗
+
+descends from ℝ4 to a smooth group isomorphism ℝ4 /ℤ4 → F𝑠 . The integral matrix of the linear deck
+action is locally constant, hence constant on the disk. Translation by 𝑣4 ( 𝑠 )/3 becomes translation by
+𝑒4 /3. Thus these period coordinates simultaneously give (17.1) and its chosen torsion translation. On the
+unit boundary circle, the coefficient of 𝑣4 ( 𝑠 ) in (log 𝑠 )/(2 𝜋 𝑖 ) 𝑣4 ( 𝑠 ) is real. It therefore gives exactly the
+angular translation used below. This fixes the boundary marking when the smooth group family and its
+periods are supplied.
+
+
+
+
+                                                          31
+    This comparison is smooth. It does not assert that a varying complex torus family is holomorphically
+a product. The hypotheses state exactly which part of good reduction is needed for the local homology
+calculation.
+
+
+18    The quotient core and the disk coordinate
+For the homeomorphism 𝑅 of 𝑋 , its mapping torus is
+
+                                 𝐺 𝑅 = ( 𝑋 × [0, 1])/(( 𝑥, 1) ∼ ( 𝑅𝑥, 0)) .
+
+Equivalently, use pairs ( 𝑥, 𝜏 ) ∈ 𝑋 × ℝ with ( 𝑥, 𝜏 + 1) ∼ ( 𝑅𝑥, 𝜏 ). Brackets denote their classes.
+Proposition 18.1. The quotient core 𝐺 = 𝐹 /⟨ 𝑔 ⟩ is diffeomorphic to 𝐺 𝑅 , and the map
+
+                       Φ : 𝑁 −→ 𝐺 𝑅 × 𝐷,                [ 𝑥, 𝑡, 𝑠 ] ↦−→ [ 𝑥, 3𝑡 ] , 𝑒 −2𝜋 𝑖𝑡 𝑠
+                                                                                                 
+                                                                                                        (18.1)
+
+is a diffeomorphism. In these coordinates, writing 𝑧 = 𝑒 −2𝜋 𝑖𝑡 𝑠 , the degeneration map is
+
+                                          𝑞 ( [ 𝑥, 𝜏 ] , 𝑧 ) = 𝑒 2𝜋 𝑖𝜏 𝑧 3 .                            (18.2)
+
+Proof. The map ( 𝑥, 𝑡 ) ↦→ [ 𝑥, 3𝑡 ] is invariant under 𝑔 , because
+
+                                   [ 𝑃 𝑥, 3𝑡 + 1] = [ 𝑅𝑃 𝑥, 3𝑡 ] = [ 𝑥, 3𝑡 ] .
+
+It is also invariant under 𝑡 ↦→ 𝑡 + 1, since 𝑅3 = 𝐼 . Every point of 𝐺 𝑅 has a preimage, and its three
+preimages in 𝐹 are precisely one orbit of 𝑔 . The resulting map 𝐺 → 𝐺 𝑅 is a diffeomorphism in the
+local product charts.
+    The second coordinate in (18.1) is unchanged by 𝑡 ↦→ 𝑡 + 1 and by ( 𝑡, 𝑠 ) ↦→ ( 𝑡 + 1/3, 𝜁 𝑠 ). An inverse
+is obtained by choosing a representative [ 𝑥, 𝜏 ], setting 𝑡 = 𝜏 /3, and taking 𝑠 = 𝑒 2𝜋 𝑖𝑡 𝑧 . Changing the
+representative changes ( 𝑥, 𝑡, 𝑠 ) by the defining finite action or an integral period. Thus the inverse is
+well-defined and smooth. Cubing 𝑠 = 𝑒 2𝜋 𝑖𝑡 𝑧 proves (18.2).
+
+    The map 𝑟 : 𝑁 → 𝐺 𝑅 , given by the first coordinate of Φ, is a deformation retraction after identifying
+𝐺 𝑅 with the zero section: multiply 𝑧 by a real number decreasing from one to zero. The boundary is
+𝐺 𝑅 × 𝑆 𝑧1 . Although the disk bundle is smooth and trivial, the map 𝑞 has a multiple fibre and a nontrivial
+boundary monodromy. Formula (18.2) retains this distinction.
+    Orient 𝐹 by ( 𝑢0 , 𝑢1 , 𝑢2 , 𝑡 ), orient the disk by its complex coordinate, and give 𝑁 the resulting quo-
+tient orientation. Orient 𝐺 𝑅 by ( 𝑢0 , 𝑢1 , 𝑢2 , 𝜏 ). Then Φ preserves the orientation of 𝑁 and 𝐺 𝑅 × 𝐷 .
+The boundary orientation of 𝑁 is the product orientation of 𝐺 𝑅 and the positive circle 𝑆 𝑧1 .
+
+
+19    The boundary marking and its two orientations
+We now identify a smooth fibre and its transported chains inside this specific filling. Take the boundary
+value 𝑞 = 1. Its fibre is the image of 𝑠 = 1, with marking
+
+                                   𝐹 −→ 𝑁 ,             ( 𝑥, 𝑡 ) ↦−→ [ 𝑥, 𝑡, 1] .
+
+
+
+
+                                                         32
+After the deformation retraction, this map becomes the covering
+
+                                   𝑓 : 𝐹 −→ 𝐺 𝑅 ,               𝑓 ( 𝑥, 𝑡 ) = [ 𝑥, 3𝑡 ] .
+
+Here 𝑓 denotes this local fibre map, and 𝑞 remains the map to the disk.
+   Let 𝑀 = 𝑃 × 𝐼 act on 𝐹 = 𝑋 × 𝑆𝑡1 . Its mapping torus 𝐵 𝑀 is formed by ( 𝑥, 𝑡, 1) ∼ ( 𝑃 𝑥, 𝑡, 0),
+where the last variable is denoted by 𝑣 . The following boundary map removes the affine translation while
+keeping its effect on the filling map:
+
+                      𝑗− : 𝐵 𝑀 −→ 𝜕 𝑁 ,              [ 𝑥, 𝑡, 𝑣 ] ↦−→ [ 𝑥, 𝑡 − 𝑣 /3, 𝑒 −2𝜋 𝑖𝑣/3 ] .
+
+Indeed, at 𝑣 = 1, applying the quotient generator gives [ 𝑥, 𝑡 − 1/3, 𝜁 −1 ] = [ 𝑃 𝑥, 𝑡, 1], as required at the
+other end. Moreover 𝑞𝑗− = 𝑒 −2𝜋 𝑖𝑣 . Thus 𝑣 parametrizes the clockwise circle in the base disk. The term
+−𝑣 /3 is the logarithmic translation 𝜎 ( 𝑠 ) = (log 𝑠 )/(2 𝜋 𝑖 ) 𝑒4 along this chosen root of 𝑞 .
+   In the coordinates of Proposition 18.1,
+
+                                   Φ𝑗− ( [ 𝑥, 𝑡, 𝑣 ]) = ( [ 𝑥, 3𝑡 − 𝑣 ] , 𝑒 −2𝜋 𝑖𝑡 ) .
+                                                                 3 −1
+The map on the two circle coordinates is integral with matrix ( −1  0 ), of determinant −1. The mapping-
+torus end relations give exactly the corresponding fibre permutations. Solving 𝑡 = − arg( 𝑧 )/(2 𝜋 ) and
+𝑣 = 3𝑡 − 𝜏 gives its inverse, with changes of lifts absorbed by these relations. Hence 𝑗− is a diffeomor-
+phism. With the orientation of 𝐵 𝑀 given by the fibre followed by increasing 𝑣 , it reverses the outward
+boundary orientation of 𝑁 .
+   For the counterclockwise circle the linear return map is 𝑀 −1 , and the orientation-preserving bound-
+ary identification is
+
+     𝑗+ : 𝐵 𝑀 −1 −→ 𝜕 𝑁 ,     [ 𝑥, 𝑡, 𝑣 ] ↦−→ [ 𝑥, 𝑡 + 𝑣 /3, 𝑒 2𝜋 𝑖𝑣/3 ] ,      Φ𝑗+ = ( [ 𝑥, 3𝑡 + 𝑣 ] , 𝑒 −2𝜋 𝑖𝑡 ) .   (19.1)
+
+Its circle-coordinate determinant is +1. Thus the matrix 𝑇 in (17.1) is the deck action and the clockwise
+linear boundary transport in these coordinates. Inverting the based meridian inverts this transport. Both
+orientations will be retained at chain level.
+    The composite of the clockwise boundary map with the retraction is
+
+                            𝐾− : 𝐵 𝑀 −→ 𝐺 𝑅 ,             𝐾− ( [ 𝑥, 𝑡, 𝑣 ]) = [ 𝑥, 3𝑡 − 𝑣 ] .                          (19.2)
+
+On the interval before gluing, this is a homotopy from 𝑓 to 𝑓 𝑀 : [ 𝑥, 3𝑡 − 1] = [ 𝑃 𝑥, 3𝑡 ]. This explicit
+homotopy will determine the prism map on chains.
+
+
+20      Finite integral chains
+A chain complex consists of abelian groups with homomorphisms 𝑑𝑛 : 𝐶𝑛 → 𝐶𝑛−1 satisfying 𝑑𝑛−1 𝑑𝑛 =
+0. A chain map commutes with these boundaries. A chain homotopy from 𝐴 to 𝐵 is a degree-one map
+𝐻 with 𝑑𝐻 + 𝐻 𝑑 = 𝐵 − 𝐴. The homology in degree 𝑛 is ker 𝑑𝑛 /im 𝑑𝑛+1 . We use free groups generated
+by oriented cells, with the boundary given by their attaching maps. Interval subdivisions and their prisms
+compare these chains with singular chains, the finite integer sums of continuous oriented simplices with
+alternating face boundary.
+
+
+
+                                                           33
+   Give each circle in 𝑋 one vertex and one oriented edge. The products give one cell for every subset of
+the three coordinates. Opposite faces cancel, so the cellular chain groups have zero differential. Write
+𝐷 𝑘 for the group in degree 𝑘 and 𝐷 𝑘 = 0 outside 0 ≤ 𝑘 ≤ 3. The bases are
+
+                            𝑘                  basis of 𝐷 𝑘
+                            0                        1
+                            1                   𝑢0 , 𝑢1 , 𝑢2                                           (20.1)
+                            2 𝑤0 = 𝑢1 ∧ 𝑢2 , 𝑤1 = 𝑢2 ∧ 𝑢0 , 𝑤2 = 𝑢0 ∧ 𝑢1
+                            3               𝜔 = 𝑢0 ∧ 𝑢1 ∧ 𝑢2 .
+
+The coordinate permutation is an actual cellular homeomorphism. It acts by the identity on 𝐷0 , 𝐷3
+and cyclically on both displayed triples. Denote these chain actions by 𝑃𝑘 , put 𝑅𝑘 = 𝑃𝑘−1 , and set
+
+                                               𝑆𝑘 = 𝐼 + 𝑅𝑘 + 𝑅2𝑘 .
+
+Thus 𝑆0 = 𝑆3 = 3, whereas 𝑆1 and 𝑆2 are the three-by-three matrix all of whose entries are one.
+   For products with an interval, orient its chain before the fibre chain. If 𝑧 is a fibre chain, write
+𝜎 𝑧 = [0, 1] × 𝑧 . Its boundary is the terminal chain minus the initial chain minus 𝜎 𝜕 𝑧 . In particular, the
+orientation of 𝜎 𝑧 is (−1) 𝑘 times the fibre-first orientation when 𝑧 has degree 𝑘 .
+   The fibre 𝐹 = 𝑋 × 𝑆𝑡1 has the finite chain complex
+
+                        𝐶𝑛 = 𝐷𝑛 ⊕ 𝐷𝑛−1 ,              𝑑𝐶 = 0,        𝑀𝑛 = 𝑃𝑛 ⊕ 𝑃𝑛−1 .
+
+The second component is the oriented 𝑡 -circle prism. For the core 𝐺 𝑅 , hence also the deformation retract
+of 𝑁 , take
+                    𝑄 𝑛 = 𝐷𝑛 ⊕ 𝐷𝑛−1 ,            𝑑𝑄 ( 𝑥, 𝑦 ) = (( 𝑅𝑛−1 − 𝐼 ) 𝑦, 0) .                (20.2)
+This follows directly by attaching one 𝜏 -prism to each cell of 𝑋 . The ranks are 1, 4, 6, 4, 1. The only
+nonzero differentials are 𝑑𝑄,2 and 𝑑𝑄,3 , acting by 𝑅 − 𝐼 on the suspended triples. Thus (20.2) specifies
+every boundary through degree four, with its bases and integer entries.
+   The clockwise boundary mapping torus has complex
+
+                          𝐵 𝑛 = 𝐶𝑛 ⊕ 𝐶𝑛−1 ,           𝑑𝐵 ( 𝑎, 𝑏 ) = (( 𝑀𝑛−1 − 𝐼 ) 𝑏, 0) .
+
+This is its actual cellular complex because 𝑀 permutes the product cells. No simultaneous replacement
+of singular chains by exterior homology is needed: these specific cellular actions exist on the stated spaces
+and give their interval attachments directly.
+Theorem 20.1. For the fibre inclusion and the clockwise boundary map above, the finite chain maps
+and prism homotopy are
+
+                      𝐹𝑛 ( 𝑥, 𝑦 ) = ( 𝑥, 𝑆𝑛−1 𝑦 ) ,     𝐻𝑛 ( 𝑥, 𝑦 ) = (0, − 𝑃𝑛 𝑥 ) ∈ 𝑄 𝑛+1 .           (20.3)
+
+They satisfy
+                          𝑑𝑄 𝐹 = 0 = 𝐹 𝑑𝐶 ,            𝑑𝑄 𝐻 + 𝐻 𝑑𝐶 = 𝐹 ( 𝑀 − 𝐼 ) .                     (20.4)
+
+
+
+
+                                                         34
+In degree 𝑛, write a boundary chain as ( 𝑥, 𝑦, 𝑧, 𝑤 ) in 𝐷𝑛 ⊕ 𝐷𝑛−1 ⊕ 𝐷𝑛−1 ⊕ 𝐷𝑛−2 . The actual boundary
+inclusion followed by retraction is represented by
+
+                                   𝐾𝑛 ( 𝑥, 𝑦, 𝑧, 𝑤 ) = ( 𝑥, 𝑆𝑛−1 𝑦 − 𝑃𝑛−1 𝑧 ) .                         (20.5)
+
+These formulas hold in every degree, including the entire range needed for gluing boundaries in degrees
+two, three and four.
+
+Proof. The map 𝑓 ( 𝑥, 𝑡 ) = [ 𝑥, 3𝑡 ] sends a cell at 𝑡 = 0 identically to the corresponding core fibre cell.
+A 𝑡 -prism traverses three successive 𝜏 -intervals. On these intervals its fibre chains are transported by
+𝐼 , 𝑅, 𝑅2 , respectively. Subdivide the source interval into three equal parts and add their oriented images.
+This gives 𝑆𝑛−1 , and proves the formula for 𝐹 .
+    The homotopy (19.2) moves a fibre cell at 𝑡 = 0 backwards through one core interval. A backward
+interval has chain − 𝜎 ( 𝑃 𝑥 ), because its terminal chain is 𝑃 𝑥 and its initial chain is 𝑥 . Indeed, ( 𝑅 −
+𝐼 )(− 𝑃 ) 𝑥 = ( 𝑃 − 𝐼 ) 𝑥 . On a 𝑡 -prism over a 𝑘 -cell, the homotopy factors through that cell and the one-
+dimensional core circle: its circle coordinate is 3𝑡 − 𝑣 . Subdivide the square in ( 𝑡, 𝑣 ) along the finitely
+many integer levels of 3𝑡 − 𝑣 . In every piece its image lies in the product of the same 𝑘 -cell, possibly
+permuted, and an interval. It lies in the ( 𝑘 + 1)-skeleton, so its cellular component in degree 𝑘 + 2 is zero.
+This proves the formula for 𝐻 on the second summand as well.
+    All subdivisions are compatible with coordinate faces. Their interval and square prisms give chain
+comparisons with singular chains and with the geometric maps. In particular, the displayed formulas
+come from the stated covering and boundary homotopy, with their common cell markings.
+    For an algebraic verification, ( 𝑅 − 𝐼 ) 𝑆 = 𝑅3 − 𝐼 = 0 and 𝑆 ( 𝑃 − 𝐼 ) = 0, while ( 𝑅 − 𝐼 ) (− 𝑃 ) =
+𝑃 − 𝐼 . Consequently
+
+                           𝑑𝑄 𝐻 ( 𝑥, 𝑦 ) = (( 𝑃𝑛 − 𝐼 ) 𝑥, 0) = 𝐹 ( 𝑀 − 𝐼 ) ( 𝑥, 𝑦 ) ,
+
+which proves (20.4). Combining the fibre part 𝐹 and the interval part 𝐻 gives (20.5).
+
+     For the counterclockwise boundary the corresponding homotopy is
+
+                            𝐻𝑛+ ( 𝑥, 𝑦 ) = (0, 𝑥 ) ,       𝑑𝑄 𝐻 + = 𝐹 ( 𝑀 −1 − 𝐼 ) .
+
+Its geometric representative is [ 𝑥, 3𝑡 + 𝑣 ] from (19.1). The reversal map from the clockwise boundary
+complex to the counterclockwise one is
+
+                                             𝐽 ( 𝑎, 𝑏 ) = ( 𝑎, − 𝑀 𝑏 ) .
+
+Indeed, ( 𝑀 −1 − 𝐼 ) (− 𝑀 ) = 𝑀 − 𝐼 , so it commutes with boundaries. Moreover 𝐹 + 𝐻 + (− 𝑀 ) =
+𝐹 + 𝐻 , hence 𝐾+ 𝐽 = 𝐾− . These equations give the explicit comparison when a gluing uses the opposite
+meridian convention.
+
+
+21     Homology and specialization
+Since the boundary in (20.2) acts only on the suspended summand,
+
+                               𝐻𝑛 ( 𝑄 ) = coker( 𝑅𝑛 − 𝐼 ) ⊕ ker( 𝑅𝑛−1 − 𝐼 ) .                            (21.1)
+
+
+
+                                                         35
+For a cyclic permutation of three generators, the image of 𝑅 − 𝐼 is exactly the lattice of vectors whose
+coordinates sum to zero. The differences of two generators span that lattice: if 𝑎0 + 𝑎1 + 𝑎2 = 0, then
+𝑎0 𝑢0 + 𝑎1 𝑢1 + 𝑎2 𝑢2 = 𝑎0 ( 𝑢0 − 𝑢2 ) + 𝑎1 ( 𝑢1 − 𝑢2 ). The kernel is generated by their sum. Thus the
+cokernel and kernel are both infinite cyclic and have the following integral generators:
+
+                                 𝑘 coker( 𝑅𝑘 − 𝐼 )   ker( 𝑅𝑘 − 𝐼 )
+                                 0         1               1
+                                 1      [ 𝑢0 ]     𝑈 = 𝑢0 + 𝑢1 + 𝑢2
+                                 2      [𝑤0 ]      𝑊 = 𝑤0 + 𝑤1 + 𝑤2
+                                 3        𝜔               𝜔.
+
+Each displayed vector generates its full integral kernel or cokernel. No quotient here has torsion.
+Theorem 21.1. The integral homology of 𝑁 is
+
+          𝐻0 ( 𝑁 ) = ℤ,     𝐻1 ( 𝑁 ) = ℤ2 ,    𝐻2 ( 𝑁 ) = ℤ2 ,    𝐻3 ( 𝑁 ) = ℤ2 ,    𝐻4 ( 𝑁 ) = ℤ,
+
+and zero in higher degrees. In the ordered bases of (20.1) and (21.1), the fibre map on homology is
+
+             𝑛                                      𝐹∗                            ker 𝐹∗ coker 𝐹∗
+             0                                       1                              0       0
+             1              ( 𝑎0 , 𝑎1 , 𝑎2 ; 𝑏 ) ↦→ ( 𝑎0 + 𝑎1 + 𝑎2 , 3𝑏 )          ℤ 2    ℤ/3ℤ
+                                                                                                        (21.2)
+             2 ( 𝑎0 , 𝑎1 , 𝑎2 ; 𝑏0 , 𝑏1 , 𝑏2 ) ↦→ ( 𝑎0 + 𝑎1 + 𝑎2 , 𝑏0 + 𝑏1 + 𝑏2 ) ℤ4        0
+             3               ( 𝑎; 𝑏0 , 𝑏1 , 𝑏2 ) ↦→ ( 𝑎, 𝑏0 + 𝑏1 + 𝑏2 )            ℤ 2      0
+             4                                   𝑎 ↦→ 3 𝑎                           0     ℤ/3ℤ.
+
+Each kernel in degrees one, two and three is the sum-zero lattice in the indicated triple or pair of triples.
+
+Proof. The preceding image and kernel computation applied to (21.1) gives all the homology groups. In
+degrees one and two, a vector in a triple maps to its coordinate sum in the cokernel, while 𝑆 sends it to
+that sum times 𝑈 or 𝑊 . On 𝐷0 , 𝐷3 , 𝑆 = 3. Applying these facts to the two summands of 𝐹𝑛 in (20.3)
+gives every row of (21.2), together with the displayed kernels and cokernels. The top-dimensional map
+has degree three, as does the covering 𝑓 : 𝐹 → 𝐺 𝑅 .
+
+    For cohomology use the dual cellular complex Hom( 𝑄 ∗ , ℤ), whose coboundary is the transpose
+of the chain boundary. The kernel and image splittings just given show that evaluation identifies its
+cohomology with the integral dual of (21.1). Let 𝜂 ∈ 𝐻 1 ( 𝐹 ; ℤ) evaluate to one on the oriented 𝑡 circle
+and to zero on all 𝑢𝑖 . Let 𝑢∗𝑖 , 𝑤 ∗𝑖 , 𝜔∗ denote the dual fibre generators. Products with 𝜂 in the following
+description use the order of the suspended summand of 𝐶 .
+    The invariant fibre cohomology has generators
+
+                                1           𝑢0∗ + 𝑢1∗ + 𝑢2∗ , 𝜂
+                                2 𝑤0∗ + 𝑤1∗ + 𝑤2∗ , 𝜂 ∧ ( 𝑢0∗ + 𝑢1∗ + 𝑢2∗ )
+                                3      𝜔∗ , 𝜂 ∧ (𝑤0∗ + 𝑤1∗ + 𝑤2∗ )
+                                4                  𝜂 ∧ 𝜔∗ .
+
+
+
+
+                                                     36
+Here the exterior forms are identified with the dual product cells. In degree two, for example, the signed
+cyclic basis for the 𝑤 𝑖 is the same basis as in (20.1); no change to an unsigned lexicographic basis is implicit.
+    The pullback 𝐹 ∗ : 𝐻 𝑛 ( 𝑁 ; ℤ) → 𝐻 𝑛 ( 𝐹 ; ℤ) 𝑀 is the cohomological specialization map for this
+neighbourhood. Taking the transpose of (21.2) shows that it is injective. Its image is the full invariant
+lattice in degrees two and three. In degree one the second generator is multiplied by three, and in degree
+four its sole generator is multiplied by three. Consequently
+
+                           [ 𝐻 𝑛 ( 𝐹 ; ℤ) 𝑀 : im 𝐹 ∗ ] = 3, 1, 1, 3   for 𝑛 = 1, 2, 3, 4.
+
+In the original marking, 𝑢0∗ + 𝑢1∗ + 𝑢2∗ = 𝑒3∗ and 𝜂 = 𝑒4∗ . Thus degree-one specialization is precisely
+ℤ𝑒3∗ ⊕ 3ℤ𝑒4∗ inside ℤ𝑒3∗ ⊕ ℤ𝑒4∗ .
+
+
+22     The full boundary inclusion
+The disk trivialization makes the boundary inclusion followed by retraction the projection 𝐺 𝑅 × 𝑆 1 →
+𝐺 𝑅 . Its complete integral content can also be read directly from (20.5).
+Proposition 22.1. The chain map 𝐾 : 𝐵 → 𝑄 is surjective and has a chain section
+
+                                        𝑠𝑛 ( 𝑥, 𝑏 ) = ( 𝑥, 0, − 𝑅𝑛−1 𝑏, 0) .                               (22.1)
+
+Its kernel is isomorphic to the shifted chain complex 𝑄 [1], where 𝑄 [1] 𝑛 = 𝑄 𝑛−1 and its differential is
+− 𝑑𝑄 . Consequently
+
+      𝐻𝑛 ( 𝜕 𝑁 ; ℤ) = 𝐻𝑛 ( 𝑁 ; ℤ) ⊕ 𝐻𝑛−1 ( 𝑁 ; ℤ) ,            𝐾∗ is projection onto the first summand.
+
+In particular the boundary homology is torsion-free, with ranks 1, 3, 4, 4, 3, 1 in degrees zero through five.
+
+Proof. Equation (20.5) gives 𝐾 𝑠 = 𝐼 . The boundary of the suspended part in (22.1) is ( 𝑃 − 𝐼 ) (− 𝑅) 𝑏 =
+( 𝑅 − 𝐼 ) 𝑏 , proving 𝑑𝐵 𝑠 = 𝑠𝑑𝑄 . A vector in ker 𝐾𝑛 has 𝑥 = 0 and 𝑧 = 𝑃𝑛−1−1 𝑆𝑛−1 𝑦 = 𝑆𝑛−1 𝑦 . Thus it is
+uniquely of the form (0, 𝑦, 𝑆𝑦, 𝑤 ), with differential
+
+                                         ( 𝑦, 𝑤 ) ↦−→ (( 𝑃 − 𝐼 ) 𝑤, 0) .
+
+The map from 𝑄 [1] 𝑛 = 𝐷𝑛−1 ⊕ 𝐷𝑛−2 sending ( 𝑎, 𝑏 ) to ( 𝑃𝑛−1 𝑎, 𝑏 ) in these kernel coordinates is
+invertible. It commutes with differentials because − 𝑃 ( 𝑅 − 𝐼 ) = 𝑃 − 𝐼 . Therefore 𝐵 = 𝑠 ( 𝑄 ) ⊕ ker 𝐾
+is the asserted direct sum of chain complexes. Taking homology gives the formula and all six ranks. The
+top group maps to zero, since 𝐻5 ( 𝑁 ) = 0.
+
+    The section has a geometric representative: in 𝜕 𝑁 = 𝐺 𝑅 × 𝑆 𝑧1 , fix 𝑧 = 1. Its core interval traverses
+the clockwise boundary interval backwards, yielding − 𝑅 in (22.1). The kernel describes the extra normal
+circle. The chain identification with 𝑄 [1] fixes its signs by the displayed formulas, rather than by an
+unnamed choice of splitting.
+    This determines the specified local filling, its entire finite chain complex, and its actual fibre and
+boundary maps. It uses the particular affine translation 𝑒4 /3, the free action in (17.3), and the smooth
+good-reduction comparison of Proposition 17.1. Changing the translation requires a new quotient and
+comparison. The other finite-order neighbourhood and the cusp degeneration require their own chain
+
+
+
+                                                        37
+attachments. The local cell models must also be compared compatibly with a common complex carrying
+all the global transport maps. The local calculation alone gives no homology calculation for their global
+gluing and no assertion about sphere topology or a complex structure on a sphere.
+
+
+23     The quotient with the prescribed positive transport
+Keep the lattice, the oriented basis ( 𝑢0 , 𝑢1 , 𝑢2 , 𝑒4 ), and the cell groups 𝐷 𝑘 already defined. Now take
+𝑅 = 𝑃 −1 as the deck action on 𝑋 , with the same translation 𝑎 = 𝑒4 /3. Define
+
+               𝑁 + = ( 𝑋 × 𝑆𝑡1 × 𝐷 )/ ( 𝑥, 𝑡, 𝑠 ) ∼ ( 𝑅𝑥, 𝑡 + 1/3, 𝜁 𝑠 ) ,
+                                                                        
+                                                                                            𝑞 [ 𝑥, 𝑡, 𝑠 ] = 𝑠 3 .   (23.1)
+
+This action is free by its fourth coordinate, just as for 𝑁 . Here 𝑡 is again the fibre circle coordinate; 𝑞
+denotes the coordinate on the quotient disk. Let 𝐺 𝑃 be the mapping torus with relation [ 𝑥, 𝜏 + 1] =
+[ 𝑃 𝑥, 𝜏 ].
+Theorem 23.1. There is an orientation-preserving diffeomorphism
+
+                      Φ+ : 𝑁 + −→ 𝐺 𝑃 × 𝐷,                  [ 𝑥, 𝑡, 𝑠 ] ↦−→ ( [ 𝑥, 3𝑡 ] , 𝑒 −2𝜋 𝑖𝑡 𝑠 ) .
+
+In these coordinates 𝑞 = 𝑒 2𝜋 𝑖𝜏 𝑧 3 . The positively oriented boundary, with fibre marking at 𝑞 = 1, is
+identified with 𝐵 𝑀 , where 𝑀 = 𝑃 × 𝐼 , by
+
+                       𝑗 : 𝐵 𝑀 −→ 𝜕 𝑁 + ,               [ 𝑥, 𝑡, 𝑣 ] ↦−→ [ 𝑥, 𝑡 + 𝑣 /3, 𝑒 2𝜋 𝑖𝑣/3 ] .                (23.2)
+
+The fibre map and the boundary map followed by retraction are
+
+                           𝑓 + ( 𝑥, 𝑡 ) = [ 𝑥, 3𝑡 ] ,      𝑘 + ( [ 𝑥, 𝑡, 𝑣 ]) = [ 𝑥, 3𝑡 + 𝑣 ] .                     (23.3)
+
+Thus the positive transport in this marking is exactly 𝑇 .
+
+Proof. Under the quotient generator, [ 𝑅𝑥, 3𝑡 + 1] = [ 𝑃 𝑅𝑥, 3𝑡 ] = [ 𝑥, 3𝑡 ], and the factors 𝑒 −2𝜋 𝑖 /3 and
+𝜁 cancel in the disk coordinate. The formula is therefore well defined. A lift of 𝜏 gives 𝑡 = 𝜏 /3 and
+𝑠 = 𝑒 2𝜋 𝑖𝜏 /3 𝑧 ; changing the lift is exactly the quotient relation. This proves that the formula and its
+inverse are smooth, including at 𝑧 = 0. Its real Jacobian has positive factor 3 in the 𝑡 direction and a
+rotation in the disk. The formula for 𝑞 follows by cubing 𝑠 .
+   At 𝑣 = 1 in (23.2), applying the inverse deck generator gives [ 𝑃 𝑥, 𝑡, 1]. This is the endpoint identifica-
+tion of 𝐵 𝑀 , and 𝑞𝑗 = 𝑒 2𝜋 𝑖𝑣 . Under Φ+ the map is ( [ 𝑥, 3𝑡 + 𝑣 ] , 𝑒 −2𝜋 𝑖𝑡 ). The two circle coordinates have
+           3 1
+matrix ( −1   0 ) of determinant one. Solving these coordinates as before gives a smooth inverse compatible
+with the mapping-torus relations. The boundary orientation is therefore preserved. Setting the disk
+coordinate equal to zero gives both maps in (23.3).
+
+   No reversal of the positive base circle was used. For comparison, the map J : 𝐵 𝑀 → 𝐵 𝑀 −1 given by
+J ([ 𝑥, 𝑡, 𝑣 ]) = [ 𝑃 𝑥, 𝑡, 1 − 𝑣 ] satisfies 𝑗+ J = 𝑗− for the earlier quotient 𝑁 . It reverses the base circle.
+There cannot be a comparison between these two earlier markings covering the identity on the oriented
+base and inducing the identity on fibre homology: it would intertwine 𝑃 and 𝑅 by the identity. But
+𝑃 𝑢0 = 𝑢1 and 𝑅𝑢0 = 𝑢2 .
+
+
+
+
+                                                            38
+24      Integral maps for positive transport
+The cell model for the core of 𝑁 + is
+
+                           𝑄 𝑛+ = 𝐷𝑛 ⊕ 𝐷𝑛−1 ,           𝑑+ ( 𝑥, 𝑦 ) = (( 𝑃𝑛−1 − 𝐼 ) 𝑦, 0) .                     (24.1)
+
+The fibre complex remains 𝐶 and its boundary mapping torus remains 𝐵 , with differential ( 𝑎, 𝑏 ) ↦→
+(( 𝑀 − 𝐼 ) 𝑏, 0). Set 𝑆 = 𝐼 + 𝑃 + 𝑃 2 = 𝐼 + 𝑅 + 𝑅2 in each exterior degree.
+Theorem 24.1. With the interval-first cell orientation, the geometric maps (23.3) induce
+
+                                              𝐹𝑛+ ( 𝑥, 𝑦 ) = ( 𝑥, 𝑆𝑛−1 𝑦 ) ,
+                                             𝐻𝑛+ ( 𝑥, 𝑦 ) = (0, 𝑥 ) ,                                          (24.2)
+                                       𝐾𝑛+ ( 𝑥, 𝑦, 𝑧, 𝑤 ) = ( 𝑥, 𝑆𝑛−1 𝑦 + 𝑧 ) .
+
+They satisfy
+
+                 𝑑+ 𝐹 + = 0,        𝑑+ 𝐻 + + 𝐻 + 𝑑𝐶 = 𝐹 + ( 𝑀 − 𝐼 ) ,               𝑑+ 𝐾 + = 𝐾 + 𝑑𝐵 .
+
+These are maps on the actual fibre, core and boundary cell complexes, not merely maps on their homology.
+
+Proof. The cover 𝑓 + traverses three core intervals in the positive direction. The successive transports
+are 𝐼 , 𝑃 , 𝑃 2 , which give 𝑆 on the suspended summand and the identity on fibre cells. The homotopy
+[ 𝑥, 3𝑡 + 𝑣 ] traverses one positive core interval on a cell at 𝑡 = 0. Its chain is 𝜎 𝑥 , giving 𝐻 + ( 𝑥, 0) = (0, 𝑥 ).
+On the 𝑡 -prism of a 𝑘 -cell, subdivide the ( 𝑡, 𝑣 ) square along integer values of 3𝑡 + 𝑣 . Each image lies in
+the product of a permuted 𝑘 -cell and a core interval, hence in the ( 𝑘 + 1)-skeleton. Its degree-( 𝑘 + 2)
+cellular component is zero. This proves the second formula on every summand. The subdivisions agree
+on faces, so these are cellular representatives of the covering and its stated homotopy. Combining their
+fibre and boundary-interval components gives 𝐾 + .
+    For the chain identities, ( 𝑃 − 𝐼 ) 𝑆 = 𝑆 ( 𝑃 − 𝐼 ) = 0 and 𝑑+ 𝐻 + ( 𝑥, 𝑦 ) = (( 𝑃 − 𝐼 ) 𝑥, 0) = 𝐹 + ( 𝑀 −
+𝐼 )( 𝑥, 𝑦 ). The equality for 𝐾 + follows by applying these two identities to the fibre and suspended
+boundary summands separately.
+
+   All entries through degree four can be read without an implicit exterior operation. The groups 𝐷0 , 𝐷3
+have rank one and 𝑃0 = 𝑃3 = 1; 𝐷1 , 𝐷2 have rank three and
+
+                               0 0 1                                                      1 1 1
+                              ©       ª                                                  ©      ª
+                    𝑃1 = 𝑃2 = ­ 1 0 0®®,
+                              ­                      𝑆0 = 𝑆3 = 3,              𝑆1 = 𝑆2 = ­1 1 1®®.
+                                                                                         ­
+
+                              «0 1 0¬                                                    «1 1 1¬
+Thus 𝑄 + has ranks 1, 4, 6, 4, 1, with only 𝑑+,2 and 𝑑+,3 nonzero, each using the displayed 𝑃 − 𝐼 on its
+suspended triple. In particular 𝐹4+ is multiplication by three, 𝐻3+ sends the top fibre cell 𝜔 to its core
+prism, and 𝐻4+ = 0. These formulas specify the maps in every degree.
+Proposition 24.2. The positive boundary map has chain section 𝑠𝑛+ ( 𝑥, 𝑏 ) = ( 𝑥, 0, 𝑏, 0). Its ker-
+nel consists exactly of (0, 𝑦, − 𝑆𝑦, 𝑤 ), with differential ( 𝑦, 𝑤 ) ↦→ (( 𝑃 − 𝐼 ) 𝑤, 0). The map ( 𝑎, 𝑏 ) ↦→
+(− 𝑎, 𝑏 ) identifies 𝑄 + [1] with this kernel. Consequently 𝐵  𝑄 + ⊕ 𝑄 + [1] as integral chain complexes.
+
+
+
+                                                          39
+Proof. The formula for 𝐾 + gives 𝐾 + 𝑠 + = 𝐼 . Since the boundary of its third component is ( 𝑃 − 𝐼 ) 𝑏 ,
+𝑠 + commutes with boundaries. The equation 𝐾 + = 0 forces 𝑥 = 0, 𝑧 = − 𝑆𝑦 . Its boundary has second
+component ( 𝑃 − 𝐼 ) 𝑤 and third component zero, because ( 𝑃 − 𝐼 ) 𝑆 = 0. This proves the kernel formula.
+On 𝑄 + [1] the differential is − 𝑑+ ; multiplication by −1 on its first summand changes this to the displayed
+kernel differential. All changes of basis are integral and invertible.
+
+     The section is the actual normal-circle section 𝑧 = 1 in 𝐺 𝑃 × 𝑆 𝑧1 : a positive core interval traverses
+the positive boundary interval, with no inverse transport. The kernel carries the extra normal circle.
+The image of 𝑃 − 𝐼 , like that of 𝑅 − 𝐼 , is the full sum-zero lattice in each cyclic triple, and its kernel
+is generated by the sum. Hence the proof of (21.1) applies with 𝑃 in place of 𝑅: explicitly 𝐻𝑛 ( 𝑄 + ) =
+coker( 𝑃𝑛 − 𝐼 ) ⊕ ker( 𝑃𝑛−1 − 𝐼 ), with the same integral generators 1, [ 𝑢0 ] , [𝑤0 ] , 𝜔 and 1, 𝑈 ,𝑊 , 𝜔. The
+covering uses exactly the same 𝑆 . Every homology matrix in (21.2) therefore gives 𝐹∗+ in these stated bases.
+Its kernels are the indicated sum-zero lattices, and its only nonzero cokernels are ℤ/3ℤ in degrees one and
+four. The groups of 𝑁 + are torsion-free, of ranks 1, 2, 2, 2, 1. The boundary groups are torsion-free, of
+ranks 1, 3, 4, 4, 3, 1, and 𝐾∗+ is the split projection. Dualizing these free groups gives specialization indices
+3, 1, 1, 3 and degree-one image ℤ𝑒3∗ ⊕ 3ℤ𝑒4∗ in the unchanged fibre marking.
+
+
+25     The affine comparison required by a prescribed filling
+A marking of homology does not specify an origin of a torus. In period coordinates an affine transfor-
+mation has the form 𝑥 ↦→ 𝐴𝑥 + 𝑏 , where 𝑏 is a point of the torus. Changing the origin by 𝑐 changes its
+translation to 𝑏 + ( 𝐴 − 𝐼 ) 𝑐 . It does not change its homology matrix. A comparison of fillings with a
+chosen boundary section must retain that section as well as the integral periods.
+Proposition 25.1. Let a proper smooth torus group family over the 𝑠 disk have the marked periods
+(16.4). Suppose its original deck transformation over 𝑠 ↦→ 𝜁 𝑠 preserves its zero section, has matrix
+𝐴 = 𝑇 −1 , and the chosen origin on the punctured quotient is the descent of that zero section. Twist
+the deck transformation by the section 𝑒4 ( 𝑠 )/3. Then its quotient is smoothly identified with 𝑁 + , with
+the same positive fibre marking and boundary map (23.2). In particular (24.1) and (24.2) give its integral
+filling data.
+
+Proof. The periods trivialize the real Lie algebras and exponentiate to smooth group identifications
+with ℝ4 /ℤ4 . The deck matrix is locally constant, hence 𝐴 throughout the disk. Preservation of zero
+makes its affine translation zero. The twisted action is therefore ( 𝑥, 𝑠 ) ↦→ ( 𝐴𝑥 + 𝑒4 /3, 𝜁 𝑠 ). In the
+oriented 𝑢 basis this is (23.1). On the lifted positive boundary path 𝑠 = 𝑒 2𝜋 𝑖𝑣/3 , the logarithmic translation
+(log 𝑠 )/(2 𝜋 𝑖 ) 𝑒4 is 𝑣𝑒4 /3. It vanishes at 𝑣 = 0 and gives exactly (23.2). All subsequent geometric and
+chain comparisons have already been constructed for this quotient. No reversal or change of periods is
+involved.
+
+    The zero-section hypothesis is substantive. To see its effect while retaining the complex torus (16.4),
+let 𝑏 ∈ {0, 1, 2} and define three holomorphic deck actions
+
+                                        𝜌𝑏 ( 𝑥, 𝑠 ) = ( 𝐴𝑥 + 𝑏𝑒4 /3, 𝜁 𝑠 ) .
+
+
+
+
+                                                        40
+All have order three, all have the same linear action on the full integral lattice, and all induce the same
+action on the elliptic coordinate. The descended punctured families are isomorphic as marked torus
+families. In fact, on the universal logarithm cover put
+
+                                                      𝑏 log 𝑠
+                                         𝜎𝑏 ( 𝑠 ) =           𝑒4 ∈ ℂ2 /Λ.
+                                                       2𝜋 𝑖
+A change of logarithm adds the integral period 𝑏𝑒4 , so this is a single-valued holomorphic torus section on
+the punctured disk. Since 𝐴𝑒4 = 𝑒4 , it satisfies 𝜎𝑏 ( 𝜁 𝑠 ) = 𝐴𝜎𝑏 ( 𝑠 ) + 𝑏𝑒4 /3. Translation by 𝜎𝑏 consequently
+intertwines 𝜌0 and 𝜌𝑏 , induces the identity on homology, and at 𝑠 = 1 fixes the marked fibre point. It
+carries the descended zero section to a section of the other punctured quotient.
+   Nevertheless twisting each action by the same specified 𝑎 = 𝑒4 /3 produces translation ( 𝑏 + 1) 𝑒4 /3.
+The cases 𝑏 = 0, 1 are free, whereas 𝑏 = 2 has fixed points on the central fibre: the translation is then
+an integral period and the origin is fixed by 𝐴. Thus positive integral monodromy, the elliptic deck
+calculation, the increment 𝑎, and even an identified punctured family do not imply freeness or select
+an affine filling. The examples establish this precise failure of inference; they do not identify any one of
+these alternative descents with a separately prescribed geometric construction.
+   There is a further ambiguity even when the affine central action is fixed. For an integer 𝑟 , the formula
+
+                                        𝐿𝑟 ( [ 𝑥, 𝑡, 𝑣 ]) = [ 𝑥, 𝑡 + 𝑟𝑣, 𝑣 ]
+
+defines a diffeomorphism of 𝐵 𝑀 covering the identity on the positive base and restricting to the identity
+on its marked fibre at 𝑣 = 0. The endpoint condition holds because 𝑟 is integral and 𝑀 fixes the 𝑡 circle.
+However the two boundary maps 𝑗 and 𝑗 𝐿 𝑟 have distinct filling effects. Their retractions are [ 𝑥, 3𝑡 + 𝑣 ]
+and [ 𝑥, 3𝑡 + (3𝑟 + 1) 𝑣 ]. On the loop with 𝑥 = 𝑡 = 0, they give respectively [ 𝜏 ] and (3𝑟 + 1) [ 𝜏 ] in
+𝐻1 ( 𝐺 𝑃 ; ℤ), where [ 𝜏 ] has infinite order. Thus an unspecified change of section along the meridian
+changes a genuine attachment map while preserving the linear monodromy and the marked starting
+fibre.
+
+
+26     The origin section in the line-bundle reduction
+We now specify the local geometric hypotheses under which the four-torus filling is obtained from (16.1).
+Let 𝑂 be its origin section, let 𝑃0 be a section disjoint from 𝑂 near 𝑡 = 0, and put M = O ( 𝑃0 − 𝑂 ).
+Write M × for the complement of its zero section. Suppose a specified lifted translation acts on M ×
+and its quotient over the punctured disk is a family of complex two-tori. Choose the origin of these tori
+using a nonzero section 𝑒 of M | 𝑂 over the disk.
+   After 𝑡 = 𝑠 3 , let 𝑃0′ , 𝑂 ′ be the transformed sections on (16.2), and put M ′ = O ( 𝑃0′ − 𝑂 ′ ). We assume
+the following smooth reduction data: 𝑃0′ is disjoint from 𝑂 ′ near zero; the specified lifted translation
+extends to (M ′ ) × and commutes with the natural deck action; its quotient is a proper smooth family
+F of complex two-tori over the 𝑠 disk. The period marking is (16.4), with 𝛿 the positive circle of the
+multiplicative fibre and 𝑒4 the stated second vertical period. The positive monodromy is (16.5).
+   These are hypotheses on the local smooth reduction and its lifted translation. The calculation below
+constructs their marked filling and attachment maps; it does not establish the existence of that reduction
+or of the lifted translation from an arbitrary elliptic family. In particular it does not replace the needed
+commutation or properness by a lattice calculation.
+
+
+
+                                                          41
+Lemma 26.1. There is a nonzero section 𝑒 ′ of M ′ | 𝑂 ′ such that the canonical divisor identification
+over the punctured disk sends the pulled-back section 𝑒 to 𝑠 −2 𝑒 ′ . The natural deck action sends 𝑒 ′ ( 𝑠 ) to
+𝜁 𝑒 ′ ( 𝜁 𝑠 ).
+Proof. Since 𝑃0 does not meet 𝑂 in this neighbourhood, O ( 𝑃0 − 𝑂 ) is canonically the ideal line bundle
+of 𝑂 there. Restricting this ideal to 𝑂 gives its conormal line: the ideal modulo its square. Similarly
+M ′ | 𝑂 ′ is the conormal line of 𝑂 ′ , because 𝑃0′ is disjoint from it.
+   The local parameters transverse to the origin sections are 𝑤 = − 𝑥 /𝑦 and 𝑊 = − 𝑋 /𝑌 . To check
+this at infinity, use the projective chart with 𝑌 ≠ 0: the cubic equation solves 𝑍 /𝑌 as a holomorphic
+function of 𝑋 /𝑌 near the origin, so − 𝑋 /𝑌 is a local parameter. The Weierstrass substitution gives the
+exact equality
+                                                   𝑤 = 𝑠 −2𝑊 .
+The nonzero section 𝑒 can therefore be written as 𝑢 ( 𝑡 ) 𝑤 in the conormal line, for a holomorphic unit 𝑢
+on a sufficiently small disk. Define 𝑒 ′ ( 𝑠 ) = 𝑢 ( 𝑠 3 )𝑊 . This is holomorphic and nonzero, and the canonical
+divisor identification on 𝑠 ≠ 0 gives 𝑒 = 𝑠 −2 𝑒 ′ . No choice of a comparison multiplied by an extra power
+of 𝑠 is made here: the parameters are identified by the actual birational coordinate substitution.
+   The original pulled-back section is equivariant for the deck action. If 𝜌𝑒 ′ ( 𝑠 ) = 𝜆 ( 𝑠 ) 𝑒 ′ ( 𝜁 𝑠 ), applying
+𝜌 to 𝑒 = 𝑠 −2 𝑒 ′ consequently yields 𝜆 ( 𝑠 ) = ( 𝜁 𝑠 ) −2 / 𝑠 −2 = 𝜁 . The equality extends to zero. Equivalently,
+the forward action on the conormal line is the inverse of the normal-coordinate factor 𝜁 2 in (16.3).
+
+   Use the image of 𝑒 ′ as the origin of the smooth torus family F . An automorphism between compact
+complex tori is affine in these origins: a lift to their complex vector spaces has lattice-periodic derivative,
+whose entries are holomorphic functions on a compact torus and hence constant. Subtracting its linear
+part leaves a constant translation. Its linear part is determined by its map on periods. Lemma 16.1 therefore
+gives linear part 𝐴 = 𝑇 −1 , while Lemma 26.1 gives translation 𝛿 /3. Indeed multiplication by 𝑒 2𝜋 𝑖 /3 in
+the multiplicative fibre is precisely one third of its positive period 𝛿 .
+   Period coordinates make these maps constant over the smooth disk: their integral linear matrices are
+locally constant, and the translation is the specified torsion section 𝛿 ( 𝑠 )/3. Consequently the original
+deck transformation and its twist by the unchanged 𝑎0 = 𝑒4 /3 are, respectively,
+
+                   ( 𝑧, 𝑠 ) ↦−→ ( 𝐴𝑧 + 𝛿 /3, 𝜁 𝑠 ) ,     ( 𝑧, 𝑠 ) ↦−→ ( 𝐴𝑧 + ( 𝛿 + 𝑒4 )/3, 𝜁 𝑠 ) .
+
+Thus the central affine term does not vanish in the origin 𝑒 ′ . The second action is free: in the original 𝑒4
+coordinate its first two powers translate by 1/3 and 2/3.
+   Along a positive root 𝑠 = 𝑒 2𝜋 𝑖𝑣/3 the original origin 𝑒 differs from 𝑒 ′ by −2𝑣𝛿 /3. The logarithmic twist
+adds 𝑣𝑒4 /3. A small nonunit boundary radius can be absorbed by a constant rescaling of the chosen frame;
+the angular formula is unchanged. At the initial point 𝑠 = 1 the two origins coincide. This determines
+the marked boundary path, including its original section, and not only the homology monodromy.
+
+
+27     The marked local filling and its integral chains
+Write 𝛿 = 𝑈 = 𝑢0 + 𝑢1 + 𝑢2 and retain the original coordinates ( 𝑥, 𝑡 ) in the basis ( 𝑢0 , 𝑢1 , 𝑢2 , 𝑒4 ). Under
+the preceding smooth reduction hypotheses, the twisted local filling is
+                                                                                      
+                       𝑁0 = ( 𝑋 × 𝑆𝑡1 × 𝐷 )/ ( 𝑥, 𝑡, 𝑠 ) ∼ ( 𝑅𝑥 + 𝑈 /3, 𝑡 + 1/3, 𝜁 𝑠 ) .                      (27.1)
+
+
+
+                                                        42
+Its boundary is marked by the original section 𝑒 and the counterclockwise meridian. The formula just
+derived is
+                           𝑗0 ( [ 𝑥, 𝑡, 𝑣 ]) = [ 𝑥 − 2𝑣𝑈 /3, 𝑡 + 𝑣 /3, 𝑒 2𝜋 𝑖𝑣/3 ] .         (27.2)
+At 𝑣 = 1, the inverse of the generator in (27.1) sends the endpoint to [ 𝑃 𝑥 − 𝑈 , 𝑡, 1] = [ 𝑃 𝑥, 𝑡, 1]. Thus
+its return is 𝑃 , as required in the original period marking; 𝑞𝑗0 = 𝑒 2𝜋 𝑖𝑣 .
+Theorem 27.1. The filling (27.1) has the following explicit orientation-preserving disk trivialization:
+
+                             Φ0 [ 𝑥, 𝑡, 𝑠 ] = ( [ 𝑥 + 2𝑡𝑈 , 3𝑡 ] , 𝑒 −2𝜋 𝑖𝑡 𝑠 ) ∈ 𝐺 𝑃 × 𝐷.                  (27.3)
+
+Here 𝑞 = 𝑒 2𝜋 𝑖𝜏 𝑧 3 . The marked fibre and positive boundary maps followed by retraction are
+
+                    𝑓0 ( 𝑥, 𝑡 ) = [ 𝑥 + 2𝑡𝑈 , 3𝑡 ] ,           𝑘0 ( [ 𝑥, 𝑡, 𝑣 ]) = [ 𝑥 + 2𝑡𝑈 , 3𝑡 + 𝑣 ] .   (27.4)
+
+The integral fibre basis
+                                         𝑢0 , 𝑢1 , 𝑢2 , 𝑣4 ,        𝑣4 = 𝑒 4 − 2 𝛿                          (27.5)
+has determinant one relative to ( 𝑒1 , 𝑒2 , 𝑒3 , 𝑒4 ) and is preserved by 𝑇 , which acts as 𝑃 × 𝐼 . In its actual
+product cells the filling complex and maps are
+
+                                   𝑄0,𝑛 = 𝐷𝑛 ⊕ 𝐷𝑛−1 ,                 𝑑0 ( 𝑥, 𝑦 ) = (( 𝑃 − 𝐼 ) 𝑦, 0) ,
+                            𝐹0,𝑛 ( 𝑥, 𝑦 ) = ( 𝑥, 𝑆𝑦 ) ,             𝐻0,𝑛 ( 𝑥, 𝑦 ) = (0, 𝑥 ) ,               (27.6)
+                     𝐾0,𝑛 ( 𝑥, 𝑦, 𝑧, 𝑤 ) = ( 𝑥, 𝑆𝑦 + 𝑧 ) .
+
+In particular 𝑑0 𝐻0 + 𝐻0 𝑑𝐶 = 𝐹0 ( 𝑀 − 𝐼 ) with the positive native monodromy and the actual marked
+boundary section.
+
+Proof. Set 𝑦 = 𝑥 + 2𝑡𝑈 . The change ( 𝑥, 𝑡 ) ↦→ ( 𝑦, 𝑡 ) is an integral torus diffeomorphism of determinant
+one, with inverse 𝑥 = 𝑦 − 2𝑡𝑈 . Under the generator of (27.1),
+
+                       𝑦 ↦−→ 𝑅𝑥 + 𝑈 /3 + 2( 𝑡 + 1/3)𝑈 = 𝑅𝑦 + 𝑈 = 𝑅𝑦 in 𝑋 .
+
+It therefore identifies this quotient with (23.1) in the 𝑦 coordinates, without changing 𝑠 or the orientation
+of its disk. It also sends the marked boundary path to [ 𝑦, 𝑡 + 𝑣 /3, 𝑒 2𝜋 𝑖𝑣/3 ], since the terms −2𝑣𝑈 /3 and
+2( 𝑣 /3)𝑈 cancel. Applying Theorem 23.1 gives (27.3) and (27.4), with their orientations and inverses.
+    In the original coordinates, the 𝑡 loop with 𝑦 = 0 has vector 𝑒4 − 2𝑈 . Hence its product-cell basis is
+exactly (27.5). Its matrix of columns is
+
+                                                  0 −1 −1 4
+                                                 ©           ª
+                                                 ­0 0 −1 2 ®
+                                              𝑉 =­
+                                                 ­           ®.
+                                                 ­ 1 1 1  −6 ®
+                                                             ®
+                                                 «0  0 0   1 ¬
+It is obtained from the previously verified determinant-one permutation basis by adding −2( 𝑢0 + 𝑢1 +
+𝑢2 ) to the last column, so its determinant is one. Since 𝑇 fixes both 𝑒4 and 𝑈 , it fixes 𝑣4 and permutes
+the other cells. These are therefore genuine transported product cells, obtained by an integral diffeomor-
+phism, in every degree.
+
+
+                                                               43
+   In these cells the maps in (27.4) are [ 𝑦, 3𝑡 ] and [ 𝑦, 3𝑡 + 𝑣 ]. Their interval subdivisions are exactly
+those in Theorem 24.1, which proves all formulas in (27.6) and all their chain identities. Proposition 24.2
+gives the section and kernel of the full boundary map. In particular the degree-four map and all adjacent
+prism terms are included.
+
+    The original twist has not been changed: in this cell basis 𝑒4 /3 = ( 𝑣4 + 2𝑈 )/3. Its sum with the
+original central translation 𝑈 /3 is 𝑣4 /3 + 𝑈 , which equals 𝑣4 /3 as a torus translation. Both contributions
+are needed for the integral comparison.
+    For a homology class written in the original period basis, the same maps are explicit as well. In degree
+𝑛, change its exterior coordinates by 𝑛 𝑉 −1 , express the 𝑢-pairs in (𝑤0 , 𝑤1 , 𝑤2 ), and move 𝑣4 to the front
+                                       V
+in the suspended terms before applying (27.6). Moving it past 𝑛 − 1 fibre vectors contributes (−1) 𝑛−1 .
+Thus this is an integral change of actual geometric cells, with no rational replacement of the lattice. For
+example, write 𝑐 = [ 𝑢0 ] = [ 𝑢1 ] = [ 𝑢2 ] and let ℎ be the positive core interval in 𝐻1 ( 𝐺 𝑃 ; ℤ). Then
+
+            𝑓0∗ ( 𝑒1 ) = 𝑓0∗ ( 𝑒2 ) = 0,        𝑓0∗ ( 𝑒3 ) = 𝑐,        𝑓0∗ ( 𝑒4 ) = 6𝑐 + 3ℎ,   𝑘0∗ ( 𝛾0 ) = ℎ.
+
+Indeed 𝑒1 = 𝑢0 − 𝑢1 , 𝑒2 = 𝑢1 − 𝑢2 , 𝑒3 = 𝑢0 , and 𝑒4 = 𝑣4 + 2𝑈 . This gives a deciding distinction from
+the zero-origin descent in the unchanged original marking. At the level of the fundamental group, three
+traversals of the marked meridian satisfy
+
+                                                     𝛾03 = 𝑓0# ( 𝑒4 − 2𝛿 ) .                                       (27.7)
+
+To verify it directly, lift (27.2) to the universal vector coordinates. Its endpoint is the affine deck generator
+followed by translation by −𝛿 . Cubing adds 𝑒4 + 𝛿 − 3𝛿 = 𝑒4 − 2𝛿 . Equivalently in 𝐺 𝑃 , the marked
+loop is its positive core interval, while the 𝑣4 fibre loop covers three such intervals. The image of 𝛿 is 3𝑐
+and is not zero in this local filling. Consequently the local relation cannot be replaced by 𝛾03 = 𝑓0# ( 𝑒4 ).
+    For the higher degrees, abbreviate 𝑒 𝑖 ∧ 𝑒𝑗 by 𝑒 𝑖𝑗 and similarly for three or four indices. In the ordered
+domain bases ( 𝑒12 , 𝑒13 , 𝑒14 , 𝑒23 , 𝑒24 , 𝑒34 ) and ( 𝑒123 , 𝑒124 , 𝑒134 , 𝑒234 ), the degree-two and degree-three maps
+are, respectively,
+                                                                  !                                   !
+                                     3 1 0 −2 0 0                                        1 6 2 −4
+                         𝑓0∗,2 =                                    ,         𝑓0∗,3 =                   .            (27.8)
+                                    0 0 0 0 0 −1                                         0 3 1 −2
+
+The target bases are ( [𝑤0 ] , 𝜎𝑈 ) and ( 𝜔, 𝜎𝑊 ) in the core complex. For example, 𝑒12 = 𝑤0 + 𝑤1 + 𝑤2
+gives the first coefficient 3. The term 𝑒3 ∧ 𝑣4 = −𝑣4 ∧ 𝑢0 gives the last coefficient −1 in degree two. In
+degree three, 𝑒124 = 𝑣4 ∧ 𝑒12 + 2𝑒12 ∧ 𝑈 gives 3 𝜎𝑊 + 6 𝜔. Expanding the other columns in the same
+stated basis gives (27.8). Both maps are integrally surjective: 𝑒13 , −𝑒34 map to the two target generators in
+degree two, and 𝑒123 , 𝑒134 − 2𝑒123 do so in degree three. Their kernels have the following full integral bases:
+
+                                           2 𝑒12 − 3𝑒13 , 𝑒14 , 2𝑒13 + 𝑒23 ,        𝑒24 ,
+                                           3 𝑒124 − 3𝑒134 , 2𝑒134 + 𝑒234 .
+
+Indeed the two equations in each displayed matrix solve for the remaining coordinates with integer
+coefficients. In degree four, 𝑒1234 = −𝑣4 ∧ 𝜔, so its image is −3 𝜎 𝜔. The covering has geometric degree +3:
+the interval-first target cell 𝜎 𝜔 is the negative of the fibre-first core orientation. These formulas retain
+both the signs and the complete integral images in the original periods.
+
+
+
+                                                                  44
+    All homology groups, kernel ranks, and cokernels in Theorem 21.1 remain valid in the stated cell basis.
+The invariant degree-one core covector pulls back to 𝑒3∗ + 6𝑒4∗ , and the core-circle covector pulls back
+to 3𝑒4∗ . Their image is still ℤ𝑒3∗ ⊕ 3ℤ𝑒4∗ . The higher-degree specialization indices remain 1, 1, 3 in degrees
+two, three, and four, by the explicit unimodular change of cells. Equal indices therefore do not imply
+equal marked attachment maps.
+    This local conclusion depends on the smooth line-bundle reduction, its commuting lifted translation,
+and its stated period marking. Within those hypotheses the conormal comparison constructs the affine
+deck action and the positive boundary map. Comparisons with a common chain complex carrying the
+other local monodromies still require explicit maps and homotopies. The other finite-order filling, the
+cusp attachments, and their global integral gluing have not been constructed here. No conclusion about
+the homology of their union or a complex structure on a sphere follows from this local calculation.
+
+
+References
+[1] P. Engel, Complex structures on 𝑆 6 , author’s preprint, 2026, 25-page text consulted 13 September 2026,
+    philip-engel.github.io/S6.pdf.
+[2] A. Hatcher, Notes on Basic 3-Manifold Topology, pi.math.cornell.edu/∼hatcher/3M/3M.pdf.
+[3] J. Kollár, Seifert 𝔾𝑚 -bundles, arXiv:math/0404386v2, 2004, arXiv:math/0404386.
+[4] J. A. Hillman, The linking pairings of orientable Seifert manifolds, arXiv:1004.0034, 2010, arXiv:1004.0034.
+[5] G. Wilkes, Proﬁnite rigidity for Seifert ﬁbre spaces, Geom. Dedicata 188 (2017), 141–163, doi:10.1007/s10711-016-0209-6.
+
+
+
+
+                                                             45
+

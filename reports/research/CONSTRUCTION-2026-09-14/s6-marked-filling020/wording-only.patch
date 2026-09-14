@@ -1,0 +1,22 @@
+--- a/research-candidates/s6-marked-filling020/marked-comparison.tex
++++ b/research-candidates/s6-marked-filling020/marked-comparison.tex
+@@ -126,7 +126,7 @@
+ $d_{+,3}$ nonzero, each using the displayed $P-I$ on its suspended
+ triple. In particular $F^+_4$ is multiplication by three, $H^+_3$
+ sends the top fibre cell $\omega$ to its core prism, and $H^+_4=0$.
+-This also specifies all maps in the requested adjacent degrees.
++These formulas specify the maps in every degree.
+ 
+ \begin{proposition}\label{prop:positive-splitting}
+ The positive boundary map has chain section
+--- a/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex
++++ b/reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex
+@@ -757,7 +757,7 @@
+ $d_{+,3}$ nonzero, each using the displayed $P-I$ on its suspended
+ triple. In particular $F^+_4$ is multiplication by three, $H^+_3$
+ sends the top fibre cell $\omega$ to its core prism, and $H^+_4=0$.
+-This also specifies all maps in the requested adjacent degrees.
++These formulas specify the maps in every degree.
+ 
+ \begin{proposition}\label{marked-local:prop:positive-splitting}
+ The positive boundary map has chain section

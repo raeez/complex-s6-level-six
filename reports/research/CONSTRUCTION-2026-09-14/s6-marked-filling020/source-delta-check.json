@@ -1,0 +1,106 @@
+[
+  {
+    "path": "research-candidates/s6-marked-filling020/Makefile",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/build.py",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/check_filling.py",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/check_marked.py",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/divisor-comparison.tex",
+    "changed": false,
+    "proof_count": 2,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/marked-comparison.tex",
+    "changed": true,
+    "proof_count": 4,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/paper.tex",
+    "changed": false,
+    "proof_count": 5,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/positive-descent.tex",
+    "changed": false,
+    "proof_count": 1,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "research-candidates/s6-marked-filling020/raeez-math-template.sty",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/marked-filling.tex",
+    "changed": true,
+    "proof_count": 12,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/native-gluing.tex",
+    "changed": false,
+    "proof_count": 8,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/paper.tex",
+    "changed": false,
+    "proof_count": 18,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  },
+  {
+    "path": "reports/research/CONSTRUCTION-2026-09-14/s6-marked-filling020/native-comparison/source/raeez-math-template.sty",
+    "changed": false,
+    "proof_count": 0,
+    "proof_bodies_byte_identical": true,
+    "label_ref_eqref_commands_byte_identical": true,
+    "only_prescribed_sentence_changed": true
+  }
+]
