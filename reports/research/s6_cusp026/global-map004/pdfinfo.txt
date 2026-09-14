@@ -1,0 +1,22 @@
+Title:           Meridian Tori in a Two-Filling Attachment
+Subject:         Integral second homology and marked meridian tori
+Keywords:        
+Author:          Raeez Lorgat
+Creator:         LaTeX with hyperref
+Producer:        pdfTeX-1.40.27
+CreationDate:    Mon Sep 14 07:00:00 2026 WIB
+ModDate:         Mon Sep 14 07:00:00 2026 WIB
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           7
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       154594 bytes
+Optimized:       no
+PDF version:     1.7

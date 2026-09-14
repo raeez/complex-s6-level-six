@@ -1,0 +1,868 @@
+--- /dev/null
++++ research-candidates/s6_cusp026/global-map005/build.py
+@@ -0,0 +1,53 @@
++"""Build the mathematical module and record exact inputs and diagnostics."""
++import hashlib
++import json
++import os
++from pathlib import Path
++import subprocess
++
++source = Path(__file__).resolve().parent
++report = source.parents[2] / "reports/research/s6_cusp026/global-map005"
++output = report / "build"
++output.mkdir(parents=True, exist_ok=True)
++environment = os.environ.copy()
++environment.update(SOURCE_DATE_EPOCH="1789344000", FORCE_SOURCE_DATE="1")
++command = ["pdflatex", "-no-shell-escape", "-recorder", "-interaction=nonstopmode",
++           "-halt-on-error", "-file-line-error", "-output-directory=" + str(output), "paper.tex"]
++previous = None
++passes = []
++for number in range(1, 7):
++    process = subprocess.run(command, cwd=source, env=environment,
++                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
++    (output / f"pass-{number:02d}.log").write_bytes(process.stdout)
++    if process.returncode:
++        raise SystemExit(process.stdout.decode(errors="replace")[-8000:])
++    state = {name: hashlib.sha256((output / name).read_bytes()).hexdigest()
++             for name in ["paper.aux", "paper.out", "paper.pdf"] if (output / name).exists()}
++    passes.append({"number": number, "exit_code": process.returncode, "state": state})
++    if number >= 2 and state == previous:
++        break
++    previous = state
++else:
++    raise SystemExit("References and PDF did not converge in six passes")
++log = (output / "paper.log").read_text(errors="replace")
++fatal = ["undefined references", "multiply defined", "destination with the same identifier",
++         "Missing character", "LaTeX Error", "Token not allowed", "Overfull"]
++diagnostics = [line for line in log.splitlines() if any(item in line for item in fatal)]
++if diagnostics:
++    raise SystemExit("\n".join(diagnostics))
++inputs = {}
++for line in (output / "paper.fls").read_text().splitlines():
++    if line.startswith("INPUT "):
++        path = Path(line[6:])
++        if not path.is_absolute():
++            path = source / path
++        path = path.resolve()
++        if path.is_file() and not path.is_relative_to(output):
++            inputs[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
++record = {"command": command, "source": str(source), "output": str(output),
++          "environment": {key: environment[key] for key in ["SOURCE_DATE_EPOCH", "FORCE_SOURCE_DATE"]},
++          "passes": passes, "input_sha256": inputs, "diagnostics": diagnostics,
++          "pdf_sha256": state["paper.pdf"]}
++(report / "build.json").write_text(json.dumps(record, indent=2) + "\n")
++print(json.dumps({"passes": len(passes), "pdf_sha256": state["paper.pdf"],
++                  "input_count": len(inputs), "diagnostics": diagnostics}, indent=2))
+--- /dev/null
++++ research-candidates/s6_cusp026/global-map005/check_third.py
+@@ -0,0 +1,173 @@
++"""Exact degree-three maps, prism boundaries, and integral relation certificates."""
++from itertools import combinations
++import json
++import platform
++import sympy as s
++from sympy.polys.matrices import DomainMatrix
++from sympy.polys.matrices.normalforms import smith_normal_decomp
++
++
++def serialize(matrix):
++    return [[int(x) if x.q == 1 else str(x) for x in row] for row in matrix.tolist()]
++
++
++def ext(matrix, degree):
++    r = list(combinations(range(matrix.rows), degree))
++    c = list(combinations(range(matrix.cols), degree))
++    return s.Matrix([[matrix.extract(i,j).det() for j in c] for i in r])
++
++
++def smith(matrix):
++    diagonal, left, right = [x.to_Matrix() for x in smith_normal_decomp(
++        DomainMatrix.from_Matrix(matrix).convert_to(s.ZZ))]
++    assert left*matrix*right == diagonal
++    assert abs(left.det()) == abs(right.det()) == 1
++    factors = [abs(int(diagonal[i,i])) for i in range(min(matrix.shape)) if diagonal[i,i]]
++    assert all(b % a == 0 for a,b in zip(factors,factors[1:]))
++    return dict(matrix=serialize(matrix),left=serialize(left),right=serialize(right),
++                diagonal=serialize(diagonal),factors=factors)
++
++
++T0 = s.Matrix([[0,-1,-1,0],[1,-1,0,0],[0,0,1,0],[0,0,0,1]])
++T1 = s.Matrix([[-1,1,-1,2],[-1,0,-1,1],[1,1,2,-1],[0,0,0,1]])
++Ti = (T0*T1).inv()
++B = [s.Matrix([[0,-1,-1,4],[0,0,-1,2],[1,1,1,-6],[0,0,0,1]]),
++     s.Matrix([[1,1,0,-1],[0,1,0,-1],[0,-1,1,3],[0,0,0,1]])]
++P = [s.Matrix([[0,0,1],[1,0,0],[0,1,0]]),
++     s.Matrix([[0,-1,-1],[1,0,0],[0,0,1]])]
++R = [b.inv()[:3,:] for b in B]
++omega = [s.Matrix([[1,-1,1]]),s.Matrix([[2,1,-1]])]
++w = [s.Matrix([1,-1,1]),s.Matrix([1,0,0])]
++d = [3,4]
++certificates = {}
++core_records = []
++adapted3 = [s.Matrix([[1,0,0,0],[0,1,-1,1]]),
++            s.Matrix([[1,0,0,0],[0,4,2,-2]])]
++F3 = [adapted3[i]*ext(B[i].inv(),3) for i in range(2)]
++for i in range(2):
++    p2 = ext(P[i],2)
++    assert p2*w[i] == w[i]
++    norm = sum((p2**j for j in range(d[i])),s.zeros(3))
++    weights = omega[i] if i == 0 else 2*omega[i]
++    assert norm == w[i]*weights
++    assert omega[i]*p2 == omega[i]
++    certificates[f"core{i}_invariant_bivector"] = smith(p2-s.eye(3))
++    core_records.append(dict(P=serialize(P[i]),B=serialize(B[i]),R=serialize(R[i]),
++        exterior_square=serialize(p2),norm=serialize(norm),invariant_plane=serialize(w[i]),
++        vertical_form=serialize(omega[i]),plane_area=serialize(omega[i]*w[i]),
++        actual_fibre_three_map=serialize(F3[i])))
++assert R[0]*T0.inv() == P[0].inv()*R[0]
++assert R[1]*T1.inv() == P[1]*R[1]
++assert T0[3,:] == T1[3,:] == s.Matrix([[0,0,0,1]])
++
++J3 = F3[0].col_join(-F3[1])
++assert J3 == s.Matrix([[1,6,2,-4],[0,3,1,-2],[-1,3,1,-1],[0,-6,-2,4]])
++c = s.Matrix([0,0,0,1])
++U = J3[:,[0,2,3]].row_join(c)
++assert U.det() == 1
++Ucoordinates = U.inv()*J3
++assert Ucoordinates == s.Matrix([[1,0,0,0],[0,3,1,0],[0,0,0,1],[0,0,0,0]])
++quotient = s.Matrix([[0,2,0,1]])
++assert quotient*J3 == s.zeros(1,4) and quotient*c == s.Matrix([1])
++certificates["J3"] = smith(J3)
++
++J2 = s.Matrix([[3,1,0,-2,0,0],[0,0,0,0,0,-1],
++               [-3,-1,0,2,-3,-1],[0,0,0,0,2,2]])
++L = s.Matrix([[1,0,0,0],[0,-1,0,0],[-1,1,1,0],[0,0,0,1]])
++alpha1,alpha2,beta1,beta2 = [L[:,i] for i in range(4)]
++planes = [alpha1.row_join(alpha2),alpha1.row_join(beta1),
++          alpha2.row_join(beta2),(alpha1+alpha2).row_join(beta1+beta2)]
++V = s.Matrix.hstack(*[ext(v,2) for v in planes])
++assert V == s.Matrix([[-1,0,0,0],[1,1,0,1],[0,0,0,1],
++                       [-1,0,0,-1],[0,0,-1,-1],[0,0,1,0]])
++infinity2 = ext(Ti,2)
++assert infinity2*V == V
++assert V.rank()+ (infinity2-s.eye(6)).rank() == 6
++certificates["invariant_surface_basis"] = smith(V)
++surface_records = []
++for i,plane in enumerate(planes):
++    restricted = s.eye(2) if i == 0 else s.Matrix([[1,1],[0,1]])
++    assert Ti*plane == plane*restricted
++    assert smith(plane)["factors"] == [1,1]
++    assert R[0]*T0.inv()*plane == P[0].inv()*R[0]*plane
++    assert R[1]*T1.inv()*T0.inv()*plane == R[1]*Ti*plane
++    surface_records.append(dict(plane=serialize(plane),bivector=serialize(V[:,i]),
++        restricted_monodromy=serialize(restricted),
++        inverse_zero_surface=serialize(T0.inv()*plane)))
++
++D = (s.eye(6)-ext(T0.inv(),2))*V
++assert D == s.Matrix([[-1,0,0,-1],[3,2,0,3],[0,0,2,3],
++                      [0,1,0,0],[0,0,0,0],[0,0,0,0]])
++K = s.Matrix.hstack(D[:,0],D[:,1],D[:,2]-D[:,3])
++assert J2*K == s.zeros(4,3)
++assert K.extract([0,2,3],[0,1,2]).det() == -1
++assert K.cols + J2.rank() == 6
++r = s.Matrix([-2,0,-3,2])
++assert D*r == s.zeros(6,1)
++E = s.eye(4)
++domain_basis = s.Matrix.hstack(E[:,0],E[:,1],E[:,2]-E[:,3],r)
++assert domain_basis.det() == -1
++assert D*domain_basis == K.row_join(s.zeros(6,1))
++certificates["J2"] = smith(J2)
++certificates["connecting"] = smith(D)
++certificates["integral_kernel_basis"] = smith(K)
++certificates["source_relation_basis"] = smith(domain_basis)
++
++# Literal prism boundaries use independent surface-chain symbols u, u_minus, Tu.
++# d a = Tu-u. Cone cycle is (Q0, Q1-f1 a, u-u_minus).
++boundary_q0 = s.Matrix([[-1,1,0]])
++boundary_q1 = s.Matrix([[0,-1,1]])
++boundary_a = s.Matrix([[-1,0,1]])
++boundary_shifted = s.Matrix([[1,-1,0]])
++assert boundary_q0+boundary_shifted == s.zeros(1,3)
++assert boundary_q1-boundary_a-boundary_shifted == s.zeros(1,3)
++
++theta0_pullback = 2*adapted3[0][1,:]*ext(B[0].inv(),3)
++theta1_pullback = adapted3[1][1,:]*ext(B[1].inv(),3)
++eta = s.Matrix([[0,6,2,-4]])
++assert theta0_pullback == theta1_pullback == eta
++evaluation = -s.Rational(2,3)*omega[0]*ext(R[0],2)+s.Rational(1,2)*omega[1]*ext(R[1]*T0.inv(),2)
++assert evaluation == s.Matrix([[-s.Rational(1,2),-s.Rational(1,6),-s.Rational(3,2),s.Rational(1,3),0,-1]])
++values = evaluation*V
++assert values == s.Matrix([[0,-s.Rational(1,6),-1,-2]])
++assert values*r == s.Matrix([-1])
++assert eta*ext(L,3) == s.Matrix([[0,0,2,4]])
++
++M = s.Matrix([[1,0,-2,-2],[0,1,0,0],[0,0,-2,-3],[0,0,1,1]])
++assert K*M[:3,:] == D
++assert M*r == s.Matrix([0,0,0,-1])
++assert M.det() == 1
++full = s.zeros(6)
++full[:4,:4] = M
++full[3,4], full[3,5] = 2,4
++full[4,4], full[5,5] = -1,-1
++assert full.det() == 1
++certificates["meridian_matrix"] = smith(M)
++certificates["full_degree_three"] = smith(full)
++assert certificates["full_degree_three"]["factors"] == [1]*6
++
++# The prior degree-two injection uses the same actual relation matrix.
++c2 = s.Matrix([0,-1,0,1])
++assert J2[:,[1,4,5]].row_join(c2).det() == 1
++assert (s.eye(4)-T0.inv())*L[:,:2] == s.Matrix([[1,2],[0,0],[0,0],[0,0]])
++delta = L[:,1]-2*L[:,0]
++assert T0*delta == T1*delta == delta
++
++print(json.dumps(dict(python=platform.python_version(),sympy=s.__version__,
++    arithmetic="Exact integers and rational numbers",core_records=core_records,
++    smith_certificates=certificates,J3_relation_basis=serialize(U),
++    J3_relation_basis_inverse=serialize(U.inv()),J3_coordinates=serialize(Ucoordinates),
++    core_quotient_row=serialize(quotient),core_generator=serialize(c),
++    surface_records=surface_records,connecting_matrix=serialize(D),
++    integral_kernel_basis=serialize(K),source_relation=serialize(r),
++    domain_basis=serialize(domain_basis),
++    literal_chain_boundaries=dict(surface_symbols=["u","T0_inverse_u","T_infinity_u"],
++        Q0=serialize(boundary_q0),Q1=serialize(boundary_q1),
++        seam_correction=serialize(boundary_a),shifted=serialize(boundary_shifted)),
++    common_three_form=serialize(eta),evaluation_row=serialize(evaluation),
++    evaluations=serialize(values),relation_evaluation=-1,
++    fibre_evaluations=[2,4],meridian_matrix=serialize(M),full_matrix=serialize(full),
++    full_inverse=serialize(full.inv()),
++    results=dict(H3_W="Z^4",degree_three_kernel="0",degree_three_cokernel="0",
++        H3_Y="0 for the stated actual marked cusp data",torsion=[]),
++    scope="Exact actual-map homology matrices and prism boundary certificates; geometric comparison and cochain pairing are proved in the TeX source."),indent=2))
+--- /dev/null
++++ research-candidates/s6_cusp026/global-map005/paper.tex
+@@ -0,0 +1,20 @@
++\documentclass[11pt]{article}
++\usepackage{raeez-math-template}
++\numberwithin{equation}{section}
++\title{The Third Homology of a Marked Cusp Attachment}
++\author{Raeez Lorgat}
++\date{}
++\hypersetup{pdfsubject={Integral third homology and meridian mapping tori}}
++\begin{document}
++\maketitle
++\begin{abstract}
++Four meridian mapping tori determine the third homology of a specified
++two-filling manifold. Their connecting classes have one integral relation.
++A closed cochain on the actual attachment identifies this relation with
++a primitive core three-cycle. We compute the complete degree-three
++attaching matrix, including the two fibre classes.
++It is unimodular, and the resulting marked cusp attachment has zero
++integral third homology.
++\end{abstract}
++\input{third-homology}
++\end{document}
+--- /dev/null
++++ research-candidates/s6_cusp026/global-map005/third-homology.tex
+@@ -0,0 +1,491 @@
++\section{The real attachment and its chains}
++
++All homology groups have coefficients in $\mathbb Z$.
++Let $F=\mathbb R^4/\Lambda$ with ordered lattice
++$\Lambda=\bigoplus_{j=1}^4\mathbb Ze_j$.
++Matrices act on columns. Path multiplication is right to left.
++The mapping torus of $T$ identifies $(a,1)$ with $(Ta,0)$.
++Its positive meridian is $v\mapsto[0,v]$.
++All mapping-torus fundamental classes use interval-first orientation.
++
++Let $E\to\Sigma$ be the flat $F$-bundle over the sphere with three disks removed.
++It has a zero section and marked meridians
++$\gamma_0\gamma_1\gamma_\infty=1$.
++Its monodromies are
++\[
++T_0=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},
++\qquad
++T_1=\begin{pmatrix}-1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1\end{pmatrix},
++\qquad T_\infty=(T_0T_1)^{-1}.
++\]
++For $X_i=\mathbb R^3/\mathbb Z^3$, put
++\[
++P_0=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix},\qquad
++P_1=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},\qquad
++(d_0,d_1)=(3,4).
++\]
++Define $G_i=(X_i\times\mathbb R)/([y,\tau+1]=[P_i y,\tau])$,
++and let $N_i=G_i\times D^2$.
++The ordered coordinate changes are
++\begin{equation}\label{th:eq:B}
++B_0=\begin{pmatrix}0&-1&-1&4\\0&0&-1&2\\1&1&1&-6\\0&0&0&1\end{pmatrix},
++\qquad
++B_1=\begin{pmatrix}1&1&0&-1\\0&1&0&-1\\0&-1&1&3\\0&0&0&1\end{pmatrix}.
++\end{equation}
++Write $(y_i,t)^t=B_i^{-1}a$, so $t=a_4$.
++The boundary maps and their core restrictions are
++\begin{equation}\label{th:eq:maps}
++\begin{aligned}
++j_0[a,v]&=([y_0,3t+v],e^{-2\pi it}),&
++f_0(a)&=[y_0,3t],\\
++j_1[a,v]&=([y_1,4t-v],e^{2\pi it}),&
++f_1(a)&=[y_1,4t].
++\end{aligned}
++\end{equation}
++Indeed $B_0^{-1}T_0B_0=\operatorname{diag}(P_0,1)$ and
++$B_1^{-1}T_1B_1=\operatorname{diag}(P_1^{-1},1)$.
++These identities verify the meridian seams.
++The two circle matrices have determinant one, and $B_i$ is unimodular.
++Thus $j_i$ are diffeomorphisms and $f_i$ are coverings of degrees $d_i$.
++Use the induced boundary orientations to form
++\[
++W=E\cup_{j_0}N_0\cup_{j_1}N_1,\qquad \partial W=B_{T_\infty}.
++\]
++This is a specified compact real six-manifold.
++
++The base retracts onto its two finite boundary circles joined by an arc.
++Flat transport lifts this retraction to $E$.
++Attach the two fillings using boundary collars and then contract their disk factors.
++This gives a homotopy equivalence with the double mapping cylinder
++\[
++D=G_0\cup_{f_0}(F\times[0,1])\cup_{f_1}G_1.
++\]
++It retains the meridian homotopies $[y_0,3t+v]$ and $[y_1,4t-v]$.
++In particular, the positive cusp path first traverses $\gamma_0^{-1}$
++and then $\gamma_1^{-1}$, with the joining arc between them.
++
++These maps admit finite compatible triangulations.
++Intersect the finitely many $P_i$-translates of a rational torus subdivision.
++Triangulate that intersection and use its prisms for $G_i$.
++Cut the source of $f_i$ at integral values of $d_it$ and at inverse images of target faces.
++Common refinements give cellular maps and the double mapping cylinder.
++Every additional rational subtorus below can be included by the same refinement.
++There is no requirement for one finite triangulation invariant under both $T_0$ and $T_1$.
++
++We use the chain cone
++\begin{equation}\label{th:eq:cone}
++\begin{aligned}
++\mathcal D_n&=C_n(G_0)\oplus C_n(G_1)\oplus C_{n-1}(F),\\
++d(a_0,a_1,b)&=(da_0+f_{0*}b,\,da_1-f_{1*}b,\,-db).
++\end{aligned}
++\end{equation}
++Here $C_*$ can be the compatible cellular chains or piecewise smooth singular chains.
++Subdivision and prism comparisons identify the two diagrams.
++The shifted term uses the negative of the interval-first cylinder orientation.
++The resulting exact sequence contains
++\begin{equation}\label{th:eq:sequence}
++0\longrightarrow\operatorname{coker}J_3
++\longrightarrow H_3(W)\xrightarrow{\partial}\ker J_2
++\longrightarrow0,\qquad J_n=(f_{0*},-f_{1*}).
++\end{equation}
++The connecting map sends a cone cycle to $[b]$.
++
++\section{Integral three-cycles in the finite cores}
++
++Write $x_1,x_2,x_3$ for the separate ordered coordinate bases of $X_i$.
++Let $A_i\in H_3(G_i)$ be the oriented fibre three-torus.
++The invariant oriented planes have primitive bivectors
++\[
++w_0=x_1x_2-x_1x_3+x_2x_3,\qquad w_1=x_1x_2.
++\]
++Juxtaposition denotes exterior product.
++Their primitive sublattices are
++$\langle x_1-x_3,x_2-x_3\rangle$ and $\langle x_1,x_2\rangle$.
++The matrices $P_i$ preserve these sublattices with determinant one.
++Let $S_i$ be the fundamental class of the positive core mapping torus of that plane.
++
++The core Wang sequence is
++\[
++0\longrightarrow
++\operatorname{coker}(\bigwedge^3P_i-I)
++\longrightarrow H_3(G_i)
++\longrightarrow\ker(\bigwedge^2P_i-I)
++\longrightarrow0.
++\]
++It follows directly from the interval-prism differential.
++Since $\det P_i=1$, its left group is $\mathbb Z A_i$.
++Solving the exterior-square equations gives $\mathbb Zw_i$ on the right.
++The class $S_i$ maps to $w_i$.
++Thus $(A_i,S_i)$ is an integral basis of $H_3(G_i)$.
++
++In the adapted source basis $(x_1,x_2,x_3,t)$, the covering matrices are
++\[
++F^{\rm ad}_{0,3}=
++\begin{pmatrix}1&0&0&0\\0&1&-1&1\end{pmatrix},\qquad
++F^{\rm ad}_{1,3}=
++\begin{pmatrix}1&0&0&0\\0&4&2&-2\end{pmatrix}.
++\]
++Their columns are the lexicographic exterior triples.
++To verify the second rows, divide the covering interval into $d_i$ pieces.
++On a mixed three-torus, the pieces contribute the norm
++$\sum_{r=0}^{d_i-1}\bigwedge^2P_i^r$.
++Moving the last interval to the first position contributes sign $+1$.
++The two norm matrices are the columns $w_i$ times the rows
++$(1,-1,1)$ and $(4,2,-2)$, respectively.
++The first row on a mixed three-torus is zero:
++the invariant volume form $dy_1\wedge dy_2\wedge dy_3$
++has only two independent fibre derivatives there.
++It integrates to one on $A_i$ and zero on $S_i$.
++This excludes an additional fibre-volume coefficient.
++
++Transforming by $\bigwedge^3B_i^{-1}$ gives the actual fibre maps
++\begin{equation}\label{th:eq:F3}
++F_{0,3}=\begin{pmatrix}1&6&2&-4\\0&3&1&-2\end{pmatrix},\qquad
++F_{1,3}=\begin{pmatrix}1&-3&-1&1\\0&6&2&-4\end{pmatrix}.
++\end{equation}
++Consequently
++\begin{equation}\label{th:eq:J3}
++J_3=\begin{pmatrix}
++1&6&2&-4\\0&3&1&-2\\-1&3&1&-1\\0&-6&-2&4
++\end{pmatrix}
++\end{equation}
++in target basis $(A_0,S_0,A_1,S_1)$.
++Its second column is three times its third.
++Its first, third, and fourth columns, followed by $(0,0,0,1)^t$,
++form a determinant-one matrix.
++Hence
++\begin{equation}\label{th:eq:c}
++\operatorname{coker}J_3=\mathbb Zc,\qquad
++c=[S_1],\qquad q=(0,2,0,1),\qquad q(c)=1.
++\end{equation}
++The primitive row $q$ annihilates $J_3$.
++
++We also need the degree-two fibre relations.
++The degree-two core bases consist of one fibre torus and the mapping torus
++of $U_0=(1,1,1)^t$ or $U_1=(-1,-1,2)^t$.
++The fibre quotient rows are $(1,-1,1)$ and $(2,1,-1)$.
++The mixed-torus coefficients are the negative norms of $P_i$ on $H_1(X_i)$.
++Invariant vertical two-forms exclude a residual fibre coefficient, as above.
++This gives
++\begin{equation}\label{th:eq:J2}
++J_2=
++\begin{pmatrix}
++3&1&0&-2&0&0\\0&0&0&0&0&-1\\
++-3&-1&0&2&-3&-1\\0&0&0&0&2&2
++\end{pmatrix}.
++\end{equation}
++Its source basis is $(e_1e_2,e_1e_3,e_1e_4,e_2e_3,e_2e_4,e_3e_4)$.
++An integral vector $y$ belongs to its kernel exactly when
++\begin{equation}\label{th:eq:kerJ2}
++y_5=y_6=0,\qquad 3y_1+y_2-2y_4=0.
++\end{equation}
++
++\section{Four actual meridian three-manifolds}
++
++Use the ordered fibre basis
++\[
++\alpha_1=e_1-e_3,\quad \alpha_2=e_3-e_2,\quad
++\beta_1=e_3,\quad\beta_2=e_4.
++\]
++It is unimodular, and
++$T_\infty\alpha_j=\alpha_j$, $T_\infty\beta_j=\beta_j+\alpha_j$.
++Consider the four primitive invariant subtori with oriented bivectors
++\begin{equation}\label{th:eq:v}
++v_1=\alpha_1\alpha_2,\quad
++v_2=\alpha_1\beta_1,\quad
++v_3=\alpha_2\beta_2,\quad
++v_4=(\alpha_1+\alpha_2)(\beta_1+\beta_2).
++\end{equation}
++Let $V_j$ be the corresponding oriented torus and $M_j=[M(V_j)]$
++its positive mapping-torus fundamental class in $H_3(B_{T_\infty})$.
++The first restricted monodromy is the identity.
++Each of the other three has matrix
++$\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$
++in the displayed ordered basis.
++Thus these are actual closed oriented three-manifolds.
++
++The following chain construction retains their nontrivial seams.
++Choose a finite oriented fundamental surface chain $u_j$ in $V_j$.
++There is a piecewise smooth singular three-chain $a_j$, supported in $V_j$, with
++\begin{equation}\label{th:eq:seam}
++da_j=T_{\infty*}u_j-u_j.
++\end{equation}
++To construct it, take a common refinement of the triangulations for $u_j$
++and $T_{\infty*}u_j$.
++Let $p_j,p'_j$ be their subdivision prisms to its same oriented fundamental chain $u'_j$.
++Then $dp_j=u'_j-u_j$ and $dp'_j=u'_j-T_{\infty*}u_j$.
++Set $a_j=p_j-p'_j$.
++The prism maps stay in $V_j$.
++This construction uses surface-chain subdivision, without a homotopy between
++the identity map and the restricted unipotent automorphism.
++
++Put $u_j^-=T_{0*}^{-1}u_j$.
++Let $R_i$ be the first three rows of $B_i^{-1}$.
++The two inverse-meridian prisms, extended linearly over surface chains, are
++\begin{equation}\label{th:eq:prisms}
++Q_0(v,a)=[R_0a,3a_4-v],\qquad
++Q_1(v,a)=[R_1a,4a_4+v].
++\end{equation}
++They define actual smooth maps $[0,1]\times F\to G_i$.
++The period relations make these formulas independent of the lift of $a$.
++Their endpoint identities give
++\[
++dQ_0(u_j)=f_{0*}(u_j^--u_j),\qquad
++dQ_1(u_j^-)=f_{1*}(T_{\infty*}u_j-u_j^-).
++\]
++Thus the actual global cycle is
++\begin{equation}\label{th:eq:globalcycle}
++Z_j=\bigl(Q_0(u_j),\,Q_1(u_j^-)-f_{1*}a_j,\,u_j-u_j^-\bigr)
++\in\mathcal D_3.
++\end{equation}
++Substituting \eqref{th:eq:seam} into \eqref{th:eq:cone} gives $dZ_j=0$
++in each component, with the displayed signs.
++Cutting $M(V_j)$ along its marked fibre gives its interval prism and the seam correction $-a_j$.
++The spine retraction takes these pieces to \eqref{th:eq:globalcycle}.
++Therefore $[Z_j]=b_{\infty*}M_j$ for the actual boundary inclusion.
++
++The connecting vectors are
++$\partial[Z_j]=(I-\bigwedge^2T_0^{-1})v_j$.
++Their complete matrix is
++\begin{equation}\label{th:eq:D}
++D_2=
++\begin{pmatrix}
++-1&0&0&-1\\3&2&0&3\\0&0&2&3\\
++0&1&0&0\\0&0&0&0\\0&0&0&0
++\end{pmatrix}.
++\end{equation}
++Its columns $d_j$ satisfy \eqref{th:eq:kerJ2}.
++The three vectors $d_1,d_2,d_3-d_4$ form an integral basis of that kernel.
++Indeed, in those coordinates an element is
++\[
++(-r+t,\,3r+2s-3t,\,-t,\,s,\,0,\,0),
++\qquad (r,s,t)\in\mathbb Z^3,
++\]
++and \eqref{th:eq:kerJ2} gives the unique inverse coordinates.
++Solving $D_2n=0$ over $\mathbb Z$ gives
++\begin{equation}\label{th:eq:r}
++\ker D_2=\mathbb Z(-2,0,-3,2)^t.
++\end{equation}
++The corresponding combination of the $Z_j$ lies in the core subgroup $\mathbb Zc$.
++Its coefficient is the remaining integral question.
++
++\section{A closed cochain determines the primitive relation}
++
++On $X_0$ and $X_1$, respectively, put
++\[
++\omega_0=dy_1\wedge dy_2-dy_1\wedge dy_3+dy_2\wedge dy_3,\qquad
++\omega_1=2dy_1\wedge dy_2+dy_1\wedge dy_3-dy_2\wedge dy_3.
++\]
++Each is $P_i$-invariant.
++Define the closed core forms
++\begin{equation}\label{th:eq:theta}
++\theta_0=\tfrac23\,d\tau\wedge\omega_0,\qquad
++\theta_1=\tfrac12\,d\tau\wedge\omega_1.
++\end{equation}
++The integrals of $\omega_0,\omega_1$ on the invariant planes $w_0,w_1$
++are $3$ and $2$.
++Consequently the pair of forms evaluates on
++$(A_0,S_0,A_1,S_1)$ as $(0,2,0,1)$.
++Its restriction to the core quotient is the primitive homomorphism $q$.
++
++The actual pullbacks agree as differential forms on $F$:
++\begin{equation}\label{th:eq:eta}
++f_0^*\theta_0=f_1^*\theta_1=\eta,\qquad
++\eta=6\,da_1\wedge da_2\wedge da_4
++ +2\,da_1\wedge da_3\wedge da_4
++ -4\,da_2\wedge da_3\wedge da_4.
++\end{equation}
++Here $a_1,\ldots,a_4$ are the real coordinates in the $e$ basis.
++This equality follows by substituting \eqref{th:eq:B} into \eqref{th:eq:theta}.
++It is an equality of constant forms, including all coefficients.
++
++On the piecewise smooth chain cone define
++\[
++\mathcal L(a_0,a_1,b)=\int_{a_0}\theta_0+\int_{a_1}\theta_1.
++\]
++For a boundary, Stokes' formula gives zero on the two core differentials.
++The remaining terms are
++$\int_b f_0^*\theta_0-\int_b f_1^*\theta_1=0$.
++Thus $\mathcal L$ is a real homology functional.
++It need not be integral on every global class.
++Its restriction to the integral core subgroup is exactly $q$.
++
++Each $a_j$ in \eqref{th:eq:seam} is supported in a two-dimensional torus.
++Therefore $\int_{a_j}\eta=0$.
++In the first prism, the meridian derivative of the core parameter is $-1$.
++In the second prism it is $+1$.
++Their fibre derivatives give
++\begin{equation}\label{th:eq:evaluation}
++\mathcal L(Z_j)
++=-\tfrac23\,\omega_0\bigl((\bigwedge^2R_0)v_j\bigr)
++ {}+\tfrac12\,\omega_1\bigl((\bigwedge^2(R_1T_0^{-1}))v_j\bigr).
++\end{equation}
++In the $e$ exterior basis, this evaluation row is
++\[
++\lambda=(-\tfrac12,-\tfrac16,-\tfrac32,\tfrac13,0,-1).
++\]
++Its four values on \eqref{th:eq:v} are
++\begin{equation}\label{th:eq:values}
++(\mathcal L(Z_1),\mathcal L(Z_2),\mathcal L(Z_3),\mathcal L(Z_4))
++=(0,-\tfrac16,-1,-2).
++\end{equation}
++The fractional second value is compatible with the stated real coefficient field.
++Using \eqref{th:eq:r}, the integral core class
++$-2[Z_1]-3[Z_3]+2[Z_4]$ has evaluation $-1$.
++Since $q(c)=1$ on the free core subgroup, this proves the integral relation
++\begin{equation}\label{th:eq:relation}
++-2[Z_1]-3[Z_3]+2[Z_4]=-c
++\quad\hbox{in }H_3(W;\mathbb Z).
++\end{equation}
++In particular, the relation produces a primitive core class.
++No intersection or linking pairing is needed for this calculation.
++
++\section{The integral attaching matrix}
++
++Set
++$t_1=[Z_1]$, $t_2=[Z_2]$, and $t_3=[Z_3]-[Z_4]$.
++Their connecting classes form the integral basis of $\ker J_2$ given above.
++They therefore split \eqref{th:eq:sequence}.
++Together with $c$, they are an integral basis of $H_3(W)$.
++Equation~\eqref{th:eq:relation} now gives
++\begin{equation}\label{th:eq:meridianmatrix}
++b_{\infty*}(M_1,M_2,M_3,M_4)=
++\begin{pmatrix}
++1&0&-2&-2\\0&1&0&0\\0&0&-2&-3\\0&0&1&1
++\end{pmatrix}
++\end{equation}
++in the target basis $(t_1,t_2,t_3,c)$.
++The determinant is one.
++This proves both the image and kernel over the integers.
++
++We state the marked cusp input for the complete attachment.
++Let $N_c$ be a compact smooth cusp neighborhood with boundary $B=B_{T_\infty}$.
++Let $k:B\to N_c$ be its actual marked inclusion.
++Assume its degree-three homology is free of rank two, and that
++\begin{equation}\label{th:eq:local}
++H_3(B)=
++\bigoplus_{j=1}^4\mathbb ZM_j\oplus\mathbb ZC_1\oplus\mathbb ZC_2,
++\qquad
++k_*M_j=0,\quad k_*C_i=n_i,
++\end{equation}
++where $(n_1,n_2)$ is an integral basis of $H_3(N_c)$.
++The fibre classes $C_1,C_2$ are the actual oriented three-tori
++$\alpha_1\beta_1\beta_2$ and $\alpha_2\beta_1\beta_2$.
++These are the local data of the marked toric specialization with periods
++$(qc_1,c_2),(c_3,qc_4)$ and its retained section.
++The local identification must preserve the actual meridian homotopy.
++
++For clarity, the boundary-group splitting in \eqref{th:eq:local}
++has a direct integral check.
++The four $v_j$ form a basis of $\ker(\bigwedge^2T_\infty-I)$.
++The fibre quotient in degree three is freely generated by $C_1,C_2$.
++The actual $M_j$ project to $v_j$ in the Wang sequence.
++For the marked toric collapse, their images have two-dimensional carriers,
++and the fibre map sends $C_i$ to $n_i$.
++These geometric properties are the local input in \eqref{th:eq:local}.
++
++The fibre inclusion into $W$ lands in the core quotient.
++The evaluation \eqref{th:eq:eta} gives
++$b_{\infty*}C_1=2c$ and $b_{\infty*}C_2=4c$.
++Consequently the full degree-three attaching map is
++\begin{equation}\label{th:eq:full}
++(b_{\infty*},-k_*)_3=
++\begin{pmatrix}
++1&0&-2&-2&0&0\\
++0&1&0&0&0&0\\
++0&0&-2&-3&0&0\\
++0&0&1&1&2&4\\
++0&0&0&0&-1&0\\
++0&0&0&0&0&-1
++\end{pmatrix}.
++\end{equation}
++The source basis is $(M_1,M_2,M_3,M_4,C_1,C_2)$.
++The target basis is $(t_1,t_2,t_3,c,n_1,n_2)$.
++
++\begin{theorem}\label{th:thm:third}
++For the specified real fillings,
++$H_3(W;\mathbb Z)=\mathbb Z^4$, with basis $(t_1,t_2,t_3,c)$.
++The actual meridian map \eqref{th:eq:meridianmatrix} is an integral isomorphism.
++Under the marked cusp data \eqref{th:eq:local}, the full map
++\eqref{th:eq:full} is an integral isomorphism.
++Both its kernel and cokernel vanish.
++\end{theorem}
++\begin{proof}
++The global sequence, the basis of its quotient, and the primitive relation
++give the stated integral basis.
++The meridian determinant is one.
++The last two diagonal entries of the full block matrix are both $-1$,
++so its determinant is also one.
++\end{proof}
++
++To determine $H_3(Y)$ for $Y=W\cup_BN_c$, the preceding attaching map
++in degree two must also be injective.
++Here is the exact local input and its integral verification.
++Assume $k_{*,2}$ is onto with kernel the two angular meridian tori
++$z_i=M(\alpha_i)$.
++The one-dimensional version of the actual prisms \eqref{th:eq:prisms}
++gives their connecting images $(I-T_0^{-1})\alpha_i=e_1,2e_1$.
++The difference $z_2-2z_1$ has fibre circle
++$\delta=-2e_1-e_2+3e_3$, fixed by both finite monodromies.
++Its core images are the negative $U_0$ mapping torus
++and the positive $U_1$ mapping torus.
++In the degree-two core basis, their sum is $c_2=(0,-1,0,1)^t$.
++Columns $2,5,6$ of \eqref{th:eq:J2}, followed by $c_2$, have determinant one.
++The degree-one fibre map, obtained directly from \eqref{th:eq:maps}, is
++\[
++J_1=\begin{pmatrix}0&0&1&6\\0&0&0&3\\0&-1&-1&2\\0&0&0&-4\end{pmatrix}.
++\]
++Its rows give the integral kernel $\mathbb Ze_1$.
++Thus the two actual angular meridian tori map isomorphically onto $H_2(W)$.
++If an element of $H_2(B)$ is killed by both $b_{\infty*}$ and $k_*$,
++it belongs to their two-dimensional meridian subgroup and is zero.
++This proves the needed injectivity of $(b_{\infty*},-k_*)_2$.
++
++\begin{corollary}\label{th:cor:Y}
++For the specified marked toric attachment, with the local data just stated,
++\[
++H_3(Y;\mathbb Z)=0.
++\]
++In particular, this group has no torsion.
++\end{corollary}
++\begin{proof}
++The Mayer--Vietoris sequence gives
++\[
++\operatorname{coker}(b_{\infty*},-k_*)_3
++\longrightarrow H_3(Y)
++\longrightarrow\ker(b_{\infty*},-k_*)_2.
++\]
++Both outer groups vanish by the actual matrices and the preceding argument.
++\end{proof}
++
++The complex-family question retains a separate geometric comparison.
++It concerns $Y(u,a_0,a_1)$ for all sufficiently small nonzero complex $u$
++and primitive increments
++$a_0\in\frac13\Lambda^{T_0}$, $a_1\in\frac14\Lambda^{T_1}$,
++with $|12e_4^*(a_0+a_1)|=1$.
++The desired conclusion is a diffeomorphism of the underlying smooth manifold with $S^6$.
++The present finite maps use $a_0=e_4/3$ and $a_1=-(e_1+e_4)/4$.
++Application requires an actual comparison of the punctured complex family with $E$,
++relative to all three marked boundaries and the section.
++More precisely, if $\mathcal E_u\to\Sigma$ is that restricted family,
++the next map is a fibre-preserving diffeomorphism
++$\Phi_u:\mathcal E_u\to E$ carrying its section to the zero section.
++Its three boundary restrictions must equal the specified period markings.
++For each local filling, an extension
++$\Psi_i:\mathcal N_{u,i}\to N_i$ must satisfy
++$\Psi_i j_i^{\rm geom}=j_i\Phi_u$ on the corresponding boundary.
++The analogous equation must hold for the marked cusp filling.
++Its finite lifted translations must extend smoothly and equivariantly,
++with proper quotients, the specified periods, and conormal comparisons
++$e=s^{-2}e'$ and $e=s^{-1}e'$.
++Those maps, the other permitted affine increments, and the remaining topology
++are separate from the third-homology calculation.
++The toric and complex-geometric constructions motivating this question are
++described in \cite[Sections 2--4]{THengel}.
++
++\begin{thebibliography}{9}
++\bibitem{THengel}
++P.~Engel, \emph{Complex structures on $S^6$},
++\href{https://philip-engel.github.io/S6.pdf}{author manuscript},
++Propositions 2.7--2.9 and Sections 3--4.
++\end{thebibliography}
+--- /dev/null
++++ research-candidates/s6_cusp026/global-map005/verify_third.py
+@@ -0,0 +1,116 @@
++"""Recompute the degree-three data using standard-library exact arithmetic."""
++from fractions import Fraction as Q
++from itertools import combinations
++from pathlib import Path
++import json
++import platform
++
++
++def mul(a,b):
++    return [[sum(x*y for x,y in zip(row,col)) for col in zip(*b)] for row in a]
++
++
++def det(a):
++    if not a:
++        return 1
++    if len(a) == 1:
++        return a[0][0]
++    return sum((-1)**j*a[0][j]*det([r[:j]+r[j+1:] for r in a[1:]])
++               for j in range(len(a)))
++
++
++def inverse(a):
++    n=len(a)
++    b=[[Q(x) for x in row]+[Q(i==j) for j in range(n)] for i,row in enumerate(a)]
++    for j in range(n):
++        p=next(i for i in range(j,n) if b[i][j])
++        b[j],b[p]=b[p],b[j]
++        z=b[j][j]
++        b[j]=[x/z for x in b[j]]
++        for i in range(n):
++            if i!=j:
++                z=b[i][j]
++                b[i]=[x-z*y for x,y in zip(b[i],b[j])]
++    return [r[n:] for r in b]
++
++
++def exterior(a,k):
++    rows=list(combinations(range(len(a)),k))
++    cols=list(combinations(range(len(a[0])),k))
++    return [[det([[a[i][j] for j in cc] for i in rr]) for cc in cols] for rr in rows]
++
++
++def add(a,b):
++    return [[x+y for x,y in zip(r,t)] for r,t in zip(a,b)]
++
++
++def scale(a,q):
++    return [[q*x for x in r] for r in a]
++
++
++def rational(a):
++    return [[Q(x) for x in r] for r in a]
++
++
++report=Path(__file__).resolve().parents[3]/"reports/research/s6_cusp026/global-map005"
++data=json.loads((report/"exact-checks.json").read_text())
++for name,v in data["smith_certificates"].items():
++    a,l,r,d=[v[k] for k in ["matrix","left","right","diagonal"]]
++    assert mul(mul(l,a),r)==d,name
++    assert abs(det(l))==abs(det(r))==1,name
++    assert all(not x or i==j for i,row in enumerate(d) for j,x in enumerate(row))
++    f=[abs(d[i][i]) for i in range(min(len(d),len(d[0]))) if d[i][i]]
++    assert f==v["factors"]
++    assert all(y%x==0 for x,y in zip(f,f[1:]))
++
++T0=[[0,-1,-1,0],[1,-1,0,0],[0,0,1,0],[0,0,0,1]]
++T1=[[-1,1,-1,2],[-1,0,-1,1],[1,1,2,-1],[0,0,0,1]]
++B0=[[0,-1,-1,4],[0,0,-1,2],[1,1,1,-6],[0,0,0,1]]
++B1=[[1,1,0,-1],[0,1,0,-1],[0,-1,1,3],[0,0,0,1]]
++f0=mul([[1,0,0,0],[0,1,-1,1]],exterior(inverse(B0),3))
++f1=mul([[1,0,0,0],[0,4,2,-2]],exterior(inverse(B1),3))
++assert f0==[[1,6,2,-4],[0,3,1,-2]]
++assert f1==[[1,-3,-1,1],[0,6,2,-4]]
++j3=f0+scale(f1,-1)
++assert j3==data["smith_certificates"]["J3"]["matrix"]
++u=data["J3_relation_basis"]
++assert det(u)==1
++assert mul(inverse(u),j3)==[[1,0,0,0],[0,3,1,0],[0,0,0,1],[0,0,0,0]]
++
++v=[[-1,0,0,0],[1,1,0,1],[0,0,0,1],[-1,0,0,-1],[0,0,-1,-1],[0,0,1,0]]
++ident=[[int(i==j) for j in range(6)] for i in range(6)]
++dd=mul(add(ident,scale(exterior(inverse(T0),2),-1)),v)
++assert dd==data["connecting_matrix"]
++assert mul(dd,[[-2],[0],[-3],[2]])==[[0] for _ in range(6)]
++assert det(data["domain_basis"])==-1
++assert mul(dd,data["domain_basis"])==[row+[0] for row in data["integral_kernel_basis"]]
++assert mul(data["smith_certificates"]["J2"]["matrix"],data["integral_kernel_basis"])==[[0]*3 for _ in range(4)]
++
++r0=inverse(B0)[:3]
++r1=inverse(B1)[:3]
++evaluation=add(scale(mul([[1,-1,1]],exterior(r0,2)),-Q(2,3)),
++               scale(mul([[2,1,-1]],exterior(mul(r1,inverse(T0)),2)),Q(1,2)))
++assert evaluation==rational(data["evaluation_row"])
++values=mul(evaluation,v)
++assert values==[[0,-Q(1,6),-1,-2]]
++assert mul(values,[[-2],[0],[-3],[2]])==[[-1]]
++eta0=mul([[0,2,-2,2]],exterior(inverse(B0),3))
++eta1=mul([[0,4,2,-2]],exterior(inverse(B1),3))
++assert eta0==eta1==[[0,6,2,-4]]
++L=[[1,0,0,0],[0,-1,0,0],[-1,1,1,0],[0,0,0,1]]
++assert mul(eta0,exterior(L,3))==[[0,0,2,4]]
++
++# Verify literal chain closure before identifying the surface chains in homology.
++b=data["literal_chain_boundaries"]
++assert add(b["Q0"],b["shifted"])==[[0,0,0]]
++assert add(add(b["Q1"],scale(b["seam_correction"],-1)),scale(b["shifted"],-1))==[[0,0,0]]
++full=data["full_matrix"]
++assert det(full)==1
++assert inverse(full)==data["full_inverse"]
++assert mul(data["meridian_matrix"],[[-2],[0],[-3],[2]])==[[0],[0],[0],[-1]]
++print(json.dumps(dict(python=platform.python_version(),arithmetic="Standard-library integers and fractions",
++    smith_certificates_verified=len(data["smith_certificates"]),
++    covering_maps_reconstructed=True,integral_global_relations_verified=True,
++    connecting_map_recomputed=True,literal_seam_boundary_verified=True,
++    matching_three_forms_recomputed=True,primitive_relation_evaluation=-1,
++    full_degree_three_determinant=1,scope="Finite exact calculations; source proof supplies geometric comparisons and map identifications."),indent=2))

@@ -1,0 +1,438 @@
+\section{The marked attachment}
+
+All homology groups have coefficients in $\mathbb Z$.
+Let $F=\mathbb R^4/\Lambda$, with ordered lattice
+$\Lambda=\bigoplus_{j=1}^4\mathbb Ze_j$.
+Matrices act on columns. Path products act from right to left.
+For an automorphism $T$ of $F$, write
+\[
+B_T=(F\times[0,1])/((a,1)\sim(Ta,0)).
+\]
+The positive meridian is $v\mapsto[0,v]$.
+Its conjugation action on the fibre lattice is $T$.
+Orient every meridian surface by the meridian interval first.
+
+We use the monodromies
+\begin{equation}\label{mt:eq:monodromy}
+\begin{gathered}
+T_0=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},\qquad
+T_1=\begin{pmatrix}-1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1\end{pmatrix},\\
+T_\infty=(T_0T_1)^{-1}
+=\begin{pmatrix}2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1\end{pmatrix}.
+\end{gathered}
+\end{equation}
+Let $\Sigma$ be an oriented sphere with three open disks removed.
+Choose marking paths whose positive meridians satisfy
+$\gamma_0\gamma_1\gamma_\infty=1$.
+Let $E\to\Sigma$ be the flat $F$-bundle with these monodromies and zero section.
+
+Here are the two marked fillings.
+Put $X_i=\mathbb R^3/\mathbb Z^3$ and
+\[
+P_0=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix},\quad
+P_1=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},\quad
+U_0=(1,1,1)^t,\quad U_1=(-1,-1,2)^t.
+\]
+Thus $P_iU_i=U_i$, $P_0^3=I$, and $P_1^4=I$.
+Define $G_i=(X_i\times\mathbb R)/([y,\tau+1]=[P_i y,\tau])$,
+and put $N_i=G_i\times D^2$.
+The fibre coordinates adapted to their covering maps are
+\begin{equation}\label{mt:eq:B}
+B_0=\begin{pmatrix}0&-1&-1&4\\0&0&-1&2\\1&1&1&-6\\0&0&0&1\end{pmatrix},\qquad
+B_1=\begin{pmatrix}1&1&0&-1\\0&1&0&-1\\0&-1&1&3\\0&0&0&1\end{pmatrix}.
+\end{equation}
+Both are unimodular. Write $a=B_i(y,t)^t$ in the $i$th coordinates.
+Then
+\[
+B_0^{-1}T_0B_0=\operatorname{diag}(P_0,1),\qquad
+B_1^{-1}T_1B_1=\operatorname{diag}(P_1^{-1},1).
+\]
+The actual boundary identifications into $\partial N_i$ are
+\begin{equation}\label{mt:eq:j}
+\begin{aligned}
+j_0[a,v]&=([y,3t+v],e^{-2\pi it}),\\
+j_1[a,v]&=([y,4t-v],e^{2\pi it}).
+\end{aligned}
+\end{equation}
+The coordinates $y,t$ on each line mean $B_i^{-1}a$.
+The endpoint relations follow from the two displayed conjugations.
+Changing $t$ by one changes the core parameter by $3$ or $4$,
+which acts trivially on $X_i$.
+The circle matrices on $(t,v)$ are
+$\left(\begin{smallmatrix}3&1\\-1&0\end{smallmatrix}\right)$ and
+$\left(\begin{smallmatrix}4&-1\\1&0\end{smallmatrix}\right)$.
+Their determinants are one, so the maps are diffeomorphisms.
+Use the induced boundary orientations to form the compact real manifold
+\begin{equation}\label{mt:eq:W}
+W=E\cup_{j_0}N_0\cup_{j_1}N_1,\qquad \partial W=B_{T_\infty}.
+\end{equation}
+Projection to the cores gives fibre maps
+\begin{equation}\label{mt:eq:f}
+f_i:F\longrightarrow G_i,\qquad
+f_0(a)=[y,3t],\quad f_1(a)=[y,4t].
+\end{equation}
+These are coverings of degrees three and four.
+The marked finite meridians project to the positive core loop at $0$
+and the negative core loop at $1$.
+
+Set
+\begin{equation}\label{mt:eq:alpha}
+\alpha_1=e_1-e_3,\qquad \alpha_2=e_3-e_2,\qquad
+\delta=\alpha_2-2\alpha_1=-2e_1-e_2+3e_3.
+\end{equation}
+The two $\alpha_j$ are fixed by $T_\infty$.
+The vector $\delta$ is fixed by both finite monodromies.
+Let $z_j\in H_2(B_{T_\infty})$ be represented by
+\begin{equation}\label{mt:eq:z}
+(v,s)\longmapsto[s\alpha_j,v],\qquad (v,s)\in(\mathbb R/\mathbb Z)^2.
+\end{equation}
+The question is to determine their images under the actual inclusion
+$b_\infty:B_{T_\infty}\to W$, including their integral divisibility.
+
+\section{A global cylinder carrying the marked paths}
+
+Consider the double mapping cylinder
+\begin{equation}\label{mt:eq:double}
+D=G_0\cup_{f_0}(F\times[0,1])\cup_{f_1}G_1.
+\end{equation}
+The endpoint $0$ attaches to $G_0$, and $1$ attaches to $G_1$.
+There is a homotopy equivalence $W\simeq D$ that preserves the marked
+fibre and the homotopies associated to the two finite meridians.
+We give its construction because those homotopies determine $b_{\infty*}$.
+
+Choose a spine of $\Sigma$ consisting of two circles joined by an arc.
+Take the circles along the finite boundary components and use the chosen
+marking paths on the joining arc.
+The punctured surface retracts onto this spine.
+Lift the retraction using flat parallel transport in $E$.
+The resulting bundle consists of $B_{T_0}$, $B_{T_1}$, and $F\times[0,1]$,
+with endpoint fibre inclusions into the two boundary bundles.
+The remaining positive meridian traverses $\gamma_0^{-1}$ and then
+$\gamma_1^{-1}$, with the joining arc between the corresponding circles.
+This is exactly the word $\gamma_\infty=\gamma_1^{-1}\gamma_0^{-1}$.
+
+Use collars at the two finite boundaries during this retraction.
+Their attachment to $N_i$ is a homotopy pushout, since every boundary
+inclusion is a cofibration.
+The two boundary bundles can therefore be absorbed into their fillings.
+The result is the double mapping cylinder of the fibre maps into $N_i$.
+Finally contract each disk factor of $N_i=G_i\times D^2$.
+The endpoint maps become exactly \eqref{mt:eq:f}.
+The finite meridian homotopies become
+\begin{equation}\label{mt:eq:homotopies}
+[a,v]\longmapsto[y,3t+v],\qquad
+[a,v]\longmapsto[y,4t-v].
+\end{equation}
+This constructs the equivalence together with the path data used below.
+
+All these spaces admit finite compatible CW models.
+For completeness, subdivide each coordinate torus by rational polytopes.
+On $X_i$, intersect the finitely many images under $P_i$ and triangulate
+the resulting subdivision. It is $P_i$-invariant.
+Cut the source of $f_i$ where $d_it$ is integral, with $(d_0,d_1)=(3,4)$.
+Refine further by inverse images of target faces.
+The resulting finite subdivisions make the covering maps piecewise linear.
+Use the corresponding mapping cylinders and compatible prism subdivisions.
+The meridian squares below are rational affine on each core chart,
+so the same construction includes their images and boundary loops.
+Thus the construction uses actual cells and their boundary maps.
+
+One chain model is
+\begin{equation}\label{mt:eq:cone}
+\begin{aligned}
+\mathcal D_n&=C_n(G_0)\oplus C_n(G_1)\oplus C_{n-1}(F),\\
+d(a_0,a_1,b)&=(da_0+f_{0*}b,da_1-f_{1*}b,-db).
+\end{aligned}
+\end{equation}
+Here $C_*$ denotes the compatible integral cellular chains.
+The shifted term represents the cylinder with the negative of its
+interval-first orientation.
+Subdivision compares these chains with normalized singular cubical chains.
+The interval boundary formula gives \eqref{mt:eq:cone} directly.
+It also gives the exact segment
+\begin{equation}\label{mt:eq:MV}
+H_2(F)\xrightarrow{J_2}H_2(G_0)\oplus H_2(G_1)
+\longrightarrow H_2(W)\xrightarrow{\partial}H_1(F)
+\xrightarrow{J_1}H_1(G_0)\oplus H_1(G_1),
+\end{equation}
+where $J_n=(f_{0*},-f_{1*})$.
+The connecting map sends a cycle in \eqref{mt:eq:cone} to $[b]$.
+
+\section{Integral surfaces in the two cores}
+
+Let $x_1,x_2,x_3$ denote the ordered coordinate loops of either $X_i$.
+They are separate local bases. Put $h_i(v)=[0,v]\in G_i$.
+The degree-one bases of $G_0,G_1$ are respectively
+$(\overline x_1,h_0)$ and $(\overline x_3,h_1)$.
+Indeed, $\operatorname{coker}(P_0-I)$ is freely generated by
+$\overline x_1=\overline x_2=\overline x_3$.
+For $P_1$, the image of $P_1-I$ is
+$\mathbb Zx_1\oplus\mathbb Zx_2$, integrally.
+
+The degree-two bases require both fibre tori and meridian surfaces.
+Let
+\[
+A_0=[x_1\wedge x_2],\qquad A_1=[x_1\wedge x_3]
+\]
+be their images from $H_2(X_i)$, and define
+\begin{equation}\label{mt:eq:S}
+S_i=[(v,s)\longmapsto[sU_i,v]]\in H_2(G_i).
+\end{equation}
+The invariant vectors $U_i$ are primitive, so these are embedded tori.
+We claim that $(A_i,S_i)$ is an integral basis of $H_2(G_i)$.
+
+Cutting the core circle at its base point gives the chain sequence
+\begin{equation}\label{mt:eq:wang}
+0\longrightarrow\operatorname{coker}(\bigwedge^2P_i-I)
+\longrightarrow H_2(G_i)
+\longrightarrow\ker(P_i-I)\longrightarrow0.
+\end{equation}
+This follows from the prism differential
+$(a,b)\mapsto(da+(P_{i*}-I)b,-db)$.
+The last map takes $S_i$ to $U_i$.
+For $P_0$, the fibre quotient is free of rank one, with coordinate row
+$(1,-1,1)$ in the exterior basis $(x_1x_2,x_1x_3,x_2x_3)$.
+For $P_1$ the exterior action is
+\[
+\bigwedge^2P_1=\begin{pmatrix}1&1&0\\0&0&-1\\0&1&0\end{pmatrix}.
+\]
+Its quotient relations are $a-b+c=0$ and $b+c=0$.
+Consequently $a=2b$, $c=-b$, and the quotient is freely generated by $b$.
+Its coordinate row is $(2,1,-1)$.
+Also $\ker(P_i-I)=\mathbb ZU_i$ in both cases.
+These facts prove the basis claim and the absence of torsion in $H_2(G_i)$.
+
+We next determine the covering maps without discarding any fibre component.
+In the adapted basis $(x_1,x_2,x_3,t)$ of the source torus, their matrices are
+\begin{equation}\label{mt:eq:adapted}
+\begin{aligned}
+F^{\rm ad}_{0,2}&=\begin{pmatrix}1&-1&0&1&0&0\\0&0&-1&0&-1&-1\end{pmatrix},\\
+F^{\rm ad}_{1,2}&=\begin{pmatrix}2&1&0&-1&0&0\\0&0&0&0&0&-2\end{pmatrix}.
+\end{aligned}
+\end{equation}
+Columns use the lexicographic exterior basis.
+The first rows follow from the fibre quotient just computed.
+The Wang projection of a covered torus $x\wedge t$ is the negative norm
+$-(I+P_i+\cdots+P_i^{d_i-1})x$.
+The sign comes from changing fibre-first orientation to interval-first orientation.
+For $x=\sum_{j=1}^3\xi_jx_j$, the two norms are
+\[
+\nu_0x=(\xi_1+\xi_2+\xi_3)U_0,\qquad \nu_1x=2\xi_3U_1.
+\]
+These formulas determine the second rows.
+
+There could still be a fibre coefficient in a covered mixed torus.
+The invariant constant two-forms
+\begin{equation}\label{mt:eq:forms}
+\begin{aligned}
+\omega_0&=dy_1\wedge dy_2-dy_1\wedge dy_3+dy_2\wedge dy_3,\\
+\omega_1&=2dy_1\wedge dy_2+dy_1\wedge dy_3-dy_2\wedge dy_3.
+\end{aligned}
+\end{equation}
+descend to $G_i$ because $P_i^*\omega_i=\omega_i$.
+Each integrates to one on $A_i$ and zero on $S_i$.
+On a covered mixed torus, the fibre coordinate is $y=sx$ before any seam.
+Each seam applies a constant linear map $P_i$ to $y$.
+Thus its two fibre derivatives are dependent, and the integral of $\omega_i$ vanishes.
+Since $(A_i,S_i)$ is already an integral basis, the possible fibre coefficient is zero.
+This establishes every entry of \eqref{mt:eq:adapted} for the actual maps.
+
+Transforming the source by $\bigwedge^2B_i^{-1}$ gives
+\begin{equation}\label{mt:eq:Fi}
+\begin{aligned}
+F_{0,2}&=\begin{pmatrix}3&1&0&-2&0&0\\0&0&0&0&0&-1\end{pmatrix},\\
+F_{1,2}&=\begin{pmatrix}3&1&0&-2&3&1\\0&0&0&0&-2&-2\end{pmatrix}.
+\end{aligned}
+\end{equation}
+The source columns are $(e_1e_2,e_1e_3,e_1e_4,e_2e_3,e_2e_4,e_3e_4)$.
+Similarly, the degree-one matrix is
+\begin{equation}\label{mt:eq:J1}
+J_1=\begin{pmatrix}0&0&1&6\\0&0&0&3\\0&-1&-1&2\\0&0&0&-4\end{pmatrix}.
+\end{equation}
+Solving its rows over $\mathbb Z$ gives $\ker J_1=\mathbb Ze_1$.
+
+\section{The global relations and the cusp surfaces}
+
+In the target basis $(A_0,S_0,A_1,S_1)$, the degree-two relation matrix is
+\begin{equation}\label{mt:eq:J2}
+J_2=\begin{pmatrix}
+3&1&0&-2&0&0\\
+0&0&0&0&0&-1\\
+-3&-1&0&2&-3&-1\\
+0&0&0&0&2&2
+\end{pmatrix}.
+\end{equation}
+Let $r_1,r_2,r_3$ be its columns numbered $2,5,6$, respectively.
+Every other column is an integral multiple of $r_1$ or zero.
+Set $c=-S_0+S_1=(0,-1,0,1)^t$.
+Then
+\begin{equation}\label{mt:eq:unimodular}
+\mathcal U=(r_1,r_2,r_3,c)
+=\begin{pmatrix}1&0&0&0\\0&0&-1&-1\\-1&-3&-1&0\\0&2&2&1\end{pmatrix},
+\qquad \det\mathcal U=1.
+\end{equation}
+Therefore $\operatorname{coker}J_2=\mathbb Zc$.
+Equivalently, the primitive row $(2,4,2,3)$ annihilates $J_2$
+and takes value $-1$ on $c$.
+The exact sequence \eqref{mt:eq:MV} becomes
+\begin{equation}\label{mt:eq:extension}
+0\longrightarrow\mathbb Zc\longrightarrow H_2(W)
+\xrightarrow{\partial}\mathbb Ze_1\longrightarrow0.
+\end{equation}
+This identifies the integral relation subgroup, including its saturation.
+
+We now give the actual global chains representing the cusp surfaces.
+For an integral vector $a$ with $a_4=0$ and $T_\infty a=a$,
+write $a'=T_0^{-1}a$ and let $\ell(a)(s)=sa\pmod\Lambda$.
+Write $M(a)$ for the oriented cusp torus $(v,s)\mapsto[sa,v]$.
+Let $R_i$ be the first three rows of $B_i^{-1}$.
+In singular cubical chains of the cores, define
+\begin{equation}\label{mt:eq:Q}
+Q_0(a)(v,s)=[sR_0a,-v],\qquad
+Q_1(a')(v,s)=[sR_1a',v].
+\end{equation}
+Their boundaries are literal differences of the stated loops:
+\begin{equation}\label{mt:eq:boundaries}
+\begin{aligned}
+dQ_0(a)&=f_{0*}\bigl(\ell(a')-\ell(a)\bigr),\\
+dQ_1(a')&=f_{1*}\bigl(\ell(a)-\ell(a')\bigr).
+\end{aligned}
+\end{equation}
+The first identity uses $P_0^{-1}R_0a=R_0a'$.
+The second uses $P_1R_1a'=R_1a$,
+which follows from $T_1^{-1}T_0^{-1}a=T_\infty a=a$.
+The $s$-faces cancel because their fibre coordinates differ by lattice vectors.
+
+Consequently
+\begin{equation}\label{mt:eq:Zchain}
+\mathcal Z(a)=\bigl(Q_0(a),Q_1(a'),\ell(a)-\ell(a')\bigr)
+\end{equation}
+is a cycle in \eqref{mt:eq:cone}, after the compatible subdivision comparison.
+The two core squares trace $\gamma_0^{-1}$ and $\gamma_1^{-1}$.
+The shifted term traces the joining arc at the two fibre loops.
+The spine retraction constructed above therefore takes the actual cusp
+square $(v,s)\mapsto[sa,v]$ to this cycle.
+This identifies its homology class through maps and chains.
+
+The connecting image follows directly:
+\begin{equation}\label{mt:eq:connecting}
+\partial b_{\infty*}[M(a)]=(I-T_0^{-1})a,\qquad
+\partial b_{\infty*}z_1=e_1,\quad
+\partial b_{\infty*}z_2=2e_1.
+\end{equation}
+For example, $T_0^{-1}\alpha_1=-e_3$ and
+$T_0^{-1}\alpha_2=-2e_1-e_2+e_3$.
+These signs use the negative cylinder orientation in \eqref{mt:eq:cone}.
+
+For $a=\delta$, both finite monodromies fix $a$, so the shifted term is zero.
+Moreover, $R_i\delta=U_i$.
+Thus \eqref{mt:eq:Q} gives the classes $-S_0$ and $S_1$, respectively.
+We have proved
+\begin{equation}\label{mt:eq:delta}
+b_{\infty*}[M(\delta)]=-S_0+S_1=c.
+\end{equation}
+The angular torus generated by $\alpha_1,\alpha_2$ is fixed pointwise by $T_\infty$.
+Taking its product with the meridian circle is linear on integral $H_1$.
+Equation~\eqref{mt:eq:alpha} therefore gives
+$[M(\delta)]=z_2-2z_1$ in boundary homology.
+
+\begin{theorem}\label{mt:thm:map}
+For the actual marked real attachment \eqref{mt:eq:W},
+$H_2(W)=\mathbb Zt\oplus\mathbb Zc$, where
+$t=b_{\infty*}z_1$ and $c=-S_0+S_1$.
+The inclusion on the meridian subgroup is
+\begin{equation}\label{mt:eq:answer}
+\mathbb Zz_1\oplus\mathbb Zz_2\longrightarrow H_2(W),\qquad
+\begin{pmatrix}1&2\\0&1\end{pmatrix}
+\end{equation}
+in the ordered bases $(z_1,z_2)$ and $(t,c)$.
+Its image is all of $H_2(W)$ and its kernel is zero.
+\end{theorem}
+\begin{proof}
+The class $t$ maps to the generator $e_1$ in \eqref{mt:eq:extension}.
+It therefore splits that exact sequence integrally.
+Equation~\eqref{mt:eq:delta} identifies $b_{\infty*}z_2$ with $2t+c$.
+The displayed matrix has determinant one.
+\end{proof}
+
+\section{The consequence for a cusp attachment}
+
+We state the exact local input needed to apply the global map.
+Let $N_c$ be a compact connected cusp neighborhood with marked boundary
+$B=B_{T_\infty}$, and let $k:B\to N_c$ be its actual boundary inclusion.
+Assume its integral specialization satisfies
+\begin{equation}\label{mt:eq:cuspinput}
+k_{*,2}\text{ is surjective},\qquad
+\ker k_{*,2}=\mathbb Zz_1\oplus\mathbb Zz_2.
+\end{equation}
+In degree one, assume $H_1(N_c)=\mathbb Z\beta_1\oplus\mathbb Z\beta_2$,
+where $\beta_1=e_3$, $\beta_2=e_4$, and
+\[
+k_*\beta_j=\beta_j,\qquad k_*\gamma_\infty=0.
+\]
+These are hypotheses on the marked map, including its meridian.
+The toric specialization of the period family
+$(qc_1,c_2),(c_3,qc_4)$ motivates these local data
+\cite[Propositions 2.7--2.9]{MTengel}.
+The following conclusion requires the actual maps in
+\eqref{mt:eq:j} and \eqref{mt:eq:cuspinput}.
+
+\begin{corollary}\label{mt:cor:H2}
+For $Y=W\cup_BN_c$ with the stated marked local data,
+$H_2(Y;\mathbb Z)=0$.
+\end{corollary}
+\begin{proof}
+The image of $T_\infty-I$ on $\Lambda$ is
+$\mathbb Z\alpha_1\oplus\mathbb Z\alpha_2$.
+The basis $(\alpha_1,\alpha_2,e_3,e_4)$ is unimodular.
+The mapping-torus sequence and the zero section therefore give
+$H_1(B)=\mathbb Z\beta_1\oplus\mathbb Z\beta_2\oplus\mathbb Z\gamma_\infty$.
+The degree-one version of the double-cylinder sequence identifies $H_1(W)$
+with $\operatorname{coker}J_1$.
+The nonzero Smith factors of \eqref{mt:eq:J1} are $(1,1,1)$.
+The primitive quotient row on
+$(\overline x_1,h_0,\overline x_3,h_1)$ is $(0,4,0,3)$.
+Thus $H_1(W)=\mathbb Zg$, the common fibre class $e_4$ maps to $12g$,
+and $e_3$ maps to zero.
+The positive finite meridians map to $4g$ and $-3g$.
+Hence $\gamma_\infty$ maps to $-g$.
+In the boundary basis $(\beta_1,\beta_2,\gamma_\infty)$, the map to
+$H_1(W)\oplus H_1(N_c)$ is therefore
+\begin{equation}\label{mt:eq:one}
+(b_{\infty*},-k_*)_1=
+\begin{pmatrix}0&12&-1\\-1&0&0\\0&-1&0\end{pmatrix}.
+\end{equation}
+Its determinant is $-1$, so the next connecting map out of $H_2(Y)$ vanishes.
+The degree-two attachment map is surjective as well.
+Indeed, first lift its $H_2(N_c)$ component through the surjection $k_{*,2}$.
+Then correct its $H_2(W)$ component using
+$\ker k_{*,2}=\mathbb Zz_1\oplus\mathbb Zz_2$ and Theorem~\ref{mt:thm:map}.
+The integral Mayer--Vietoris sequence now gives $H_2(Y)=0$.
+\end{proof}
+
+The complex-geometric question asks for a compact complex family $Y(u,a_0,a_1)$
+for all sufficiently small nonzero complex $u$ and primitive torsion increments
+\[
+a_0\in\tfrac13\Lambda^{T_0},\qquad a_1\in\tfrac14\Lambda^{T_1},\qquad
+|12e_4^*(a_0+a_1)|=1.
+\]
+The desired conclusion is a diffeomorphism of its underlying smooth manifold with $S^6$.
+The specified markings here correspond to
+$a_0=e_4/3$ and $a_1=-(e_1+e_4)/4$.
+Identifying that complex family's punctured torus bundle with $E$ requires
+a comparison relative to all three marked boundaries and the section.
+The finite lifted translations must extend smoothly on their reduced divisor torsors,
+commute with the cyclic deck actions, and give proper quotients with the specified periods.
+The retained section must have conormal comparisons $e=s^{-2}e'$ at $0$
+and $e=s^{-1}e'$ at $1$.
+These remain separate geometric requirements.
+Other increments require their actual affine attachment maps.
+The second-homology calculation here proves a topological consequence for
+the specified real attachment and stated cusp input.
+Higher homology and the full complex-family comparison require further arguments.
+
+\begin{thebibliography}{9}
+\bibitem{MTengel} P.~Engel, \emph{Complex structures on $S^6$},
+\href{https://philip-engel.github.io/S6.pdf}{author manuscript},
+Sections 3, 5, and 7.
+\end{thebibliography}

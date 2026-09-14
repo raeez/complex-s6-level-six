@@ -1,0 +1,13 @@
+{
+  "time_utc": "2026-09-14T14:32:51.225266+00:00",
+  "base_head": "5d9f632b5d9795e51075a9c15e2ee58d4cfb40af",
+  "source_files": {
+    "/Users/raeez/mathematics/worktrees/frontier-s6-common-chain-021-20260914/research-candidates/s6-actual-cusp024/build.py": "4998fc0f8daff3d2b5f35d7a6d999f4aa2ceb20f979e6b5659b6d9de94dac0e4",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-common-chain-021-20260914/research-candidates/s6-actual-cusp024/check_cusp.py": "7baff1e1b7a22daee109be2def898ff02814d0f5e775ef16d449cbce65d29511",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-common-chain-021-20260914/research-candidates/s6-actual-cusp024/paper.tex": "e94bfb066d0dcf19ff04e9eb11354b1b24f369af8e9cb7e13739c75f5c03a8df",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-common-chain-021-20260914/research-candidates/s6-actual-cusp024/raeez-math-template.sty": "4bd3e0dcea54b2209a2d02d5964e96ae2f11700dbe3b44fb0baf4e61d7352de3",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-common-chain-021-20260914/research-candidates/s6-actual-cusp024/toric-cusp.tex": "b7f900cebbecc06f519520a00675240cad0e811a70355f708b709bc0d9752699"
+  },
+  "observed_controls": "unverified; no independent runtime model/effort metadata is exposed",
+  "stage": "Live source formulas read. Historical review reports have not been read."
+}

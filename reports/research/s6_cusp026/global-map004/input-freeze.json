@@ -1,0 +1,15 @@
+{
+  "utc": "2026-09-14T17:04:05.405550+00:00",
+  "inputs": {
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/toric-cusp.tex": "8cfaf1751bd1edd7f5672f3578c602df2a4512ff204fd068cbd871647e09496e",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/cusp-attachment.tex": "8c11f110d960af3c6e86e8a4016c9aa4a01759dd8909242ae7ac72ce909c2206",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/candidate-manifest.json": "d4b2a43cb506d70aecd49104558a024e5af2514e50ad513483ebb74c45cdd33e",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global002-fresh-review/independent_checks.py": "f0ae1a66c55e5e1a1b915ce2349192a3eb01e7da48c43c47e707e61c23f5b8d8",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-path-026-20260914/research-candidates/s6_path026/common-chain.tex": "d6d513562cb8d450f9d98f6926995af3e1a92d3a222d9972273d15fc25d316bc",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/sources/engel.pdf": "81ad7344e61d2c3e53a829a41c43161f1d64edfe2d2a534db898cf2231d65bc1"
+  },
+  "missing_inputs": [
+    "global003: no matching path in assigned worktree or programme worktrees at initial read"
+  ],
+  "runtime_controls": "gpt-6-astra/ultra required; independently observed metadata unavailable"
+}

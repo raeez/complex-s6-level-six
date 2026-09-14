@@ -1,0 +1,393 @@
+\section{The marked map into the cusp neighborhood}
+
+Retain the toric family, units, logarithms, section, and lattice
+of Sections~1--6. Restrict to the compact tube $N_c$ over $|q|\leq\epsilon$.
+Its boundary is smooth because the punctured family is a submersion.
+Write $a=L(\theta,\beta)^t$ in the common $e$ marking.
+For $q(v)=\epsilon e^{2\pi iv}$, use the logarithm
+$\log q(v)=\log\epsilon+2\pi iv$ and set
+\begin{equation}\label{ga:eq:j}
+j_\infty[a,v]=
+\left[\exp\bigl(2\pi i(\theta+\Omega(q(v))\beta)\bigr),q(v)\right]
+\in\partial N_c.
+\end{equation}
+Exponentiation is coordinatewise. Brackets on the right mean the
+quotient by the two specified periods.
+Changing $\theta$ by an integer has no effect.
+Changing $\beta$ by an integer multiplies by the corresponding periods.
+At $v=1$, the matrix $\Omega$ is its value at zero plus $I_2$.
+Thus \eqref{ga:eq:j} respects $[a,1]=[T_\infty a,0]$.
+The same identity holds for derivatives across this seam.
+The real period matrix is invertible, so this is a smooth diffeomorphism.
+It carries the marked meridian to the specified section over the circle.
+
+Give $F$ its complex orientation, which agrees with the $e$ orientation.
+Give the disk its complex orientation and each boundary its outward-first
+orientation. The boundary orientation of $N_c$ is fibre-first followed
+by the positive meridian. The boundary of a punctured base has the
+opposite meridian orientation. Thus \eqref{ga:eq:j} has the required
+orientation reversal for attachment to the flat bundle over that base.
+
+On integral normalized singular cubical chains define the actual map
+\begin{equation}\label{ga:eq:kappa}
+\kappa_\infty:C_*(B_{T_\infty})\longrightarrow C_*(N_c),
+\qquad \sigma\longmapsto j_\infty\circ\sigma.
+\end{equation}
+This fixes the carrier and the map in every degree.
+Finite cellular models of the compact pairs give the corresponding
+finite chain map after cellular approximation and subdivision.
+
+We relate this map to the toric cells without losing its meridian.
+Use $L^{-1}$ to express the boundary in the $(\alpha,\beta)$ marking.
+For $C=C_*^{\mathrm{cub}}(F;\mathbb Z)$ put
+\[
+R_n=C_n\oplus C_{n-1},\qquad
+d_R(a,b)=(da+(T_*-I)b,-db).
+\]
+The interval-first prism comparison identifies $R$ with chains of $B_T$.
+The toric forgetful map is represented by
+\begin{equation}\label{ga:eq:K}
+K:R_n\longrightarrow C_n^{\mathrm{cub}}(Z;\mathbb Z),
+\qquad K(a,b)=p_*a+Hb,
+\qquad (H\sigma)(v,t)=p_v(\sigma(t)).
+\end{equation}
+Here $p_v(\theta,\beta)=[y,\theta+vQ^{-1}y]$,
+where $y$ represents $Q\beta$ in $H$.
+The identity $dH+Hd=p_*T_*-p_*$ proves $dK=Kd_R$.
+
+Let $j_r$ be the outer boundary identification from radial polar transport.
+The self-map $j_r^{-1}j_\infty$ has the identity action on the full
+based fundamental group, by the phase, deck, and section marking.
+Choose equivariant lifts to the affine universal cover of $B_T$.
+Their straight-line interpolation supplies a boundary homotopy.
+Following that homotopy by the radial retraction gives a chain homotopy
+\begin{equation}\label{ga:eq:comparison}
+r_*\kappa_\infty-K=dS+Sd_R,
+\end{equation}
+with the prism comparison understood on the source.
+The homotopy is fixed on the section.
+It is defined by actual maps, rather than by an equality of homology ranks.
+For nontrivial units, the smooth unit transport carries this construction
+to the original family and its continuously specified marking.
+
+The fibre part of \eqref{ga:eq:K} in degrees two and three is
+\begin{equation}\label{ga:eq:p23}
+P_2=\begin{pmatrix}
+0&-1&1&1&-1&0\\0&1&0&0&0&0\\0&0&0&0&1&0\\0&0&0&0&0&1
+\end{pmatrix},\qquad
+P_3=\begin{pmatrix}0&0&1&0\\0&0&0&1\end{pmatrix}.
+\end{equation}
+Their source bases are the ordered exterior bases of
+$(\alpha_1,\alpha_2,\beta_1,\beta_2)$.
+Their target bases are $(E_0,E_1,E_2,h)$ and
+$(h\otimes a_1,h\otimes a_2)$.
+In the $e$ basis these matrices become $P_n\bigwedge^n L^{-1}$.
+The term $H$ in \eqref{ga:eq:K} remains part of the boundary map.
+
+\section{Integral meridian cycles}
+
+Put $A_n=\bigwedge^n\mathbb Z^4$ and $N_n=\bigwedge^nT-I$.
+Set $A_n=0$ outside $0\leq n\leq4$.
+Write $\varepsilon_1,\varepsilon_2$ for the standard vectors in
+the angular and polygon coordinate lattices $\mathbb Z^2$.
+The mapping-torus chain sequence gives
+\begin{equation}\label{ga:eq:wang}
+0\longrightarrow A_n/N_nA_n\longrightarrow H_n(B_T;\mathbb Z)
+\mathrel{\mathop{\longrightarrow}^{\pi}}\ker N_{n-1}\longrightarrow0.
+\end{equation}
+The left map is inclusion of the fibre.
+Section~5 identifies its source with $H_n(Z;\mathbb Z)$ through $p_*$.
+We now give an integral splitting for which $k_*$ vanishes on the right summand.
+
+For a $T$-invariant oriented subtorus $V\subset F$, let $M(V)$ be its
+mapping torus inside $B_T$. Orient it by the positive interval first,
+followed by the stated basis of $V$.
+Its fundamental class projects under $\pi$ to $[V]$.
+All exterior products below are in the displayed order.
+The following subtorus classes give integral bases of $\ker N_r$:
+\begin{equation}\label{ga:eq:invariants}
+\begin{array}{c|l}
+r&[V]\\\hline
+0&1\\
+1&\alpha_1,\ \alpha_2\\
+2&\alpha_1\alpha_2,\ \alpha_1\beta_1,\ \alpha_2\beta_2,
+ (\alpha_1+\alpha_2)(\beta_1+\beta_2)\\
+3&\alpha_1\alpha_2\beta_1,\ \alpha_1\alpha_2\beta_2\\
+4&\alpha_1\alpha_2\beta_1\beta_2.
+\end{array}
+\end{equation}
+Here juxtaposition denotes an exterior product.
+For $r=0$, $M(V)$ is the marked meridian.
+Each displayed sublattice is primitive and $T$-stable.
+The restricted monodromy has determinant one.
+
+To check the degree-two basis, expand $T\beta_j=\beta_j+\alpha_j$.
+An invariant two-vector has no $\beta_1\beta_2$ term, and its coefficients
+of $\alpha_1\beta_2$ and $\alpha_2\beta_1$ are equal.
+The four displayed vectors form an integral basis of these solutions.
+In degree three the only invariant vectors are integral combinations of
+$\alpha_1\alpha_2\beta_1$ and $\alpha_1\alpha_2\beta_2$.
+The remaining degrees follow directly from the same expansion.
+
+Each class $[M(V)]$ in \eqref{ga:eq:invariants} maps to zero under $k_*$.
+For purely angular $V$, the map is independent of the meridian coordinate.
+For $V=\langle\alpha_j,\beta_j\rangle$, its base lies on the closed
+line $\beta=t\varepsilon_j$. Representatives in $H$ have
+$Q^{-1}y=(t-m)\varepsilon_j$ for an integer $m$ on each segment.
+The angular shift $v(t-m)\varepsilon_j$ remains in the angular direction of $V$.
+Thus its image lies in a two-dimensional quotient of rectangles times circles.
+For $V=\langle\alpha_1+\alpha_2,\beta_1+\beta_2\rangle$, the same
+argument uses the line $t(\varepsilon_1+\varepsilon_2)$ and seam translations
+by $\varepsilon_1+\varepsilon_2$.
+Its image also has a finite CW description of dimension at most two.
+The three-dimensional subtori in the table have the entire angular torus
+and a one-dimensional base. Their images have dimension at most three.
+Finally, $k$ maps the five-dimensional class $[B_T]$ into the four-dimensional $Z$.
+These factorizations prove the asserted vanishing in every degree.
+
+\begin{theorem}\label{ga:thm:boundary}
+The boundary homology is free, with ranks $(1,3,6,6,3,1)$.
+For $0\leq n\leq4$, the map induced by the actual cusp attachment is
+\begin{equation}\label{ga:eq:split}
+H_n(B_T;\mathbb Z)=H_n(Z;\mathbb Z)\oplus\ker N_{n-1}
+\mathrel{\mathop{\longrightarrow}^{k_*}}H_n(Z;\mathbb Z),
+\qquad (z,u)\longmapsto z.
+\end{equation}
+The right summand is represented by the mapping-torus cycles above.
+In degree five the map is zero.
+\end{theorem}
+\begin{proof}
+The fibre quotient in \eqref{ga:eq:wang} maps isomorphically to $H_n(Z)$.
+The mapping-torus cycles give a section of $\pi$, since their projected
+classes form the integral basis \eqref{ga:eq:invariants}.
+Their images under $k_*$ vanish by the explicit factorizations.
+This proves \eqref{ga:eq:split}. Both summands are free.
+Their ranks give the stated boundary ranks.
+Equation~\eqref{ga:eq:comparison} identifies this result with
+$r_*\kappa_{\infty*}$ in the original units and marking.
+\end{proof}
+
+In particular, the degree-two kernel has the actual torus basis
+\begin{equation}\label{ga:eq:kernel2}
+z_j=[M(\langle\alpha_j\rangle)],\qquad j=1,2.
+\end{equation}
+Explicitly, their fundamental squares are $(v,s)\mapsto[s\alpha_j,v]$.
+Their boundaries cancel because $T\alpha_j=\alpha_j$.
+The cusp retraction sends each square to $[0,s\varepsilon_j]$, independently of $v$.
+The degree-three kernel has the four mapping-torus classes from row $r=2$.
+These specify the meridian contributions as well as the fibre specialization.
+
+\section{The integral local attachment cone}
+
+For a chain map $f:B\to A$, use
+$\operatorname{Cone}(f)_n=A_n\oplus B_{n-1}$ and
+$d(a,b)=(da+fb,-db)$.
+For the boundary inclusion \eqref{ga:eq:kappa}, this cone computes
+$H_*(N_c,\partial N_c;\mathbb Z)$.
+Indeed, inclusion of a boundary subcomplex is injective on cellular chains.
+The cone maps onto the relative quotient, and its kernel is an identity cone.
+Its contraction is $(c,b)\mapsto(0,c)$ in the identity-cone coordinates.
+
+We describe the integral reduction used in the calculation.
+A finite free chain complex with free homology splits as its homology
+with zero differential plus contractible pairs.
+To prove this, split the two exact sequences
+\[
+0\to Z_n\to C_n\to B_{n-1}\to0,
+\qquad 0\to B_n\to Z_n\to H_n\to0.
+\]
+Here $Z_n=\ker d_n$ and $B_n=\operatorname{im}d_{n+1}$ in the complex $C$.
+The quotients are free, so both sequences split over $\mathbb Z$.
+The differential on the remaining pairs is the identity.
+These splittings give maps $i,p,h$ with $pi=I$ and $I-ip=dh+hd$.
+For a chain map $f:B\to A$, put $f_H=p_Afi_B$.
+Then
+\[
+f-i_Af_Hp_B=dU+Ud,\qquad U=h_Af+i_Ap_Afh_B.
+\]
+Mapping cones of homotopic maps are isomorphic by their triangular
+change of coordinates. Thus this operation preserves integral cone homology.
+
+Both complexes here have free homology by Theorem~\ref{ga:thm:boundary}
+and the local specialization theorem.
+Consequently the actual local cone reduces to a finite free complex $D$.
+Its degree-zero through degree-six ranks are
+\begin{equation}\label{ga:eq:ranks}
+(1,3,7,8,7,3,1).
+\end{equation}
+Write $r_n=(1,2,4,2,1)$ for the target ranks and
+$b_n=(1,3,6,6,3,1)$ for the boundary ranks, with zero outside these ranges.
+In the ordered coordinates $D_n=\mathbb Z^{r_n}\oplus\mathbb Z^{b_{n-1}}$,
+the only nonzero block of $d_n$ is the upper-right block
+\begin{equation}\label{ga:eq:reduced-d}
+\begin{pmatrix}I_{r_{n-1}}&0\end{pmatrix}
+:\mathbb Z^{b_{n-1}}\longrightarrow\mathbb Z^{r_{n-1}},
+\qquad 1\leq n\leq5.
+\end{equation}
+The differential $d_6$ vanishes.
+Thus the nonzero Smith factors of $d_1,\ldots,d_5$ are respectively
+$1$, $(1,1)$, $(1,1,1,1)$, $(1,1)$, and $1$.
+
+\begin{theorem}\label{ga:thm:relative}
+The actual cusp boundary map has integral cone homology
+\[
+H_n(\operatorname{Cone}\kappa_\infty)=
+\begin{cases}
+0&n=0,1,\\
+\mathbb Z&n=2,6,\\
+\mathbb Z^2&n=3,5,\\
+\mathbb Z^4&n=4,\\
+0&\text{otherwise}.
+\end{cases}
+\]
+\end{theorem}
+\begin{proof}
+In each degree the outgoing differential selects the first $r_{n-1}$
+coordinates of the shifted boundary summand.
+Its kernel is the full target summand and the remaining shifted coordinates.
+The incoming differential identifies its domain coordinates bijectively
+with the entire target summand. Therefore the quotient of cycles by
+boundaries is freely generated by those remaining shifted coordinates.
+Their ranks are $(0,0,1,2,4,2,1)$.
+Every elimination uses a unit coefficient, so the quotient has no torsion.
+The preceding chain contractions identify this exact integer calculation
+with the cone of \eqref{ga:eq:kappa}.
+\end{proof}
+
+\section{The first homology of the common attachment}
+
+We specify the remaining real topological data.
+Let $\Sigma$ be an oriented sphere with three open disks removed.
+Its marked positive meridians satisfy $\gamma_0\gamma_1\gamma_\infty=1$,
+with right-to-left path multiplication. The flat torus bundle has monodromies
+\[
+T_0=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},\qquad
+T_1=\begin{pmatrix}-1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1\end{pmatrix}.
+\]
+They satisfy $T_0T_1T_\infty=I$ in the common $e$ basis.
+
+Here are the finite fillings and their markings.
+Set $u_0=e_3$, $u_1=-e_1+e_3$, $u_2=-e_1-e_2+e_3$.
+Let $X_0$ be their three-torus and let $P_0$ cyclically permute this basis.
+Put $U_0=u_0+u_1+u_2=\delta$, where $\delta=-2e_1-e_2+3e_3$.
+For the other three-torus $X_1$ use the $f_1,f_2,f_3$ basis and put
+\[
+P_1=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},\quad
+U_1=(-1,-1,2)^t,\quad
+C=\begin{pmatrix}1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1\end{pmatrix}.
+\]
+The matrix $C$ sends the $f$ marking to the $e$ marking.
+For $\rho=e^{2\pi i/3}$ define
+\[
+\begin{aligned}
+N_0&=(X_0\times S^1_t\times D_s)/
+ (x,t,s)\sim(P_0^{-1}x+U_0/3,t+1/3,\rho s),\\
+N_1&=(X_1\times S^1_t\times D_s)/
+ (x,t,s)\sim(P_1x-U_1/4,t-1/4,is).
+\end{aligned}
+\]
+The finite actions are free because their nonidentity powers translate $t$.
+The boundary maps are
+\[
+j_0[x,t,v]=[x-2vU_0/3,t+v/3,e^{2\pi iv/3}],\qquad
+j_1[x,t,v]=[x-vU_1/4,t-v/4,e^{2\pi iv/4}].
+\]
+For $j_1$, first apply $C^{-1}$ to the fibre marking.
+Substitution in these quotients verifies the mapping-torus endpoint relations.
+Their core retractions, with $[y,\tau+1]=[P_i y,\tau]$, are
+\[
+[x,t,v]\longmapsto[x+2tU_0,3t+v],\qquad
+[x,t,v]\longmapsto[x-tU_1,4t-v].
+\]
+Let $W$ be the flat bundle with these two fillings attached.
+Its remaining boundary is $B_{T_\infty}$.
+This defines a compact real manifold without assuming a global complex family.
+
+Choose compatible finite chains $A=C_*(E)$, $L_i=C_*(N_i)$ and
+$B_i=C_*(B_{T_i})$. Their common attachment complex is
+\[
+\mathcal W=\operatorname{Cone}\bigl(
+(b_0,b_1)\mapsto(\iota_0b_0+\iota_1b_1,-j_{0*}b_0,-j_{1*}b_1)\bigr).
+\]
+The cusp boundary map into it is
+$\beta(b)=(b_{\infty*}b,0,0;0,0)$.
+Use the same boundary chain complex on both arrows of the attachment.
+Subdivision and the cellular-to-singular comparisons transport the
+cubical formulas and their specified homotopies to this finite diagram.
+The actual attachment has the chain model
+\begin{equation}\label{ga:eq:global}
+\operatorname{Cone}\left((\beta,-\kappa_\infty):
+C_*(B_{T_\infty})\to\mathcal W\oplus C_*(N_c)\right).
+\end{equation}
+The ordinary union comparison has contractible identity-cone kernels.
+It therefore identifies \eqref{ga:eq:global} with the integral chains
+of the specified smooth union $Y_{\mathrm{top}}=W\cup_{j_\infty}N_c$.
+The retraction and \eqref{ga:eq:comparison} replace its second map by $-K$.
+For the homotopy in that equation, the final change of coordinates is
+$(w,z,b)\mapsto(w,z-Sb,b)$.
+Substitution gives a chain isomorphism between the two core cones.
+
+The finite core maps give the fundamental-group relations
+\[
+\pi_1(W)=\langle\Lambda,\gamma_0,\gamma_1\mid
+[\Lambda,\Lambda]=1,\ \gamma_i\lambda\gamma_i^{-1}=T_i\lambda,
+\ \gamma_0^3=w_0,\ \gamma_1^4=w_1\rangle,
+\]
+where $w_0=(4,2,-6,1)^t$ and $w_1=(1,1,-3,-1)^t$.
+Indeed the core maps are coverings in the fourth period, of degrees three
+and four, and the positive meridians map to the positive and negative core loops.
+Their power relations are $w_0=e_4-2\delta$ and $w_1=-Cf_4-\delta$.
+Van Kampen gives the displayed presentation.
+The images of $T_0-I$ and $T_1-I$ generate
+$\langle e_1,e_2,e_3\rangle$ integrally.
+Abelianization therefore reduces to $3x_0=c$ and $4x_1=-c$.
+The relation matrix
+\[
+\begin{pmatrix}-1&3&0\\1&0&4\end{pmatrix}
+\]
+has Smith factors $(1,1)$ and primitive kernel vector $(12,4,-3)^t$.
+Thus $H_1(W)=\mathbb Zg$, with $e_4=12g$ and $\gamma_\infty=-g$.
+
+The ordered basis of $H_1(B_{T_\infty})$ is
+$(\beta_1,\beta_2,\gamma_\infty)$, where $\beta_1=e_3$ and $\beta_2=e_4$.
+For the target basis $(g,\beta_1,\beta_2)$, the actual degree-one
+attachment matrix is
+\begin{equation}\label{ga:eq:global1}
+(b_{\infty*},-k_*)_1=
+\begin{pmatrix}0&12&-1\\-1&0&0\\0&-1&0\end{pmatrix}.
+\end{equation}
+Its determinant is $-1$. It is an isomorphism over $\mathbb Z$.
+The degree-zero map is $(1,-1)^t$.
+The cone exact sequence now gives
+\begin{equation}\label{ga:eq:first}
+H_0(Y_{\mathrm{top}};\mathbb Z)=\mathbb Z,
+\qquad H_1(Y_{\mathrm{top}};\mathbb Z)=0.
+\end{equation}
+
+There is also a precise description of the next required map.
+The cusp map is surjective on $H_2$, and its kernel is
+$\mathbb Zz_1\oplus\mathbb Zz_2$ from \eqref{ga:eq:kernel2}.
+Each class in $H_2(Z)$ has an integral fibre lift, and hence an integral
+lift to $H_2(B_T)$. Eliminating that target summand in the cone exact
+sequence gives
+\begin{equation}\label{ga:eq:next}
+H_2(Y_{\mathrm{top}};\mathbb Z)
+\cong H_2(W;\mathbb Z)/
+\langle b_{\infty*}z_1,b_{\infty*}z_2\rangle.
+\end{equation}
+The classes on the right are the actual cusp-meridian tori, rather than
+two unnamed elements with prescribed ranks.
+Their inclusion into the common complex must be evaluated to determine
+this group, including any torsion.
+
+For application to a global complex family, a further geometric comparison
+must identify its punctured torus bundle with $E$ relative to all three
+marked boundaries and the section. At each finite puncture, the lifted
+translation on the reduced divisor torsor must extend smoothly, commute
+with the cyclic deck action, and have a proper quotient with the displayed periods.
+The retained section must realize the conormal comparisons
+$e=s^{-2}e'$ at the order-three puncture and $e=s^{-1}e'$ at the order-four puncture.
+These are existence and compatibility conditions on maps of the actual
+torsors. They do not follow from their integral monodromy matrices.
+The local cusp calculation and \eqref{ga:eq:first} leave those conditions
+and the remaining homology of the common attachment distinct.

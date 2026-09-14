@@ -1,0 +1,427 @@
+         The Third Homology of a Marked Cusp Attachment
+
+                                                     Raeez Lorgat
+
+
+                                                          Abstract
+           Four meridian mapping tori determine the third homology of a specified two-filling manifold.
+       Their connecting classes have one integral relation. A closed cochain on the actual attachment
+       identifies this relation with a primitive core three-cycle. We compute the complete degree-three
+       attaching matrix, including the two fibre classes. It is unimodular, and the resulting marked cusp
+       attachment has zero integral third homology.
+
+
+1    The real attachment and its chains
+All homology groups have coefficients in ℤ. Let 𝐹 = ℝ4 /Λ with ordered lattice Λ = 𝑗4 =1 ℤ𝑒𝑗 . Matrices
+                                                                                       L
+
+act on columns. Path multiplication is right to left. The mapping torus of 𝑇 identifies ( 𝑎, 1) with (𝑇 𝑎, 0).
+Its positive meridian is 𝑣 ↦→ [0, 𝑣 ]. All mapping-torus fundamental classes use interval-first orientation.
+    Let 𝐸 → Σ be the flat 𝐹 -bundle over the sphere with three disks removed. It has a zero section and
+marked meridians 𝛾0 𝛾1 𝛾∞ = 1. Its monodromies are
+
+                      0 −1 −1 0                            −1       1 −1 2
+                     ©         ª                          ©                 ª
+                     ­ 1 −1 0 0®                          ­−1       0 −1 1 ®®
+               𝑇0 = ­­         ®,                   𝑇1 = ­­                  ,            𝑇∞ = (𝑇0𝑇1 ) −1 .
+                     ­0 0 1 0®
+                               ®
+                                                          ­1        1 2 −1®®
+                     «0 0 0 1 ¬                           «0        0 0 1¬
+
+For 𝑋𝑖 = ℝ3 /ℤ3 , put
+
+                           0 0 1                         0 −1 −1
+                          ©       ª                     ©        ª
+                    𝑃0 = ­­ 1 0 0®®,              𝑃1 = ­­ 1 0 0 ®®,               ( 𝑑0 , 𝑑1 ) = (3, 4) .
+                          «0 1 0¬                       «0 0 1 ¬
+Define 𝐺𝑖 = ( 𝑋𝑖 × ℝ)/( [ 𝑦, 𝜏 + 1] = [ 𝑃𝑖 𝑦, 𝜏 ]), and let 𝑁𝑖 = 𝐺𝑖 × 𝐷 2 . The ordered coordinate
+changes are
+                              0 −1 −1 4                       1 1 0 −1
+                             ©                ª             ©            ª
+                             ­0 0 −1 2 ®                    ­0 1 0 −1®
+                     𝐵0 = ­  ­
+                                              ®,
+                                              ®       𝐵1 = ­­            ®.                   (1.1)
+                             ­ 1  1   1   −6  ®             ­0  −1  1 3  ®
+                                                                         ®
+                             «0 0 0 1 ¬                     «0 0 0 1 ¬
+Write ( 𝑦𝑖 , 𝑡 ) 𝑡 = 𝐵 𝑖−1 𝑎, so 𝑡 = 𝑎4 . The boundary maps and their core restrictions are
+
+                          𝑗0 [ 𝑎, 𝑣 ] = ( [ 𝑦0 , 3𝑡 + 𝑣 ] , 𝑒 −2𝜋 𝑖𝑡 ) , 𝑓0 ( 𝑎) = [ 𝑦0 , 3𝑡 ] ,
+                                                                                                              (1.2)
+                           𝑗1 [ 𝑎, 𝑣 ] = ( [ 𝑦1 , 4𝑡 − 𝑣 ] , 𝑒 2𝜋 𝑖𝑡 ) ,   𝑓1 ( 𝑎) = [ 𝑦1 , 4𝑡 ] .
+
+
+                                                               1
+Indeed 𝐵 0−1𝑇0 𝐵 0 = diag( 𝑃0 , 1) and 𝐵 1−1𝑇1 𝐵 1 = diag( 𝑃1−1 , 1). These identities verify the meridian seams.
+The two circle matrices have determinant one, and 𝐵 𝑖 is unimodular. Thus 𝑗𝑖 are diffeomorphisms and
+𝑓𝑖 are coverings of degrees 𝑑𝑖 . Use the induced boundary orientations to form
+
+                                𝑊 = 𝐸 ∪𝑗0 𝑁0 ∪𝑗1 𝑁1 ,               𝜕𝑊 = 𝐵𝑇∞ .
+
+This is a specified compact real six-manifold.
+   The base retracts onto its two finite boundary circles joined by an arc. Flat transport lifts this retraction
+to 𝐸 . Attach the two fillings using boundary collars and then contract their disk factors. This gives a
+homotopy equivalence with the double mapping cylinder
+
+                                      𝐷 = 𝐺0 ∪ 𝑓0 ( 𝐹 × [0, 1]) ∪ 𝑓1 𝐺1 .
+
+It retains the meridian homotopies [ 𝑦0 , 3𝑡 + 𝑣 ] and [ 𝑦1 , 4𝑡 − 𝑣 ]. In particular, the positive cusp path
+first traverses 𝛾0−1 and then 𝛾1−1 , with the joining arc between them.
+    These maps admit finite compatible triangulations. Intersect the finitely many 𝑃𝑖 -translates of a
+rational torus subdivision. Triangulate that intersection and use its prisms for 𝐺𝑖 . Cut the source of 𝑓𝑖
+at integral values of 𝑑𝑖 𝑡 and at inverse images of target faces. Common refinements give cellular maps
+and the double mapping cylinder. Every additional rational subtorus below can be included by the same
+refinement. There is no requirement for one finite triangulation invariant under both 𝑇0 and 𝑇1 .
+    We use the chain cone
+
+                                        D𝑛 = 𝐶𝑛 ( 𝐺0 ) ⊕ 𝐶𝑛 ( 𝐺1 ) ⊕ 𝐶𝑛−1 ( 𝐹 ) ,
+                                                                                                            (1.3)
+                              𝑑 ( 𝑎0 , 𝑎1 , 𝑏 ) = ( 𝑑𝑎0 + 𝑓0∗ 𝑏, 𝑑𝑎1 − 𝑓1∗ 𝑏, − 𝑑𝑏 ) .
+
+Here 𝐶∗ can be the compatible cellular chains or piecewise smooth singular chains. Subdivision and
+prism comparisons identify the two diagrams. The shifted term uses the negative of the interval-first
+cylinder orientation. The resulting exact sequence contains
+
+                                                     𝜕
+                   0 −→ coker 𝐽3 −→ 𝐻3 (𝑊 ) −
+                                            → ker 𝐽2 −→ 0,                     𝐽𝑛 = ( 𝑓0∗ , − 𝑓1∗ ) .      (1.4)
+
+The connecting map sends a cone cycle to [ 𝑏 ].
+
+
+2    Integral three-cycles in the finite cores
+Write 𝑥1 , 𝑥2 , 𝑥3 for the separate ordered coordinate bases of 𝑋𝑖 . Let 𝐴𝑖 ∈ 𝐻3 ( 𝐺𝑖 ) be the oriented fibre
+three-torus. The invariant oriented planes have primitive bivectors
+
+                                 𝑤 0 = 𝑥1 𝑥2 − 𝑥1 𝑥3 + 𝑥2 𝑥3 ,        𝑤 1 = 𝑥1 𝑥2 .
+
+Juxtaposition denotes exterior product. Their primitive sublattices are ⟨ 𝑥1 − 𝑥3 , 𝑥2 − 𝑥3 ⟩ and ⟨ 𝑥1 , 𝑥2 ⟩.
+The matrices 𝑃𝑖 preserve these sublattices with determinant one. Let 𝑆𝑖 be the fundamental class of the
+positive core mapping torus of that plane.
+   The core Wang sequence is
+                                  3
+                                  ^                                        2
+                                                                           ^
+                   0 −→ coker(        𝑃𝑖 − 𝐼 ) −→ 𝐻3 ( 𝐺𝑖 ) −→ ker(            𝑃𝑖 − 𝐼 ) −→ 0.
+
+
+                                                         2
+It follows directly from the interval-prism differential. Since det 𝑃𝑖 = 1, its left group is ℤ 𝐴𝑖 . Solving the
+exterior-square equations gives ℤ𝑤 𝑖 on the right. The class 𝑆𝑖 maps to 𝑤 𝑖 . Thus ( 𝐴𝑖 , 𝑆𝑖 ) is an integral
+basis of 𝐻3 ( 𝐺𝑖 ).
+    In the adapted source basis ( 𝑥1 , 𝑥2 , 𝑥3 , 𝑡 ), the covering matrices are
+                                                        !                          !
+                                    1   0      0      0                 1 0   0 0
+                           𝐹0ad
+                             ,3 =                         ,    𝐹1,ad3 =              .
+                                   0 1 −1 1                             0 4 2 −2
+
+Their columns are the lexicographic exterior triples. To verify the second rows, divide the covering interval
+                                                                             P 𝑖 −1 V2 𝑟
+into 𝑑𝑖 pieces. On a mixed three-torus, the pieces contribute the norm 𝑟𝑑=0             𝑃𝑖 . Moving the last
+interval to the first position contributes sign +1. The two norm matrices are the columns 𝑤 𝑖 times the
+rows (1, −1, 1) and (4, 2, −2), respectively. The first row on a mixed three-torus is zero: the invariant
+volume form 𝑑𝑦1 ∧ 𝑑𝑦2 ∧ 𝑑𝑦3 has only two independent fibre derivatives there. It integrates to one on
+𝐴𝑖 and zero on 𝑆𝑖 . This excludes an additional fibre-volume coefficient.
+   Transforming by 3 𝐵 𝑖−1 gives the actual fibre maps
+                       V
+
+                                             !                                     !
+                                    1 6 2 −4                             1 −3 −1 1
+                             𝐹0,3 =            ,                  𝐹1,3 =             .
+                                    0 3 1 −2                             0 6 2 −4
+
+Consequently
+                                                       1 6 2 −4
+                                                     ©             ª
+                                                     ­0 3    1 −2®®
+                                                𝐽3 = ­
+                                                     ­
+                                                     ­−1 3   1 −1 ®®
+                                                     « 0 −6 −2 4 ¬
+in target basis ( 𝐴0 , 𝑆0 , 𝐴1 , 𝑆1 ). Its second column is three times its third. Its first, third, and fourth
+columns, followed by (0, 0, 0, 1) 𝑡 , form a determinant-one matrix. Hence
+
+                      coker 𝐽3 = ℤ𝑐,           𝑐 = [ 𝑆1 ] ,       𝑞 = (0, 2, 0, 1) ,       𝑞 ( 𝑐 ) = 1.
+
+The primitive row 𝑞 annihilates 𝐽3 .
+   We also need the degree-two fibre relations. The degree-two core bases consist of one fibre torus
+and the mapping torus of 𝑈0 = (1, 1, 1) 𝑡 or 𝑈1 = (−1, −1, 2) 𝑡 . The fibre quotient rows are (1, −1, 1)
+and (2, 1, −1). The mixed-torus coefficients are the negative norms of 𝑃𝑖 on 𝐻1 ( 𝑋𝑖 ). Invariant vertical
+two-forms exclude a residual fibre coefficient, as above. This gives
+
+                                                 3 1 0 −2 0 0
+                                               ©               ª
+                                               ­ 0 0 0 0 0 −1®
+                                          𝐽2 = ­
+                                               ­               ®.                                                       (2.1)
+                                               ­−3 −1 0 2 −3 −1®
+                                                               ®
+
+                                               «0 0 0 0 2 2¬
+Its source basis is ( 𝑒1 𝑒2 , 𝑒1 𝑒3 , 𝑒1 𝑒4 , 𝑒2 𝑒3 , 𝑒2 𝑒4 , 𝑒3 𝑒4 ). An integral vector 𝑦 belongs to its kernel exactly when
+
+                                       𝑦5 = 𝑦6 = 0,           3𝑦1 + 𝑦2 − 2𝑦4 = 0.                                       (2.2)
+
+
+
+
+                                                              3
+3    Four actual meridian three-manifolds
+Use the ordered fibre basis
+
+                           𝛼1 = 𝑒1 − 𝑒3 ,    𝛼2 = 𝑒3 − 𝑒2 ,       𝛽1 = 𝑒3 ,    𝛽2 = 𝑒4 .
+
+It is unimodular, and 𝑇∞ 𝛼𝑗 = 𝛼𝑗 , 𝑇∞ 𝛽𝑗 = 𝛽𝑗 + 𝛼𝑗 . Consider the four primitive invariant subtori with
+oriented bivectors
+
+                   𝑣1 = 𝛼1 𝛼2 ,   𝑣2 = 𝛼1 𝛽1 ,   𝑣3 = 𝛼2 𝛽2 ,       𝑣4 = ( 𝛼1 + 𝛼2 ) ( 𝛽1 + 𝛽2 ) .     (3.1)
+
+Let 𝑉𝑗 be the corresponding oriented torus and 𝑀𝑗 = [ 𝑀 (𝑉𝑗 )] its positive mapping-torus fundamen-
+tal class in 𝐻3 ( 𝐵𝑇∞ ). The first restricted monodromy is the identity. Each of the other three has matrix
+( 01 11 ) in the displayed ordered basis. Thus these are actual closed oriented three-manifolds.
+      The following chain construction retains their nontrivial seams. Choose a finite oriented fundamental
+surface chain 𝑢𝑗 in 𝑉𝑗 . There is a piecewise smooth singular three-chain 𝑎𝑗 , supported in 𝑉𝑗 , with
+
+                                             𝑑𝑎𝑗 = 𝑇∞∗ 𝑢𝑗 − 𝑢𝑗 .                                      (3.2)
+
+To construct it, take a common refinement of the triangulations for 𝑢𝑗 and 𝑇∞∗ 𝑢𝑗 . Let 𝑝𝑗 , 𝑝𝑗′ be
+their subdivision prisms to its same oriented fundamental chain 𝑢𝑗′ . Then 𝑑 𝑝𝑗 = 𝑢𝑗′ − 𝑢𝑗 and 𝑑 𝑝𝑗′ =
+𝑢𝑗′ − 𝑇∞∗ 𝑢𝑗 . Set 𝑎𝑗 = 𝑝𝑗 − 𝑝𝑗′ . The prism maps stay in 𝑉𝑗 . This construction uses surface-chain
+subdivision, without a homotopy between the identity map and the restricted unipotent automorphism.
+    Put 𝑢𝑗− = 𝑇0∗−1 𝑢𝑗 . Let 𝑅𝑖 be the first three rows of 𝐵 𝑖−1 . The two inverse-meridian prisms, extended
+linearly over surface chains, are
+
+                     𝑄0 ( 𝑣, 𝑎) = [ 𝑅0 𝑎, 3 𝑎4 − 𝑣 ] ,         𝑄1 ( 𝑣, 𝑎) = [ 𝑅1 𝑎, 4 𝑎4 + 𝑣 ] .       (3.3)
+
+They define actual smooth maps [0, 1] × 𝐹 → 𝐺𝑖 . The period relations make these formulas indepen-
+dent of the lift of 𝑎. Their endpoint identities give
+
+                    𝑑𝑄0 ( 𝑢𝑗 ) = 𝑓0∗ ( 𝑢𝑗− − 𝑢𝑗 ) ,          𝑑𝑄1 ( 𝑢𝑗− ) = 𝑓1∗ (𝑇∞∗ 𝑢𝑗 − 𝑢𝑗− ) .
+
+Thus the actual global cycle is
+
+                           𝑍 𝑗 = 𝑄0 ( 𝑢𝑗 ) , 𝑄1 ( 𝑢𝑗− ) − 𝑓1∗ 𝑎𝑗 , 𝑢𝑗 − 𝑢𝑗− ∈ D3 .
+                                                                           
+                                                                                                      (3.4)
+
+Substituting (3.2) into (1.3) gives 𝑑𝑍 𝑗 = 0 in each component, with the displayed signs. Cutting 𝑀 (𝑉𝑗 )
+along its marked fibre gives its interval prism and the seam correction − 𝑎𝑗 . The spine retraction takes
+these pieces to (3.4). Therefore [ 𝑍 𝑗 ] = 𝑏∞∗ 𝑀𝑗 for the actual boundary inclusion.
+
+
+
+
+                                                         4
+    The connecting vectors are 𝜕 [ 𝑍 𝑗 ] = ( 𝐼 −            𝑇0−1 ) 𝑣𝑗 . Their complete matrix is
+                                                      V2
+
+
+                                                    ©−1      0        0 −1ª
+                                                    ­3       2        0 3 ®®
+                                                    ­
+                                                    ­0       0        2 3 ®®
+                                               𝐷2 = ­
+                                                    ­
+                                                                           ®.
+                                                    ­0       1        0 0®
+                                                    ­                      ®
+                                                    ­0       0        0 0 ®®
+                                                    ­
+                                                    «0       0        0 0¬
+
+Its columns 𝑑𝑗 satisfy (2.2). The three vectors 𝑑1 , 𝑑2 , 𝑑3 − 𝑑4 form an integral basis of that kernel. Indeed,
+in those coordinates an element is
+
+                              (−𝑟 + 𝑡, 3𝑟 + 2 𝑠 − 3𝑡, −𝑡, 𝑠, 0, 0) ,               ( 𝑟, 𝑠, 𝑡 ) ∈ ℤ3 ,
+
+and (2.2) gives the unique inverse coordinates. Solving 𝐷2 𝑛 = 0 over ℤ gives
+
+                                             ker 𝐷2 = ℤ(−2, 0, −3, 2) 𝑡 .                                  (3.5)
+
+The corresponding combination of the 𝑍 𝑗 lies in the core subgroup ℤ𝑐 . Its coefficient is the remaining
+integral question.
+
+
+4      A closed cochain determines the primitive relation
+On 𝑋0 and 𝑋1 , respectively, put
+
+     𝜔0 = 𝑑𝑦1 ∧ 𝑑𝑦2 − 𝑑𝑦1 ∧ 𝑑𝑦3 + 𝑑𝑦2 ∧ 𝑑𝑦3 ,                     𝜔1 = 2 𝑑𝑦1 ∧ 𝑑𝑦2 + 𝑑𝑦1 ∧ 𝑑𝑦3 − 𝑑𝑦2 ∧ 𝑑𝑦3 .
+
+Each is 𝑃𝑖 -invariant. Define the closed core forms
+
+                                       𝜃 0 = 23 𝑑𝜏 ∧ 𝜔0 ,             𝜃 1 = 21 𝑑𝜏 ∧ 𝜔1 .                   (4.1)
+
+The integrals of 𝜔0 , 𝜔1 on the invariant planes 𝑤0 , 𝑤1 are 3 and 2. Consequently the pair of forms evaluates
+on ( 𝐴0 , 𝑆0 , 𝐴1 , 𝑆1 ) as (0, 2, 0, 1). Its restriction to the core quotient is the primitive homomorphism 𝑞 .
+   The actual pullbacks agree as differential forms on 𝐹 :
+
+    𝑓0∗ 𝜃 0 = 𝑓1 ∗ 𝜃 1 = 𝜂,      𝜂 = 6 𝑑𝑎1 ∧ 𝑑𝑎2 ∧ 𝑑𝑎4 + 2 𝑑𝑎1 ∧ 𝑑𝑎3 ∧ 𝑑𝑎4 − 4 𝑑𝑎2 ∧ 𝑑𝑎3 ∧ 𝑑𝑎4 .           (4.2)
+
+Here 𝑎1 , . . . , 𝑎4 are the real coordinates in the 𝑒 basis. This equality follows by substituting (1.1) into
+(4.1). It is an equality of constant forms, including all coefficients.
+    On the piecewise smooth chain cone define
+                                                             ∫      ∫
+                                        L ( 𝑎0 , 𝑎 1 , 𝑏 ) =   𝜃0 +   𝜃1 .
+                                                                 𝑎0           𝑎1
+
+For
+∫ a boundary,∫       Stokes’ formula gives zero on the two core differentials. The remaining terms are
+   𝑓 ∗𝜃 −       𝑓 ∗ 𝜃 = 0. Thus L is a real homology functional. It need not be integral on every global
+ 𝑏 0 0        𝑏 1 1
+class. Its restriction to the integral core subgroup is exactly 𝑞 .
+
+
+
+                                                             5
+                                                                         ∫
+  Each 𝑎𝑗 in (3.2) is supported in a two-dimensional torus. Therefore 𝑎 𝜂 = 0. In the first prism, the
+                                                                            𝑗
+meridian derivative of the core parameter is −1. In the second prism it is +1. Their fibre derivatives give
+                                                 2
+                                                 ^                     2
+                                                                       ^
+                                                      𝑅0 ) 𝑣𝑗 + 21 𝜔1 ( ( 𝑅1𝑇0−1 )) 𝑣𝑗 .
+                                                                                     
+                         L ( 𝑍 𝑗 ) = − 23 𝜔0 (
+
+In the 𝑒 exterior basis, this evaluation row is
+
+                                           𝜆 = (− 21 , − 61 , − 23 , 31 , 0, −1) .
+
+Its four values on (3.1) are
+
+                          (L ( 𝑍 1 ) , L ( 𝑍 2 ) , L ( 𝑍 3 ) , L ( 𝑍 4 )) = (0, − 61 , −1, −2) .
+
+The fractional second value is compatible with the stated real coefficient field. Using (3.5), the integral
+core class −2[ 𝑍 1 ] − 3[ 𝑍 3 ] + 2[ 𝑍 4 ] has evaluation −1. Since 𝑞 ( 𝑐 ) = 1 on the free core subgroup, this
+proves the integral relation
+
+                               −2[ 𝑍 1 ] − 3[ 𝑍 3 ] + 2[ 𝑍 4 ] = −𝑐         in 𝐻3 (𝑊 ; ℤ) .                (4.3)
+
+In particular, the relation produces a primitive core class. No intersection or linking pairing is needed
+for this calculation.
+
+
+5    The integral attaching matrix
+Set 𝑡1 = [ 𝑍 1 ], 𝑡2 = [ 𝑍 2 ], and 𝑡3 = [ 𝑍 3 ] − [ 𝑍 4 ]. Their connecting classes form the integral basis of
+ker 𝐽2 given above. They therefore split (1.4). Together with 𝑐 , they are an integral basis of 𝐻3 (𝑊 ).
+Equation (4.3) now gives
+
+                                                                1           0 −2 −2
+                                                              ©                      ª
+                                                              ­0            1 0 0 ®®
+                                 𝑏∞∗ ( 𝑀1 , 𝑀2 , 𝑀3 , 𝑀4 ) = ­­                                            (5.1)
+                                                              ­0            0 −2 −3 ®®
+                                                              «0            0 1   1¬
+
+in the target basis ( 𝑡1 , 𝑡2 , 𝑡3 , 𝑐 ). The determinant is one. This proves both the image and kernel over the
+integers.
+    We state the marked cusp input for the complete attachment. Let 𝑁𝑐 be a compact smooth cusp
+neighborhood with boundary 𝐵 = 𝐵𝑇∞ . Let 𝑘 : 𝐵 → 𝑁𝑐 be its actual marked inclusion. Assume its
+degree-three homology is free of rank two, and that
+                                4
+                                M
+                   𝐻3 ( 𝐵 ) =          ℤ 𝑀𝑗 ⊕ ℤ𝐶1 ⊕ ℤ𝐶2 ,                𝑘∗ 𝑀𝑗 = 0,       𝑘∗ 𝐶 𝑖 = 𝑛 𝑖 ,   (5.2)
+                                𝑗 =1
+
+where ( 𝑛1 , 𝑛2 ) is an integral basis of 𝐻3 ( 𝑁𝑐 ). The fibre classes 𝐶1 , 𝐶2 are the actual oriented three-
+tori 𝛼1 𝛽1 𝛽2 and 𝛼2 𝛽1 𝛽2 . These are the local data of the marked toric specialization with periods
+( 𝑞𝑐1 , 𝑐2 ) , ( 𝑐3 , 𝑞𝑐4 ) and its retained section. The local identification must preserve the actual meridian
+homotopy.
+
+
+                                                             6
+   For clarity, the boundary-group splitting in (5.2) has a direct integral check. The four 𝑣𝑗 form a basis
+of ker( 2 𝑇∞ − 𝐼 ). The fibre quotient in degree three is freely generated by 𝐶1 , 𝐶2 . The actual 𝑀𝑗
+        V
+project to 𝑣𝑗 in the Wang sequence. For the marked toric collapse, their images have two-dimensional
+carriers, and the fibre map sends 𝐶𝑖 to 𝑛𝑖 . These geometric properties are the local input in (5.2).
+   The fibre inclusion into 𝑊 lands in the core quotient. The evaluation (4.2) gives 𝑏∞∗ 𝐶1 = 2𝑐 and
+𝑏∞∗ 𝐶2 = 4𝑐 . Consequently the full degree-three attaching map is
+
+                                                     ©1     0 −2 −2 0 0 ª
+                                                     ­0     1 0 0 0 0 ®®
+                                                     ­
+                                                     ­0     0 −2 −3 0 0 ®®
+                                    ( 𝑏∞∗ , −𝑘∗ )3 = ­
+                                                     ­
+                                                                         ®.                                 (5.3)
+                                                     ­0     0 1   1 2 4®
+                                                     ­                   ®
+                                                     ­0
+                                                     ­      0 0 0 −1 0 ®®
+                                                     «0     0 0 0 0 −1¬
+
+The source basis is ( 𝑀1 , 𝑀2 , 𝑀3 , 𝑀4 , 𝐶1 , 𝐶2 ). The target basis is ( 𝑡1 , 𝑡2 , 𝑡3 , 𝑐, 𝑛1 , 𝑛2 ).
+Theorem 5.1. For the specified real fillings, 𝐻3 (𝑊 ; ℤ) = ℤ4 , with basis ( 𝑡1 , 𝑡2 , 𝑡3 , 𝑐 ). The actual merid-
+ian map (5.1) is an integral isomorphism. Under the marked cusp data (5.2), the full map (5.3) is an integral
+isomorphism. Both its kernel and cokernel vanish.
+
+Proof. The global sequence, the basis of its quotient, and the primitive relation give the stated integral
+basis. The meridian determinant is one. The last two diagonal entries of the full block matrix are both
+−1, so its determinant is also one.
+
+    To determine 𝐻3 (𝑌 ) for 𝑌 = 𝑊 ∪ 𝐵 𝑁𝑐 , the preceding attaching map in degree two must also be
+injective. Here is the exact local input and its integral verification. Assume 𝑘∗,2 is onto with kernel the two
+angular meridian tori 𝑧 𝑖 = 𝑀 ( 𝛼𝑖 ). The one-dimensional version of the actual prisms (3.3) gives their
+connecting images ( 𝐼 − 𝑇0−1 ) 𝛼𝑖 = 𝑒1 , 2𝑒1 . The difference 𝑧2 − 2 𝑧1 has fibre circle 𝛿 = −2𝑒1 − 𝑒2 + 3𝑒3 ,
+fixed by both finite monodromies. Its core images are the negative 𝑈0 mapping torus and the positive
+𝑈1 mapping torus. In the degree-two core basis, their sum is 𝑐2 = (0, −1, 0, 1) 𝑡 . Columns 2, 5, 6 of (2.1),
+followed by 𝑐2 , have determinant one. The degree-one fibre map, obtained directly from (1.2), is
+
+                                                      0 0 1 6
+                                                     ©          ª
+                                                     ­0 0 0 3 ®
+                                                𝐽1 = ­
+                                                     ­          ®.
+                                                     ­0 −1 −1 2 ®
+                                                                ®
+
+                                                     «0 0 0 −4¬
+Its rows give the integral kernel ℤ𝑒1 . Thus the two actual angular meridian tori map isomorphically
+onto 𝐻2 (𝑊 ). If an element of 𝐻2 ( 𝐵 ) is killed by both 𝑏∞∗ and 𝑘∗ , it belongs to their two-dimensional
+meridian subgroup and is zero. This proves the needed injectivity of ( 𝑏∞∗ , −𝑘∗ )2 .
+Corollary 5.2. For the specified marked toric attachment, with the local data just stated,
+
+                                                     𝐻3 (𝑌 ; ℤ) = 0.
+
+In particular, this group has no torsion.
+
+
+
+
+                                                             7
+Proof. The Mayer–Vietoris sequence gives
+
+                              coker( 𝑏∞∗ , −𝑘∗ )3 −→ 𝐻3 (𝑌 ) −→ ker( 𝑏∞∗ , −𝑘∗ )2 .
+
+Both outer groups vanish by the actual matrices and the preceding argument.
+
+    The complex-family question retains a separate geometric comparison. It concerns 𝑌 ( 𝑢, 𝑎0 , 𝑎1 ) for all
+sufficiently small nonzero complex 𝑢 and primitive increments 𝑎0 ∈ 31 Λ𝑇0 , 𝑎1 ∈ 41 Λ𝑇1 , with |12𝑒4∗ ( 𝑎0 +
+𝑎1 )| = 1. The desired conclusion is a diffeomorphism of the underlying smooth manifold with 𝑆 6 . The
+present finite maps use 𝑎0 = 𝑒4 /3 and 𝑎1 = −( 𝑒1 + 𝑒4 )/4. Application requires an actual comparison
+of the punctured complex family with 𝐸 , relative to all three marked boundaries and the section. More
+precisely, if E𝑢 → Σ is that restricted family, the next map is a fibre-preserving diffeomorphism Φ𝑢 :
+E𝑢 → 𝐸 carrying its section to the zero section. Its three boundary restrictions must equal the specified
+period markings. For each local filling, an extension Ψ𝑖 : N𝑢,𝑖 → 𝑁𝑖 must satisfy Ψ𝑖 𝑗𝑖           = 𝑗𝑖 Φ𝑢
+                                                                                             geom
+
+on the corresponding boundary. The analogous equation must hold for the marked cusp filling. Its
+finite lifted translations must extend smoothly and equivariantly, with proper quotients, the specified
+periods, and conormal comparisons 𝑒 = 𝑠 −2 𝑒 ′ and 𝑒 = 𝑠 −1 𝑒 ′ . Those maps, the other permitted affine
+increments, and the remaining topology are separate from the third-homology calculation. The toric
+and complex-geometric constructions motivating this question are described in [1, Sections 2–4].
+
+
+References
+[1] P. Engel, Complex structures on 𝑆 6 , author manuscript, Propositions 2.7–2.9 and Sections 3–4.
+
+
+
+
+                                                             8
+

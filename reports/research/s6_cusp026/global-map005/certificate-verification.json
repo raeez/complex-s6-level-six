@@ -1,0 +1,13 @@
+{
+  "python": "3.9.6",
+  "arithmetic": "Standard-library integers and fractions",
+  "smith_certificates_verified": 10,
+  "covering_maps_reconstructed": true,
+  "integral_global_relations_verified": true,
+  "connecting_map_recomputed": true,
+  "literal_seam_boundary_verified": true,
+  "matching_three_forms_recomputed": true,
+  "primitive_relation_evaluation": -1,
+  "full_degree_three_determinant": 1,
+  "scope": "Finite exact calculations; source proof supplies geometric comparisons and map identifications."
+}

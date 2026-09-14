@@ -1,0 +1,21 @@
+{
+  "pages": 8,
+  "characters_per_page": [
+    3354,
+    3247,
+    3856,
+    2591,
+    3145,
+    3346,
+    3884,
+    1827
+  ],
+  "pdf_sha256": "e1696761fdb10bdbb7b66ecbe10271c7e4d3c11afe9232ad8b23feb360d10dd0",
+  "visual_inspection": "All eight pages inspected. Pages 6 and 8 rendered and inspected again after the final plus-sign correction and geometric comparison expansion.",
+  "firewall": "No prohibited production narration in manuscript, extracted PDF text, or PDF title/subject/author metadata.",
+  "public_source_scan": "No closed-source paths in manuscript or extracted text.",
+  "prior_manifest_entries_unchanged": 77,
+  "pdflatex": "pdfTeX 1.40.27 (TeX Live 2025)",
+  "poppler": "26.02.0",
+  "render_issue_repaired": "Missing plus sign in the cochain display; final exact source and raster have the plus sign."
+}

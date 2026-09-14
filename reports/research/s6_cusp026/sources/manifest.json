@@ -1,0 +1,10 @@
+{
+  "nakayama-ogus.pdf": {
+    "url": "https://math.berkeley.edu/~ogus/preprints/nakayamaogus.pdf",
+    "sha256": "e0475c01c1a41634a2390cf283417abe17ca2f547833e846a361b02c074cf094"
+  },
+  "engel.pdf": {
+    "url": "https://philip-engel.github.io/S6.pdf",
+    "sha256": "81ad7344e61d2c3e53a829a41c43161f1d64edfe2d2a534db898cf2231d65bc1"
+  }
+}

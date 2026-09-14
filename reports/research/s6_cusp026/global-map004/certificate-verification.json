@@ -1,0 +1,9 @@
+{
+  "python": "3.9.6",
+  "arithmetic": "Standard-library integers and fractions",
+  "certificates_verified": 8,
+  "covering_maps_recomputed_from_coordinate_bases": true,
+  "primitive_relation_lattice_verified": true,
+  "meridian_connecting_vectors_recomputed": true,
+  "scope": "Finite arithmetic verification; geometric comparison requires source review."
+}

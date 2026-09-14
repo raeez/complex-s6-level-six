@@ -1,0 +1,22 @@
+Title:           The Third Homology of a Marked Cusp Attachment
+Subject:         Integral third homology and meridian mapping tori
+Keywords:        
+Author:          Raeez Lorgat
+Creator:         LaTeX with hyperref
+Producer:        pdfTeX-1.40.27
+CreationDate:    Mon Sep 14 07:00:00 2026 WIB
+ModDate:         Mon Sep 14 07:00:00 2026 WIB
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           8
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       160212 bytes
+Optimized:       no
+PDF version:     1.7

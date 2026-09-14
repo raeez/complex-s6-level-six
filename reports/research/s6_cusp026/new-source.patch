@@ -1,0 +1,1072 @@
+diff --git a/research-candidates/s6_cusp026/build.py b/research-candidates/s6_cusp026/build.py
+new file mode 100644
+index 0000000..2d26df0
+--- /dev/null
++++ b/research-candidates/s6_cusp026/build.py
+@@ -0,0 +1,53 @@
++"""Build the mathematical module and record exact inputs and diagnostics."""
++import hashlib
++import json
++import os
++from pathlib import Path
++import subprocess
++
++source = Path(__file__).resolve().parent
++report = source.parents[1] / "reports/research/s6_cusp026"
++output = report / "build"
++output.mkdir(parents=True, exist_ok=True)
++environment = os.environ.copy()
++environment.update(SOURCE_DATE_EPOCH="1789344000", FORCE_SOURCE_DATE="1")
++command = ["pdflatex", "-no-shell-escape", "-recorder", "-interaction=nonstopmode",
++           "-halt-on-error", "-file-line-error", "-output-directory=" + str(output), "paper.tex"]
++previous = None
++passes = []
++for number in range(1, 7):
++    process = subprocess.run(command, cwd=source, env=environment,
++                             stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
++    (output / f"pass-{number:02d}.log").write_bytes(process.stdout)
++    if process.returncode:
++        raise SystemExit(process.stdout.decode(errors="replace")[-8000:])
++    state = {name: hashlib.sha256((output / name).read_bytes()).hexdigest()
++             for name in ["paper.aux", "paper.out", "paper.pdf"] if (output / name).exists()}
++    passes.append({"number": number, "exit_code": process.returncode, "state": state})
++    if number >= 2 and state == previous:
++        break
++    previous = state
++else:
++    raise SystemExit("References and PDF did not converge in six passes")
++log = (output / "paper.log").read_text(errors="replace")
++fatal = ["undefined references", "multiply defined", "destination with the same identifier",
++         "Missing character", "LaTeX Error", "Token not allowed", "Overfull"]
++diagnostics = [line for line in log.splitlines() if any(item in line for item in fatal)]
++if diagnostics:
++    raise SystemExit("\n".join(diagnostics))
++inputs = {}
++for line in (output / "paper.fls").read_text().splitlines():
++    if line.startswith("INPUT "):
++        path = Path(line[6:])
++        if not path.is_absolute():
++            path = source / path
++        path = path.resolve()
++        if path.is_file() and not path.is_relative_to(output):
++            inputs[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
++record = {"command": command, "source": str(source), "output": str(output),
++          "environment": {key: environment[key] for key in ["SOURCE_DATE_EPOCH", "FORCE_SOURCE_DATE"]},
++          "passes": passes, "input_sha256": inputs, "diagnostics": diagnostics,
++          "pdf_sha256": state["paper.pdf"]}
++(report / "build.json").write_text(json.dumps(record, indent=2) + "\n")
++print(json.dumps({"passes": len(passes), "pdf_sha256": state["paper.pdf"],
++                  "input_count": len(inputs), "diagnostics": diagnostics}, indent=2))
+diff --git a/research-candidates/s6_cusp026/check_cusp.py b/research-candidates/s6_cusp026/check_cusp.py
+new file mode 100644
+index 0000000..aaac622
+--- /dev/null
++++ b/research-candidates/s6_cusp026/check_cusp.py
+@@ -0,0 +1,241 @@
++"""Derive integral chains from the toric polygon and retain Smith certificates."""
++from itertools import combinations
++from pathlib import Path
++import json
++import platform
++
++import sympy as sp
++from sympy.polys.matrices import DomainMatrix
++from sympy.polys.matrices.normalforms import smith_normal_decomp
++
++
++def integer_rows(matrix):
++    return [[int(value) for value in row] for row in matrix.tolist()]
++
++
++def smith_certificate(matrix):
++    domain_matrix = DomainMatrix.from_Matrix(matrix).convert_to(sp.ZZ)
++    diagonal, left, right = smith_normal_decomp(domain_matrix)
++    diagonal, left, right = [item.to_Matrix() for item in (diagonal, left, right)]
++    assert left * matrix * right == diagonal
++    assert abs(left.det()) == abs(right.det()) == 1
++    factors = [abs(int(diagonal[i, i]))
++               for i in range(min(diagonal.shape)) if diagonal[i, i]]
++    assert all(b % a == 0 for a, b in zip(factors, factors[1:]))
++    return {
++        "matrix": integer_rows(matrix), "diagonal": integer_rows(diagonal),
++        "left": integer_rows(left), "right": integer_rows(right),
++        "factors": factors, "rank": len(factors),
++        "identity": "left * matrix * right = diagonal",
++    }
++
++
++def exterior(matrix, degree):
++    bases = list(combinations(range(matrix.rows), degree))
++    return sp.Matrix([[matrix.extract(rows, columns).det()
++                       for columns in bases] for rows in bases])
++
++
++vertices = [sp.Matrix(v) for v in
++            [(1, 0), (0, 1), (-1, 1), (-1, 0), (0, -1), (1, -1)]]
++Q = sp.Matrix([[2, -1], [-1, 2]])
++assert Q.det() == 3
++vertex_class = []
++for vertex in vertices:
++    match = [i for i, first in enumerate([vertices[0], vertices[1]])
++             if all(value.q == 1 for value in Q.inv() * (vertex - first))]
++    assert len(match) == 1
++    vertex_class.append(match[0])
++assert vertex_class == [0, 1, 0, 1, 0, 1]
++
++# Each edge representative starts at A and ends at B.
++edge_vertices = [(0, 1), (2, 1), (2, 3)]
++edge_characters = [sp.Matrix([[-1, 1]]), sp.Matrix([[-1, 0]]),
++                   sp.Matrix([[0, 1]])]
++polygon_incidence = []
++for i in range(6):
++    start, end = vertices[i], vertices[(i + 1) % 6]
++    matches = []
++    for edge, (a, b) in enumerate(edge_vertices):
++        for sign, first, last in [(1, a, b), (-1, b, a)]:
++            displacement = Q.inv() * (start - vertices[first])
++            if (all(value.q == 1 for value in displacement)
++                    and end - vertices[last] == start - vertices[first]):
++                matches.append((edge, sign, [int(v) for v in displacement]))
++    assert len(matches) == 1
++    polygon_incidence.append(matches[0])
++
++base = {0: ["A", "B"], 1: ["e0", "e1", "e2"], 2: ["h"]}
++base_d = {1: sp.zeros(2, 3), 2: sp.zeros(3, 1)}
++for j, (first, last) in enumerate(edge_vertices):
++    base_d[1][vertex_class[first], j] -= 1
++    base_d[1][vertex_class[last], j] += 1
++for edge, sign, displacement in polygon_incidence:
++    base_d[2][edge, 0] += sign
++assert base_d[1] * base_d[2] == sp.zeros(2, 1)
++
++angular = [(), (0,), (1,), (0, 1)]
++source = {n: [(p, b, a) for p, names in base.items() for b in names
++              for a in angular if p + len(a) == n] for n in range(5)}
++target = {n: [] for n in range(5)}
++for p, names in base.items():
++    fibre = [()] if p == 0 else ([(), ("eta",)] if p == 1 else angular)
++    for b in names:
++        for a in fibre:
++            target[p + len(a)].append((p, b, a))
++
++source_d, target_d, specialization = {}, {}, {}
++for degree in range(1, 5):
++    matrix = sp.zeros(len(source[degree - 1]), len(source[degree]))
++    for column, (p, cell, angle) in enumerate(source[degree]):
++        if p:
++            for row_base, lower_cell in enumerate(base[p - 1]):
++                coefficient = base_d[p][row_base, base[p].index(cell)]
++                lower = (p - 1, lower_cell, angle)
++                matrix[source[degree - 1].index(lower), column] += coefficient
++    source_d[degree] = matrix
++    target_d[degree] = sp.zeros(len(target[degree - 1]), len(target[degree]))
++target_d[1] = base_d[1]
++target_d[2][:, 3] = base_d[2]
++for angle in range(2):
++    for edge, sign, displacement in polygon_incidence:
++        target_d[3][edge, angle] += sign * edge_characters[edge][angle]
++
++for degree in range(5):
++    matrix = sp.zeros(len(target[degree]), len(source[degree]))
++    for column, (p, cell, angle) in enumerate(source[degree]):
++        if not angle or p == 2:
++            matrix[target[degree].index((p, cell, angle)), column] = 1
++        elif p == 1 and len(angle) == 1:
++            edge = base[1].index(cell)
++            row = target[degree].index((p, cell, ("eta",)))
++            matrix[row, column] = edge_characters[edge][angle[0]]
++    specialization[degree] = matrix
++    if degree:
++        assert target_d[degree] * matrix == specialization[degree - 1] * source_d[degree]
++    if degree >= 2:
++        assert source_d[degree - 1] * source_d[degree] == sp.zeros(
++            len(source[degree - 2]), len(source[degree]))
++        assert target_d[degree - 1] * target_d[degree] == sp.zeros(
++            len(target[degree - 2]), len(target[degree]))
++
++
++def cell_cycle(degree, terms):
++    result = sp.zeros(len(source[degree]), 1)
++    for cell, coefficient in terms:
++        result[source[degree].index(cell)] += coefficient
++    return result
++
++
++def beta_cycle(index, angle=(), sign=1):
++    positive, negative = [("e1", "e0"), ("e0", "e2")][index]
++    return [((1, positive, angle), sign), ((1, negative, angle), -sign)]
++
++
++representatives = {
++    0: [[((0, "A", ()), 1)]],
++    1: [[((0, "A", (0,)), 1)], [((0, "A", (1,)), 1)],
++        beta_cycle(0), beta_cycle(1)],
++    2: [[((0, "A", (0, 1)), 1)], beta_cycle(0, (0,), -1),
++        beta_cycle(1, (0,), -1), beta_cycle(0, (1,), -1),
++        beta_cycle(1, (1,), -1), [((2, "h", ()), 1)]],
++    3: [beta_cycle(0, (0, 1)), beta_cycle(1, (0, 1)),
++        [((2, "h", (0,)), 1)], [((2, "h", (1,)), 1)]],
++    4: [[((2, "h", (0, 1)), 1)]],
++}
++homology_specialization = {}
++for degree, cycles in representatives.items():
++    inclusion = sp.Matrix.hstack(*[cell_cycle(degree, cycle) for cycle in cycles])
++    if degree:
++        assert source_d[degree] * inclusion == sp.zeros(
++            len(source[degree - 1]), len(cycles))
++    image = specialization[degree] * inclusion
++    if degree == 0:
++        projection = sp.Matrix([[1, 1]])
++    elif degree == 1:
++        projection = sp.Matrix([[0, 1, 0], [0, 0, -1]])
++    else:
++        projection = sp.eye(len(target[degree]))
++    homology_specialization[degree] = projection * image
++
++# Independent integer homology reduction verifies the quotient bases.
++def homology_data(cells, differential, degree):
++    current = len(cells[degree])
++    lower = len(cells[degree - 1]) if degree else 0
++    upper = len(cells[degree + 1]) if degree < 4 else 0
++    boundary = differential.get(degree, sp.zeros(lower, current))
++    following = differential.get(degree + 1, sp.zeros(current, upper))
++    diagonal, left, right = smith_normal_decomp(
++        DomainMatrix.from_Matrix(boundary).convert_to(sp.ZZ))
++    diagonal, right = diagonal.to_Matrix(), right.to_Matrix()
++    rank = boundary.rank()
++    incoming = (right.inv() * following)[rank:, :]
++    assert (right.inv() * following)[:rank, :] == sp.zeros(rank, upper)
++    certificate = smith_certificate(incoming)
++    torsion = [d for d in certificate["factors"] if d > 1]
++    return {"free_rank": current - rank - incoming.rank(), "torsion": torsion,
++            "incoming_in_kernel_basis": certificate}
++
++
++T = sp.eye(4)
++T[0, 2] = T[1, 3] = 1
++L = sp.Matrix([[1, 0, 0, 0], [0, -1, 0, 0], [-1, 1, 1, 0], [0, 0, 0, 1]])
++monodromy_certificates, specialization_certificates = {}, {}
++for degree, matrix in homology_specialization.items():
++    monodromy_difference = exterior(T, degree) - sp.eye(matrix.cols)
++    assert matrix * monodromy_difference == sp.zeros(matrix.rows, matrix.cols)
++    pc = smith_certificate(matrix)
++    nc = smith_certificate(monodromy_difference)
++    assert pc["factors"] == [1] * matrix.rows
++    assert nc["factors"] == [1] * (matrix.cols - matrix.rows)
++    specialization_certificates[degree] = pc
++    monodromy_certificates[degree] = nc
++
++# Cone, edge, and seam checks derive from the lattice coordinates.
++cone_determinants = []
++for triangle in [[(0, 0), (1, 0), (1, 1)], [(0, 0), (1, 1), (0, 1)]]:
++    cone = sp.Matrix.hstack(*[sp.Matrix([*vertex, 1]) for vertex in triangle])
++    cone_determinants.append(int(cone.det()))
++    assert cone.det() == 1
++    assert (sp.Matrix([[0, 0, 1]]) * cone) == sp.ones(1, 3)
++
++t, ratio = sp.symbols("t ratio", real=True)
++seams = []
++for edge in range(3):
++    a, b = vertices[edge], vertices[edge + 1]
++    tangent = b - a
++    normal = sp.Matrix([tangent[1], -tangent[0]])
++    normal = normal / sp.gcd(*normal)
++    shift = Q * normal
++    assert a - shift == vertices[(edge + 4) % 6]
++    assert b - shift == vertices[(edge + 3) % 6]
++    assert (edge_characters[edge] * normal)[0] == 0
++    moment = (a + ratio * b) / (1 + ratio)
++    opposite = (a - shift + ratio * (b - shift)) / (1 + ratio)
++    assert sp.simplify(moment - opposite - shift) == sp.zeros(2, 1)
++    assert -t * normal - t * Q.inv() * (-shift) == sp.zeros(2, 1)
++    seams.append({"normal": list(map(int, normal)), "shift": list(map(int, shift))})
++
++source_homology = {degree: homology_data(source, source_d, degree) for degree in range(5)}
++target_homology = {degree: homology_data(target, target_d, degree) for degree in range(5)}
++assert [target_homology[n]["free_rank"] for n in range(5)] == [1, 2, 4, 2, 1]
++assert all(not item["torsion"] for item in target_homology.values())
++result = {
++    "scope": "The toric hexagon and its actual cellular quotient. The geometric comparison is proved in the accompanying mathematical text.",
++    "python": platform.python_version(), "sympy": sp.__version__,
++    "polygon_vertices": [list(map(int, v)) for v in vertices],
++    "vertex_classes": vertex_class, "oriented_polygon_incidence": polygon_incidence,
++    "seams": seams, "cone_determinants": cone_determinants,
++    "source_cells": source, "target_cells": target,
++    "source_boundary_certificates": {n: smith_certificate(m) for n, m in source_d.items()},
++    "target_boundary_certificates": {n: smith_certificate(m) for n, m in target_d.items()},
++    "source_homology": source_homology, "target_homology": target_homology,
++    "cellular_specialization": {n: integer_rows(m) for n, m in specialization.items()},
++    "specialization_certificates": specialization_certificates,
++    "monodromy_difference_certificates": monodromy_certificates,
++    "homology_specialization_e": {n: integer_rows(m * exterior(L.inv(), n))
++                                  for n, m in homology_specialization.items()},
++    "monodromy_alpha_beta": integer_rows(T), "monodromy_e": integer_rows(L * T * L.inv()),
++    "result": "All exact assertions passed. Every Smith decomposition has verified unimodular left and right matrices.",
++}
++print(json.dumps(result, indent=2))
+diff --git a/research-candidates/s6_cusp026/paper.tex b/research-candidates/s6_cusp026/paper.tex
+new file mode 100644
+index 0000000..d2f0ea4
+--- /dev/null
++++ b/research-candidates/s6_cusp026/paper.tex
+@@ -0,0 +1,22 @@
++\documentclass[11pt]{article}
++\usepackage{raeez-math-template}
++\numberwithin{equation}{section}
++\title{Integral Specialization at a Toric Cusp}
++\author{Raeez Lorgat}
++\date{}
++\hypersetup{pdfsubject={Semistable toric degeneration and integral specialization}}
++\begin{document}
++\maketitle
++\begin{abstract}
++A degeneration of complex two-tori with two independent periods of
++order one has a smooth filling from a periodic unimodular fan.
++Its central surface is an angular quotient of a hexagon with opposite
++edges identified. We construct the marked boundary map and its positive
++monodromy, including the meridian of a specified section.
++A finite cellular calculation proves integral surjectivity of
++specialization in every degree. The dual image is exactly the integral
++monodromy-invariant lattice. A smooth comparison retains arbitrary
++holomorphic units in the periods and preserves the entire marking.
++\end{abstract}
++\input{toric-cusp}
++\end{document}
+diff --git a/research-candidates/s6_cusp026/raeez-math-template.sty b/research-candidates/s6_cusp026/raeez-math-template.sty
+new file mode 120000
+index 0000000..d7706d4
+--- /dev/null
++++ b/research-candidates/s6_cusp026/raeez-math-template.sty
+@@ -0,0 +1 @@
++/Users/raeez/latex-template/raeez-math-template.sty
+\ No newline at end of file
+diff --git a/research-candidates/s6_cusp026/toric-cusp.tex b/research-candidates/s6_cusp026/toric-cusp.tex
+new file mode 100644
+index 0000000..276de34
+--- /dev/null
++++ b/research-candidates/s6_cusp026/toric-cusp.tex
+@@ -0,0 +1,660 @@
++\section{A degeneration with marked periods}
++
++The normal circles of a toric divisor determine its integral specialization.
++We compute them for a degeneration of complex two-tori.
++The central surface retains a four-dimensional fundamental class and two
++triple points. Its entire angular quotient is needed for the calculation.
++
++Let $D$ be a complex disk with coordinate $q$, and let
++$c_1,c_2,c_3,c_4$ be specified nowhere-zero holomorphic functions on $D$.
++Over $D^*=D\setminus\{0\}$ consider
++\begin{equation}\label{c26:eq:periods}
++\mathcal F_q=(\mathbb C^*)^2/
++\langle (c_1(q)q,c_2(q)),(c_3(q),c_4(q)q)\rangle.
++\end{equation}
++The group acts by multiplication of the two coordinates.
++We shrink $D$ when necessary. The positive circles of those coordinates
++are $\alpha_1,\alpha_2$. The two displayed periods, in that order, are
++$\beta_1,\beta_2$.
++Choose logarithms of the four units on $D$.
++In additive coordinates the periods form the columns of
++\[
++\Omega(q)=\frac{\log q}{2\pi i}I_2+B(q),
++\qquad
++B(q)=\frac1{2\pi i}
++\begin{pmatrix}\log c_1&\log c_3\\\log c_2&\log c_4\end{pmatrix}.
++\]
++For small $|q|$, the imaginary part of $\Omega$ is invertible.
++Thus the four periods form a real lattice, and \eqref{c26:eq:periods} is compact.
++For a counterclockwise meridian, $\log q$ increases by $2\pi i$.
++Its positive monodromy is
++\begin{equation}\label{c26:eq:T}
++T\alpha_j=\alpha_j,\qquad T\beta_j=\beta_j+\alpha_j,
++\qquad
++T=\begin{pmatrix}1&0&1&0\\0&1&0&1\\0&0&1&0\\0&0&0&1\end{pmatrix}.
++\end{equation}
++Matrices act on columns. Products of based paths traverse the right
++factor first. With this convention, positive transport is conjugation
++by the positive meridian. Its mapping torus is
++\begin{equation}\label{c26:eq:boundary}
++B_T=(F\times[0,1])/((a,1)\sim(Ta,0)),
++\qquad F=\mathbb R^4/\mathbb Z^4.
++\end{equation}
++
++We retain a specified section whose lift, after an integral period
++translation, has two holomorphic unit coordinates at $q=0$.
++Translation by their inverses normalizes this section to $(1,1)$.
++This translation commutes with the period action and extends on each
++toric chart. It does not change the periods or reverse the meridian.
++For application to a geometric family, \eqref{c26:eq:periods} and this
++specified section must be identified with that family's punctured
++neighborhood. The existence of such an identification is an input here.
++The periods and fan occur in Engel's construction
++\cite[Propositions 2.7--2.9, pp.~5--7]{CuspEngel}.
++We use the displayed local data as hypotheses.
++
++\section{The smooth toric filling}
++
++Let $L=\mathbb Z^2$ and triangulate $L\otimes\mathbb R$ by the triangles
++\[
++[m,m+e_1,m+e_1+e_2],\qquad
++[m,m+e_1+e_2,m+e_2],\qquad m\in L.
++\]
++In $L\oplus\mathbb Z$, take the cones generated by the three lifted
++vertices $(v,1)$ and all their faces.
++Both maximal cone types have determinant one in the indicated ordering.
++The associated toric threefold $\widetilde N$ is therefore smooth.
++On every maximal chart, its map to the disk is
++\begin{equation}\label{c26:eq:chart}
++q=x_0x_1x_2.
++\end{equation}
++This follows because the height character has value one on each ray.
++The central divisor has normal crossings on these charts.
++The star of the ray $(0,0,1)$ has the six primitive rays
++\[
++e_1,\ e_1+e_2,\ e_2,\ -e_1,\ -e_1-e_2,\ -e_2.
++\]
++Its component is the smooth toric surface with that fan, namely the
++blowup of $\mathbb P^2$ at its three torus fixed points.
++
++For $k=(k_1,k_2)\in L$, the period transformation is
++\begin{equation}\label{c26:eq:action}
++g_k(z,w,q)=
++\left(q^{k_1}c_1^{k_1}c_3^{k_2}z,
++q^{k_2}c_2^{k_1}c_4^{k_2}w,q\right).
++\end{equation}
++Its lattice map sends $(a,b,h)$ to $(a+k_1h,b+k_2h,h)$.
++It translates the fan by $k$ at height one.
++Multiplication by the units in \eqref{c26:eq:action} also extends on the
++charts. More explicitly, each toric character transforms into a monomial
++character times an integral power of the units.
++Consequently \eqref{c26:eq:action} gives a holomorphic action on
++$\widetilde N$ near the central divisor.
++
++\begin{proposition}\label{c26:prop:quotient}
++For a sufficiently small disk, this action is free and properly
++discontinuous, and its quotient $N_c\to D$ is proper.
++The total space $N_c$ is a smooth complex threefold.
++Its central fibre $Z_c$ has one normalized component, with three pairs
++of toric boundary curves identified and two triple points.
++\end{proposition}
++\begin{proof}
++At $q=0$, the components through a point correspond to a nonempty finite
++set of lattice vertices of one triangle or one of its faces.
++A nonzero translation cannot preserve such a set.
++Thus the action is free on the central fibre.
++For $q\ne0$, the real logarithms of the two periods form a matrix
++$(\log|q|)I_2+O(1)$. It is invertible for small $|q|$.
++A nonzero period therefore cannot fix a point of $(\mathbb C^*)^2$.
++
++Here is also a compactness check for the quotient.
++Put $u=(\log|z|,\log|w|)/\log|q|$.
++Period transformations translate $u$ by the lattice with matrix
++$I_2+O(1/|\log|q||)$.
++Every orbit has a representative in a uniformly bounded fundamental
++parallelogram. Only finitely many triangles meet these parallelograms.
++When $u$ belongs to a triangle, the logarithmic absolute values of its
++three chart coordinates are its barycentric coordinates times $\log|q|$.
++All three coordinates consequently have absolute value at most one.
++Finitely many closed chart polydisks therefore contain representatives
++of every punctured fibre. The normalized central component is complete
++and is covered by finitely many such toric chart polydisks as well.
++
++For proper discontinuity, a compact subset of finitely many charts has
++bounded normalized logarithmic coordinates as $q$ tends to zero.
++Indeed its chart coordinates have a common upper bound, and their
++product is $q$, so each logarithm divided by $\log|q|$ has a uniform bound.
++If a translate of this compact set meets it, the preceding invertible
++period matrix bounds $k$. On an annulus away from zero the same argument
++uses unnormalized logarithms. At zero, only finitely many translated
++component labels can meet the compact set.
++Thus only finitely many $g_k$ can occur.
++The quotient is Hausdorff and smooth by freeness and proper discontinuity.
++The finite compact sets of representatives prove properness over a
++smaller closed disk. Quotienting the star of a lattice vertex gives
++exactly the stated identifications of its six boundary curves.
++\end{proof}
++
++All estimates hold uniformly when the four units vary over a compact
++parameter interval with a common disk of holomorphy and no zeros.
++This observation will keep the actual units in the comparison below.
++
++\section{The hexagon and the angular specialization}
++
++We first take $c_i=1$. Write the resulting central fibre as $Z$.
++The angular lattice is $L$, and its character lattice is
++$M=\operatorname{Hom}(L,\mathbb Z)$.
++Coordinates identify both lattices with $\mathbb Z^2$.
++The polygon below lies in $M\otimes\mathbb R$.
++Let
++\begin{equation}\label{c26:eq:hexagon}
++\begin{split}
++H&=\{y\in\mathbb R^2: |y_1|\le1,\ |y_2|\le1,\ |y_1+y_2|\le1\},\\
++Q&=\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\qquad \Gamma=Q\mathbb Z^2.
++\end{split}
++\end{equation}
++The counterclockwise vertices of $H$ are
++\[
++v_0=(1,0),\ v_1=(0,1),\ v_2=(-1,1),\ v_3=(-1,0),\
++v_4=(0,-1),\ v_5=(1,-1).
++\]
++Opposite edges are paired by translations in $\Gamma$.
++The three corresponding normal lines are generated by
++$e_1+e_2,e_2,e_1$.
++These translates tile the plane.
++Indeed, the bisector for the lattice vector $Qn$, in the metric $Q^{-1}$,
++is $\langle n,y\rangle=\frac12n^tQn$.
++For $n=(a,b)\in\mathbb Z^2$,
++\[
++\max_{y\in H}\langle n,y\rangle
++ =\max(|a|,|b|,|a-b|)\le a^2-ab+b^2.
++\]
++For example, $a^2-ab+b^2\ge3a^2/4\ge|a|$ when $|a|\ge2$.
++The cases $a=0,\pm1$ follow directly by minimizing over integral $b$.
++Interchanging $a,b$, and replacing $(a,b)$ by $(a,a-b)$,
++gives the other two bounds.
++Equality for $n=e_1,e_2,e_1+e_2$ gives the six sides of $H$.
++Thus $H$ is the closed Dirichlet cell of $\Gamma$ in this metric.
++Let $A_\theta=\mathbb R^2/\mathbb Z^2$ be the angular torus.
++The central fibre has the following topological description:
++\begin{equation}\label{c26:eq:Z}
++Z=(H\times A_\theta)/\sim.
++\end{equation}
++Over the interior of an edge with primitive normal $n$, collapse the
++circle $\mathbb Rn/\mathbb Zn$ in $A_\theta$.
++At a vertex collapse the whole angular torus.
++Pair opposite edges by their translations, with the same angular
++coordinate in the resulting quotient circle.
++
++Here is a coordinate construction that also fixes the sign of the polygon.
++Put $\mathcal A=H\cap M=\{0,v_0,\ldots,v_5\}$.
++On the dense torus of the normalized component, use coordinates
++$\zeta=(\zeta_1,\zeta_2)$ and characters $\zeta^u$ for $u\in M$.
++Define the negative moment coordinate
++\begin{equation}\label{c26:eq:moment}
++y(\zeta)=
++\frac{\sum_{u\in\mathcal A}u\,|\zeta^{-u}|^2}
++     {\sum_{u\in\mathcal A}|\zeta^{-u}|^2}.
++\end{equation}
++The homogeneous coordinates $[\zeta^{-u}]_{u\in\mathcal A}$ extend
++to the normalized toric surface.
++Indeed, at a vertex $u$, two adjacent exponent differences form an
++integral basis. Their monomials give its affine toric chart.
++Every other exponent difference lies in the same nonnegative cone.
++These six charts identify the projective closure with the six-ray surface.
++
++For completeness, write $\rho_j=\log|\zeta_j|$.
++The Hessian of $\log\sum_{u\in\mathcal A}\exp(-2\langle u,\rho\rangle)$
++is four times the covariance matrix of $\mathcal A$ with positive weights.
++It is positive definite, since $\mathcal A$ affinely spans $M_\mathbb R$.
++For $y$ in the interior of $H$, the function
++\[
++\log\sum_{u\in\mathcal A}\exp(-2\langle u,\rho\rangle)
++       +2\langle y,\rho\rangle
++\]
++is strictly convex and tends to infinity as $|\rho|\to\infty$.
++Its unique critical point solves \eqref{c26:eq:moment}.
++On an edge the same argument has one variable.
++Thus the nonnegative real part maps bijectively onto $H$.
++Compactness gives a homeomorphism.
++The angular stabilizer is the primitive normal circle on each edge
++and the whole torus at each vertex.
++This proves the quotient description before edge identifications.
++
++The negative sign in \eqref{c26:eq:moment} makes the divisor with ray
++$n\in L$ correspond to the edge $\langle n,y\rangle=1$.
++Let its endpoints be $a,b\in\mathcal A$.
++On that divisor, only the homogeneous coordinates for $a,b$ survive.
++With the residual character $s=\zeta^{-(b-a)}$, its moment coordinate is
++\[
++y=\frac{a+|s|^2b}{1+|s|^2}.
++\]
++The opposite edge has endpoints $a-Qn,b-Qn$.
++Its residual character is the same $s$ under the toric period gluing:
++$\zeta\mapsto q^{-n}\zeta$ leaves $\zeta^{-(b-a)}$ unchanged because
++$\langle b-a,n\rangle=0$.
++Its coordinate is therefore exactly $y-Qn$.
++This verifies the three edge translations, including their endpoints.
++It proves \eqref{c26:eq:Z} for the actual toric quotient.
++
++Use coordinates $(\theta,\beta)\in A_\theta\times(\mathbb R^2/\mathbb Z^2)$
++on $F$. The base coordinate $y=Q\beta$ is taken modulo $\Gamma$.
++The map
++\begin{equation}\label{c26:eq:p}
++p:F\longrightarrow Z,
++\qquad (\theta,\beta)\longmapsto[y,\theta]
++\end{equation}
++uses any representative $y$ in the hexagon.
++It is independent of the representative by the opposite-edge identifications.
++It retains the two-dimensional toric orbit over the interior of $H$.
++
++The entire positive boundary map is more informative than \eqref{c26:eq:p}.
++For $0\le v\le1$, choose $y\in H$ representing $Q\beta$ and put
++\begin{equation}\label{c26:eq:pv}
++p_v(\theta,\beta)=[y,\theta+vQ^{-1}y].
++\end{equation}
++If two representatives lie on paired edges, they differ by $Qn$,
++where $n$ generates the circle collapsed on those edges.
++The two angular values differ by $vn$, so they define the same point.
++At paired vertices all angular values are identified.
++Thus \eqref{c26:eq:pv} is continuous, including the hexagon boundary.
++Furthermore
++\begin{equation}\label{c26:eq:endpoints}
++p_0=p,\qquad p_1=pT.
++\end{equation}
++Indeed $Q^{-1}y$ represents $\beta$ modulo $\mathbb Z^2$.
++Consequently there is an actual map
++\begin{equation}\label{c26:eq:k}
++k:B_T\longrightarrow Z,\qquad [\theta,\beta,v]\longmapsto p_v(\theta,\beta).
++\end{equation}
++The section $\theta=\beta=0$ maps to the single interior point $[0,0]$.
++In particular the specified positive meridian is null-homotopic under $k$.
++
++\section{Comparison with the smooth toric neighborhood}
++
++We describe the polar space used in this comparison.
++On a chart \eqref{c26:eq:chart}, write
++$x_j=r_je^{2\pi i\phi_j}$, where $r_j\ge0$ and
++$\phi_j\in\mathbb R/\mathbb Z$. Retain $\phi_j$ even when $r_j=0$.
++The map to the polar disk is
++\[
++(r_0,r_1,r_2;\phi_0,\phi_1,\phi_2)
++\longmapsto(r_0r_1r_2,\phi_0+\phi_1+\phi_2).
++\]
++The toric transitions and the units induce their polar transitions.
++These charts define $N_c^{\log}$ and a proper forgetful map
++$\tau_c:N_c^{\log}\to N_c$.
++Over $q\ne0$ the forgetful map is a homeomorphism.
++
++We use Nakayama--Ogus \cite[Theorem 5.1]{CuspNO}.
++A proper, separated, exact, relatively smooth map of log analytic
++spaces induces a topological fibre bundle on their polar spaces.
++The target must be fine and the source relatively coherent.
++Both log structures here are fine divisorial log structures.
++Fine log structures are relatively coherent, and log smoothness
++implies relative smoothness in this case.
++Here the characteristic maps at points with $r$ branches are
++$\mathbb N\to\mathbb N^r$, $1\mapsto(1,\ldots,1)$, with $1\le r\le3$.
++They are exact because their group-completed image meets
++$\mathbb N^r$ in the image of $\mathbb N$.
++The cokernel of the group map is free of rank $r-1$.
++The associated underlying chart map is smooth, so the morphism is log smooth.
++Proposition~\ref{c26:prop:quotient}
++gives properness and separatedness. The theorem therefore applies.
++Locally, the radial rounding can be seen without an existence argument:
++write $a_j\ge0$, $\min a_j=0$, and replace them by $a_j+t$,
++where $t\ge0$ uniquely solves $\prod_j(a_j+t)=|q|^2$.
++The square roots are the radii, and the angles remain fixed.
++
++\begin{theorem}\label{c26:thm:actual}
++For the unit-one toric filling, the polar boundary over the central
++circle is $B_T$ with the marking \eqref{c26:eq:T}.
++Its forgetful map to the central fibre is exactly \eqref{c26:eq:k}.
++In particular \eqref{c26:eq:p} is the actual integral specialization,
++after radial transport in the polar bundle.
++The neighborhood $N_1$ is homeomorphic, relative to its outer boundary,
++to the mapping cylinder of $k$.
++\end{theorem}
++\begin{proof}
++The polar space restores the normal circle along a double curve and
++both angular circles at a triple point.
++Write $A_\phi=\mathbb R^2/\mathbb Z^2$ for the local angular torus.
++Thus the polar space over the normalized toric component is
++$H\times A_\phi\times S^1_v$ before the opposite-edge identifications.
++Across an edge between components indexed by $m$ and $m+n$, their
++local torus coordinates are $q^{-m}(z,w)$ and $q^{-m-n}(z,w)$.
++At argument $2\pi v$ of $q$, the angular coordinates differ by $-vn$.
++Equation~\eqref{c26:eq:moment} makes their moment representatives
++differ by $-Qn$.
++Hence $\theta=\phi-vQ^{-1}y$ is unchanged across the identified edges.
++At $v=1$ the endpoint identification on $\theta$ is
++$\theta\mapsto\theta+\beta$.
++This gives \eqref{c26:eq:boundary} and \eqref{c26:eq:T} in the full lattice.
++Forgetting the restored normal angles gives
++$[y,\theta+vQ^{-1}y]$, proving \eqref{c26:eq:k}.
++
++The polar bundle over $[0,\epsilon]\times S^1$ is isomorphic to the
++pullback of its restriction at radius zero.
++This follows from homotopy invariance of numerable fibre bundles,
++applied to the radial deformation retraction.
++Choose the isomorphism $h_r$ to be the identity at $r=0$.
++Its central fibres have the torus group law specified above.
++Let $a(r,v)$ be the inverse image of the marked section under $h_r$.
++Replace $h_r(x)$ by $h_r(x+a(r,v))$ in each torus fibre.
++This gives a continuous bundle isomorphism that fixes the section.
++It remains the identity at $r=0$ because $a(0,v)=0$.
++The forgetful map is bijective at positive radius.
++At radius zero it identifies exactly the fibres of $k$.
++Compactness and the Hausdorff property then identify $N_1$ with the
++mapping cylinder of $k$. Radial contraction gives the specialization
++and a deformation retraction onto $Z$.
++\end{proof}
++
++We verify the full period marking of this radial comparison.
++Fix the ray $q=r>0$.
++The phases of the characters $z,w$ extend to the polar space,
++even when their absolute values vanish or have poles.
++Every such character is a Laurent monomial in a toric chart.
++Its phase is the same Laurent monomial in the retained chart phases.
++The period action multiplies these characters by positive real numbers.
++Their phases therefore descend to a map to $A_\theta$ over the full ray.
++
++The unquotiented polar space is also a covering of this family,
++with deck group $L$ given by the period translations.
++At radius zero, its positive real part is tiled by $Qm+H$, $m\in L$.
++The seam relation is $y_{m+n}=y_m-Qn$.
++Thus $Qm+y_m$ is a coordinate on the tiling plane,
++and $g_k$ acts on it by $Qk$.
++At positive radius the same covering is
++$(\mathbb C^*)^2\to\mathcal F_r$.
++
++For a loop in either end fibre, record its two phase degrees and its
++period deck displacement. These give a homomorphism to
++$\mathbb Z^2\oplus\mathbb Z^2$.
++In the central model it takes the angular circles and the polygon
++periods to the four standard basis vectors.
++In the nearby period parametrization
++$(z,w)=\exp(2\pi i\theta)r^\beta$, it has the same values.
++Both phase degrees and deck displacement remain constant in a homotopy
++through the polar family.
++Consequently radial transport preserves all four marked periods.
++Since it also fixes the section, it preserves the marked meridian.
++This establishes the full marking, beyond the conjugacy class of $T$.
++
++We now retain the original units rather than changing the geometric input.
++Put $c_j(q,t)=\exp(t\log c_j(q))$, for $0\le t\le1$.
++The same fan construction, now with parameter $t$, gives the actual
++family of quotients. Proposition~\ref{c26:prop:quotient} applies uniformly.
++Its total space is smooth, and each local chart has coordinates
++$(x_0,x_1,x_2,t)$ with $q=x_0x_1x_2$.
++
++Here is a concrete smooth transport in this family.
++Choose a finite quotient-chart cover of the compact tube and smooth
++nonnegative functions $\chi_a$ subordinate to that cover, with
++$\sum_a\chi_a=1$. In chart $a$, let $V_a$ vary $t$ while holding its
++three toric coordinates fixed. Set
++\begin{equation}\label{c26:eq:transport}
++V=\sum_a\chi_a V_a,
++\qquad \frac{d}{dt}\Phi_t(x)=V(\Phi_t(x)),\qquad \Phi_0(x)=x.
++\end{equation}
++Near the normalized section, use charts in which the section's two
++unit coordinates are fixed. Choose the cover and cutoffs accordingly.
++Then $V$ follows the section there. Everywhere $dq(V)=0$ and
++$dt(V)=1$. We check a stronger property than tangency to the divisor.
++On an overlap, a local branch coordinate has the form $x_j=u y_k$,
++where $u$ is a nowhere-zero function, holomorphic in the fibre variables
++and smooth in $t$.
++Holding the $y$ coordinates fixed gives
++$V_a(x_j)=x_j u^{-1}\partial_tu$.
++Thus each $V_a(x_j)$ is smoothly divisible by $x_j$.
++Multiplication by a smooth cutoff and addition preserve this property.
++Compactness ensures that \eqref{c26:eq:transport} exists for the whole interval.
++Its reverse flow is its inverse. It gives smooth diffeomorphisms preserving
++$q$, the central strata, the complex orientation, and the specified section.
++The flow lifts to the polar spaces. In a local branch coordinate it
++has the form $V(x_j)=x_j f_j$ for a smooth complex function $f_j$.
++The lifted equations are
++\[
++\dot r_j=r_j\operatorname{Re}f_j,\qquad
++\dot\phi_j=\operatorname{Im}f_j/(2\pi).
++\]
++They extend to $r_j=0$ and give the actual map of the normal circles.
++
++This construction specifies a map, once the chart cutoffs are chosen.
++Convex interpolation of two such fields gives an isotopy with the same
++properties. On the lattice its transport is the identity in the
++continuously marked periods. On the boundary fundamental group it also
++retains the meridian, because it retains the section.
++Thus it introduces no meridian translation.
++
++The boundary and specialization for the given units are the conjugates
++of \eqref{c26:eq:k} and \eqref{c26:eq:p} by this actual flow and radial
++polar transport. A comparison with the period parametrization of
++\eqref{c26:eq:periods} has the same action on the full boundary fundamental
++group. The universal cover of $B_T$ is $\mathbb R^5$, with affine deck
++transformations. Equivariant lifts of the two comparisons admit the
++straight-line homotopy between them. It descends because affine maps
++preserve convex combinations. This supplies the boundary homotopy in
++the specified period marking, including its meridian.
++
++\section{Finite cellular chains and the specialization matrix}
++
++We now give cells on the quotient itself.
++The hexagon torus $H/\Gamma$ has two vertices $A,B$, three edges
++$e_0,e_1,e_2$ oriented from $A$ to $B$, and one oriented face $h$.
++Here $A$ is the image of $v_0,v_2,v_4$.
++The edge $e_0$ is $[v_0,v_1]$, $e_1$ is $[v_2,v_1]$, and
++$e_2$ is $[v_2,v_3]$.
++The face boundary has word
++\[
++e_0e_1^{-1}e_2e_0^{-1}e_1e_2^{-1},
++\]
++read along the oriented polygon; it has zero cellular boundary.
++The two period cycles are
++\begin{equation}\label{c26:eq:beta-cells}
++\beta_1=e_1-e_0,\qquad \beta_2=e_0-e_2.
++\end{equation}
++Their lifts have displacements $Qe_1$ and $Qe_2$.
++
++Give $A_\theta$ its product circle cells
++$1,a_1,a_2,a_{12}$, with zero cellular differential.
++Use base-first product orientations.
++The actual product complex $D=C_*(F;\mathbb Z)$ has cells
++$b\otimes a_I$ for each base cell $b$ and each angular cell $a_I$.
++Its only boundaries are
++\begin{equation}\label{c26:eq:dD}
++d(e_j\otimes a_I)=(B-A)\otimes a_I.
++\end{equation}
++Its ranks in degrees zero through four are $(2,7,9,5,1)$.
++This is a product CW decomposition of the four-torus, rather than a
++replacement by its homology groups.
++
++On each quotient edge, the angular character has the following degree row:
++\begin{equation}\label{c26:eq:characters}
++\lambda_0=(-1,1),\qquad \lambda_1=(-1,0),\qquad \lambda_2=(0,1).
++\end{equation}
++Their kernels are the indicated primitive normal circles.
++These are actual cellular maps $A_\theta\to S^1$.
++They send the angular vertex to the circle vertex, and the entire
++two-dimensional angular cell into the target one-skeleton.
++Consequently the quotient \eqref{c26:eq:Z} has cells
++\[
++\begin{array}{c|l}
++0&A,B\\
++1&e_0,e_1,e_2\\
++2&E_0=e_0\otimes\eta_0,\ E_1=e_1\otimes\eta_1,\ E_2=e_2\otimes\eta_2,\ h\\
++3&h\otimes a_1,\ h\otimes a_2\\
++4&h\otimes a_{12}.
++\end{array}
++\]
++These cells have explicit characteristic maps.
++For $E_j$, use $[0,1]\times[0,1]$, with the second coordinate
++parametrizing the residual circle and both endpoint circles collapsed.
++For each $h\otimes a_I$, use the product of the hexagon's characteristic
++disk with the angular characteristic cube.
++Its boundary maps by the quotient characters on the six polygon edges.
++Those characters are cellular on the angular product cells.
++Attaching these products in increasing angular degree therefore gives
++a finite CW structure on the quotient space itself.
++Its chain complex $Q_*=C_*(Z;\mathbb Z)$ has ranks $(2,3,4,2,1)$ and
++\begin{equation}\label{c26:eq:dQ}
++d_1=\begin{pmatrix}-1&-1&-1\\1&1&1\end{pmatrix},\qquad d_n=0\quad(n\ge2).
++\end{equation}
++For the higher face boundaries, each pair of opposite edges has the same
++quotient character and opposite boundary signs. Their contributions cancel.
++The suspended edge circles have both endpoint circles collapsed.
++These facts prove \eqref{c26:eq:dQ} directly from the attaching maps.
++
++The map $p$ is cellular. Its complete cellular matrix is specified by
++\begin{equation}\label{c26:eq:cellularp}
++\begin{aligned}
++p_*(A\otimes1)&=A,&p_*(B\otimes1)&=B,\\
++p_*(e_j\otimes1)&=e_j,&
++p_*(e_j\otimes a_i)&=\lambda_j(a_i)E_j,\\
++p_*(h\otimes a_I)&=h\otimes a_I.&&
++\end{aligned}
++\end{equation}
++All positive angular cells over $A,B$, and all $e_j\otimes a_{12}$,
++have image zero in their cellular degree.
++Equations \eqref{c26:eq:dD}--\eqref{c26:eq:cellularp} show $dp_*=p_*d$
++over $\mathbb Z$, on every generator.
++
++The base changes from $(A,B,e_0,e_1,e_2,h)$ to
++$A,B-A,e_0,\beta_1,\beta_2,h$ are unimodular.
++The pair $e_0\mapsto B-A$ contracts.
++Tensoring this contraction with the angular circle cells gives an
++integral contraction of the corresponding part of $D$.
++The target has the same single contractible pair and zero differential
++on its complement. Hence
++\begin{equation}\label{c26:eq:homology}
++H_n(Z;\mathbb Z)=\mathbb Z,\ \mathbb Z^2,\ \mathbb Z^4,\
++\mathbb Z^2,\ \mathbb Z
++\quad(0\le n\le4).
++\end{equation}
++There is no integral torsion.
++
++Use the ordered fibre lattice $(\alpha_1,\alpha_2,\beta_1,\beta_2)$,
++and lexicographic exterior bases. Use \eqref{c26:eq:beta-cells} in target
++degree one, $(E_0,E_1,E_2,h)$ in degree two, and the displayed cells
++in degrees three and four. Then
++\begin{equation}\label{c26:eq:homologyp}
++\begin{gathered}
++p_{*,1}=\begin{pmatrix}0&0&1&0\\0&0&0&1\end{pmatrix},\\
++p_{*,2}=\begin{pmatrix}
++0&-1&1&1&-1&0\\0&1&0&0&0&0\\0&0&0&0&1&0\\0&0&0&0&0&1
++\end{pmatrix},\qquad
++p_{*,3}=\begin{pmatrix}0&0&1&0\\0&0&0&1\end{pmatrix},\\
++p_{*,0}=1,\qquad p_{*,4}=1.
++\end{gathered}
++\end{equation}
++For example, $\alpha_i\wedge\beta_j$ is represented by
++$-\beta_j\otimes a_i$ in the base-first cells.
++This fixes the signs of the middle matrix.
++Each displayed matrix has a maximal minor equal to $1$ or $-1$.
++All its nonzero Smith factors are therefore one.
++
++\begin{theorem}\label{c26:thm:integral}
++The specialization is surjective on integral homology in every degree.
++Its kernels in positive degrees are
++\[
++\begin{array}{c|l}
++1&\mathbb Z\alpha_1\oplus\mathbb Z\alpha_2\\
++2&\mathbb Z(\alpha_1\wedge\alpha_2)\oplus
++\mathbb Z(\alpha_1\wedge\beta_2-\alpha_2\wedge\beta_1)\\
++3&\mathbb Z(\alpha_1\wedge\alpha_2\wedge\beta_1)\oplus
++\mathbb Z(\alpha_1\wedge\alpha_2\wedge\beta_2)\\
++4&0.
++\end{array}
++\]
++In every degree its dual map has image exactly
++$H^n(F;\mathbb Z)^T$. This remains true for the specified units,
++under the marking supplied by \eqref{c26:eq:transport}.
++\end{theorem}
++\begin{proof}
++The integral kernels and surjectivity follow by solving the displayed
++matrices, with integer coefficients. Their kernels equal
++$(\bigwedge^nT-I)H_n(F;\mathbb Z)$: expand \eqref{c26:eq:T} in each
++exterior degree. In degree two, the image is generated by
++$\alpha_1\wedge\alpha_2$ and
++$\alpha_1\wedge\beta_2-\alpha_2\wedge\beta_1$.
++The extra $\alpha_1\wedge\alpha_2$ term from $T(\beta_1\wedge\beta_2)$
++does not change that integral span. The other degrees are immediate.
++The kernels are saturated, since all specialization Smith factors are one.
++Dualizing the integral quotient therefore gives exactly the invariant
++annihilator, with no index or torsion correction.
++The actual transport of the toric family preserves these chain comparisons.
++\end{proof}
++
++The ordered basis $(\alpha_1,\alpha_2,\beta_1,\beta_2)$ has the negative
++of the complex orientation. The base-first top cell
++$h\otimes a_{12}$ has the same negative sign relative to the toric
++complex orientation. Thus $p_{*,4}=1$ has geometric degree $+1$.
++
++\section{The boundary homotopy and an integral marking}
++
++For normalized singular cubical chains, define an interval-first operator
++\begin{equation}\label{c26:eq:H}
++(H\sigma)(v,t_1,\ldots,t_n)=p_v(\sigma(t_1,\ldots,t_n)).
++\end{equation}
++It is a map on actual cubes, in every degree. Its boundary identity is
++\begin{equation}\label{c26:eq:chainhomotopy}
++dH+Hd=p_*T_*-p_*.
++\end{equation}
++The mapping-torus cone convention is
++$d(a,b)=(da+(T_*-I)b,-db)$.
++The actual boundary retraction is consequently represented by
++\begin{equation}\label{c26:eq:Kchain}
++K(a,b)=p_*a+Hb.
++\end{equation}
++Substitution of \eqref{c26:eq:chainhomotopy} proves that it is a chain map.
++Cellular characteristic maps, their subdivisions, and their prisms
++compare \eqref{c26:eq:cellularp} with these cubical maps.
++In particular the homology matrix alone does not replace $H$.
++
++Write $\Lambda=\bigoplus_{j=1}^4\mathbb Ze_j$, and set
++\begin{equation}\label{c26:eq:commonbasis}
++\alpha_1=e_1-e_3,\quad \alpha_2=e_3-e_2,\quad
++\beta_1=e_3,\quad\beta_2=e_4.
++\end{equation}
++Their column matrix and inverse are
++\[
++L=\begin{pmatrix}1&0&0&0\\0&-1&0&0\\-1&1&1&0\\0&0&0&1\end{pmatrix},
++\qquad L^{-1}=\begin{pmatrix}1&0&0&0\\0&-1&0&0\\1&1&1&0\\0&0&0&1\end{pmatrix}.
++\]
++The determinant is $-1$. Conjugation gives the actual positive cusp matrix
++\begin{equation}\label{c26:eq:nativemonodromy}
++LTL^{-1}=T_\infty=
++\begin{pmatrix}2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1\end{pmatrix}.
++\end{equation}
++In the $e$ basis, the specialization matrices are
++\begin{equation}\label{c26:eq:nativemaps}
++\begin{gathered}
++p_{*,1}^{e}=\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix},\\
++p_{*,2}^{e}=\begin{pmatrix}
++0&-1&1&-1&1&0\\1&1&0&0&0&0\\0&0&0&0&-1&0\\0&0&1&0&1&1
++\end{pmatrix},\qquad
++p_{*,3}^{e}=\begin{pmatrix}0&1&1&0\\0&1&0&-1\end{pmatrix},\qquad
++p_{*,4}^{e}=-1.
++\end{gathered}
++\end{equation}
++The signs follow from $p_{*,n}^{e}=p_{*,n}\bigwedge^nL^{-1}$.
++
++\begin{remark}
++The two-torus $H/\Gamma$ has zero fourth homology and Euler characteristic.
++The actual fibre has $H_4(Z;\mathbb Z)=\mathbb Z$ and $\chi(Z)=2$.
++Thus collapsing every angular fibre changes the homotopy type
++and the local attachment.
++\end{remark}
++
++\begin{thebibliography}{9}
++\bibitem{CuspEngel}
++P.~Engel, \emph{Complex structures on $S^6$},
++\href{https://philip-engel.github.io/S6.pdf}{author manuscript},
++Propositions~2.7--2.9, pp.~5--7.
++\bibitem{CuspNO}
++C.~Nakayama and A.~Ogus,
++\emph{Relative rounding in toric and logarithmic geometry},
++Geometry \& Topology \textbf{14} (2010), 2189--2241,
++\href{https://doi.org/10.2140/gt.2010.14.2189}{doi:10.2140/gt.2010.14.2189},
++Theorem~5.1.
++\end{thebibliography}
+diff --git a/research-candidates/s6_cusp026/verify_certificates.py b/research-candidates/s6_cusp026/verify_certificates.py
+new file mode 100644
+index 0000000..619ed41
+--- /dev/null
++++ b/research-candidates/s6_cusp026/verify_certificates.py
+@@ -0,0 +1,58 @@
++"""Verify retained Smith certificates with independent integer arithmetic."""
++from fractions import Fraction
++from pathlib import Path
++import json
++
++
++def product(left, right):
++    if not left:
++        return []
++    if not right:
++        return [[] for row in left]
++    return [[sum(a * b for a, b in zip(row, column))
++             for column in zip(*right)] for row in left]
++
++
++def determinant(matrix):
++    rows = [[Fraction(value) for value in row] for row in matrix]
++    result = Fraction(1)
++    for i in range(len(rows)):
++        pivot = next((j for j in range(i, len(rows)) if rows[j][i]), None)
++        if pivot is None:
++            return 0
++        if pivot != i:
++            rows[i], rows[pivot] = rows[pivot], rows[i]
++            result = -result
++        value = rows[i][i]
++        result *= value
++        for j in range(i + 1, len(rows)):
++            factor = rows[j][i] / value
++            rows[j] = [a - factor * b for a, b in zip(rows[j], rows[i])]
++    assert result.denominator == 1
++    return int(result)
++
++
++record = Path(__file__).resolve().parents[2] / "reports/research/s6_cusp026/exact-checks.json"
++data = json.loads(record.read_text())
++certificates = []
++for family in ["source_boundary_certificates", "target_boundary_certificates",
++               "specialization_certificates", "monodromy_difference_certificates"]:
++    certificates.extend(data[family].values())
++for family in ["source_homology", "target_homology"]:
++    certificates.extend(item["incoming_in_kernel_basis"] for item in data[family].values())
++for certificate in certificates:
++    matrix, left, right, diagonal = [certificate[key]
++                                     for key in ["matrix", "left", "right", "diagonal"]]
++    assert abs(determinant(left)) == abs(determinant(right)) == 1
++    assert product(product(left, matrix), right) == diagonal
++    factors = []
++    for i, row in enumerate(diagonal):
++        for j, value in enumerate(row):
++            assert i == j or value == 0
++        if i < len(row) and row[i]:
++            factors.append(abs(row[i]))
++    assert factors == certificate["factors"]
++    assert all(b % a == 0 for a, b in zip(factors, factors[1:]))
++print(json.dumps({"verified_certificates": len(certificates),
++                  "arithmetic": "Python standard library integers and fractions",
++                  "result": "Every stored decomposition and unimodular determinant passed"}, indent=2))

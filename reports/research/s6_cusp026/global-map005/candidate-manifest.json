@@ -1,0 +1,345 @@
+{
+  "freeze_utc": "2026-09-14T18:00:30.704890+00:00",
+  "worktree": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914",
+  "base_head": "5d9f632b5d9795e51075a9c15e2ee58d4cfb40af",
+  "branch": "intake/frontier-s6-cusp-026-20260914",
+  "status": "Constructed and verified; fresh independent mathematical acceptance pending",
+  "mathematical_include": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map005/third-homology.tex",
+  "include_sha256": "9dda78ad3eca160ef74751771cfdffed0a504b88f3abfbb91e0bbc5bc29d969a",
+  "candidate_source_sha256": "bfc0efd7a73f6470d8fd6220d06b40c467e0dcebaa12c9cada53814ae945860b",
+  "aggregate_diff_sha256": "84423362359c8749c2d5f9b3c59e5720b4b58ac710b87e330334c9fda93223d6",
+  "aggregate_diff_path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map005/new-source.patch",
+  "pdf_sha256": "e1696761fdb10bdbb7b66ecbe10271c7e4d3c11afe9232ad8b23feb360d10dd0",
+  "page_count": 8,
+  "files": [
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/build.py",
+      "sha256": "4bf8e4bc81f460b46d6c7b630376da263141559e3760e8a9170264c08dbbe8fc",
+      "bytes": 2703,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/check_third.py",
+      "sha256": "86ae98cc154c06e011042d4acfca81916e5e4db74e60be02b85487d7c236dc2b",
+      "bytes": 7794,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/paper.tex",
+      "sha256": "908088473724bc1e8e664ad85da4a28ef5e3ff20711ef2c06cfa2cfe96be934f",
+      "bytes": 784,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/raeez-math-template.sty",
+      "sha256": "4bd3e0dcea54b2209a2d02d5964e96ae2f11700dbe3b44fb0baf4e61d7352de3",
+      "bytes": 46734,
+      "type": "symlink",
+      "target": "/Users/raeez/latex-template/raeez-math-template.sty",
+      "link_sha256": "a05c391687b31d5436acce161c24509a62aa55907745ccfe9f350667e9cfa94a"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/third-homology.tex",
+      "sha256": "9dda78ad3eca160ef74751771cfdffed0a504b88f3abfbb91e0bbc5bc29d969a",
+      "bytes": 19511,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map005/verify_third.py",
+      "sha256": "d1bd6b4593b49ddaf4c2f721bb56ff04a644178d69594ac8f8ce96ffba131766",
+      "bytes": 4478,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/README.md",
+      "sha256": "d875ed09425146309b9e4b5121961102924cf5b886fe00bb27e9e088c10094f2",
+      "bytes": 7866,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/paper.aux",
+      "sha256": "76faef7ff6a7e19a8368cbb1950041687a19056ccef86572a4c5abb84148b8d4",
+      "bytes": 4865,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/paper.fls",
+      "sha256": "6d902432ab86ef294e13a0a7884975af87f6fdf59ee8b534e35e483fe4b0f8e2",
+      "bytes": 52210,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/paper.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/paper.log",
+      "sha256": "0cadf3b23ae02f6a1a2f1b4cb66d30764cd580f830b97fe4659780e3c5a3a9bb",
+      "bytes": 78875,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/paper.pdf",
+      "sha256": "e1696761fdb10bdbb7b66ecbe10271c7e4d3c11afe9232ad8b23feb360d10dd0",
+      "bytes": 160212,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/pass-01.log",
+      "sha256": "0d3361d707a2f1a6e56035dd1d6f6844f6783db4730c3bae0a1caef8954b64aa",
+      "bytes": 19948,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/pass-02.log",
+      "sha256": "0d3361d707a2f1a6e56035dd1d6f6844f6783db4730c3bae0a1caef8954b64aa",
+      "bytes": 19948,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/pass-03.log",
+      "sha256": "481a09a9d8e4d0514e2115c223dfd484cc50661f1ef77f7720791c87420f77ce",
+      "bytes": 19948,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build/pass-04.log",
+      "sha256": "481a09a9d8e4d0514e2115c223dfd484cc50661f1ef77f7720791c87420f77ce",
+      "bytes": 19948,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/build.json",
+      "sha256": "d5738469498bda5ebcea2bafaae197f4c0342903692865ceb7e90e27b15fc4bd",
+      "bytes": 44370,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/certificate-verification.json",
+      "sha256": "a06bdbb14ebc79055cc0d592afd856e1289178fc4443e9fc8880d8376f8d3897",
+      "bytes": 514,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/dependency-verification.json",
+      "sha256": "02535fa850c33fa60919966c09e119c0b50f1ccff43bcf6d6bbd2e0b14c5fcbf",
+      "bytes": 15359,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/exact-checks.json",
+      "sha256": "daa067c37b4bb56da0ce1c0499d0e47ff2c1b53b70d18fb0d66575e817c07fe5",
+      "bytes": 26597,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/first-stage.md",
+      "sha256": "5ae46af33a01e7ef3818b437cf3dd1565c5a6731130faa5dc8f00ba1eb9330db",
+      "bytes": 3239,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/input-freeze.json",
+      "sha256": "b9d8be80073c2c50d6f3d8ee77eb2ae0493a191ed3a8923de248921b1a823eab",
+      "bytes": 1426,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/new-source.patch",
+      "sha256": "84423362359c8749c2d5f9b3c59e5720b4b58ac710b87e330334c9fda93223d6",
+      "bytes": 36595,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/pdfinfo.txt",
+      "sha256": "480cf200a4ca0ffaf4d35db3888c5a61bb09e141b6fbfea6d749317bb93653e9",
+      "bytes": 652,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/primary-source-check.json",
+      "sha256": "2827289c168d8be3f0367b63933bd497939461c00ef0f4a61f9547bd30d58d8f",
+      "bytes": 286,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/quality-checks.json",
+      "sha256": "6142764f58165e61ef64095288b55b10aa75757fa6be83e7a3318ef366b9a355",
+      "bytes": 825,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-1.png",
+      "sha256": "6ff8bac5c1813225bd2f85911f0837a824a777d175bee5c77b96a04e6e981041",
+      "bytes": 173808,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-2.png",
+      "sha256": "4009008d003126772fba928ebb6e0da7447d3a5ec15fb009b1c20be5b78504bf",
+      "bytes": 257212,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-3.png",
+      "sha256": "8ba0117c735f91ef67fabf52ad8d6276f182d3669737501abb3ed5ba8e9cf8b6",
+      "bytes": 211003,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-4.png",
+      "sha256": "43a4895d2c417a2fb93b3185e26cb6db1aa3427e75527939161eec106e5f42b7",
+      "bytes": 216838,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-5.png",
+      "sha256": "a73c60b203ed07ca92c54c35741b12f00ecc78d4d2b9588322aca13887d3e483",
+      "bytes": 188623,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-6.png",
+      "sha256": "d5f92fc565a70c040bf0358e97ebce50b684067d8843618e8546bccb7d953803",
+      "bytes": 212788,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-7.png",
+      "sha256": "1344770899a61314aa31070f39d3773d8f3acf1fb0226f9ca41f4ec134d5db86",
+      "bytes": 263619,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/page-8.png",
+      "sha256": "fa8a96d3c19791dde2eff62c6c65efabbb0107439e1c323ac1af21261e522639",
+      "bytes": 168414,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map005/render/paper.txt",
+      "sha256": "266b463de02518a48405b25f5241fe1e1a66e1353c1feed962e11e1c45c1babe",
+      "bytes": 28464,
+      "type": "file"
+    }
+  ],
+  "quality": {
+    "pages": 8,
+    "characters_per_page": [
+      3354,
+      3247,
+      3856,
+      2591,
+      3145,
+      3346,
+      3884,
+      1827
+    ],
+    "pdf_sha256": "e1696761fdb10bdbb7b66ecbe10271c7e4d3c11afe9232ad8b23feb360d10dd0",
+    "visual_inspection": "All eight pages inspected. Pages 6 and 8 rendered and inspected again after the final plus-sign correction and geometric comparison expansion.",
+    "firewall": "No prohibited production narration in manuscript, extracted PDF text, or PDF title/subject/author metadata.",
+    "public_source_scan": "No closed-source paths in manuscript or extracted text.",
+    "prior_manifest_entries_unchanged": 77,
+    "pdflatex": "pdfTeX 1.40.27 (TeX Live 2025)",
+    "poppler": "26.02.0",
+    "render_issue_repaired": "Missing plus sign in the cochain display; final exact source and raster have the plus sign."
+  },
+  "results": {
+    "H3_W": "Z^4",
+    "meridian_matrix": [
+      [
+        1,
+        0,
+        -2,
+        -2
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        -3
+      ],
+      [
+        0,
+        0,
+        1,
+        1
+      ]
+    ],
+    "full_degree_three_matrix": [
+      [
+        1,
+        0,
+        -2,
+        -2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        -2,
+        -3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        2,
+        4
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ]
+    ],
+    "determinant": 1,
+    "kernel": "0",
+    "cokernel": "0",
+    "H3_Y": "0 for the stated actual marked cusp data",
+    "torsion": [],
+    "primitive_core_relation": "-2 Z1 -3 Z3 +2 Z4 = -c"
+  },
+  "dependency_inputs": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map005/input-freeze.json",
+  "first_stage_sha256": "5ae46af33a01e7ef3818b437cf3dd1565c5a6731130faa5dc8f00ba1eb9330db",
+  "residual": [
+    "Fresh independent acceptance of the exact new source",
+    "Actual complex-family comparison relative to all marked boundaries and section",
+    "Compatible local filling extensions and conormal comparisons",
+    "Other permitted primitive affine increments",
+    "Higher global topology"
+  ],
+  "prior_review_protocol": "Earlier review exposure exception remains in its original record; not upgraded here.",
+  "runtime_controls": "gpt-6-astra/ultra required; task owner reports verified local metadata, not independently reproduced by this process"
+}

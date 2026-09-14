@@ -1,0 +1,21 @@
+{
+  "pages": 7,
+  "characters_per_page": [
+    3000,
+    2745,
+    3772,
+    3301,
+    3460,
+    3112,
+    3341
+  ],
+  "pdf_sha256": "b102388d7c15e384008acb85905e8c80e87ffb4c8a2f61769e7e74ab2f7e3189",
+  "visual_inspection": "All seven final pages inspected. Pages 4-7 rerendered and inspected after mathematical notation and spacing fixes; pages 1-3 unchanged.",
+  "firewall": "No prohibited production narration in source, extracted PDF text, or PDF title/subject/author metadata.",
+  "public_source_scan": "No closed-source paths in manuscript or extracted PDF text.",
+  "prior_dependency_files_unchanged": 44,
+  "pdflatex": "pdfTeX 1.40.27 (TeX Live 2025)",
+  "poppler": "26.02.0",
+  "initial_build_issue": "Missing end{equation}; repaired before converged build.",
+  "initial_render_issue": "Two malformed spacing commands; repaired before final raster inspection."
+}

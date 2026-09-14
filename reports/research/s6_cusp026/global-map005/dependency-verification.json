@@ -1,0 +1,345 @@
+{
+  "inputs": [
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/meridian-tori.tex",
+      "sha256": "653501a495bab0e31e91125206045f66ecbb8bdc9b0f880e7315764c0ed4d55e",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/candidate-manifest.json",
+      "sha256": "9251a18f4910727170be355a1ca4599a76af9128e03e059f196a93925d800549",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/cusp-attachment.tex",
+      "sha256": "8c11f110d960af3c6e86e8a4016c9aa4a01759dd8909242ae7ac72ce909c2206",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/candidate-manifest.json",
+      "sha256": "d4b2a43cb506d70aecd49104558a024e5af2514e50ad513483ebb74c45cdd33e",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/toric-cusp.tex",
+      "sha256": "8cfaf1751bd1edd7f5672f3578c602df2a4512ff204fd068cbd871647e09496e",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-dispatch-026-20260914/reports/research/DISPATCH-026-2026-09-14/s6-exact-review027/REPORT.md",
+      "sha256": "14e3110409b05486698100c35d8d87d877e923e285734fc5c018e42f2fe998ac",
+      "matches": true
+    }
+  ],
+  "prior_candidate_files": [
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/build.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/check_attachment.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/cusp-attachment.tex",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/paper.tex",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/raeez-math-template.sty",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/verify_certificates.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/README.md",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/paper.aux",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/paper.fls",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/paper.idx",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/paper.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/paper.pdf",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/pass-01.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/pass-02.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/pass-03.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build/pass-04.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/build.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/certificate-verification.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/exact-checks.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/input-freeze.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/new-source.patch",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/quality-checks.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/montage-1.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/montage-2.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/montage-3.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/montage-4.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-01.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-02.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-03.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-04.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-05.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-06.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-07.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-08.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-09.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-10.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-11.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-12.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-13.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-14.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-15.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/page-16.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/paper.txt",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/render/previous-raster-hashes.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/build.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/check_global.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/meridian-tori.tex",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/paper.tex",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/raeez-math-template.sty",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/verify_global.py",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/README.md",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/paper.aux",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/paper.fls",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/paper.idx",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/paper.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/paper.pdf",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/pass-01.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/pass-02.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/pass-03.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build/pass-04.log",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/build.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/certificate-verification.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/dependency-verification.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/exact-checks.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/input-freeze.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/new-source.patch",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/pdfinfo.txt",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/primary-source-check.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/quality-checks.json",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-1.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-2.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-3.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-4.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-5.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-6.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/page-7.png",
+      "matches": true
+    },
+    {
+      "path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/render/paper.txt",
+      "matches": true
+    }
+  ],
+  "prior_manifest_entries_verified": 77
+}

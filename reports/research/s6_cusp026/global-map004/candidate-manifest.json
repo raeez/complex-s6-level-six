@@ -1,0 +1,280 @@
+{
+  "freeze_utc": "2026-09-14T17:16:07.872575+00:00",
+  "worktree": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914",
+  "base_head": "5d9f632b5d9795e51075a9c15e2ee58d4cfb40af",
+  "branch": "intake/frontier-s6-cusp-026-20260914",
+  "status": "Constructed and verified; independent exact mathematical acceptance pending",
+  "mathematical_include": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/meridian-tori.tex",
+  "include_sha256": "653501a495bab0e31e91125206045f66ecbb8bdc9b0f880e7315764c0ed4d55e",
+  "candidate_source_sha256": "bc49246f78c9ee59339d8141f88fd7ad4a23bc987da46362f280ff254b64889f",
+  "aggregate_diff_sha256": "40bbdad775440349bf7f0b92cfe450b9f9724d03e308dcebab0e325e34f6e70c",
+  "aggregate_diff_path": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/new-source.patch",
+  "pdf_sha256": "b102388d7c15e384008acb85905e8c80e87ffb4c8a2f61769e7e74ab2f7e3189",
+  "page_count": 7,
+  "files": [
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/build.py",
+      "sha256": "acc8dbbd0a943e56a279178799c0fa45f24905752323a81debe8f90831d942fb",
+      "bytes": 2703,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/check_global.py",
+      "sha256": "37a8b0d8cf29180e49cafb8c3fbd7c43c6ccb5bd438547fbc23dc384942fc031",
+      "bytes": 6200,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/meridian-tori.tex",
+      "sha256": "653501a495bab0e31e91125206045f66ecbb8bdc9b0f880e7315764c0ed4d55e",
+      "bytes": 18525,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/paper.tex",
+      "sha256": "4b96a6e3e6574f5caf9a35228e5630bc5d0acbf45db249581bb59e082dd3187e",
+      "bytes": 796,
+      "type": "file"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/raeez-math-template.sty",
+      "sha256": "4bd3e0dcea54b2209a2d02d5964e96ae2f11700dbe3b44fb0baf4e61d7352de3",
+      "bytes": 46734,
+      "type": "symlink",
+      "target": "/Users/raeez/latex-template/raeez-math-template.sty",
+      "link_sha256": "a05c391687b31d5436acce161c24509a62aa55907745ccfe9f350667e9cfa94a"
+    },
+    {
+      "path": "research-candidates/s6_cusp026/global-map004/verify_global.py",
+      "sha256": "86cc172d26931117b693a9cd70b0e1004271a537bbc3945b62f91bf39e49a785",
+      "bytes": 3707,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/README.md",
+      "sha256": "acd37e55b8ec1933f2c00cdd428cc06b23684f83a9dd877aa466e6ed36ab79d6",
+      "bytes": 7700,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/paper.aux",
+      "sha256": "318f3ebc7a4b2ac7cb198e7fa294b4aa8c161b78823452501dbf48b654b92cfe",
+      "bytes": 4927,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/paper.fls",
+      "sha256": "bb7685f741602b6408f2b850f6be171dd9f8bf0c057e52a98e3f7d46aac8ecb0",
+      "bytes": 52205,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/paper.idx",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/paper.log",
+      "sha256": "09e225c727d89080243c7581505e69d3edbb7168dd3a64aab249e0cbb96a5b5d",
+      "bytes": 78869,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/paper.pdf",
+      "sha256": "b102388d7c15e384008acb85905e8c80e87ffb4c8a2f61769e7e74ab2f7e3189",
+      "bytes": 154594,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/pass-01.log",
+      "sha256": "3b9ea89fffee08879614bffe93ebbd9573c8fe15f5dc18289483a3d1c5cdfbaa",
+      "bytes": 20024,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/pass-02.log",
+      "sha256": "d289a16d2e135187883ade508e8bc8495c0be83c429432806acd50726afb8055",
+      "bytes": 19943,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/pass-03.log",
+      "sha256": "087200fec19de543e041b9205352df754141041d29c1c98151207acf96441648",
+      "bytes": 19943,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build/pass-04.log",
+      "sha256": "087200fec19de543e041b9205352df754141041d29c1c98151207acf96441648",
+      "bytes": 19943,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/build.json",
+      "sha256": "9f4b282b363b17211a7dbdf65220a6ed76e5856b78d5e22d79c51ec91194dcf0",
+      "bytes": 44369,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/certificate-verification.json",
+      "sha256": "4739787866a7b1c5ecd66b722f75dd21b4d31ef1dacbfc211f2eaafd7ec85add",
+      "bytes": 359,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/dependency-verification.json",
+      "sha256": "e783f96934694a771580a58c2b6967b78844aa0a71a7175efa98f2d1065a6748",
+      "bytes": 9545,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/exact-checks.json",
+      "sha256": "c31ec50441ff01fb000e6e3444184d613465dfb77d8dbde0dc10aa8cd685f463",
+      "bytes": 16445,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/input-freeze.json",
+      "sha256": "f8d737f88cf88abc2f1e8a14b5d3775742ed9b29350a03ad2f509d141cd5a9d1",
+      "bytes": 1468,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/new-source.patch",
+      "sha256": "40bbdad775440349bf7f0b92cfe450b9f9724d03e308dcebab0e325e34f6e70c",
+      "bytes": 33143,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/pdfinfo.txt",
+      "sha256": "07fd7380cdc6eaf43e24624ecf6bf750d85e8647935bbed5614f36fd1ee78d52",
+      "bytes": 647,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/primary-source-check.json",
+      "sha256": "5df60bf16c07d0e9c3a9b30f528e98bba88dbcbd8574f72495aad914924f46b3",
+      "bytes": 354,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/quality-checks.json",
+      "sha256": "67c33b12e82666a8a305d494c5623092136c91738abfffb0345a1f67ca4481d6",
+      "bytes": 872,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-1.png",
+      "sha256": "5b6bda401606f23e5308fda9a33ba1b7bf9a4a758887d0c16ab7a39ea6d1b995",
+      "bytes": 160043,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-2.png",
+      "sha256": "a2cf4f9456a5f94050179ff005357cfef23f798ae971372c5553f4c79cfa8b83",
+      "bytes": 188881,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-3.png",
+      "sha256": "e94cce8fce5e1a7012f10c7b157b86709681fe49ef38cb8e8d3b0ed1da5f8462",
+      "bytes": 315129,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-4.png",
+      "sha256": "ce68a50a68976c702211a1d4ee5c944dbce470d8ad64f5ed2c719878a9586323",
+      "bytes": 218669,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-5.png",
+      "sha256": "2cc66282d465154b43ac7ba1c624b07a57ae8ca56265c2f190844c4943fa394e",
+      "bytes": 149450,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-6.png",
+      "sha256": "e497ac48c6cafac4e7782ab9bec55b9dd42adba202e01386b9bb597d3b58d357",
+      "bytes": 250512,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/page-7.png",
+      "sha256": "a38cbe82fac6af184be52f966198b38278eb8c0df34653f374a7b97bdb237e8c",
+      "bytes": 288793,
+      "type": "file"
+    },
+    {
+      "path": "reports/research/s6_cusp026/global-map004/render/paper.txt",
+      "sha256": "7a172d24989ed660b50cefb1e143ae106f6949e029693769baedd4b883ab51dd",
+      "bytes": 25831,
+      "type": "file"
+    }
+  ],
+  "results": {
+    "H2_W": "Z^2",
+    "basis": [
+      "t=b_infinity(z1)",
+      "c=-S0+S1"
+    ],
+    "meridian_matrix": [
+      [
+        1,
+        2
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "image": "H2(W)",
+    "kernel": "0",
+    "connecting_vectors": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0
+      ]
+    ],
+    "H2_Y": "0 under the explicit actual marked cusp hypotheses"
+  },
+  "dependency_inputs": "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/input-freeze.json",
+  "quality": {
+    "pages": 7,
+    "characters_per_page": [
+      3000,
+      2745,
+      3772,
+      3301,
+      3460,
+      3112,
+      3341
+    ],
+    "pdf_sha256": "b102388d7c15e384008acb85905e8c80e87ffb4c8a2f61769e7e74ab2f7e3189",
+    "visual_inspection": "All seven final pages inspected. Pages 4-7 rerendered and inspected after mathematical notation and spacing fixes; pages 1-3 unchanged.",
+    "firewall": "No prohibited production narration in source, extracted PDF text, or PDF title/subject/author metadata.",
+    "public_source_scan": "No closed-source paths in manuscript or extracted PDF text.",
+    "prior_dependency_files_unchanged": 44,
+    "pdflatex": "pdfTeX 1.40.27 (TeX Live 2025)",
+    "poppler": "26.02.0",
+    "initial_build_issue": "Missing end{equation}; repaired before converged build.",
+    "initial_render_issue": "Two malformed spacing commands; repaired before final raster inspection."
+  },
+  "residual": [
+    "Fresh independent acceptance of this exact candidate",
+    "Acceptance of the unchanged global-map002 actual cusp comparison",
+    "Higher global homology",
+    "Complex-family comparison relative to all three boundaries and section",
+    "Other permitted primitive affine increments"
+  ],
+  "runtime_controls": "gpt-6-astra/ultra required; independently observed runtime metadata unavailable"
+}

@@ -1,0 +1,491 @@
+\section{The real attachment and its chains}
+
+All homology groups have coefficients in $\mathbb Z$.
+Let $F=\mathbb R^4/\Lambda$ with ordered lattice
+$\Lambda=\bigoplus_{j=1}^4\mathbb Ze_j$.
+Matrices act on columns. Path multiplication is right to left.
+The mapping torus of $T$ identifies $(a,1)$ with $(Ta,0)$.
+Its positive meridian is $v\mapsto[0,v]$.
+All mapping-torus fundamental classes use interval-first orientation.
+
+Let $E\to\Sigma$ be the flat $F$-bundle over the sphere with three disks removed.
+It has a zero section and marked meridians
+$\gamma_0\gamma_1\gamma_\infty=1$.
+Its monodromies are
+\[
+T_0=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},
+\qquad
+T_1=\begin{pmatrix}-1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1\end{pmatrix},
+\qquad T_\infty=(T_0T_1)^{-1}.
+\]
+For $X_i=\mathbb R^3/\mathbb Z^3$, put
+\[
+P_0=\begin{pmatrix}0&0&1\\1&0&0\\0&1&0\end{pmatrix},\qquad
+P_1=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},\qquad
+(d_0,d_1)=(3,4).
+\]
+Define $G_i=(X_i\times\mathbb R)/([y,\tau+1]=[P_i y,\tau])$,
+and let $N_i=G_i\times D^2$.
+The ordered coordinate changes are
+\begin{equation}\label{th:eq:B}
+B_0=\begin{pmatrix}0&-1&-1&4\\0&0&-1&2\\1&1&1&-6\\0&0&0&1\end{pmatrix},
+\qquad
+B_1=\begin{pmatrix}1&1&0&-1\\0&1&0&-1\\0&-1&1&3\\0&0&0&1\end{pmatrix}.
+\end{equation}
+Write $(y_i,t)^t=B_i^{-1}a$, so $t=a_4$.
+The boundary maps and their core restrictions are
+\begin{equation}\label{th:eq:maps}
+\begin{aligned}
+j_0[a,v]&=([y_0,3t+v],e^{-2\pi it}),&
+f_0(a)&=[y_0,3t],\\
+j_1[a,v]&=([y_1,4t-v],e^{2\pi it}),&
+f_1(a)&=[y_1,4t].
+\end{aligned}
+\end{equation}
+Indeed $B_0^{-1}T_0B_0=\operatorname{diag}(P_0,1)$ and
+$B_1^{-1}T_1B_1=\operatorname{diag}(P_1^{-1},1)$.
+These identities verify the meridian seams.
+The two circle matrices have determinant one, and $B_i$ is unimodular.
+Thus $j_i$ are diffeomorphisms and $f_i$ are coverings of degrees $d_i$.
+Use the induced boundary orientations to form
+\[
+W=E\cup_{j_0}N_0\cup_{j_1}N_1,\qquad \partial W=B_{T_\infty}.
+\]
+This is a specified compact real six-manifold.
+
+The base retracts onto its two finite boundary circles joined by an arc.
+Flat transport lifts this retraction to $E$.
+Attach the two fillings using boundary collars and then contract their disk factors.
+This gives a homotopy equivalence with the double mapping cylinder
+\[
+D=G_0\cup_{f_0}(F\times[0,1])\cup_{f_1}G_1.
+\]
+It retains the meridian homotopies $[y_0,3t+v]$ and $[y_1,4t-v]$.
+In particular, the positive cusp path first traverses $\gamma_0^{-1}$
+and then $\gamma_1^{-1}$, with the joining arc between them.
+
+These maps admit finite compatible triangulations.
+Intersect the finitely many $P_i$-translates of a rational torus subdivision.
+Triangulate that intersection and use its prisms for $G_i$.
+Cut the source of $f_i$ at integral values of $d_it$ and at inverse images of target faces.
+Common refinements give cellular maps and the double mapping cylinder.
+Every additional rational subtorus below can be included by the same refinement.
+There is no requirement for one finite triangulation invariant under both $T_0$ and $T_1$.
+
+We use the chain cone
+\begin{equation}\label{th:eq:cone}
+\begin{aligned}
+\mathcal D_n&=C_n(G_0)\oplus C_n(G_1)\oplus C_{n-1}(F),\\
+d(a_0,a_1,b)&=(da_0+f_{0*}b,\,da_1-f_{1*}b,\,-db).
+\end{aligned}
+\end{equation}
+Here $C_*$ can be the compatible cellular chains or piecewise smooth singular chains.
+Subdivision and prism comparisons identify the two diagrams.
+The shifted term uses the negative of the interval-first cylinder orientation.
+The resulting exact sequence contains
+\begin{equation}\label{th:eq:sequence}
+0\longrightarrow\operatorname{coker}J_3
+\longrightarrow H_3(W)\xrightarrow{\partial}\ker J_2
+\longrightarrow0,\qquad J_n=(f_{0*},-f_{1*}).
+\end{equation}
+The connecting map sends a cone cycle to $[b]$.
+
+\section{Integral three-cycles in the finite cores}
+
+Write $x_1,x_2,x_3$ for the separate ordered coordinate bases of $X_i$.
+Let $A_i\in H_3(G_i)$ be the oriented fibre three-torus.
+The invariant oriented planes have primitive bivectors
+\[
+w_0=x_1x_2-x_1x_3+x_2x_3,\qquad w_1=x_1x_2.
+\]
+Juxtaposition denotes exterior product.
+Their primitive sublattices are
+$\langle x_1-x_3,x_2-x_3\rangle$ and $\langle x_1,x_2\rangle$.
+The matrices $P_i$ preserve these sublattices with determinant one.
+Let $S_i$ be the fundamental class of the positive core mapping torus of that plane.
+
+The core Wang sequence is
+\[
+0\longrightarrow
+\operatorname{coker}(\bigwedge^3P_i-I)
+\longrightarrow H_3(G_i)
+\longrightarrow\ker(\bigwedge^2P_i-I)
+\longrightarrow0.
+\]
+It follows directly from the interval-prism differential.
+Since $\det P_i=1$, its left group is $\mathbb Z A_i$.
+Solving the exterior-square equations gives $\mathbb Zw_i$ on the right.
+The class $S_i$ maps to $w_i$.
+Thus $(A_i,S_i)$ is an integral basis of $H_3(G_i)$.
+
+In the adapted source basis $(x_1,x_2,x_3,t)$, the covering matrices are
+\[
+F^{\rm ad}_{0,3}=
+\begin{pmatrix}1&0&0&0\\0&1&-1&1\end{pmatrix},\qquad
+F^{\rm ad}_{1,3}=
+\begin{pmatrix}1&0&0&0\\0&4&2&-2\end{pmatrix}.
+\]
+Their columns are the lexicographic exterior triples.
+To verify the second rows, divide the covering interval into $d_i$ pieces.
+On a mixed three-torus, the pieces contribute the norm
+$\sum_{r=0}^{d_i-1}\bigwedge^2P_i^r$.
+Moving the last interval to the first position contributes sign $+1$.
+The two norm matrices are the columns $w_i$ times the rows
+$(1,-1,1)$ and $(4,2,-2)$, respectively.
+The first row on a mixed three-torus is zero:
+the invariant volume form $dy_1\wedge dy_2\wedge dy_3$
+has only two independent fibre derivatives there.
+It integrates to one on $A_i$ and zero on $S_i$.
+This excludes an additional fibre-volume coefficient.
+
+Transforming by $\bigwedge^3B_i^{-1}$ gives the actual fibre maps
+\begin{equation}\label{th:eq:F3}
+F_{0,3}=\begin{pmatrix}1&6&2&-4\\0&3&1&-2\end{pmatrix},\qquad
+F_{1,3}=\begin{pmatrix}1&-3&-1&1\\0&6&2&-4\end{pmatrix}.
+\end{equation}
+Consequently
+\begin{equation}\label{th:eq:J3}
+J_3=\begin{pmatrix}
+1&6&2&-4\\0&3&1&-2\\-1&3&1&-1\\0&-6&-2&4
+\end{pmatrix}
+\end{equation}
+in target basis $(A_0,S_0,A_1,S_1)$.
+Its second column is three times its third.
+Its first, third, and fourth columns, followed by $(0,0,0,1)^t$,
+form a determinant-one matrix.
+Hence
+\begin{equation}\label{th:eq:c}
+\operatorname{coker}J_3=\mathbb Zc,\qquad
+c=[S_1],\qquad q=(0,2,0,1),\qquad q(c)=1.
+\end{equation}
+The primitive row $q$ annihilates $J_3$.
+
+We also need the degree-two fibre relations.
+The degree-two core bases consist of one fibre torus and the mapping torus
+of $U_0=(1,1,1)^t$ or $U_1=(-1,-1,2)^t$.
+The fibre quotient rows are $(1,-1,1)$ and $(2,1,-1)$.
+The mixed-torus coefficients are the negative norms of $P_i$ on $H_1(X_i)$.
+Invariant vertical two-forms exclude a residual fibre coefficient, as above.
+This gives
+\begin{equation}\label{th:eq:J2}
+J_2=
+\begin{pmatrix}
+3&1&0&-2&0&0\\0&0&0&0&0&-1\\
+-3&-1&0&2&-3&-1\\0&0&0&0&2&2
+\end{pmatrix}.
+\end{equation}
+Its source basis is $(e_1e_2,e_1e_3,e_1e_4,e_2e_3,e_2e_4,e_3e_4)$.
+An integral vector $y$ belongs to its kernel exactly when
+\begin{equation}\label{th:eq:kerJ2}
+y_5=y_6=0,\qquad 3y_1+y_2-2y_4=0.
+\end{equation}
+
+\section{Four actual meridian three-manifolds}
+
+Use the ordered fibre basis
+\[
+\alpha_1=e_1-e_3,\quad \alpha_2=e_3-e_2,\quad
+\beta_1=e_3,\quad\beta_2=e_4.
+\]
+It is unimodular, and
+$T_\infty\alpha_j=\alpha_j$, $T_\infty\beta_j=\beta_j+\alpha_j$.
+Consider the four primitive invariant subtori with oriented bivectors
+\begin{equation}\label{th:eq:v}
+v_1=\alpha_1\alpha_2,\quad
+v_2=\alpha_1\beta_1,\quad
+v_3=\alpha_2\beta_2,\quad
+v_4=(\alpha_1+\alpha_2)(\beta_1+\beta_2).
+\end{equation}
+Let $V_j$ be the corresponding oriented torus and $M_j=[M(V_j)]$
+its positive mapping-torus fundamental class in $H_3(B_{T_\infty})$.
+The first restricted monodromy is the identity.
+Each of the other three has matrix
+$\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)$
+in the displayed ordered basis.
+Thus these are actual closed oriented three-manifolds.
+
+The following chain construction retains their nontrivial seams.
+Choose a finite oriented fundamental surface chain $u_j$ in $V_j$.
+There is a piecewise smooth singular three-chain $a_j$, supported in $V_j$, with
+\begin{equation}\label{th:eq:seam}
+da_j=T_{\infty*}u_j-u_j.
+\end{equation}
+To construct it, take a common refinement of the triangulations for $u_j$
+and $T_{\infty*}u_j$.
+Let $p_j,p'_j$ be their subdivision prisms to its same oriented fundamental chain $u'_j$.
+Then $dp_j=u'_j-u_j$ and $dp'_j=u'_j-T_{\infty*}u_j$.
+Set $a_j=p_j-p'_j$.
+The prism maps stay in $V_j$.
+This construction uses surface-chain subdivision, without a homotopy between
+the identity map and the restricted unipotent automorphism.
+
+Put $u_j^-=T_{0*}^{-1}u_j$.
+Let $R_i$ be the first three rows of $B_i^{-1}$.
+The two inverse-meridian prisms, extended linearly over surface chains, are
+\begin{equation}\label{th:eq:prisms}
+Q_0(v,a)=[R_0a,3a_4-v],\qquad
+Q_1(v,a)=[R_1a,4a_4+v].
+\end{equation}
+They define actual smooth maps $[0,1]\times F\to G_i$.
+The period relations make these formulas independent of the lift of $a$.
+Their endpoint identities give
+\[
+dQ_0(u_j)=f_{0*}(u_j^--u_j),\qquad
+dQ_1(u_j^-)=f_{1*}(T_{\infty*}u_j-u_j^-).
+\]
+Thus the actual global cycle is
+\begin{equation}\label{th:eq:globalcycle}
+Z_j=\bigl(Q_0(u_j),\,Q_1(u_j^-)-f_{1*}a_j,\,u_j-u_j^-\bigr)
+\in\mathcal D_3.
+\end{equation}
+Substituting \eqref{th:eq:seam} into \eqref{th:eq:cone} gives $dZ_j=0$
+in each component, with the displayed signs.
+Cutting $M(V_j)$ along its marked fibre gives its interval prism and the seam correction $-a_j$.
+The spine retraction takes these pieces to \eqref{th:eq:globalcycle}.
+Therefore $[Z_j]=b_{\infty*}M_j$ for the actual boundary inclusion.
+
+The connecting vectors are
+$\partial[Z_j]=(I-\bigwedge^2T_0^{-1})v_j$.
+Their complete matrix is
+\begin{equation}\label{th:eq:D}
+D_2=
+\begin{pmatrix}
+-1&0&0&-1\\3&2&0&3\\0&0&2&3\\
+0&1&0&0\\0&0&0&0\\0&0&0&0
+\end{pmatrix}.
+\end{equation}
+Its columns $d_j$ satisfy \eqref{th:eq:kerJ2}.
+The three vectors $d_1,d_2,d_3-d_4$ form an integral basis of that kernel.
+Indeed, in those coordinates an element is
+\[
+(-r+t,\,3r+2s-3t,\,-t,\,s,\,0,\,0),
+\qquad (r,s,t)\in\mathbb Z^3,
+\]
+and \eqref{th:eq:kerJ2} gives the unique inverse coordinates.
+Solving $D_2n=0$ over $\mathbb Z$ gives
+\begin{equation}\label{th:eq:r}
+\ker D_2=\mathbb Z(-2,0,-3,2)^t.
+\end{equation}
+The corresponding combination of the $Z_j$ lies in the core subgroup $\mathbb Zc$.
+Its coefficient is the remaining integral question.
+
+\section{A closed cochain determines the primitive relation}
+
+On $X_0$ and $X_1$, respectively, put
+\[
+\omega_0=dy_1\wedge dy_2-dy_1\wedge dy_3+dy_2\wedge dy_3,\qquad
+\omega_1=2dy_1\wedge dy_2+dy_1\wedge dy_3-dy_2\wedge dy_3.
+\]
+Each is $P_i$-invariant.
+Define the closed core forms
+\begin{equation}\label{th:eq:theta}
+\theta_0=\tfrac23\,d\tau\wedge\omega_0,\qquad
+\theta_1=\tfrac12\,d\tau\wedge\omega_1.
+\end{equation}
+The integrals of $\omega_0,\omega_1$ on the invariant planes $w_0,w_1$
+are $3$ and $2$.
+Consequently the pair of forms evaluates on
+$(A_0,S_0,A_1,S_1)$ as $(0,2,0,1)$.
+Its restriction to the core quotient is the primitive homomorphism $q$.
+
+The actual pullbacks agree as differential forms on $F$:
+\begin{equation}\label{th:eq:eta}
+f_0^*\theta_0=f_1^*\theta_1=\eta,\qquad
+\eta=6\,da_1\wedge da_2\wedge da_4
+ +2\,da_1\wedge da_3\wedge da_4
+ -4\,da_2\wedge da_3\wedge da_4.
+\end{equation}
+Here $a_1,\ldots,a_4$ are the real coordinates in the $e$ basis.
+This equality follows by substituting \eqref{th:eq:B} into \eqref{th:eq:theta}.
+It is an equality of constant forms, including all coefficients.
+
+On the piecewise smooth chain cone define
+\[
+\mathcal L(a_0,a_1,b)=\int_{a_0}\theta_0+\int_{a_1}\theta_1.
+\]
+For a boundary, Stokes' formula gives zero on the two core differentials.
+The remaining terms are
+$\int_b f_0^*\theta_0-\int_b f_1^*\theta_1=0$.
+Thus $\mathcal L$ is a real homology functional.
+It need not be integral on every global class.
+Its restriction to the integral core subgroup is exactly $q$.
+
+Each $a_j$ in \eqref{th:eq:seam} is supported in a two-dimensional torus.
+Therefore $\int_{a_j}\eta=0$.
+In the first prism, the meridian derivative of the core parameter is $-1$.
+In the second prism it is $+1$.
+Their fibre derivatives give
+\begin{equation}\label{th:eq:evaluation}
+\mathcal L(Z_j)
+=-\tfrac23\,\omega_0\bigl((\bigwedge^2R_0)v_j\bigr)
+ {}+\tfrac12\,\omega_1\bigl((\bigwedge^2(R_1T_0^{-1}))v_j\bigr).
+\end{equation}
+In the $e$ exterior basis, this evaluation row is
+\[
+\lambda=(-\tfrac12,-\tfrac16,-\tfrac32,\tfrac13,0,-1).
+\]
+Its four values on \eqref{th:eq:v} are
+\begin{equation}\label{th:eq:values}
+(\mathcal L(Z_1),\mathcal L(Z_2),\mathcal L(Z_3),\mathcal L(Z_4))
+=(0,-\tfrac16,-1,-2).
+\end{equation}
+The fractional second value is compatible with the stated real coefficient field.
+Using \eqref{th:eq:r}, the integral core class
+$-2[Z_1]-3[Z_3]+2[Z_4]$ has evaluation $-1$.
+Since $q(c)=1$ on the free core subgroup, this proves the integral relation
+\begin{equation}\label{th:eq:relation}
+-2[Z_1]-3[Z_3]+2[Z_4]=-c
+\quad\hbox{in }H_3(W;\mathbb Z).
+\end{equation}
+In particular, the relation produces a primitive core class.
+No intersection or linking pairing is needed for this calculation.
+
+\section{The integral attaching matrix}
+
+Set
+$t_1=[Z_1]$, $t_2=[Z_2]$, and $t_3=[Z_3]-[Z_4]$.
+Their connecting classes form the integral basis of $\ker J_2$ given above.
+They therefore split \eqref{th:eq:sequence}.
+Together with $c$, they are an integral basis of $H_3(W)$.
+Equation~\eqref{th:eq:relation} now gives
+\begin{equation}\label{th:eq:meridianmatrix}
+b_{\infty*}(M_1,M_2,M_3,M_4)=
+\begin{pmatrix}
+1&0&-2&-2\\0&1&0&0\\0&0&-2&-3\\0&0&1&1
+\end{pmatrix}
+\end{equation}
+in the target basis $(t_1,t_2,t_3,c)$.
+The determinant is one.
+This proves both the image and kernel over the integers.
+
+We state the marked cusp input for the complete attachment.
+Let $N_c$ be a compact smooth cusp neighborhood with boundary $B=B_{T_\infty}$.
+Let $k:B\to N_c$ be its actual marked inclusion.
+Assume its degree-three homology is free of rank two, and that
+\begin{equation}\label{th:eq:local}
+H_3(B)=
+\bigoplus_{j=1}^4\mathbb ZM_j\oplus\mathbb ZC_1\oplus\mathbb ZC_2,
+\qquad
+k_*M_j=0,\quad k_*C_i=n_i,
+\end{equation}
+where $(n_1,n_2)$ is an integral basis of $H_3(N_c)$.
+The fibre classes $C_1,C_2$ are the actual oriented three-tori
+$\alpha_1\beta_1\beta_2$ and $\alpha_2\beta_1\beta_2$.
+These are the local data of the marked toric specialization with periods
+$(qc_1,c_2),(c_3,qc_4)$ and its retained section.
+The local identification must preserve the actual meridian homotopy.
+
+For clarity, the boundary-group splitting in \eqref{th:eq:local}
+has a direct integral check.
+The four $v_j$ form a basis of $\ker(\bigwedge^2T_\infty-I)$.
+The fibre quotient in degree three is freely generated by $C_1,C_2$.
+The actual $M_j$ project to $v_j$ in the Wang sequence.
+For the marked toric collapse, their images have two-dimensional carriers,
+and the fibre map sends $C_i$ to $n_i$.
+These geometric properties are the local input in \eqref{th:eq:local}.
+
+The fibre inclusion into $W$ lands in the core quotient.
+The evaluation \eqref{th:eq:eta} gives
+$b_{\infty*}C_1=2c$ and $b_{\infty*}C_2=4c$.
+Consequently the full degree-three attaching map is
+\begin{equation}\label{th:eq:full}
+(b_{\infty*},-k_*)_3=
+\begin{pmatrix}
+1&0&-2&-2&0&0\\
+0&1&0&0&0&0\\
+0&0&-2&-3&0&0\\
+0&0&1&1&2&4\\
+0&0&0&0&-1&0\\
+0&0&0&0&0&-1
+\end{pmatrix}.
+\end{equation}
+The source basis is $(M_1,M_2,M_3,M_4,C_1,C_2)$.
+The target basis is $(t_1,t_2,t_3,c,n_1,n_2)$.
+
+\begin{theorem}\label{th:thm:third}
+For the specified real fillings,
+$H_3(W;\mathbb Z)=\mathbb Z^4$, with basis $(t_1,t_2,t_3,c)$.
+The actual meridian map \eqref{th:eq:meridianmatrix} is an integral isomorphism.
+Under the marked cusp data \eqref{th:eq:local}, the full map
+\eqref{th:eq:full} is an integral isomorphism.
+Both its kernel and cokernel vanish.
+\end{theorem}
+\begin{proof}
+The global sequence, the basis of its quotient, and the primitive relation
+give the stated integral basis.
+The meridian determinant is one.
+The last two diagonal entries of the full block matrix are both $-1$,
+so its determinant is also one.
+\end{proof}
+
+To determine $H_3(Y)$ for $Y=W\cup_BN_c$, the preceding attaching map
+in degree two must also be injective.
+Here is the exact local input and its integral verification.
+Assume $k_{*,2}$ is onto with kernel the two angular meridian tori
+$z_i=M(\alpha_i)$.
+The one-dimensional version of the actual prisms \eqref{th:eq:prisms}
+gives their connecting images $(I-T_0^{-1})\alpha_i=e_1,2e_1$.
+The difference $z_2-2z_1$ has fibre circle
+$\delta=-2e_1-e_2+3e_3$, fixed by both finite monodromies.
+Its core images are the negative $U_0$ mapping torus
+and the positive $U_1$ mapping torus.
+In the degree-two core basis, their sum is $c_2=(0,-1,0,1)^t$.
+Columns $2,5,6$ of \eqref{th:eq:J2}, followed by $c_2$, have determinant one.
+The degree-one fibre map, obtained directly from \eqref{th:eq:maps}, is
+\[
+J_1=\begin{pmatrix}0&0&1&6\\0&0&0&3\\0&-1&-1&2\\0&0&0&-4\end{pmatrix}.
+\]
+Its rows give the integral kernel $\mathbb Ze_1$.
+Thus the two actual angular meridian tori map isomorphically onto $H_2(W)$.
+If an element of $H_2(B)$ is killed by both $b_{\infty*}$ and $k_*$,
+it belongs to their two-dimensional meridian subgroup and is zero.
+This proves the needed injectivity of $(b_{\infty*},-k_*)_2$.
+
+\begin{corollary}\label{th:cor:Y}
+For the specified marked toric attachment, with the local data just stated,
+\[
+H_3(Y;\mathbb Z)=0.
+\]
+In particular, this group has no torsion.
+\end{corollary}
+\begin{proof}
+The Mayer--Vietoris sequence gives
+\[
+\operatorname{coker}(b_{\infty*},-k_*)_3
+\longrightarrow H_3(Y)
+\longrightarrow\ker(b_{\infty*},-k_*)_2.
+\]
+Both outer groups vanish by the actual matrices and the preceding argument.
+\end{proof}
+
+The complex-family question retains a separate geometric comparison.
+It concerns $Y(u,a_0,a_1)$ for all sufficiently small nonzero complex $u$
+and primitive increments
+$a_0\in\frac13\Lambda^{T_0}$, $a_1\in\frac14\Lambda^{T_1}$,
+with $|12e_4^*(a_0+a_1)|=1$.
+The desired conclusion is a diffeomorphism of the underlying smooth manifold with $S^6$.
+The present finite maps use $a_0=e_4/3$ and $a_1=-(e_1+e_4)/4$.
+Application requires an actual comparison of the punctured complex family with $E$,
+relative to all three marked boundaries and the section.
+More precisely, if $\mathcal E_u\to\Sigma$ is that restricted family,
+the next map is a fibre-preserving diffeomorphism
+$\Phi_u:\mathcal E_u\to E$ carrying its section to the zero section.
+Its three boundary restrictions must equal the specified period markings.
+For each local filling, an extension
+$\Psi_i:\mathcal N_{u,i}\to N_i$ must satisfy
+$\Psi_i j_i^{\rm geom}=j_i\Phi_u$ on the corresponding boundary.
+The analogous equation must hold for the marked cusp filling.
+Its finite lifted translations must extend smoothly and equivariantly,
+with proper quotients, the specified periods, and conormal comparisons
+$e=s^{-2}e'$ and $e=s^{-1}e'$.
+Those maps, the other permitted affine increments, and the remaining topology
+are separate from the third-homology calculation.
+The toric and complex-geometric constructions motivating this question are
+described in \cite[Sections 2--4]{THengel}.
+
+\begin{thebibliography}{9}
+\bibitem{THengel}
+P.~Engel, \emph{Complex structures on $S^6$},
+\href{https://philip-engel.github.io/S6.pdf}{author manuscript},
+Propositions 2.7--2.9 and Sections 3--4.
+\end{thebibliography}

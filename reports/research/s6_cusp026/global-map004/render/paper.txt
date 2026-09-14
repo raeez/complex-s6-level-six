@@ -1,0 +1,391 @@
+                  Meridian Tori in a Two-Filling Attachment
+
+                                                Raeez Lorgat
+
+
+                                                   Abstract
+          Two finite torus fillings determine a compact real six-manifold with a torus-bundle boundary.
+       We compute its integral second homology and the images of two marked meridian tori. A double
+       mapping cylinder retains the attaching paths and reduces the calculation to explicit core surfaces.
+       The two boundary classes form an integral basis. Attaching a cusp whose specialization has these
+       two classes as its kernel therefore kills the second homology.
+
+
+1    The marked attachment
+All homology groups have coefficients in ℤ. Let 𝐹 = ℝ4 /Λ, with ordered lattice Λ = 𝑗4 =1 ℤ𝑒𝑗 . Matrices
+                                                                                   L
+act on columns. Path products act from right to left. For an automorphism 𝑇 of 𝐹 , write
+
+                                  𝐵𝑇 = ( 𝐹 × [0, 1])/(( 𝑎, 1) ∼ (𝑇 𝑎, 0)) .
+
+The positive meridian is 𝑣 ↦→ [0, 𝑣 ]. Its conjugation action on the fibre lattice is 𝑇 . Orient every meridian
+surface by the meridian interval first.
+   We use the monodromies
+
+                                  0 −1 −1 0                       −1    1 −1 2
+                                 ©         ª                     ©              ª
+                                 ­ 1 −1 0 0®                     ­−1    0 −1 1 ®®
+                           𝑇0 = ­­         ®,              𝑇1 = ­­               ,
+                                 ­0 0 1 0®
+                                           ®
+                                                                 ­1     1 2 −1®®
+                                 «0 0 0 1 ¬                      «0     0 0 1¬
+                                                     2 1 1 0
+                                                   ©          ª
+                                                −1
+                                                   ­ 0 1 0 −1®®
+                                    𝑇∞ = (𝑇0𝑇1 ) = ­
+                                                   ­
+                                                              ®.
+                                                   ­−1 −1 0 1 ®
+                                                   «0 0 0 1 ¬
+Let Σ be an oriented sphere with three open disks removed. Choose marking paths whose positive
+meridians satisfy 𝛾0 𝛾1 𝛾∞ = 1. Let 𝐸 → Σ be the flat 𝐹 -bundle with these monodromies and zero
+section.
+   Here are the two marked fillings. Put 𝑋𝑖 = ℝ3 /ℤ3 and
+
+                    0 0 1                 0 −1 −1
+                   ©       ª             ©        ª
+              𝑃0 = ­ 1 0 0®®,
+                   ­                𝑃1 = ­ 1 0 0 ®®,
+                                         ­                  𝑈0 = (1, 1, 1) 𝑡 ,   𝑈1 = (−1, −1, 2) 𝑡 .
+                   «0 1 0¬               «0 0 1 ¬
+
+
+
+                                                       1
+Thus 𝑃𝑖 𝑈𝑖 = 𝑈𝑖 , 𝑃03 = 𝐼 , and 𝑃14 = 𝐼 . Define 𝐺𝑖 = ( 𝑋𝑖 × ℝ)/( [ 𝑦, 𝜏 + 1] = [ 𝑃𝑖 𝑦, 𝜏 ]), and put
+𝑁𝑖 = 𝐺𝑖 × 𝐷 2 . The fibre coordinates adapted to their covering maps are
+
+                                0 −1 −1 4                               1 1 0 −1
+                               ©          ª                           ©         ª
+                               ­0 0 −1 2 ®                            ­0 1 0 −1®
+                         𝐵0 = ­­          ®,                    𝐵1 = ­­         ®.
+                               ­ 1 1 1 −6®                            ­0 −1 1 3 ®
+                                          ®                                     ®
+
+                               «0 0 0 1 ¬                             «0 0 0 1 ¬
+Both are unimodular. Write 𝑎 = 𝐵 𝑖 ( 𝑦, 𝑡 ) 𝑡 in the 𝑖 th coordinates. Then
+
+                         𝐵0−1𝑇0 𝐵0 = diag( 𝑃0 , 1) ,          𝐵1−1𝑇1 𝐵1 = diag( 𝑃1−1 , 1) .
+
+The actual boundary identifications into 𝜕 𝑁𝑖 are
+
+                                     𝑗0 [ 𝑎, 𝑣 ] = ( [ 𝑦, 3𝑡 + 𝑣 ] , 𝑒 −2𝜋 𝑖𝑡 ) ,
+                                                                                                      (1.1)
+                                     𝑗1 [ 𝑎, 𝑣 ] = ( [ 𝑦, 4𝑡 − 𝑣 ] , 𝑒 2𝜋 𝑖𝑡 ) .
+
+The coordinates 𝑦, 𝑡 on each line mean 𝐵 𝑖−1 𝑎. The endpoint relations follow from the two displayed con-
+jugations. Changing 𝑡 by one changes the core parameter by 3 or 4, which acts trivially on 𝑋𝑖 . The circle
+                           3 1          4 −1
+matrices on ( 𝑡, 𝑣 ) are ( −1 0 ) and ( 1 0 ). Their determinants are one, so the maps are diffeomorphisms.
+Use the induced boundary orientations to form the compact real manifold
+
+                               𝑊 = 𝐸 ∪𝑗0 𝑁0 ∪𝑗1 𝑁1 ,                     𝜕𝑊 = 𝐵𝑇∞ .                   (1.2)
+
+Projection to the cores gives fibre maps
+
+                        𝑓𝑖 : 𝐹 −→ 𝐺𝑖 ,           𝑓0 ( 𝑎) = [ 𝑦, 3𝑡 ] ,     𝑓1 ( 𝑎) = [ 𝑦, 4𝑡 ] .      (1.3)
+
+These are coverings of degrees three and four. The marked finite meridians project to the positive core
+loop at 0 and the negative core loop at 1.
+   Set
+                 𝛼1 = 𝑒1 − 𝑒3 ,     𝛼2 = 𝑒3 − 𝑒2 ,   𝛿 = 𝛼2 − 2 𝛼1 = −2𝑒1 − 𝑒2 + 3𝑒3 .             (1.4)
+The two 𝛼𝑗 are fixed by 𝑇∞ . The vector 𝛿 is fixed by both finite monodromies. Let 𝑧𝑗 ∈ 𝐻2 ( 𝐵𝑇∞ ) be
+represented by
+                              ( 𝑣, 𝑠 ) ↦−→ [ 𝑠 𝛼𝑗 , 𝑣 ] , ( 𝑣, 𝑠 ) ∈ (ℝ/ℤ) 2 .
+The question is to determine their images under the actual inclusion 𝑏∞ : 𝐵𝑇∞ → 𝑊 , including their
+integral divisibility.
+
+
+2    A global cylinder carrying the marked paths
+Consider the double mapping cylinder
+
+                                     𝐷 = 𝐺0 ∪ 𝑓0 ( 𝐹 × [0, 1]) ∪ 𝑓1 𝐺1 .
+
+
+
+
+                                                          2
+The endpoint 0 attaches to 𝐺0 , and 1 attaches to 𝐺1 . There is a homotopy equivalence 𝑊 ≃ 𝐷 that
+preserves the marked fibre and the homotopies associated to the two finite meridians. We give its con-
+struction because those homotopies determine 𝑏∞∗ .
+    Choose a spine of Σ consisting of two circles joined by an arc. Take the circles along the finite boundary
+components and use the chosen marking paths on the joining arc. The punctured surface retracts onto
+this spine. Lift the retraction using flat parallel transport in 𝐸 . The resulting bundle consists of 𝐵𝑇0 , 𝐵𝑇1 ,
+and 𝐹 × [0, 1], with endpoint fibre inclusions into the two boundary bundles. The remaining positive
+meridian traverses 𝛾0−1 and then 𝛾1−1 , with the joining arc between the corresponding circles. This is
+exactly the word 𝛾∞ = 𝛾1−1 𝛾0−1 .
+    Use collars at the two finite boundaries during this retraction. Their attachment to 𝑁𝑖 is a homotopy
+pushout, since every boundary inclusion is a cofibration. The two boundary bundles can therefore be
+absorbed into their fillings. The result is the double mapping cylinder of the fibre maps into 𝑁𝑖 . Finally
+contract each disk factor of 𝑁𝑖 = 𝐺𝑖 × 𝐷 2 . The endpoint maps become exactly (1.3). The finite meridian
+homotopies become
+
+                            [ 𝑎, 𝑣 ] ↦−→ [ 𝑦, 3𝑡 + 𝑣 ] ,        [ 𝑎, 𝑣 ] ↦−→ [ 𝑦, 4𝑡 − 𝑣 ] .
+
+This constructs the equivalence together with the path data used below.
+   All these spaces admit finite compatible CW models. For completeness, subdivide each coordinate
+torus by rational polytopes. On 𝑋𝑖 , intersect the finitely many images under 𝑃𝑖 and triangulate the
+resulting subdivision. It is 𝑃𝑖 -invariant. Cut the source of 𝑓𝑖 where 𝑑𝑖 𝑡 is integral, with ( 𝑑0 , 𝑑1 ) = (3, 4).
+Refine further by inverse images of target faces. The resulting finite subdivisions make the covering maps
+piecewise linear. Use the corresponding mapping cylinders and compatible prism subdivisions. The
+meridian squares below are rational affine on each core chart, so the same construction includes their
+images and boundary loops. Thus the construction uses actual cells and their boundary maps.
+   One chain model is
+
+                                          D𝑛 = 𝐶𝑛 ( 𝐺0 ) ⊕ 𝐶𝑛 ( 𝐺1 ) ⊕ 𝐶𝑛−1 ( 𝐹 ) ,
+                                                                                                                (2.1)
+                                𝑑 ( 𝑎0 , 𝑎1 , 𝑏 ) = ( 𝑑𝑎0 + 𝑓0∗ 𝑏, 𝑑𝑎1 − 𝑓1∗ 𝑏, − 𝑑𝑏 ) .
+
+Here 𝐶∗ denotes the compatible integral cellular chains. The shifted term represents the cylinder with
+the negative of its interval-first orientation. Subdivision compares these chains with normalized singular
+cubical chains. The interval boundary formula gives (2.1) directly. It also gives the exact segment
+
+                       𝐽2                                           𝜕            𝐽1
+             𝐻2 ( 𝐹 ) −→ 𝐻2 ( 𝐺0 ) ⊕ 𝐻2 ( 𝐺1 ) −→ 𝐻2 (𝑊 ) −
+                                                          → 𝐻1 ( 𝐹 ) −
+                                                                     → 𝐻1 ( 𝐺0 ) ⊕ 𝐻1 ( 𝐺1 ) ,                  (2.2)
+
+where 𝐽𝑛 = ( 𝑓0∗ , − 𝑓1∗ ). The connecting map sends a cycle in (2.1) to [ 𝑏 ].
+
+
+3    Integral surfaces in the two cores
+Let 𝑥1 , 𝑥2 , 𝑥3 denote the ordered coordinate loops of either 𝑋𝑖 . They are separate local bases. Put ℎ𝑖 ( 𝑣 ) =
+[0, 𝑣 ] ∈ 𝐺𝑖 . The degree-one bases of 𝐺0 , 𝐺1 are respectively ( 𝑥 1 , ℎ0 ) and ( 𝑥 3 , ℎ1 ). Indeed, coker( 𝑃0 − 𝐼 )
+is freely generated by 𝑥 1 = 𝑥 2 = 𝑥 3 . For 𝑃1 , the image of 𝑃1 − 𝐼 is ℤ 𝑥1 ⊕ ℤ 𝑥2 , integrally.
+    The degree-two bases require both fibre tori and meridian surfaces. Let
+
+                                     𝐴0 = [ 𝑥 1 ∧ 𝑥 2 ] ,        𝐴1 = [ 𝑥1 ∧ 𝑥3 ]
+
+
+                                                            3
+be their images from 𝐻2 ( 𝑋𝑖 ), and define
+
+                                  𝑆𝑖 = [( 𝑣, 𝑠 ) ↦−→ [ 𝑠𝑈𝑖 , 𝑣 ]] ∈ 𝐻2 ( 𝐺𝑖 ) .
+
+The invariant vectors 𝑈𝑖 are primitive, so these are embedded tori. We claim that ( 𝐴𝑖 , 𝑆𝑖 ) is an integral
+basis of 𝐻2 ( 𝐺𝑖 ).
+   Cutting the core circle at its base point gives the chain sequence
+                                  2
+                                  ^
+                    0 −→ coker(       𝑃𝑖 − 𝐼 ) −→ 𝐻2 ( 𝐺𝑖 ) −→ ker( 𝑃𝑖 − 𝐼 ) −→ 0.
+
+This follows from the prism differential ( 𝑎, 𝑏 ) ↦→ ( 𝑑𝑎 + ( 𝑃𝑖 ∗ − 𝐼 ) 𝑏, − 𝑑𝑏 ). The last map takes 𝑆𝑖 to
+𝑈𝑖 . For 𝑃0 , the fibre quotient is free of rank one, with coordinate row (1, −1, 1) in the exterior basis
+( 𝑥1 𝑥2 , 𝑥1 𝑥3 , 𝑥2 𝑥3 ). For 𝑃1 the exterior action is
+
+                                           2
+                                           ^           1 1 0
+                                                     ©       ª
+                                                𝑃1 = ­0 0 −1®®.
+                                                     ­
+
+                                                     «0 1 0 ¬
+Its quotient relations are 𝑎 − 𝑏 + 𝑐 = 0 and 𝑏 + 𝑐 = 0. Consequently 𝑎 = 2𝑏 , 𝑐 = −𝑏 , and the quotient
+is freely generated by 𝑏 . Its coordinate row is (2, 1, −1). Also ker( 𝑃𝑖 − 𝐼 ) = ℤ𝑈𝑖 in both cases. These
+facts prove the basis claim and the absence of torsion in 𝐻2 ( 𝐺𝑖 ).
+     We next determine the covering maps without discarding any fibre component. In the adapted basis
+( 𝑥1 , 𝑥2 , 𝑥3 , 𝑡 ) of the source torus, their matrices are
+                                                                        !
+                                             ad    1 −1 0 1 0 0
+                                           𝐹0,2 =                         ,
+                                                   0 0 −1 0 −1 −1
+                                                                     !                                (3.1)
+                                             ad    2 1 0 −1 0 0
+                                           𝐹1,2 =                      .
+                                                   0 0 0 0 0 −2
+
+Columns use the lexicographic exterior basis. The first rows follow from the fibre quotient just computed.
+The Wang projection of a covered torus 𝑥 ∧ 𝑡 is the negative norm −( 𝐼 + 𝑃𝑖 + · · · + 𝑃𝑖𝑑𝑖 −1 ) 𝑥 . The sign
+comes from changing fibre-first orientation to interval-first orientation. For 𝑥 = 𝑗3 =1 𝜉𝑗 𝑥𝑗 , the two
+                                                                                      P
+norms are
+                             𝜈0 𝑥 = ( 𝜉1 + 𝜉2 + 𝜉3 )𝑈0 ,       𝜈1 𝑥 = 2 𝜉3𝑈1 .
+These formulas determine the second rows.
+  There could still be a fibre coefficient in a covered mixed torus. The invariant constant two-forms
+
+                              𝜔0 = 𝑑𝑦1 ∧ 𝑑𝑦2 − 𝑑𝑦1 ∧ 𝑑𝑦3 + 𝑑𝑦2 ∧ 𝑑𝑦3 ,
+                              𝜔1 = 2 𝑑𝑦1 ∧ 𝑑𝑦2 + 𝑑𝑦1 ∧ 𝑑𝑦3 − 𝑑𝑦2 ∧ 𝑑𝑦3 .
+
+descend to 𝐺𝑖 because 𝑃𝑖∗ 𝜔𝑖 = 𝜔𝑖 . Each integrates to one on 𝐴𝑖 and zero on 𝑆𝑖 . On a covered mixed
+torus, the fibre coordinate is 𝑦 = 𝑠𝑥 before any seam. Each seam applies a constant linear map 𝑃𝑖 to 𝑦 .
+Thus its two fibre derivatives are dependent, and the integral of 𝜔𝑖 vanishes. Since ( 𝐴𝑖 , 𝑆𝑖 ) is already
+
+
+
+
+                                                       4
+an integral basis, the possible fibre coefficient is zero. This establishes every entry of (3.1) for the actual
+maps.
+   Transforming the source by 2 𝐵 𝑖−1 gives
+                                  V
+
+                                                             !
+                                                3 1 0 −2 0 0
+                                         𝐹0,2 =                ,
+                                                0 0 0 0 0 −1
+                                                               !
+                                                 3 1 0 −2 3  1
+                                          𝐹1,2 =                 .
+                                                 0 0 0 0 −2 −2
+
+The source columns are ( 𝑒1 𝑒2 , 𝑒1 𝑒3 , 𝑒1 𝑒4 , 𝑒2 𝑒3 , 𝑒2 𝑒4 , 𝑒3 𝑒4 ). Similarly, the degree-one matrix is
+
+                                                       0 0 1 6
+                                                      ©          ª
+                                                      ­0 0 0 3 ®
+                                                𝐽1 = ­­          ®.                                             (3.2)
+                                                      ­0 −1 −1 2 ®
+                                                                 ®
+
+                                                      «0 0 0 −4¬
+Solving its rows over ℤ gives ker 𝐽1 = ℤ𝑒1 .
+
+
+4     The global relations and the cusp surfaces
+In the target basis ( 𝐴0 , 𝑆0 , 𝐴1 , 𝑆1 ), the degree-two relation matrix is
+
+                                                 3 1 0 −2 0 0
+                                               ©               ª
+                                               ­ 0 0 0 0 0 −1®
+                                          𝐽2 = ­
+                                               ­               ®.
+                                               ­−3 −1 0 2 −3 −1®
+                                                               ®
+
+                                               «0 0 0 0 2 2¬
+Let 𝑟1 , 𝑟2 , 𝑟3 be its columns numbered 2, 5, 6, respectively. Every other column is an integral multiple of
+𝑟1 or zero. Set 𝑐 = − 𝑆0 + 𝑆1 = (0, −1, 0, 1) 𝑡 . Then
+
+                                                        1 0 0 0
+                                                      ©           ª
+                                                      ­ 0 0 −1 −1®
+                           U = ( 𝑟1 , 𝑟2 , 𝑟3 , 𝑐 ) = ­
+                                                      ­           ®,               det U = 1.
+                                                      ­−1 −3 −1 0 ®
+                                                                  ®
+
+                                                      «0 2 2 1 ¬
+Therefore coker 𝐽2 = ℤ𝑐 . Equivalently, the primitive row (2, 4, 2, 3) annihilates 𝐽2 and takes value −1 on
+𝑐 . The exact sequence (2.2) becomes
+                                                                    𝜕
+                                      0 −→ ℤ𝑐 −→ 𝐻2 (𝑊 ) −
+                                                         → ℤ𝑒1 −→ 0.                                            (4.1)
+
+This identifies the integral relation subgroup, including its saturation.
+   We now give the actual global chains representing the cusp surfaces. For an integral vector 𝑎 with
+𝑎4 = 0 and 𝑇∞ 𝑎 = 𝑎, write 𝑎′ = 𝑇0−1 𝑎 and let ℓ ( 𝑎) ( 𝑠 ) = 𝑠𝑎 (mod Λ). Write 𝑀 ( 𝑎) for the oriented
+
+
+
+
+                                                             5
+cusp torus ( 𝑣, 𝑠 ) ↦→ [ 𝑠𝑎, 𝑣 ]. Let 𝑅𝑖 be the first three rows of 𝐵 𝑖−1 . In singular cubical chains of the cores,
+define
+                       𝑄0 ( 𝑎) ( 𝑣, 𝑠 ) = [ 𝑠𝑅0 𝑎, −𝑣 ] ,     𝑄1 ( 𝑎′ ) ( 𝑣, 𝑠 ) = [ 𝑠𝑅1 𝑎′ , 𝑣 ] .           (4.2)
+Their boundaries are literal differences of the stated loops:
+
+                                        𝑑𝑄0 ( 𝑎) = 𝑓0∗ ℓ ( 𝑎′ ) − ℓ ( 𝑎) ,
+                                                                           
+
+                                        𝑑𝑄1 ( 𝑎′ ) = 𝑓1∗ ℓ ( 𝑎) − ℓ ( 𝑎′ ) .
+                                                                          
+
+The first identity uses 𝑃0−1 𝑅0 𝑎 = 𝑅0 𝑎′ . The second uses 𝑃1 𝑅1 𝑎′ = 𝑅1 𝑎, which follows from
+𝑇1 −1𝑇0−1 𝑎 = 𝑇∞ 𝑎 = 𝑎. The 𝑠 -faces cancel because their fibre coordinates differ by lattice vectors.
+    Consequently
+                                Z( 𝑎) = 𝑄 0 ( 𝑎) , 𝑄 1 ( 𝑎′ ) , ℓ ( 𝑎) − ℓ ( 𝑎′ )
+                                                                                  
+
+is a cycle in (2.1), after the compatible subdivision comparison. The two core squares trace 𝛾0−1 and 𝛾1−1 .
+The shifted term traces the joining arc at the two fibre loops. The spine retraction constructed above
+therefore takes the actual cusp square ( 𝑣, 𝑠 ) ↦→ [ 𝑠𝑎, 𝑣 ] to this cycle. This identifies its homology class
+through maps and chains.
+    The connecting image follows directly:
+
+                    𝜕𝑏∞∗ [ 𝑀 ( 𝑎)] = ( 𝐼 − 𝑇0−1 ) 𝑎,         𝜕𝑏∞∗ 𝑧1 = 𝑒1 ,    𝜕𝑏∞∗ 𝑧2 = 2𝑒1 .
+
+For example, 𝑇0−1 𝛼1 = −𝑒3 and 𝑇0−1 𝛼2 = −2𝑒1 − 𝑒2 + 𝑒3 . These signs use the negative cylinder orientation
+in (2.1).
+    For 𝑎 = 𝛿 , both finite monodromies fix 𝑎, so the shifted term is zero. Moreover, 𝑅𝑖 𝛿 = 𝑈𝑖 . Thus
+(4.2) gives the classes − 𝑆0 and 𝑆1 , respectively. We have proved
+
+                                         𝑏∞∗ [ 𝑀 ( 𝛿 )] = − 𝑆0 + 𝑆1 = 𝑐.                                      (4.3)
+
+The angular torus generated by 𝛼1 , 𝛼2 is fixed pointwise by 𝑇∞ . Taking its product with the meridian
+circle is linear on integral 𝐻1 . Equation (1.4) therefore gives [ 𝑀 ( 𝛿 )] = 𝑧2 − 2 𝑧1 in boundary homology.
+Theorem 4.1. For the actual marked real attachment (1.2), 𝐻2 (𝑊 ) = ℤ𝑡 ⊕ ℤ𝑐 , where 𝑡 = 𝑏∞∗ 𝑧1 and
+𝑐 = − 𝑆0 + 𝑆1 . The inclusion on the meridian subgroup is
+                                                                  !
+                                                              1 2
+                                ℤ 𝑧1 ⊕ ℤ 𝑧2 −→ 𝐻2 (𝑊 ) ,
+                                                              0 1
+
+in the ordered bases ( 𝑧1 , 𝑧2 ) and ( 𝑡, 𝑐 ). Its image is all of 𝐻2 (𝑊 ) and its kernel is zero.
+
+Proof. The class 𝑡 maps to the generator 𝑒1 in (4.1). It therefore splits that exact sequence integrally.
+Equation (4.3) identifies 𝑏∞∗ 𝑧2 with 2𝑡 + 𝑐 . The displayed matrix has determinant one.
+
+
+5    The consequence for a cusp attachment
+We state the exact local input needed to apply the global map. Let 𝑁𝑐 be a compact connected cusp
+neighborhood with marked boundary 𝐵 = 𝐵𝑇∞ , and let 𝑘 : 𝐵 → 𝑁𝑐 be its actual boundary inclusion.
+
+
+
+                                                         6
+Assume its integral specialization satisfies
+
+                                    𝑘∗,2 is surjective,         ker 𝑘∗,2 = ℤ 𝑧1 ⊕ ℤ 𝑧2 .                    (5.1)
+
+In degree one, assume 𝐻1 ( 𝑁𝑐 ) = ℤ 𝛽1 ⊕ ℤ 𝛽2 , where 𝛽1 = 𝑒3 , 𝛽2 = 𝑒4 , and
+
+                                               𝑘∗ 𝛽𝑗 = 𝛽𝑗 ,          𝑘∗ 𝛾∞ = 0.
+
+These are hypotheses on the marked map, including its meridian. The toric specialization of the period
+family ( 𝑞𝑐1 , 𝑐2 ) , ( 𝑐3 , 𝑞𝑐4 ) motivates these local data [1, Propositions 2.7–2.9]. The following conclusion
+requires the actual maps in (1.1) and (5.1).
+Corollary 5.1. For 𝑌 = 𝑊 ∪ 𝐵 𝑁𝑐 with the stated marked local data, 𝐻2 (𝑌 ; ℤ) = 0.
+
+Proof. The image of 𝑇∞ − 𝐼 on Λ is ℤ 𝛼1 ⊕ ℤ 𝛼2 . The basis ( 𝛼1 , 𝛼2 , 𝑒3 , 𝑒4 ) is unimodular. The mapping-
+torus sequence and the zero section therefore give 𝐻1 ( 𝐵 ) = ℤ 𝛽1 ⊕ ℤ 𝛽2 ⊕ ℤ 𝛾∞ . The degree-one version
+of the double-cylinder sequence identifies 𝐻1 (𝑊 ) with coker 𝐽1 . The nonzero Smith factors of (3.2) are
+(1, 1, 1). The primitive quotient row on ( 𝑥 1 , ℎ0 , 𝑥 3 , ℎ1 ) is (0, 4, 0, 3). Thus 𝐻1 (𝑊 ) = ℤ 𝑔 , the common
+fibre class 𝑒4 maps to 12 𝑔 , and 𝑒3 maps to zero. The positive finite meridians map to 4 𝑔 and −3 𝑔 . Hence
+𝛾∞ maps to − 𝑔 . In the boundary basis ( 𝛽1 , 𝛽2 , 𝛾∞ ), the map to 𝐻1 (𝑊 ) ⊕ 𝐻1 ( 𝑁𝑐 ) is therefore
+
+                                                                 0 12 −1
+                                                               ©        ª
+                                              ( 𝑏∞∗ , −𝑘∗ )1 = ­−1 0 0 ®®.
+                                                               ­
+
+                                                               « 0 −1 0 ¬
+Its determinant is −1, so the next connecting map out of 𝐻2 (𝑌 ) vanishes. The degree-two attachment
+map is surjective as well. Indeed, first lift its 𝐻2 ( 𝑁𝑐 ) component through the surjection 𝑘∗,2 . Then correct
+its 𝐻2 (𝑊 ) component using ker 𝑘∗,2 = ℤ 𝑧1 ⊕ ℤ 𝑧2 and Theorem 4.1. The integral Mayer–Vietoris
+sequence now gives 𝐻2 (𝑌 ) = 0.
+
+  The complex-geometric question asks for a compact complex family 𝑌 ( 𝑢, 𝑎0 , 𝑎1 ) for all sufficiently
+small nonzero complex 𝑢 and primitive torsion increments
+
+                              𝑎0 ∈ 31 Λ𝑇0 ,         𝑎1 ∈ 41 Λ𝑇1 ,        |12𝑒4∗ ( 𝑎0 + 𝑎1 )| = 1.
+
+The desired conclusion is a diffeomorphism of its underlying smooth manifold with 𝑆 6 . The specified
+markings here correspond to 𝑎0 = 𝑒4 /3 and 𝑎1 = −( 𝑒1 + 𝑒4 )/4. Identifying that complex family’s
+punctured torus bundle with 𝐸 requires a comparison relative to all three marked boundaries and the
+section. The finite lifted translations must extend smoothly on their reduced divisor torsors, commute
+with the cyclic deck actions, and give proper quotients with the specified periods. The retained section
+must have conormal comparisons 𝑒 = 𝑠 −2 𝑒 ′ at 0 and 𝑒 = 𝑠 −1 𝑒 ′ at 1. These remain separate geometric
+requirements. Other increments require their actual affine attachment maps. The second-homology
+calculation here proves a topological consequence for the specified real attachment and stated cusp input.
+Higher homology and the full complex-family comparison require further arguments.
+
+
+References
+[1] P. Engel, Complex structures on 𝑆 6 , author manuscript, Sections 3, 5, and 7.
+
+
+
+                                                               7
+

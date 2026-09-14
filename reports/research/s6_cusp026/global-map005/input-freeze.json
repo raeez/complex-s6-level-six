@@ -1,0 +1,12 @@
+{
+  "utc": "2026-09-14T17:46:40.343212+00:00",
+  "inputs": {
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map004/meridian-tori.tex": "653501a495bab0e31e91125206045f66ecbb8bdc9b0f880e7315764c0ed4d55e",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map004/candidate-manifest.json": "9251a18f4910727170be355a1ca4599a76af9128e03e059f196a93925d800549",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/global-map002/cusp-attachment.tex": "8c11f110d960af3c6e86e8a4016c9aa4a01759dd8909242ae7ac72ce909c2206",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/reports/research/s6_cusp026/global-map002/candidate-manifest.json": "d4b2a43cb506d70aecd49104558a024e5af2514e50ad513483ebb74c45cdd33e",
+    "/Users/raeez/mathematics/worktrees/frontier-s6-cusp-026-20260914/research-candidates/s6_cusp026/toric-cusp.tex": "8cfaf1751bd1edd7f5672f3578c602df2a4512ff204fd068cbd871647e09496e",
+    "/Users/raeez/mathematics/worktrees/frontier-dispatch-026-20260914/reports/research/DISPATCH-026-2026-09-14/s6-exact-review027/REPORT.md": "14e3110409b05486698100c35d8d87d877e923e285734fc5c018e42f2fe998ac"
+  },
+  "runtime_controls": "gpt-6-astra/ultra required; parent reports local metadata verified; no independent metadata endpoint is exposed here."
+}
