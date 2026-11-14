@@ -1,0 +1,641 @@
+\section{Bosonic chiral differential operators}
+\label{sec:chiral-operators}
+
+A local holomorphic coordinate system on $Y$ has a free
+beta--gamma vertex algebra. Coordinate changes require quantum
+correction terms, and the corrected maps can fail to compose
+on triple overlaps. The resulting obstruction lies in closed
+holomorphic cohomology. The curve periods of
+Section~\ref{sec:tangent-curves} make this obstruction nonzero.
+A separate obstruction prevents the standard local Virasoro
+fields from gluing.
+
+We retain the same selected threefold and fixed gluing data.
+The vertex variable below is a formal one-dimensional coordinate.
+It is distinct from the three target coordinates on $Y$.
+
+\subsection{The analytic gerbe and its band}
+
+On a holomorphic coordinate chart $U$ with coordinates
+$b=(b^1,b^2,b^3)$, let $\mathcal D^{\mathrm{ch}}_{U,b}$ be the
+analytic free bosonic vertex algebra with generating fields
+$b^i(\xi)$ of weight zero and $a^i(\xi)$ of weight one.
+We fix the operator product expansion
+\begin{equation}\label{ch:eq:generator-OPE}
+       a^i(\xi)b^j(\eta)\sim\frac{\delta_{ij}}{\xi-\eta},
+\end{equation}
+with the other generator products regular.
+The symbol $\sim$ records the singular part.
+Holomorphic functions of the $b^i$ form the weight-zero sheaf
+$\mathcal O_U$, and its constant $1$ is the vacuum.
+We write $\mathsf T$ for vertex translation and $d_Y$ for
+holomorphic exterior differentiation.
+The analytic construction and holomorphic functional calculus
+are those of \cite[Section~2]{GMSGerbes}.
+
+The weight-one filtration has one-form submodule and tangent
+quotient:
+\[
+       0\longrightarrow\Omega_U^1
+       \longrightarrow\mathcal D^{\mathrm{ch}}_{U,b,1}
+       \longrightarrow T_U\longrightarrow0.
+\]
+The one-form $db^i$ corresponds to $\mathsf T b^i$.
+For a coordinate change $\widetilde b=g(b)$, use the Jacobian
+convention $J=(\partial_i g^j)$.
+Its tangent term uses $J^{-t}$, as in
+\cite[equations~(4.4)--(4.5)]{GMSGerbes}.
+An admissible lift must preserve both the mixed OPE
+\eqref{ch:eq:generator-OPE} and the regular self-OPEs.
+
+The analytic groupoid of these local objects is a gerbe
+$\mathfrak D_Y^{\mathrm{ch}}$ with band
+$\Omega_Y^{2,\mathrm{cl}}$, the sheaf of closed holomorphic
+two-forms \cite[Theorem~3 and Section~6]{GMSGerbes}.
+We use its published band normalization.
+In coordinates, a change of lift over the identity is represented
+by a skew matrix $h=(h^{ki})$ and acts by
+\begin{equation}\label{ch:eq:skew-twist}
+       b^i\longmapsto b^i,\qquad
+       a^i\longmapsto a^i+\sum_k h^{ki}(b)\mathsf T b^k.
+\end{equation}
+The remaining OPE condition says that the associated holomorphic
+two-form is closed. This is the kernel identification in
+\cite[Section~6]{GMSGerbes}.
+
+For clarity, choose an analytic cover with coordinate transitions
+$b_j=g_{ij}(b_i)$.
+On sufficiently small overlaps, write
+$\phi_{ij}:\mathcal D_j^{\mathrm{ch}}\to\mathcal D_i^{\mathrm{ch}}$
+for an admissible lift expressing the $j$-fields in the $i$-fields.
+Composition is right to left. The discrepancy
+\[
+                   c_{ijk}=\phi_{ij}\phi_{jk}\phi_{ik}^{-1}
+\]
+is a band automorphism of the $i$-object.
+These discrepancies give the class
+\begin{equation}\label{ch:eq:gerbe-class}
+       \omega_{\mathrm{GMS}}
+       =c(\mathfrak D_Y^{\mathrm{ch}})
+          \in H^2(Y,\Omega_Y^{2,\mathrm{cl}}).
+\end{equation}
+Changing the pairwise lifts by closed two-forms changes the
+cocycle by their \v{C}ech coboundary.
+Vanishing of this class is called \emph{neutrality} of the gerbe.
+It is the obstruction to existence of a graded bosonic CDO sheaf.
+The nonvanishing below will exclude compatible lifts on the full atlas.
+
+\subsection{The Hodge image and the curve criterion}
+
+The same exact sequence \eqref{cq:eq:Poincare} that classifies
+Courant extensions also controls the gerbe class, in the next
+cohomological degree. Denote its degree-two forgetful map by
+\[
+ \iota_2:H^2(Y,\Omega_Y^{2,\mathrm{cl}})
+                     \longrightarrow H^2(Y,\Omega_Y^2).
+\]
+It is a map of complex vector spaces. The differential in that
+sheaf sequence is not an $\mathcal O_Y$-module map.
+
+\begin{proposition}\label{ch:prop:band-cohomology}
+One has
+\begin{equation}\label{ch:eq:band-cohomology}
+ \begin{gathered}
+ H^0(Y,\Omega_Y^{2,\mathrm{cl}})=0,\qquad
+ H^1(Y,\Omega_Y^{2,\mathrm{cl}})\simeq\mathbb C,\\
+ \iota_2\text{ is injective},\qquad
+ \im\iota_2
+    =\ker\bigl(d_1:H_{\bar\partial}^{2,2}
+                           \to H_{\bar\partial}^{3,2}\bigr)
+    =j_{BC}(L).
+ \end{gathered}
+\end{equation}
+In particular, $H^2(Y,\Omega_Y^{2,\mathrm{cl}})$ is a
+complex line.
+\end{proposition}
+
+\begin{proof}
+The Hodge table \eqref{hr:eq:hodge-table} gives
+$H^0(\Omega_Y^2)=H^0(\Omega_Y^3)=H^1(\Omega_Y^3)=0$.
+The long exact sequence of \eqref{cq:eq:Poincare} gives the
+first two assertions and injectivity of $\iota_2$.
+Its image is the kernel of the displayed map induced by $d_Y$,
+which is the first Fr\"olicher differential.
+The row is exact by Proposition~\ref{hr:prop:frolicher}.
+Its kernel is the one-dimensional image of
+$\partial:H_{\bar\partial}^{1,2}\to H_{\bar\partial}^{2,2}$,
+namely $j_{BC}(L)$.
+\end{proof}
+
+We next fix the characteristic-class normalization.
+Gorbounov--Malikov--Schechtman use raw $d\log$ transition
+cocycles. Their Hodge image formula is
+\begin{equation}\label{ch:eq:published-image}
+       \iota_2(\omega_{\mathrm{GMS}})
+                    =2\operatorname{ch}^{\mathrm{Hodge}}_2(T_Y)
+\end{equation}
+\cite[Claim~3.1 and Theorem~6.2]{GMSGerbes}.
+In the normalization \eqref{tc:eq:character-normalization},
+\begin{equation}\label{ch:eq:normalization-comparison}
+ \operatorname{ch}^{\mathrm{Hodge}}_2(T_Y)
+       =(2\pi i)^2j_{BC}\bigl(\operatorname{ch}_{2,BC}(T_Y)\bigr).
+\end{equation}
+Indeed, each Atiyah factor in the quadratic characteristic
+polynomial is divided by $2\pi i$ for the normalized Chern
+character. A simultaneous sign change in the degree-one
+\v{C}ech--Dolbeault convention cancels in degree two.
+
+Only the Hodge image formula is needed here.
+Proposition~\ref{ch:prop:band-cohomology} recovers the refined
+class from that image on this particular $Y$.
+This does not require a general refined formula beyond the
+published Hodge statement.
+Nor does it declare the particular matrix in
+\cite[equation~(5.3)]{GMSGerbes} to be admissible on every
+three-dimensional overlap: that formula alone solves only the
+first displayed OPE condition.
+
+\begin{theorem}\label{ch:thm:curve-criterion}
+Retain the periods $a_j$, their sum $A$, and the class $w$
+from \eqref{tc:eq:period-normalization}--\eqref{tc:eq:curve-periods}.
+Then
+\begin{equation}\label{ch:eq:curve-image}
+ \begin{aligned}
+ \iota_2(\omega_{\mathrm{GMS}})
+   &=-2(2\pi i)^2j_{BC}\!\left(\sum_j[C_j]_{BC}\right)\\
+   &=2(2\pi i)^2 A\,j_{BC}(w).
+ \end{aligned}
+\end{equation}
+Consequently,
+\begin{equation}\label{ch:eq:neutrality-criterion}
+ \omega_{\mathrm{GMS}}=0
+ \quad\Longleftrightarrow\quad c_{2,BC}(T_Y)=0
+ \quad\Longleftrightarrow\quad \sum_j[C_j]_{BC}=0
+ \quad\Longleftrightarrow\quad A=0.
+\end{equation}
+If the gerbe is neutral, $Y$ admits no pluriclosed Hermitian
+metric. Equivalently, such a metric would imply
+$\omega_{\mathrm{GMS}}\ne0$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{bc:thm:ring} gives $c_{1,BC}(T_Y)^2=0$.
+Thus
+\[
+        \operatorname{ch}_{2,BC}(T_Y)
+                           =-c_{2,BC}(T_Y)
+                           =-\sum_j[C_j]_{BC}.
+\]
+Combine this with \eqref{ch:eq:published-image},
+\eqref{ch:eq:normalization-comparison} and
+\eqref{tc:eq:curve-coordinates}.
+Since $j_{BC}(\overline w)=0$, this proves
+\eqref{ch:eq:curve-image}.
+
+The map $\iota_2$ is injective, and $j_{BC}$ is injective
+on the real Bott--Chern plane.
+The current sum is real, so its Hodge image vanishes precisely
+when its Bott--Chern class vanishes.
+The independent classes $w,\overline w$ then give the equivalence
+with $A=0$.
+The metric consequence is
+Proposition~\ref{tc:prop:global-potential}, applied to the
+nonzero positive current $\sum_j[C_j]$.
+\end{proof}
+
+\begin{corollary}\label{ch:cor:nonzero-gerbe}
+For the selected threefold and the normalization by $\xi$,
+\begin{equation}\label{ch:eq:nonzero-gerbe}
+ \iota_2(\omega_{\mathrm{GMS}})
+              =2(2\pi i)^2j_{BC}(w)\ne0.
+\end{equation}
+There is no globally defined graded bosonic CDO sheaf on $Y$
+with the specified tangent action and the published band.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{tc:thm:evaluated-curves} gives $A=1$ and
+$c_{2,BC}(T_Y)=-\rho_{BC}$.
+The map $j_{BC}$ kills $\overline w$ and is injective on
+$\mathbb Cw$. Equation~\eqref{ch:eq:curve-image} therefore
+gives \eqref{ch:eq:nonzero-gerbe}.
+The gerbe class is nonzero, so the gerbe is not neutral.
+\end{proof}
+
+Rescaling the coefficient band gives
+\[
+ \widehat\omega=(2\pi i)^{-2}\omega_{\mathrm{GMS}},\qquad
+ \iota_2(\widehat\omega)=-2j_{BC}(c_{2,BC}(T_Y))
+                                      =2j_{BC}(w)\ne0.
+\]
+This rescaling changes neither the published local lifts nor the
+vanishing criterion.
+It keeps the raw gerbe class distinct from the normalized
+Bott--Chern characteristic class.
+
+For a neutral gerbe with this band, the isomorphism classes of
+objects form a torsor under $H^1(Y,\Omega_Y^{2,\mathrm{cl}})$.
+The band automorphism group of an object is
+$H^0(Y,\Omega_Y^{2,\mathrm{cl}})$
+\cite[Section~3]{GMSGerbes}.
+Thus the former is a torsor under a complex line, and the latter
+is trivial by \eqref{ch:eq:band-cohomology}.
+Neutrality would not choose a distinguished object.
+On the selected $Y$, Corollary~\ref{ch:cor:nonzero-gerbe}
+excludes neutrality and hence the existence of such objects.
+
+\subsection{The standard Virasoro obstruction}
+
+The standard local Virasoro field is
+\[
+                        L_i=\sum_{r=1}^3 a_i^r\mathsf T b_i^r,
+\]
+with the vertex normal ordering of the local free algebra.
+For the overlap direction $b_j=g_{ij}(b_i)$, put
+$J_{ij}=(\partial_r g_{ij}^s)$.
+The published transformation law reads
+\begin{equation}\label{ch:eq:Virasoro-overlap}
+       \phi_{ij}(L_j)-L_i
+                  =-\frac12\mathsf T^2\log\det J_{ij}
+\end{equation}
+\cite[Theorem~9.1]{GMSGerbes}.
+The right side is independent of the local logarithm branch.
+We use this law for admissible lifts.
+The calculation below proves its one-coordinate instance directly.
+
+For a line bundle $L$ with frame transitions $g_{ij}$, let
+$a(L)\in H^1(Y,\Omega_Y^{1,\mathrm{cl}})$ denote its raw
+$d_Y\log g_{ij}$ class.
+Write $a(T_Y)=a(\det T_Y)$.
+Canonical frames transform by
+\[
+ db_j^1\wedge db_j^2\wedge db_j^3
+        =(\det J_{ij})\,db_i^1\wedge db_i^2\wedge db_i^3.
+\]
+Thus $d_Y\log\det J_{ij}$ represents $a(K_Y)$, and
+$a(T_Y)=-a(K_Y)$.
+Under the one-form state identification
+$\sum_r h_rdb^r\mapsto\sum_r h_r\mathsf T b^r$,
+equation~\eqref{ch:eq:Virasoro-overlap} gives the translated
+cocycle of
+\begin{equation}\label{ch:eq:conformal-class}
+                 -\tfrac12a(K_Y)=\tfrac12a(T_Y).
+\end{equation}
+This fixes its sign in the stated overlap direction.
+
+Define $\mathcal M$ to be the unique line bundle satisfying
+\[
+                \mathcal M^{\otimes12}=f^*\mathcal O_B(1),
+                \qquad \kappa=a(\mathcal M).
+\]
+Existence and uniqueness follow from
+$\operatorname{Pic}(Y)\simeq(\mathbb C,+)$ in
+Corollary~\ref{nf:cor:picard}.
+This tensor-power normalization does not specify the coordinate
+of $f^*\mathcal O_B(1)$ in the coherent parameter $\lambda$
+used there.
+
+\begin{theorem}\label{ch:thm:Virasoro-obstruction}
+The standard Virasoro obstruction is
+\begin{equation}\label{ch:eq:three-kappa}
+                     \tfrac12a(T_Y)=3\kappa\ne0.
+\end{equation}
+For any graded bosonic CDO object that exists on $Y$, its
+standard local Virasoro fields cannot be glued, even after
+local improvements by translated closed holomorphic one-forms.
+Closed two-form changes of admissible lifts do not alter this
+obstruction.
+\end{theorem}
+
+\begin{proof}
+The canonical formula \eqref{nf:eq:canonical} and
+$4F_4\sim f^*(1)$ give
+\[
+             K_Y^{\otimes2}\simeq f^*\mathcal O_B(-1)
+                               \simeq\mathcal M^{-12}.
+\]
+The Picard group has no torsion, so $K_Y\simeq\mathcal M^{-6}$.
+Equation~\eqref{ch:eq:conformal-class} now gives $3\kappa$.
+
+The line $f^*\mathcal O_B(1)$ is nontrivial.
+Its two base sections pull back to independent sections because
+$f$ is surjective. A trivial line on compact connected $Y$
+would have only the one-dimensional space of constant sections.
+Therefore $\mathcal M$ is also nontrivial.
+
+The holomorphic Poincar\'e lemma gives
+\[
+       0\longrightarrow\mathbb C\longrightarrow\mathcal O_Y
+          \xrightarrow{\ d_Y\ }\Omega_Y^{1,\mathrm{cl}}
+          \longrightarrow0.
+\]
+Since $H^1(Y;\mathbb C)=H^2(Y;\mathbb C)=0$, its cohomology
+map
+\[
+       d_Y:H^1(Y,\mathcal O_Y)
+                 \xrightarrow{\ \sim\ }H^1(Y,\Omega_Y^{1,\mathrm{cl}})
+\]
+is an isomorphism.
+For the exponential convention $h\mapsto e^{2\pi i h}$,
+the class $a(L)$ is $2\pi i$ times this map on the additive
+Picard class of $L$. Nontriviality of $\mathcal M$ therefore
+proves $\kappa\ne0$.
+
+An improvement $L_i+\mathsf T\alpha_i$, with $\alpha_i$ a
+closed holomorphic one-form state, changes
+\eqref{ch:eq:conformal-class} by a coboundary.
+Translation is injective on such one-form states:
+the coefficients of the independent modes $b^r_{-2}$ in
+$\mathsf T(\sum_r h_r(b)b^r_{-1}\mathbf1)$ are $2h_r$.
+Thus the nonzero cohomology class prevents gluing even with
+these improvements.
+
+Finally, the extra contribution to $L$ from
+\eqref{ch:eq:skew-twist} is
+\[
+                   \sum_{k,r}h^{kr}(b)\mathsf T b^k\mathsf T b^r=0.
+\]
+The $b$-fields and coefficient functions have regular products,
+and the coefficient matrix is skew.
+Hence such twists preserve the Virasoro transformation law and
+its obstruction.
+\end{proof}
+
+Existence of a graded bosonic object and gluing of its standard
+conformal fields are therefore distinct questions.
+The canonical chiral de Rham construction adds fermionic fields
+and gives a sheaf in a larger vertex-superalgebra system
+\cite[Section~8]{GMSGerbes}.
+That positive construction does not choose a pure bosonic object
+or remove the obstruction \eqref{ch:eq:three-kappa} in that object.
+
+\subsection{A quantum coordinate change on an actual chart}
+
+Choose a simply connected logarithmic chart of the nonzero line
+coordinate $v_{\mathrm{fib}}$ on the regular part of the quotient
+used in \eqref{nf:eq:regular-volume}.
+Restrict it so that
+\[
+                  b=\log v_{\mathrm{fib}},\qquad g(b)=e^b
+\]
+are inverse coordinate descriptions. The other two local
+coordinates are fixed spectators.
+All derivatives in the next calculation are with respect to $b$,
+and $\xi$ remains the vertex variable.
+
+For the changed bosonic pair, use modes
+\begin{equation}\label{ch:eq:modes}
+ \begin{gathered}
+ a(\xi)=\sum_{m\in\mathbb Z}a_m\xi^{-m-1},\qquad
+ b(\xi)=\sum_{n\in\mathbb Z}b_n\xi^{-n},\\
+                         [a_m,b_n]=\delta_{m,-n}.
+ \end{gathered}
+\end{equation}
+Functions of $b_0$ act on the vacuum by multiplication.
+For any locally invertible one-coordinate change $g$, put
+\begin{equation}\label{ch:eq:local-lift}
+ \begin{gathered}
+ f=\frac1{g'},\qquad
+ h=\frac{(g'')^2}{2(g')^3}=\frac{(f')^2}{2f},\\
+ B=g(b_0)\mathbf1,\qquad
+ A=a_{-1}f(b_0)\mathbf1+b_{-1}h(b_0)\mathbf1.
+ \end{gathered}
+\end{equation}
+The function $f$ in this local formula is unrelated to the
+global fibration map.
+The order of the two modes and their coefficient functions is
+exactly that in \cite[equations~(6.2) and~(9.3)]{GMSGerbes}.
+Write $S(\xi)=\mathsf Y(S,\xi)$ for the field of a state $S$.
+
+\begin{proposition}\label{ch:prop:local-OPE}
+The states in \eqref{ch:eq:local-lift} satisfy
+\[
+       A(\xi)B(0)\sim\xi^{-1},\qquad
+       A(\xi)A(0)\text{ and }B(\xi)B(0)\text{ are regular}.
+\]
+Together with the two unchanged spectator pairs, they satisfy
+all the free generator OPEs on this chart.
+\end{proposition}
+
+\begin{proof}
+Write $p=a_{-1}$, $q=b_{-1}$ and $r=b_{-2}$ for the
+corresponding creation operators on Fock states.
+Negative modes multiply, while positive modes act by
+\begin{equation}\label{ch:eq:Fock-action}
+       a_0=\frac{\partial}{\partial b_0},\qquad
+       a_n=\frac{\partial}{\partial b_{-n}},\qquad
+       b_n=-\frac{\partial}{\partial a_{-n}}\quad(n>0).
+\end{equation}
+With the usual creation and annihilation parts of $a(\xi)$,
+\[
+ \mathsf Y(a_{-1}f,\xi)
+       =a(\xi)_-f(b(\xi))+f(b(\xi))a(\xi)_+.
+\]
+The field of $b_{-1}h$ is $h(b(\xi))\mathsf T b(\xi)$.
+Its two factors have regular OPE.
+
+Put $U=pf+qh$ and $b_-(\xi)=b_0+q\xi+r\xi^2+\cdots$.
+Only the annihilator differentiating $p$ acts inside
+$f(b(\xi))U$. Therefore
+\begin{equation}\label{ch:eq:annihilation-identities}
+ \begin{aligned}
+ f(b(\xi))U&=f(b_-(\xi))U
+                          -\xi^{-1}f'(b_-(\xi))f(b_0),\\
+ a(\xi)_+U&=\xi^{-1}(pf'+qh')+\xi^{-2}h.
+ \end{aligned}
+\end{equation}
+Expanding the displayed functions through their first Taylor
+terms gives the entire singular part
+\begin{equation}\label{ch:eq:self-OPE}
+       A(\xi)A(0)\sim
+       \frac{C(b_0)}{\xi^2}+
+       \frac{q\,C'(b_0)}{2\xi},
+       \qquad C=2fh-(f')^2.
+\end{equation}
+In particular, the simple-pole coefficient is
+$q(fh'+f'h-f'f'')$.
+The annihilation operators in
+\eqref{ch:eq:annihilation-identities} give at most a double pole.
+Equivalently, the weight grading permits no coefficient of
+negative weight from two weight-one states.
+Thus no higher Taylor term can contribute another singularity.
+The value of $h$ in \eqref{ch:eq:local-lift} makes $C=0$.
+
+On $B=g(b_0)\mathbf1$, only $a_0$ acts nontrivially among the
+nonnegative $a$-modes. Hence
+\[
+                         A(\xi)B(0)\sim\frac{fg'}\xi=\frac1\xi.
+\]
+The $b$-fields have regular mutual products, so $B(\xi)B(0)$
+is regular. All coefficient functions depend only on $b$.
+The spectator pairs consequently have regular OPE with the
+changed pair and retain their own mixed OPEs.
+\end{proof}
+
+\begin{example}\label{ch:ex:omitted-quantum-term}
+For $g(b)=e^b$, the correct coefficients are $f=e^{-b}$ and
+$h=e^{-b}/2$.
+Omit just the second summand of the state in
+\eqref{ch:eq:local-lift}, and write $A^0=a_{-1}e^{-b_0}\mathbf1$.
+The mixed product still has its prescribed pole, but
+\begin{equation}\label{ch:eq:omitted-self-OPE}
+ \begin{aligned}
+ A^0(\xi)B(0)&\sim\frac1\xi,\\
+ A^0(\xi)A^0(0)&\sim
+       -\frac{e^{-2b_0}}{\xi^2}
+       +\frac{e^{-2b_0}b_{-1}}\xi.
+ \end{aligned}
+\end{equation}
+This follows from \eqref{ch:eq:self-OPE} with $h=0$.
+The double-pole coefficient is nowhere zero on the chart.
+Preserving the mixed OPE alone therefore does not define the
+coordinate-change homomorphism.
+\end{example}
+
+\subsection{Vertex normal ordering, composition and inverses}
+
+The mode order in \eqref{ch:eq:local-lift} can be converted
+to a coefficient-first vertex product.
+For states $s,t$, write $s_{(-1)}t$ for the constant coefficient
+of $\mathsf Y(s,\xi)t$, and use $:f a:$ for that vertex product.
+Equation~\eqref{ch:eq:Fock-action} gives
+\begin{equation}\label{ch:eq:ordering-conversion}
+       f_{(-1)}a_{-1}\mathbf1
+         =a_{-1}f(b_0)\mathbf1-f''(b_0)b_{-1}\mathbf1.
+\end{equation}
+Indeed, the constant term from the annihilation contribution
+$-\xi^{-1}f'(b_-(\xi))$ is $-f''q$.
+Thus the same lifted field is
+\begin{equation}\label{ch:eq:coefficient-first}
+                 A(\xi)=:f a:(\xi)
+                       +(h+f'')(b(\xi))\mathsf T b(\xi).
+\end{equation}
+For the exponential change, this coefficient is $3e^{-b}/2$.
+Equation~\eqref{ch:eq:coefficient-first} uses the specified
+vertex product. It must not be confused with a different
+ordering of all fundamental creation and annihilation operators.
+The omitted term in Example~\ref{ch:ex:omitted-quantum-term}
+was the summand in the original mode expression.
+
+\begin{proposition}\label{ch:prop:composition}
+The lifts \eqref{ch:eq:local-lift} compose with holomorphic
+one-coordinate changes. The identity has $f=1,h=0$.
+On the chosen exponential chart, the exponential and its
+logarithm branch give inverse vertex algebra isomorphisms in
+both orders. These maps preserve the vacuum and translation.
+\end{proposition}
+
+\begin{proof}
+For a second coordinate change $k$, let
+\[
+ f_k=\frac1{k'},\qquad h_k=\frac{(f_k')^2}{2f_k},\qquad
+ F=f_k(g(b)),\qquad H=h_k(g(b)).
+\]
+The constant mode of the first lifted field on $F$ is
+\[
+             A_{(-1)}F
+                 =a_{-1}fF+b_{-1}(hF+f'F').
+\]
+The extra term $f'F'$ comes from the constant coefficient of
+$f(b_-(\xi))F'/\xi$.
+The transformed $b_{-1}$ term contributes $b_{-1}g'H$.
+The composite coefficients are consequently
+\begin{equation}\label{ch:eq:composition}
+          f_{\mathrm{comp}}=fF,\qquad
+          h_{\mathrm{comp}}=hF+f'F'+g'H.
+\end{equation}
+Since $g'=1/f$ and $F'=f_k'(g)/f$, the last summand is
+$f(F')^2/(2F)$.
+Expanding a square gives
+\[
+        h_{\mathrm{comp}}
+             =\frac{(f'F+fF')^2}{2fF}
+             =\frac{(f_{\mathrm{comp}}')^2}{2f_{\mathrm{comp}}},
+        \qquad f_{\mathrm{comp}}=\frac1{(k\circ g)'}.
+\]
+Thus the composite has the same canonical formula.
+
+For $g=\exp$ and $k=\log$ on its chosen image,
+$F=e^b$ and $H=1/(2e^b)$.
+The three terms in $h_{\mathrm{comp}}$ are
+\[
+                             \tfrac12,\quad -1,\quad \tfrac12.
+\]
+They sum to zero, and $f_{\mathrm{comp}}=1$.
+In the reverse order, with nonzero coordinate $v_{\mathrm{fib}}$,
+the three terms are
+\[
+ \frac1{2v_{\mathrm{fib}}^2},\qquad
+ -\frac1{v_{\mathrm{fib}}^2},\qquad
+ \frac1{2v_{\mathrm{fib}}^2}.
+\]
+They again sum to zero, with first coefficient one.
+For the identity coordinate map, \eqref{ch:eq:local-lift}
+itself gives $f=1,h=0$.
+
+The full generator OPEs in Proposition~\ref{ch:prop:local-OPE},
+together with holomorphic functional calculus, determine the
+local free vertex algebra homomorphisms.
+The two composite calculations identify their inverses.
+The constant function remains the vacuum, and the homomorphisms
+commute with $\mathsf T$, in particular sending
+$\mathsf T b$ to $\mathsf T g(b)$.
+Both spectator pairs are fixed.
+\end{proof}
+
+\subsection{The local Virasoro law}
+
+For one pair the standard Virasoro state is
+$L=a_{-1}b_{-1}\mathbf1=pq\mathbf1$.
+Under \eqref{ch:eq:local-lift}, its image is
+$\widetilde L=A_{(-1)}(\mathsf T B)$.
+The two-jet expansion needed for this constant coefficient is
+\[
+ f(b_-(\xi))
+   =f+f'q\xi+\left(f'r+\tfrac12f''q^2\right)\xi^2+\cdots.
+\]
+Using the same mode action as above gives
+\begin{equation}\label{ch:eq:Virasoro-mode-calculation}
+ \widetilde L
+   =pqfg'+rf'g'
+            +q^2\left(f'g''+\tfrac12f''g'+hg'\right).
+\end{equation}
+Substitute $f=1/g'$ and $h=(f')^2/(2f)$.
+The result is
+\begin{equation}\label{ch:eq:local-Virasoro}
+       \widetilde L
+         =L-(\log g')'r-\tfrac12(\log g')''q^2
+         =L-\tfrac12\mathsf T^2\log g'.
+\end{equation}
+Here $\mathsf T^2F(b_0)=2F'r+F''q^2$.
+For $g=\exp$, equation~\eqref{ch:eq:local-Virasoro} reads
+$\widetilde L=L-b_{-2}\mathbf1$.
+Adding the two unchanged spectator terms proves the same law
+for this three-dimensional chart, with its fixed sign and factor.
+
+This local construction checks the quantum correction and its
+composition on an actual logarithmic chart.
+It gives no formula for arbitrary three-dimensional Jacobians
+or for compatible lifts on all overlaps of $Y$.
+The global obstruction is the nonzero class
+\eqref{ch:eq:nonzero-gerbe}; local quantum corrections cannot
+trivialize it. The curve calculation also gives the exact
+nonnegative zero cone \eqref{tc:eq:exact-positive-cone} and
+the empty pluriclosed Hermitian cone of
+Theorem~\ref{tc:thm:no-SKT}.
+The standard Virasoro obstruction \eqref{ch:eq:three-kappa}
+is logically separate. There is already no global graded
+bosonic object to which a standard Virasoro field could be attached.
+These conclusions retain the fixed nonzero parameter and selected
+filling. The enlarged construction with fermionic fields lies
+outside the bosonic gerbe considered here.
+Parameter degeneration requires a relative construction.
+Comparisons with a field theory on the target or with the finite
+Heisenberg representation require their own constructions.
+
+The classical theory in Section~\ref{hp:sec} begins with a different
+object: the resolved Hamiltonian observables of a spacetime theory
+on the threefold. Its smooth-fiber pushforward can be computed
+without a global bosonic target-space CDO sheaf. A relation between
+these two constructions would require an additional comparison
+of their fields, observables and quantum gluing.

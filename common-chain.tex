@@ -1,0 +1,708 @@
+\section{A common integral gluing complex}\label{sec:common-chain}
+
+\subsection{The common period marking}
+
+Let $U=\mathbb P^1\setminus\{0,1,\infty\}$, with its complex orientation.
+For composable paths, $\alpha\beta$ means first traverse $\beta$, then
+traverse $\alpha$. Path multiplication is therefore right to left.
+Choose a base point and marking paths for counterclockwise meridians
+such that
+\begin{equation}\label{cc:eq:path-order}
+\gamma_0\gamma_1\gamma_\infty=1,
+\qquad \gamma_\infty=(\gamma_0\gamma_1)^{-1}
+=\gamma_1^{-1}\gamma_0^{-1}.
+\end{equation}
+The first word traverses $\gamma_\infty$, then $\gamma_1$, then $\gamma_0$.
+All fundamental groups, transport maps, and presentations use this convention.
+
+The fiber is the real torus $F=\mathbb R^4/\Lambda$, where
+$\Lambda=\mathbb Ze_1\oplus\cdots\oplus\mathbb Ze_4$ has its displayed orientation.
+The two complex period markings are
+\[
+\begin{aligned}
+e_1&=(1,0),&e_2&=(\rho,0),&e_3&=(2+\rho,1)/3,&e_4&=(0,\tau_0),\\
+f_1&=(1,0),&f_2&=(i,0),&f_3&=(1+i,1)/2,&f_4&=(0,\tau_1),
+\end{aligned}
+\]
+where $\rho=e^{2\pi i/3}$ and $\operatorname{Im}\tau_i>0$.
+The two rows describe local period coordinates, related by the integral marking
+\begin{equation}\label{cc:eq:matrices}
+\begin{gathered}
+T_0=\begin{pmatrix}0&-1&-1&0\\1&-1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix},\quad
+T_{1,f}=\begin{pmatrix}0&1&0&0\\-1&0&-1&0\\0&0&1&0\\0&0&0&1\end{pmatrix},\\
+C=\begin{pmatrix}1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1\end{pmatrix},\qquad
+T_1=CT_{1,f}C^{-1}.
+\end{gathered}
+\end{equation}
+Columns of $C$ express the $f$ basis in the $e$ basis.
+
+Put $\delta=-2e_1-e_2+3e_3$, $\delta_1=-f_1-f_2+2f_3$, and
+$\psi=e_4^*$. Then $C\delta_1=\delta$ and $\psi C=f_4^*$.
+All matrices act on column vectors.
+
+The global geometric question concerns a compact complex threefold
+$Y(u,a_0,a_1)$ for every sufficiently small nonzero complex parameter $u$,
+with primitive torsion increments
+\[
+a_0\in\tfrac13\Lambda^{T_0},\qquad
+a_1\in\tfrac14\Lambda^{T_1},\qquad
+|12\psi(a_0+a_1)|=1.
+\]
+The desired conclusion is a diffeomorphism of its underlying smooth
+manifold with $S^6$. The construction below treats the specified pair
+\begin{equation}\label{cc:eq:increments}
+a_0=e_4/3,\qquad a_1=-Cf_4/4,
+\qquad 12\psi(a_0+a_1)=1.
+\end{equation}
+Here $Cf_4$ means the fourth column of $C$.
+The conclusion for all other increments requires their own affine
+attachment maps. No quantifier over those increments follows from this pair.
+
+For comparison with complex geometry, assume the following local data at
+both finite punctures. The cyclic elliptic reductions have smooth
+proper two-torus quotients of the reduced divisor torsors
+$\mathcal O(P'_0-O')^\times$. The specified lifted translation extends,
+commutes with the deck action, and has the displayed periods.
+The original section of $\mathcal O(P_0-O)|_O$ is retained.
+Its conormal comparisons are $e=s^{-2}e'$ at $0$ and $e=s^{-1}e'$ at $1$.
+
+These assumptions include the smooth lift and proper quotient.
+They do not follow from \eqref{cc:eq:matrices}.
+The topological quotients below exist without these geometric assumptions.
+Section~\ref{sec:holomorphic-realization} realizes the assumptions
+for the selected increments.
+
+\subsection{The common topological diagram}
+
+Set $u_0=e_3$, $u_1=-e_1+e_3$, $u_2=-e_1-e_2+e_3$.
+Their oriented three-torus is $X_0$, and $P_0$ cyclically permutes them.
+Write $U_0=u_0+u_1+u_2=\delta$.
+In the local $f$ coordinates put $X_1=\mathbb R^3/\mathbb Z^3$,
+$U_1=(-1,-1,2)$, and
+\[
+P_1=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix}.
+\]
+Thus $P_0^3=P_1^4=I$ and $P_iU_i=U_i$.
+
+For $G_i$ use the convention
+$[y,\tau+1]=[P_i y,\tau]$.
+The two fillings are
+\begin{equation}\label{cc:eq:fillings}
+\begin{aligned}
+N_0&=(X_0\times S^1_t\times D_s)/
+ (x,t,s)\sim(P_0^{-1}x+U_0/3,t+1/3,\rho s),\\
+N_1&=(X_1\times S^1_t\times D_s)/
+ (x,t,s)\sim(P_1x-U_1/4,t-1/4,is).
+\end{aligned}
+\end{equation}
+The actions are free because their nonidentity powers translate $t$ by
+nonintegral multiples of $1/3$ or $1/4$.
+
+Their disk trivializations are
+\begin{equation}\label{cc:eq:Phi}
+\begin{aligned}
+\Phi_0[x,t,s]&=([x+2tU_0,3t],e^{-2\pi it}s),\qquad q=e^{2\pi i\tau}z^3,\\
+\Phi_1[x,t,s]&=([x-tU_1,4t],e^{2\pi it}s),\qquad q=e^{-2\pi i\tau}z^4.
+\end{aligned}
+\end{equation}
+Their smooth inverses follow by lifting $\tau$ to $\mathbb R$.
+The changes of lift are precisely the quotient relations.
+Both shears have determinant one and the factors $3,4$ are positive.
+Thus these are orientation-preserving diffeomorphisms to $G_i\times D$.
+
+For $T\in\{T_0,T_1,T_\infty\}$ put
+$B_T=(F\times[0,1])/((a,1)\sim(Ta,0))$.
+Let $\gamma(v)=[0,v]$ be its positive meridian, based at $[0,0]$.
+For a based fiber loop $\lambda(t)$, the square $[\lambda(t),v]$
+identifies the two routes from $(0,0)$ to $(1,1)$.
+In the declared path order this gives
+\begin{equation}\label{cc:eq:square-conjugation}
+\gamma\lambda=(T\lambda)\gamma,
+\qquad \gamma\lambda\gamma^{-1}=T\lambda.
+\end{equation}
+The top edge represents $T\lambda$ because $[a,1]=[Ta,0]$.
+Thus the endpoint identification and the conjugation formula agree.
+
+The same square in $G_i$ gives $h_i z h_i^{-1}=P_i z$,
+where $h_i(v)=[0,v]$ and $z\in\pi_1(X_i,0)$.
+The marked boundary maps, in their respective local coordinates, are
+\begin{equation}\label{cc:eq:boundary}
+\begin{aligned}
+j_0[x,t,v]&=[x-2vU_0/3,t+v/3,e^{2\pi iv/3}],\\
+j_1[x,t,v]&=[x-vU_1/4,t-v/4,e^{2\pi iv/4}].
+\end{aligned}
+\end{equation}
+The order-four source uses the actual torus isomorphism
+$C^{-1}:F\longrightarrow F_1$. In \eqref{cc:eq:Phi} the boundary maps become
+\begin{equation}\label{cc:eq:k}
+\begin{aligned}
+\Phi_0j_0[x,t,v]&=([x+2tU_0,3t+v],e^{-2\pi it}),\\
+\Phi_1j_1[x,t,v]&=([x-tU_1,4t-v],e^{2\pi it}).
+\end{aligned}
+\end{equation}
+
+These formulas include the normal-circle coordinate.
+Projection onto $G_i$ gives the actual boundary retractions $k_i$.
+Setting $v=0$ gives the actual fiber maps $f_i:F\to G_i$.
+
+The circle matrices on $(t,v)$ are
+$\left(\begin{smallmatrix}3&1\\-1&0\end{smallmatrix}\right)$ and
+$\left(\begin{smallmatrix}4&-1\\1&0\end{smallmatrix}\right)$.
+Both have determinant one. They identify the fiber-first, positive
+meridian orientation with the outward-first boundary orientation of $N_i$.
+
+Let $\Sigma$ be the oriented sphere minus the interiors of three disjoint disks.
+Construct the flat torus bundle $E\to\Sigma$ with zero section and monodromies
+$T_0,T_1,T_\infty=(T_0T_1)^{-1}$.
+Concretely, trivialize over a disk obtained by cutting $\Sigma$ along two
+arcs, and identify the paired cuts by $T_0$ and $T_1$.
+Choose the marking paths along those cuts according to
+\eqref{cc:eq:path-order}.
+
+More explicitly, let $\widetilde\Sigma$ consist of endpoint-preserving
+homotopy classes of paths $p$ from the base point.
+It has the right deck action $p\cdot\gamma=p\gamma$.
+Let $\mu:\pi_1(\Sigma)\to\mathrm{SL}(\Lambda)$ send
+$\gamma_i$ to $T_i$ for $i=0,1$.
+Define the bundle as the quotient by the right action
+\[
+(a,p)\cdot\gamma=(\mu(\gamma)^{-1}a,p\gamma).
+\]
+Indeed two successive actions by $\alpha,\beta$ give
+$\mu(\beta)^{-1}\mu(\alpha)^{-1}=\mu(\alpha\beta)^{-1}$.
+
+Let $p_*$ denote the constant path at the base point.
+A lifted loop ends at $[a,p_*\gamma]=[\mu(\gamma)a,p_*]$.
+Hence its mapping torus has exactly the stated endpoint identification.
+Transport satisfies $\mu(\alpha\beta)=\mu(\alpha)\mu(\beta)$.
+Equation~\eqref{cc:eq:path-order} therefore gives
+$T_0T_1T_\infty=I$.
+
+Its boundary collars are the specified $B_{T_i}$.
+Since the boundary orientation of $\Sigma$ is clockwise around each
+removed disk, the maps $j_i$ reverse the induced boundary orientations
+for gluing. Define the compact oriented manifold with boundary
+\begin{equation}\label{cc:eq:W}
+W=E\mathop{\cup}_{j_0}N_0\mathop{\cup}_{j_1}N_1,
+\qquad \partial W=B_{T_\infty}
+\end{equation}
+with the inherited boundary orientation.
+
+Comparison with the original complex family requires identifying its
+geometric torus bundle with this flat bundle.
+The identification must preserve all three chosen boundary sections.
+
+\subsection{A finite integral chain model}
+
+We specify chains by oriented simplices of the actual spaces.
+This construction permits subdivisions between different fiber sections.
+It does not require a triangulation invariant under the whole monodromy group.
+
+Give each torus a rational polyhedral structure in its displayed real
+period coordinates. For $X_i$, refine a sufficiently fine cubic tiling by
+its finitely many images under $P_i$, and subdivide barycentrically.
+This produces an actual finite triangulation on which $P_i$ acts.
+Use its mapping cylinder, with interval-first prisms, for $G_i$.
+Triangulate the disks as polygons with a central vertex.
+
+The maps \eqref{cc:eq:k} are piecewise linear in the circle coordinates
+$(t,v)$ after cutting at integer values of $3t+v$ and $4t-v$.
+Cut further at inverse images of the finitely many target faces.
+Subdivide these rational polytopes and their faces compatibly.
+This supplies triangulations of the boundary and marked fiber subspaces
+of $G_i\times D$, and triangulates their inclusions.
+Here circle arguments, rather than Cartesian disk coordinates, describe
+the boundary. Extension to the disk is by coning its polygon.
+
+Transport these triangulations to $\partial E$ using \eqref{cc:eq:k} and $C$.
+Extend them across collars and then across $E$.
+Cut the base to the polygon used above.
+Subdivide both sides of each cut by the transported torus triangulations,
+then interpolate between these subdivisions in a collar.
+For two rational torus subdivisions, their intersection is a finite
+polyhedral subdivision. Triangulate the product collar using that
+common subdivision at its middle level.
+
+The remaining product over the cut polygon has a product triangulation.
+At the corners the transition product is the identity, so the
+identified faces agree. This constructs a finite triangulation of the
+bundle with the prescribed boundary triangulations.
+Further collar subdivisions make the gluing maps simplicial.
+
+Let $A,L_i,B_i$ denote the resulting simplicial integral chain complexes
+of $E,N_i,B_{T_i}$, respectively, for $i=0,1$.
+Let $\iota_i:B_i\to A$ and $j_i:B_i\to L_i$ be their inclusion maps.
+
+This prescription defines every integer entry: an oriented simplex has
+boundary
+\[\sum_{r=0}^n(-1)^r[v_0,\ldots,\widehat v_r,\ldots,v_n].\]
+Each inclusion sends it to the same oriented simplex in the larger space.
+If the chosen orientations disagree, its coefficient is $-1$.
+The changes of periods and the angular maps have already been used to
+identify the simplex, before assigning its coefficient.
+Thus the construction gives a finite chain diagram with genuine maps,
+including all dimensions through six. Enumerating its incidence matrices
+is optional for its definition, but necessary for a numerical Smith computation.
+
+\begin{theorem}\label{cc:thm:cone}
+Put $B=B_0\oplus B_1$, $A'=A\oplus L_0\oplus L_1$, and
+\[
+J(b_0,b_1)=(\iota_0b_0+\iota_1b_1,-j_0b_0,-j_1b_1),
+\]
+where $\iota_i$ denotes the inclusion into $A$.
+The finite chain complex
+\begin{equation}\label{cc:eq:cone}
+\mathcal W_n=A'_n\oplus B_{n-1},\qquad
+d(a,b)=(d a+Jb,-d b)
+\end{equation}
+computes $H_*(W;\mathbb Z)$.
+The comparison sends $(a,b)$ to the sum of the chains $a$ in $W$.
+Its boundary component has image zero.
+For the inclusion $b_\infty:C_*(B_{T_\infty})\to A$,
+the actual cusp boundary map into \eqref{cc:eq:cone} is
+\begin{equation}\label{cc:eq:cusp-left}
+\beta(b)=(b_\infty b,0,0;0,0).
+\end{equation}
+All coefficients and comparisons are integral.
+\end{theorem}
+
+\begin{proof}
+The map $J$ is injective because each boundary inclusion into its filling
+is injective on simplices. Its cokernel is exactly $C_*(W;\mathbb Z)$.
+The kernel of the stated cone comparison consists of pairs $(Jc,b)$.
+Its differential is $(c,b)\mapsto(dc+b,-db)$ in these coordinates.
+The degree-one homotopy $(c,b)\mapsto(0,c)$ contracts it.
+This proves the comparison and also the usual integral Mayer--Vietoris
+sequence.
+
+Formula \eqref{cc:eq:cusp-left} is a chain map because the
+cusp boundary is a subcomplex disjoint from the two glued boundaries.
+\end{proof}
+
+The fiber inclusions $F\to B_{T_i}\to N_i$ in this diagram induce the
+specialization maps by dualizing integer chains.
+Their deformation to the core is exactly \eqref{cc:eq:k} at $v=0$.
+\subsubsection{Local prism complexes and their maps}
+
+Put $D_i=C_*^{\mathrm{simp}}(X_i;\mathbb Z)$ for the chosen
+$P_i$-invariant triangulation, and write $p_i=(P_i)_*$.
+Let $D_{i,n}=0$ outside $0\leq n\leq3$.
+The symbol $p_i$ denotes the induced chain automorphism in every degree.
+It commutes with $\partial$ and satisfies $p_0^3=p_1^4=I$.
+
+Use the product cells of $X_i\times S^1$ with one vertex and one
+positive edge on the circle. Its chain complex is
+\begin{equation}\label{cc:eq:product-carrier}
+Q_{i,n}=D_{i,n}\oplus D_{i,n-1},\qquad
+d_Q(x,y)=(\partial x,-\partial y).
+\end{equation}
+Here $x$ is a fiber chain and $y$ represents the interval-first cell
+$[0,1]\times y$.
+
+The mapping-torus cells of $G_i$ give
+\begin{equation}\label{cc:eq:torus-carrier}
+M_{i,n}=D_{i,n}\oplus D_{i,n-1},\qquad
+d_M(x,y)=(\partial x+(p_i-I)y,-\partial y).
+\end{equation}
+The incidence term follows from
+\[
+\partial([0,1]\times y)=\{1\}\times y-\{0\}\times y
+ -[0,1]\times\partial y.
+\]
+The two endpoint chains become $p_i y$ and $y$ under the quotient.
+This also fixes the sign of the shifted differential.
+
+The fourth periods in these product coordinates are
+$\bar w_0=e_4-2\delta$ and $\bar w_1=f_4+\delta_1$.
+The shears in \eqref{cc:eq:k} identify the fiber maps with
+$[y,t]\mapsto[y,d_i t]$, where $(d_0,d_1)=(3,4)$.
+For instance $x=y-2tU_0$ at $0$, and $x=y+tU_1$ at $1$.
+These expressions send a positive fourth period to $\bar w_i$.
+
+The source monodromies on $Q_i$ are
+\[
+\mathcal T_0(x,y)=(p_0x,p_0y),\qquad
+\mathcal T_1(x,y)=(p_1^{-1}x,p_1^{-1}y).
+\]
+Thus $\mathcal T_1$ is the actual order-four monodromy in the local
+$f$ marking. The change $C$ carries it to $T_1$ in the common marking.
+
+\begin{lemma}[Fiber maps and meridian prisms]\label{cc:lem:prisms}
+Put $\nu_i=I+p_i+\cdots+p_i^{d_i-1}$.
+The fiber maps and positive meridian prisms induce
+\begin{equation}\label{cc:eq:local-maps}
+\begin{aligned}
+F_i:Q_{i,n}&\longrightarrow M_{i,n},& F_i(x,y)&=(x,\nu_i y),\\
+H_0:Q_{0,n}&\longrightarrow M_{0,n+1},&H_0(x,y)&=(0,x),\\
+H_1:Q_{1,n}&\longrightarrow M_{1,n+1},&H_1(x,y)&=(0,-p_1^{-1}x).
+\end{aligned}
+\end{equation}
+They satisfy
+\begin{equation}\label{cc:eq:local-homotopy}
+d_MF_i=F_id_Q,\qquad
+d_MH_i+H_id_Q=F_i(\mathcal T_i-I).
+\end{equation}
+In the boundary mapping-torus complex
+\[
+R_{i,n}=Q_{i,n}\oplus Q_{i,n-1},\qquad
+d_R(a,b)=(d_Qa+(\mathcal T_i-I)b,-d_Qb),
+\]
+the boundary retraction is the chain map
+\begin{equation}\label{cc:eq:boundary-prism-map}
+\mathcal K_i:R_{i,n}\longrightarrow M_{i,n},\qquad
+\mathcal K_i(a,b)=F_i a+H_i b.
+\end{equation}
+Subdivision and the deformation retractions identify this map with
+the actual boundary maps in the finite attachment diagram.
+\end{lemma}
+
+\begin{proof}
+Divide the fourth interval into $d_i$ equal parts.
+Their images traverse the successive core intervals with coefficients
+$I,p_i,\ldots,p_i^{d_i-1}$. This gives $F_i$.
+
+In the adapted coordinates, the two boundary retractions are
+\[
+[y,t,v]\longmapsto[y,3t+v],\qquad
+[y,t,v]\longmapsto[y,4t-v].
+\]
+A positive $v$ interval therefore gives one positive core interval at $0$.
+At $1$, it runs from core parameter $0$ to $-1$.
+The identity $[y,\tau-1]=[P_1^{-1}y,\tau]$ gives coefficient
+$-p_1^{-1}$. These are the displayed $H_i$ on the fiber components.
+
+A cell containing both the $t$ and $v$ intervals maps through one core
+coordinate, so its top cellular coefficient is zero.
+This proves the formula on the second components.
+The maps are cellular for the product prism structures.
+Subdividing their prisms gives the same induced maps on simplicial chains,
+up to the chain homotopies of the subdivision comparisons.
+
+Algebraically, $(p_i-I)\nu_i=\nu_i(p_i-I)=0$ proves that $F_i$ is a
+chain map. Direct substitution gives
+\[
+\begin{aligned}
+(d_MH_0+H_0d_Q)(x,y)&=((p_0-I)x,0),\\
+(d_MH_1+H_1d_Q)(x,y)&=((p_1^{-1}-I)x,0).
+\end{aligned}
+\]
+The second components of $F_i(\mathcal T_i-I)$ vanish because
+$\nu_i(p_i^{\pm1}-I)=0$.
+Finally,
+\[
+d_M\mathcal K_i(a,b)
+=F_id_Qa+F_i(\mathcal T_i-I)b-H_id_Qb
+=\mathcal K_id_R(a,b).
+\]
+Thus the same positive interval convention determines the endpoint
+incidence, the meridian conjugation, and the boundary chain map.
+\end{proof}
+
+The integral filling homology is free of ranks $(1,2,2,2,1)$ in each case.
+The cokernels of $F_{0*}$ in degrees zero through four are
+$0,\mathbb Z/3,0,0,\mathbb Z/3$.
+For $F_{1*}$ they are
+$0,\mathbb Z/4,\mathbb Z/2,\mathbb Z/2,\mathbb Z/4$.
+
+To verify the integral assertions, use the exact sequence of
+\eqref{cc:eq:torus-carrier}:
+\[
+0\longrightarrow\operatorname{coker}(P_i-I\mid H_n(X_i))
+\longrightarrow H_n(G_i)
+\longrightarrow\ker(P_i-I\mid H_{n-1}(X_i))\longrightarrow0.
+\]
+Here and below homology has integral coefficients.
+The fiber component of $F_{i*}$ surjects onto the left term.
+Its fourth-interval component induces the norm on the right term.
+Consequently
+\[
+\operatorname{coker}F_{i*,n}
+\cong
+\frac{\ker(P_i-I\mid H_{n-1}(X_i))}
+{(I+P_i+\cdots+P_i^{d_i-1})H_{n-1}(X_i)}.
+\]
+
+For $P_0$, the degree-one and degree-two actions are cyclic permutations.
+Their norm images generate the invariant lattices.
+For $P_1$, the degree-one and degree-two matrices are
+\[
+\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},\qquad
+\begin{pmatrix}1&1&0\\0&0&-1\\0&1&0\end{pmatrix}.
+\]
+Their differences from the identity have Smith factors $(1,1)$.
+Their norm images are $2\mathbb Z\delta_1$ and
+$2\mathbb Z(f_1\wedge f_2)$.
+
+In degrees zero and three the norm is
+multiplication by the covering degree. These facts prove the assertions,
+including the possible finite cokernels. They do not compute the homology
+of the global cone.
+
+\begin{proposition}\label{cc:prop:no-common}
+There is no finite triangulation of $F$ on which both actual maps
+$T_0,T_1$ are simplicial automorphisms.
+\end{proposition}
+
+\begin{proof}
+Multiplication in the common marking gives
+\begin{equation}\label{cc:eq:cusp-monodromy}
+T_\infty=\begin{pmatrix}2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1\end{pmatrix}
+=I+N,\qquad N^2=0,\quad N\ne0.
+\end{equation}
+Thus $T_\infty^r=I+rN$ has infinite order over $\mathbb Z$.
+Simplicial automorphisms of a finite triangulation form a finite group,
+since they permute its vertices faithfully. Its induced action on
+$H_1(F;\mathbb Z)$ is therefore finite, a contradiction.
+\end{proof}
+
+This obstruction concerns invariant triangulations. It does not obstruct
+the finite attachment diagram or the compact manifold $W$.
+
+\subsection{Meridians in one integral marking}
+
+Let $h_i$ be the positive core interval of $G_i$, as in
+\eqref{cc:eq:square-conjugation}.
+The formulas \eqref{cc:eq:k} give $\gamma_0\mapsto h_0$ and
+$\gamma_1\mapsto h_1^{-1}$.
+Consequently the based relations are
+\begin{equation}\label{cc:eq:meridians}
+\gamma_0^3=f_{0\#}(w_0),\qquad
+\gamma_1^4=f_{1\#}(w_1),\qquad
+w_0=e_4-2\delta,\quad w_1=-Cf_4-\delta.
+\end{equation}
+In $B_0$ coordinates, $w_0=(4,2,-6,1)^t$ and
+$w_1=(1,1,-3,-1)^t$.
+The second equation is exactly
+$\gamma_1^4=f_{1\#}(-f_4-\delta_1)$ in its local marking.
+
+The fiber maps are coverings of degrees three and four onto the cores.
+Their induced fundamental-group maps are injective.
+Thus the nonzero conormal terms cannot be erased in either local group.
+
+Indeed the product coordinates above give
+$f_{0\#}(\bar w_0)=h_0^3$ and $f_{1\#}(\bar w_1)=h_1^4$.
+The marked meridians are $h_0$ and $h_1^{-1}$, so
+$w_0=\bar w_0$ and $w_1=-C\bar w_1$.
+For $z\in\pi_1(X_i)$, the same square gives conjugation by $P_i$
+for $h_i$, and by $P_i^{-1}$ for $h_i^{-1}$.
+This recovers $T_0$ and $T_{1,f}$, including the order-four inverse.
+
+The fourth generators commute with their meridians because $P_i^{d_i}=I$.
+Hence each boundary group has presentation
+\[
+\langle\Lambda,\gamma_i\mid[\Lambda,\Lambda]=1,
+\ \gamma_i\lambda\gamma_i^{-1}=T_i\lambda\rangle,
+\]
+and its map to the core adds exactly the power relation in
+\eqref{cc:eq:meridians}. The covering subgroup is $\Lambda$.
+
+The restriction of a degree-one integral class $\alpha$ on the fiber
+extends to the local core exactly when
+\begin{equation}\label{cc:eq:congruences}
+\alpha T_i=\alpha,\qquad d_i\mid\alpha(w_i),\qquad(d_0,d_1)=(3,4).
+\end{equation}
+Indeed a homomorphism from the core group to $\mathbb Z$ must assign
+$\alpha(w_i)/d_i$ to the marked meridian.
+Conversely this assignment, together with $\alpha$ on the fiber subgroup,
+respects its conjugation and power relations and defines a homomorphism.
+
+The only common invariant covectors are $\mathbb Z\psi$.
+For $r\psi$, the two divisibility conditions are $3\mid r$ and $4\mid r$.
+Their intersection is $12\mathbb Z\psi$.
+
+In particular the local core extensions of $12\psi$ evaluate to $4$ and
+$-3$ on the two positive meridians. These evaluations include the
+conormal terms, since $\psi(\delta)=0$.
+They do not yet specify an extension over the cusp.
+
+\begin{proposition}\label{cc:prop:pi1}
+With additive notation for the commuting fiber subgroup,
+\[
+\pi_1(W)=\langle\Lambda,\gamma_0,\gamma_1\mid
+ [\Lambda,\Lambda]=1,\quad
+ \gamma_i\lambda\gamma_i^{-1}=T_i\lambda,\quad
+ \gamma_0^3=w_0,\ \gamma_1^4=w_1\rangle.
+\]
+Moreover $H_1(W;\mathbb Z)\cong\mathbb Z$.
+One primitive generator $g$ satisfies
+$[e_4]=12g$, $[\gamma_0]=4g$, and $[\gamma_1]=-3g$.
+In particular $[\gamma_\infty]=-g$.
+\end{proposition}
+
+\begin{proof}
+The flat bundle retracts onto its restriction to a bouquet of two circles.
+Its zero section splits its fundamental-group extension.
+Formula~\eqref{cc:eq:square-conjugation} gives its conjugation action,
+with multiplication as in \eqref{cc:eq:path-order}.
+Each boundary group maps onto its core group. Its kernel is normally
+generated by the corresponding relation \eqref{cc:eq:meridians}, as
+the fiber is the index-$d_i$ covering subgroup. Van Kampen gives the presentation.
+
+For abelianization, the images of $T_0-I$ contain $-e_1$ and $e_2-e_1$.
+The image of $T_1-I$ contains $-2e_1-e_2+e_3$.
+They therefore generate $\ker\psi$ integrally.
+
+The remaining relations are $3x_0=c$ and $4x_1=-c$.
+Their relation matrix on $(c,x_0,x_1)$ is
+$\left(\begin{smallmatrix}-1&3&0\\1&0&4\end{smallmatrix}\right)$.
+Its maximal minors have absolute values $3,4,12$, with gcd one.
+Thus there is no torsion and the primitive solution is $(c,x_0,x_1)=(12,4,-3)g$.
+The infinity relation gives
+$[\gamma_\infty]=-[\gamma_0]-[\gamma_1]=-g$.
+\end{proof}
+
+\subsection{An explicit cusp collapse and its obstruction}
+
+The primitive lattice of cusp vanishing cycles is
+\[
+K=N\Lambda=\langle e_1-e_3,e_3-e_2\rangle.
+\]
+Define $A_\infty:\Lambda\to\mathbb Z^2$ by
+\begin{equation}\label{cc:eq:A}
+A_\infty=\begin{pmatrix}1&1&1&0\\0&0&0&1\end{pmatrix}.
+\end{equation}
+It is surjective, has kernel $K$, and satisfies $A_\infty T_\infty=A_\infty$.
+It therefore defines the actual map
+\begin{equation}\label{cc:eq:p}
+p_\infty:B_{T_\infty}\longrightarrow\mathbb R^2/\mathbb Z^2,
+\qquad [a,v]\longmapsto A_\infty a.
+\end{equation}
+It kills the marked meridian and the two vanishing cycles.
+
+Let $Z$ be its mapping cylinder and attach its boundary end to $W$.
+The resulting finite polyhedron is denoted $W_p$.
+All maps here are explicit piecewise linear maps after finite subdivisions.
+
+\begin{theorem}\label{cc:thm:cusp-obstruction}
+The space $W_p$ is simply connected and has Euler characteristic zero.
+It is not an integral homology six-sphere.
+Consequently the vanishing-cycle quotient and a null-homotopic cusp
+meridian do not determine the cusp chains required by that conclusion.
+\end{theorem}
+
+\begin{proof}
+The map $p_\infty$ is surjective on fundamental groups.
+Its kernel is normally generated by $K$ and $\gamma_\infty$.
+The normal closure of $K$ in $\pi_1(W)$ contains
+\[
+e_1-e_3,\qquad e_3-e_2,\qquad T_0(e_1-e_3)=e_1+e_2-e_3.
+\]
+Their first three coordinates have determinant $-1$. They generate
+$\ker\psi$.
+
+Equation~\eqref{cc:eq:path-order} gives
+$\gamma_\infty=\gamma_1^{-1}\gamma_0^{-1}$.
+Killing this meridian therefore imposes $\gamma_0\gamma_1=1$.
+It has the presentation
+\[
+\langle c,x\mid [c,x]=1,\ x^3=c,\ x^{-4}=c^{-1}\rangle=1.
+\]
+This proves simple connectivity by van Kampen.
+
+The flat torus bundle has Euler characteristic
+$\chi(E)=\chi(\Sigma)\chi(F)=0$.
+Each $N_i$ retracts onto a mapping torus, and has Euler characteristic zero.
+Each boundary mapping torus also has Euler characteristic zero.
+Additivity therefore gives $\chi(W)=0$.
+The mapping cylinder $Z$ retracts onto a two-torus, so $\chi(Z)=0$.
+Hence $\chi(W_p)=0+0-0=0$, whereas an integral homology six-sphere
+has Euler characteristic two.
+\end{proof}
+
+The mapping cylinder is a topological comparison, and is not asserted
+to be a smooth cusp neighborhood. Its failure is already detected
+integrally by Euler characteristic. Toric strata of an actual cusp can
+supply additional chains even when their fundamental-group effect
+agrees with \eqref{cc:eq:p}.
+
+\subsection{The cusp map required by the common cone}
+
+Let $N_\infty\to D$ be a compact oriented six-manifold with a specified
+boundary diffeomorphism $j_\infty:B_{T_\infty}\to\partial N_\infty$.
+It must extend the prescribed torus family and the chosen cusp section.
+For complex-geometric application, require a holomorphic extension with
+smooth total space and the prescribed punctured identification.
+Its boundary orientation must be opposite to that of $W$.
+
+After triangulating the pair, put $L_\infty=C_*(N_\infty;\mathbb Z)$ and
+$\kappa_\infty=(j_\infty)_*$, including the boundary into $N_\infty$.
+This denotes an induced chain map only when the map $j_\infty$ is supplied.
+It is not determined by \eqref{cc:eq:A}.
+
+\begin{theorem}[Conditional integral gluing]\label{cc:thm:conditional}
+For these geometric data, the union $Y=W\cup_{j_\infty}N_\infty$ has integral
+chains represented by
+\begin{equation}\label{cc:eq:globalcone}
+\begin{split}
+\mathcal Y_n&=\mathcal W_n\oplus L_{\infty,n}\oplus C_{n-1}(B_{T_\infty}),\\
+d(w,l,b)&=(dw+\beta b,dl-\kappa_\infty b,-db).
+\end{split}
+\end{equation}
+It has the integral homology of a six-sphere precisely when this cone
+has homology $\mathbb Z$ in degrees zero and six, and zero elsewhere.
+For an explicit criterion, choose an integral basis of $\ker d_n$ in
+each degree, and express $\operatorname{im}d_{n+1}$ in that basis.
+Every nonzero Smith factor of this presentation must be one.
+Its cokernel must have rank one in degrees zero and six, and rank zero
+in all other degrees.
+The claim includes the comparison of \eqref{cc:eq:globalcone} with the
+specified attachment, not just a list of its ranks over a field.
+\end{theorem}
+
+\begin{proof}
+Let $q:\mathcal W\to C_*(W;\mathbb Z)$ be the comparison in
+Theorem~\ref{cc:thm:cone}.
+It satisfies $q\beta=(B_{T_\infty}\hookrightarrow W)_*$ exactly.
+Consequently $(w,l,b)\mapsto(qw,l,b)$ maps \eqref{cc:eq:globalcone}
+onto the ordinary attachment cone for $W$ and $N_\infty$.
+Its kernel is the contractible complex $\ker q$ described there.
+
+The ordinary attachment cone maps onto $C_*(Y;\mathbb Z)$.
+Its kernel is again the identity cone, with contraction
+$(c,b)\mapsto(0,c)$.
+The composite is therefore an integral quasi-isomorphism.
+
+Each cycle group is a subgroup of a finite free abelian group, hence
+has a finite integral basis.
+The stated Smith calculation computes the quotient of cycles by boundaries,
+which is exactly the required integral homology.
+\end{proof}
+
+For a deformation retraction $r_\infty:N_\infty\to Y_\infty$ onto a cusp
+central fiber, the deciding specialization is the concrete composite
+\begin{equation}\label{cc:eq:deciding}
+F\longrightarrow B_{T_\infty}
+ \mathrel{\mathop{\longrightarrow}^{j_\infty}}N_\infty
+ \mathrel{\mathop{\longrightarrow}^{r_\infty}}Y_\infty.
+\end{equation}
+One must give its maps on the toric cells and their intersections,
+including the images of the marked fiber and meridian prisms.
+The chain homotopy between inclusion and this retraction supplies the
+comparison with \eqref{cc:eq:globalcone}.
+In particular the degree-two and degree-three specialization images
+cannot be inferred from $K$ or from $\pi_1(Y)$.
+For any homology-sphere attachment here, Euler additivity requires
+$\chi(N_\infty)=2$.
+
+The finite fillings provide positive normal disks.
+In a boundary cone with differential $(a,b)\mapsto(da+kb,-db)$, let
+$Lq$ insert the positive normal-circle chain first.
+Then $dL=-Ld$ and $kL=0$ on normalized cubical chains.
+The positive Thom map is $q\mapsto(0,-Lq)$.
+Indeed the radial homotopy sends its relative image to
+$(r,v)\mapsto re^{2\pi iv}$ times $q$, which is the positive disk class.
+This fixes the cone sign independently of the direction of the core loop.
+
+The cusp comparison must preserve the induced orientation at its own
+boundary. An asserted scalar transgression does not supply that comparison.
+
+The toric construction in Section~\ref{sec:toric-cusp} supplies the
+central surface, and Section~\ref{sec:cusp-attachment} constructs
+the map \eqref{cc:eq:deciding}. The collapse theorem explains why
+the primitive vanishing-cycle quotient cannot replace that surface.
+Comparison with a complex family also requires identifying the regular
+bundles relative to their sections.
+This identification must extend over the finite fillings. Section~\ref{sec:geometric-comparison}
+constructs these maps for the selected lifts and adapted cusp. Their
+geometric construction is distinct from the integral calculation for
+the common cone.

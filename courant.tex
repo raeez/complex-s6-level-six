@@ -1,0 +1,354 @@
+\section{Aeppli classes and holomorphic Courant extensions}
+\label{sec:courant}
+
+A real $(1,1)$-form $\omega$ is \emph{pluriclosed} if
+$\partial\bar\partial\omega=0$.
+Such a form determines both an Aeppli class and the closed form
+$2i\partial\omega$ of type $(2,1)$.
+We compute the map between these classes and the holomorphic
+Courant extension it determines. Positivity is a separate condition.
+
+Throughout this section, $Y$ is the same selected threefold
+as in Section~\ref{sec:bott-chern}, with its fixed nonzero
+parameter, integral lifts and adapted gluing.
+We use its Hodge table, first Fr\"olicher differentials and
+Betti numbers from \eqref{hr:eq:hodge-table},
+Proposition~\ref{hr:prop:frolicher} and \eqref{hr:eq:betti}.
+The argument uses the additive Aeppli calculation independently
+of Theorem~\ref{bc:thm:ring}.
+
+\subsection{The two differential maps from Aeppli cohomology}
+
+Define the real Aeppli group by
+\begin{equation}\label{cq:eq:real-Aeppli}
+ \mathsf A_{\mathbb R}
+ =\frac{\{\omega\in A^{1,1}:\overline\omega=\omega,
+                         \ \partial\bar\partial\omega=0\}}
+        {\{\partial\lambda+\bar\partial\overline\lambda:
+                                             \lambda\in A^{0,1}\}}.
+\end{equation}
+Its complexification is
+$\mathsf A_{\mathbb C}=H_A^{1,1}(Y)$.
+Indeed, conjugation preserves the complex numerator and denominator.
+Averaging a primitive expression with its conjugate identifies
+the real part of the complex denominator with the denominator
+in \eqref{cq:eq:real-Aeppli}.
+
+The two differentials induce maps
+\begin{equation}\label{cq:eq:two-differentials}
+ \partial:\mathsf A_{\mathbb C}\longrightarrow
+                         H_{\bar\partial}^{2,1}(Y),\qquad
+ \bar\partial:\mathsf A_{\mathbb C}\longrightarrow
+                         H_\partial^{1,2}(Y).
+\end{equation}
+For example, $\partial\bar\partial\omega=0$ makes
+$\partial\omega$ $\bar\partial$-closed.
+Replacing $\omega$ by $\omega+\partial\lambda+\bar\partial\theta$
+changes it by
+$\partial\bar\partial\theta=-\bar\partial\partial\theta$,
+a Dolbeault boundary. Conjugation gives the other map.
+
+\begin{proposition}\label{cq:prop:two-differentials}
+The combined map
+\begin{equation}\label{cq:eq:differential-isomorphism}
+ (\partial,\bar\partial):\mathsf A_{\mathbb C}
+      \xrightarrow{\ \sim\ }
+       H_{\bar\partial}^{2,1}(Y)\oplus H_\partial^{1,2}(Y)
+\end{equation}
+is an isomorphism. Restricting $\partial$ to $\mathsf A_{\mathbb R}$
+gives an isomorphism of real vector spaces onto the complex line
+$H_{\bar\partial}^{2,1}(Y)$.
+\end{proposition}
+
+\begin{proof}
+Choose a $\bar\partial$-closed $(1,1)$-form $\zeta$ with
+$v=[\partial\zeta]_{\bar\partial}\ne0$.
+The rank-one first differential from $(1,1)$ to $(2,1)$
+supplies this choice. Put $z=[\zeta]_A$.
+Then
+\[
+ (\partial z,\bar\partial z)=(v,0),\qquad
+ (\partial\overline z,\bar\partial\overline z)=(0,\overline v).
+\]
+Thus $z$ and $\overline z$ are independent.
+They form a basis because $h_A^{1,1}=2$.
+Both target groups are one-dimensional, proving
+\eqref{cq:eq:differential-isomorphism}.
+The two source lines are the images of ordinary and conjugate
+Dolbeault cohomology in Aeppli cohomology.
+
+A real class has the unique form
+$cz+\overline c\,\overline z$.
+Its image under $\partial$ is $cv$.
+This proves the real isomorphism.
+\end{proof}
+
+\subsection{The closed holomorphic recipient}
+
+Let $\Omega_Y^{2,\mathrm{cl}}$ be the sheaf of closed
+holomorphic two-forms. The holomorphic Poincar\'e lemma gives
+an exact sequence of sheaves of complex vector spaces
+\begin{equation}\label{cq:eq:Poincare}
+ 0\longrightarrow\Omega_Y^{2,\mathrm{cl}}
+ \longrightarrow\Omega_Y^2
+ \xrightarrow{\ d\ }\Omega_Y^3\longrightarrow0.
+\end{equation}
+The last map is locally surjective because holomorphic
+three-forms are closed in complex dimension three.
+The Hodge table gives
+$H^0(Y,\Omega_Y^3)=H^1(Y,\Omega_Y^3)=0$.
+Consequently the forgetful map is an isomorphism
+\begin{equation}\label{cq:eq:forgetful}
+ \iota:H^1(Y,\Omega_Y^{2,\mathrm{cl}})
+       \xrightarrow{\ \sim\ }H^1(Y,\Omega_Y^2)
+       =H_{\bar\partial}^{2,1}(Y).
+\end{equation}
+
+The closed-holomorphic cohomology has the smooth representative model
+\begin{equation}\label{cq:eq:recipient}
+ H^1(Y,\Omega_Y^{2,\mathrm{cl}})
+ \simeq
+ \frac{\{\tau\in A^{3,0}\oplus A^{2,1}:d\tau=0\}}
+      {dA^{2,0}}
+\end{equation}
+\cite[Theorem~3.3]{GFJSCourant}.
+In this model, $\iota$ sends $[\tau]$ to
+$[\tau^{2,1}]_{\bar\partial}$.
+Changing $\tau$ by $dB$, with $B\in A^{2,0}$, changes that
+component by $\bar\partial B$.
+This describes the comparison \eqref{cq:eq:forgetful} on representatives.
+
+\begin{theorem}\label{cq:thm:class-map}
+The differential defines a complex-linear map
+\begin{equation}\label{cq:eq:class-map}
+ \Phi:\mathsf A_{\mathbb C}\longrightarrow
+                   H^1(Y,\Omega_Y^{2,\mathrm{cl}}),\qquad
+ [\omega]_A\longmapsto[2i\partial\omega].
+\end{equation}
+It has complex rank one and kernel $\mathbb C\overline z$,
+with the notation of Proposition~\ref{cq:prop:two-differentials}.
+Its restriction
+\begin{equation}\label{cq:eq:real-class-map}
+ \Phi_{\mathbb R}:\mathsf A_{\mathbb R}
+          \xrightarrow{\ \sim\ }H^1(Y,\Omega_Y^{2,\mathrm{cl}})
+\end{equation}
+is an isomorphism of real vector spaces.
+\end{theorem}
+
+\begin{proof}
+For an Aeppli representative, $2i\partial\omega$ is $d$-closed.
+Under the change
+$\omega\mapsto\omega+\partial\lambda+\bar\partial\theta$,
+where $\theta$ has type $(1,0)$, it changes by
+\begin{equation}\label{cq:eq:Aeppli-gauge}
+                   2i\partial\bar\partial\theta
+                         =d(-2i\partial\theta).
+\end{equation}
+This is an allowed boundary in \eqref{cq:eq:recipient}, so
+$\Phi$ is well-defined and $\iota\Phi=2i\partial$.
+Proposition~\ref{cq:prop:two-differentials} and
+\eqref{cq:eq:forgetful} prove its complex rank and kernel.
+
+For a real class,
+\[
+          \iota\Phi(cz+\overline c\,\overline z)=2icv.
+\]
+In the real source basis $z+\overline z,i(z-\overline z)$
+and target basis $v,iv$, its matrix is
+\begin{equation}\label{cq:eq:real-matrix}
+                     \begin{pmatrix}0&-2\\2&0\end{pmatrix}.
+\end{equation}
+Its determinant is four. This proves
+\eqref{cq:eq:real-class-map}, including the factor $2i$
+and the real structure. The complex kernel meets the real
+Aeppli plane only at zero.
+\end{proof}
+
+\subsection{The Courant operations and changes of representative}
+
+An exact holomorphic Courant algebroid is an extension
+\[
+ 0\longrightarrow T^{*1,0}Y\longrightarrow Q
+        \xrightarrow{\ \pi\ }T^{1,0}Y\longrightarrow0
+\]
+with its compatible nondegenerate symmetric pairing and Dorfman
+bracket on holomorphic sections
+\cite[Definitions~3.1--3.2]{GFJSCourant}.
+Closed holomorphic two-form transition gauges classify these
+objects by $H^1(Y,\Omega_Y^{2,\mathrm{cl}})$
+\cite[Theorem~3.3]{GFJSCourant}.
+
+For the representative $\tau$ in \eqref{cq:eq:recipient}, the
+global smooth bundle
+$Q_\tau=T^{1,0}Y\oplus T^{*1,0}Y$ carries the following structure:
+\begin{equation}\label{cq:eq:operations}
+ \begin{aligned}
+ \bar\partial^\tau(X+\xi)
+      &=\bar\partial X+\bar\partial\xi-\iota_X\tau^{2,1},\\
+ \pi(X+\xi)&=X,\\
+ \langle X+\xi,V+\eta\rangle
+      &=\tfrac12\bigl(\xi(V)+\eta(X)\bigr),\\
+ [X+\xi,V+\eta]_\tau
+      &=[X,V]+\partial(\eta(X))+\iota_X\partial\eta
+            -\iota_V\partial\xi+\iota_V\iota_X\tau^{3,0}.
+ \end{aligned}
+\end{equation}
+The bracket is on $\bar\partial^\tau$-holomorphic sections
+\cite[Definition~3.4]{GFJSCourant}.
+
+For a smooth two-form $B$, write
+$e^B(X+\xi)=X+\xi+\iota_XB$.
+If $B$ has type $(2,0)$ and $\tau'=\tau+dB$, then
+\begin{equation}\label{cq:eq:B-gauge}
+                         e^B:Q_{\tau'}\xrightarrow{\ \sim\ }Q_\tau
+\end{equation}
+preserves the Dolbeault operator, anchor, pairing and bracket.
+Its inverse is $e^{-B}$.
+The operator and bracket identities are
+\[
+ \bar\partial^\tau e^B=e^B\bar\partial^{\tau+dB},\qquad
+ [e^Bs,e^Bt]_\tau=e^B[s,t]_{\tau+dB}.
+\]
+The first uses the $(2,1)$ component $\bar\partial B$,
+and the second uses $\partial B$ on holomorphic sections.
+In particular, the direction in \eqref{cq:eq:B-gauge} is from
+$\tau+dB$ to $\tau$.
+Equation~\eqref{cq:eq:Aeppli-gauge} gives the corresponding
+explicit gauge for a change of Aeppli representative.
+
+For $\tau=2i\partial\omega$, the $(3,0)$ component vanishes.
+The holomorphic sections still satisfy the coupled equation
+$\bar\partial^\tau(X+\xi)=0$.
+Thus the absence of a $(3,0)$ term in the displayed bracket
+does not split the holomorphic Courant algebroid.
+
+\subsection{Reduction of the untwisted smooth algebroid}
+
+The untwisted smooth exact Courant algebroid is $TY\oplus T^*Y$
+with anchor the tangent projection, the symmetric pairing of
+\eqref{cq:eq:operations}, and bracket
+\[
+ [X+\xi,V+\eta]_0=[X,V]+\mathcal L_X\eta-\iota_Vd\xi.
+\]
+Here $TY$ denotes the real tangent bundle.
+A \emph{lifting} of $T^{0,1}Y$ is an isotropic involutive
+subbundle of its complexification whose anchor maps
+isomorphically to $T^{0,1}Y$.
+
+\begin{proposition}\label{cq:prop:smooth-reduction}
+Every class in $H^1(Y,\Omega_Y^{2,\mathrm{cl}})$ is realized by
+a lifting inside the untwisted smooth exact Courant algebroid.
+Its real Aeppli class is unique.
+\end{proposition}
+
+\begin{proof}
+By Theorem~\ref{cq:thm:class-map}, choose a real
+pluriclosed $(1,1)$-form $\omega$ representing its inverse image.
+Set $d^c=i(\bar\partial-\partial)$ and $H=-d^c\omega$.
+The form $H$ is real and closed.
+Since $H_{\mathrm{dR}}^3(Y;\mathbb R)=0$, choose a real
+two-form $b$ with $db=H$. Thus
+\begin{equation}\label{cq:eq:untwisting}
+                         0=-d^c\omega-db.
+\end{equation}
+The subbundle
+\begin{equation}\label{cq:eq:lifting}
+                    \ell(\omega,b)=e^{b+i\omega}T^{0,1}Y
+\end{equation}
+is a lifting \cite[Lemma~3.6]{GFJSCourant}.
+Its isotropy follows from skew-symmetry of $b+i\omega$.
+For involutivity, the $B$-field bracket identity gives the twist
+\begin{equation}\label{cq:eq:reduction-twist}
+ db+i\,d\omega
+     =-i(\bar\partial-\partial)\omega
+                         +i(\partial+\bar\partial)\omega
+     =2i\partial\omega.
+\end{equation}
+Contraction with two $(0,1)$ vectors annihilates this $(2,1)$-form.
+Since $T^{0,1}Y$ is involutive, so is \eqref{cq:eq:lifting}.
+
+The quotient $\ell^\perp/\ell$ has the smooth identification
+\begin{equation}\label{cq:eq:reduction-map}
+ \ell^\perp/\ell\longrightarrow Q_{2i\partial\omega},\qquad
+                   [e^{b+i\omega}X+\xi]\longmapsto X+\xi.
+\end{equation}
+The pairing and anchor are unchanged.
+For a $(0,1)$ vector field $W$, the mixed bracket with its lift
+defines the Dolbeault operator on the quotient:
+\[
+        \bar\partial^\ell_W[s]=[e^{b+i\omega}W,s]\bmod\ell.
+\]
+Substituting \eqref{cq:eq:reduction-twist} gives
+$\bar\partial^{2i\partial\omega}$ in \eqref{cq:eq:operations}.
+The bracket of holomorphic sections gives its displayed Dorfman
+bracket by the same identity
+\cite[Lemma~3.8]{GFJSCourant}.
+Thus \eqref{cq:eq:reduction-map} preserves all the stated operations.
+Uniqueness of the real Aeppli class follows from
+\eqref{cq:eq:real-class-map}. The representatives $\omega$ and $b$
+need not be unique.
+\end{proof}
+
+The real primitive $b$ is smooth gauge data.
+It is not a holomorphic $(2,0)$ gauge trivializing a nonzero
+class in \eqref{cq:eq:recipient}.
+The proposition constructs no positive representative of an
+Aeppli class.
+
+\subsection{A necessary condition for a pluriclosed metric}
+
+The cusp supplies a direct test for a positive representative.
+Its normalized component is the toric del Pezzo surface of degree
+six. Its six boundary curves are copies of $\mathbb P^1$.
+The free period quotient identifies them in three pairs, as in
+Proposition~\ref{c26:prop:quotient}.
+The adapted identification of Section~\ref{hol:sec:adapted-fan}
+places this cusp in the selected $Y$.
+Restricting its normalization map to any boundary curve gives
+a nonconstant holomorphic map
+$j:\mathbb P^1\to Y$.
+Freeness and the local quotient charts ensure nonconstancy.
+
+\begin{corollary}\label{cq:cor:positive-class}
+If $Y$ admits a positive pluriclosed $(1,1)$-form $\omega$, then
+\[
+             [\omega]_A\ne0,\qquad
+             [2i\partial\omega]\ne0
+                    \quad\text{in }H^1(Y,\Omega_Y^{2,\mathrm{cl}}).
+\]
+Its reduced holomorphic Courant algebroid has no splitting
+as an exact holomorphic Courant algebroid.
+\end{corollary}
+
+\begin{proof}
+Strict positivity and nonconstancy of $j$ give
+\[
+                            \int_{\mathbb P^1}j^*\omega>0.
+\]
+Indeed, the pullback is positive wherever $dj\ne0$, hence on
+a nonempty open subset.
+If $[\omega]_A=0$ in \eqref{cq:eq:real-Aeppli}, write
+$\omega=\partial\lambda+\bar\partial\overline\lambda$.
+On $\mathbb P^1$ the $(2,0)$ and $(0,2)$ components vanish, so
+\[
+                  j^*\omega=d\,j^*(\lambda+\overline\lambda).
+\]
+Stokes' theorem contradicts the positive integral.
+Injectivity of $\Phi_{\mathbb R}$ gives the second assertion.
+The classification by \eqref{cq:eq:recipient} identifies the
+split exact holomorphic Courant algebroid with the zero class.
+\end{proof}
+
+This corollary gives a necessary condition for a metric.
+The next section identifies the reduced embedded toric curves
+and evaluates their normalized periods as $(-2,3,0)$.
+Their nonnegative zero cone gives positive exact currents and
+excludes every pluriclosed Hermitian metric on this $Y$.
+The class map and the holomorphic Courant algebroids constructed
+above remain defined for all Aeppli classes; positivity fails
+for every representative satisfying the pluriclosed equation.
+The constructions also retain the selected nonzero parameter
+and gluing. Parameter descent, a filling at $u=0$, and comparison
+with another marked family require their respective geometric maps.
+A chiral or physical realization requires further operations
+and comparison maps on its own carrier.

@@ -1,0 +1,583 @@
+\section{The marked order-four filling}\label{sec:order-four}
+
+\subsection{The order-four datum and its conormal coordinate}
+
+Consider the Weierstrass family over a disk about $t=1$,
+\begin{equation}\label{of:eq:original}
+ y^2=x^3-3t^3(t-1)x+2t^4(t-1)^2.
+\end{equation}
+The disk coordinate is $q=t-1$, with its complex orientation.
+The origin is the section at infinity. Put
+\begin{equation}\label{of:eq:reduction}
+ q=s^4,\qquad x=s^2X,\qquad y=s^3Y.
+\end{equation}
+The reduced equation and discriminant are
+\begin{equation}\label{of:eq:smooth}
+ Y^2=X^3-3(1+s^4)^3X+2s^2(1+s^4)^4,
+ \qquad \Delta=1728(1+s^4)^8.
+\end{equation}
+Thus its projective elliptic family is smooth on a sufficiently small disk.
+
+The deck generator fixing $x,y,t$ is
+\begin{equation}\label{of:eq:deck}
+ (X,Y,s)\longmapsto(-X,iY,is).
+\end{equation}
+It multiplies $dX/Y$ by $i$. A counterclockwise meridian in the $q$ disk
+lifts from $s$ to $is$. The endpoint identification uses the inverse deck
+transformation, so its positive transport multiplier is $-i$.
+
+We use the full integral period marking
+\begin{equation}\label{of:eq:lattice}
+ f_1=(1,0),\quad f_2=(i,0),\quad
+ f_3=\tfrac12(1+i,1),\quad f_4=(0,\tau),\qquad \operatorname{Im}\tau>0.
+\end{equation}
+The positive multiplicative period and positive monodromy are
+\begin{equation}\label{of:eq:T}
+ \delta=-f_1-f_2+2f_3,
+ \qquad
+ T=\begin{pmatrix}0&1&0&0\\-1&0&-1&0\\0&0&1&0\\0&0&0&1\end{pmatrix}.
+\end{equation}
+Indeed multiplication by $-i$ on the first complex coordinate gives these
+four columns and fixes the second coordinate. In particular $T^4=I$.
+
+The ordered basis $(f_1,f_2,f_3,f_4)$ has the complex orientation.
+We retain the logarithmic increment
+\begin{equation}\label{of:eq:increment}
+                         a_1=-f_4/4.
+\end{equation}
+This is the order-four increment paired with $a_0=e_4/3$ in
+\cite[p.~12]{Engel}. The period marking is that of
+\cite[Theorem~5.1, pp.~12--13]{Engel}.
+
+The following hypotheses specify the geometric comparison.
+Let $P_0$ and $O$ be disjoint sections near $t=1$, with $O$ the origin,
+and let $\mathcal M=\mathcal O(P_0-O)$.
+Choose a nonzero section $e$ of $\mathcal M|_O$ over this disk.
+After \eqref{of:eq:reduction}, suppose the transformed sections $P'_0,O'$
+are disjoint and put $\mathcal M'=\mathcal O(P'_0-O')$.
+
+Assume the specified lifted translation on $\mathcal M^\times$ extends to
+$(\mathcal M')^\times$ and commutes with the natural deck action.
+Assume its quotient $\mathcal F$ is a proper smooth family of complex
+two-tori over the $s$ disk.
+Assume its smooth integral period marking extends \eqref{of:eq:lattice},
+with multiplicative period $\delta$ and monodromy \eqref{of:eq:T}.
+
+These are hypotheses on the reduction and its lifted translation.
+They are not consequences of the matrix $T$.
+The elliptic equation verifies smooth elliptic reduction directly.
+The extension and properness of the specified lifted translation remain
+separate hypotheses.
+They are proved for the selected global construction in
+Section~\ref{sec:holomorphic-realization}.
+
+\begin{lemma}\label{of:lem:conormal}
+There is a nonzero section $e'$ of $\mathcal M'|_{O'}$ such that the
+canonical punctured divisor comparison gives
+\begin{equation}\label{of:eq:conormal}
+                     e=s^{-1}e',\qquad \rho e'(s)=-i\,e'(is).
+\end{equation}
+In the origin defined by $e'$, the original and twisted torus deck maps are
+\begin{equation}\label{of:eq:affine}
+ (z,s)\mapsto(T^{-1}z-\delta/4,is),\qquad
+ (z,s)\mapsto(T^{-1}z-(\delta+f_4)/4,is),
+\end{equation}
+where torus coordinates are taken modulo their integral periods.
+\end{lemma}
+
+\begin{proof}
+Near $O$, the divisor line $\mathcal O(P_0-O)$ is the ideal of $O$.
+Its restriction to $O$ is therefore the conormal line.
+The same statement holds at $O'$.
+
+The local transverse parameters $w=-x/y$ and $W=-X/Y$ satisfy
+$w=s^{-1}W$. These are parameters at infinity: the projective cubic in
+the chart $Y\ne0$ solves $Z/Y$ holomorphically as a function of $X/Y$
+near the origin. Write $e=u(q)w$ for a holomorphic unit $u$ and set
+$e'=u(s^4)W$. This proves the first equality in \eqref{of:eq:conormal}.
+
+Since $e$ is equivariant, the forward factor on $e'$ is
+$(is)^{-1}/s^{-1}=-i$. Multiplication by $-i$ in the multiplicative fiber
+is translation by $-\delta/4$.
+
+An isomorphism between compact complex tori is affine in chosen origins.
+Indeed its lifted derivative is lattice-periodic and descends to holomorphic
+functions on a compact torus, hence is constant.
+The period action therefore determines its linear part, here $T^{-1}$.
+The image of $e'$ determines its translation by the preceding calculation.
+
+The prescribed increment \eqref{of:eq:increment} gives the second formula.
+The integral matrices are locally constant over the smooth disk.
+The indicated translations are the specified torsion sections throughout it.
+\end{proof}
+
+This calculation uses the conormal character, not the normal-coordinate
+character. It also retains the original section $e$.
+On the positive root $s=e^{2\pi iv/4}$ that section contributes
+$-v\delta/4$, and the logarithmic modification contributes $-vf_4/4$.
+A nonunit boundary radius changes only a constant frame normalization.
+The angular displacement is unchanged.
+
+\subsection{The marked quotient and its collar}
+
+Let $X=\mathbb R^3/\mathbb Z^3$ in the basis $(f_1,f_2,f_3)$, and write
+$t_4\in\mathbb R/\mathbb Z$ for the fourth real period coordinate.
+Set $U=(-1,-1,2)$ in $X$ and
+\begin{equation}\label{of:eq:P}
+ P=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},
+ \qquad P^4=I,\qquad PU=U.
+\end{equation}
+Thus $T=P^{-1}\oplus1$.
+The real disk below is identified with a closed complex disk by a positive
+rescaling of $s$.
+
+Define
+\begin{equation}\label{of:eq:N}
+ N=(X\times S^1_{t_4}\times D)/\langle g\rangle,
+ \qquad g(x,t_4,s)=(Px-U/4,t_4-1/4,is).
+\end{equation}
+The action has order four and is free: for $1\le j\le3$, its $j$th power
+changes $t_4$ by $-j/4$. The map $q=s^4$ descends to $N$.
+Its reduced central fiber is the quotient at $s=0$.
+
+Use the positive boundary mapping torus
+\[
+ B_T=(X\times S^1_{t_4}\times[0,1])/
+ ((x,t_4,1)\sim(P^{-1}x,t_4,0)).
+\]
+The boundary identification determined by $e$ and \eqref{of:eq:increment} is
+\begin{equation}\label{of:eq:j}
+ j[x,t_4,v]=[x-vU/4,t_4-v/4,e^{2\pi iv/4}].
+\end{equation}
+At $v=1$, the inverse of $g$ sends this endpoint to
+$[P^{-1}x,t_4,1]$. Hence \eqref{of:eq:j} has precisely the prescribed
+positive return and starting fiber. Also $qj=e^{2\pi iv}$.
+
+\begin{theorem}\label{of:thm:geometry}
+Under the stated reduction hypotheses, \eqref{of:eq:N} is the marked
+local filling for \eqref{of:eq:increment}.
+Put
+\[
+ G_P=(X\times\mathbb R)/([y,\tau+1]=[Py,\tau]).
+\]
+There is an orientation-preserving diffeomorphism
+\begin{equation}\label{of:eq:Phi}
+ \Phi[x,t_4,s]=([x-t_4U,4t_4],e^{2\pi it_4}s)
+                 \in G_P\times D.
+\end{equation}
+Write its second coordinate as $z$.
+Then $q=e^{-2\pi i\tau}z^4$.
+
+The fiber and positive boundary maps followed by retraction are
+\begin{equation}\label{of:eq:fk}
+ f(x,t_4)=[x-t_4U,4t_4],\qquad
+ k[x,t_4,v]=[x-t_4U,4t_4-v].
+\end{equation}
+The integral product coordinates have fourth vector
+\begin{equation}\label{of:eq:v4}
+                         v_4=f_4+\delta.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The integral shear $y=x-t_4U$ has determinant one.
+It transforms $g$ into $(y,t_4,s)\mapsto(Py,t_4-1/4,is)$.
+Both coordinates in \eqref{of:eq:Phi} are invariant under this map.
+They are also invariant under $t_4\mapsto t_4+1$.
+
+Given $([y,\tau],z)$, choose a real lift of $\tau$ and put
+$t_4=\tau/4$, $x=y+t_4U$, $s=e^{-2\pi it_4}z$.
+Changing the lift by one and replacing $y$ by $P^{-1}y$ changes the
+result by $g^{-1}$. This proves a smooth inverse.
+The equation for $q$ follows by taking fourth powers.
+
+In these coordinates \eqref{of:eq:j} becomes
+\[
+ \Phi j[x,t_4,v]=([x-t_4U,4t_4-v],e^{2\pi it_4}).
+\]
+Retraction gives \eqref{of:eq:fk}. Holding $y$ fixed while increasing
+$t_4$ gives the original vector $f_4+\delta$, proving \eqref{of:eq:v4}.
+
+Orient $G_P$ by the $X$ orientation followed by increasing $\tau$.
+Orient its disk by the complex orientation. The shear has determinant one,
+the factor $4$ is positive, and the normal coordinate changes by a complex
+rotation. Thus \eqref{of:eq:Phi} preserves the six-dimensional orientation.
+
+The outward-first boundary orientation is the $X$ orientation followed by
+$\tau$ and the positive argument of $z$.
+The boundary circle matrix, in coordinates $(t_4,v)$, is
+\begin{equation}\label{of:eq:boundary-matrix}
+                   \begin{pmatrix}4&-1\\1&0\end{pmatrix}.
+\end{equation}
+Its determinant is one, proving the boundary orientation assertion.
+\end{proof}
+
+The change from $(f_1,f_2,f_3,v_4)$ to the original periods has matrix
+\begin{equation}\label{of:eq:V}
+ V=\begin{pmatrix}1&0&0&-1\\0&1&0&-1\\0&0&1&2\\0&0&0&1\end{pmatrix},
+ \qquad \det V=1.
+\end{equation}
+Its inverse is the actual torus map $(x,t_4)\mapsto(x-t_4U,t_4)$.
+Thus all subsequent cellular maps in the original marking are obtained
+by composing their characteristic maps with this explicit diffeomorphism.
+
+The disk bundle in \eqref{of:eq:Phi} has a specified smooth complex normal
+trivialization. An explicit collar is
+\[
+ ([y,\tau],z,\epsilon)\longmapsto
+ \Phi^{-1}([y,\tau],(1-\epsilon)z),\qquad |z|=1,\quad0\le\epsilon<1/2.
+\]
+The outward vector is $-\partial_\epsilon$.
+The phase $e^{-2\pi i\tau}$ in $q$ is part of the marked fibration.
+A smooth disk trivialization does not erase that phase.
+
+Let $h$ be the positive core loop $[0,\tau]$ and let $\gamma$ be the
+positive marked meridian. Formula \eqref{of:eq:fk} gives
+\begin{equation}\label{of:eq:pi}
+ k_\#(\gamma)=h^{-1},\qquad f_\#(v_4)=h^4,
+ \qquad k_\#(\gamma)^4=f_\#(-f_4-\delta).
+\end{equation}
+These equalities concern based loops through the marked origin.
+They preserve the counterclockwise base meridian even though its image
+traverses the core negatively.
+
+\subsection{Integral cellular chains with the actual monodromy}
+
+The action on the three-dimensional period lattice is not a signed
+permutation in the basis $(f_1,f_2,f_3)$.
+We therefore construct cells on which the homeomorphism $P$ acts.
+In $\mathbb R^3$, take the common refinement of the four tilings
+$P^j(16^{-1}\mathbb Z^3+[0,1/16]^3)$, $0\le j<4$.
+More explicitly, cut by every hyperplane
+$(P^{-j}x)_a=m/16$, for $a=1,2,3$ and $m\in\mathbb Z$.
+Its closed cells are convex rational polytopes.
+They have diameter at most $\sqrt3/16$, because the original cubic tiling
+is one of the four refinements.
+
+Barycentric subdivision, followed by the
+quotient by $\mathbb Z^3$, gives a finite triangulation $\mathcal K$ of $X$.
+No cell is identified with itself along a nontrivial translation.
+The construction is periodic, and $P$ permutes its polytopes and their
+barycenters. Thus $P$ acts simplicially.
+
+Let $D=C_*(\mathcal K;\mathbb Z)$ with its integral simplicial boundary $d$.
+Orient each simplex once. On its generators $P$ sends each oriented simplex
+to its oriented image, with the appropriate permutation sign.
+Then $Pd=dP$ and $P^4=I$ exactly.
+Set $D_j=0$ outside $0\le j\le3$ and put
+\[
+                         M=P^{-1},\qquad S=I+P+P^2+P^3.
+\]
+Here $P,M,S$ denote chain maps in every degree.
+
+In suspended cells the interval precedes the simplex.
+The fourth fiber coordinate is \eqref{of:eq:v4}, so the actual fiber complex is
+\begin{equation}\label{of:eq:CQ}
+ \begin{aligned}
+ C_n&=D_n\oplus D_{n-1},&d_C(x,y)&=(dx,-dy),\\
+ Q_n&=D_n\oplus D_{n-1},&d_Q(x,y)&=(dx+(P-I)y,-dy).
+ \end{aligned}
+\end{equation}
+Here $C$ is the product CW complex for $X\times S^1$, and $Q$ is the
+mapping-torus CW complex for $G_P$.
+The fiber monodromy on $C$ is $M\oplus M$.
+
+The positive boundary complex is
+\begin{equation}\label{of:eq:B}
+ \begin{split}
+ B_n&=C_n\oplus C_{n-1},\\
+ d_B(x,y,z,w)&=(dx+(M-I)z,-dy+(M-I)w,-dz,dw).
+ \end{split}
+\end{equation}
+In particular these are geometric cellular complexes, with their actual
+nonzero simplicial differential. No exterior lattice replaces $D$.
+
+\begin{theorem}\label{of:thm:chains}
+The fiber covering, positive boundary prism, and boundary retraction have
+cellular representatives
+\begin{equation}\label{of:eq:FHK}
+ \begin{aligned}
+ F_n(x,y)&=(x,Sy),\\
+ H_n(x,y)&=(0,-Mx),\\
+ K_n(x,y,z,w)&=(x,Sy-Mz).
+ \end{aligned}
+\end{equation}
+They satisfy
+\begin{equation}\label{of:eq:identities}
+ d_QF=Fd_C,\qquad d_QH+Hd_C=F(M-I),\qquad d_QK=Kd_B.
+\end{equation}
+The formula for $H$ uses the positive base prism throughout.
+\end{theorem}
+
+\begin{proof}
+In the coordinates $(y,t_4)$ the map $f$ is $[y,4t_4]$.
+The $t_4$ interval crosses four core intervals.
+After subdivision, their coefficients are $I,P,P^2,P^3$.
+This proves the formula for $F$ on product cells.
+
+The positive boundary homotopy is $[y,4t_4-v]$, with $v$ increasing
+from zero to one. A simplex at $t_4=0$ travels from core level zero
+to level minus one. In the standard core interval this is the negative
+interval on $P^{-1}$ of that simplex. Its coefficient is $-M$.
+
+For a suspended fiber cell, the two interval coordinates map to the one
+coordinate $4t_4-v$. The image has one lower cellular dimension, so its
+prism coefficient is zero. This proves the formula for $H$.
+The positive boundary mapping torus combines $F$ and this homotopy, giving
+$K(a,b)=F(a)+H(b)$.
+
+Finally $(P-I)S=S(M-I)=0$ and $Pd=dP$.
+Substitution in \eqref{of:eq:CQ} gives
+$d_QH(x,y)+Hd_C(x,y)=((M-I)x,0)=F(M-I)(x,y)$.
+Substitution in \eqref{of:eq:B} gives
+\[
+ d_QK(x,y,z,w)=(dx+(M-I)z,-Sdy+Mdz)=Kd_B(x,y,z,w).
+\]
+The identity for $F$ follows in the same way from $(P-I)S=0$.
+\end{proof}
+
+\begin{proposition}\label{of:prop:split}
+There is an integral chain splitting $B\cong Q\oplus Q[1]$.
+Here $Q[1]_n=Q_{n-1}$ with differential $-d_Q$.
+A section of $K$ and an identification of its kernel are
+\begin{equation}\label{of:eq:split}
+ \begin{aligned}
+ s_Q(x,b)&=(x,0,-Pb,0),\\
+ \ker K_n&=\{(0,y,Sy,w)\},&
+ \phi(0,y,Sy,w)&=(Py,w)\in Q[1]_n.
+ \end{aligned}
+\end{equation}
+Consequently the relative cone
+\[
+ R_n=Q_n\oplus B_{n-1},\qquad d_R(q,b)=(d_Qq+Kb,-d_Bb)
+\]
+is integrally isomorphic to $\operatorname{Cone}(I_Q)\oplus Q[2]$.
+\end{proposition}
+
+\begin{proof}
+One checks $Ks_Q=I$ and $d_Bs_Q=s_Qd_Q$ directly.
+If $K(x,y,z,w)=0$, then $x=0$ and $z=PSy=Sy$.
+The kernel differential in $(y,w)$ is
+$(-dy+(M-I)w,dw)$.
+Multiplying its first coordinate by $P$ gives
+$(-d(Py)-(P-I)w,dw)$, precisely $-d_Q(Py,w)$.
+All changes of coordinates have integral inverses.
+
+The cone of the split projection is the displayed direct sum.
+On $\operatorname{Cone}(I_Q)$, the homotopy $(u,v)\mapsto(0,u)$
+contracts the identity cone. This also gives an explicit chain contraction
+of the complementary relative summand.
+\end{proof}
+
+For completeness, the projection to $Q[2]$ and its inclusion are
+\begin{equation}\label{of:eq:relative-maps}
+ \begin{split}
+ \Pi(q,(x,y,z,w))&=(Py,w),\\
+ J(a,b)&=(0,(0,P^{-1}a,Sa,b)).
+ \end{split}
+\end{equation}
+They commute with the stated differentials and satisfy $\Pi J=I$.
+These algebraic coordinates do not fix the sign of a geometric Thom class
+without a comparison of orientations.
+
+\subsection{Relative singular chains and the positive Thom class}
+
+Here we give that geometric construction directly.
+Use normalized singular cubical chains with integer coefficients.
+A generator is a continuous map $[0,1]^n\to Z$, modulo cubes independent
+of a coordinate. The boundary is
+$\sum_{j=1}^n(-1)^{j-1}(\partial_j^1-\partial_j^0)$.
+
+Write $\mathscr Q=C_*^\square(G_P)$ and
+$\mathscr B=C_*^\square(B_T)$.
+Let $i=j:B_T\to N$ be the boundary inclusion, let $r:N\to G_P$ be
+retraction, and let $c:G_P\to N$ be the zero section.
+The actual boundary chain map is $\mathscr K=(ri)_*$.
+These maps specify the relative singular complex of the same filling.
+
+Let $\eta$ be the positive normal-circle cube
+$u\mapsto e^{2\pi iu}$.
+Through \eqref{of:eq:Phi}, identify the boundary with $S^1_z\times G_P$,
+putting the normal circle first for this chain notation.
+Define
+\begin{equation}\label{of:eq:L}
+ L(q)=(\Phi i)^{-1}_*(\eta\times q).
+\end{equation}
+The inverse includes the interchange of the two product factors.
+Then $dL=-Ld$, and $\mathscr K L=0$ exactly: projection makes the first
+cubical coordinate degenerate.
+
+Define the radial homotopy on a boundary cube $b$ by
+\[
+ \mathcal R(b)(u,\mathbf t)
+   =\Phi^{-1}(r i b(\mathbf t),u\,z(i b(\mathbf t))).
+\]
+The radial interval is first. Its boundary identity is
+\begin{equation}\label{of:eq:radial}
+                 d\mathcal R+\mathcal R d=i_*-c_*\mathscr K.
+\end{equation}
+
+Therefore
+\begin{equation}\label{of:eq:cone-comparison}
+ (q,b)\longmapsto(c_*q-\mathcal R b,b)
+ \colon\operatorname{Cone}(\mathscr K)\longrightarrow
+                         \operatorname{Cone}(i_*)
+\end{equation}
+is a chain map. Its projection to $C_*^\square(N,B_T)$ is a
+quasi-isomorphism. Indeed retraction and the zero section are inverse
+homotopy equivalences, while $\operatorname{Cone}(i_*)$ maps to the
+relative quotient by $(a,b)\mapsto[a]$. The latter has an acyclic kernel,
+the identity cone on $C_*^\square(B_T)$.
+
+\begin{proposition}\label{of:prop:Thom}
+The positive Thom map is represented in the boundary cone by
+\begin{equation}\label{of:eq:Thom}
+ \Theta(q)=(0,-Lq)\in\operatorname{Cone}(\mathscr K),
+ \qquad \deg\Theta=2.
+\end{equation}
+Its image under \eqref{of:eq:cone-comparison} and relative projection is
+$[D_z]\times q=q\times[D_z]$, with the positive complex disk orientation.
+It induces $H_{n-2}(G_P;\mathbb Z)\cong H_n(N,B_T;\mathbb Z)$.
+\end{proposition}
+
+\begin{proof}
+Since $dL=-Ld$ and $\mathscr K L=0$,
+$d(0,-Lq)=(0,dLq)=(0,-Ldq)$.
+Thus \eqref{of:eq:Thom} is a degree-two chain map.
+Its relative image is $\mathcal R Lq$.
+The first two coordinates are
+$(u,v)\mapsto u e^{2\pi iv}$, the positive disk cube.
+Its only nondegenerate boundary is the positive normal circle.
+The remaining coordinates are exactly those of $q$.
+
+Interchanging a two-dimensional disk and a $k$-cube has sign $(-1)^{2k}=1$.
+This proves the orientation statement in every degree.
+
+The relative cubical cross product with the generator of
+$H_2(D,S^1;\mathbb Z)$ is an isomorphism by the relative product
+chain equivalence. Since this group is free and concentrated in degree two,
+there are no additional tensor or torsion summands.
+\end{proof}
+
+The plus sign on a normal-circle insertion into the same cone would give
+the negative Thom class. In particular the sign in
+\eqref{of:eq:Thom} follows from the cone convention, not from a reversal
+of the positive base meridian.
+Cellular characteristic maps and cubical subdivision compare the cellular
+and singular complexes of $N$ and $B_T$.
+The constructions above give both the finite cellular relative cone and
+the actual geometric Thom map. No zero-differential model is needed.
+
+\subsection{Integral consequences in the original periods}
+
+The action of $P$ on $H_*(X;\mathbb Z)$ is its exterior action.
+This assertion is used here only for homology, after the geometric chain
+maps have been constructed. In lexicographic exterior bases its matrices
+in degrees one and two, and the corresponding norm maps, are
+\begin{equation}\label{of:eq:exterior}
+ \begin{aligned}
+ P_1&=\begin{pmatrix}0&-1&-1\\1&0&0\\0&0&1\end{pmatrix},&
+ S_1&=\begin{pmatrix}0&0&-2\\0&0&-2\\0&0&4\end{pmatrix},\\
+ P_2&=\begin{pmatrix}1&1&0\\0&0&-1\\0&1&0\end{pmatrix},&
+ S_2&=\begin{pmatrix}4&2&-2\\0&0&0\\0&0&0\end{pmatrix}.
+ \end{aligned}
+\end{equation}
+In degrees zero and three, $P=1$ and $S=4$.
+
+Both $P_1-I$ and $P_2-I$ have Smith factors $1,1$.
+Their cokernels and kernels are therefore free of rank one.
+The kernel generators are $\delta$ and $f_1\wedge f_2$, respectively.
+The cokernel generators may be taken as $[f_3]$ and
+$[f_1\wedge f_3]$.
+In the second cokernel,
+$[f_1\wedge f_2]=2[f_1\wedge f_3]$ and
+$[f_2\wedge f_3]=-[f_1\wedge f_3]$.
+
+\begin{proposition}\label{of:prop:homology}
+The groups $H_n(N;\mathbb Z)$ are free of ranks $1,2,2,2,1$ in degrees
+zero through four, and vanish otherwise.
+The boundary groups are free of ranks $1,3,4,4,3,1$.
+The map $k_*$ is a split surjection in every degree.
+The covering $f_*$ has cokernels
+\begin{equation}\label{of:eq:indices}
+ 0,\quad\mathbb Z/4,\quad\mathbb Z/2,\quad\mathbb Z/2,
+ \quad\mathbb Z/4
+\end{equation}
+in degrees zero through four.
+Its kernel ranks in those degrees are $0,2,4,2,0$.
+The cohomological specialization indices in the full invariant lattices
+are $1,4,2,2,4$ in degrees zero through four.
+\end{proposition}
+
+\begin{proof}
+The mapping-torus exact sequence gives
+\[
+ 0\to\operatorname{coker}(P_n-I)\to H_n(G_P;\mathbb Z)
+   \to\ker(P_{n-1}-I)\to0.
+\]
+The groups at both ends are free by \eqref{of:eq:exterior}, including
+degrees zero and three. Hence these extensions split as abelian groups,
+and the asserted ranks follow. The boundary statement and split
+surjectivity follow from Proposition~\ref{of:prop:split}.
+
+The covering respects this exact sequence. On the first summand it induces
+the quotient from $H_n(X)$ onto $\operatorname{coker}(P_n-I)$, which is
+surjective. On the quotient term it induces the norm
+$S:H_{n-1}(X)\to\ker(P_{n-1}-I)$.
+Consequently its cokernel equals the cokernel of that norm, independently
+of any choice of splitting.
+
+The images of the four norm maps are
+$4\mathbb Z$, $2\mathbb Z\delta$, $2\mathbb Z(f_1\wedge f_2)$,
+and $4\mathbb Z$.
+This proves \eqref{of:eq:indices}. Rank subtraction proves the kernel ranks.
+
+The groups are free. The kernel of $f_*$ is saturated because its target
+is free, and it equals the saturation of $(T-I)H_n(F)$ over $\mathbb Q$.
+Thus its integral annihilator is exactly $H^n(F;\mathbb Z)^T$.
+Dualizing a Smith normal form of $f_*$ gives the stated specialization
+indices in that annihilator.
+\end{proof}
+
+In degree four the covering has geometric degree $+4$.
+If $\omega$ is the oriented three-torus class, the interval-first core
+class $\sigma_\tau\omega$ is the negative of its fiber-first orientation.
+Consequently
+\[
+                  f_*(f_1\wedge f_2\wedge f_3\wedge f_4)
+                        =-4\sigma_\tau\omega.
+\]
+
+The induced maps have a particularly simple deciding expression in degree one.
+Let $c=[f_3]$ in the core and retain the positive core class $h$.
+Then
+\begin{equation}\label{of:eq:H1}
+ f_*(f_1)=f_*(f_2)=0,\quad f_*(f_3)=c,\quad
+ f_*(f_4)=-2c+4h,\quad k_*(\gamma)=-h.
+\end{equation}
+Indeed $f_4=v_4-\delta$ and $[\delta]=2c$.
+Since $c$ has infinite order, the local relation
+$\gamma^4=f_\#(-f_4)$ would contradict \eqref{of:eq:H1}.
+The correct relation is \eqref{of:eq:pi}.
+
+For comparison with the common period marking, let the columns of
+\[
+ C=\begin{pmatrix}1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1\end{pmatrix}
+\]
+express $(f_1,f_2,f_3,f_4)$ in $(e_1,e_2,e_3,e_4)$.
+Then $C\delta=\delta_0=-2e_1-e_2+3e_3$ and
+\begin{equation}\label{of:eq:common-vector}
+ C(-f_4-\delta)=e_1+e_2-3e_3-e_4.
+\end{equation}
+This is an integral change of the actual period coordinates.
+The invariant covector $\psi=e_4^*$ evaluates to $-1$ on this vector,
+the same value as on $-f_4$. Equality of that scalar does not identify
+the two marked local relations.
+
+The order-four construction uses its stated smooth reduction, commuting
+lift, and period marking. It constructs their marked filling and all its
+boundary and relative chain maps. Section~\ref{sec:common-chain}
+constructs the comparison maps and homotopies for both finite
+monodromies. The cusp neighborhood is supplied separately in
+Section~\ref{sec:toric-cusp}. Its boundary map, together with these
+finite maps, determines the global integral gluing calculation.

@@ -1,0 +1,1309 @@
+\section{Canonical forms and coherent direct images}\label{sec:canonical-coherent}
+
+The duality calculation above retains the holomorphic canonical line.
+We now determine that line from the quotient charts. The same charts
+also determine the relative logarithmic forms and their coherent
+direct images. These calculations will give both the restriction map
+on the Picard group and the ordinary Hodge groups.
+
+Throughout this section, fix the sufficiently small nonzero parameter
+$u$, integral lifts, logarithmic increments and adapted cusp fan of
+Theorem~\ref{cmp:thm:comparison}. Write
+\[
+ f:Y=Y^{\mathrm{ad}}(u)\longrightarrow B=\mathbb P^1.
+\]
+Let $F_3,F_4$ be the reduced smooth fibers over $0,1$, and let
+$W=Z_\infty$ be the full reduced toric fiber. In particular,
+\begin{equation}\label{nf:eq:fiber-divisors}
+ f^*(0)=3F_3,\qquad f^*(1)=4F_4,\qquad f^*(\infty)=W.
+\end{equation}
+The divisor $W$ has normal crossings locally, including the distinct
+branches at its self-intersections. All coherent sheaves below are
+analytic sheaves over $\mathbb C$.
+
+\subsection{The canonical divisor}
+
+The invariant elliptic differential and the logarithmic differential
+along the divisor line give a top form before taking the quotient.
+Their wedge removes the ambiguity in choosing a line frame.
+
+\begin{theorem}\label{nf:thm:canonical}
+The canonical line of the selected threefold is
+\begin{equation}\label{nf:eq:canonical}
+ K_Y\simeq\mathcal O_Y(2F_4-W)
+     \simeq f^*\mathcal O_B(-1)\otimes\mathcal O_Y(2F_4)
+     \simeq\mathcal O_Y(-2F_4).
+\end{equation}
+For every integer $r>0$, one has $H^0(Y,K_Y^{\otimes r})=0$.
+\end{theorem}
+
+\begin{proof}
+Over $B^\circ=B\setminus\{0,1,\infty\}$, let
+$\alpha_t=dx/(2y)$ be the invariant relative differential on the
+elliptic surface. In a local frame of $M=\mathcal O(P-O)$, write a
+nonzero line vector as $v$. Set
+\begin{equation}\label{nf:eq:regular-volume}
+ \Omega=dt\wedge\alpha_t\wedge\frac{dv}{v}.
+\end{equation}
+An absolute lift of $\alpha_t$ is understood in this expression.
+Changing it adds a multiple of $dt$ and leaves $\Omega$ unchanged.
+If $v_j=g_{ij}(x,t)v_i$, the change in $dv/v$ is $d\log g_{ij}$.
+This form comes from the elliptic surface, so it wedges to zero
+with its top form $dt\wedge\alpha_t$. Thus $\Omega$ is a global
+nowhere-zero form on $M^\times$ over $B^\circ$.
+
+The actual contraction generator is a fiber-linear lift of
+translation by $-6P$. Locally it has the form
+\[
+ (x,v)\longmapsto(t_{-6P}x,G(x,t)v).
+\]
+Translation preserves $\alpha_t$ modulo base differentials.
+The added $d\log G$ again comes from the elliptic surface.
+Consequently the generator, including its fixed scalar $u$,
+preserves \eqref{nf:eq:regular-volume}. The form descends to the
+regular family of two-tori.
+
+On each smooth root family, put
+\[
+ \alpha_i=\frac{dX}{2Y},\qquad
+ \sigma_i=ds\wedge\alpha_i\wedge\frac{dv}{v}
+ \quad(i=0,1).
+\]
+The same frame and translation argument makes $\sigma_i$ a
+nowhere-zero holomorphic form on the proper smooth torus family.
+The transported meromorphic line identification over the punctured
+root disk can multiply $v$ by a function of the surface coordinates
+and a power of $s$. Its logarithmic derivative does not change this
+top wedge.
+
+The two actual substitutions give
+\begin{align}
+ t=s^3,\quad x=s^4X,\quad y=s^6Y
+ &\quad\Longrightarrow\quad
+ \Omega=3\sigma_0, \label{nf:eq:volume-three}\\
+ t=1+s^4,\quad x=s^2X,\quad y=s^3Y
+ &\quad\Longrightarrow\quad
+ \Omega=4s^2\sigma_1. \label{nf:eq:volume-four}
+\end{align}
+The reduced equations are respectively
+\[
+ Y^2=X^3-3s(s^3-1)X+2(s^3-1)^2
+\]
+and
+\[
+ Y^2=X^3-3(1+s^4)^3X+2s^2(1+s^4)^4.
+\]
+Their central elliptic fibers are smooth. The vanishing orders in
+\eqref{nf:eq:volume-three}--\eqref{nf:eq:volume-four} are therefore
+exactly $0$ and $2$.
+
+The punctured gluing maps are translations by the specified
+logarithmic torus sections. A translation preserves the invariant
+relative two-form; its base derivative disappears after wedging
+with $ds$. Hence these gluing maps preserve both displayed absolute
+forms. The finite affine actions are free on the total spaces, so
+their quotient maps are \'{e}tale there. The orders $0$ and $2$
+descend unchanged to $F_3$ and $F_4$. The ramification of the base
+maps does not divide these divisor orders.
+
+The forward coordinate decks also fix the signs directly. At order
+three, $(s,X,Y)\mapsto(\zeta s,\zeta^2X,Y)$ gives
+$\sigma_0\mapsto\zeta^3\sigma_0=\sigma_0$. At order four,
+$(s,X,Y)\mapsto(is,-X,iY)$ gives
+\begin{equation}\label{nf:eq:volume-character}
+ g^*\sigma_1=-\sigma_1,\qquad
+ g^*(s^2\sigma_1)=s^2\sigma_1.
+\end{equation}
+The fiber-linear multiplier adds only terms already killed by the
+top wedge, and the affine translations preserve relative volume.
+In particular omitting $s^2$ would leave
+$g^*\sigma_1-\sigma_1=-2\sigma_1$.
+
+At infinity use $q=1/t$, $x_\infty=q^2x$ and $y_\infty=q^3y$.
+Modulo $dq$,
+\[
+ \alpha_t=q\alpha_\infty,\qquad
+ \alpha_\infty=\frac{dx_\infty}{2y_\infty},\qquad
+ dt=-q^{-2}dq.
+\]
+In the actual Tate coordinate $z$ and divisor-line coordinate $w$,
+this gives
+\begin{equation}\label{nf:eq:cusp-volume}
+ \Omega=-q^{-1}dq\wedge\alpha_\infty\wedge d\log w,\qquad
+ \alpha_\infty=a(q)d\log z,
+\end{equation}
+where $a$ is a holomorphic unit. To see the unit assertion, use the
+whole-disk Tate comparison in the construction. Tate's functions
+satisfy $z\,dx(z)/dz=x(z)+2y(z)$, so their invariant differential is
+$dx/(2y+x)=d\log z$ \cite{TateElliptic}. Completing the square and
+shifting $x$ preserve that differential. The short Weierstrass
+coefficients at the central fiber are $(-1/48,1/864)$; those of the
+present equation are $(-3,2)$. Their holomorphic scaling is a unit,
+with square $12$ at zero. Thus
+$a(0)=\pm1/(2\sqrt3)$, in particular $a(0)\ne0$.
+
+The central cubic gives the same calibration without a choice of
+period logarithms. It is
+$y_\infty^2=(x_\infty-1)^2(x_\infty+2)$. With
+$\eta=y_\infty/(x_\infty-1)$,
+\begin{equation}\label{nf:eq:nodal-differential}
+ x_\infty=\eta^2-2,\quad
+ y_\infty=\eta(\eta^2-3),\quad
+ \alpha_\infty=\frac{d\eta}{\eta^2-3}
+ =\frac1{2\sqrt3}\,
+ d\log\frac{\eta-\sqrt3}{\eta+\sqrt3}.
+\end{equation}
+Its nodal residues are nonzero.
+
+On a maximal chart of the height-one unimodular cusp fan,
+$q=x_0x_1x_2$. The character-coordinate change has determinant
+$\pm1$, and therefore
+\begin{equation}\label{nf:eq:toric-volume}
+ dq\wedge d\log z\wedge d\log w
+       =\pm dx_0\wedge dx_1\wedge dx_2.
+\end{equation}
+Period multipliers and the unit translation of the retained origin
+add only base differentials. The adapted shear
+$(z,w)\mapsto(z/w^2,w)$ has determinant one on logarithmic
+differentials. Thus \eqref{nf:eq:toric-volume} applies to the chosen
+adapted quotient, with all its units retained. Its free period
+action is locally biholomorphic. Equation~\eqref{nf:eq:cusp-volume}
+has a simple pole on every local branch of $W$.
+
+All local expressions came from the same form on the regular
+family and agree on the actual annular overlaps. They give a
+meromorphic section of $K_Y$ with divisor $2F_4-W$.
+Since $W\sim4F_4$ by \eqref{nf:eq:fiber-divisors}, this proves
+\eqref{nf:eq:canonical}. Finally,
+$\mathcal O_Y(-2rF_4)$ is an ideal subsheaf of $\mathcal O_Y$.
+Every holomorphic function on compact connected $Y$ is constant,
+and a constant vanishing along the nonempty divisor $F_4$ is zero.
+This proves the pluricanonical vanishing.
+\end{proof}
+
+\subsection{Relative logarithmic forms and the scalar action}
+
+Put
+\[
+ \Sigma_B=0+1+\infty,\qquad D=F_3+F_4+W,\qquad
+ \mathscr L_B=\Omega_B^1(\log\Sigma_B)\simeq\mathcal O_B(1),
+\]
+and define
+\begin{equation}\label{nf:eq:relative-forms}
+ \mathscr E=
+ \Omega_Y^1(\log D)/f^*\mathscr L_B,\qquad
+ \mathcal H=f_*\mathscr E.
+\end{equation}
+At a self-intersection of $W$, logarithmic forms use the separate
+local normal-crossing branches. No equality of their residues is
+part of this definition. On a finite root cover, the base form is
+$m\,ds/s$ and its quotient removes the logarithmic normal
+direction. At a cusp chart it is
+$d\log q=d\log x_0+d\log x_1+d\log x_2$.
+These local descriptions give an exact sequence of vector bundles
+\begin{equation}\label{nf:eq:absolute-log-sequence}
+ 0\longrightarrow f^*\mathscr L_B
+ \longrightarrow\Omega_Y^1(\log D)
+ \longrightarrow\mathscr E\longrightarrow0,
+\end{equation}
+with $\mathscr E$ of rank two.
+
+Scalar multiplication on the original line $M$ commutes with its
+fiber-linear lift. Let $V$ be the resulting infinitesimal vector,
+normalized by $V(v)=v$. It descends through the regular quotient,
+the finite affine actions and the logarithmic translations.
+In the original cusp coordinates $V=w\partial_w$. In the adapted
+coordinates $\zeta_1=z/w^2$, $\zeta_2=w$, it is
+\begin{equation}\label{nf:eq:scalar-vector}
+ V=-2\zeta_1\partial_{\zeta_1}+\zeta_2\partial_{\zeta_2}.
+\end{equation}
+This is nonzero in the relative logarithmic tangent bundle,
+including at toric fixed points. Its ordinary tangent value at
+such a point need not be nonzero. Contraction gives a surjection
+of bundles on $Y$; denote its kernel by $\mathcal K_{\mathrm{rel}}$:
+\begin{equation}\label{nf:eq:scalar-sequence}
+ 0\longrightarrow\mathcal K_{\mathrm{rel}}
+ \longrightarrow\mathscr E\xrightarrow{\ \iota_V\ }
+ \mathcal O_Y\longrightarrow0.
+\end{equation}
+
+\begin{theorem}\label{nf:thm:relative-line}
+The direct image $\mathcal H$ is locally free of rank two.
+Contraction induces an exact sequence
+\begin{equation}\label{nf:eq:H-sequence}
+ 0\longrightarrow\mathcal L
+ \longrightarrow\mathcal H\xrightarrow{\ q_V\ }\mathcal O_B
+ \longrightarrow0,\qquad
+ \mathcal L=\mathcal O_B(\infty-0-1)\simeq\mathcal O_B(-1).
+\end{equation}
+Its splitting as a right inverse to $q_V$ is unique.
+Equivalently, there is a unique global relative logarithmic form
+$\theta$ satisfying $\theta(V)=1$.
+\end{theorem}
+
+\begin{proof}
+The proper map has connected fibers and normal total space and
+base. Stein factorization gives $f_*\mathcal O_Y=\mathcal O_B$:
+its finite factor is birational to the normal curve $B$.
+Pushforward of contraction therefore has the stated target.
+
+On a small smooth torus-family disk, invariant relative
+differentials form the dual of the relative Lie algebra.
+The scalar vector is nonzero and has a holomorphic dual form
+with value one. On either good-reduction root disk, average such
+a form over the actual forward cyclic action, including its
+action on the base. The average remains holomorphic and has value
+one on $V$. Its kernel consists of the horizontal elliptic forms.
+Exact finite pushforward and averaging descend this description
+to the finite quotient.
+
+At the cusp the relative classes of $d\log z,d\log w$ are a
+frame on every height-one unimodular chart. Period changes add
+multiples of $d\log q$, so these classes descend. Their
+contractions are $0,1$. In the adapted coordinates they are
+$d\log\zeta_1+2d\log\zeta_2$ and $d\log\zeta_2$.
+Using $f_*\mathcal O_Y=\mathcal O_B$ now gives a frame of
+$\mathcal H$ over the cusp disk. Thus $\mathcal H$ is locally
+free, $q_V$ is onto, and its kernel is a line
+$\mathcal L=f_*\mathcal K_{\mathrm{rel}}$.
+
+The invariant elliptic differential
+$\omega=dx/(2y)$ defines a meromorphic section of $\mathcal L$.
+Elliptic translations and the selected logarithmic gluing preserve
+it as a relative differential. Its divisor in this base line can
+be calculated on the root disks. The forward deck characters and
+invariant holomorphic generators are
+\begin{equation}\label{nf:eq:horizontal-frames}
+ \begin{array}{c|c|c|c}
+ \text{base point}&\text{root coordinate}&g^*\alpha_i&
+       \text{generator of }\mathcal L\\ \hline
+ 0&t=s^3&\zeta^2\alpha_0&s\alpha_0\\
+ 1&t-1=s^4&i\alpha_1&s^3\alpha_1 .
+ \end{array}
+\end{equation}
+Consequently
+\[
+ \omega=t^{-1}(s\alpha_0),\qquad
+ \omega=(t-1)^{-1}(s^3\alpha_1).
+\]
+Each pole has order one on the base. These are generators of a
+direct-image line on the base; their pullbacks need not be
+nonvanishing along the central root fiber.
+The forward deck is essential here:
+$g^*(s\alpha_1)-s\alpha_1=-2s\alpha_1$, whereas
+$g^*(s^3\alpha_1)=s^3\alpha_1$.
+
+At infinity, \eqref{nf:eq:cusp-volume} gives
+$\omega=q\,a(q)d\log z$, with $a(0)\ne0$.
+The horizontal logarithmic class $d\log z$ is a nonvanishing
+frame there. Thus
+\[
+ \operatorname{div}_{\mathcal L}(\omega)=\infty-0-1.
+\]
+This identifies the actual line and its meromorphic frame in
+\eqref{nf:eq:H-sequence}. The extension splits because
+$H^1(B,\mathcal O_B(-1))=0$. Two right inverses differ by a
+section of $\mathcal O_B(-1)$, whose $H^0$ is zero.
+This proves uniqueness.
+\end{proof}
+
+The form $\theta$ is a section of the relative logarithmic
+quotient. The theorem does not assert that it is an absolute
+holomorphic one-form. It does split \eqref{nf:eq:scalar-sequence}
+on $Y$, by sending $1$ to $\theta$.
+
+\subsection{The coherent algebra of the cusp}
+
+The central toric fiber is nonnormal. Its coherent cohomology is
+therefore computed by its normalization and the identifications of
+the boundary curves, rather than by the normalization alone.
+
+Let $\nu:S\to W$ be the normalization. Here $S$ is the blowup of
+$\mathbb P^2$ at its three torus fixed points. Label its boundary
+hexagon $B_1,\ldots,B_6$ cyclically, with $B_i$ paired with
+$B_{i+3}$. Let $C_1,C_2,C_3$ be their reduced image double curves
+and $p_+,p_-$ the two triple points.
+
+\begin{lemma}\label{nf:lem:cusp-coherent}
+One has
+\[
+ h^q(W,\mathcal O_W)=(1,2,1)\quad(q=0,1,2).
+\]
+The natural comparison $H^1(W;\mathbb C)\to H^1(W,\mathcal O_W)$
+is an isomorphism. In degree two it restricts to an isomorphism
+\[
+ \ker\!\left(H^2(W;\mathbb C)\xrightarrow{\nu^*}
+                  H^2(S;\mathbb C)\right)
+       \xrightarrow{\ \sim\ }H^2(W,\mathcal O_W).
+\]
+The cup product
+$\bigwedge^2H^1(W,\mathcal O_W)\to H^2(W,\mathcal O_W)$
+is an isomorphism.
+\end{lemma}
+
+\begin{proof}
+Orient each pair by $+B_i,-B_{i+3}$. The branch orders at $p_+,p_-$
+give the alternating restriction $g_1-g_2+g_3$ at both points.
+The normalization sequence is
+\begin{equation}\label{nf:eq:normalization-complex}
+ 0\longrightarrow\mathcal O_W
+ \longrightarrow\nu_*\mathcal O_S
+ \longrightarrow\bigoplus_{i=1}^3\mathcal O_{C_i}
+ \longrightarrow\mathbb C_{p_+}\oplus\mathbb C_{p_-}
+ \longrightarrow0.
+\end{equation}
+The middle arrow takes the differences of restrictions through
+the actual holomorphic gluing maps. The unit factors can change
+those maps without changing their branch incidence.
+This is the normalization sequence also used in
+\cite[Lemma~9.12]{TorusConstruction}.
+
+Exactness is local. At a double point it is the fiber-product
+sequence for $\mathbb C\{x,y,z\}/(xy)$. At a triple point it is
+the alternating branch complex for
+$\mathbb C\{x,y,z\}/(xyz)$. To verify the latter, suppose branch
+functions $f_1(y,z),f_2(x,z),f_3(x,y)$ have common restrictions
+$g_{12}(z),g_{13}(y),g_{23}(x)$ and common value $c$ at the origin.
+They glue to the restriction of
+\[
+ f_1+f_2+f_3-g_{12}-g_{13}-g_{23}+c.
+\]
+For exactness at the double-curve term, suppose instead that
+$g_{12}(0)-g_{13}(0)+g_{23}(0)=0$. Set
+\[
+ f_3=0,\quad
+ f_1(y,z)=g_{13}(y)+g_{12}(z)-g_{12}(0),\quad
+ f_2(x,z)=g_{23}(x).
+\]
+Their alternating differences are the prescribed $g_{ij}$.
+The last map is onto. The same local simplicial complexes are
+exact for constant sheaves, and inclusion of constants gives a
+termwise comparison with \eqref{nf:eq:normalization-complex}.
+
+The rational surface $S$ and the curves $C_i\simeq\mathbb P^1$
+have no positive coherent cohomology. Hence the coherent complex
+of global sections is
+\begin{equation}\label{nf:eq:cusp-constants}
+ \mathbb C\xrightarrow{\ 0\ }\mathbb C^3
+ \xrightarrow{\ (a,b,c)\mapsto(a-b+c)(1,1)\ }\mathbb C^2.
+\end{equation}
+Its cohomology has dimensions $(1,2,1)$.
+For constant coefficients, the degree-zero row of the
+normalization spectral sequence is the same complex and the
+degree-one row is zero. Thus the degree-one comparison is an
+isomorphism. In total degree two, the kernel of restriction to
+$S$ is its one-dimensional $(2,0)$ term. No differential enters
+it from degree-one cohomology of the strata, and there is no
+normalization term beyond degree two. This term maps
+isomorphically to $H^2(W,\mathcal O_W)$.
+
+It remains to identify a nonzero product in this term. With unit
+periods, the angular-quotient description
+\eqref{c26:eq:Z} projects to the polygon torus $H/\Gamma$.
+Angular coordinate zero gives a section of that projection.
+The product of the two polygon-period covectors is therefore
+nonzero in $H^2(W;\mathbb C)$. Its restriction to $S$ is zero:
+the map from the simply connected surface $S$ to the polygon
+torus lifts to its contractible universal cover.
+The smooth transport \eqref{c26:eq:transport} preserves the
+strata and lifts to the normalization, so it carries this
+topological product statement to the actual cusp units.
+The coherent comparison is still the one defined by the actual
+holomorphic sequence \eqref{nf:eq:normalization-complex}.
+Inclusion of constants respects cup products, so the nonzero
+product survives in $H^2(W,\mathcal O_W)$. Both its source and
+target are one-dimensional.
+\end{proof}
+
+\subsection{The structure-sheaf direct images}
+
+Write
+\[
+ \mathcal C_q=R^qf_*\mathcal O_Y,\qquad \mathcal G=\mathcal C_1.
+\]
+The primitive invariant cohomology covector in (1.9) is
+$\psi=e_4^\vee$. We will denote its coherent image by $\eta$;
+the two symbols distinguish the integral class from its
+$(0,1)$ component.
+
+\begin{theorem}\label{nf:thm:coherent}
+The sheaves $\mathcal C_q$ vanish for $q>2$, and
+\begin{equation}\label{nf:eq:coherent-bundles}
+ \mathcal C_0=\mathcal O_B,\qquad
+ \mathcal C_1\simeq\mathcal O_B\oplus\mathcal O_B(-1),\qquad
+ \mathcal C_2\simeq\mathcal O_B(-1).
+\end{equation}
+The section $\eta=\psi^{0,1}$ defines a subbundle and the cup
+product defines an isomorphism
+\begin{equation}\label{nf:eq:G-sequence}
+ 0\longrightarrow\mathcal O_B\eta\longrightarrow\mathcal G
+ \longrightarrow\mathcal Q\longrightarrow0,\qquad
+ \mathcal Q\simeq\mathcal O_B(-1),\qquad
+ \bigwedge^2\mathcal G\xrightarrow{\ \sim\ }\mathcal C_2.
+\end{equation}
+The first sequence splits, without a distinguished choice of
+complement. In particular,
+\[
+ h^q(Y,\mathcal O_Y)=(1,1,0,0),\qquad
+ h^q(Y,K_Y)=(0,0,1,1).
+\]
+\end{theorem}
+
+\begin{proof}
+First we establish local freeness on the full base. The map $f$
+is flat: a nonzero germ on the smooth base acts injectively on
+the regular local domain of $Y$, and torsion-free modules over
+the base discrete valuation ring are flat.
+Near infinity the scheme fiber is the reduced divisor $W$.
+Its coherent dimensions from Lemma~\ref{nf:lem:cusp-coherent}
+are those of the nearby two-tori. Grauert's proper analytic
+cohomology and base-change theorem
+\cite[\S7]{GrauertDirect}, with its correction
+\cite{GrauertCorrection}, therefore gives
+locally free direct images of ranks $(1,2,1)$, with their
+fiber-cohomology comparison, across infinity.
+
+At either finite point use the proper smooth root family
+$g:J'\to\Delta_s$, the free affine cyclic action of order $m$,
+and the base map $\pi(s)=s^m$. Exact finite pushforward and
+averaging give
+\begin{equation}\label{nf:eq:finite-coherent-descent}
+ R^q(f|_N)_*\mathcal O_N
+       \simeq\left(\pi_*R^qg_*\mathcal O_{J'}\right)^{\mu_m}.
+\end{equation}
+The bundles on the root disk are free of ranks $(1,2,1)$.
+A finite semilinear action admits holomorphic eigenframes:
+diagonalize its central fiber, lift that basis, and apply the
+character projectors obtained by averaging. Their determinant
+remains a unit after shrinking the disk. If a forward eigenframe
+$e$ has weight $b$, meaning $g^*e=\zeta^b e$, its invariant
+module is generated over $\mathcal O_{\Delta_t}$ by $s^re$,
+where $0\le r<m$ and $r+b\equiv0\pmod m$.
+Equation~\eqref{nf:eq:finite-coherent-descent} thus proves local
+freeness at the multiple fibers. It computes the full quotient;
+it does not replace the scheme fiber $mF_m$ by its reduction.
+These local descriptions also prove the vanishing for $q>2$.
+
+On $B^\circ$ the real integral flat class $\psi$ has a
+holomorphic image
+$\eta=\psi^{0,1}$ under
+$R^1f_*\mathbb C\otimes\mathcal O_B\to\mathcal G$.
+This image is nonzero on every smooth torus. Indeed, if a
+nonzero real class had zero $(0,1)$ component, it would belong
+both to $H^{1,0}$ and, by conjugation, to $H^{0,1}$.
+Their intersection is zero.
+
+On a finite root disk the local system is constant and $\psi$
+extends as a nonzero real class to the central torus. Its
+coherent image is nonzero there and invariant under the forward
+deck. It supplies an invariant eigenframe of weight zero, so
+its descent has no vanishing factor.
+At the cusp, the neighborhood retracts onto $W$ and the
+specialization kills the angular circles while preserving
+the polygon periods. In the full adapted marking of
+Section~\ref{hol:sec:adapted-fan}, these periods are $e_3,e_4$;
+$\psi$ takes the values $0,1$ on them. Thus it extends to a
+class on the cusp neighborhood whose restriction to $W$ is
+nonzero. Inclusion $\mathbb C\to\mathcal O$ and the Leray
+edge map give a holomorphic section across the disk.
+By base change its central value is the nonzero image in
+Lemma~\ref{nf:lem:cusp-coherent}. Functoriality identifies it
+on the punctured disk with $\psi^{0,1}$. These extensions
+give the subbundle $\mathcal O_B\eta\subset\mathcal G$.
+
+We next determine $\mathcal C_2$. Equation~\eqref{nf:eq:canonical}
+gives
+\[
+ \omega_{Y/B}=K_Y\otimes f^*K_B^{-1}
+       \simeq\mathcal O_Y(2F_4)\otimes f^*\mathcal O_B(1).
+\]
+One has $f_*\mathcal O_Y(2F_4)=\mathcal O_B$.
+For a local section, regard it as a meromorphic function
+with poles bounded by $2F_4$. It is constant on each nearby
+compact regular fiber. With $z=t-1$, multiplication by $z$
+makes it holomorphic upstairs, so it descends to a holomorphic
+function $b(z)$ because $f_*\mathcal O_Y=\mathcal O_B$.
+The original function is $b(z)/z$ off the central fiber.
+If $b(0)\ne0$, its pullback would have a pole of order four,
+contrary to the bound two. Thus $b/z$ is holomorphic.
+The projection formula now gives
+$f_*\omega_{Y/B}=\mathcal O_B(1)$.
+
+Proper analytic duality \cite{RamisRugetVerdier} reads here
+\begin{equation}\label{nf:eq:proper-duality}
+ Rf_*\omega_{Y/B}[2]
+ \simeq R\mathcal Hom_B(Rf_*\mathcal O_Y,\mathcal O_B).
+\end{equation}
+The total space and base are smooth, and the cohomology
+sheaves on the right are locally free by the preceding
+argument. Its degree $-2$ sheaf is $\mathcal C_2^\vee$.
+Hence $\mathcal C_2=\mathcal O_B(-1)$. This argument applies
+also at the multiple and nonnormal fibers.
+
+Cup product is an isomorphism
+$\bigwedge^2\mathcal G\to\mathcal C_2$ on the smooth locus
+and at the cusp by Lemma~\ref{nf:lem:cusp-coherent}.
+At a finite point let $f_0=\eta$ and $f_1$ be root eigenframes.
+The nontrivial holomorphic-form character from
+\eqref{nf:eq:horizontal-frames} is $a$, with
+\[
+ (m,a)=(3,2)\quad\hbox{at }0,\qquad
+ (m,a)=(4,1)\quad\hbox{at }1.
+\]
+On coherent $H^1$, the characters are $0,-a$; this follows
+by conjugation on the central torus and then by the
+equivariant eigenframe construction. The descended frames are
+\begin{equation}\label{nf:eq:coherent-frames}
+ \mathcal G:\ (f_0,s^af_1),\qquad
+ \mathcal C_2:\ s^a(f_0\wedge f_1).
+\end{equation}
+Their cup product is exactly the displayed generator.
+There is no additional base factor, since $a<m$.
+Thus $\det\mathcal G=\mathcal C_2=\mathcal O_B(-1)$.
+The section $\eta$ gives \eqref{nf:eq:G-sequence}.
+It splits because
+$\operatorname{Ext}^1(\mathcal O_B(-1),\mathcal O_B)
+=H^1(B,\mathcal O_B(1))=0$.
+Leray on the base curve gives the stated structure-sheaf
+dimensions, and Serre duality gives those of $K_Y$.
+\end{proof}
+
+The section $\eta$ is a coherent higher-direct-image section.
+It is not a global constant-coefficient lift of $\psi$.
+The integral constructible extension in (5.4) is
+$12\mathbb Z\psi$, and its nonzero transgression remains
+part of the integral calculation.
+
+\subsection{Higher direct images of relative forms}
+
+Put
+\[
+ \mathcal A_q=R^qf_*\mathscr E,\qquad
+ \mathcal B_q=R^qf_*\mathcal K_{\mathrm{rel}}.
+\]
+The scalar sequence supplies their global filtration.
+The finite characters determine how its multiplication maps
+extend across the two multiple fibers.
+
+\begin{theorem}\label{nf:thm:relative-direct-images}
+The higher direct images are locally free and vanish for $q>2$.
+For $q=0,1,2$ their isomorphism types are
+\begin{equation}\label{nf:eq:relative-direct-images}
+ \begin{aligned}
+ \mathcal B_0&=\mathcal O_B(-1),&
+ \mathcal A_0&\simeq\mathcal O_B\oplus\mathcal O_B(-1),\\
+ \mathcal B_1&\simeq\mathcal O_B(-1)\oplus\mathcal O_B,&
+ \mathcal A_1&\simeq\mathcal O_B^{\oplus2}
+                         \oplus\mathcal O_B(-1)^{\oplus2},\\
+ \mathcal B_2&\simeq\mathcal O_B,&
+ \mathcal A_2&\simeq\mathcal O_B\oplus\mathcal O_B(-1).
+ \end{aligned}
+\end{equation}
+They carry the exact sequences induced by contraction,
+\begin{equation}\label{nf:eq:A-filtration}
+ 0\longrightarrow\mathcal B_q
+ \longrightarrow\mathcal A_q
+ \longrightarrow\mathcal C_q\longrightarrow0.
+\end{equation}
+Multiplication by $\eta$ embeds
+$\mathcal L=\mathcal B_0$ as a subbundle of $\mathcal B_1$,
+and the quotient and degree-two line are
+\begin{equation}\label{nf:eq:elementary-modifications}
+ \mathcal B_1/\mathcal L
+   \simeq\mathcal L\otimes\mathcal Q(0+1)\simeq\mathcal O_B,
+ \qquad
+ \mathcal B_2\simeq\mathcal L\otimes\mathcal C_2(0+1)
+                   \simeq\mathcal O_B.
+\end{equation}
+In particular $h^q(Y,\mathscr E)=(1,2,1,0)$.
+\end{theorem}
+
+\begin{proof}
+On a smooth torus family, evaluation identifies its relative
+cotangent bundle with the pullback of its bundle of invariant
+forms. This applies to the good-reduction root families.
+On a root disk the scalar sequence has an equivariant splitting
+by averaging. At the cusp the relative logarithmic toric frame
+splits it directly. Exact finite invariants and the projection
+formula consequently give local freeness and make all the
+connecting maps of \eqref{nf:eq:scalar-sequence} zero.
+They give the global sequences \eqref{nf:eq:A-filtration}.
+Equivalently, the global form $\theta$ already supplies their
+splitting with respect to contraction.
+
+To compute the kernel terms, choose root frames $e_0,\alpha$
+for relative forms and $f_0,f_1$ for coherent $H^1$, with
+weights $(0,a)$ and $(0,-a)$, where $f_0=\eta$.
+The invariant generator of the horizontal line is
+$s^{m-a}\alpha$. Thus multiplication by $\eta$ gives the
+primitive invariant generator
+$s^{m-a}\alpha f_0$ of a subline of $\mathcal B_1$.
+It is a subbundle on every chart.
+
+Away from $0,1$, including at infinity, projection formula
+identifies the quotient with $\mathcal L\otimes\mathcal Q$.
+At a finite point the product of its descended generators is
+\begin{equation}\label{nf:eq:one-base-factor}
+ (s^{m-a}\alpha)(s^af_1)=s^m\alpha f_1
+             =t_{\mathrm{loc}}\,\alpha f_1,
+\end{equation}
+where $t_{\mathrm{loc}}=t$ at $0$ and $t-1$ at $1$.
+The invariant quotient is generated by $\alpha f_1$ itself.
+Hence the product map vanishes to order exactly one at each
+finite point and nowhere else. This proves the first formula
+in \eqref{nf:eq:elementary-modifications}. The same calculation
+with $f_0\wedge f_1$ proves the second. These identities specify
+the lines through the divisors of their multiplication maps.
+
+For clarity, the invariant frames of $\mathcal A_1$ are
+\[
+ e_0f_0,\quad s^ae_0f_1,\quad
+ s^{m-a}\alpha f_0,\quad\alpha f_1.
+\]
+In these frames the natural maps are
+\begin{equation}\label{nf:eq:multiplication-matrices}
+ \mathcal H\otimes\mathcal G\longrightarrow\mathcal A_1:
+       \operatorname{diag}(1,1,1,t_{\mathrm{loc}}),
+ \qquad
+ \mathcal H\otimes\mathcal C_2\longrightarrow\mathcal A_2:
+       \operatorname{diag}(1,t_{\mathrm{loc}}).
+\end{equation}
+This exhibits the two elementary modifications without
+replacing the actual invariant modules by their generic fibers.
+
+Now $\mathcal B_0=\mathcal L=\mathcal O_B(-1)$, and
+\[
+ 0\longrightarrow\mathcal O_B(-1)
+ \longrightarrow\mathcal B_1\longrightarrow\mathcal O_B
+ \longrightarrow0
+\]
+splits because $H^1(\mathcal O_B(-1))=0$.
+Insert these kernel terms and \eqref{nf:eq:coherent-bundles}
+into \eqref{nf:eq:A-filtration}. Every extension between
+$\mathcal O_B$ and $\mathcal O_B(-1)$ splits, since the
+relevant $H^1(\mathcal O_B(k))$ has $k\ge-1$.
+This proves \eqref{nf:eq:relative-direct-images}.
+The specified filtration and multiplication maps are retained
+even when the pure line-summand decompositions are noncanonical.
+Leray gives the last assertion.
+\end{proof}
+
+\subsection{The Picard group and tangent-cohomology lengths}
+
+The coherent section $\eta$ also determines which line bundles
+on $Y$ restrict nontrivially to a chosen smooth torus fiber.
+
+\begin{corollary}\label{nf:cor:picard}
+There is an additive isomorphism
+$\operatorname{Pic}(Y)\simeq\mathbb C$.
+Choose its coordinate $\lambda$ so that the corresponding
+class in $H^1(Y,\mathcal O_Y)$ maps to $\lambda\eta$, and
+write $L_\lambda$ for its exponential line bundle.
+For every fixed smooth fiber $F$, all but countably many
+$\lambda$ have non-torsion restriction $L_\lambda|_F$.
+For any such $\lambda$, the sheaves
+$R^if_*(T_Y\otimes L_\lambda)$, $i=1,2$, have finite support,
+and their lengths satisfy
+\[
+ \ell_2=\ell_1+1,\qquad \ell_2\ge1.
+\]
+\end{corollary}
+
+\begin{proof}
+Theorems~\ref{cmp:thm:comparison} and
+\ref{th:thm:real-sphere} give
+$H^1(Y;\mathbb Z)=H^2(Y;\mathbb Z)=0$.
+The exponential sequence, with exponential
+$h\mapsto\exp(2\pi i h)$, therefore identifies
+$\operatorname{Pic}(Y)$ with $H^1(Y,\mathcal O_Y)$.
+The coherent Leray edge map is an isomorphism
+\[
+ H^1(Y,\mathcal O_Y)\xrightarrow{\ \sim\ }
+ H^0(B,\mathcal G)=\mathbb C\eta,
+\]
+since $H^1(B,\mathcal O_B)=H^2(B,\mathcal O_B)=0$.
+
+For a fixed smooth $F$, naturality of the edge and base-change
+maps identifies the restriction of $L_\lambda$ with
+\[
+ \lambda\eta_F\pmod{\Lambda_F},\qquad
+ \Lambda_F=\operatorname{im}\bigl(
+ H^1(F;\mathbb Z)\longrightarrow H^1(F,\mathcal O_F)\bigr).
+\]
+The projection $H^1(F;\mathbb R)\to H^{0,1}(F)$ is a
+real-linear isomorphism, by the Hodge decomposition of the
+complex torus and conjugation. Thus $\Lambda_F$ is a full
+lattice, and $\eta_F\ne0$. Torsion means that
+$n\lambda\eta_F\in\Lambda_F$ for some integer $n>0$.
+For each $n$ and lattice vector there is at most one
+$\lambda$, so the exceptional set is countable.
+
+Choose $\lambda$ outside it. Its restriction is nontrivial
+and topologically trivial, and
+Proposition~\ref{ad:prop:one-fiber-lengths} applies.
+Proposition~\ref{ad:prop:reduction} gives
+$\chi(Y,T_Y\otimes L_\lambda)=1$, hence
+$\ell_2-\ell_1=1$. Corollary~\ref{ad:cor:ambient-nonvanishing}
+also gives a nonzero fiber of the second direct image at
+infinity, so $\ell_2\ge1$.
+\end{proof}
+
+This argument fixes one smooth fiber. It gives neither a
+simultaneous non-torsion restriction on all fibers nor the
+individual lengths or local elementary divisors. Its coherent
+edge isomorphism is compatible with the nonzero integral
+transgression of $12\psi$; it does not replace that
+transgression by a constant-coefficient lift.
+
+\section{Ordinary Hodge groups and the completed de Rham complex}
+\label{sec:hodge-rees}
+
+Relative logarithmic forms retain two further maps. Their
+extension by base differentials gives the Kodaira--Spencer
+maps, and their branch residues compare them with ordinary
+forms. We compute these maps before passing to cohomology.
+
+\subsection{The logarithmic Kodaira--Spencer maps}
+
+Applying $Rf_*$ to \eqref{nf:eq:absolute-log-sequence} gives
+\begin{equation}\label{hr:eq:KS-maps}
+ \kappa_q:\mathcal A_q\longrightarrow
+                 \mathscr L_B\otimes\mathcal C_{q+1}.
+\end{equation}
+The base arrow is the actual pullback of logarithmic
+differentials, including the fiber multiplicities.
+Recall the specified subline
+$\mathcal O_B\eta\subset\mathcal G$, its quotient $\mathcal Q$,
+and the unique relative form $\theta$ with $\theta(V)=1$.
+
+\begin{proposition}\label{hr:prop:KS}
+Let $\mathcal T=\mathbb C_0\oplus\mathbb C_1$ be the sum of
+the two residue-field sheaves on $B$. There is an exact sequence
+\begin{equation}\label{hr:eq:KS-zero}
+ 0\longrightarrow\mathcal H\xrightarrow{\ \kappa_0\ }
+ \mathscr L_B\otimes\mathcal G
+ \longrightarrow\mathcal T\longrightarrow0.
+\end{equation}
+The map
+$\kappa_1:\mathcal A_1\to\mathscr L_B\otimes\mathcal C_2
+\simeq\mathcal O_B$ is onto both as a sheaf map and on global
+sections. Its kernel is isomorphic to
+$\mathcal O_B\oplus\mathcal O_B(-1)^{\oplus2}$.
+\end{proposition}
+
+\begin{proof}
+At the cusp use its actual adapted period presentation
+\[
+ (z,w)\sim(qc_1(q)z,c_2(q)w),\qquad
+ (z,w)\sim(c_3(q)z,qc_4(q)w),
+\]
+with all four $c_i$ holomorphic units.
+The absolute lifts $d\log z,d\log w$ of the relative frame
+have deck differences, under the period $(k_1,k_2)$,
+\[
+ \left((k_1,k_2)+q\,h_k(q)\right)d\log q
+\]
+for a holomorphic vector-valued function $h_k$.
+At $q=0$ these are precisely the two polygon-period
+covectors. Lemma~\ref{nf:lem:cusp-coherent} identifies their
+coherent images with a basis. Thus $\kappa_0$ is invertible
+at infinity. The simultaneous coordinate and period shear
+changes the two bases by invertible integral matrices.
+The unit derivatives are retained in $q\,h_k(q)$ and
+vanish at the central value.
+
+At a finite point use $t_{\mathrm{loc}}=s^m$ and the forward
+weights $(0,a)$ for root relative forms $e_0,e_1$, with
+$e_1$ horizontal, and $(0,-a)$ for coherent frames $f_0,f_1$,
+with $f_0=\eta$. Here $(m,a)=(3,2)$ or $(4,1)$.
+The descended frames are
+\[
+ \mathcal H:\ (e_0,s^{m-a}e_1),\qquad
+ \mathcal G:\ (f_0,s^af_1).
+\]
+Write $k_{ji}(s)$ for the raw matrix of the pulled-back
+$\kappa_0$, using the base generator
+$dt_{\mathrm{loc}}/t_{\mathrm{loc}}=m\,ds/s$.
+The ordinary smooth-family connecting map has a holomorphic
+$ds$ coefficient, so every $k_{ji}$ is divisible by $s$.
+The factor $1/m$ is included in this convention.
+Equivariance says
+\begin{equation}\label{hr:eq:KS-weights}
+ k_{ji}(\zeta s)=\zeta^{\,b_i-c_j}k_{ji}(s),
+ \qquad b=(0,a),\quad c=(0,-a).
+\end{equation}
+For residue class zero, the least allowed exponent is $m$,
+since the constant term is forbidden.
+
+Multiplication by the source exponents and division by the
+target exponents now give
+\begin{equation}\label{hr:eq:finite-KS-matrices}
+ M_3(t_{\mathrm{loc}})
+  =\begin{pmatrix}t_{\mathrm{loc}}A&t_{\mathrm{loc}}B\\ C&D\end{pmatrix},
+ \qquad
+ M_4(t_{\mathrm{loc}})
+  =\begin{pmatrix}t_{\mathrm{loc}}A&t_{\mathrm{loc}}B\\
+                       C&t_{\mathrm{loc}}D\end{pmatrix}.
+\end{equation}
+$A,B,C,D$ denote holomorphic functions, separately on
+the two disks. For example, the order-four raw entry
+$k_{11}$ starts at $s^2$. Its source factor is $s^3$
+and its target factor $s$, giving $s^4=t_{\mathrm{loc}}$.
+This explains the lower-right vanishing in $M_4$.
+
+The global determinant of $\kappa_0$ is a section of
+\[
+ \det(\mathscr L_B\otimes\mathcal G)\otimes
+       (\det\mathcal H)^{-1}\simeq\mathcal O_B(2).
+\]
+It is nonzero at infinity and vanishes at least once at
+each finite point by \eqref{hr:eq:finite-KS-matrices}.
+Those two zeros are therefore simple and there are no
+others. Each finite matrix has rank one at its center.
+Its first row is zero, so its image is the $f_1$ line.
+The surviving quotient is the $f_0$ direction, proving
+\eqref{hr:eq:KS-zero}.
+
+On the smooth locus the next connecting map is cup
+product with the first:
+\begin{equation}\label{hr:eq:KS-cup}
+ \kappa_1(hv)=\kappa_0(h)\wedge v.
+\end{equation}
+The same identity holds globally on the image of the
+actual multiplication
+$\mathcal H\otimes\mathcal G\to\mathcal A_1$.
+Multiplication by $f_0=\eta$ is unmodified at the finite
+points by \eqref{nf:eq:multiplication-matrices}.
+Their nonzero $f_1$ images therefore wedge nontrivially
+with $f_0$. Elsewhere $\kappa_0$ is invertible.
+This proves sheaf surjectivity of $\kappa_1$.
+
+To prove surjectivity on global sections, compose
+$\kappa_0$ with the specified quotient:
+\[
+ b:\mathcal H\longrightarrow
+       \mathscr L_B\otimes\mathcal Q\simeq\mathcal O_B.
+\]
+At the order-four point the lower-right entry in $M_4$
+shows that $b$ vanishes on the horizontal fiber.
+On the other hand,
+\[
+ \det M_4=t_{\mathrm{loc}}
+            (t_{\mathrm{loc}}AD-BC)
+\]
+has a simple zero. Thus $B(0)C(0)\ne0$, and $b$ is
+nonzero on the complementary direction.
+Since $\theta$ has quotient value one in
+$\mathcal H/\mathcal L$, $b(\theta)$ is nonzero there.
+It is a global section of a degree-zero line and hence
+a nonzero constant. Equation~\eqref{hr:eq:KS-cup} makes
+$\kappa_1(\theta\eta)$ nonzero. After a scalar
+normalization this is a right inverse
+$\mathcal O_B\to\mathcal A_1$.
+Subtracting its multiples from the other summands of
+\eqref{nf:eq:relative-direct-images} identifies the kernel
+with $\mathcal O_B\oplus\mathcal O_B(-1)^{\oplus2}$.
+\end{proof}
+
+The nonvanishing just proved uses the order-four matrix
+and the global quotient line. It requires no identification
+with an auxiliary normal function or its derivative.
+
+\subsection{Absolute logarithmic forms and normalized residues}
+
+Write
+$\mathcal P_q=R^qf_*\Omega_Y^1(\log D)$ and
+$\mathcal K_1=\ker\kappa_1$.
+The long exact sequence of
+\eqref{nf:eq:absolute-log-sequence}, together with
+Proposition~\ref{hr:prop:KS}, gives
+\begin{equation}\label{hr:eq:absolute-direct-images}
+ \mathcal P_0=\mathscr L_B,\qquad
+ 0\longrightarrow\mathcal T\longrightarrow\mathcal P_1
+ \longrightarrow\mathcal K_1\longrightarrow0,\qquad
+ \mathcal P_2=\mathcal A_2.
+\end{equation}
+The middle extension splits because
+$H^1(B,\mathcal K_1^\vee\otimes\mathcal T)=0$.
+Its specified torsion inclusion remains the one induced
+by $\mathscr L_B\otimes\mathcal G$.
+Consequently
+\[
+ \mathcal P_1\simeq
+ \mathcal O_B\oplus\mathcal O_B(-1)^{\oplus2}
+                \oplus\mathbb C_0\oplus\mathbb C_1,
+ \qquad
+ h^q\bigl(Y,\Omega_Y^1(\log D)\bigr)=(2,3,1,0).
+\]
+In particular, every global absolute logarithmic
+one-form is pulled back from $B$.
+
+The normalization of $D$ is
+$\widetilde D=S\sqcup F_3\sqcup F_4$.
+Let $\nu_D:\widetilde D\to D\subset Y$ be its map and
+put $\mathcal R_D=(\nu_D)_*\mathcal O_{\widetilde D}$.
+The residue sequence is
+\begin{equation}\label{hr:eq:residue-sequence}
+ 0\longrightarrow\Omega_Y^1
+ \longrightarrow\Omega_Y^1(\log D)
+ \xrightarrow{\ \operatorname{Res}\ }\mathcal R_D
+ \longrightarrow0.
+\end{equation}
+Indeed, on a local branch chart the residue of
+$\sum h_i\,dx_i/x_i$ is $h_i|_{x_i=0}$ on each branch.
+Each branch function has a holomorphic lift locally;
+the kernel consists of ordinary holomorphic forms.
+These maps descend through branch permutations.
+
+\begin{theorem}\label{hr:thm:hodge}
+The ordinary one-form cohomology is
+\[
+ h^q(Y,\Omega_Y^1)=(0,2,1,0).
+\]
+With $h^{p,q}(Y)=\dim H^q(Y,\Omega_Y^p)$, the full table is
+\begin{equation}\label{hr:eq:hodge-table}
+ \begin{array}{c|rrrr}
+ q\backslash p&0&1&2&3\\ \hline
+ 0&1&0&0&0\\
+ 1&1&2&1&0\\
+ 2&0&1&2&1\\
+ 3&0&0&0&1
+ \end{array}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The normalized toric surface $S$ has coherent dimensions
+$(1,0,0)$. Each $F_m$ is the free finite quotient of its
+central smooth torus. Taking invariants of the coherent
+exterior algebra with weights $(0,-a)$ gives dimensions
+$(1,1,0)$, since $a\not\equiv0\pmod m$.
+Therefore
+\[
+ h^q(Y,\mathcal R_D)=(3,2,0).
+\]
+
+On global sections, residues are the pullback
+base-residue map
+\begin{equation}\label{hr:eq:base-residues}
+ \beta\longmapsto
+ \bigl(\operatorname{res}_\infty\beta,\,
+       3\operatorname{res}_0\beta,\,
+       4\operatorname{res}_1\beta\bigr).
+\end{equation}
+Base residues sum to zero and give a rank-two map.
+The factors $3,4$ are the scheme-fiber multiplicities;
+derivatives of units add no residue. Thus this map is
+injective on the two-dimensional space of global
+logarithmic one-forms.
+
+We also need the map in degree one. At a finite point
+let $\beta_m$ generate $H^1(F_m,\mathcal O_{F_m})$ so
+that its pullback is the invariant central class $f_0$.
+Extend $f_0$ by $\eta$ on the root disk. The class
+\begin{equation}\label{hr:eq:normalized-residue}
+ \frac1m\,\frac{dt_{\mathrm{loc}}}{t_{\mathrm{loc}}}
+                       \otimes\eta
+\end{equation}
+maps into $\mathcal P_1$ and has residue $\beta_m$,
+because its pullback is $(ds/s)\otimes\eta$.
+The other descended coherent generator $s^af_1$
+restricts to zero on the reduced central fiber.
+The fiber image of $\kappa_0$ is the $f_1$ direction,
+so residue identifies its quotient
+$\mathcal T$ with $R^1f_*\mathcal R_D$ at each finite
+point. At infinity the target is
+$H^1(S,\mathcal O_S)=0$. Hence
+\[
+ \mathcal T\xrightarrow{\ \sim\ }R^1f_*\mathcal R_D.
+\]
+
+The Leray maps identify
+$H^1(Y,\Omega_Y^1(\log D))$ with
+$H^0(B,\mathcal P_1)$, since
+$H^1(B,\mathcal P_0)=H^1(B,\mathcal O_B(1))=0$.
+They identify $H^1(Y,\mathcal R_D)$ with
+$H^0(B,R^1f_*\mathcal R_D)$, since $f_*\mathcal R_D$
+has finite support. The torsion inclusion in
+\eqref{hr:eq:absolute-direct-images} therefore proves
+surjectivity of the global degree-one residue map.
+
+In the long exact sequence of
+\eqref{hr:eq:residue-sequence}, the degree-zero
+cokernel has dimension one and the degree-one kernel
+has dimension $3-2=1$. Thus $h^1(\Omega_Y^1)=2$.
+Surjectivity in degree one and $H^2(\mathcal R_D)=0$
+identify $H^2(\Omega_Y^1)$ with the one-dimensional
+$H^2(\Omega_Y^1(\log D))$. The end terms give
+$H^0(\Omega_Y^1)=H^3(\Omega_Y^1)=0$.
+Combine this with Theorem~\ref{nf:thm:coherent} and
+Serre duality to obtain \eqref{hr:eq:hodge-table}.
+\end{proof}
+
+\subsection{The Fr\"olicher differential}
+
+We now also use the smooth comparison for this selected
+threefold. Theorems~\ref{cmp:thm:comparison} and
+\ref{th:thm:real-sphere} give
+\begin{equation}\label{hr:eq:betti}
+ b_0(Y)=b_6(Y)=1,\qquad b_k(Y)=0\quad(1\le k\le5).
+\end{equation}
+This topological input enters the following spectral-sequence
+argument; the coherent sheaves above were computed on the
+complex quotient itself.
+
+\begin{proposition}\label{hr:prop:frolicher}
+The Fr\"olicher spectral sequence of $Y$ degenerates at
+$E_2$, whose only nonzero terms are $\mathbb C$ in
+bidegrees $(0,0)$ and $(3,3)$. Its four nonzero $d_1$
+arrows each have rank one.
+\end{proposition}
+
+\begin{proof}
+Apart from the two endpoints, the $E_1$ page
+\eqref{hr:eq:hodge-table} has two rows:
+\[
+ \begin{array}{ccl}
+ q=1:&
+ \mathbb C_{(0,1)}\longrightarrow
+ \mathbb C^2_{(1,1)}\longrightarrow
+ \mathbb C_{(2,1)},\\[2pt]
+ q=2:&
+ \mathbb C_{(1,2)}\longrightarrow
+ \mathbb C^2_{(2,2)}\longrightarrow
+ \mathbb C_{(3,2)}.
+ \end{array}
+\]
+Here the subscripts record bidegrees and $d_1$ is induced
+by the actual holomorphic differential $\partial$.
+The term $E_2^{0,1}$ cannot be changed by a higher
+differential: its only possible outgoing $d_2$ targets
+$E_2^{2,0}=0$, and there is no incoming source.
+Thus $b_1=0$ forces the first arrow to be injective.
+The term $E_2^{1,1}$ has no higher source or target, so
+$b_2=0$ forces the next arrow to have rank one.
+Likewise $E_2^{1,2}$ and $E_2^{2,2}$ have no nonzero
+higher source or target; $b_3=b_4=0$ gives rank one
+for the two arrows in the second row.
+Since $d_1^2=0$, both rows are exact.
+Only the endpoints remain on $E_2$.
+\end{proof}
+
+\subsection{A finite model over the formal parameter}
+
+Let $R=\mathbb C[[\hbar]]$, where $\hbar$ has cochain
+degree zero. This formal parameter is distinct from
+the contraction parameter $u$. Let
+$\mathcal A_Y^{p,q}$ be the sheaf of smooth complex
+$(p,q)$-forms and define the total cochain complex
+\begin{equation}\label{hr:eq:Rees-definition}
+ \mathcal R_Y=
+ \left(\mathcal A_Y^{\bullet,\bullet}[[\hbar]],
+                  d_\hbar=\bar\partial+\hbar\partial\right),
+ \qquad
+ K_{\mathrm{Rees}}(Y)=R\Gamma(Y,\mathcal R_Y).
+\end{equation}
+The completion is $\hbar$-adic. Its sheaves are fine,
+with partitions of unity acting coefficientwise, so global
+smooth forms represent the displayed derived sections.
+
+\begin{theorem}\label{hr:thm:Rees-model}
+The completed complex $K_{\mathrm{Rees}}(Y)$ admits a
+finite free model with two zero-differential summands
+$R$ in degrees $0,6$ and four summands
+\begin{equation}\label{hr:eq:four-pairs}
+ [\,Ra_j\xrightarrow{\ \hbar\ }Rb_{j+1}\,],
+ \qquad |a_j|=j,\quad |b_{j+1}|=j+1,\quad 1\le j\le4.
+\end{equation}
+It is connected to the actual completed form complex
+by the inclusion, projection and homotopy constructed
+below.
+\end{theorem}
+
+\begin{proof}
+Choose a Hermitian metric on compact $Y$.
+Let $H$ be the finite-dimensional space of
+$\bar\partial$-harmonic forms, $i:H\to A$ its inclusion
+into $A=\Gamma(Y,\mathcal A_Y^{\bullet,\bullet})$,
+and $p:A\to H$ harmonic projection.
+Let $G_{\bar\partial}$ be the Green operator of the
+Dolbeault Laplacian and put
+$K=\bar\partial^*G_{\bar\partial}$.
+The compact Hermitian elliptic theory
+\cite[Part~I, Theorems~3.15 and 7.1--7.3]{DemaillyHodge}
+gives
+\begin{equation}\label{hr:eq:harmonic-contraction}
+ \bar\partial K+K\bar\partial=1-ip,\qquad
+ K^2=0,\quad Ki=0,\quad pK=0,\quad pi=1.
+\end{equation}
+Only the Dolbeault Laplacian is used; no K\"ahler
+identity is required.
+
+Put $\delta=\hbar\partial$ and define
+\begin{equation}\label{hr:eq:perturbation}
+ \begin{aligned}
+ i'&=(1+K\delta)^{-1}i,&
+ p'&=p(1+\delta K)^{-1},\\
+ K'&=K(1+\delta K)^{-1},&
+ D_H&=p\delta(1+K\delta)^{-1}i.
+ \end{aligned}
+\end{equation}
+Each inverse is a finite geometric series on forms:
+$K\delta$ and $\delta K$ increase holomorphic degree
+by one, and that degree is at most three.
+Using \eqref{hr:eq:harmonic-contraction} and
+$\bar\partial\delta+\delta\bar\partial=\delta^2=0$,
+substitution gives
+\begin{equation}\label{hr:eq:perturbed-identities}
+ \begin{gathered}
+ d_\hbar i'=i'D_H,\qquad p'd_\hbar=D_Hp',\qquad p'i'=1,\\
+ d_\hbar K'+K'd_\hbar=1-i'p',\qquad D_H^2=0.
+ \end{gathered}
+\end{equation}
+For example, $(1+K\delta)i'=i$ and
+$(1+\delta K)^{-1}\delta
+=\delta(1+K\delta)^{-1}$ reduce the first identity
+to \eqref{hr:eq:harmonic-contraction}; the remaining
+identities follow by the same finite cancellation.
+Thus these are actual comparison maps and a homotopy.
+
+The transferred differential has the form
+\[
+ D_H=\hbar d_1+\hbar^2d_{(2)}+\hbar^3d_{(3)},\qquad
+ d_1=p\partial i,
+\]
+where
+$d_{(r)}=(-1)^{r-1}p\partial(K\partial)^{r-1}i$
+has bidegree $(r,1-r)$.
+For $r\ge2$, table~\eqref{hr:eq:hodge-table} has no
+pair of nonzero source and target in that bidegree.
+Hence
+\begin{equation}\label{hr:eq:transferred-differential}
+ D_H=\hbar d_1
+\end{equation}
+exactly. This conclusion uses the bidegrees of the
+transferred operators, in addition to
+Proposition~\ref{hr:prop:frolicher}.
+
+Choose $a_1\in H^{0,1}$ and $a_3\in H^{1,2}$ with
+nonzero $d_1$ images. Choose $a_2\in H^{1,1}$ in a
+complement to $d_1H^{0,1}$, and $a_4\in H^{2,2}$
+in a complement to $d_1H^{1,2}$, again with nonzero
+images. Set $b_{j+1}=d_1a_j$.
+The two exact rows show that these eight vectors,
+together with $1$ and a normalized top harmonic
+class, form a basis of $H$.
+Their images are defined by the actual operator
+$p\partial i$. Extending this basis to $R$ gives
+\eqref{hr:eq:four-pairs}, with the comparison maps
+\eqref{hr:eq:perturbation} unchanged.
+\end{proof}
+
+\subsection{Cohomology and the derived special fiber}
+
+The model makes the formal torsion and its specialization
+explicit:
+\begin{equation}\label{hr:eq:Rees-cohomology}
+ H^n(K_{\mathrm{Rees}}(Y))=
+ \begin{cases}
+ R,&n=0,6,\\
+ R/(\hbar),&n=2,3,4,5,\\
+ 0,&n=1\text{ or }n\notin[0,6].
+ \end{cases}
+\end{equation}
+Every torsion summand has order exactly one.
+After inverting $\hbar$, multiplication of a
+$(p,q)$-form by $\hbar^{-p}$ intertwines
+$\bar\partial+\hbar\partial$ with
+$\bar\partial+\partial$. Since $p$ is bounded, this
+is a well-defined isomorphism of Laurent-series
+complexes. It identifies the generic fiber with
+ordinary de Rham cohomology over $\mathbb C((\hbar))$,
+with its two free classes in degrees zero and six.
+
+Reduction of the finite free model modulo $\hbar$
+computes its derived special fiber. Its differential
+is zero, and the total-degree dimensions are
+\begin{equation}\label{hr:eq:derived-dimensions}
+ \dim_{\mathbb C}
+ H^n\!\left(K_{\mathrm{Rees}}(Y)\otimes_R^{\mathbb L}\mathbb C\right)
+       =(1,1,2,2,2,1,1)\quad(0\le n\le6).
+\end{equation}
+These are the total Dolbeault dimensions.
+The ordinary tensor product of
+\eqref{hr:eq:Rees-cohomology} instead has dimensions
+$(1,0,1,1,1,1,1)$.
+The difference is expressed by
+\begin{equation}\label{hr:eq:derived-Tor}
+ \begin{split}
+ 0\longrightarrow&
+ H^n(K_{\mathrm{Rees}}(Y))\otimes_R\mathbb C\\
+ \longrightarrow&
+ H^n\!\left(K_{\mathrm{Rees}}(Y)
+                    \otimes_R^{\mathbb L}\mathbb C\right)\\
+ \longrightarrow&
+ \operatorname{Tor}_1^R
+       \bigl(H^{n+1}(K_{\mathrm{Rees}}(Y)),\mathbb C\bigr)
+ \longrightarrow0.
+ \end{split}
+\end{equation}
+For the pair indexed by $j$, $b_{j+1}$ represents
+torsion cohomology in degree $j+1$. The vector $a_j$
+is not a formal cycle lifting its Dolbeault class.
+It survives in the derived special fiber as the
+corresponding $\operatorname{Tor}_1$ class in degree
+$j$. Thus the four additional contributions occur
+in degrees $1,2,3,4$.
+
+\subsection{Products, unit and trace}
+
+The completed form complex has its wedge product and
+constant unit. The Laurent-series comparison
+$\alpha^{p,q}\mapsto\hbar^{-p}\alpha^{p,q}$ preserves
+both. The finite harmonic contraction retains these
+operations by homotopy transfer. Its binary operation is
+\[
+ m_2(a,b)=p'\bigl(i'a\wedge i'b\bigr).
+\]
+The higher operations are the finite sums over planar
+binary trees with $i'$ at the leaves, wedge product
+at each vertex, $K'$ on internal edges and $p'$ at
+the root. The signs are the cochain Koszul signs,
+with $K'$ of degree $-1$; equivalently the same
+formula on the suspended tensor coalgebra uses the
+degree-one coderivations. The side conditions in
+\eqref{hr:eq:harmonic-contraction} give the transferred
+unital $A_\infty$ structure and its higher comparison
+maps. The direct-sum basis in
+\eqref{hr:eq:four-pairs} describes the differential;
+it does not assert strict preservation of wedge
+multiplication in that basis.
+
+Integration of the total-degree-six form $i'a$
+defines the trace. Stokes' theorem and
+\eqref{hr:eq:perturbed-identities} make it vanish on
+$D_H$-boundaries. The constant unit and the top
+harmonic class have no perturbation correction:
+$\partial$ annihilates both. Normalize the top class
+to have integral one.
+
+All constructions above use the fixed admissible
+$u$ and its specified lifts and adapted gluing.
+They apply to each choice satisfying these hypotheses,
+but do not construct descent around the parameter
+monodromy or a filling at $u=0$.
+The completed complex \eqref{hr:eq:Rees-definition}
+is a cochain complex of forms, with a formal parameter;
+it supplies no loop quantization or chiral realization.
+The actual double complex determines the Bott--Chern and
+Aeppli groups in Section~\ref{sec:bott-chern}.
+Section~\ref{sec:courant} computes the Aeppli class map for
+pluriclosed forms. The same logarithmic residue sequence will
+give the coherent tangent comparison in
+Section~\ref{sec:tangent-curves}, including its double curves
+and triple points. The actual residue maps also lift the
+invariant integral fiber class to ordinary Dolbeault cohomology.
+Its cusp restriction evaluates the curve periods and excludes
+pluriclosed Hermitian metrics on this selected threefold.
+Comparison with a different marked rank-four family still
+requires its own geometric maps.

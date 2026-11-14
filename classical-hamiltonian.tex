@@ -1,0 +1,867 @@
+\section{Classical Hamiltonian observables on the torus family}
+\label{hp:sec}
+
+A compact complex torus has finite-dimensional Dolbeault cohomology,
+but replacing differential forms by those cohomology groups does not by itself
+compactify a field theory. The differential must still describe the
+variation of the fiber, and the pairing must still give the bracket
+of observables. In a presymplectic theory there is a further issue:
+Hamiltonian observables depend on a resolution of the kernel of the
+presymplectic operator. A comparison of field complexes need not
+compare these resolutions.
+
+We address these questions for the classical observable model of the
+alternative holomorphic twist of the abelian six-dimensional
+$(2,0)$ theory. Fix the sufficiently small nonzero parameter $u$,
+integral lifts and adapted filling of
+Theorem~\ref{cmp:thm:comparison}. Put
+\[
+ U=\mathbb P^1\setminus\{0,1,\infty\},\qquad
+ X=Y^{\mathrm{ad}}(u)|_U,\qquad f:X\longrightarrow U.
+\]
+Thus $f$ is the actual smooth proper family of complex two-tori.
+We construct a complex of finite-rank smooth bundles on $U$ whose
+compactly supported sections give the same resolved classical
+observables as forms on $X$. Its differential contains the derivative
+of the full period matrix. The inclusion of invariant forms preserves
+the Poisson bracket, while averaging supplies a chain inverse.
+The free finite covers at $0$ and $1$ have a separate descent formula
+with an essential degree normalization. The singular fiber at infinity
+requires an additional comparison.
+
+\subsection{The resolved observable complex}
+\label{hp:subsec:observables}
+
+All coefficients in this section are complex. A $P_0$ algebra is a
+commutative differential graded algebra with a Poisson bracket of
+cohomological degree $+1$. For bidegrees $(i,\epsilon)$ and
+$(j,\epsilon')$ in $\mathbb Z\times\mathbb Z/2$, the symmetry sign is
+$(-1)^{ij+\epsilon\epsilon'}$. The alternative regrading used here is
+concentrated in even supplemental $\mathbb Z/2$ degree
+\cite[\S4.5.1]{SaberiWilliamsConstraints}. Thus $\epsilon=0$ for all
+the generators below; their cohomological degrees still determine the
+Koszul signs.
+
+For an open set $V$ in a complex threefold, let
+$\Omega_c^{p,q}(V)$ be its smooth compactly supported $(p,q)$-forms.
+We use cohomological shifts, so an element of degree $d$ has degree
+$d-r$ in a complex shifted by $[r]$. Define
+\begin{equation}\label{hp:eq:linear}
+\begin{split}
+ V_H(V)&=V_\chi(V)\oplus V_\beta(V)\oplus V_\gamma(V),\\
+ V_\chi(V)&=\Omega_c^{\leq1,\bullet}(V)[3],\qquad
+ V_\beta(V)=\Omega_c^{3,\bullet}(V)[3],\qquad
+ V_\gamma(V)=\Omega_c^{0,\bullet}(V)[1].
+\end{split}
+\end{equation}
+Here $\Omega^{\leq1,\bullet}$ is the total complex of columns
+$p=0,1$. The degrees of its $(p,q)$-forms are $p+q-3$ after the
+shift. The degrees in $V_\beta$ and $V_\gamma$ are $q-3$ and $q-1$,
+respectively. The linear differential is
+\begin{equation}\label{hp:eq:differential}
+ D_H|_{V_\chi}=\bar\partial+\partial_{\leq1},\qquad
+ D_H|_{V_\beta\oplus V_\gamma}=\bar\partial.
+\end{equation}
+The truncated operator $\partial_{\leq1}$ maps the $p=0$ column
+to the $p=1$ column and is zero on the latter. There is no
+$\partial$ differential between the $\beta$ and $\gamma$ summands.
+
+Fix a symmetric-tensor realization, denoted by $\mathsf S$.
+The algebraic realization is
+$\mathsf S(V)=\bigoplus_{n\geq0}(V^{\otimes n})_{\mathfrak S_n}$.
+In the degreewise completed realization, replace each finite tensor
+power by its completed projective tensor power, with the topology on
+compact forms given by the inductive limit of the fixed compact-support
+Fr\'echet spaces. In both cases the sum over polynomial degree is a
+direct sum, and the $n=0$ summand is $\mathbb C$ with unit $1$.
+Every comparison below uses the same realization on its two sides.
+No identification of the algebraic and completed realizations, or
+replacement of the polynomial direct sum by a product, is intended.
+
+The resolved classical observable algebra is
+\begin{equation}\label{hp:eq:observables}
+ \mathcal O_H(V)=\bigl(\mathsf S(V_H(V)),D_H\bigr).
+\end{equation}
+Its nonzero brackets on linear generators are
+\begin{equation}\label{hp:eq:brackets}
+ B_\chi(\alpha,\alpha')=\int_V\alpha\wedge\partial\alpha',
+ \qquad
+ B_{\beta\gamma}(\beta,\gamma)=\int_V\beta\wedge\gamma.
+\end{equation}
+The operator in $B_\chi$ is the full holomorphic exterior derivative
+of the representing form. Only the internal differential in
+\eqref{hp:eq:differential} is truncated. Integration selects bidegree
+$(3,3)$, and the shifts make both brackets have degree $+1$.
+The bracket on polynomials is their extension by the graded Leibniz
+rule. For disjoint open sets, extend linear generators by zero and
+multiply the resulting polynomials. These are the factorization
+operations, and the scalar summand supplies their unit.
+
+The Hamiltonian qualification specifies which observable model is
+being used. If $\mathcal E$ is a free presymplectic field complex and
+$\omega:\mathcal E\to\mathcal E^![-1]$ is its presymplectic
+operator, the symbol $!$ means density dual. Choose a semi-free
+resolution $\mathcal K_\omega$ of $\ker\omega$, together with its
+differential-operator map $\pi_\omega:\mathcal K_\omega\to\mathcal E$.
+The smoothed derived invariants have linear generators
+\begin{equation}\label{hp:eq:kernel-recipe}
+ (\mathcal K_\omega)^!_c(V)\oplus\mathcal E^!_c(V)[1],
+\end{equation}
+with the differential induced by the two internal differentials and
+$\pi_\omega$. This is the kernel-resolution construction of
+\cite[\S2.4.1]{SaberiWilliamsConstraints}. Its stated hypotheses,
+including the cone-resolution condition for the chiral two-form,
+give the explicit model \eqref{hp:eq:linear}--\eqref{hp:eq:brackets}
+and its $P_0$ factorization structure
+\cite[\S4.6]{SaberiWilliamsConstraints}. We retain that resolved model
+and its factorization descent in the chosen tensor convention.
+The arguments that follow act directly on its generators. They do
+not require an invariance theorem for Hamiltonian observables under
+arbitrary quasi-isomorphisms of presymplectic field complexes.
+
+\subsection{Descent through a free finite cover}
+\label{hp:subsec:finite}
+
+The finite fillings have ramified maps of base disks. Their maps of
+total spaces are nevertheless unramified: the cyclic actions are
+free. This distinction determines the descent of compact forms.
+
+Let $\pi:\widetilde X\to X_0$ be a finite holomorphic covering of
+degree $m$, given first as a quotient by a free action of a group
+$G$ of order $m$. For $V\subset X_0$, write
+$\widetilde V=\pi^{-1}V$. Pullback identifies compact forms on $V$
+with invariant compact forms on $\widetilde V$. Its inverse is the
+normalized sheet trace
+\begin{equation}\label{hp:eq:trace}
+ r=\frac1m\operatorname{Tr}_\pi,
+ \qquad
+ \pi^*r=\frac1m\sum_{g\in G}g^*,\qquad r\pi^*=1.
+\end{equation}
+The trace is defined on an evenly covered open set by adding the
+pullbacks along its inverse branches. These local sums agree on
+overlaps. Properness of $\pi$ preserves compact support under
+pullback, and the image of a compact support is compact under trace.
+Both maps commute with $\partial$ and $\bar\partial$.
+
+\begin{proposition}[Normalized finite descent]\label{hp:prop:finite}
+On the invariant linear generator complex
+$V_H(\widetilde V)^G$, use the bracket
+$m^{-1}B_{\widetilde V}$, where $B$ denotes the two blocks in
+\eqref{hp:eq:brackets}. Then
+\begin{equation}\label{hp:eq:finite-isomorphism}
+ \mathsf S(\pi^*):\mathcal O_H(V)
+ \xrightarrow{\ \cong\ }
+ \left(\mathsf S\bigl(V_H(\widetilde V)^G\bigr),
+             D_H,\frac1m B_{\widetilde V}\right)
+\end{equation}
+is a strict unital $P_0$ isomorphism, with inverse $\mathsf S(r)$.
+These isomorphisms commute with all disjoint-open factorization
+operations. Equivalently, $m^{-1/2}\pi^*$ identifies the downstairs
+algebra with the symmetric algebra on invariant linear generators
+inside the original, unrescaled cover algebra.
+\end{proposition}
+
+\begin{proof}
+For any compactly supported top form $\eta$, holomorphic change of
+variables gives
+$\int_{\widetilde V}\pi^*\eta=m\int_V\eta$.
+Consequently
+\[
+ B_{\widetilde V}(\pi^*a,\pi^*b)=m B_V(a,b)
+\]
+for both bracket blocks. This proves bracket compatibility after
+division by $m$. Equation~\eqref{hp:eq:trace} gives inverse chain
+maps on the specified linear spaces, so the same symmetric functor
+gives inverse algebra maps. These maps are continuous on each
+fixed compact-support stage and hence in the completed realization
+as well. The graded Leibniz rule proves bracket compatibility in
+every polynomial degree. The degree-zero maps fix $1$.
+
+Inverse images of disjoint open sets are disjoint. Pullback and
+trace commute with extension by zero, so the maps commute with
+every factorization operation. Finally, multiplying each linear
+pullback by $m^{-1/2}$ cancels the factor $m$ in its bilinear
+bracket. This gives the equivalent normalization with the original
+cover bracket.
+\end{proof}
+
+The target of \eqref{hp:eq:finite-isomorphism} is formed by taking
+invariant \emph{linear} generators before applying $\mathsf S$.
+It is generally smaller than the invariant algebra
+$\mathsf S(V_H(\widetilde V))^G$. To see this already in polynomial
+degree two, choose a cohomologically even generator on an evenly covered open set
+and denote its cyclic sheet translates by $x_1,\ldots,x_m$.
+The invariant linear span is generated by $\sum_i x_i$, whereas
+$\sum_i x_i^2$ is not a scalar multiple of $(\sum_i x_i)^2$.
+At $(x_1,x_2,x_3,\ldots)=(1,-1,0,\ldots)$ their values are $2$
+and $0$. The invariant quadratic space has dimension two for
+$m=3$ and three for $m=4$, according to the cyclic distances of
+the two indices; the symmetric square of the invariant linear
+space has dimension one. This distinguishes the underlying
+polynomial carriers. It makes no assertion about the cohomology
+of the extra invariant polynomials.
+
+There is also a distinction between the inverse on invariant
+generators and averaging from the whole cover. Choose compact
+$\beta_i,\gamma_i$ on two disjoint sheets, with
+$\int\beta_i\wedge\gamma_i=1$, obtained by translation from the
+same downstairs pair. The averages of
+$\beta_1-\beta_2$ and $\gamma_1-\gamma_2$ vanish, while their
+bracket is $2$. Thus averaging on all cover generators is not a
+Poisson retraction. The inverse in
+Proposition~\ref{hp:prop:finite} has the smaller invariant domain.
+
+For successive finite covers, sheet traces compose and degrees
+multiply. Hence their normalized traces compose as well. This
+argument uses local sheets and remains valid when the composite
+cover is not Galois.
+
+In the two fillings of the selected threefold, the root maps are
+$t=s^3$ and $t=1+s^4$. In the respective original deck markings,
+the affine terms are $\delta_0/3$ and $-\delta_1/4$; the selected
+increments are $e_4/3$ and $-f_4/4$. The invariant quotient
+covector vanishes on $\delta_i$ and evaluates the integral
+increments as $1$ and $-1$. Proposition~\ref{prop:affine-free}
+therefore gives free central actions of orders three and four.
+Away from the central fiber, nontrivial root rotations have no
+fixed base point. The total-space quotient maps are thus free
+finite covers, and Proposition~\ref{hp:prop:finite} applies with
+the full affine actions and degrees $3,4$.
+
+\subsection{Invariant total forms and their differential}
+\label{hp:subsec:invariant}
+
+We now return to $f:X\to U$. On a simply connected disk $D\subset U$,
+choose a local marking and the holomorphic origin supplied by the
+conormal section. The family has a presentation
+\begin{equation}\label{hp:eq:torus}
+ X_D=\bigl(D\times\mathbb C^2\bigr)/
+             \bigl(\mathbb Z^2+\Omega(z)\mathbb Z^2\bigr),
+ \qquad \det(\Omega-\bar\Omega)\ne0.
+\end{equation}
+The period matrix here belongs to the actual divisor-line quotient.
+If $\tau$ is the normalized elliptic period and $\mu$ is the
+Abel--Jacobi coordinate of the section $P$, the theta-ratio frame
+of $\mathcal O(P-O)$ has multiplier $e^{2\pi i\mu}$ under the
+$\tau$ period. The further quotient covers translation by $-6P$.
+Its multiplier in this frame is independent of the elliptic
+coordinate, since the ratio of two such lifts is holomorphic on a
+compact elliptic curve. Write that multiplier as $e^{2\pi i\sigma}$.
+The four periods are therefore
+\begin{equation}\label{hp:eq:native-periods}
+ (1,0),\quad(0,1),\quad(\tau,\mu),\quad(-6\mu,\sigma),
+ \qquad
+ \Omega=\begin{pmatrix}\tau&-6\mu\\ \mu&\sigma\end{pmatrix}.
+\end{equation}
+The function $\sigma$ includes the chosen lift and the fixed
+parameter $u$. It is not assumed constant or proportional to $\tau$.
+
+Write $w=x+\Omega(z)y$, with $x,y$ real modulo $\mathbb Z^2$.
+For constant real vectors $a,b$, the translation
+$w\mapsto w+a+\Omega(z)b$ is holomorphic on the total space.
+These translations form a locally flat real four-torus. Their
+normalized Haar average on total forms is denoted by $R$.
+A change of integral marking is an automorphism of this compact
+torus and preserves Haar measure; changing the origin is a
+translation. Thus $R$ is intrinsic.
+
+The relevant invariant forms are absolute forms on $X_D$. They
+include forms in the base direction. Put
+\begin{equation}\label{hp:eq:coframe}
+ \mathsf Y=\Omega-\bar\Omega,\qquad
+ \theta=dw-d\Omega\,y=dx+\Omega\,dy,\qquad
+ \bar\theta=d\bar w-d\bar\Omega\,y=dx+\bar\Omega\,dy.
+\end{equation}
+The forms $dz,\theta_1,\theta_2$ and
+$d\bar z,\bar\theta_1,\bar\theta_2$ give an invariant
+$(1,0)$ and $(0,1)$ coframe. An invariant form is uniquely a
+finite sum of their wedge monomials with smooth base coefficients.
+Consequently invariant $(p,q)$-forms define a finite-rank smooth
+bundle on $U$. Denote its compactly supported sections by
+$W^{p,q}(D)$, and set
+\begin{equation}\label{hp:eq:finite-linear}
+ W(D)=W_\chi(D)\oplus W_\beta(D)\oplus W_\gamma(D)
+ =W^{\leq1,\bullet}(D)[3]\oplus W^{3,\bullet}(D)[3]
+                              \oplus W^{0,\bullet}(D)[1].
+\end{equation}
+Compact support here means compact support of the base coefficients.
+Since $f$ is proper, this is equivalent to compact total-space
+support for invariant forms. Haar averaging of a compact support
+stays inside the inverse image of its compact projection to the
+base. Thus there are support-preserving maps
+\begin{equation}\label{hp:eq:IR}
+ I:W(D)\longrightarrow V_H(X_D),\qquad
+ R:V_H(X_D)\longrightarrow W(D),\qquad RI=1.
+\end{equation}
+Holomorphic translations commute with $\partial$ and
+$\bar\partial$, so $I$ and $R$ commute with
+\eqref{hp:eq:differential}. Write $D_W$ for the restricted
+differential on $W$.
+
+This differential is explicit. Define
+\[
+ C=\frac{d\Omega}{dz}\mathsf Y^{-1},\qquad
+ \widetilde C=\frac{d\bar\Omega}{d\bar z}\mathsf Y^{-1}.
+\]
+The tilde is part of the notation: $\widetilde C$ is not the
+complex conjugate of $C$. From
+$dy=\mathsf Y^{-1}(\theta-\bar\theta)$ one obtains
+\begin{equation}\label{hp:eq:four-blocks}
+\begin{aligned}
+ \partial\theta&=C\,dz\wedge\theta,&
+ \bar\partial\theta&=-C\,dz\wedge\bar\theta,\\
+ \partial\bar\theta&=\widetilde C\,d\bar z\wedge\theta,&
+ \bar\partial\bar\theta&=-\widetilde C\,d\bar z\wedge\bar\theta.
+\end{aligned}
+\end{equation}
+Together with differentiation of the base coefficients and the
+Leibniz rule, these four blocks determine the operators on all
+wedge monomials. Apply $\partial$ as an internal differential only
+in $W_\chi$, with the same truncation as before.
+
+The second block is the cotangent extension of the varying family.
+Indeed, the relative holomorphic frame is the class of $\theta$
+modulo base one-forms. In the flat Betti frame $dx,dy$, its
+derivative is $\Omega'\,dy$. Projection modulo the relative
+$(1,0)$ subspace gives the Kodaira--Spencer map
+\begin{equation}\label{hp:eq:KS}
+ \operatorname{KS}([\theta])=-C[\bar\theta]\otimes dz.
+\end{equation}
+In particular the derivatives of $\mu$ and $\sigma$ in
+\eqref{hp:eq:native-periods} are retained. The finite complex
+contains more than the fiberwise cohomology dimensions.
+
+\subsection{Fiber integration and the finite comparison}
+\label{hp:subsec:comparison}
+
+The finite model inherits both brackets by actual oriented
+integration along the fibers:
+\begin{equation}\label{hp:eq:finite-brackets}
+\begin{aligned}
+ B_{W,\chi}(a,a')&=\int_D f_*
+                   \bigl(Ia\wedge\partial Ia'\bigr),\\
+ B_{W,\beta\gamma}(b,c)&=\int_D f_*
+                   \bigl(Ib\wedge Ic\bigr).
+\end{aligned}
+\end{equation}
+The complex orientation fixes $f_*$. Haar measure was normalized to
+construct a projection; it is not substituted for the trace in
+these formulas. In the local coframe, the relative trace is
+determined by the actual number
+\[
+ \int_{F_z}\theta_1\wedge\theta_2
+                    \wedge\bar\theta_1\wedge\bar\theta_2,
+ \qquad F_z=f^{-1}(z),
+\]
+with the same orientation and wedge signs throughout.
+
+The coherent coefficients can be identified without discarding
+the differential. Define independently
+\[
+ E_0=\mathrm Rf_*\mathcal O_X,\qquad
+ E_1=\mathrm Rf_*\Omega^1_{X/U},\qquad
+ \omega_{X/U}=\Omega^2_{X/U}.
+\]
+Invariant relative Dolbeault forms represent these derived direct
+images: this follows from the relative Fourier contraction proved
+below, or from its vertical part alone. Their base Dolbeault
+operators are induced by \eqref{hp:eq:four-blocks}. The absolute
+cotangent complex has the additional block \eqref{hp:eq:KS}.
+Wedge product and the same oriented integral give relative Serre
+duality in the form
+\begin{equation}\label{hp:eq:Serre}
+ \mathrm Rf_*\omega_{X/U}[2]\xrightarrow{\ \cong\ }E_0^\vee.
+\end{equation}
+The shift $[2]$ is the complex dimension of the fiber. Explicitly,
+the class of $\bar\theta_I$ pairs with
+$\theta_1\wedge\theta_2\wedge\bar\theta_J$ when $I,J$ are
+complementary subsets of $\{1,2\}$. The resulting matrix is
+nondegenerate, with entries given by the displayed oriented trace
+and its wedge signs. This proves the local identification in
+\eqref{hp:eq:Serre}; holomorphic pullback and integration make it
+compatible with changes of chart. Likewise
+\[
+ E_1\otimes E_1\longrightarrow
+ \mathrm Rf_*\omega_{X/U}\longrightarrow\mathcal O_U[-2]
+\]
+is wedge followed by trace. On $E_1[1]$ it is the degree-zero
+graded symmetric pairing used for the reduced chiral boson.
+These are the coefficient pairings underlying the two blocks
+in \eqref{hp:eq:finite-brackets}.
+
+Put $\mathcal O_W(D)=(\mathsf S(W(D)),D_W)$, with those brackets.
+The pushforward observable algebra is, by definition,
+$(f_*\mathcal O_H)(D)=\mathcal O_H(f^{-1}D)$.
+
+\begin{theorem}[Smooth-base Hamiltonian comparison]
+\label{hp:thm:comparison}
+For the selected smooth proper torus family and the resolved
+observable model \eqref{hp:eq:observables}, the inclusion of invariant
+total forms induces a strict unital $P_0$ factorization
+quasi-isomorphism
+\begin{equation}\label{hp:eq:main}
+ \mathsf S(I):\mathcal O_W\longrightarrow f_*\mathcal O_H
+\end{equation}
+on $U$. This holds separately in either fixed symmetric-tensor
+realization described above. The map $\mathsf S(R)$ is a chain
+homotopy inverse. The objects, differentials and inclusion are
+intrinsic under the actual affine changes of chart; no Poisson
+property of $\mathsf S(R)$ is asserted.
+\end{theorem}
+
+\begin{proof}
+We first construct a continuous contraction of the linear
+complexes. Choose a smooth invariant Hermitian metric in the
+vertical tangent directions and an invariant complex-linear
+horizontal splitting. Such choices exist globally: average local
+choices over the compact translation tori, then combine them with
+a partition of unity on the base. They are auxiliary to the
+contraction, not to $W,D_W,I$ or $R$.
+
+In a marked chart, expand coefficients in the characters
+\[
+ e_k(x,y)=\exp\bigl(2\pi i(r^t x+s^t y)\bigr),
+ \qquad k=(r,s)\in\mathbb Z^2\oplus\mathbb Z^2.
+\]
+Let $d_0$ be vertical Dolbeault differentiation. On the $k$th
+character it is exterior multiplication by
+\begin{equation}\label{hp:eq:symbol}
+ q_k=2\pi i(r^t\Omega-s^t)\mathsf Y^{-1}\bar\theta.
+\end{equation}
+For $k\ne0$, this covector is nonzero. Indeed,
+$r^t\Omega=s^t$ with $r,s$ real implies
+$r^t\operatorname{Im}\Omega=0$, hence $r=s=0$.
+Contraction by the Hermitian dual of $q_k$, divided by
+$\lVert q_k\rVert^2$, gives an operator $h_0$ of degree $-1$.
+Set $h_0=0$ on the zero character. With $\Pi=IR$, exterior
+multiplication and contraction give
+\begin{equation}\label{hp:eq:vertical-contraction}
+ d_0h_0+h_0d_0=1-\Pi,\qquad
+ h_0^2=0,\qquad h_0I=0,\qquad Rh_0=0.
+\end{equation}
+
+These Fourier formulas define operators on smooth compactly
+supported forms. On any compact base set $K$, the real-linear
+symbol map in \eqref{hp:eq:symbol} is uniformly invertible, so
+\[
+ \lVert q_k(z)\rVert\geq c_K|k|\qquad(z\in K, k\ne0)
+\]
+for some $c_K>0$. The coefficients of $h_0$ and all their base
+derivatives have at most polynomial growth in $k$. Smooth Fourier
+coefficients decay faster than any power, so the transformed
+series and all its derivatives converge. These estimates also
+give continuity on each fixed compact-support Fr\'echet space.
+The construction does not enlarge the projection of the support
+to the base. Properness then gives compact total support and
+continuity on its inductive limit. In particular there is no
+small-divisor problem: the symbol is elliptic on every nonzero
+real lattice covector.
+
+Write $D_H=d_0+\delta$. The remaining Dolbeault terms raise base
+form degree. In the $\chi$ summand the additional truncated
+$\partial$ raises total holomorphic degree. Give a form weight
+equal to its base form degree plus its total holomorphic degree
+in $V_\chi$. The latter degree is at most one and base form
+degree is at most two. Thus $\delta h_0$ raises a bounded weight,
+and
+\[
+ (\delta h_0)^4=0.
+\]
+For $V_\beta,V_\gamma$, the base-degree filtration alone suffices
+and gives a shorter bound. Define the finite operator
+\begin{equation}\label{hp:eq:homotopy}
+ H=h_0(1+\delta h_0)^{-1}
+   =h_0\sum_{j=0}^{3}(-\delta h_0)^j.
+\end{equation}
+The perturbation preserves each Fourier character. Therefore
+$h_0\delta I=0$ and $R\delta h_0=0$, so the inclusion and
+projection require no correction. Expanding the finite sum,
+using \eqref{hp:eq:vertical-contraction} and
+$(d_0+\delta)^2=0$, cancels consecutive powers of $\delta h_0$
+and gives
+\begin{equation}\label{hp:eq:contraction}
+ D_HH+HD_H=1-IR,
+ \qquad RI=1,
+ \qquad D_W=RD_HI.
+\end{equation}
+Every term of $H$ is continuous and preserves base support.
+The construction using the global invariant choices agrees with
+these local Fourier formulas, so \eqref{hp:eq:contraction} is a
+global identity. It is also compatible with extension by zero.
+
+We next pass to all polynomial degrees. On the $n$th tensor power,
+with the usual graded tensor signs, put
+\[
+ K_n=\sum_{j=1}^{n}\Pi^{\otimes(j-1)}\otimes H
+                         \otimes1^{\otimes(n-j)}.
+\]
+The tensor differential satisfies
+\[
+ D K_n+K_nD
+ =\sum_{j=1}^{n}\Pi^{\otimes(j-1)}\otimes(1-\Pi)
+                         \otimes1^{\otimes(n-j)}
+ =1-\Pi^{\otimes n}.
+\]
+Average $K_n$ over the finite symmetric group, with its Koszul
+action, to descend the identity to the symmetric power. The
+operators extend continuously to each completed projective
+tensor power as well. Taking the same direct sum over $n$ gives
+the asserted chain homotopy inverse; in degree zero the maps
+are the identity on $\mathbb C$ and the homotopy is zero.
+
+By \eqref{hp:eq:finite-brackets}, $I$ preserves both brackets
+exactly. Hence its symmetric extension is strict $P_0$ and unital.
+All the maps commute with extension by zero on the base, and
+inverse images of disjoint opens are disjoint. They therefore
+commute with the factorization operations in every arity.
+Objectwise quasi-isomorphism transfers the factorization descent
+of the stated resolved model to $\mathcal O_W$. Finally, an affine
+holomorphic change of torus chart preserves invariant total
+forms, their exterior operators and oriented integration. It
+therefore preserves the objects and the inclusion in
+\eqref{hp:eq:main}. The explicit changes of chart are described
+in Section~\ref{hp:subsec:gluing}.
+\end{proof}
+
+The failure of a Poisson averaging map persists for a smooth
+torus. Opposite nonzero Fourier characters can have a nonzero
+integrated $\beta\gamma$ pairing, although both have zero Haar
+average. Thus the proof uses the bracket-preserving inclusion
+and the chain contraction for different purposes. It also keeps
+the kernel resolution fixed: relative harmonic representatives
+do not identify the kernel of every possible reduced
+presymplectic operator with the resolution in
+\eqref{hp:eq:kernel-recipe}.
+
+\subsection{The constant-family calibration}
+\label{hp:subsec:constant}
+
+For a product $X_D=F\times D$, the period matrix is constant and
+all four differential blocks in \eqref{hp:eq:four-blocks} vanish. This
+specialization makes a distinction between fields and observables
+visible without any variation of Hodge structure.
+Write $H^{p,q}(F)=H^q(F,\Omega_F^p)$. Translation-invariant
+Dolbeault forms represent these spaces. The $\chi$ generators
+split as
+\begin{equation}\label{hp:eq:constant-split}
+\begin{aligned}
+ W_\chi(D)&=Z(D)\oplus C_\chi(D),\\
+ Z(D)&=\bigl(\Omega^{\mathrm{dR}}_{D,c}
+                         \otimes H^{0,\bullet}(F)\bigr)[3],\\
+ C_\chi(D)&=\bigl(\Omega^{0,\bullet}_{D,c}
+                         \otimes H^{1,\bullet}(F)\bigr)[3].
+\end{aligned}
+\end{equation}
+In the last line $H^{1,q}(F)$ retains its holomorphic degree one
+in the total $\chi$ degree. The differential on $Z$ is the base
+de Rham differential, and the differential on $C_\chi$ is
+$\bar\partial_D$.
+
+\begin{proposition}[The central polynomial factor]
+\label{hp:prop:central}
+For the constant family, $Z(D)$ has zero bracket with all linear
+generators. Consequently the resolved observable algebra has a
+central factor $\mathsf S(Z(D))$:
+\begin{equation}\label{hp:eq:central-factor}
+ \mathcal O_W(D)=\mathsf S(Z(D))\otimes
+                 \mathsf S\bigl(C_\chi(D)\oplus
+                                W_\beta(D)\oplus W_\gamma(D)\bigr),
+\end{equation}
+with the matching finite tensor convention. If $D$ is a disk,
+$\mathsf S(Z(D))$ is not quasi-isomorphic to the unit algebra.
+\end{proposition}
+
+\begin{proof}
+A $Z$ form has vertical holomorphic degree zero. On a constant
+torus, $\partial$ of an invariant form differentiates only its
+base coefficients. Pairing a $Z$ form with another invariant
+$\chi$ form cannot produce vertical holomorphic degree two;
+when both terms contain the base holomorphic form, their wedge
+vanishes instead. Thus $B_{W,\chi}(Z,W_\chi)=0$.
+The other mixed brackets vanish by
+\eqref{hp:eq:brackets}. The symmetric algebra of the direct sum
+then gives \eqref{hp:eq:central-factor}.
+
+Compactly supported de Rham cohomology of a disk is $\mathbb C$
+in degree two and zero otherwise. Hence
+\begin{equation}\label{hp:eq:central-cohomology}
+ H^{q-1}(Z(D))=H^{0,q}(F),\qquad q=0,1,2.
+\end{equation}
+The polynomial differential preserves polynomial degree, so this
+nonzero linear cohomology cannot disappear in the symmetric
+algebra. This proves the final assertion.
+\end{proof}
+
+The remaining two factors have the familiar chiral and
+$\beta\gamma$ descriptions. The pairing on $H^{1,\bullet}(F)[1]$
+is wedge and Serre trace, and the $\beta\gamma$ coefficients are
+$H^\bullet(F,\mathcal O_F)$ with their graded duals. Their
+dimensions, with degrees retained, are
+\[
+ \bigl(h^0(\mathcal O_F),h^1(\mathcal O_F),h^2(\mathcal O_F)\bigr)
+ =(1,2,1),\qquad
+ \bigl(h^0(\Omega_F^1),h^1(\Omega_F^1),h^2(\Omega_F^1)\bigr)
+ =(2,4,2).
+\]
+The central factor in \eqref{hp:eq:central-factor} is an additional
+part of the actual resolved observable pushforward.
+
+By comparison, the product compactification of the field complex
+contains the zero-presymplectic summand
+\begin{equation}\label{hp:eq:zero-field}
+ \mathcal E_{\mathrm{rad}}
+ =\bigl(\Omega_D^{\mathrm{dR}}\otimes
+                    H^{0,\bullet}(F)\bigr)[2]
+\end{equation}
+in the presymplectic field decomposition of
+\cite[\S7.1.2]{SaberiWilliamsConstraints}. If Hamiltonian
+observables are constructed directly from this summand, its
+kernel is all of $\mathcal E_{\mathrm{rad}}$. Use the identity
+as the kernel resolution map. The linear resolved observable
+complex is then a shifted density dual of the cone of the
+identity, hence contractible. Its symmetric algebra has
+cohomology $\mathbb C$, with the scalar unit preserved. This is
+also the order-zero radical case of the Hamiltonian construction.
+
+Thus pushing forward the specified resolved observable model and
+applying Hamiltonian observables to the reduced zero-pairing
+field summand give different answers to this calibration:
+$\mathsf S(Z)$ and the unit, respectively. The augmentation
+removing $\mathsf S(Z)$ is a unital $P_0$ map, but
+\eqref{hp:eq:central-cohomology} shows that it is not a
+quasi-isomorphism. Identifying the two procedures would require
+an additional comparison of kernel resolutions or an explicitly
+specified quotient. A field-level equivalence alone supplies
+neither.
+
+\subsection{A nonzero Kodaira--Spencer coefficient at a regular value}
+\label{hp:subsec:variation}
+
+The actual elliptic equation gives a direct example in which the
+mixed block of \eqref{hp:eq:four-blocks} is indispensable. At
+$t=2$, equation~\eqref{hol:eq:surface} is
+\[
+ y^2=x^3-24x+32,
+\]
+with ordered real roots
+\[
+ e_1=4,\qquad e_2=-2+2\sqrt3,\qquad e_3=-2-2\sqrt3.
+\]
+Define the elliptic parameter and complete integral by
+\begin{equation}\label{hp:eq:elliptic-parameter}
+ m=\frac{e_2-e_3}{e_1-e_3},\qquad
+ K(m)=\int_0^{\pi/2}\frac{d\phi}{\sqrt{1-m\sin^2\phi}}.
+\end{equation}
+Here $m$ is the square of the modulus. In the positive rectangular
+marking the actual periods of $dx/(2y)$ are
+\begin{equation}\label{hp:eq:elliptic-periods}
+ A=\frac{2K(m)}{\sqrt{e_1-e_3}},\qquad
+ B=\frac{2iK(1-m)}{\sqrt{e_1-e_3}},\qquad
+ \tau=\frac BA=i\frac{K(1-m)}{K(m)}.
+\end{equation}
+These are the rectangular period integrals
+\cite[\S23.6(iv)]{DLMFElliptic}; the chosen cycles continue
+holomorphically near $t=2$.
+
+For the cubic $x^3+A_0(t)x+B_0(t)$, put
+$A_0=-3t^3(t-1)$ and $B_0=2t^4(t-1)^2$.
+Since $A_0'(2)=-60$ and $B_0'(2)=128$, implicit differentiation
+gives
+\[
+ e_i'(2)=-\frac{A_0'(2)e_i+B_0'(2)}{3e_i^2+A_0(2)}.
+\]
+Thus
+\begin{equation}\label{hp:eq:root-jets}
+\begin{gathered}
+ e_1'=\frac{14}{3},\qquad
+ e_2'=\frac{-7+8\sqrt3}{3},\qquad
+ e_3'=\frac{-7-8\sqrt3}{3},\\
+ m_*:=m(2)=\sqrt3-1,\qquad
+ m_*'=\frac{2\sqrt3-3}{6}>0.
+\end{gathered}
+\end{equation}
+The derivative of $K$ and Legendre's relation, expressed in the
+parameter $m$, are
+\[
+ \frac{dK}{dm}=\frac{E(m)}{2m(1-m)}-\frac{K(m)}{2m},
+ \qquad
+ E(m)K(1-m)+E(1-m)K(m)-K(m)K(1-m)=\frac\pi2,
+\]
+where $E(m)=\int_0^{\pi/2}\sqrt{1-m\sin^2\phi}\,d\phi$
+\cite[\S\S19.4,19.7]{DLMFElliptic}. Differentiating
+\eqref{hp:eq:elliptic-periods} therefore yields
+\begin{equation}\label{hp:eq:tau-derivative}
+ a:=\tau'(2)
+ =-\frac{i\pi m_*'}{4m_*(1-m_*)K(m_*)^2}\ne0.
+\end{equation}
+The factor $4$ here includes the conversion from modulus to
+parameter.
+
+Normalize $\mu$ by the $A$ period of $dx/(2y)$ and the actual
+section $P=(0,\sqrt2\,t^2(t-1))$. Retain $\sigma$, the logarithm
+of the original quotient-lift multiplier. Set $b=\mu'(2)$ and $c=\sigma'(2)$;
+no nonvanishing assumption on $b$ or $c$ is needed. Then
+\[
+ \Omega'(2)=\begin{pmatrix}a&-6b\\b&c\end{pmatrix},
+ \qquad \mathsf Y_* =\Omega(2)-\bar\Omega(2).
+\]
+Suppose only the finite-model term
+$\bar\partial\theta=-C\,dt\wedge\bar\theta$ is discarded,
+with the inclusion, the source differential, all periods and
+every other block fixed. On $\theta_1$, the coefficient of
+$dt\wedge\bar\theta$ in $D_HI-I\widetilde D_W$ is then
+\begin{equation}\label{hp:eq:KS-residual}
+ -[a,-6b]\mathsf Y_*^{-1}.
+\end{equation}
+For $\mathbf e_1=(1,0)^t$, its value on
+$\mathsf Y_*\mathbf e_1/a$ is exactly $-1$. In particular the
+unchanged inclusion is no longer a chain map. Multiplying
+$\theta_1$ by a smooth base bump equal to one near $2$ places
+this example in the actual compactly supported generator
+complex. The bump-derivative terms agree on the two sides and
+cancel. The failure therefore concerns the compact observable
+comparison itself, not merely a choice of period frame or a
+flatness equation for another connection.
+
+\subsection{Affine overlaps, root coefficients and cusp transport}
+\label{hp:subsec:gluing}
+
+The finite model uses absolute forms, so an affine change of
+origin contributes derivatives in base directions. Choose a
+holomorphic lift $b(z)$ of a translation section, and write uniquely
+$b=r+\Omega s$ with $r,s$ real smooth vectors. Translation
+$T_b:w\mapsto w+b$ acts by
+\begin{equation}\label{hp:eq:affine-pullback}
+ T_b^*\theta=\theta+db-d\Omega\,s,
+ \qquad
+ T_b^*\bar\theta=\bar\theta+d\bar b-d\bar\Omega\,s.
+\end{equation}
+Changing the lift to $b+n+\Omega m$, with integral constant
+$n,m$, changes $s$ to $s+m$ and leaves these formulas unchanged.
+Their inverses are the pullbacks for $T_{-b}$. Integral changes
+of marking act by their actual holomorphic pullbacks on the
+same total-form complex. Such pullbacks preserve $W$, commute
+with $I,R,\partial,\bar\partial$, and preserve the integration
+pairings. Their compositions are the compositions of the
+original maps, so no separate choice of homotopy enters the
+overlap identities.
+
+For the finite collars these maps can be written using the
+specified integral periods. Set
+\[
+ (d_0,d_1)=(3,4),\qquad v_0=e_4,\qquad v_1=-f_4,
+ \qquad h_i(s)=\frac{\log s}{2\pi i}v_i(s).
+\]
+If $\rho_i$ is the original affine deck map and
+$\widetilde\rho_i$ is obtained by adding $v_i/d_i$, the actual
+period identity gives
+\[
+ h_i(\zeta_i s)=A_i(s)h_i(s)+v_i(\zeta_i s)/d_i,
+ \qquad
+ T_{h_i}\rho_i=\widetilde\rho_iT_{h_i},
+ \qquad \zeta_i=e^{2\pi i/d_i}.
+\]
+Both sides contain the original affine term. Formula
+\eqref{hp:eq:affine-pullback} applies to these logarithmic
+translations, with all derivatives retained. The conormal
+comparisons add the windings $-2\delta_0$ and $-\delta_1$,
+so the whole collar vectors remain
+\[
+ w_0=e_4-2\delta_0,\qquad w_1=-f_4-\delta_1,
+\]
+as in \eqref{hol:eq:boundary-vectors}. In particular the radial
+part of $\log s$ is part of the overlap map.
+
+On a punctured cusp disk the full periods are
+\begin{equation}\label{hp:eq:cusp-periods}
+ \Omega_\infty(q)=\frac{\log q}{2\pi i}I_2+B(q),
+ \qquad
+ B(q)=\frac1{2\pi i}
+ \begin{pmatrix}\log c_1&\log c_3\\\log c_2&\log c_4\end{pmatrix},
+\end{equation}
+where all four $c_j$ are the actual holomorphic units in
+\eqref{c26:eq:periods}. For the original divisor-line quotient
+the multiplicative generators are
+$(q c_1,p)$ and $(p^{-6},u q b)$ from
+\eqref{hol:eq:cusp-generators}; the adapted marking carries
+these units through its stated monomial change. In the notation
+of \eqref{cmp:eq:cusp}, the overlap itself has the form
+\[
+ (\eta_1,\eta_2)\longmapsto
+ \left(s_1s_2^2e^{2\pi i(\eta_1+2\eta_2)},
+                     s_2e^{2\pi i\eta_2}\right),
+\]
+where $s_1,s_2$ denote the two unit coordinates of the retained
+section. Its monomial matrix is unimodular, and division by
+these units followed by the inverse monomial map gives its
+inverse. Their logarithmic derivatives are included when it
+acts on total forms.
+
+The same marking determines integral cohomology transport.
+For positive continuation around the cusp, in the ordered
+period basis $(\alpha_1,\alpha_2,\beta_1,\beta_2)$, put
+\begin{equation}\label{hp:eq:cusp-matrices}
+ T=\begin{pmatrix}1&0&1&0\\0&1&0&1\\0&0&1&0\\0&0&0&1\end{pmatrix},
+ \qquad
+ L=\begin{pmatrix}1&0&0&0\\0&-1&0&0\\-1&1&1&0\\0&0&0&1\end{pmatrix}.
+\end{equation}
+The columns of $L$ express that basis in the common $e$ marking.
+Equation~\eqref{c26:eq:nativemonodromy} gives
+\begin{equation}\label{hp:eq:dual-transport}
+ LTL^{-1}=T_\infty=
+ \begin{pmatrix}2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1\end{pmatrix},
+ \qquad
+ T_{H^1}=T_\infty^{-T}.
+\end{equation}
+Indeed, if a cycle is transported by $T_\infty$, preservation
+of its evaluation against a covector requires
+$T_\infty^tT_{H^1}=I$. Higher cohomology uses the corresponding
+exterior powers. Substituting $T_\infty$ itself for $T_{H^1}$
+fails this identity: the $(1,1)$ entry of
+$T_\infty^tT_\infty-I$ is $4$.
+Thus recombining the invariant Dolbeault forms into de Rham
+cohomology retains the full integral unipotent transport. The
+finite discriminant representation cannot replace it.
+
+Over a good-reduction root disk, Theorem~\ref{hp:thm:comparison}
+and Proposition~\ref{hp:prop:finite} combine. The cyclic action
+preserves invariant total forms. Averaging the chain homotopy
+over this finite action gives an equivariant contraction, so
+restriction to invariant linear sections remains a
+quasi-isomorphism. The descended bracket is the cover bracket
+divided by $3$ or $4$, respectively.
+The resulting coefficients on the coarse disk are the invariant
+pushforward of the smooth root coefficient sheaf. They need
+not form an ordinary smooth vector bundle in the coarse
+coordinate. For example, $|s|^2$ is invariant under root
+rotation, but its expression $|t|^{2/m}$ for $t=s^m$, with
+$m=3,4$, is not smooth at zero. The root coefficient sheaf,
+the affine action and the degree-normalized trace are all part
+of this extension.
+
+\subsection{The remaining classical and quantum questions}
+\label{hp:subsec:scope}
+
+The construction proves a comparison of the specified resolved
+classical observables on the smooth base, and finite descent at
+the two root quotients whose total-space actions are free. At the toric cusp,
+\eqref{hp:eq:cusp-periods} and \eqref{hp:eq:dual-transport}
+describe the punctured comparison. Extending it across the
+central fiber requires a Hamiltonian complex on the actual
+singular fiber and its ambient neighborhood, a comparison with
+the normalization and conductor, and compatibility of their
+support and trace maps. Smooth-fiber Fourier contraction does
+not construct these data.
+
+The coefficients above are complex, perturbative and
+polynomial. Compact lattice fields, Wu data and differential
+cocycles require their own global construction. Quantization
+must then supply the quantum operations and their anomalies;
+states and a vertex algebra require additional structures
+beyond a classical $P_0$ factorization algebra. An interacting
+ADE theory is a further problem. The bosonic target-space
+chiral differential operator gerbe of
+Section~\ref{sec:chiral-operators} also concerns a different
+observable construction. No identification of that gerbe, or
+of its possible quantum realizations, with
+\eqref{hp:eq:main} follows from the classical comparison.

@@ -1,0 +1,589 @@
+\section{Bott--Chern and Aeppli cohomology}
+\label{sec:bott-chern}
+
+A closed form of pure type can be exact for $d$ without being
+exact for $\partial\bar\partial$.
+The two differentials retain this distinction even when all
+intermediate de Rham groups vanish. We determine their additive
+cohomologies, construct the two classes in bidegree $(1,1)$,
+and use the map to the base curve to compute all their products.
+Integration then determines the Aeppli module.
+
+Throughout this section, $Y$ is the compact complex threefold of
+Theorem~\ref{cmp:thm:comparison}. We retain its fixed nonzero
+contraction parameter, integral lifts, logarithmic increments
+and adapted gluing. The Hodge calculation
+\eqref{hr:eq:hodge-table} and the Betti comparison
+\eqref{hr:eq:betti} concern this same $Y$.
+
+\subsection{Two quotients of the form complex}
+
+Write $A^{p,q}=\Gamma(Y,\mathcal A_Y^{p,q})$ for the smooth
+complex $(p,q)$-forms, with $A^{p,q}=0$ outside
+$0\le p,q\le3$. The differentials have bidegrees $(1,0)$ and
+$(0,1)$ and satisfy
+\[
+ \partial^2=\bar\partial^2=0,\qquad
+ \partial\bar\partial+\bar\partial\partial=0.
+\]
+The \emph{Bott--Chern} and \emph{Aeppli} groups are
+\begin{align}
+ H_{BC}^{p,q}(Y)
+ &=\frac{\ker(\partial:A^{p,q}\to A^{p+1,q})
+                 \cap\ker(\bar\partial:A^{p,q}\to A^{p,q+1})}
+          {\im(\partial\bar\partial:A^{p-1,q-1}\to A^{p,q})},
+       \label{bc:eq:definition-BC}\\
+ H_A^{p,q}(Y)
+ &=\frac{\ker(\partial\bar\partial:A^{p,q}\to A^{p+1,q+1})}
+          {\partial A^{p-1,q}+\bar\partial A^{p,q-1}}.
+       \label{bc:eq:definition-A}
+\end{align}
+Anticommutation puts each denominator in its numerator.
+Let $h_{BC}^{p,q}$ and $h_A^{p,q}$ denote their complex dimensions.
+We also use the row and column cohomologies
+\[
+ H_\partial^{p,q}=H^p(A^{\bullet,q},\partial),\qquad
+ H_{\bar\partial}^{p,q}=H^q(A^{p,\bullet},\bar\partial).
+\]
+The latter is the ordinary Dolbeault group
+$H^q(Y,\Omega_Y^p)$.
+
+There are two spectral sequences. The filtrations by the first
+and second bidegrees on $(\operatorname{Tot}A,d)$, with
+$d=\partial+\bar\partial$, give
+\begin{equation}\label{bc:eq:two-sequences}
+ \begin{aligned}
+ {}^{\mathrm I}E_1^{p,q}&=H_{\bar\partial}^{p,q}(Y)
+          \ \Longrightarrow\ H_{\mathrm{dR}}^{p+q}(Y;\mathbb C),
+       &{}^{\mathrm I}d_1&=[\partial],\\
+ {}^{\mathrm {II}}E_1^{p,q}&=H_\partial^{p,q}(Y)
+          \ \Longrightarrow\ H_{\mathrm{dR}}^{p+q}(Y;\mathbb C),
+       &{}^{\mathrm {II}}d_1&=[\bar\partial].
+ \end{aligned}
+\end{equation}
+The second sequence retains the original $(p,q)$ labels, so its
+first differential is vertical. Complex conjugation exchanges the
+two sequences and reflects the bidegrees. By
+Proposition~\ref{hr:prop:frolicher}, both degenerate at their
+second page, with only the two corner classes remaining.
+
+The definitions can first be evaluated on elementary complexes.
+A \emph{dot} is a one-dimensional space in one bidegree, with
+zero differentials. It contributes one class to both quotients.
+A \emph{one-arrow complex} has one-dimensional source and target,
+joined by either differential as an isomorphism. Its Bott--Chern
+class lies at the target, and its Aeppli class lies at the source.
+Indeed, the mixed differential is zero. The target is closed for
+both differentials, while the Aeppli denominator removes it.
+
+An \emph{elementary square} has basis $a,b,c,e$ in bidegrees
+$(p,q),(p+1,q),(p,q+1),(p+1,q+1)$, with
+\begin{equation}\label{bc:eq:square}
+ \partial a=b,\qquad \bar\partial a=c,\qquad
+ \partial c=-e,\qquad \bar\partial b=e.
+\end{equation}
+All other differentials vanish. The simultaneous kernel is the
+line spanned by $e=-\partial\bar\partial a$, so its Bott--Chern
+quotient is zero. The mixed kernel is spanned by $b,c,e$.
+All three vectors are incoming boundaries, so the Aeppli quotient
+also vanishes. This square therefore contributes no class to
+either theory.
+
+\subsection{The algebraic double complex and its cohomologies}
+
+A \emph{zigzag} is a double complex whose nonzero spaces are
+one-dimensional and whose support is a finite alternating
+horizontal and vertical path. Its arrows are isomorphisms, with
+successive arrows alternating between a common source and a
+common target. Its length is the number of vertices.
+Dots and one-arrow complexes have lengths one and two.
+
+Stelzig's structure theorem decomposes every bounded double
+complex over a field into elementary squares and zigzags
+\cite[Theorem~3]{StelzigDouble}.
+The multiplicities are unique, while a splitting generally is not.
+The theorem permits arbitrary vector-space dimensions in each
+bidegree. Thus it applies to $A$, whose support is bounded.
+
+Let $\mathsf C$ be the direct sum of two dots, at $(0,0)$ and
+$(3,3)$, and the following eight one-arrow complexes:
+\begin{equation}\label{bc:eq:horizontal-arrows}
+ \begin{array}{ll}
+ (0,1)\xrightarrow{\ \partial\ }(1,1),&
+ (1,1)\xrightarrow{\ \partial\ }(2,1),\\[2pt]
+ (1,2)\xrightarrow{\ \partial\ }(2,2),&
+ (2,2)\xrightarrow{\ \partial\ }(3,2),
+ \end{array}
+\end{equation}
+and their conjugate reflections
+\begin{equation}\label{bc:eq:vertical-arrows}
+ \begin{array}{ll}
+ (1,0)\xrightarrow{\ \bar\partial\ }(1,1),&
+ (1,1)\xrightarrow{\ \bar\partial\ }(1,2),\\[2pt]
+ (2,1)\xrightarrow{\ \bar\partial\ }(2,2),&
+ (2,2)\xrightarrow{\ \bar\partial\ }(2,3).
+ \end{array}
+\end{equation}
+Each vertex in these displays means a copy of $\mathbb C$, and
+each arrow is the identity in the chosen bases. Coincident
+bidegrees in different summands contain independent copies.
+In particular, consecutive displayed arrows do not compose.
+The total vector-space dimension of $\mathsf C$ is $18$.
+
+\begin{theorem}\label{bc:thm:double-complex}
+There is an isomorphism of algebraic double complexes
+\begin{equation}\label{bc:eq:splitting}
+             A\simeq\mathsf C\oplus\mathsf Q,
+\end{equation}
+where $\mathsf Q$ is a possibly infinite direct sum of elementary
+squares. The isomorphism need not be canonical, continuous or
+multiplicative.
+\end{theorem}
+
+\begin{proof}
+An even zigzag of length $2r$ contributes one rank-one
+differential on page $r$ of one of the two sequences
+\eqref{bc:eq:two-sequences}
+\cite[Proposition~6 and Corollary~7]{StelzigDouble}.
+Both sequences degenerate at $E_2$. Hence no even zigzag of
+length at least four occurs.
+For length two, the multiplicity at a specified source is the
+rank of the corresponding first differential.
+The four ranks in Proposition~\ref{hr:prop:frolicher} give
+\eqref{bc:eq:horizontal-arrows}. Conjugation gives precisely
+\eqref{bc:eq:vertical-arrows}.
+
+An odd zigzag contributes one total-cohomology class, in the
+degree shared by its two endpoints
+\cite[Proposition~6]{StelzigDouble}.
+The Betti numbers \eqref{hr:eq:betti} restrict this degree to
+zero or six. An odd zigzag of length greater than one has
+distinct endpoints. Within $0\le p,q\le3$, however, there is
+only one position in each of these two total degrees.
+Thus the odd zigzags are dots at $(0,0)$ and $(3,3)$.
+Their multiplicities are $b_0=b_6=1$.
+The structure theorem now leaves only square summands.
+\end{proof}
+
+Both sequences are needed in this argument. The four vertical
+arrows are acyclic for $\bar\partial$ and for the total
+differential, but contribute to Bott--Chern and Aeppli cohomology.
+The Betti numbers, together with the support range, exclude
+long odd zigzags. Degeneration alone does not exclude them.
+
+\begin{corollary}\label{bc:cor:tables}
+With rows indexed by $q$ and columns by $p$, the dimensions are
+\begin{equation}\label{bc:eq:tables}
+ \begin{array}{c|rrrr}
+ h_{BC}^{p,q}&p=0&1&2&3\\ \hline
+ q=0&1&0&0&0\\
+ 1&0&2&1&0\\
+ 2&0&1&2&1\\
+ 3&0&0&1&1
+ \end{array}
+ \qquad
+ \begin{array}{c|rrrr}
+ h_A^{p,q}&p=0&1&2&3\\ \hline
+ q=0&1&1&0&0\\
+ 1&1&2&1&0\\
+ 2&0&1&2&0\\
+ 3&0&0&0&1
+ \end{array}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Kernels, images and the displayed quotients commute with direct
+sums. The calculation following
+\eqref{bc:eq:definition-A} therefore applies to
+\eqref{bc:eq:splitting}. Each arrow contributes its target to
+Bott--Chern and its source to Aeppli cohomology. Add the two
+dots. Every square contributes zero by
+\eqref{bc:eq:square}. This gives every entry of
+\eqref{bc:eq:tables}, in agreement with the general corner
+description in \cite[Lemma~8]{StelzigDouble}.
+
+More explicitly, choose an isomorphism in
+\eqref{bc:eq:splitting}. Inclusion of $\mathsf C$ and projection
+onto $\mathsf C$ are maps of double complexes. Their composites
+are the identity on $\mathsf C$ and the projection with kernel
+$\mathsf Q$ on $A$. Since $\mathsf Q$ has zero cohomology in
+both theories, these maps induce inverse cohomology isomorphisms.
+\end{proof}
+
+The tables satisfy conjugation symmetry and
+$h_A^{p,q}=h_{BC}^{3-p,3-q}$. Define the non-$\partial\bar\partial$
+degrees by
+\[
+ \Delta^k(Y)=\sum_{p+q=k}\bigl(h_{BC}^{p,q}+h_A^{p,q}\bigr)-2b_k(Y).
+\]
+Their values are
+\begin{equation}\label{bc:eq:degrees}
+       (\Delta^0,\ldots,\Delta^6)=(0,2,4,4,4,2,0).
+\end{equation}
+The additive comparison does not choose preferred smooth
+representatives. In bidegree $(1,1)$, the actual differentials
+give a more intrinsic description.
+
+\subsection{Two exact classes in bidegree \texorpdfstring{$(1,1)$}{(1,1)}}
+
+The identity on forms induces projections
+\[
+ \pi_{\bar\partial}:H_{BC}^{1,1}\longrightarrow H_{\bar\partial}^{1,1},
+ \qquad
+ \pi_\partial:H_{BC}^{1,1}\longrightarrow H_\partial^{1,1},
+\]
+and maps from $H_{BC}^{1,1}$ to $H_A^{1,1}$ and
+$H_{\mathrm{dR}}^2(Y;\mathbb C)$.
+The denominators in \eqref{bc:eq:definition-BC} vanish in each
+target, so these maps are well-defined.
+
+\begin{proposition}\label{bc:prop:two-lines}
+The differentials induce a canonical isomorphism
+\begin{equation}\label{bc:eq:two-lines}
+ \begin{aligned}
+ H_{\bar\partial}^{0,1}(Y)\oplus H_\partial^{1,0}(Y)
+       &\xrightarrow{\ \sim\ }H_{BC}^{1,1}(Y),\\
+ ([\gamma],[\eta])&\longmapsto
+                       [\partial\gamma+\bar\partial\eta]_{BC}.
+ \end{aligned}
+\end{equation}
+Each summand is one-dimensional.
+The kernel of $\pi_{\bar\partial}$ is the second image line,
+and the kernel of $\pi_\partial$ is the first.
+Both projections have rank one. The maps to Aeppli and
+de Rham cohomology are zero.
+\end{proposition}
+
+\begin{proof}
+For $\bar\partial\gamma=0$, the form $\partial\gamma$ is
+closed for both differentials. Replacing $\gamma$ by
+$\gamma+\bar\partial f$ changes it by
+$\partial\bar\partial f$, which is zero in Bott--Chern
+cohomology. The conjugate argument defines the second map.
+
+The composite of the first map with $\pi_{\bar\partial}$ is
+the nonzero arrow
+${}^{\mathrm I}d_1:H_{\bar\partial}^{0,1}\to
+H_{\bar\partial}^{1,1}$. Its source has dimension one.
+The conjugate composite with $\pi_\partial$ proves that
+the second map also has rank one.
+Its image lies in $\ker\pi_{\bar\partial}$, because
+$\bar\partial\eta$ is $\bar\partial$-exact.
+The two image lines are therefore independent.
+Their dimensions sum to $h_{BC}^{1,1}=2$, proving the isomorphism
+and both kernel statements.
+
+Each image is an incoming boundary in the Aeppli quotient.
+Moreover, $d\gamma=\partial\gamma$ and
+$d\eta=\bar\partial\eta$ for the chosen representatives.
+Thus both images also vanish in de Rham cohomology.
+\end{proof}
+
+In particular, the $\partial\bar\partial$-lemma fails on $Y$.
+In its cohomological formulation, this lemma requires the
+natural map $H_{BC}^{p,q}\to H_A^{p,q}$ to be injective for
+every bidegree. Here that map is zero on the nonzero
+two-dimensional space $H_{BC}^{1,1}$.
+
+Wedge product makes $H_{BC}^{\bullet,\bullet}$ a bigraded algebra.
+Indeed, wedging a $\partial\bar\partial$-boundary with a form
+closed for both differentials gives another
+$\partial\bar\partial$-boundary. Its unit is the constant class.
+This multiplication comes from actual forms and does not require
+a multiplicative splitting of \eqref{bc:eq:splitting}.
+
+\begin{proposition}\label{bc:prop:products}
+Choose a nonzero $[\gamma]\in H_{\bar\partial}^{0,1}(Y)$
+and a $\bar\partial$-closed representative. Put
+\[
+             \alpha=\partial\gamma,\qquad
+             \beta=\bar\partial\overline\gamma.
+\]
+Their Bott--Chern classes form a basis of $H_{BC}^{1,1}$ and satisfy
+\begin{equation}\label{bc:eq:products}
+       [\alpha]_{BC}[\beta]_{BC}=0,\qquad
+       [\alpha]_{BC}^3=[\beta]_{BC}^3=0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Conjugation gives $\partial\overline\gamma=0$.
+Proposition~\ref{bc:prop:two-lines} supplies the basis.
+Both forms are $d$-exact and closed for each differential.
+The graded Leibniz rules give
+\[
+ \bar\partial(\gamma\wedge\overline\gamma)
+       =-\gamma\wedge\beta,
+ \qquad
+ \partial\bar\partial(\gamma\wedge\overline\gamma)
+       =-\alpha\wedge\beta.
+\]
+This proves the mixed-product relation with its sign.
+
+Integration defines an isomorphism
+$H_{BC}^{3,3}(Y)\to\mathbb C$.
+It is well-defined by Stokes' theorem and nonzero on a positive
+top form. Its source has dimension one by
+\eqref{bc:eq:tables}. Since
+\[
+ \alpha^3=d(\gamma\wedge\alpha^2),\qquad
+ \beta^3=d(\overline\gamma\wedge\beta^2),
+\]
+both integrals vanish. The cubic relations follow.
+\end{proof}
+
+\subsection{The pullback from the base and the two squares}
+
+The mixed relation follows from the two differentials alone.
+To determine the individual squares, we use the holomorphic map
+$f:Y\to\mathbb P^1$ of the selected threefold.
+Retain the representatives $\gamma,\alpha,\beta$ of
+Proposition~\ref{bc:prop:products}. Write
+\[
+ \mathsf B^{p,q}=H_{BC}^{p,q}(Y),\qquad
+ \mathsf B=\bigoplus_{p,q}\mathsf B^{p,q},\qquad
+ \mathsf B_+=\bigoplus_{p+q>0}\mathsf B^{p,q}.
+\]
+These are finite-dimensional complex spaces with the indicated
+bigrading. No completion or specialization of a parameter enters
+their definition.
+
+\begin{lemma}\label{bc:lem:squares}
+The classes $[\alpha]_{BC}$ and $[\beta]_{BC}$ have square zero.
+The pullback of a positive Fubini--Study form on $\mathbb P^1$
+defines a nonzero real class in $\mathsf B^{1,1}$ with square zero.
+\end{lemma}
+
+\begin{proof}
+The differentials define two lines
+\[
+ L=\partial H_{\bar\partial}^{1,2}(Y)\subset\mathsf B^{2,2},
+ \qquad
+ \overline L=\bar\partial H_\partial^{2,1}(Y)
+                                      \subset\mathsf B^{2,2}.
+\]
+The map defining $L$ is well-defined by the same boundary
+calculation as in Proposition~\ref{bc:prop:two-lines}.
+Its composite with the Dolbeault projection is the rank-one
+first differential from $(1,2)$ to $(2,2)$.
+Thus it is injective, since $h^{1,2}=1$.
+The conjugate line is nonzero and has zero Dolbeault image.
+The two lines are independent, and \eqref{bc:eq:tables} gives
+\begin{equation}\label{bc:eq:22-lines}
+                    \mathsf B^{2,2}=L\oplus\overline L.
+\end{equation}
+Moreover,
+\[
+ \alpha^2=\partial(\gamma\wedge\alpha),\qquad
+ \bar\partial(\gamma\wedge\alpha)=0.
+\]
+Hence $[\alpha^2]_{BC}\in L$, and conjugation gives
+$[\beta^2]_{BC}\in\overline L$.
+
+Choose a real positive Fubini--Study form $\omega_{FS}$ with
+integral one and put $\eta=f^*\omega_{FS}$.
+This is a smooth real semipositive closed $(1,1)$-form.
+It is nonzero because $f$ is a submersion on its regular torus
+locus. Since the base is a curve,
+\begin{equation}\label{bc:eq:base-square}
+                         \eta^2=f^*(\omega_{FS}^2)=0.
+\end{equation}
+
+Its Bott--Chern class is nonzero. Otherwise
+$\eta=\partial\bar\partial h$ for a global smooth complex function.
+Reality would give $\eta=i\partial\bar\partial\operatorname{Im}h$.
+Thus $\operatorname{Im}h$ would be plurisubharmonic on compact
+connected $Y$. The strong maximum principle makes it constant,
+contrary to $\eta\ne0$.
+One may apply that principle to the trace against any Hermitian
+metric, without a K\"ahler hypothesis.
+
+Proposition~\ref{bc:prop:two-lines} and reality now give
+\[
+ [\eta]_{BC}=c[\alpha]_{BC}+\overline c[\beta]_{BC},
+ \qquad c\ne0.
+\]
+Square this identity. The mixed term vanishes by
+\eqref{bc:eq:products}, so \eqref{bc:eq:base-square} yields
+\[
+      c^2[\alpha^2]_{BC}+\overline c^{\,2}[\beta^2]_{BC}=0.
+\]
+The two terms belong to the independent lines
+\eqref{bc:eq:22-lines}. Each therefore vanishes.
+\end{proof}
+
+Rescaling $\gamma$ by $c$ normalizes $[\eta]_{BC}$ to
+$[\alpha]_{BC}+[\beta]_{BC}$.
+This identifies a geometric semipositive class.
+It does not determine its coefficient in a separately prescribed
+period normalization or classify all Bott--Chern classes represented
+by semipositive closed $(1,1)$-forms.
+
+\subsection{All positive-degree products vanish}
+
+\begin{theorem}\label{bc:thm:ring}
+The Bott--Chern algebra of $Y$ is
+\begin{equation}\label{bc:eq:ring}
+             \mathsf B=\mathbb C\cdot1\oplus\mathsf B_+,
+             \qquad \mathsf B_+^2=0.
+\end{equation}
+Its underlying bigraded vector space is given by
+\eqref{bc:eq:tables}.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{bc:lem:squares} and \eqref{bc:eq:products} prove
+that every product of two classes in $\mathsf B^{1,1}$ is zero.
+Next choose a $\bar\partial$-closed $(1,1)$-form $\zeta$ such
+that $v=\partial\zeta$ has nonzero Dolbeault class in $(2,1)$.
+The rank-one first differential supplies this choice.
+The form $v$ is closed for both differentials and represents
+the generator of $\mathsf B^{2,1}$.
+Its conjugate generates $\mathsf B^{1,2}$.
+
+The Dolbeault class of $\gamma\wedge\alpha$ maps to
+$[\alpha^2]_{BC}=0$ under the injective map defining $L$.
+Consequently there is a smooth $(1,1)$-form $\xi$ with
+\begin{equation}\label{bc:eq:gamma-alpha}
+                   \gamma\wedge\alpha=\bar\partial\xi.
+\end{equation}
+The natural map
+$\mathsf B^{3,2}\to H_{\bar\partial}^{3,2}$ is an isomorphism.
+Indeed, both spaces are one-dimensional, and the last rank-one
+first differential supplies a nonzero element in its image.
+The Dolbeault integration pairing between
+$H_{\bar\partial}^{3,2}$ and $H_{\bar\partial}^{0,1}$ is perfect.
+The latter space is generated by $[\gamma]$, and
+\eqref{bc:eq:gamma-alpha} gives
+\[
+ \int_Y\gamma\wedge\alpha\wedge v
+      =\int_Y\bar\partial(\xi\wedge v)=0.
+\]
+Thus $[\alpha v]_{BC}=0$.
+This use of Dolbeault duality requires only a compact Hermitian
+metric: the antilinear Hodge operator gives complementary
+harmonic representatives and pairs a nonzero form to its squared
+norm. Stokes' theorem makes the pairing independent of representatives.
+
+For the second generator, the mixed primitive is explicit:
+\begin{equation}\label{bc:eq:mixed-degree-three}
+         \beta\wedge v
+             =\partial\bar\partial(\overline\gamma\wedge\zeta).
+\end{equation}
+Here $\partial\overline\gamma=0$, $\bar\partial\zeta=0$,
+and $\partial\beta=0$ give the displayed sign.
+Therefore $[\beta v]_{BC}=0$ as well.
+Conjugation proves the corresponding products with
+$\mathsf B^{1,2}$.
+
+The table \eqref{bc:eq:tables} leaves only five pairs of
+positive bidegrees with nonzero possible targets:
+\[
+ \begin{gathered}
+ \mathsf B^{1,1}\mathsf B^{1,1}\subset\mathsf B^{2,2},\qquad
+ \mathsf B^{1,1}\mathsf B^{2,1}\subset\mathsf B^{3,2},\qquad
+ \mathsf B^{1,1}\mathsf B^{1,2}\subset\mathsf B^{2,3},\\
+ \mathsf B^{1,1}\mathsf B^{2,2}\subset\mathsf B^{3,3},\qquad
+ \mathsf B^{2,1}\mathsf B^{1,2}\subset\mathsf B^{3,3}.
+ \end{gathered}
+\]
+The first three products have just been computed.
+For either remaining pair, both factors are $d$-closed and
+have positive total degree below six.
+The Betti vanishing \eqref{hr:eq:betti} makes each factor
+$d$-exact, so the product has zero integral.
+Integration is an isomorphism $\mathsf B^{3,3}\to\mathbb C$,
+as proved in Proposition~\ref{bc:prop:products}.
+Thus these two products also vanish.
+Graded commutativity handles reversed factors.
+Every other pair has zero target or leaves $0\le p,q\le3$.
+\end{proof}
+
+\subsection{The Aeppli module and integration}
+
+Put $\mathsf A^{p,q}=H_A^{p,q}(Y)$ and
+$\mathsf A=\bigoplus_{p,q}\mathsf A^{p,q}$.
+Wedge by forms closed for both differentials makes $\mathsf A$
+a left $\mathsf B$-module. It does not define an Aeppli ring.
+To verify the action, let $a$ satisfy $\partial\bar\partial a=0$.
+For a homogeneous form $h$ of total degree $|h|$, the Leibniz
+identities give
+\begin{equation}\label{bc:eq:Aeppli-boundary}
+ (\partial\bar\partial h)\wedge a
+ =\partial(\bar\partial h\wedge a)
+       +(-1)^{|h|}\bar\partial(h\wedge\partial a).
+\end{equation}
+Thus changing a Bott--Chern representative changes the product
+by an Aeppli boundary. Changing $a$ by a $\partial$- or
+$\bar\partial$-boundary also changes the product by such a boundary.
+The constant Bott--Chern class acts as the identity.
+
+Integration gives a perfect pairing
+\begin{equation}\label{bc:eq:integration-pairing}
+ \begin{aligned}
+ \mathsf B^{p,q}\times\mathsf A^{3-p,3-q}&\longrightarrow\mathbb C,\\
+ (b,a)&\longmapsto\int_Y b\wedge a.
+ \end{aligned}
+\end{equation}
+Stokes' theorem proves that it is well-defined.
+For perfection, choose an auxiliary Hermitian metric.
+The Bott--Chern and Aeppli Hodge decompositions identify the
+two groups with kernels of elliptic operators.
+The antilinear Hodge operator exchanges their complementary
+kernels and pairs a nonzero representative to its positive squared norm
+\cite[Theorem~2.2 and Section~2.c]{SchweitzerBC}.
+The resulting pairing is intrinsic.
+In particular, there is a unique $\tau_A\in\mathsf A^{3,3}$
+with $\int_Y\tau_A=1$.
+
+\begin{proposition}\label{bc:prop:Aeppli-module}
+The pairing \eqref{bc:eq:integration-pairing} identifies
+\[
+                \mathsf A^{p,q}\simeq(\mathsf B^{3-p,3-q})^*.
+\]
+For homogeneous $x\in\mathsf B_+\cap\mathsf B^{p,q}$ and
+$a\in\mathsf A^{r,s}$, the entire module action is
+\begin{equation}\label{bc:eq:Aeppli-action}
+ x\cdot a=
+ \begin{cases}
+  \displaystyle\left(\int_Yx\wedge a\right)\tau_A,
+                  &(p+r,q+s)=(3,3),\\[4pt]
+  0,              &\text{otherwise}.
+ \end{cases}
+\end{equation}
+Together with the identity action of $1\in\mathsf B$, this
+determines the module without a choice of bases.
+\end{proposition}
+
+\begin{proof}
+For homogeneous classes in complementary degrees, integration satisfies
+\[
+                 \langle b,x\cdot a\rangle=\langle bx,a\rangle.
+\]
+The factors remain in the displayed order, so no interchange sign
+is implicit. If $x\cdot a$ has bidegree other than $(3,3)$,
+every class $b$ in its complementary group has positive degree.
+Theorem~\ref{bc:thm:ring} gives $bx=0$.
+Perfection forces $x\cdot a=0$.
+In top bidegree, pairing with the unit gives exactly
+\eqref{bc:eq:Aeppli-action}. Outputs outside the support are zero.
+\end{proof}
+
+The natural map $H_{BC}^{\bullet,\bullet}\to H_A^{\bullet,\bullet}$
+is multiplication by the Aeppli class of $1$.
+It is the identity on constants, an isomorphism in bidegree
+$(3,3)$ normalized by integration, and zero in every other
+positive bidegree.
+
+These results determine multiplication on cohomology and its
+integration-dual module. The algebraic splitting
+\eqref{bc:eq:splitting} remains nonmultiplicative.
+A multiplicative finite model of the smooth double complex,
+formality, and higher Bott--Chern--Aeppli operations require
+additional constructions. Section~\ref{sec:tangent-curves}
+evaluates the Gysin classes of the toric curves by their actual
+periods. Their positive exact relations will exclude
+pluriclosed Hermitian metrics on the selected threefold.
+We first compute the differential class map relevant to these
+forms on the same selected threefold.

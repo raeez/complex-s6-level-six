@@ -1,0 +1,1016 @@
+\section{Tangent Chern classes and the toric curves}
+\label{sec:tangent-curves}
+
+The boundary curves of the toric fiber give positive integration
+currents on $Y$. Their Bott--Chern classes need not vanish with
+their de Rham classes. We relate their sum to the second Chern
+class of the tangent bundle, then compute each class by a period.
+Positive exact combinations exclude a pluriclosed Hermitian metric.
+The three curve classes have nonzero sum in Bott--Chern cohomology.
+
+Retain the selected map $f:Y=Y^{\mathrm{ad}}(u)\to B=\mathbb P^1$,
+its fixed sufficiently small nonzero $u$, and the divisor
+$D=F_3+F_4+W$ of Section~\ref{sec:canonical-coherent}.
+The integral increments, finite root fillings, adapted fan and
+period units remain those of Theorem~\ref{cmp:thm:comparison}.
+In particular, the following comparisons concern the ambient
+cotangent bundle of this filled compact threefold.
+
+\subsection{The three reduced curves}
+
+Let $\nu:S\to W$ be the normalization, with
+$S=\operatorname{Bl}_{3\text{ points}}\mathbb P^2$.
+Write $B_1,\ldots,B_6$ for its cyclically ordered boundary curves,
+and $C_j$ for the reduced image of $B_j$ and $B_{j+3}$,
+for $1\le j\le3$.
+Fix the indexing by the opposite ray pairs in the adapted angular
+lattice:
+\begin{equation}\label{tc:eq:curve-indexing}
+ C_1:\ \pm(1,1),\qquad C_2:\ \pm(0,1),\qquad
+ C_3:\ \pm(1,0).
+\end{equation}
+Let $p_+,p_-$ be the two triple points. We use the inclusions
+\[
+ i_j:C_j\hookrightarrow Y,\qquad
+ k_\pm:\{p_\pm\}\hookrightarrow Y.
+\]
+
+\begin{lemma}\label{tc:lem:curve-embeddings}
+Each restriction $B_j\to C_j$ and $B_{j+3}\to C_j$ is an
+isomorphism, and $i_j$ is a smooth holomorphic embedding.
+Thus $C_j\simeq\mathbb P^1$.
+Each individual boundary curve has image degree one.
+\end{lemma}
+
+\begin{proof}
+Use the height-one fan in Section~\ref{sec:toric-cusp}.
+A boundary component in the star of the origin corresponds to
+an edge $\{0,v\}$ of its triangulation.
+A translation preserving this edge must either fix its endpoints
+or exchange them. The first possibility is the zero translation.
+The second would give $v=-v$, which is impossible for a nonzero
+lattice vector.
+Consequently no nonidentity period identifies two points in the
+open part of this boundary curve.
+
+The two triangles adjacent to an edge have different translation
+types. Its two endpoints therefore map to the distinct triple
+points $p_+$ and $p_-$.
+Near either endpoint, the curve is a coordinate axis in the
+smooth chart $q=x_0x_1x_2$.
+The free period quotient is locally biholomorphic by
+Proposition~\ref{c26:prop:quotient}.
+It follows that the restriction to the entire compact boundary
+curve is injective and locally an embedding. It is an isomorphism
+onto its reduced image.
+The opposite boundary component is a second normalization
+component over that image, with the same degree one.
+
+The simultaneous angular and deck shear
+\eqref{hol:eq:cusp-shear}, followed by the specified unit
+translation, identifies these charts with the selected adapted
+filling. The period units occur in this biholomorphism and do not
+change the degrees. The two translation classes of triangles give
+exactly the two stated triple points.
+\end{proof}
+
+In particular, the two boundary currents together push forward
+to $2[C_j]$, while either one pushes forward to $[C_j]$.
+Here $[C_j]$ denotes integration over the reduced curve with its
+complex orientation. There is no finite stabilizer factor.
+At a triple point the third normalization branch is also present.
+It is not an additional component dominating the same double curve.
+
+\subsection{The coherent ambient cotangent identity}
+
+Let $G_0(Y)$ be the Grothendieck group of coherent analytic
+$\mathcal O_Y$-modules, with relations from short exact sequences.
+Put
+\[
+ \mathcal L_0=f^*\mathscr L_B,\qquad
+ \mathcal C_D=\bigoplus_{j=1}^3 i_{j*}\mathcal O_{C_j},\qquad
+ \mathcal P_D=k_{+*}\mathcal O_{p_+}\oplus k_{-*}\mathcal O_{p_-}.
+\]
+Recall $\mathscr E$, $\mathcal K_{\mathrm{rel}}$ and
+$\mathcal R_D=(\nu_D)_*\mathcal O_{S\sqcup F_3\sqcup F_4}$
+from \eqref{nf:eq:relative-forms},
+\eqref{nf:eq:scalar-sequence} and \eqref{hr:eq:residue-sequence}.
+
+\begin{proposition}\label{tc:prop:coherent-cotangent}
+The following identity holds in $G_0(Y)$:
+\begin{equation}\label{tc:eq:coherent-cotangent}
+ \begin{aligned}
+ [\Omega_Y^1]
+   ={}&[\mathcal L_0]+[\mathcal K_{\mathrm{rel}}]
+                         +[\mathcal O_Y(-D)]\\
+      &-\sum_{j=1}^3[i_{j*}\mathcal O_{C_j}]
+                         +[k_{+*}\mathcal O_{p_+}]
+                         +[k_{-*}\mathcal O_{p_-}].
+ \end{aligned}
+\end{equation}
+The three curve terms have coefficient one.
+\end{proposition}
+
+\begin{proof}
+The normalization complex \eqref{nf:eq:normalization-complex}
+on $W$, together with the identity normalization on $F_3,F_4$,
+gives the exact coherent complex on $Y$
+\begin{equation}\label{tc:eq:conductor-complex}
+ 0\longrightarrow\mathcal O_D
+ \longrightarrow\mathcal R_D
+ \longrightarrow\mathcal C_D
+ \longrightarrow\mathcal P_D\longrightarrow0.
+\end{equation}
+Its maps are the normalization unit and alternating branch
+restrictions through the actual gluing maps.
+Lemma~\ref{tc:lem:curve-embeddings} identifies the double-stratum
+terms with the structure sheaves of the reduced embedded curves.
+
+One can also see exactness directly on every stratum.
+In a smooth local ring $A=\mathbb C\{x_1,x_2,x_3\}$, suppose
+the reduced divisor has equation $x_1\cdots x_r=0$, with
+$1\le r\le3$. A multiplying unit can be absorbed in one coordinate.
+The local complex is
+\begin{equation}\label{tc:eq:local-conductor}
+ \begin{aligned}
+ 0\longrightarrow A/(x_1\cdots x_r)
+  &\longrightarrow\bigoplus_a A/(x_a)\\
+  &\longrightarrow\bigoplus_{a<b}A/(x_a,x_b)
+   \longrightarrow\bigoplus_{a<b<c}A/(x_a,x_b,x_c)
+   \longrightarrow0.
+ \end{aligned}
+\end{equation}
+The intersection of the coordinate ideals is their product, so
+the first map is injective. For a fixed surviving monomial,
+its zero-exponent branches form a nonempty set.
+The coefficient complex is the augmented simplex complex on
+that set and is exact. Its contraction only copies or deletes
+coefficients. It therefore preserves convergence on a common
+smaller polydisk and proves exactness for analytic germs.
+
+The two components dominating each $C_j$ are globally distinct
+copies of $\mathbb P^1$. Ordering them defines their restriction
+difference. At a triple point the other pair restrictions and
+the point term retain the third branch.
+The cyclic alternating relations give the last arrow.
+Changing branch orders conjugates the complex by signs.
+Thus the local complexes descend with the period units and give
+\eqref{tc:eq:conductor-complex} on the filled $Y$.
+Taking its class gives
+\begin{equation}\label{tc:eq:normalization-class}
+            [\mathcal R_D]=[\mathcal O_D]
+                               +[\mathcal C_D]-[\mathcal P_D].
+\end{equation}
+
+The ambient residue sequence \eqref{hr:eq:residue-sequence}
+has recipient $\mathcal R_D$.
+For example, at a double point the residue of $dx_1/x_1$
+is the independent branch tuple $(1,0)$.
+With difference $f_2-f_1$, its restriction difference is $-1$.
+It is not a matching tuple in $\mathcal O_D$.
+This explains why replacing the residue recipient by
+$\mathcal O_D$ would remove a necessary term.
+
+The two bundle sequences
+\eqref{nf:eq:absolute-log-sequence} and
+\eqref{nf:eq:scalar-sequence} give
+\[
+ [\Omega_Y^1(\log D)]
+       =[\mathcal L_0]+[\mathcal K_{\mathrm{rel}}]+[\mathcal O_Y].
+\]
+They use the actual base forms $3\,ds/s$ and $4\,ds/s$ at
+the finite fibers, and the scalar logarithmic vector at the cusp.
+Finally, the reduced divisor $D$ is Cartier, so
+\[
+ 0\longrightarrow\mathcal O_Y(-D)
+ \longrightarrow\mathcal O_Y\longrightarrow\mathcal O_D
+ \longrightarrow0.
+\]
+Subtract \eqref{tc:eq:normalization-class} from the logarithmic
+bundle identity and use this last sequence.
+The result is \eqref{tc:eq:coherent-cotangent}.
+\end{proof}
+
+This identity concerns the locally free ambient sheaf $\Omega_Y^1$.
+The intrinsic torsion-free cotangent sheaf on $W$ is a different
+object, as in Theorem~\ref{ad:thm:ambient-kernel}.
+The curve and point terms in \eqref{tc:eq:coherent-cotangent}
+are present before taking characteristic classes.
+
+\subsection{The normalized Bott--Chern character}
+
+For a holomorphic vector bundle $E$ with a Hermitian metric,
+let $R_E$ be the curvature of its Chern connection.
+We use the normalization
+\begin{equation}\label{tc:eq:character-normalization}
+ c_{BC}(E)=\left[\det\left(1-\frac{R_E}{2\pi i}\right)\right]_{BC},
+ \qquad
+ \operatorname{ch}_{BC}(E)
+     =\left[\operatorname{Tr}\exp\left(-\frac{R_E}{2\pi i}\right)
+       \right]_{BC}.
+\end{equation}
+These classes are independent of the metric.
+Their images in de Rham cohomology have the usual integral
+Chern normalization.
+
+We use two results about these classes on a compact complex
+manifold \cite[Sections~2 and~8, Theorem~9.2]{BSWCoherent}.
+First, the Chern character extends additively to $G_0$.
+Second, for a smooth compact holomorphic embedding
+$i:X\hookrightarrow Y$ with normal bundle $N_{X/Y}$,
+\begin{equation}\label{tc:eq:embedding-RR}
+ \operatorname{ch}_{BC}(i_*\mathcal O_X)
+                 =i_*\operatorname{Td}_{BC}(N_{X/Y})^{-1}.
+\end{equation}
+The pushforward is duality of currents.
+Its leading term is the integration current of $X$ with
+coefficient one. The smooth and current definitions of
+Bott--Chern cohomology agree by the elliptic decomposition
+in \cite[Section~2.2]{BSWCoherent}.
+These statements apply to coherent sheaves without requiring
+a global finite resolution by holomorphic vector bundles.
+
+Write $[C_j]_{BC}$ for the class of the integration current.
+Let $\tau_{BC}\in H_{BC}^{3,3}(Y,\mathbb R)$ have integral one.
+It is unique because integration is an isomorphism in this degree,
+as proved in Proposition~\ref{bc:prop:products}.
+
+\begin{theorem}\label{tc:thm:tangent-Chern}
+For the selected threefold,
+\begin{equation}\label{tc:eq:tangent-Chern}
+ c_{2,BC}(T_Y)=\sum_{j=1}^3[C_j]_{BC},\qquad
+ c_{3,BC}(T_Y)=2\tau_{BC}.
+\end{equation}
+The first class is represented by a nonzero positive current.
+Its Bott--Chern class will be evaluated in
+Theorem~\ref{tc:thm:evaluated-curves}.
+\end{theorem}
+
+\begin{proof}
+The positive-degree ideal of the Bott--Chern algebra has square
+zero by Theorem~\ref{bc:thm:ring}.
+For every line bundle $L$ on $Y$, it follows that
+\[
+                     \operatorname{ch}_{BC}(L)=1+c_{1,BC}(L).
+\]
+The degree-$(2,2)$ part of \eqref{tc:eq:embedding-RR} is
+\[
+                \operatorname{ch}_{2,BC}(i_{j*}\mathcal O_{C_j})
+                                   =[C_j]_{BC}.
+\]
+No additional factor of $2\pi i$ multiplies the current.
+The normalization is already in the characteristic class.
+Apply the additive character to \eqref{tc:eq:coherent-cotangent}.
+Its degree-$(2,2)$ part gives
+\[
+ \operatorname{ch}_{2,BC}(\Omega_Y^1)
+                         =-\sum_j[C_j]_{BC}.
+\]
+Since
+$\operatorname{ch}_2(\Omega_Y^1)
+=\tfrac12c_1(T_Y)^2-c_2(T_Y)$ and the square vanishes,
+this proves the first identity in \eqref{tc:eq:tangent-Chern}.
+
+For the top degree, $H^2(Y;\mathbb R)=0$ implies that
+$\det T_Y$ has degree zero on every $C_j$.
+The tangent-normal sequence on $C_j\simeq\mathbb P^1$ therefore
+gives
+\[
+                     \deg N_{C_j/Y}=-2.
+\]
+No splitting type for this rank-two normal bundle is needed.
+The linear term of its inverse Todd class is
+$-\tfrac12c_1(N_{C_j/Y})$.
+Equation~\eqref{tc:eq:embedding-RR} consequently gives
+\[
+ \int_Y\operatorname{ch}_{3,BC}(i_{j*}\mathcal O_{C_j})=1.
+\]
+Each such class equals $\tau_{BC}$, and each point class
+$\operatorname{ch}_{3,BC}(k_{\pm*}\mathcal O_{p_\pm})$
+also equals $\tau_{BC}$.
+The top-degree part of \eqref{tc:eq:coherent-cotangent} is thus
+\[
+             \operatorname{ch}_{3,BC}(\Omega_Y^1)
+                              =-3\tau_{BC}+2\tau_{BC}=-\tau_{BC}.
+\]
+All positive-degree products vanish, so the left side is
+$-c_{3,BC}(T_Y)/2$. This proves the second identity.
+Finally, $\sum_j[C_j]$ is a nonzero positive integration current
+because the three curves are nonempty.
+\end{proof}
+
+The two point terms are essential in the top-degree comparison.
+Keeping the three curve terms but omitting the point terms would
+give $c_{3,BC}(T_Y)=6\tau_{BC}$.
+Likewise, counting either boundary component with degree two
+would double its reduced-cycle contribution before passing to
+Bott--Chern cohomology.
+
+\subsection{The invariant class on the actual complex tori}
+
+To evaluate the curves, we first compare the integral fiber class
+$\xi$ of Theorem~\ref{thm:geometric-level-six} with ordinary
+Dolbeault cohomology on $Y$. The comparison has two parts: a
+local holomorphic line bundle at the cusp, and an ordinary global
+class with the same restriction. The finite logarithmic fillings
+enter the second part.
+
+Let $\delta$ be the positive line-fiber circle and let $\psi$ be
+the primitive quotient covector of
+Section~\ref{hol:sec:global-marking}.
+The class $\xi$ satisfies
+$\iota_\delta\xi=-6\psi$ and induces the positive unimodular
+elliptic intersection form on $\ker\psi/\mathbb Z\delta$.
+
+\begin{lemma}\label{tc:lem:invariant-type}
+On every smooth fiber of the selected family, $\xi$ has type
+$(1,1)$. It is the unique real $(1,1)$ alternating form with
+this contraction and this restriction to $\ker\psi$.
+\end{lemma}
+
+\begin{proof}
+Work on a simply connected disk in the regular base. Write the
+elliptic curve as $\mathbb C/(\mathbb Z+\tau\mathbb Z)$, with
+$\operatorname{Im}\tau>0$, and choose a holomorphic lift $\mu$
+of the section $P$. The theta-ratio frame of
+$\mathcal O(P-O)$ has multiplier $e^{2\pi i\mu}$ under the
+$\tau$-period and multiplier one under the $1$-period.
+The quotient generator covers translation by $-6P$.
+Its multiplier is independent of the elliptic coordinate:
+its ratio with a constant-multiplier lift is holomorphic on the
+compact elliptic curve. Choose a logarithm $\sigma$ of this
+multiplier, divided by $2\pi i$.
+The actual additive periods are therefore
+\begin{equation}\label{tc:eq:analytic-periods}
+ \begin{gathered}
+ \widetilde\alpha_1=(1,0),\qquad
+ \widetilde\alpha_2=(0,1),\qquad
+ \widetilde\beta_1=(\tau,\mu),\qquad
+ \widetilde\beta_2=(-6\mu,\sigma),\\
+ \Omega_{\mathrm{per}}=
+       \begin{pmatrix}\tau&-6\mu\\ \mu&\sigma\end{pmatrix},
+ \qquad \delta=\widetilde\alpha_2,
+ \qquad \psi=\widetilde\beta_2^{\vee}.
+ \end{gathered}
+\end{equation}
+These are the smooth-fiber counterparts of
+\eqref{hol:eq:cusp-generators}. The entry $\sigma$ retains the
+chosen linearization and the contraction parameter $u$.
+No proportionality between $\sigma$ and $\tau$ is imposed.
+The torus condition says that
+$\operatorname{Im}\Omega_{\mathrm{per}}$ is invertible.
+
+Put $Q_\xi=\operatorname{diag}(1,-6)$ and define an integral
+real alternating form $E_\xi$ by
+\begin{equation}\label{tc:eq:local-alternating-form}
+ E_\xi(\widetilde\alpha_i,\widetilde\alpha_j)
+ =E_\xi(\widetilde\beta_i,\widetilde\beta_j)=0,
+ \qquad
+ E_\xi(\widetilde\alpha_i,\widetilde\beta_j)=(Q_\xi)_{ij}.
+\end{equation}
+A real alternating form has type $(1,1)$ exactly when its
+complexification vanishes on the kernel of the period map.
+Vectors in that kernel are $(-\Omega_{\mathrm{per}}a,a)$.
+Their pairing is
+\[
+ a^t\bigl(Q_\xi\Omega_{\mathrm{per}}
+                  -\Omega_{\mathrm{per}}^tQ_\xi\bigr)a'.
+\]
+The matrix in parentheses is zero by
+\eqref{tc:eq:analytic-periods}.
+Thus $E_\xi$ has type $(1,1)$, the stated elliptic restriction,
+and contraction $-6\psi$ with $\delta$.
+
+The characterization is intrinsic. If $E$ and $E'$ have these
+properties, their difference vanishes on
+$\ker\psi\times\ker\psi$, so it is $\psi\wedge\ell$ for a
+real covector $\ell$. Its contraction with $\delta$ is zero.
+For a form of type $(1,1)$, this also makes its contraction
+with $J\delta$ zero. Solving the imaginary part of the period
+equations gives
+\begin{equation}\label{tc:eq:complex-circle}
+ \psi(J\delta)=
+ \frac{\operatorname{Im}\tau}
+      {\det(\operatorname{Im}\Omega_{\mathrm{per}})}\ne0.
+\end{equation}
+The identity
+$(\psi\wedge\ell)(J\delta,-)=0$ now forces $\ell$ to be a
+multiple of $\psi$. Hence $E=E'$.
+
+The forms \eqref{tc:eq:local-alternating-form} consequently
+agree under the actual changes of periods and frames.
+Their coefficients are constant integers in each locally flat
+period basis. They define a global flat integral class.
+The rank-one invariant-lattice theorem and the contraction
+normalization identify it with $\xi$, fixing its sign and scale.
+Continuity of the Hodge subspaces extends this type statement
+over each smooth good-reduction root family.
+\end{proof}
+
+The two signs in $Q_\xi$ are different. The type statement
+therefore does not assert that $\xi$ is a polarization.
+It uses the actual torsor multiplier and translation $-6P$.
+
+\subsection{Local line bundles and an ordinary global lift}
+
+Let $\Delta_\infty$ be a small disk about infinity and put
+$N_\infty=f^{-1}(\Delta_\infty)$.
+The toric retraction and integral specialization of
+Theorem~\ref{c26:thm:integral} give
+\begin{equation}\label{tc:eq:invariant-extension}
+ H^2(N_\infty,\mathbb Z)\simeq H^2(W,\mathbb Z)
+      \xrightarrow{\ p^*\ } H^2(F,\mathbb Z)^{T_\infty},
+\end{equation}
+where $F$ is a nearby smooth fiber and the second arrow is an
+isomorphism. This is the comparison for the full period units,
+transported by \eqref{hol:eq:cusp-isomorphism}.
+Let $x_\infty$ be the unique integral extension of $\xi$.
+
+\begin{proposition}\label{tc:prop:local-line}
+There is a holomorphic line bundle $L_\infty$ on $N_\infty$
+with $c_1(L_\infty)=x_\infty$.
+There is also a nonzero section
+\[
+ \sigma_\xi\in H^0(B,\ker\kappa_1)
+                 \subset H^0(B,\mathcal A_1)
+\]
+whose restriction to every smooth fiber is the class of $\xi$.
+It is induced locally by closed real $(1,1)$-forms on the
+absolute neighborhoods.
+\end{proposition}
+
+\begin{proof}
+The sheaf $\mathcal C_2=R^2f_*\mathcal O_Y$ is locally free
+at the cusp by Theorem~\ref{nf:thm:coherent} and its
+base-change comparison. Leray over the Stein disk identifies
+$H^2(N_\infty,\mathcal O)$ with its holomorphic sections.
+The image of $x_\infty$ restricts to the $(0,2)$ component of
+$\xi$ on every noncentral smooth fiber. That component is zero
+by Lemma~\ref{tc:lem:invariant-type}.
+A section of the locally free sheaf vanishing on the punctured
+disk vanishes everywhere. The exponential sequence therefore
+lifts $x_\infty$ to a holomorphic line bundle $L_\infty$.
+Its normalized Chern curvature is a closed real $(1,1)$-form
+representing $x_\infty$. In this normalization its integral on
+a reduced compact curve is the integer degree of the line bundle.
+
+At a finite exceptional point, pass to the smooth
+good-reduction root disk. The pulled-back $\xi$ is a flat
+integral class of type $(1,1)$ on every fiber.
+Smooth proper base change and the same exponential-sequence
+argument give a holomorphic line bundle $L$ on the root family.
+For its actual free cyclic action of order $m=3$ or $4$, the
+norm line
+\[
+                         \bigotimes_{g\in\mu_m}g^*L
+\]
+has the canonical permutation linearization and descends to
+the quotient neighborhood $N_m$. Its pullback Chern class is
+$m\xi$, since the flat class is invariant under this action.
+Divide the normalized Chern curvature of the descended line by
+$m$. This gives an absolute real $(1,1)$-class inducing $\xi$.
+The division is in real or complex cohomology. It does not
+assert integral descent of $\xi$ at order four; the integral
+index of that filling is unchanged.
+
+The same construction on regular disks gives local sections of
+$\mathcal A_1=R^1f_*\mathscr E$.
+They agree on regular overlaps, where they represent the same
+fiber class $\xi$. Local freeness of $\mathcal A_1$ extends
+that equality over the exceptional points.
+They give the global section $\sigma_\xi$.
+Each local section comes from absolute logarithmic one-form
+cohomology, so its image under the connecting map $\kappa_1$
+is zero. Its smooth-fiber restriction is nonzero.
+\end{proof}
+
+\begin{proposition}\label{tc:prop:ordinary-lift}
+There is a class
+\[
+ z_{\bar\partial,\xi}=[\zeta_\xi]_{\bar\partial}
+                      \in H^1(Y,\Omega_Y^1)
+\]
+mapping to $\sigma_\xi$. It is unique modulo the incoming
+first Fr\"olicher differential. It satisfies
+\begin{equation}\label{tc:eq:cusp-Dolbeault-comparison}
+ z_{\bar\partial,\xi}|_{N_\infty}
+       =c_1(L_\infty)\quad\text{in }H^1(N_\infty,\Omega^1),
+ \qquad
+ v_\xi=[\partial\zeta_\xi]_{\bar\partial}\ne0.
+\end{equation}
+Here $c_1(L_\infty)$ denotes the Dolbeault image of the
+normalized Chern class, and $v_\xi$ is a cohomology class,
+distinct from the contraction parameter $u$.
+\end{proposition}
+
+\begin{proof}
+Use $\mathcal P_q$, $\mathcal K_1$ and
+$\mathcal T=\mathbb C_0\oplus\mathbb C_1$ from
+\eqref{hr:eq:absolute-direct-images}.
+The exact sequence
+\[
+ 0\longrightarrow\mathcal T\longrightarrow\mathcal P_1
+        \longrightarrow\mathcal K_1\longrightarrow0,
+ \qquad
+ \mathcal K_1\simeq\mathcal O_B\oplus\mathcal O_B(-1)^{\oplus2}
+\]
+is onto on global sections. Since $H^1(B,\mathcal P_0)=0$,
+Leray lifts $\sigma_\xi$ to
+$H^1(Y,\Omega_Y^1(\log D))$.
+The actual residue map identifies
+\[
+                 \mathcal T\xrightarrow{\ \sim\ }
+                              R^1f_*\mathcal R_D.
+\]
+Its finite normalizations are
+$dt/t=3\,ds/s$ and $d(t-1)/(t-1)=4\,ds/s$;
+equation~\eqref{hr:eq:normalized-residue} gives the two inverse
+generators. At the cusp its target is
+$H^1(S,\mathcal O_S)=0$.
+Subtract the unique torsion component having the same residue
+as the logarithmic lift. The resulting class has residue zero.
+The ordinary residue sequence \eqref{hr:eq:residue-sequence}
+therefore supplies $z_{\bar\partial,\xi}$.
+
+Its ambiguity is the degree-zero residue cokernel, a
+one-dimensional line of divisor classes from the base.
+These classes have $\partial$-closed Chern representatives.
+The exact first-differential row in
+Proposition~\ref{hr:prop:frolicher} identifies that line with
+the incoming $d_1$ image.
+
+It remains to compare the ordinary class at the cusp.
+The map $\kappa_0$ is invertible on a sufficiently small
+$\Delta_\infty$, including its full unit terms, by
+Proposition~\ref{hr:prop:KS}.
+The absolute logarithmic sequence on this Stein disk makes
+\begin{equation}\label{tc:eq:first-cusp-injection}
+ H^1(N_\infty,\Omega^1(\log W))
+       \longrightarrow H^1(N_\infty,\mathscr E)
+\end{equation}
+injective: its kernel is the cokernel of $\kappa_0$ on
+sections. Moreover,
+$H^0(N_\infty,\mathcal R_W)=H^0(S,\mathcal O_S)=\mathbb C$,
+and $d\log q$ has residue one. The residue sequence makes
+\begin{equation}\label{tc:eq:second-cusp-injection}
+ H^1(N_\infty,\Omega^1)
+       \longrightarrow H^1(N_\infty,\Omega^1(\log W))
+\end{equation}
+injective as well.
+
+The restrictions of $z_{\bar\partial,\xi}$ and of the
+normalized Chern class of $L_\infty$ have the same image
+$\sigma_\xi$ in the relative group.
+The two injections prove the first equality in
+\eqref{tc:eq:cusp-Dolbeault-comparison}.
+The incoming-$d_1$ ambiguity has zero logarithmic image and
+hence restricts to zero here.
+Finally, the nonzero relative image of $z_{\bar\partial,\xi}$
+shows that it is not on that incoming line.
+Exactness of the same Fr\"olicher row gives $v_\xi\ne0$.
+\end{proof}
+
+\subsection{The three complex-oriented periods}
+
+The local analytic basis in \eqref{tc:eq:analytic-periods}
+has $\delta=\widetilde\alpha_2$.
+The adapted cusp basis is different: the simultaneous
+coordinate and deck shear \eqref{hol:eq:cusp-shear}, with the
+chosen logarithm branches, gives
+\begin{equation}\label{tc:eq:adapted-period-basis}
+ \alpha_1=e_1-e_3,\qquad \alpha_2=e_3-e_2,\qquad
+ \beta_1=e_3,\qquad \beta_2=e_4,
+ \qquad \delta=-2\alpha_1+\alpha_2.
+\end{equation}
+All four periods enter the following computation.
+
+\begin{theorem}\label{tc:thm:actual-periods}
+With the indexing \eqref{tc:eq:curve-indexing} and the
+normalized ordinary class of Proposition~\ref{tc:prop:ordinary-lift},
+\begin{equation}\label{tc:eq:actual-periods}
+ \int_{C_1}\zeta_\xi=-2,\qquad
+ \int_{C_2}\zeta_\xi=3,\qquad
+ \int_{C_3}\zeta_\xi=0.
+\end{equation}
+Each integral uses the reduced curve with its positive
+complex orientation.
+\end{theorem}
+
+\begin{proof}
+The matrix of $\xi$ in the common basis is
+\[
+ M_\xi=\begin{pmatrix}
+ 0&3&1&0\\-3&0&-2&0\\-1&2&0&-2\\0&0&2&0
+ \end{pmatrix}.
+\]
+Conjugating by the columns of
+\eqref{tc:eq:adapted-period-basis} gives the six coefficients
+\begin{equation}\label{tc:eq:adapted-xi}
+                 (0,1,2,2,-2,-2)
+\end{equation}
+in the lexicographic wedge order
+$(\alpha_1\alpha_2,\alpha_1\beta_1,\alpha_1\beta_2,
+  \alpha_2\beta_1,\alpha_2\beta_2,\beta_1\beta_2)$.
+The degree-two specialization in \eqref{c26:eq:homologyp} is
+\[
+ P_2=\begin{pmatrix}
+ 0&-1&1&1&-1&0\\
+ 0&1&0&0&0&0\\
+ 0&0&0&0&1&0\\
+ 0&0&0&0&0&1
+ \end{pmatrix}.
+\]
+Thus the central class $x_\infty$ has values
+\begin{equation}\label{tc:eq:central-values}
+       c=(2,3,0,-2)^t
+       \quad\text{on }(E_0,E_1,E_2,h),
+       \qquad P_2^tc=(0,1,2,2,-2,-2)^t.
+\end{equation}
+Uniqueness follows from the integral specialization theorem.
+
+The cells $E_j$ have base-first orientations, which must now
+be compared with the complex orientations.
+The relevant vertices are
+$v_0=(1,0)$, $v_1=(0,1)$, $v_2=(-1,1)$ and $v_3=(-1,0)$.
+The oriented edges are
+$e_0=[v_0,v_1]$, $e_1=[v_2,v_1]$, $e_2=[v_2,v_3]$,
+with residual angle characters
+$\lambda_0=(-1,1)$, $\lambda_1=(-1,0)$, $\lambda_2=(0,1)$.
+Write $\zeta_{\mathrm{tor}}$ for the two dense torus coordinates.
+For an edge from $a$ to $b$, the negative moment coordinate
+\eqref{c26:eq:moment} has holomorphic residual coordinate
+\[
+ s=\zeta_{\mathrm{tor}}^{-(b-a)},\qquad
+                  y=\frac{a+|s|^2b}{1+|s|^2}.
+\]
+Moving from $a$ to $b$ increases $|s|$.
+The complex orientation is increasing $|s|$ followed by
+increasing $\arg s$. The exponent $-(b-a)$ equals
+$-\lambda_0$ on $e_0$, and equals $\lambda_1,\lambda_2$
+on $e_1,e_2$. Consequently
+\begin{equation}\label{tc:eq:complex-curve-cells}
+                  [C_1]=-E_0,\qquad [C_2]=E_1,
+                  \qquad [C_3]=E_2
+\end{equation}
+in $H_2(W,\mathbb Z)$.
+The unit transport of Section~\ref{sec:toric-cusp} and the
+adapted cusp isomorphism preserve each central stratum and
+its complex orientation.
+
+By \eqref{tc:eq:cusp-Dolbeault-comparison}, integration of
+$\zeta_\xi$ on each curve equals the corresponding degree
+of $L_\infty$.
+Equations~\eqref{tc:eq:central-values} and
+\eqref{tc:eq:complex-curve-cells} give $(-2,3,0)$.
+Lemma~\ref{tc:lem:curve-embeddings} gives degree one for each
+individual normalization branch, so no factor of two enters.
+\end{proof}
+
+\subsection{Period coordinates for the curve classes}
+
+Let
+\[
+ j_{BC}:H_{BC}^{2,2}(Y)\longrightarrow H^2(Y,\Omega_Y^2)
+\]
+be the natural Dolbeault map.
+The decomposition \eqref{bc:eq:22-lines} has
+$L=\partial H_{\bar\partial}^{1,2}(Y)$.
+The map $j_{BC}$ is injective on $L$ and zero on $\overline L$.
+It is therefore injective on the real Bott--Chern plane:
+if a real class has zero $L$ component, its conjugate component
+also vanishes. This applies to current classes through the
+smooth-current comparison above.
+
+Use $\zeta=\zeta_\xi$ in Proposition~\ref{cq:prop:two-differentials},
+and write
+\[
+       z=[\zeta]_A,\qquad v=v_\xi
+                     =[\partial\zeta]_{\bar\partial}\ne0.
+\]
+Serre duality supplies a $\bar\partial$-closed form $\nu$ of
+type $(1,2)$ with
+\begin{equation}\label{tc:eq:period-normalization}
+           \int_Y\partial\zeta\wedge\nu=1,
+           \qquad w=[\partial\nu]_{BC}.
+\end{equation}
+The class $w$ generates $L$.
+Define the three periods and their sum by
+\begin{equation}\label{tc:eq:curve-periods}
+                a_j=\int_{C_j}\zeta,\qquad A=a_1+a_2+a_3.
+\end{equation}
+The normalization of $v$ is now fixed by the integral class $\xi$.
+The periods do not depend on its chosen $\bar\partial$-closed lift $\zeta$.
+
+\begin{proposition}\label{tc:prop:curve-coordinates}
+With these normalizations,
+\begin{equation}\label{tc:eq:curve-coordinates}
+ [C_j]_{BC}=-a_jw-\overline{a_j}\,\overline w,
+ \qquad
+ c_{2,BC}(T_Y)=-Aw-\overline A\,\overline w.
+\end{equation}
+For a real pluriclosed form $\omega$, define $t_C\in\mathbb C$ by
+\[
+           \iota\Phi([\omega]_A)=t_C v,
+\]
+using \eqref{cq:eq:forgetful} and \eqref{cq:eq:class-map}.
+Then
+\begin{equation}\label{tc:eq:Courant-area}
+           \int_{C_j}\omega=\operatorname{Im}(t_C a_j),\qquad
+           \int_Y\Bigl(\sum_j[C_j]\Bigr)\wedge\omega
+                            =\operatorname{Im}(t_CA).
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Stokes' theorem and \eqref{tc:eq:period-normalization} give
+\begin{equation}\label{tc:eq:period-pairings}
+       \int_Y\zeta\wedge w=-1,
+       \qquad \int_Y\zeta\wedge\overline w=0.
+\end{equation}
+The second equality uses $\bar\partial\zeta=0$ and
+$\overline w=[\bar\partial\overline\nu]_{BC}$.
+The two conjugate classes $w,\overline w$ form a basis.
+Reality of $[C_j]_{BC}$ and the first pairing in
+\eqref{tc:eq:period-pairings} determine its two coefficients,
+giving the first formula in \eqref{tc:eq:curve-coordinates}.
+The tangent formula follows by summing.
+
+For independence of the lift, let $\zeta'$ be another such form
+with $[\partial\zeta']_{\bar\partial}=v$.
+The exact first-differential row of
+Proposition~\ref{hr:prop:frolicher} gives
+\[
+         \zeta'-\zeta=\partial\gamma+\bar\partial\theta,
+         \qquad \bar\partial\gamma=0,
+\]
+for forms $\gamma$ of type $(0,1)$ and $\theta$ of type $(1,0)$.
+Their pullbacks to a compact curve have zero integral by Stokes,
+since the other bidegree components vanish there.
+Thus every $a_j$ is unchanged.
+
+A real Aeppli class has the form $cz+\overline c\,\overline z$.
+Theorem~\ref{cq:thm:class-map} gives $t_C=2ic$.
+Its pairing with $[C_j]$ is
+$ca_j+\overline c\,\overline{a_j}=2\operatorname{Re}(ca_j)$,
+which equals $\operatorname{Im}(t_Ca_j)$.
+This proves \eqref{tc:eq:Courant-area}.
+\end{proof}
+
+Let
+\begin{equation}\label{tc:eq:curve-cone}
+ \mathcal C_{\mathrm{tor}}
+    =\left\{\sum_{j=1}^3\lambda_j[C_j]_{BC}:
+                                  \lambda_j\in\mathbb R_{\ge0}\right\}.
+\end{equation}
+A nonzero nonnegative coefficient vector gives a relation with
+zero precisely when
+\begin{equation}\label{tc:eq:cone-zero}
+              \lambda_1a_1+\lambda_2a_2+\lambda_3a_3=0.
+\end{equation}
+This tests Bott--Chern exactness of a linear combination of the
+reduced curve currents. Its coefficients are real, independently
+of integral divisor relations.
+
+\begin{theorem}\label{tc:thm:evaluated-curves}
+Put $\rho_{BC}=w+\overline w$. Then $\rho_{BC}\ne0$ and
+\begin{equation}\label{tc:eq:evaluated-curves}
+ [C_1]_{BC}=2\rho_{BC},\qquad
+ [C_2]_{BC}=-3\rho_{BC},\qquad [C_3]_{BC}=0,
+ \qquad c_{2,BC}(T_Y)=-\rho_{BC}\ne0.
+\end{equation}
+The complete nonnegative zero cone among these three reduced
+curve classes is
+\begin{equation}\label{tc:eq:exact-positive-cone}
+ \left\{(\lambda_1,\lambda_2,\lambda_3)\in\mathbb R_{\ge0}^3:
+                       \sum_j\lambda_j[C_j]_{BC}=0\right\}
+       =\{(3s,2s,t):s,t\ge0\}.
+\end{equation}
+The sum of the three periods is $A=1$.
+\end{theorem}
+
+\begin{proof}
+The two conjugate classes $w,\overline w$ are independent,
+so their sum is nonzero.
+Substitute \eqref{tc:eq:actual-periods} into
+\eqref{tc:eq:curve-coordinates}.
+The three curve classes are $(2,-3,0)\rho_{BC}$, and their
+sum is $-\rho_{BC}$.
+A real linear combination has zero class exactly when
+$2\lambda_1-3\lambda_2=0$.
+The nonnegative solutions are precisely
+$(\lambda_1,\lambda_2,\lambda_3)=(3s,2s,t)$ with $s,t\ge0$.
+Finally, $A=-2+3+0=1$.
+\end{proof}
+
+In particular, the positive relations do not make the sum
+$[C_1]+[C_2]+[C_3]$ Bott--Chern exact.
+For a real pluriclosed form the three curve integrals are
+\begin{equation}\label{tc:eq:evaluated-areas}
+ \left(\int_{C_1}\omega,\int_{C_2}\omega,\int_{C_3}\omega\right)
+                   =(-2,3,0)\operatorname{Im}(t_C).
+\end{equation}
+
+\subsection{Global current potentials and the metric condition}
+
+The current version of the real Bott--Chern quotient is
+\begin{equation}\label{tc:eq:real-current-BC}
+ H_{BC}^{2,2}(Y,\mathbb R)
+  =\frac{\{T\text{ real of type }(2,2):dT=0\}}
+         {\{i\partial\bar\partial S:
+                               S\text{ real of type }(1,1)\}}.
+\end{equation}
+An auxiliary Hermitian metric gives a useful global primitive
+whenever a class vanishes.
+Put $P=\partial\bar\partial$, let $\Delta_{BC}$ be the real
+elliptic Bott--Chern Laplacian, and let $G_{BC}$ be its Green
+operator on the complement of its harmonic kernel.
+We extend these operators to currents.
+
+\begin{proposition}\label{tc:prop:global-potential}
+For every real closed $(2,2)$-current $T$ with $[T]_{BC}=0$,
+\begin{equation}\label{tc:eq:global-potential}
+          S=-iP^*G_{BC}T
+          \quad\text{is real and satisfies}\quad
+          T=i\partial\bar\partial S.
+\end{equation}
+Consequently, a relation \eqref{tc:eq:cone-zero} with
+$(\lambda_1,\lambda_2,\lambda_3)\ne0$ excludes a pluriclosed
+Hermitian metric on $Y$.
+In particular, $A=0$ excludes such a metric.
+\end{proposition}
+
+\begin{proof}
+On the simultaneous kernel of $\partial$ and $\bar\partial$,
+the Bott--Chern Laplacian is $PP^*$.
+It preserves this closed subspace, as does its Green operator
+\cite[equations~(2.9)--(2.13)]{BSWCoherent}.
+The harmonic projection of $T$ vanishes exactly when
+$[T]_{BC}=0$. Hence
+\[
+                        T=PP^*G_{BC}T.
+\]
+Complex conjugation anticommutes with $P$ and $P^*$ and
+commutes with the real Green operator.
+Thus $P^*G_{BC}T$ is purely imaginary, and
+\eqref{tc:eq:global-potential} follows.
+The smooth-current elliptic decomposition supplies this identity
+and closed range on the entire compact $Y$.
+No local potentials need to be patched across finite or cusp
+overlaps.
+
+For a nonzero nonnegative vector $\lambda$, the current
+$T_\lambda=\sum_j\lambda_j[C_j]$ is positive and nonzero.
+If \eqref{tc:eq:cone-zero} holds, it has the global potential
+just constructed. A strictly positive pluriclosed form $\omega$
+would satisfy
+\[
+        0<\sum_j\lambda_j\int_{C_j}\omega
+          =\langle i\partial\bar\partial S,\omega\rangle
+          =\langle S,i\partial\bar\partial\omega\rangle=0,
+\]
+a contradiction. For $A=0$, take all three coefficients equal
+to one.
+\end{proof}
+
+There is also an unconditional transgression formula.
+If $c_2(T_Y,h)$ is a smooth Chern--Weil representative in
+\eqref{tc:eq:character-normalization}, then
+\[
+ U=\sum_j[C_j]-c_2(T_Y,h)
+\]
+has zero Bott--Chern class by Theorem~\ref{tc:thm:tangent-Chern}.
+Applying \eqref{tc:eq:global-potential} to $U$ gives a real
+global current whose $i\partial\bar\partial$ is this difference.
+This formula does not require $A=0$.
+
+Define the cone of classes of pluriclosed Hermitian metrics by
+\begin{equation}\label{tc:eq:SKT-cone}
+ \mathcal P_{\mathrm{SKT}}(Y)
+ =\{[\omega]_A:\omega>0,\ \overline\omega=\omega,
+                         \ \partial\bar\partial\omega=0\}
+\end{equation}
+where $\omega$ is smooth.
+
+\begin{theorem}\label{tc:thm:no-SKT}
+The selected threefold $Y$ admits no pluriclosed Hermitian
+metric:
+\[
+                         \mathcal P_{\mathrm{SKT}}(Y)=\varnothing.
+\]
+For $s,t\ge0$, the global current
+\[
+                  T_{s,t}=s(3[C_1]+2[C_2])+t[C_3]
+\]
+has a real potential
+$S_{s,t}=-iP^*G_{BC}T_{s,t}$ satisfying
+$T_{s,t}=i\partial\bar\partial S_{s,t}$.
+It is positive and nonzero whenever $(s,t)\ne(0,0)$.
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{tc:thm:evaluated-curves} makes the harmonic
+Bott--Chern projection of $T_{s,t}$ zero.
+Proposition~\ref{tc:prop:global-potential} gives its stated
+potential on the entire compact $Y$.
+The coefficients are nonnegative and the curves are distinct
+nonempty reduced curves, so their currents cannot cancel.
+If $\omega$ were a pluriclosed Hermitian form, then
+\[
+ 0<\int_{C_3}\omega
+    =\langle i\partial\bar\partial S_{0,1},\omega\rangle
+    =0
+\]
+by integration by parts. This is a contradiction.
+The other generator $3[C_1]+2[C_2]$ gives a second positive
+exact current.
+\end{proof}
+
+The auxiliary Hermitian metric used to define $G_{BC}$ is
+unrestricted. The obstruction excludes every smooth positive
+pluriclosed form, not only forms invariant under a chosen action.
+The class map of Theorem~\ref{cq:thm:class-map} and its
+holomorphic Courant algebroids remain defined on all real
+Aeppli classes; none of those classes has a pluriclosed
+Hermitian representative on this $Y$.
+The fixed nonzero parameter and selected finite and cusp
+fillings remain part of this assertion.
+
+\subsection{A Calabi--Eckmann comparison}
+
+The distinction between de Rham and Bott--Chern classes is
+visible on a different compact threefold.
+Consider
+\begin{equation}\label{tc:eq:CE-quotient}
+ M_{CE}=
+ \bigl((\mathbb C^2\setminus\{0\})\times
+       (\mathbb C^2\setminus\{0\})\bigr)/\mathbb C,
+ \qquad
+ \gamma\cdot(z,w)=(e^\gamma z,e^{i\gamma}w).
+\end{equation}
+This is the Calabi--Eckmann example of
+\cite[Example~2.8]{GFJSCourant}.
+Writing $\gamma=s+it$, the two norms change by $e^s$ and
+$e^{-t}$. Every orbit therefore has a unique representative
+with $|z|=|w|=1$. The quotient is diffeomorphic to
+$S^3\times S^3$ and fibers holomorphically over
+$\mathbb P^1\times\mathbb P^1$ with elliptic fibers.
+
+On the two Hopf factors choose the real connections $\mu_j$
+with circle period $2\pi$, and write $\nu_j=d\mu_j$.
+The forms $\nu_j$ are pullbacks of positive base forms with
+integral $2\pi$.
+Let $\xi_j$ be the circle fields, normalized by
+$\mu_j(\xi_j)=1$.
+The quotient complex structure has $J\xi_1=\xi_2$ and hence
+\[
+ J^*\mu_1=-\mu_2,\qquad J^*\mu_2=\mu_1,
+ \qquad J^*\nu_j=\nu_j.
+\]
+The horizontal complex structures are those of the two bases.
+Thus
+\begin{equation}\label{tc:eq:CE-metric}
+                  \omega_{CE}=\nu_1+\nu_2+\mu_1\wedge\mu_2
+\end{equation}
+is a positive real $(1,1)$-form. In particular,
+$\omega_{CE}(\xi_1,J\xi_1)=1$.
+Its torsion, for $d^c=i(\bar\partial-\partial)$, is
+\begin{equation}\label{tc:eq:CE-torsion}
+ \begin{aligned}
+ d\omega_{CE}&=\nu_1\wedge\mu_2-\mu_1\wedge\nu_2,\\
+ H_{CE}=-d^c\omega_{CE}=J^*d\omega_{CE}
+               &=\nu_1\wedge\mu_1+\nu_2\wedge\mu_2,\\
+ dH_{CE}&=\nu_1^2+\nu_2^2=0.
+ \end{aligned}
+\end{equation}
+Both torsion signs are positive for the stated dual-connection
+convention. Each square vanishes because its form comes from
+a curve. Therefore \eqref{tc:eq:CE-metric} is pluriclosed.
+
+On an elliptic fiber $E$, the complex orientation is
+$d\theta_1\wedge d\theta_2$, and
+\begin{equation}\label{tc:eq:CE-area}
+ \int_E\omega_{CE}
+    =\int_0^{2\pi}\int_0^{2\pi}d\theta_1\,d\theta_2
+    =4\pi^2.
+\end{equation}
+Yet $H_2(M_{CE};\mathbb R)=H^4(M_{CE};\mathbb R)=0$.
+Thus $[E]$ is de Rham exact as a current, while
+$[E]_{BC}\ne0$.
+If $[E]=i\partial\bar\partial S$, pairing with the same
+$\omega_{CE}$ would give $0=4\pi^2$ by integration by parts.
+The positive area is therefore a direct obstruction to that
+claimed Bott--Chern primitive.
+
+The two torsion periods also have their fixed values:
+\[
+ \int_{S^3\times\{*\}}H_{CE}=4\pi^2,
+ \qquad
+ \int_{\{*\}\times S^3}H_{CE}=4\pi^2,
+\]
+with the Hopf orientations. Hence $[H_{CE}]$ is nonzero in
+$H^3(M_{CE};\mathbb R)$.
+On the selected $Y$, by contrast, $H^3(Y;\mathbb R)=0$ and
+every closed real torsion form is exact.
+This difference does not transfer the Calabi--Eckmann metric
+to $Y$. On the selected $Y$, the positive exact curve current
+of Theorem~\ref{tc:thm:no-SKT} excludes such a metric.

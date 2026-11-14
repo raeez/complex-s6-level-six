@@ -1,0 +1,1259 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{raeez-math-template}[2026/04/24 shared mathematical monograph template]
+
+% Canonical template for the chiral bar-cobar trilogy.
+% The manuscript owns mathematical notation; this package owns typography,
+% theorem structure, claim-status display, anchors, and shared diagram styles.
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% --------------------------------------------------------------------------
+% Font system
+% --------------------------------------------------------------------------
+%
+% The house face is Garamond, but the important constraint is not merely
+% "Garamond text": the math italic, operators, subscripts, figures, small
+% caps, and page colour must belong to the same optical system.
+%
+% pdfLaTeX remains the compatibility baseline for the existing manuscripts.
+% LuaLaTeX/XeLaTeX are the print-first path: they may use Adobe Garamond
+% Premier Pro when the complete family is installed. We never synthesize
+% italic, bold, or small caps for the book face.
+
+\def\raeez@font@auto{auto}
+\def\raeez@font@premier{premier}
+\def\raeez@font@adobepro{adobepro}
+\def\raeez@font@adobepropreview{adobepropreview}
+\def\raeez@font@ebgaramond{ebgaramond}
+\def\raeez@fontprofile{auto}
+\newif\ifraeez@subscriptcorrection
+\newif\ifraeez@theorems
+\raeez@theoremstrue
+\ifdefined\raeezfontprofile
+  \let\raeez@fontprofile\raeezfontprofile
+\fi
+\DeclareOption{auto}{\def\raeez@fontprofile{auto}}
+\DeclareOption{font=auto}{\def\raeez@fontprofile{auto}}
+\DeclareOption{premier}{\def\raeez@fontprofile{premier}}
+\DeclareOption{garamondpremier}{\def\raeez@fontprofile{premier}}
+\DeclareOption{garamond-premier}{\def\raeez@fontprofile{premier}}
+\DeclareOption{adobepremier}{\def\raeez@fontprofile{premier}}
+\DeclareOption{font=premier}{\def\raeez@fontprofile{premier}}
+\DeclareOption{adobepro}{\def\raeez@fontprofile{adobepro}}
+\DeclareOption{adobe-garamond-pro}{\def\raeez@fontprofile{adobepro}}
+\DeclareOption{agaramondpro}{\def\raeez@fontprofile{adobepro}}
+\DeclareOption{font=adobepro}{\def\raeez@fontprofile{adobepro}}
+\DeclareOption{adobepropreview}{\def\raeez@fontprofile{adobepropreview}}
+\DeclareOption{adobe-preview}{\def\raeez@fontprofile{adobepropreview}}
+\DeclareOption{adobepreview}{\def\raeez@fontprofile{adobepropreview}}
+\DeclareOption{font=adobepropreview}{\def\raeez@fontprofile{adobepropreview}}
+\DeclareOption{ebgaramond}{\def\raeez@fontprofile{ebgaramond}}
+\DeclareOption{eb}{\def\raeez@fontprofile{ebgaramond}}
+\DeclareOption{font=ebgaramond}{\def\raeez@fontprofile{ebgaramond}}
+\DeclareOption{subscriptcorrection}{\raeez@subscriptcorrectiontrue}
+\DeclareOption{nosubscriptcorrection}{\raeez@subscriptcorrectionfalse}
+\DeclareOption{theorems}{\raeez@theoremstrue}
+\DeclareOption{notheorems}{\raeez@theoremsfalse}
+\DeclareOption{localtheorems}{\raeez@theoremsfalse}
+\DeclareOption*{%
+  \PackageWarning{raeez-math-template}{Unknown option `\CurrentOption'}%
+}
+\ProcessOptions\relax
+
+\RequirePackage{iftex}
+\newif\ifraeez@premieravailable
+\newif\ifraeez@adobeproavailable
+\newif\ifraeez@adobeproregularavailable
+
+\ifPDFTeX
+  \ifx\raeez@fontprofile\raeez@font@premier
+    \PackageWarningNoLine{raeez-math-template}{%
+      The `premier' profile requires LuaLaTeX or XeLaTeX; using EB Garamond%
+    }%
+  \fi
+  \ifx\raeez@fontprofile\raeez@font@adobepro
+    \PackageWarningNoLine{raeez-math-template}{%
+      The `adobepro' profile requires LuaLaTeX or XeLaTeX; using EB Garamond%
+    }%
+  \fi
+  \input glyphtounicode.tex
+  \pdfgentounicode=1
+  \RequirePackage{cmap}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage{lmodern}
+  \RequirePackage[oldstyle,proportional,semibold]{ebgaramond}
+  \RequirePackage[scaled=0.92]{sourcesanspro}
+  \RequirePackage[scaled=0.92]{inconsolata}
+  \InputIfFileExists{t1zi4.fd}{}{}
+  \DeclareFontShape{T1}{zi4}{m}{it}{<->ssub*zi4/m/n}{}
+  \DeclareFontShape{T1}{zi4}{b}{it}{<->ssub*zi4/b/n}{}
+  \DeclareFontShape{T1}{zi4}{bx}{it}{<->ssub*zi4/b/n}{}
+  \newcommand{\raeezdisplayfont}{}
+  \ifraeez@subscriptcorrection
+    \RequirePackage[
+      ebgaramond,
+      subscriptcorrection,
+      noamssymbols,
+      smallerops,
+      vvarbb,
+      alth
+    ]{newtxmath}
+  \else
+    \RequirePackage[
+      ebgaramond,
+      nosubscriptcorrection,
+      noamssymbols,
+      smallerops,
+      vvarbb,
+      alth
+    ]{newtxmath}
+  \fi
+\else
+  \RequirePackage{fontspec}
+  \ifLuaTeX
+    \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase,Renderer=HarfBuzz}
+  \else
+    \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+  \fi
+	  \def\raeez@detectpremier{%
+	    \IfFontExistsTF{GaramondPremrPro}{%
+	      \IfFontExistsTF{GaramondPremrPro-It}{%
+	        \IfFontExistsTF{GaramondPremrPro-Smbd}{%
+	          \IfFontExistsTF{GaramondPremrPro-SmbdIt}{\raeez@premieravailabletrue}{}%
+	        }{}%
+	      }{}%
+	    }{}%
+	  }%
+		  \def\raeez@detectadobepro{%
+		    \IfFontExistsTF{AGaramondPro-Regular}{%
+          \raeez@adobeproregularavailabletrue
+		      \IfFontExistsTF{AGaramondPro-Italic}{%
+	        \IfFontExistsTF{AGaramondPro-Semibold}{%
+	          \IfFontExistsTF{AGaramondPro-SemiboldItalic}{%
+	            \raeez@adobeproavailabletrue
+	            \def\raeez@adobepro@bold{AGaramondPro-Semibold}%
+	            \def\raeez@adobepro@bolditalic{AGaramondPro-SemiboldItalic}%
+	          }{}%
+	        }{}%
+	        \ifraeez@adobeproavailable\else
+	          \IfFontExistsTF{AGaramondPro-Bold}{%
+	            \IfFontExistsTF{AGaramondPro-BoldItalic}{%
+	              \raeez@adobeproavailabletrue
+	              \def\raeez@adobepro@bold{AGaramondPro-Bold}%
+	              \def\raeez@adobepro@bolditalic{AGaramondPro-BoldItalic}%
+	            }{}%
+	          }{}%
+	        \fi
+	      }{}%
+		    }{}%
+		  }%
+		  \def\raeez@detectadobeproregular{%
+		    \IfFontExistsTF{AGaramondPro-Regular}{\raeez@adobeproregularavailabletrue}{}%
+		  }%
+	  \ifx\raeez@fontprofile\raeez@font@auto
+	    \raeez@detectpremier
+	    \raeez@detectadobepro
+	  \else\ifx\raeez@fontprofile\raeez@font@premier
+	    \raeez@detectpremier
+			  \else\ifx\raeez@fontprofile\raeez@font@adobepro
+			    \raeez@detectadobepro
+			  \else\ifx\raeez@fontprofile\raeez@font@adobepropreview
+			    \raeez@detectadobeproregular
+			  \fi\fi\fi\fi
+  \ifx\raeez@fontprofile\raeez@font@auto
+    \ifraeez@premieravailable
+      \def\raeez@fontprofile{premier}%
+    \else
+      \ifraeez@adobeproavailable
+        \def\raeez@fontprofile{adobepro}%
+      \else
+        \def\raeez@fontprofile{ebgaramond}%
+      \fi
+    \fi
+  \fi
+  \ifx\raeez@fontprofile\raeez@font@premier
+    \ifraeez@premieravailable\else
+      \PackageError{raeez-math-template}{%
+        Garamond Premier Pro profile requested but the complete family is not installed%
+      }{Install GaramondPremrPro, GaramondPremrPro-It, GaramondPremrPro-Smbd, and GaramondPremrPro-SmbdIt; or use the `auto', `adobepro', or `ebgaramond' profile.}%
+    \fi
+	    \setmainfont{Garamond Premier Pro}[
+	      NFSSFamily=raeezgaramond,
+	      Numbers={OldStyle,Proportional},
+	      UprightFont={GaramondPremrPro},
+	      ItalicFont={GaramondPremrPro-It},
+      BoldFont={GaramondPremrPro-Smbd},
+      BoldItalicFont={GaramondPremrPro-SmbdIt},
+      SmallCapsFeatures={RawFeature={+smcp,+c2sc,+kern}},
+      RawFeature={+kern,+liga,+calt}
+    ]
+  \else\ifx\raeez@fontprofile\raeez@font@adobepro
+    \ifraeez@adobeproavailable\else
+      \PackageError{raeez-math-template}{%
+        Adobe Garamond Pro profile requested but the complete family is not installed%
+      }{Install AGaramondPro-Regular, AGaramondPro-Italic, and either Semibold/SemiboldItalic or Bold/BoldItalic; or use the `auto', `premier', or `ebgaramond' profile.}%
+    \fi
+	    \setmainfont{Adobe Garamond Pro}[
+	      NFSSFamily=raeezgaramond,
+	      Numbers={OldStyle,Proportional},
+	      UprightFont={AGaramondPro-Regular},
+      ItalicFont={AGaramondPro-Italic},
+      BoldFont={\raeez@adobepro@bold},
+	      BoldItalicFont={\raeez@adobepro@bolditalic},
+	      SmallCapsFeatures={RawFeature={+smcp,+c2sc,+kern}},
+	      RawFeature={+kern,+liga,+calt}
+	    ]
+  \else\ifx\raeez@fontprofile\raeez@font@adobepropreview
+    \ifraeez@adobeproregularavailable\else
+      \PackageError{raeez-math-template}{%
+        Adobe Garamond Pro preview requested but AGaramondPro-Regular is not installed%
+      }{Install AGaramondPro-Regular; or use the `auto', `premier', `adobepro', or `ebgaramond' profile.}%
+    \fi
+    \PackageWarningNoLine{raeez-math-template}{%
+      Using Adobe Garamond Pro upright preview with EB Garamond italic/bold fallback%
+    }%
+		    \setmainfont{Adobe Garamond Pro}[
+		      NFSSFamily=raeezgaramond,
+		      Numbers={OldStyle,Proportional},
+		      UprightFont={AGaramondPro-Regular},
+      ItalicFont={EBGaramond-Italic},
+      BoldFont={EBGaramond-SemiBold},
+      BoldItalicFont={EBGaramond-SemiBoldItalic},
+      SmallCapsFeatures={RawFeature={+smcp,+c2sc,+kern}},
+      RawFeature={+kern,+liga,+calt}
+    ]
+		  \else
+		    \setmainfont{EB Garamond}[
+	      NFSSFamily=raeezgaramond,
+	      Numbers={OldStyle,Proportional},
+	      UprightFont=*-Regular,
+      ItalicFont=*-Italic,
+      BoldFont=*-SemiBold,
+      BoldItalicFont=*-SemiBold Italic,
+      SmallCapsFeatures={RawFeature={+smcp,+c2sc,+kern}},
+      RawFeature={+kern,+liga,+calt}
+    ]
+	  \fi\fi\fi
+  \ifx\raeez@fontprofile\raeez@font@premier
+	    \IfFontExistsTF{GaramondPremrPro-Disp}
+	      {\newfontfamily\raeezdisplayfont{GaramondPremrPro-Disp}[
+	        NFSSFamily=raeezdisplaygaramond,
+	        Numbers={OldStyle,Proportional},
+	        RawFeature={+kern,+liga,+calt,+dlig,+smcp,+c2sc}
+	      ]}
+	      {\newfontfamily\raeezdisplayfont{Garamond Premier Pro}[
+	        NFSSFamily=raeezdisplaygaramond,
+	        Numbers={OldStyle,Proportional},
+	        UprightFont={GaramondPremrPro},
+        ItalicFont={GaramondPremrPro-It},
+        BoldFont={GaramondPremrPro-Smbd},
+        BoldItalicFont={GaramondPremrPro-SmbdIt},
+        RawFeature={+kern,+liga,+calt,+dlig,+smcp,+c2sc}
+      ]}
+	  \else\ifx\raeez@fontprofile\raeez@font@adobepro
+	    \newfontfamily\raeezdisplayfont{Adobe Garamond Pro}[
+	      NFSSFamily=raeezdisplaygaramond,
+	      Numbers={OldStyle,Proportional},
+	      UprightFont={AGaramondPro-Regular},
+      ItalicFont={AGaramondPro-Italic},
+	      BoldFont={\raeez@adobepro@bold},
+	      BoldItalicFont={\raeez@adobepro@bolditalic},
+	      RawFeature={+kern,+liga,+calt,+dlig,+titl,+smcp,+c2sc}
+	    ]
+  \else\ifx\raeez@fontprofile\raeez@font@adobepropreview
+    \IfFontExistsTF{GaramondPremrPro-Disp}
+      {\newfontfamily\raeezdisplayfont{GaramondPremrPro-Disp}[
+        NFSSFamily=raeezdisplaygaramond,
+        Numbers={OldStyle,Proportional},
+        RawFeature={+kern,+liga,+calt,+dlig,+smcp,+c2sc}
+      ]}
+      {\newfontfamily\raeezdisplayfont{Adobe Garamond Pro}[
+        NFSSFamily=raeezdisplaygaramond,
+        Numbers={OldStyle,Proportional},
+        UprightFont={AGaramondPro-Regular},
+        ItalicFont={EBGaramond-Italic},
+        BoldFont={EBGaramond-SemiBold},
+        BoldItalicFont={EBGaramond-SemiBoldItalic},
+        RawFeature={+kern,+liga,+calt,+dlig,+smcp,+c2sc}
+      ]}
+		  \else
+		    \IfFontExistsTF{GaramondPremrPro-Disp}
+	      {\newfontfamily\raeezdisplayfont{GaramondPremrPro-Disp}[
+	        NFSSFamily=raeezdisplaygaramond,
+	        Numbers={OldStyle,Proportional},
+	        RawFeature={+kern,+liga,+calt,+dlig,+smcp,+c2sc}
+	      ]}
+	      {\newfontfamily\raeezdisplayfont{EB Garamond}[
+	        NFSSFamily=raeezdisplaygaramond,
+	        Numbers={OldStyle,Proportional},
+	        UprightFont=*-Regular,
+        ItalicFont=*-Italic,
+        BoldFont=*-SemiBold,
+        BoldItalicFont=*-SemiBold Italic,
+        SmallCapsFeatures={RawFeature={+smcp,+c2sc,+kern}},
+        RawFeature={+kern,+liga,+calt}
+      ]}
+	  \fi\fi\fi
+	  \IfFontExistsTF{Source Sans Pro}
+	    {\setsansfont{Source Sans Pro}[NFSSFamily=raeezsans,Scale=MatchLowercase]}
+	    {}
+	  \setmonofont{lmmonolt10-regular.otf}[
+	    NFSSFamily=raeezmono,
+	    Scale=MatchLowercase,
+	    ItalicFont=lmmonolt10-oblique.otf,
+	    BoldFont=lmmonolt10-bold.otf,
+	    BoldItalicFont=lmmonolt10-boldoblique.otf
+	  ]
+	\fi
+
+\frenchspacing
+
+	\ifPDFTeX
+	  \RequirePackage[
+    activate={true,nocompatibility},
+    final,
+    protrusion=true,
+    expansion=true,
+    tracking=true,
+    kerning=true,
+    spacing=true,
+    factor=1050,
+    stretch=18,
+    shrink=12,
+    nopatch=footnote
+  ]{microtype}
+\else
+  \RequirePackage[
+    activate={true,nocompatibility},
+    final,
+    protrusion=true,
+    expansion=true,
+    tracking=true,
+    kerning=false,
+    spacing=false,
+    factor=1050,
+    stretch=18,
+    shrink=12,
+    nopatch=footnote
+	  ]{microtype}
+\fi
+
+\ifPDFTeX
+  \UseMicrotypeSet[protrusion]{basicmath}
+\else
+  \SetProtrusion
+    [ name = raeez-garamond-tu ]
+    { encoding = TU, family = {raeezgaramond,raeezdisplaygaramond} }
+    {
+      A = {40,40},
+      F = {  ,50},
+      J = {50,  },
+      K = {  ,45},
+      L = {  ,55},
+      T = {45,45},
+      V = {45,45},
+      W = {40,40},
+      X = {35,35},
+      Y = {45,45},
+      k = {  ,40},
+      r = {  ,45},
+      t = {  ,55},
+      v = {35,40},
+      w = {30,35},
+      x = {30,30},
+      y = {35,45},
+      1 = {50,80},
+      4 = {35,55},
+      7 = {45,70},
+      . = { ,680},
+     {,}= { ,500},
+      : = { ,430},
+      ; = { ,330},
+      ! = { ,120},
+      ? = { ,180},
+      ( = {130,   },
+      ) = {   ,220},
+      / = {120,220},
+      - = {360,360},
+      \textendash       = {220,220},
+      \textemdash        = {160,160},
+      \textquoteleft    = {260,380},
+      \textquoteright   = {320,320},
+      \textquotedblleft = {260,300},
+      \textquotedblright= {300,300}
+    }
+	\fi
+\ifPDFTeX
+  \SetTracking
+    [spacing={35*,166,}]
+    {encoding={*}, shape=sc}
+    {32}
+\else
+  \SetTracking
+    [spacing={35*,166,}]
+    {encoding=TU, family={raeezgaramond,raeezdisplaygaramond}, shape=sc}
+    {30}
+\fi
+\ifPDFTeX
+  \SetExtraKerning[unit=space]
+   {encoding={*}, family={*}, series={*}, size={footnotesize,small,normalsize}}
+   {\textemdash={210,210},
+    \textendash={105,105},
+    \textquoteleft={,70},
+    \textquoteright={70,},
+    \textquotedblleft={,95},
+    \textquotedblright={95,},
+    "28={,105},
+    "29={105,}}
+\fi
+
+\RequirePackage{mleftright}
+\mleftright
+% The template owns font mechanics; manuscripts own mathematical notation.
+\let\Bbbk\undefined
+\let\openbox\undefined
+\RequirePackage{amsmath,amsthm}
+\ifPDFTeX
+  \RequirePackage{amssymb}
+\fi
+\providecommand{\fact}{\mathrm{fact}}
+\providecommand{\so}{\mathfrak{so}}
+\let\bibsection\relax
+\RequirePackage{amsrefs}
+\makeatletter
+\@ifundefined{@nilgobble}{\long\def\@nilgobble#1\@nil{}}{}
+\makeatother
+% amsrefs installs \dbar as a name symbol; these manuscripts reserve it
+% for the Dolbeault operator.
+\let\dbar\undefined
+\RequirePackage{mathtools}
+\ifPDFTeX\else
+  \RequirePackage{unicode-math}
+	  \unimathsetup{
+	    math-style=TeX,
+	    bold-style=TeX,
+	    warnings-off={mathtools-overbracket,mathtools-colon}
+	  }
+  \setmathfont{Garamond-Math.otf}[Scale=MatchLowercase]
+  \setmathfont{Garamond-Math.otf}[version=bold,Scale=MatchLowercase]
+  \setmathfont{Latin Modern Math}[range={"266E},Scale=MatchLowercase]
+  \setmathfont{Latin Modern Math}[version=bold,range={"266E},Scale=MatchLowercase]
+	  \let\Bbbk\undefined
+  % Legacy manuscript macros often write \mathcal A or \mathbb R without
+  % braces.  unicode-math is stricter, so keep the pdfLaTeX calling idiom
+  % alive for LuaLaTeX/XeLaTeX preview builds.
+  \makeatletter
+  \let\raeez@unicode@mathcal\mathcal
+  \renewcommand{\mathcal}[1]{{\raeez@unicode@mathcal{#1}}}
+  \let\raeez@unicode@mathbb\mathbb
+  \renewcommand{\mathbb}[1]{{\raeez@unicode@mathbb{#1}}}
+  \let\raeez@unicode@mathfrak\mathfrak
+  \renewcommand{\mathfrak}[1]{{\raeez@unicode@mathfrak{#1}}}
+  \makeatother
+  \providecommand{\vvmathbb}[1]{\mathbb{#1}}
+  \providecommand{\varmathbb}[1]{\mathbb{#1}}
+  \providecommand{\square}{\mdlgwhtsquare}
+  \let\leadsto\undefined
+  \newcommand{\leadsto}{\rightsquigarrow}
+  \let\dashrightarrow\undefined
+  \newcommand{\dashrightarrow}{\mathrel{\text{\normalfont -}\mkern-7mu\rightarrow}}
+  \makeatletter
+  \AtBeginDocument{%
+    \@ifundefined{cA}{}{\renewcommand{\cA}{{\mathcal{A}}}}%
+    \@ifundefined{cB}{}{\renewcommand{\cB}{{\mathcal{B}}}}%
+    \@ifundefined{cC}{}{\renewcommand{\cC}{{\mathcal{C}}}}%
+    \@ifundefined{cD}{}{\renewcommand{\cD}{{\mathcal{D}}}}%
+    \@ifundefined{cE}{}{\renewcommand{\cE}{{\mathcal{E}}}}%
+    \@ifundefined{cF}{}{\renewcommand{\cF}{{\mathcal{F}}}}%
+    \@ifundefined{cG}{}{\renewcommand{\cG}{{\mathcal{G}}}}%
+    \@ifundefined{cH}{}{\renewcommand{\cH}{{\mathcal{H}}}}%
+    \@ifundefined{cI}{}{\renewcommand{\cI}{{\mathcal{I}}}}%
+    \@ifundefined{cJ}{}{\renewcommand{\cJ}{{\mathcal{J}}}}%
+    \@ifundefined{cK}{}{\renewcommand{\cK}{{\mathcal{K}}}}%
+    \@ifundefined{cL}{}{\renewcommand{\cL}{{\mathcal{L}}}}%
+    \@ifundefined{cM}{}{\renewcommand{\cM}{{\mathcal{M}}}}%
+    \@ifundefined{cN}{}{\renewcommand{\cN}{{\mathcal{N}}}}%
+    \@ifundefined{cO}{}{\renewcommand{\cO}{{\mathcal{O}}}}%
+    \@ifundefined{cP}{}{\renewcommand{\cP}{{\mathcal{P}}}}%
+    \@ifundefined{cQ}{}{\renewcommand{\cQ}{{\mathcal{Q}}}}%
+    \@ifundefined{cR}{}{\renewcommand{\cR}{{\mathcal{R}}}}%
+    \@ifundefined{cS}{}{\renewcommand{\cS}{{\mathcal{S}}}}%
+    \@ifundefined{cT}{}{\renewcommand{\cT}{{\mathcal{T}}}}%
+    \@ifundefined{cU}{}{\renewcommand{\cU}{{\mathcal{U}}}}%
+    \@ifundefined{cV}{}{\renewcommand{\cV}{{\mathcal{V}}}}%
+    \@ifundefined{cW}{}{\renewcommand{\cW}{{\mathcal{W}}}}%
+    \@ifundefined{cX}{}{\renewcommand{\cX}{{\mathcal{X}}}}%
+    \@ifundefined{cY}{}{\renewcommand{\cY}{{\mathcal{Y}}}}%
+    \@ifundefined{cZ}{}{\renewcommand{\cZ}{{\mathcal{Z}}}}%
+    \@ifundefined{C}{}{\renewcommand{\C}{{\mathbb{C}}}}%
+    \@ifundefined{F}{}{\renewcommand{\F}{{\mathbb{F}}}}%
+    \@ifundefined{N}{}{\renewcommand{\N}{{\mathbb{N}}}}%
+    \@ifundefined{Q}{}{\renewcommand{\Q}{{\mathbb{Q}}}}%
+    \@ifundefined{R}{}{\renewcommand{\R}{{\mathbb{R}}}}%
+    \@ifundefined{Z}{}{\renewcommand{\Z}{{\mathbb{Z}}}}%
+    \@ifundefined{bC}{}{\renewcommand{\bC}{{\mathbb{C}}}}%
+    \@ifundefined{bN}{}{\renewcommand{\bN}{{\mathbb{N}}}}%
+    \@ifundefined{bQ}{}{\renewcommand{\bQ}{{\mathbb{Q}}}}%
+    \@ifundefined{bR}{}{\renewcommand{\bR}{{\mathbb{R}}}}%
+    \@ifundefined{bZ}{}{\renewcommand{\bZ}{{\mathbb{Z}}}}%
+  }%
+  \makeatother
+	\fi
+\mathtoolsset{showonlyrefs,showmanualtags}
+\makeatletter
+\AtBeginDocument{%
+  \providecommand{\cA}{\mathcal{A}}%
+  \providecommand{\cB}{\mathcal{B}}%
+  \providecommand{\cC}{\mathcal{C}}%
+  \providecommand{\cD}{\mathcal{D}}%
+  \providecommand{\cE}{\mathcal{E}}%
+  \providecommand{\cF}{\mathcal{F}}%
+  \providecommand{\cG}{\mathcal{G}}%
+  \providecommand{\cH}{\mathcal{H}}%
+  \providecommand{\cI}{\mathcal{I}}%
+  \providecommand{\cJ}{\mathcal{J}}%
+  \providecommand{\cK}{\mathcal{K}}%
+  \providecommand{\cL}{\mathcal{L}}%
+  \providecommand{\cM}{\mathcal{M}}%
+  \providecommand{\cN}{\mathcal{N}}%
+  \providecommand{\cO}{\mathcal{O}}%
+  \providecommand{\cP}{\mathcal{P}}%
+  \providecommand{\cQ}{\mathcal{Q}}%
+  \providecommand{\cR}{\mathcal{R}}%
+  \providecommand{\cS}{\mathcal{S}}%
+  \providecommand{\cT}{\mathcal{T}}%
+  \providecommand{\cU}{\mathcal{U}}%
+  \providecommand{\cV}{\mathcal{V}}%
+  \providecommand{\cW}{\mathcal{W}}%
+  \providecommand{\cX}{\mathcal{X}}%
+  \providecommand{\cY}{\mathcal{Y}}%
+  \providecommand{\cZ}{\mathcal{Z}}%
+  \@ifundefined{C}{\newcommand{\C}{\mathbb{C}}}{\renewcommand{\C}{\mathbb{C}}}%
+  \@ifundefined{F}{\newcommand{\F}{\mathbb{F}}}{\renewcommand{\F}{\mathbb{F}}}%
+  \@ifundefined{N}{\newcommand{\N}{\mathbb{N}}}{\renewcommand{\N}{\mathbb{N}}}%
+  \@ifundefined{Q}{\newcommand{\Q}{\mathbb{Q}}}{\renewcommand{\Q}{\mathbb{Q}}}%
+  \@ifundefined{R}{\newcommand{\R}{\mathbb{R}}}{\renewcommand{\R}{\mathbb{R}}}%
+  \@ifundefined{Z}{\newcommand{\Z}{\mathbb{Z}}}{\renewcommand{\Z}{\mathbb{Z}}}%
+  \providecommand{\bA}{\mathbb{A}}%
+  \providecommand{\bC}{\mathbb{C}}%
+  \providecommand{\bF}{\mathbb{F}}%
+  \providecommand{\bH}{\mathbb{H}}%
+  \providecommand{\bN}{\mathbb{N}}%
+  \providecommand{\bP}{\mathbb{P}}%
+  \providecommand{\bQ}{\mathbb{Q}}%
+  \providecommand{\bR}{\mathbb{R}}%
+  \providecommand{\bS}{\mathbb{S}}%
+  \providecommand{\bZ}{\mathbb{Z}}%
+  \providecommand{\CC}{\mathbb{C}}%
+  \providecommand{\HHH}{\mathbb{H}}%
+  \providecommand{\PP}{\mathbb{P}}%
+  \providecommand{\QQ}{\mathbb{Q}}%
+  \providecommand{\RR}{\mathbb{R}}%
+  \providecommand{\ZZ}{\mathbb{Z}}%
+  \providecommand{\fg}{\mathfrak{g}}%
+  \providecommand{\fh}{\mathfrak{h}}%
+  \providecommand{\bg}{\mathfrak{g}}%
+  \providecommand{\gl}{\mathfrak{gl}}%
+  \providecommand{\fgl}{\mathfrak{gl}}%
+  \providecommand{\fsl}{\mathfrak{sl}}%
+  \providecommand{\Hom}{\operatorname{Hom}}%
+  \providecommand{\End}{\operatorname{End}}%
+  \providecommand{\Aut}{\operatorname{Aut}}%
+  \providecommand{\Spec}{\operatorname{Spec}}%
+  \providecommand{\Conf}{\operatorname{Conf}}%
+  \providecommand{\colim}{\operatorname*{colim}}%
+  \providecommand{\Rep}{\operatorname{Rep}}%
+  \providecommand{\Vect}{\operatorname{Vect}}%
+  \providecommand{\Ch}{\operatorname{Ch}}%
+  \providecommand{\Res}{\operatorname{Res}}%
+  \providecommand{\Reg}{\operatorname{Reg}}%
+  \providecommand{\Tr}{\operatorname{Tr}}%
+  \providecommand{\td}{\operatorname{td}}%
+  \providecommand{\id}{\operatorname{id}}%
+  \providecommand{\op}{\operatorname{op}}%
+  \providecommand{\ord}{\operatorname{ord}}%
+  \providecommand{\str}{\operatorname{str}}%
+  \providecommand{\sBer}{\operatorname{sBer}}%
+  \providecommand{\pt}{\mathrm{pt}}%
+  \providecommand{\defeq}{\coloneqq}%
+  \providecommand{\ChirHoch}{\operatorname{ChirHoch}}%
+  \providecommand{\BP}{\mathrm{BP}}%
+  \providecommand{\BRST}{\mathrm{BRST}}%
+  \providecommand{\Vir}{\mathrm{Vir}}%
+  \providecommand{\Virc}{\mathrm{Vir}_c}%
+  \providecommand{\CompCl}{\mathrm{CompCl}}%
+  \providecommand{\Defcyc}{\mathrm{Def}_{\mathrm{cyc}}}%
+  \providecommand{\SCchtop}{\mathsf{SC}^{\mathrm{ch,top}}}%
+  \providecommand{\chirAss}{\mathsf{Ass}^{\mathrm{ch}}}%
+  \providecommand{\chirCom}{\mathsf{Com}^{\mathrm{ch}}}%
+  \providecommand{\chirLie}{\mathsf{Lie}^{\mathrm{ch}}}%
+  \providecommand{\chirtensor}{\mathbin{\otimes_{\mathrm{ch}}}}%
+  \providecommand{\ch}{\mathrm{ch}}%
+  \providecommand{\barB}{\overline{B}}%
+  \providecommand{\BarchFG}{\overline{B}^{\mathrm{ch}}_{\mathrm{FG}}}%
+  \providecommand{\dzero}{d_0}%
+  \providecommand{\dfib}{d_{\mathrm{fib}}}%
+  \providecommand{\orline}[1]{\mathfrak{o}_{#1}}%
+}%
+\makeatother
+\providecommand{\normord}[1]{%
+  \ensuremath{\mathopen{:}\nonscript\mkern-1.5mu#1\nonscript\mkern-1.5mu\mathclose{:}}%
+}
+\providecommand{\Qtot}{Q_{\mathrm{tot}}}
+\providecommand{\longhookrightarrow}{\lhook\joinrel\longrightarrow}
+\providecommand{\longhookleftarrow}{\longleftarrow\joinrel\rhook}
+\providecommand{\raeezqedbox}{%
+  \leavevmode\hbox to.77778em{%
+    \hfil\vrule\vbox to.675em{\hrule width.6em\vfil\hrule}\vrule\hfil
+  }%
+}
+\renewcommand{\qedsymbol}{\raeezqedbox}
+
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\graphicspath{{graphics/}{../graphics/}}
+\PassOptionsToPackage{dvipsnames,svgnames}{xcolor}
+\RequirePackage{tikz-cd}
+\usetikzlibrary{positioning,arrows.meta,calc,decorations.markings}
+\makeatletter
+\def\hyper@nopatch@caption{}
+\makeatother
+\RequirePackage{xurl}
+\RequirePackage[
+ unicode,
+ pdfencoding=auto,
+ psdextra,
+ hidelinks,
+ hypertexnames=false,
+ bookmarksnumbered=true,
+ bookmarksopen=true
+]{hyperref}
+\RequirePackage{bookmark}
+\makeatletter
+\pdfstringdefDisableCommands{%
+  \def\ensuremath#1{#1}%
+  \def\boldsymbol#1{#1}%
+  \def\mathsf#1{#1}%
+  \def\mathrm#1{#1}%
+  \def\mathfrak#1{#1}%
+  \def\mathcal#1{#1}%
+  \def\mathbb#1{#1}%
+  \def\operatorname#1{#1}%
+  \def\textup#1{#1}%
+  \def\textsc#1{#1}%
+  \def\textbf#1{#1}%
+  \def\emph#1{#1}%
+  \def\widehat#1{#1}%
+  \def\overline#1{#1}%
+  \def\bar#1{#1}%
+  \def\hat#1{#1}%
+  \def\tilde#1{#1}%
+  \def\otimes{ tensor }%
+  \def\oplus{ plus }%
+  \def\to{ to }%
+  \def\colon{:}%
+  \def\ClaimStatusProvedHere{}%
+  \def\ClaimStatusProvedElsewhere{}%
+  \def\ClaimStatusConjectured{}%
+  \def\ClaimStatusHeuristic{}%
+  \def\ClaimStatusConditional{}%
+}
+\providecommand{\email}[1]{\g@addto@macro\@author{\\{\normalfont\small\texttt{#1}}}}
+\providecommand{\urladdr}[1]{\g@addto@macro\@author{\\{\normalfont\small\url{#1}}}}
+\AtBeginDocument{%
+  \hypersetup{%
+    pdftitle={\@title},
+    pdfauthor={\@author}%
+  }%
+}
+\makeatother
+
+\RequirePackage{geometry}
+\geometry{
+  top=1.08in,
+  bottom=1.22in,
+  left=1.32in,
+  right=1.32in,
+  headsep=0.28in,
+  footskip=0.52in,
+  marginparsep=0.14in,
+  marginparwidth=0.78in
+}
+\setlength{\headheight}{28pt}
+\linespread{1.028}
+\setlength{\emergencystretch}{3.4em}
+\setlength{\hfuzz}{0.6pt}
+\setlength{\vfuzz}{1pt}
+\hbadness=2600
+\raggedbottom
+
+\setlength{\parindent}{1.25em}
+\setlength{\parskip}{0pt plus 0.5pt}
+\setlength{\abovedisplayskip}{9pt plus 2pt minus 3pt}
+\setlength{\belowdisplayskip}{9pt plus 2pt minus 3pt}
+\setlength{\abovedisplayshortskip}{5pt plus 2pt minus 2pt}
+\setlength{\belowdisplayshortskip}{6pt plus 2pt minus 2pt}
+\setlength{\jot}{4pt}
+\setlength{\arraycolsep}{4.5pt}
+\renewcommand{\arraystretch}{1.08}
+\thinmuskip=3mu
+\medmuskip=4mu plus 2mu minus 1mu
+\thickmuskip=5mu plus 3mu
+\allowdisplaybreaks[1]
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=8000
+\brokenpenalty=10000
+\interfootnotelinepenalty=10000
+
+\providecommand{\ChapterIntro}[1]{%
+  \par\noindent\textit{#1}\par\medskip
+}
+
+\RequirePackage{algorithm}
+\RequirePackage{algpseudocode}
+\RequirePackage{tcolorbox}
+\RequirePackage{longtable}
+\RequirePackage{booktabs}
+\setlength{\heavyrulewidth}{0.06em}
+\setlength{\lightrulewidth}{0.035em}
+\setlength{\cmidrulewidth}{0.03em}
+\setlength{\aboverulesep}{0.36ex}
+\setlength{\belowrulesep}{0.52ex}
+\RequirePackage{multicol}
+\RequirePackage[shortlabels]{enumitem}
+\RequirePackage[all]{nowidow}
+\RequirePackage{etoolbox}
+\RequirePackage{ifthen}
+	\ifPDFTeX
+	\RequirePackage{mathrsfs}
+\DeclareFontFamily{U}{rsfs}{\skewchar\font127 }
+\DeclareFontShape{U}{rsfs}{m}{n}{%
+  <-6.5> rsfs5
+  <6.5-8.5> rsfs7
+  <8.5-> rsfs10
+}{}
+	\fi
+	\RequirePackage{bm}
+\RequirePackage{setspace}
+\RequirePackage{makecell}
+\makeatletter
+\@ifundefined{see}{}{\let\see\undefined}
+\@ifundefined{printindex}{}{\let\printindex\undefined}
+\makeatother
+\RequirePackage{makeidx}
+\makeatletter
+\providecommand*{\seename}{see}
+\providecommand*{\see}[2]{\emph{\seename} #1}
+\providecommand*{\printindex}{\@input@{\jobname.ind}}
+\makeatother
+\RequirePackage{newunicodechar}
+\RequirePackage{thmtools}
+\renewcommand{\qedsymbol}{\raeezqedbox}
+
+% Keep a theorem destination inside the deferred head box.  A para/begin
+% target can precede the page break, or be removed by amsthm's lastbox.
+\makeatletter
+\let\raeez@thm@target\@empty
+\newcommand\raeez@thm@maketarget[1]{%
+  \let\Hy@tempa\@currentHref
+  \MakeLinkTarget*{#1}%
+  \global\let\@currentHref\Hy@tempa
+}
+\AddToHook{begindocument/end}{%
+  \renewcommand\Hy@theorem@makelinktarget[1]{%
+    \edef\raeez@thm@target{\noexpand\raeez@thm@maketarget{#1}}%
+  }%
+  \AddToHook{cmd/@thm/before}{\let\raeez@thm@target\@empty}%
+  \let\raeez@deferred@thm@head\Hy@deferred@thm@head
+  \def\Hy@deferred@thm@head#1{%
+    \raeez@deferred@thm@head{\raeez@thm@target#1}%
+  }%
+}
+\makeatother
+
+\makeindex
+\Urlmuskip=0mu plus 2mu
+\setlist{
+  topsep=5pt plus 2pt minus 1pt,
+  itemsep=2pt plus 1pt,
+  parsep=0pt,
+  partopsep=0pt,
+  leftmargin=*
+}
+\setlist[enumerate,1]{label=\textnormal{(\roman*)}}
+\setlength{\footnotesep}{0.72\baselineskip}
+\setlength{\skip\footins}{12pt plus 4pt minus 2pt}
+\renewcommand{\footnoterule}{%
+  \kern -3pt
+  \hrule width 0.34\textwidth height 0.35pt
+  \kern 2.6pt
+}
+\makeatletter
+\@ifundefined{setpnumwidth}{}{\setpnumwidth{3em}}
+\@ifundefined{setrmarg}{}{\setrmarg{4em}}
+\@ifundefined{captionnamefont}{}{\captionnamefont{\small\scshape\lsstyle}}
+\@ifundefined{captiontitlefont}{}{\captiontitlefont{\small}}
+\@ifundefined{cftchapterfont}{}{%
+  \renewcommand*{\cftchapterfont}{\normalfont\scshape\lsstyle}%
+  \renewcommand*{\cftchapterpagefont}{\normalfont}%
+  \renewcommand*{\cftsectionfont}{\normalfont}%
+  \renewcommand*{\cftsectionpagefont}{\normalfont}%
+  \renewcommand*{\cftchapterdotsep}{\cftdotsep}%
+  \setlength{\cftbeforechapterskip}{0.38\baselineskip}%
+  \setlength{\cftbeforesectionskip}{0.04\baselineskip}%
+}
+\makeatother
+
+% Unicode fallbacks for pdfLaTeX compilation across imported fragments.
+\newunicodechar{∞}{$\infty$}
+\newunicodechar{β}{$\beta$}
+\newunicodechar{γ}{$\gamma$}
+\newunicodechar{κ}{$\kappa$}
+\newunicodechar{μ}{$\mu$}
+\newunicodechar{Ω}{$\Omega$}
+\newunicodechar{Φ}{$\Phi$}
+\newunicodechar{↔}{$\leftrightarrow$}
+\newunicodechar{✓}{$\checkmark$}
+\newunicodechar{✗}{$\times$}
+\newunicodechar{−}{$-$}
+\newunicodechar{₀}{$_0$}
+\newunicodechar{₁}{$_1$}
+\newunicodechar{₂}{$_2$}
+\newunicodechar{₃}{$_3$}
+\newunicodechar{ₙ}{$_n$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≃}{$\simeq$}
+\newunicodechar{≅}{$\cong$}
+\newunicodechar{⊗}{$\otimes$}
+\newunicodechar{⊕}{$\oplus$}
+\newunicodechar{∨}{$\vee$}
+\newunicodechar{∈}{$\in$}
+\newunicodechar{℘}{$\wp$}
+\newunicodechar{♮}{\ensuremath{\natural}}
+\newunicodechar{≥}{$\geq$}
+\newunicodechar{≤}{$\leq$}
+\newunicodechar{𝒜}{$\mathcal{A}$}
+
+% Theorem environments.
+\makeatletter
+\ifraeez@theorems
+\declaretheoremstyle[
+ spaceabove=6pt plus 2pt minus 1pt,
+ spacebelow=5.5pt plus 1.5pt minus 1pt,
+ headfont=\normalfont\scshape\lsstyle,
+ notefont=\normalfont\itshape,
+ bodyfont=\normalfont,
+ postheadspace=0.52em,
+ headpunct={.}
+]{garamondthm}
+
+\declaretheoremstyle[
+ spaceabove=6pt plus 2pt minus 1pt,
+ spacebelow=5pt plus 2pt minus 1pt,
+ headfont=\normalfont\itshape,
+ notefont=\normalfont\itshape,
+ bodyfont=\normalfont,
+ postheadspace=0.5em,
+ headpunct={.}
+]{garamonddef}
+
+\declaretheoremstyle[
+ spaceabove=5pt plus 2pt minus 1pt,
+ spacebelow=4pt plus 1pt minus 1pt,
+ headfont=\normalfont\itshape,
+ notefont=\normalfont\itshape,
+ bodyfont=\normalfont\small,
+ postheadspace=0.55em,
+ headpunct={.}
+]{garamondrem}
+
+\declaretheorem[style=garamondthm, name=Theorem, numberwithin=section]{theorem}
+\declaretheorem[style=garamondthm, name=Lemma, sibling=theorem]{lemma}
+\declaretheorem[style=garamondthm, name=Proposition, sibling=theorem]{proposition}
+\declaretheorem[style=garamondthm, name=Corollary, sibling=theorem]{corollary}
+\declaretheorem[style=garamondthm, name=Verification, sibling=theorem]{verification}
+\declaretheorem[style=garamondthm, name=Computation, sibling=theorem]{computation}
+\declaretheorem[style=garamondthm, name=Main Theorem, sibling=theorem]{maintheorem}
+\declaretheorem[style=garamondthm, name=Theorem, sibling=theorem]{thm}
+\declaretheorem[style=garamondthm, name=Proposition, sibling=theorem]{prop}
+\declaretheorem[style=garamondthm, name=Lemma, sibling=theorem]{lem}
+\declaretheorem[style=garamondthm, name=Corollary, sibling=theorem]{cor}
+
+\declaretheorem[style=garamonddef, name=Definition, sibling=theorem]{definition}
+\declaretheorem[style=garamonddef, name=Example, sibling=theorem]{example}
+\declaretheorem[style=garamonddef, name=Remark, sibling=theorem]{remark}
+\declaretheorem[style=garamonddef, name=Conjecture, sibling=theorem]{conjecture}
+\declaretheorem[style=garamonddef, name=Notation, sibling=theorem]{notation}
+\declaretheorem[style=garamonddef, name=Convention, sibling=theorem]{convention}
+\declaretheorem[style=garamonddef, name=Spectral Sequence, sibling=theorem]{spectralsequence}
+\declaretheorem[style=garamonddef, name=Calculation, sibling=theorem]{calculation}
+\declaretheorem[style=garamonddef, name=Technique, sibling=theorem]{technique}
+\declaretheorem[style=garamonddef, name=Applications, sibling=theorem]{applications}
+\declaretheorem[style=garamonddef, name=Framework, sibling=theorem]{framework}
+\declaretheorem[style=garamonddef, name=Construction, sibling=theorem]{construction}
+\declaretheorem[style=garamonddef, name=Perspective, sibling=theorem]{perspective}
+\declaretheorem[style=garamonddef, name=Conclusion, sibling=theorem]{conclusion}
+\declaretheorem[style=garamonddef, name=Question, sibling=theorem]{question}
+\declaretheorem[style=garamonddef, name=Summary, sibling=theorem]{summary}
+\declaretheorem[style=garamonddef, name=Procedure, sibling=theorem]{procedure}
+\declaretheorem[style=garamonddef, name=Interpretation, sibling=theorem]{interpretation}
+\declaretheorem[style=garamonddef, name=Historical, sibling=theorem]{historical}
+\declaretheorem[style=garamonddef, name=Context, sibling=theorem]{context}
+\declaretheorem[style=garamonddef, name=Attribution, sibling=theorem]{attribution}
+\declaretheorem[style=garamonddef, name=Reading, sibling=theorem]{reading}
+\declaretheorem[style=garamonddef, name=Application, sibling=theorem]{application}
+\declaretheorem[style=garamonddef, name=Principle, sibling=theorem]{principle}
+\declaretheorem[style=garamonddef, name=Motivation, sibling=theorem]{motivation}
+\declaretheorem[style=garamonddef, name=Insight, sibling=theorem]{insight}
+\declaretheorem[style=garamonddef, name=Problem, sibling=theorem]{problem}
+\declaretheorem[style=garamonddef, name=Setup, sibling=theorem]{setup}
+\declaretheorem[style=garamonddef, name=Observation, sibling=theorem]{observation}
+\declaretheorem[style=garamonddef, name=Idea, sibling=theorem]{idea}
+\declaretheorem[style=garamonddef, name=Strategy, sibling=theorem]{strategy}
+\declaretheorem[style=garamonddef, name=Open Problem, sibling=theorem]{openproblem}
+\declaretheorem[style=garamonddef, name=Hypothesis, sibling=theorem]{hypothesis}
+\declaretheorem[style=garamonddef, name=Assumption, sibling=theorem]{assumption}
+\declaretheorem[style=garamonddef, name=Warning, sibling=theorem]{warning}
+\declaretheorem[style=garamonddef, name=Heuristic, sibling=theorem]{heuristic}
+\declaretheorem[style=garamonddef, name=Evidence, sibling=theorem]{evidence}
+\declaretheorem[style=garamonddef, name={Claim (naive--falsified downstream)}, sibling=theorem]{claimnaive}
+\declaretheorem[style=garamonddef, name=Answer, sibling=theorem]{answer}
+\declaretheorem[style=garamonddef, name=Remark, sibling=theorem]{rmk}
+\declaretheorem[style=garamonddef, name=Definition, sibling=theorem]{defn}
+\declaretheorem[style=garamonddef, name=Example, sibling=theorem]{ex}
+\declaretheorem[style=garamonddef, name=Exercise, sibling=theorem]{exc}
+\declaretheorem[style=garamonddef, name=Conjecture, sibling=theorem]{conj}
+\declaretheorem[style=garamonddef, name=Problem, sibling=theorem]{prob}
+\declaretheorem[style=garamonddef, name=Open Problem, sibling=theorem]{oprob}
+\declaretheorem[style=garamonddef, name=Statement, sibling=theorem]{stmt}
+\declaretheorem[style=garamonddef, name=Question, sibling=theorem]{qn}
+\declaretheorem[style=garamonddef, name=Answer, sibling=theorem]{ans}
+\declaretheorem[style=garamonddef, name=Construction, sibling=theorem]{constr}
+\declaretheorem[style=garamonddef, name=Attack, sibling=theorem]{attack}
+\declaretheorem[style=garamonddef, name=Heal, sibling=theorem]{heal}
+\declaretheorem[style=garamonddef, name=Ghost theorem, sibling=theorem]{ghost}
+\declaretheorem[style=garamonddef, name=Scope, sibling=theorem]{scope}
+\declaretheorem[style=garamonddef, name=Verdict, sibling=theorem]{verdict}
+\declaretheorem[style=garamonddef, name=Survivor, sibling=theorem]{survivor}
+\declaretheorem[style=garamonddef, name=Surviving statement, sibling=theorem]{surviving}
+\declaretheorem[style=garamonddef, name=Scholium, sibling=theorem]{scholium}
+\declaretheorem[style=garamonddef, name=Obstruction, sibling=theorem]{obstruction}
+\declaretheorem[style=garamonddef, name=Finding, sibling=theorem]{finding}
+\declaretheorem[style=garamonddef, name=Counterexample, sibling=theorem]{counterexample}
+\declaretheorem[style=garamonddef, name=Proposal, sibling=theorem]{proposal}
+\declaretheorem[style=garamonddef, name=Face, sibling=theorem]{face}
+\declaretheorem[style=garamonddef, name=Falsification, sibling=theorem]{falsification}
+\declaretheorem[style=garamonddef, name=Flag, sibling=theorem]{flag}
+\declaretheorem[style=garamonddef, name=Flaw, sibling=theorem]{flaw}
+\declaretheorem[style=garamonddef, name=Hidden point, sibling=theorem]{hidden}
+\declaretheorem[style=garamonddef, name=Open frontier, sibling=theorem]{openfrontier}
+\declaretheorem[style=garamondthm, numbered=no, name=Theorem]{theorem*}
+\declaretheorem[style=garamondrem, numbered=no, name=Remark]{remark*}
+\declaretheorem[style=garamonddef, numbered=no, name=Attack]{attack*}
+\declaretheorem[style=garamonddef, numbered=no, name=Heal]{heal*}
+\declaretheorem[style=garamonddef, numbered=no, name=Ghost theorem]{ghost*}
+\declaretheorem[style=garamondthm, numbered=no, name=Claim]{claim*}
+
+% Cross-volume recall wrappers: same counters and typography as their
+% corresponding theorem-like environments, with titles supplied locally.
+\newenvironment{theoremref}[1][]{\begin{theorem}[#1]}{\end{theorem}}
+\newenvironment{definitionref}[1][]{\begin{definition}[#1]}{\end{definition}}
+\newenvironment{propositionref}[1][]{\begin{proposition}[#1]}{\end{proposition}}
+
+% Stable hyperref anchors for theorem-like environments and floats.
+\makeatletter
+\def\theHtheorem{\theHsection.\arabic{theorem}}
+\let\theHlemma\theHtheorem
+\let\theHproposition\theHtheorem
+\let\theHcorollary\theHtheorem
+\let\theHverification\theHtheorem
+\let\theHcomputation\theHtheorem
+\let\theHmaintheorem\theHtheorem
+\let\theHthm\theHtheorem
+\let\theHprop\theHtheorem
+\let\theHlem\theHtheorem
+\let\theHcor\theHtheorem
+\let\theHdefinition\theHtheorem
+\let\theHexample\theHtheorem
+\let\theHremark\theHtheorem
+\let\theHconjecture\theHtheorem
+\let\theHnotation\theHtheorem
+\let\theHconvention\theHtheorem
+\let\theHspectralsequence\theHtheorem
+\let\theHcalculation\theHtheorem
+\let\theHtechnique\theHtheorem
+\let\theHapplications\theHtheorem
+\let\theHframework\theHtheorem
+\let\theHconstruction\theHtheorem
+\let\theHperspective\theHtheorem
+\let\theHconclusion\theHtheorem
+\let\theHquestion\theHtheorem
+\let\theHsummary\theHtheorem
+\let\theHprocedure\theHtheorem
+\let\theHinterpretation\theHtheorem
+\let\theHhistorical\theHtheorem
+\let\theHcontext\theHtheorem
+\let\theHattribution\theHtheorem
+\let\theHreading\theHtheorem
+\let\theHapplication\theHtheorem
+\let\theHprinciple\theHtheorem
+\let\theHmotivation\theHtheorem
+\let\theHinsight\theHtheorem
+\let\theHproblem\theHtheorem
+\let\theHsetup\theHtheorem
+\let\theHobservation\theHtheorem
+\let\theHidea\theHtheorem
+\let\theHstrategy\theHtheorem
+\let\theHopenproblem\theHtheorem
+\let\theHhypothesis\theHtheorem
+\let\theHassumption\theHtheorem
+\let\theHwarning\theHtheorem
+\let\theHheuristic\theHtheorem
+\let\theHevidence\theHtheorem
+\let\theHclaimnaive\theHtheorem
+\let\theHanswer\theHtheorem
+\let\theHfact\theHtheorem
+\let\theHrmk\theHtheorem
+\let\theHdefn\theHtheorem
+\let\theHex\theHtheorem
+\let\theHexc\theHtheorem
+\let\theHconj\theHtheorem
+\let\theHprob\theHtheorem
+\let\theHoprob\theHtheorem
+\let\theHstmt\theHtheorem
+\let\theHqn\theHtheorem
+\let\theHans\theHtheorem
+\let\theHconstr\theHtheorem
+\let\theHattack\theHtheorem
+\let\theHheal\theHtheorem
+\let\theHghost\theHtheorem
+\let\theHprinciple\theHtheorem
+\let\theHscope\theHtheorem
+\let\theHevidence\theHtheorem
+\let\theHsurvivor\theHtheorem
+\let\theHsurviving\theHtheorem
+\let\theHscholium\theHtheorem
+\let\theHobstruction\theHtheorem
+\let\theHfinding\theHtheorem
+\let\theHcounterexample\theHtheorem
+\let\theHproposal\theHtheorem
+\let\theHaudit\theHtheorem
+\let\theHcorrection\theHtheorem
+\let\theHface\theHtheorem
+\let\theHfalsification\theHtheorem
+\let\theHflag\theHtheorem
+\let\theHflaw\theHtheorem
+\let\theHhidden\theHtheorem
+\let\theHopenfrontier\theHtheorem
+\@ifundefined{theHchapter}
+  {\def\theHtable{\theHsection.\arabic{table}}%
+   \def\theHfigure{\theHsection.\arabic{figure}}}
+  {\def\theHtable{\theHchapter.\arabic{table}}%
+   \def\theHfigure{\theHchapter.\arabic{figure}}}
+
+\newcommand{\raeez@toclevel}[1]{%
+  \@ifundefined{toclevel@#1}{\expandafter\def\csname toclevel@#1\endcsname{2}}{}%
+}
+\raeez@toclevel{theorem}
+\raeez@toclevel{lemma}
+\raeez@toclevel{proposition}
+\raeez@toclevel{corollary}
+\raeez@toclevel{verification}
+\raeez@toclevel{computation}
+\raeez@toclevel{maintheorem}
+\raeez@toclevel{thm}
+\raeez@toclevel{prop}
+\raeez@toclevel{lem}
+\raeez@toclevel{cor}
+\raeez@toclevel{definition}
+\raeez@toclevel{example}
+\raeez@toclevel{remark}
+\raeez@toclevel{conjecture}
+\raeez@toclevel{notation}
+\raeez@toclevel{convention}
+\raeez@toclevel{spectralsequence}
+\raeez@toclevel{calculation}
+\raeez@toclevel{technique}
+\raeez@toclevel{applications}
+\raeez@toclevel{framework}
+\raeez@toclevel{construction}
+\raeez@toclevel{perspective}
+\raeez@toclevel{conclusion}
+\raeez@toclevel{question}
+\raeez@toclevel{summary}
+\raeez@toclevel{procedure}
+\raeez@toclevel{interpretation}
+\raeez@toclevel{historical}
+\raeez@toclevel{context}
+\raeez@toclevel{attribution}
+\raeez@toclevel{reading}
+\raeez@toclevel{application}
+\raeez@toclevel{principle}
+\raeez@toclevel{motivation}
+\raeez@toclevel{insight}
+\raeez@toclevel{problem}
+\raeez@toclevel{setup}
+\raeez@toclevel{observation}
+\raeez@toclevel{idea}
+\raeez@toclevel{strategy}
+\raeez@toclevel{openproblem}
+\raeez@toclevel{hypothesis}
+\raeez@toclevel{assumption}
+\raeez@toclevel{warning}
+\raeez@toclevel{heuristic}
+\raeez@toclevel{evidence}
+\raeez@toclevel{claimnaive}
+\raeez@toclevel{answer}
+\raeez@toclevel{rmk}
+\raeez@toclevel{defn}
+\raeez@toclevel{ex}
+\raeez@toclevel{exc}
+\raeez@toclevel{conj}
+\raeez@toclevel{prob}
+\raeez@toclevel{oprob}
+\raeez@toclevel{stmt}
+\raeez@toclevel{qn}
+\raeez@toclevel{ans}
+\raeez@toclevel{constr}
+\raeez@toclevel{attack}
+\raeez@toclevel{heal}
+\raeez@toclevel{ghost}
+\raeez@toclevel{scope}
+\raeez@toclevel{verdict}
+\raeez@toclevel{survivor}
+\raeez@toclevel{surviving}
+\raeez@toclevel{scholium}
+\raeez@toclevel{obstruction}
+\raeez@toclevel{finding}
+\raeez@toclevel{counterexample}
+\raeez@toclevel{proposal}
+\raeez@toclevel{face}
+\raeez@toclevel{falsification}
+\raeez@toclevel{flag}
+\raeez@toclevel{flaw}
+\raeez@toclevel{hidden}
+\raeez@toclevel{openfrontier}
+\raeez@toclevel{algorithm}
+\makeatother
+\fi
+
+% Annals/archive claim-status switch.
+\newif\ifannalsedition
+\annalseditiontrue
+\ifdefined\archivebuild
+ \annalseditionfalse
+\fi
+
+\ifannalsedition
+ \providecommand{\ClaimStatusProvedHere}{}
+ \providecommand{\ClaimStatusProvedElsewhere}{}
+ \providecommand{\ClaimStatusProved}{}
+ \providecommand{\ClaimStatusOpen}{}
+ \providecommand{\ClaimStatusConjectured}{}
+ \providecommand{\ClaimStatusHeuristic}{}
+ \providecommand{\ClaimStatusConditional}{}
+ \providecommand{\ClaimStatusNeedsVerification}{}
+ \providecommand{\ClaimStatusDefinitional}{}
+ \providecommand{\ClaimStatusProvedHereConditional}{}
+ \providecommand{\ClaimStatusTheorem}{}
+ \providecommand{\ClaimStatusProposition}{}
+ \providecommand{\ClaimStatusDefinition}{}
+ \providecommand{\ClaimStatusDerivation}{}
+ \providecommand{\ClaimStatusPrincipleLevel}{}
+ \providecommand{\ClaimStatusPartialPrimaryLit}{}
+ \providecommand{\ClaimStatusConventionDependent}{}
+ \providecommand{\ClaimStatusRealized}{}
+\else
+ \providecommand{\ClaimStatusProvedHere}{\textnormal{[proved here]}}
+ \providecommand{\ClaimStatusProvedElsewhere}{\textnormal{[proved elsewhere]}}
+ \providecommand{\ClaimStatusProved}{\textnormal{[proved]}}
+ \providecommand{\ClaimStatusOpen}{\textnormal{[open]}}
+ \providecommand{\ClaimStatusConjectured}{\textnormal{[conjectured]}}
+ \providecommand{\ClaimStatusHeuristic}{\textnormal{[physical heuristic]}}
+ \providecommand{\ClaimStatusConditional}{\textnormal{[conditional]}}
+ \providecommand{\ClaimStatusNeedsVerification}{\textnormal{[needs verification]}}
+ \providecommand{\ClaimStatusDefinitional}{\textnormal{[definitional]}}
+ \providecommand{\ClaimStatusProvedHereConditional}{\textnormal{[proved here, conditional]}}
+ \providecommand{\ClaimStatusTheorem}{\textnormal{[theorem]}}
+ \providecommand{\ClaimStatusProposition}{\textnormal{[proposition]}}
+ \providecommand{\ClaimStatusDefinition}{\textnormal{[definition]}}
+ \providecommand{\ClaimStatusDerivation}{\textnormal{[derivation]}}
+ \providecommand{\ClaimStatusPrincipleLevel}{\textnormal{[principle-level]}}
+ \providecommand{\ClaimStatusPartialPrimaryLit}{\textnormal{[partial primary literature]}}
+ \providecommand{\ClaimStatusConventionDependent}{\textnormal{[convention-dependent]}}
+ \providecommand{\ClaimStatusRealized}{\textnormal{[realized]}}
+\fi
+\providecommand{\RealizedHere}[1]{\textnormal{[realized here: \texttt{#1}]}}
+\providecommand{\ScopeRestricted}[2]{\textnormal{[scope restricted: \texttt{#1} to \texttt{#2}]}}
+\providecommand{\DowngradedHere}[1]{\textnormal{[downgraded: \texttt{#1}]}}
+
+% Memoir-native section formatting.
+\makeatletter
+\@ifundefined{makechapterstyle}{}{%
+  \makechapterstyle{raeezmath}{%
+    \renewcommand*{\chapterheadstart}{\vspace*{1.5\baselineskip}}%
+    \renewcommand*{\chapnamefont}{\normalfont\small\scshape\lsstyle}%
+    \renewcommand*{\chapnumfont}{\normalfont\raeezdisplayfont\Large\scshape\lsstyle}%
+    \renewcommand*{\chaptitlefont}{\normalfont\raeezdisplayfont\LARGE\scshape\lsstyle}%
+    \renewcommand*{\printchaptername}{\chapnamefont\@chapapp}%
+    \renewcommand*{\chapternamenum}{\space}%
+    \renewcommand*{\printchapternum}{\chapnumfont\thechapter}%
+    \renewcommand*{\afterchapternum}{\par\vskip 0.65\baselineskip}%
+    \renewcommand*{\printchaptertitle}[1]{\chaptitlefont ##1}%
+    \renewcommand*{\afterchaptertitle}{\par\nobreak\vskip 1.35\baselineskip}%
+  }%
+  \chapterstyle{raeezmath}%
+}
+\@ifundefined{setsecheadstyle}{}{%
+  \setbeforesecskip{-2.8ex plus -0.8ex minus -0.2ex}%
+  \setaftersecskip{1.1ex plus 0.2ex}%
+  \setbeforesubsecskip{-2.2ex plus -0.6ex minus -0.2ex}%
+  \setaftersubsecskip{0.8ex plus 0.2ex}%
+  \setbeforesubsubsecskip{-1.8ex plus -0.5ex minus -0.2ex}%
+  \setaftersubsubsecskip{0.55ex plus 0.15ex}%
+  \setsecheadstyle{\normalfont\large\scshape\lsstyle}%
+  \setsubsecheadstyle{\normalfont\normalsize\itshape}%
+  \setsubsubsecheadstyle{\normalfont\normalsize\scshape\lsstyle}%
+  \setparaheadstyle{\normalfont\normalsize\itshape}%
+}
+\@ifundefined{makepagestyle}{}{%
+  \nouppercaseheads
+  \makepagestyle{raeezmath}%
+  \makeevenhead{raeezmath}{\normalfont\small\thepage}{}%
+    {\normalfont\small\scshape\lsstyle\leftmark}%
+  \makeoddhead{raeezmath}{\normalfont\small\scshape\lsstyle\rightmark}{}%
+    {\normalfont\small\thepage}%
+  \makeevenfoot{raeezmath}{}{}{}%
+  \makeoddfoot{raeezmath}{}{}{}%
+  \makeheadrule{raeezmath}{\textwidth}{0pt}%
+  \pagestyle{raeezmath}%
+  \aliaspagestyle{chapter}{plain}%
+}
+\makeatother
+
+% Shared modular graph visual calculus.
+\tikzset{
+ gv/.style={circle, draw, thick, inner sep=1pt, minimum size=13pt,
+ font=\footnotesize},
+ gv0/.style={circle, fill, inner sep=0pt, minimum size=3.5pt},
+ wv/.style={circle, draw, thick, inner sep=1.5pt, minimum size=15pt,
+ font=\footnotesize},
+ iedge/.style={thick},
+ pedge/.style={thick,
+ decoration={markings,
+ mark=at position 0.5 with {\node[circle,fill,inner sep=0.8pt]{};}},
+ postaction={decorate}},
+ sloop/.style={thick},
+ leg/.style={thick},
+ shG/.style={fill=white, draw=black!40, rounded corners=2pt},
+ shL/.style={fill=black!6, draw=black!40, rounded corners=2pt},
+ shC/.style={fill=black!14, draw=black!40, rounded corners=2pt},
+ shM/.style={fill=black!28, draw=black!40, rounded corners=2pt},
+ codim bg/.style={draw=black!20, fill=black!3, rounded corners=3pt},
+ maparrow/.style={-{Stealth[length=5pt]}, thick},
+}
+
+\endinput

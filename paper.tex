@@ -1,0 +1,3536 @@
+\documentclass[11pt]{article}
+\usepackage{raeez-math-template}
+\numberwithin{equation}{section}
+\providecommand{\Z}{\mathbb Z}
+\providecommand{\T}{\mathbb T}
+\providecommand{\F}{\mathbb F}
+\providecommand{\coker}{\operatorname{coker}}
+\providecommand{\im}{\operatorname{im}}
+\providecommand{\rank}{\operatorname{rank}}
+\providecommand{\Cone}{\operatorname{Cone}}
+\title{Integral Monodromy and Marked Torus Fillings}
+\author{Raeez Lorgat}
+\date{}
+\hypersetup{
+  pdftitle={Integral Monodromy and Marked Torus Fillings},
+  pdfauthor={Raeez Lorgat},
+  pdfsubject={Integral monodromy, marked torus fillings, and Hodge cohomology}
+}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We compute the invariant vectors, covectors and alternating forms of
+the smooth-fiber lattice of Engel's complex two-torus fibration,
+in both integral markings.
+Its primitive invariant two-form satisfies
+$\iota_{\delta_0}\xi=-6\psi$ for the distinguished circle and quotient
+covector, and has normal form $J\oplus6J$.
+The discriminant pairing gives a finite Heisenberg group with an
+irreducible six-dimensional representation.
+
+For logarithmic fillings, we compute the complete two-fiber Smith
+form, including zero determinant, and its relation to the rational
+Seifert Euler number. For a specified effective rank-one Seifert
+$\mathbb C^*$-bundle, the primitive Leray section has index
+$\operatorname{lcm}(r,s)$ and differential coefficient
+$\Delta_{b_0}/\gcd(r,s)$, with possible global
+$\mathbb Z/\gcd(r,s)$ torsion.
+These integral normalizations remain separate from the rank-four
+transgression with multiplicities $(3,4)$ and $|p|=1$.
+
+Marked finite fillings, toric specialization and conormal meridian
+maps determine a common integral gluing complex. Its cone has
+homology $\mathbb Z$ in degrees zero and six and zero otherwise.
+The selected real union is simply connected and diffeomorphic to $S^6$.
+For a fixed sufficiently small nonzero contraction parameter,
+normalized integral lifts and adapted cusp fan, intersection
+projection on the rational elliptic surface gives the translation
+section and directed divisor line. The resulting complex threefold
+matches the real union on all three collars and has algebraic
+dimension one.
+
+Quotient charts and logarithmic Kodaira--Spencer and residue maps
+give the canonical line, coherent direct images and Hodge groups,
+including $h^{1,1}=2$ and $h^{1,2}=1$.
+A harmonic comparison gives four multiplication-by-$\hbar$ pairs
+and free classes in degrees zero and six in the completed de Rham complex.
+The spectral sequences and Betti comparison determine the
+Bott--Chern and Aeppli dimensions. Positive-degree Bott--Chern
+products vanish, and integration determines the Aeppli module.
+The map $[\omega]\mapsto[2i\partial\omega]$ identifies real Aeppli
+$(1,1)$ classes with exact holomorphic Courant classes, all realized by
+reductions of the untwisted smooth algebroid.
+
+The invariant integral fiber class has type $(1,1)$ and an ordinary
+Dolbeault lift with curve periods $(-2,3,0)$.
+Their nonnegative zero cone $(3s,2s,t)$, with $s,t\ge0$, gives
+global nonzero positive exact currents and excludes pluriclosed Hermitian metrics.
+The sum of the three curve classes is the nonzero second tangent
+Bott--Chern class and gives
+a nonzero bosonic chiral differential operator gerbe class in the published band.
+The canonical line separately obstructs standard Virasoro gluing;
+an exponential chart gives the quantum correction and inverse maps.
+
+For the alternative holomorphic twist of the abelian six-dimensional
+$(2,0)$ theory, invariant total forms give a finite-rank complex
+and a strict unital $P_0$ comparison of the specified resolved
+classical observables over the smooth base.
+It retains the full period derivative, relative Serre trace and affine gluing.
+Free root covers require degree-normalized brackets.
+A constant family retains a central polynomial factor.
+The classical comparison across the singular cusp and its
+quantization require further constructions.
+\end{abstract}
+
+\clearpage
+\tableofcontents
+\clearpage
+
+\section*{Introduction}
+
+The topology of a torus fibration depends on how its singular fibers
+are attached. The monodromy describes the boundaries of their
+neighborhoods, but it does not specify which cycles bound inside
+those neighborhoods. This distinction is decisive when a six-dimensional total space is
+expected to have the topology of a sphere.
+Its fundamental group and middle homology must vanish through the
+actual integral attachment maps.
+
+The example considered here comes from the elliptic surface
+\[
+ y^2=x^3-3t^3(t-1)x+2t^4(t-1)^2.
+\]
+Engel's construction associates to it a complex two-torus fibration
+over $\mathbb P^1$, with distinguished values $0,1,\infty$.
+The two finite monodromies have orders three and four. The third is
+unipotent. Its filling has a central fiber assembled from toric surfaces.
+
+The local fiber
+markings make the invariant circle, the quotient covector, and the
+alternating form explicit. Their contraction has coefficient six.
+The corresponding finite Heisenberg representation is a construction
+on the smooth-fiber lattice.
+
+A different integral calculation belongs to a rank-one Seifert
+bundle. Its rational Euler number determines a coarse transgression,
+but does not determine the full torsion extension or oriented linking
+form. We compute each of these objects and then compare their
+carriers. Product torus fillings give simple examples in which a unit
+presentation determinant coexists with nonzero first and third
+homology. They explain why the four-dimensional torus fiber cannot
+be replaced by one of its circles.
+Oriented linking forms further distinguish manifolds with identical
+additive chain complexes.
+
+For the rank-four problem, we keep the finite deck actions, the
+conormal winding of the section, and the full cusp specialization.
+The common chain complex then computes the actual meridian surfaces,
+three-manifolds and four-manifolds. The complete integral cone retains
+both the constant cohomology class and the orientation class.
+Its attachment matrices, together with van Kampen, prove
+Theorem~\ref{th:thm:real-sphere}: the specified real union is the
+standard six-sphere.
+
+The holomorphic realization
+starts from the divisor line of the displayed elliptic surface.
+Rational parametrization and orthogonal intersection projection give
+the section height $1/6$ and a lower bound that proves primitivity.
+A single translation lift then determines the finite reductions and
+the Tate periods at infinity. We normalize the actual common lattice
+before choosing the logarithmic increments, and choose the cusp fan
+in that marking. Theorem~\ref{cmp:thm:comparison} then supplies the
+three collar identifications and determines the smooth type of the
+resulting complex threefold.
+
+The fibration also determines its meromorphic function field: every
+function descends to $\mathbb P^1$, so its algebraic dimension is one.
+Section~\ref{sec:algebraic-dimension} explains the comparison with generic vanishing.
+For a reduced normal-crossings fiber $Z$, multiplication by the
+ambient differential of a base parameter identifies the kernel of
+$\Omega_V^1|_Z\to\Omega_Z^1/\mathrm{torsion}$ with the normalization
+sheaf. At the nonnormal toric fiber, the ambient section space
+and top direct-image fiber are one-dimensional for every duality
+twist; intrinsic torsion-free vanishing does not determine them.
+The conductor also separates the intrinsic image of ambient sections
+from all intrinsic torsion sections.
+Normalization-trivial line bundles on one-component and
+two-component fibers make that distinction explicit. Serre duality
+and the exact sequence of multiplication by a base parameter then
+determine the top fiber-cohomology dimension without asserting local
+freeness of the direct image. The selected increments, the adapted cusp fan,
+and the fixed contraction parameter remain part of the construction.
+Varying them requires the corresponding relative comparisons.
+
+The quotient charts also determine the canonical divisor and the
+relative logarithmic cotangent bundle. Their coherent direct images
+give the Picard restriction map and the two finite elementary
+modifications. The order-four Kodaira--Spencer matrix then supplies
+a nonzero global connecting map, while the branch residues retain
+the fiber multiplicities. These maps determine the ordinary Hodge
+groups. With the smooth comparison already established, the
+Fr\"olicher differential and a harmonic contraction give an explicit
+finite model of the completed de Rham complex.
+The two conjugate spectral sequences also determine its algebraic
+double complex up to square summands. Section~\ref{sec:bott-chern}
+computes the Bott--Chern algebra and its integration-dual Aeppli module.
+The pullback of a positive form from the base curve determines
+the two Bott--Chern squares, and all positive-degree products vanish.
+Section~\ref{sec:courant} identifies the real Aeppli plane with
+the complex line of exact holomorphic Courant classes.
+It constructs their reductions from the untwisted smooth
+algebroid, with their Dolbeault operators, brackets and gauges.
+A toric boundary curve forces any positive pluriclosed metric
+to have nonzero class. The explicit periods below give a stronger
+obstruction.
+
+The three reduced toric curves also determine the second tangent
+Chern class. Section~\ref{sec:tangent-curves} proves this through
+the ambient logarithmic residue sequence and the conductor complex.
+The two triple points supply the top-degree correction.
+The actual analytic periods make the invariant integral class
+of type $(1,1)$. Local holomorphic line bundles, finite norm
+descent and the residue maps give an ordinary global lift.
+Two cusp injections identify its restriction with the local
+Chern class. Integral specialization and the complex curve
+orientations then give periods $(-2,3,0)$.
+The corresponding Bott--Chern classes are
+$(2\rho_{BC},-3\rho_{BC},0)$ for a nonzero real class
+$\rho_{BC}$ with this integral normalization.
+Their complete nonnegative zero cone has coefficients
+$(3s,2s,t)$, and its nonzero currents have global potentials.
+In particular, the third curve excludes every pluriclosed
+Hermitian metric. The sum of the three curves is
+$-\rho_{BC}\ne0$.
+The Calabi--Eckmann example shows why de Rham vanishing cannot
+replace this Bott--Chern condition.
+
+Section~\ref{sec:chiral-operators} relates the curve sum to the
+gerbe of bosonic chiral differential operators.
+The actual closed-holomorphic recipient injects into Hodge
+cohomology, so the published Hodge characteristic-class formula
+determines a nonzero refined obstruction from that sum.
+Thus a global graded bosonic CDO sheaf with this band does not exist.
+The canonical line gives a separate nonzero obstruction to the
+standard Virasoro gluing. We then compute a quantum exponential
+coordinate change on an actual logarithmic chart, including
+both OPEs, the normal-order conversion and both inverse compositions.
+The local calculation retains its meaning on each chart despite
+this global obstruction. Comparisons with enlarged chiral theories
+and with physical field theories require their own maps.
+
+The same periods enter a classical compactification of the abelian
+six-dimensional $(2,0)$ theory. Section~\ref{hp:sec} starts with
+its resolved Hamiltonian observable complex and averages total
+forms over the actual torus translations. A continuous Fourier
+contraction, followed by a finite perturbation, proves that the
+invariant inclusion is a strict unital $P_0$ quasi-isomorphism.
+Its differential retains the Kodaira--Spencer block; the elliptic
+period derivative at $t=2$ gives an explicit nonzero example.
+The two finite free quotients have degree-normalized trace
+descent. For a constant family, the observable algebra retains
+a central polynomial factor even though the direct Hamiltonian
+construction on the reduced zero-presymplectic field summand
+gives the unit. This distinction keeps the comparison tied to
+its actual kernel resolution. Extending it over the singular
+cusp and constructing quantum observables remain further problems.
+
+\section{The fiber calculation}
+
+We ask which integral classes of a smooth torus fiber remain invariant
+under parallel transport, and what representation they determine.
+Let $f:Y(u)\to\mathbb P^1$ be the complex two-torus fibration described by
+Engel, and put
+\[
+ U=\mathbb P^1\setminus\{0,1,\infty\},\qquad
+ F=f^{-1}(t),\qquad \Lambda=H_1(F,\mathbb Z),\qquad
+ V=\Lambda^\vee
+\]
+for $t\in U$. Over $U$ this is also the smooth fiber lattice of the
+unmodified fibration $X(u)\to\mathbb P^1$.
+
+Engel's construction supplies a distinguished circle class $\delta_0$
+and a primitive quotient covector $\psi$. They occur in the filtration
+\[
+ 0\longrightarrow\Lambda^\times\longrightarrow\Lambda
+   \mathrel{\mathop{\longrightarrow}^{\psi}}\mathbb Z\longrightarrow0,
+ \qquad
+ 0\longrightarrow\mathbb Z\delta_0\longrightarrow\Lambda^\times
+   \longrightarrow\Lambda'\longrightarrow0,                 \tag{1.1}
+\]
+where $\delta_0$ is the circle class of the principal
+$\mathbb G_m$-bundle in Engel's chosen marking
+\cite[Sections 2 and 5]{Engel}.
+Here $\Lambda^\times=\ker\psi$ and
+$\Lambda'=\Lambda^\times/\mathbb Z\delta_0$.
+
+The monodromy also preserves a primitive alternating form $\xi$.
+The calculation below determines this form and proves
+\[
+                         \iota_{\delta_0}\xi=-6\psi.       \tag{1.2}
+\]
+Thus the coefficient six relates three specified tensors on the same
+geometric lattice. Computing it requires the integral markings and their
+orientations. The resulting discriminant pairing will then define the
+finite Heisenberg representation.
+
+We record the integral markings because every sign below depends on them.
+Let $\varrho=e^{2\pi i/3}$.  In the two good-reduction markings, and writing
+$\tau_0,\tau_1$ for the periods of the second elliptic factors, Engel takes
+\[
+\begin{aligned}
+ e_1&=(1,0),& e_2&=(\varrho,0),& \delta_0&=(0,1),&e_4&=(0,\tau_0),
+ &e_3&=\tfrac13(2+\varrho,1),\\
+ f_1&=(1,0),& f_2&=(i,0),& \delta_1&=(0,1),&f_4&=(0,\tau_1),
+ &f_3&=\tfrac12(1+i,1).
+\end{aligned}                                                   \tag{1.3}
+\]
+The first four entries in each row generate a direct-sum sublattice. After
+adjoining $e_3$, respectively $f_3$, the resulting overlattice $\Lambda$ has
+ordered bases
+\[
+             B_0=(e_1,e_2,e_3,e_4),\qquad
+             B_1=(f_1,f_2,f_3,f_4).
+\]
+
+For standard counterclockwise meridians
+$\gamma_0\gamma_1\gamma_\infty=1$, the matrices act on column coordinates
+and are
+\[
+ [T_0]_{B_0}=
+ \begin{pmatrix}
+ 0&-1&-1&0\\ 1&-1&0&0\\ 0&0&1&0\\ 0&0&0&1
+ \end{pmatrix},\qquad
+ [T_1]_{B_1}=
+ \begin{pmatrix}
+ 0&1&0&0\\ -1&0&-1&0\\ 0&0&1&0\\ 0&0&0&1
+ \end{pmatrix}.                                                  \tag{1.4}
+\]
+The complex orientations give multiplication by $\varrho$ at $0$ and by
+$-i$ at $1$.  The circle classes and the transition matrix are
+\[
+ \delta_0=-2e_1-e_2+3e_3,\qquad
+ \delta_1=-f_1-f_2+2f_3,\qquad
+ C=
+ \begin{pmatrix}
+ 1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1
+ \end{pmatrix},                                                   \tag{1.5}
+\]
+where the columns of $C$ express $B_1$ in $B_0$ and
+$C\delta_1=\delta_0$.
+
+These are precisely the integral data of
+Engel's Theorem~5.1.  Its proof fixes the sign at infinity by taking a
+simple zero, rather than a pole, of the linearization for a counterclockwise
+meridian \cite[pp.~12--15]{Engel}.
+
+In the common basis $B_0$, direct conjugation and
+$T_0T_1T_\infty=I$ give
+\[
+ [T_1]_{B_0}=C[T_1]_{B_1}C^{-1}=
+ \begin{pmatrix}
+ -1&1&-1&2\\-1&0&-1&1\\1&1&2&-1\\0&0&0&1
+ \end{pmatrix},                                                   \tag{1.6}
+\]
+\[
+ [T_\infty]_{B_0}=
+ \begin{pmatrix}
+ 2&1&1&0\\0&1&0&-1\\-1&-1&0&1\\0&0&0&1
+ \end{pmatrix}.                                                   \tag{1.7}
+\]
+Thus $T_0^3=T_1^4=I$, $(T_\infty-I)^2=0$, and
+\[
+ (T_\infty-I)\Lambda
+   =\langle e_1-e_3,e_3-e_2\rangle.                               \tag{1.8}
+\]
+
+\begin{theorem}[The geometric level-six lattice]
+\label{thm:geometric-level-six}
+Let $\Gamma=\langle T_0,T_1\rangle$.  For the fiber lattice and markings
+above,
+\[
+ \Lambda^\Gamma=\mathbb Z\delta_0,
+ \qquad V^\Gamma=\mathbb Z\psi,
+ \qquad (\textstyle\bigwedge^2 V)^\Gamma=\mathbb Z\xi,             \tag{1.9}
+\]
+where $\psi=e_4^\vee$ and
+\[
+ \xi=3e_1^\vee\wedge e_2^\vee+e_1^\vee\wedge e_3^\vee
+      -2e_2^\vee\wedge e_3^\vee-2e_3^\vee\wedge e_4^\vee.       \tag{1.10}
+\]
+With the contraction convention
+$(\iota_v\xi)(w)=\xi(v,w)$, identity \emph{(1.2)} holds.  Moreover, the
+ordered basis
+\[
+ a_1=e_1,\qquad b_1=e_3,\qquad
+ a_2=-\delta_0=2e_1+e_2-3e_3,\qquad b_2=e_4-2e_1             \tag{1.11}
+\]
+is unimodular and satisfies
+\[
+ [\xi]_{(a_1,b_1,a_2,b_2)}=J\oplus6J,\qquad
+ J=\begin{pmatrix}0&1\\-1&0\end{pmatrix},\qquad
+ \delta_0=-a_2,\quad\psi=b_2^\vee.                             \tag{1.12}
+\]
+Consequently
+\[
+ \det(\xi^\flat)=36,\qquad
+ \operatorname{SNF}(\xi^\flat)=\operatorname{diag}(1,1,6,6),     \tag{1.13}
+\]
+and the elementary divisors of $\xi$ are $(1,6)$.
+\end{theorem}
+
+\begin{proof}
+Solving $T_iv=v$ for $i=0,1$ gives
+$v=q(-2,-1,3,0)^T$, and solving $T_i^{-T}u=u$ gives
+$u=q(0,0,0,1)^T$.  Integrality makes the two common invariant lattices
+exactly $\mathbb Z\delta_0$ and $\mathbb Z\psi$.
+
+Write the coefficients of an alternating form in the order
+\[
+ e_1^\vee\wedge e_2^\vee, e_1^\vee\wedge e_3^\vee,
+ e_1^\vee\wedge e_4^\vee, e_2^\vee\wedge e_3^\vee,
+ e_2^\vee\wedge e_4^\vee, e_3^\vee\wedge e_4^\vee.
+\]
+Row reduction of $T_i^TMT_i=M$ gives the integral solutions
+$q(3,1,0,-2,0,-2)$, proving the last equality in (1.9) and recovering
+Engel's invariant class from Lemma~7.2 \cite[p.~17]{Engel}.  Its matrix in
+$B_0$ is
+\[
+ [\xi]_{B_0}=
+ \begin{pmatrix}
+ 0&3&1&0\\-3&0&-2&0\\-1&2&0&-2\\0&0&2&0
+ \end{pmatrix}.                                                   \tag{1.14}
+\]
+Therefore
+\[
+       \delta_0^T[\xi]_{B_0}=(0,0,0,-6),
+\]
+which is (1.2).
+
+The columns of (1.11) form the matrix
+\[
+ P=\begin{pmatrix}1&0&2&-2\\0&0&1&0\\0&1&-3&0\\0&0&0&1\end{pmatrix},
+ \qquad \det P=-1.
+\]
+Multiplication gives $P^T[\xi]_{B_0}P=J\oplus6J$.  This proves the
+normal form and the Smith form.  Finally,
+\[
+ \operatorname{Pf}([\xi]_{B_0})=-6,\qquad
+ \tfrac12\xi\wedge\xi
+   =-6e_1^\vee\wedge e_2^\vee\wedge e_3^\vee\wedge e_4^\vee,
+\]
+so $\det[\xi]_{B_0}=(-6)^2=36$, as asserted.
+\end{proof}
+
+\begin{remark}[Basis and orientation]
+If the columns of $A\in\operatorname{GL}_4(\mathbb Z)$ are a new basis in
+an old one, then the simultaneous coordinate changes are
+\[
+ [\xi]'=A^T[\xi]A,\qquad [\delta]'=A^{-1}[\delta],\qquad
+ [\psi]'=A^T[\psi].                                               \tag{1.15}
+\]
+Thus (1.2) is tensorial.  The Pfaffian changes by $\det A$.
+This explains the signs $-6$ in $B_0$ and $+6$ in the
+orientation-reversing basis (1.11). The determinant and Smith form do not change.
+
+Reversing only
+$\delta_0$, only $\psi$, or the contraction convention reverses the sign in
+(1.2).  The abstract normal form alone does not select these classes: for
+example, in $J\oplus6J$, taking $\delta=a_1$ and $\psi=b_2^\vee$ gives
+$\iota_\delta\xi=b_1^\vee$, not $-6\psi$.
+\end{remark}
+
+\begin{proposition}[Reduction along the invariant circle]\label{prop:reduction}
+Let $K=\ker\psi\subset\Lambda$.  The radical of $\xi|_K$ is
+$\mathbb Z\delta_0$, and the induced alternating form on
+$K/\mathbb Z\delta_0$ is unimodular.  The classes $[e_1],[e_3]$
+form an ordered basis with pairing $\xi([e_1],[e_3])=1$.
+\end{proposition}
+
+\begin{proof}
+The contraction identity gives $K=\delta_0^{\perp_\xi}$.
+In the basis (1.11), $K=\mathbb Za_1\oplus\mathbb Zb_1\oplus
+\mathbb Za_2$, while $\delta_0=-a_2$.
+The restriction of (1.12) to $K$ is $J\oplus0$, proving every assertion.
+\end{proof}
+
+Thus the factor six lies in the plane containing the invariant circle
+and a vector detected by $\psi$.  Reduction by that circle leaves an
+integral symplectic plane with elementary divisor one.
+
+\section{The discriminant pairing and Heisenberg module}
+
+The invariant form identifies $\Lambda$ with a finite-index sublattice
+of its dual. The quotient measures the failure of this identification
+to be unimodular. Its pairing will prescribe the commutators of the
+finite Heisenberg group.
+
+The following construction applies to any rank-four alternating lattice
+$(L,\xi)$ with normal form $J\oplus6J$ in a basis
+$(a_1,b_1,a_2,b_2)$. For Engel's fibration, take
+$L=\Lambda$ and the basis in Theorem~1.1. Define
+\[
+ \xi^\flat:L\longrightarrow L^\vee,\qquad \xi^\flat(x)=\xi(x,-),
+ \qquad
+ \mathcal D_\xi=L^\vee/\xi^\flat(L).
+\]
+The rational extension
+$\phi=\xi^\flat\otimes\mathbb Q$ is an isomorphism.
+
+\begin{lemma}[Discriminant pairing]
+For $u,v\in L^\vee$, the formula
+\[
+ b_\xi(\bar u,\bar v)=u(\phi^{-1}v)\pmod{\mathbb Z}               \tag{2.1}
+\]
+defines a perfect alternating pairing
+$b_\xi:\mathcal D_\xi\times\mathcal D_\xi\to\mathbb Q/\mathbb Z$.
+Moreover, if
+\[
+ \alpha=[a_2^\vee],\qquad \beta=[b_2^\vee],
+\]
+then
+\[
+ \mathcal D_\xi=\langle\alpha\rangle\oplus\langle\beta\rangle
+ \cong(\mathbb Z/6\mathbb Z)^2,\qquad
+ b_\xi(\alpha,\beta)=\tfrac16,\quad
+ b_\xi(\beta,\alpha)=-\tfrac16.                                  \tag{2.2}
+\]
+\end{lemma}
+
+\begin{proof}
+Write $x=\phi^{-1}u$ and $y=\phi^{-1}v$.  Replacing $u$ by
+$u+\xi^\flat(\lambda)$ changes (2.1) by
+$\xi(\lambda,y)=-v(\lambda)\in\mathbb Z$. Replacing $v$ by
+$v+\xi^\flat(\mu)$ changes it by $u(\mu)\in\mathbb Z$.  The pairing is
+therefore well defined and alternating.
+
+If it annihilates $\bar u$ against
+every $\bar v$, then $v(x)=-u(\phi^{-1}v)$ is integral for every
+$v\in L^\vee$.  Hence $x\in L$, so $\bar u=0$.  The induced homomorphism
+to the Pontryagin dual is injective between finite groups of the same order,
+and is therefore an isomorphism.  Formula (2.2) follows directly from the
+normal form.
+\end{proof}
+
+Exponentiating $b_\xi$ gives a $\mu_6$-valued alternating pairing.
+We realize it as the commutator of a central extension of
+$\mathcal D_\xi$. Choosing the two cyclic summands in (2.2) then gives
+translation and multiplication operators on functions on one summand.
+Their commutation relation will recover the original discriminant pairing.
+
+Put $K=\langle\alpha\rangle\cong\mathbb Z/6\mathbb Z$, let
+$\zeta_6=e^{2\pi i/6}$, and let $\chi\in\widehat K$ satisfy
+$\chi(\alpha)=\zeta_6$.  The map
+\[
+          r\alpha+s\beta\longmapsto(r\alpha,\chi^s)
+\]
+is a polarization $\mathcal D_\xi\cong K\oplus\widehat K$.  Define
+\[
+ H_6=\mu_6\times K\times\widehat K
+\]
+with multiplication
+\[
+ (z,u,\eta)(z',u',\eta')
+   =\bigl(zz'\eta'(u),u+u',\eta\eta'\bigr).                       \tag{2.3}
+\]
+
+\begin{theorem}[Level-six Heisenberg module]
+The center of $H_6$ is the displayed copy of $\mu_6$.  Its commutator
+pairing is
+\[
+ [(1,u,\eta),(1,u',\eta')]
+  =\bigl(\eta'(u)\eta(u')^{-1},0,1\bigr)
+  =\bigl(e^{2\pi i b_\xi(d,d')},0,1\bigr),                        \tag{2.4}
+\]
+where $d\leftrightarrow(u,\eta)$ and $d'\leftrightarrow(u',\eta')$.
+On the six-dimensional space $\mathcal H=\mathbb C[K]$, the formula
+\[
+ [\rho(z,u,\eta)h](t)=z\eta(t)h(t+u)                              \tag{2.5}
+\]
+defines an irreducible representation, and the central $\mu_6$ acts by its
+faithful tautological character.
+\end{theorem}
+
+\begin{proof}
+The bicharacter in (2.3) makes the multiplication associative, and direct
+multiplication gives (2.4).  Its nondegeneracy forces a central element to
+have $u=0$ and $\eta=1$.  The same calculation verifies (2.5).
+
+For $t\in K$, let $\delta_t$ be the delta-function at $t$.  The operator
+\[
+ P_t=\frac16\sum_{\eta\in\widehat K}
+        \eta(t)^{-1}\rho(1,0,\eta)
+\]
+projects onto $\mathbb C\delta_t$.  A nonzero invariant subspace therefore
+contains some $\delta_t$, and translations carry it through every
+delta-function.  These span $\mathcal H$, proving irreducibility.
+\end{proof}
+
+Applied to Theorem~1.1, this construction belongs to the fiber lattice
+$H_1(F,\mathbb Z)$.  It is not constructed from the ordinary cohomology of
+the total six-manifold.
+
+\section{Two multiple fibers}
+
+The discriminant group describes the integral pairing within a smooth
+fiber. The topology of the total space also depends on how fibers are
+filled. Two logarithmic fillings lead to relations involving a regular
+circle class and two meridians. A global section integer records their
+product relation.
+
+We first compute the resulting abstract group for all integral data.
+We then identify the effective Seifert cases and their Euler number.
+Engel's geometric presentation will enter in Section~5 through its
+vanishing cycles and logarithmic fillings.
+
+\begin{theorem}[Two-fiber Smith form]
+Let $r,s>0$, let $m,n,b_0\in\mathbb Z$, and define
+\[
+ G_{b_0}=\left\langle c,x_0,x_1\ \middle|\
+ c\text{ central},\ x_0x_1=c^{b_0},\ x_0^r=c^m,\ x_1^s=c^n
+ \right\rangle.                                                   \tag{3.1}
+\]
+Put
+\[
+ \Delta_{b_0}=rn+sm-rsb_0,\qquad d=\gcd(r,s,m,n).                \tag{3.2}
+\]
+Then
+\[
+ G_{b_0}\cong\operatorname{coker}
+ \begin{pmatrix}r&s\\-m&n-sb_0\end{pmatrix}.                     \tag{3.3}
+\]
+If $\Delta_{b_0}\ne0$, then
+\[
+ G_{b_0}\cong\mathbb Z/d\mathbb Z
+       \oplus\mathbb Z/(|\Delta_{b_0}|/d)\mathbb Z,\qquad
+ |G_{b_0}|=|\Delta_{b_0}|.                                        \tag{3.4}
+\]
+If $\Delta_{b_0}=0$, then
+\[
+                    G_{b_0}\cong\mathbb Z\oplus\mathbb Z/d\mathbb Z.
+                                                                    \tag{3.5}
+\]
+In either case $G_{b_0}$ is cyclic if and only if $d=1$.
+\end{theorem}
+
+\begin{proof}
+The product relation gives $x_1=x_0^{-1}c^{b_0}$, so the group is abelian.
+In additive notation its two remaining relation vectors in
+$\mathbb Zx_0\oplus\mathbb Zc$ are
+\[
+          rx_0-mc,\qquad sx_0+(n-sb_0)c,
+\]
+which proves (3.3).  The greatest common divisor of the entries is
+\[
+ \gcd(r,s,m,n-sb_0)=\gcd(r,s,m,n)=d,
+\]
+and the determinant is $\Delta_{b_0}$.  For nonzero determinant, the Smith
+invariants are $d$ and $|\Delta_{b_0}|/d$.  If the determinant vanishes, the
+matrix still has rank one because $r,s>0$, so its Smith form is
+$\operatorname{diag}(d,0)$.  The cyclicity assertions follow.
+\end{proof}
+
+\begin{proposition}[Section gauges and orientations]
+For $k_0,k_1\in\mathbb Z$, the generator change
+\[
+ x_0'=x_0c^{k_0},\qquad x_1'=x_1c^{k_1}                            \tag{3.6}
+\]
+sends
+\[
+ m'=m+rk_0,\qquad n'=n+sk_1,\qquad b_0'=b_0+k_0+k_1             \tag{3.7}
+\]
+and preserves both $d$ and $\Delta_{b_0}$.  In the gauge $b_0=0$, the
+presentation-preserving choice $k_1=-k_0=-k$ sends
+\[
+                         (m,n)\longmapsto(m+rk,n-sk).              \tag{3.8}
+\]
+Interchanging $(r,m,x_0)$ with $(s,n,x_1)$ preserves
+$\Delta_{b_0}$.  Replacing the oriented fiber generator by $c'=c^{-1}$
+sends $(m,n,b_0)$ to $(-m,-n,-b_0)$ and sends
+$\Delta_{b_0}$ to $-\Delta_{b_0}$.
+\end{proposition}
+
+\begin{proof}
+Substitution in the three defining relations gives (3.7), and
+\[
+ r(n+sk_1)+s(m+rk_0)-rs(b_0+k_0+k_1)=\Delta_{b_0}.
+\]
+The remaining statements follow by the indicated changes of generators.
+They also show why only $|\Delta_{b_0}|$ is intrinsic without fixed
+orientations.
+\end{proof}
+
+The gcd condition in Theorem~3.1 is essential for cyclicity. For $b_0=0$,
+\[
+ (r,s;m,n)=(2,4;2,2)\quad\Longrightarrow\quad
+ G_0\cong\mathbb Z/2\mathbb Z\oplus\mathbb Z/6\mathbb Z,
+\]
+although $\Delta_0=12$.  Also
+\[
+ (2,4;2,-4)\quad\Longrightarrow\quad
+ G_0\cong\mathbb Z\oplus\mathbb Z/2\mathbb Z,\qquad \Delta_0=0.
+\]
+For $m=n=0$ one obtains
+$G_0\cong\mathbb Z\oplus\mathbb Z/\gcd(r,s)\mathbb Z$.
+
+\begin{proposition}[Seifert Euler number]
+Let $M$ be an oriented Seifert manifold over $S^2$ with two normalized
+effective exceptional fibers. In Wilkes's convention, write its data as
+\[
+       (b_0,S^2;(r,\beta_0),(s,\beta_1)),                          \tag{3.9}
+\]
+where $r,s\ge2$, $0<\beta_0<r$, $0<\beta_1<s$, and
+$\gcd(r,\beta_0)=\gcd(s,\beta_1)=1$.  With
+\[
+                 m=-\beta_0,\qquad n=-\beta_1,                   \tag{3.10}
+\]
+one has $\pi_1(M)\cong G_{b_0}$ and
+\[
+ e(M)=-\left(b_0+\frac{\beta_0}{r}+\frac{\beta_1}{s}\right)
+      =-b_0+\frac mr+\frac ns,\qquad
+ rs\,e(M)=\Delta_{b_0}.                                           \tag{3.11}
+\]
+In particular $d=1$, and hence
+\[
+ \pi_1(M)\cong
+ \begin{cases}
+  \mathbb Z/|\Delta_{b_0}|\mathbb Z,&e(M)\ne0,\\
+  \mathbb Z,&e(M)=0.
+ \end{cases}                                                       \tag{3.12}
+\]
+If $g=\gcd(r,s)$ and $L=\operatorname{lcm}(r,s)=rs/g$, then the smaller
+denominator clearing is
+\[
+             L e(M)=-Lb_0+\frac{s}{g}m+\frac{r}{g}n
+                    =\frac{\Delta_{b_0}}{g}\in\mathbb Z.          \tag{3.13}
+\]
+\end{proposition}
+
+\begin{proof}
+Wilkes's presentation has central regular fiber $h$, local relations
+$a_i^{\alpha_i}h^{\beta_i}=1$, and, over $S^2$ with two exceptional
+fibers, the product relation $a_0a_1=h^{b_0}$.  Setting
+$c=h$, $x_i=a_i$ gives (3.1) and (3.10).  His Euler-number convention gives
+(3.11) \cite[Proposition 4.3, p.~149]{Wilkes}.  Effectiveness implies
+$d=1$, and Theorem~3.1 gives (3.12).  Equation (3.13) is immediate.
+
+Hatcher's section-change calculation gives the geometric counterpart
+of (3.6). Adding twists at one boundary torus and subtracting them at
+another preserves the Euler sum \cite[Section 2.1, pp.~25--27]{Hatcher}.
+\end{proof}
+
+\begin{remark}
+The rational number $e(M)$ is orientation-sensitive.  Reversing the fiber
+orientation and renormalizing Wilkes's two local pairs sends
+\[
+ (b_0;\beta_0,\beta_1)
+   \longmapsto(-b_0-2;r-\beta_0,s-\beta_1),
+\]
+which negates both $e(M)$ and $\Delta_{b_0}$ but preserves the abstract
+group.  With exceptional fibers, $e(M)$ is a rational Seifert Euler number.
+Only in the ordinary circle-bundle case is it itself the integral Euler
+class on the underlying base.
+\end{remark}
+
+\section{The rank-one Seifert transgression}
+
+The rational Seifert Euler number determines a Leray differential only
+after the integral fiber section has been specified. Multiple fibers
+restrict which rational sections extend integrally over the base.
+We compute this restriction for an effective Seifert
+$\mathbb C^*$-bundle with two multiple fibers.
+
+Let $r,s\ge2$, let $0<\beta_0<r$ and $0<\beta_1<s$, and assume
+\[
+ \gcd(r,\beta_0)=\gcd(s,\beta_1)=1.                              \tag{4.1}
+\]
+For $b_0\in\mathbb Z$, consider Koll\'ar's effective Seifert
+$\mathbb C^*$-bundle
+\[
+ q:Z=Y\left(\mathcal O_{\mathbb P^1}(b_0),
+       \frac{\beta_0}{r}[0]+\frac{\beta_1}{s}[1]\right)
+       \longrightarrow\mathbb P^1.                              \tag{4.2}
+\]
+Equivalently, this is the coarse map of the complement of the zero section
+in the corresponding line bundle on the labeled root orbisphere.
+The local characters are faithful by (4.1), so $r$ and $s$ are the
+actual fiber multiplicities.
+
+Give the base its complex orientation and put
+$\omega=c_1(\mathcal O_{\mathbb P^1}(1))$.
+Koll\'ar's natural trivialization
+\[
+ \tau:R^1q_*\mathbb Q\xrightarrow{\sim}\mathbb Q_{\mathbb P^1}
+\]
+defines the normalized rational fiber class $u_K=\tau^{-1}(1)$.
+We use the Wilkes-oriented class $u=-u_K$ and set
+\[
+ m=-\beta_0,\qquad n=-\beta_1,\qquad
+ e=-b_0+\frac mr+\frac ns,\qquad
+ \Delta_{b_0}=rn+sm-rsb_0.                                      \tag{4.3}
+\]
+Put
+\[
+ g=\gcd(r,s),\qquad \ell=\operatorname{lcm}(r,s)=\frac{rs}{g}.
+\]
+
+\begin{theorem}[Coarse two-fiber transgression]
+For the map \emph{(4.2)}, one has
+$R^0q_*\mathbb Z\cong\mathbb Z_{\mathbb P^1}$.
+There is an exact sequence of constructible sheaves
+\[
+ 0\longrightarrow R^1q_*\mathbb Z\longrightarrow
+ \mathbb Z_{\mathbb P^1}\longrightarrow
+ (\mathbb Z/r\mathbb Z)_{\{0\}}\oplus
+ (\mathbb Z/s\mathbb Z)_{\{1\}}\longrightarrow0,                \tag{4.4}
+\]
+where the last map sends $1$ to $(1,1)$. Consequently
+\[
+ H^0(\mathbb P^1,R^1q_*\mathbb Z)=\ell\mathbb Z u,\qquad
+ H^1(\mathbb P^1,R^1q_*\mathbb Z)\cong\mathbb Z/g\mathbb Z.       \tag{4.5}
+\]
+In the integral Leray spectral sequence of $q$, the differential
+\[
+ d_2^{0,1}:H^0(\mathbb P^1,R^1q_*\mathbb Z)
+       \longrightarrow H^2(\mathbb P^1,R^0q_*\mathbb Z)          \tag{4.6}
+\]
+satisfies
+\[
+ d_2^{0,1}(\ell u)=\frac{\Delta_{b_0}}g\,\omega,\qquad
+ d_2^{0,1}(rsu)=\Delta_{b_0}\,\omega.                            \tag{4.7}
+\]
+The first equation uses the primitive global section.
+The second uses its $g$-fold multiple.
+\end{theorem}
+
+\begin{proof}
+Koll\'ar's multiplicity criterion gives the two multiplicities $r$ and $s$.
+His integral comparison map and its local cokernel give (4.4)
+\cite[Theorem~7 and Propositions~43 and 47]{Kollar}.  The long exact
+cohomology sequence of (4.4) begins with the diagonal reduction map
+\[
+ \mathbb Z\longrightarrow\mathbb Z/r\mathbb Z\oplus
+ \mathbb Z/s\mathbb Z.
+\]
+Its kernel is $\ell\mathbb Z$ and its cokernel is
+$\mathbb Z/g\mathbb Z$, proving (4.5).
+
+In Koll\'ar's convention the rational Chern class is
+\[
+ c_1^K(Z/\mathbb P^1)
+   =\left(b_0+\frac{\beta_0}{r}+\frac{\beta_1}{s}\right)\omega
+   =-e\omega.                                                     \tag{4.8}
+\]
+The quotient $Z\to Z/\mu_\ell$ induces a map of Leray spectral sequences,
+and $Z/\mu_\ell$ is an ordinary $\mathbb C^*$-bundle whose Chern class is
+$\ell c_1^K$.  Hence
+\[
+ d_2^{0,1}(\ell u_K)=\ell c_1^K(Z/\mathbb P^1)
+\]
+\cite[Definition~9, Map~13, and Corollary~44]{Kollar}.  Replacing $u_K$ by
+$u=-u_K$ and using
+\[
+ \ell e=-\ell b_0+\frac{s}{g}m+\frac{r}{g}n
+          =\frac{\Delta_{b_0}}g
+\]
+proves the first equation in (4.7).  Since $rs=g\ell$, the second follows.
+\end{proof}
+
+The coarse coefficient records only the free part of the global Seifert
+class.  To see the missing information integrally, let
+\[
+ \mathcal S_{r,s}
+ =\langle H,X_0,X_1\mid rX_0=H,\ sX_1=H\rangle,                  \tag{4.9}
+\]
+the line-bundle class group of the labeled root orbisphere.  Here $H$ is
+the pullback of the positive coarse class and $X_0,X_1$ are the two root
+classes.  In the orientation of (4.3), the Seifert class is
+\[
+                  \varepsilon=-b_0H+mX_0+nX_1.                  \tag{4.10}
+\]
+
+\begin{proposition}[The global class and its coarse shadow]
+There is an isomorphism
+\[
+                  \mathcal S_{r,s}\cong
+                  \mathbb Z\oplus\mathbb Z/g\mathbb Z.          \tag{4.11}
+\]
+The section gauges \emph{(3.7)} leave $\varepsilon$ fixed, and
+\[
+                 \ell\varepsilon=\frac{\Delta_{b_0}}gH.         \tag{4.12}
+\]
+Equivalently, on gauge classes
+\[
+ \kappa[b_0,m,n]
+   =-\ell b_0+\frac{\ell}{r}m+\frac{\ell}{s}n
+   =\frac{\Delta_{b_0}}g                                      \tag{4.13}
+\]
+is a surjection to $\mathbb Z$ whose kernel is the torsion subgroup
+$\mathbb Z/g\mathbb Z$.  Thus the rational Euler number, and hence the
+coarse differential, determines the full global class exactly when $g=1$.
+\end{proposition}
+
+\begin{proof}
+Koll\'ar's classification gives the representatives $(b_0,m,n)$, while a
+change of local section gives the relations
+\[
+ (b_0,m,n)\sim(b_0+k_0+k_1,m+rk_0,n+sk_1).
+\]
+The first determinantal divisor of the relation matrix is $1$, while the
+second is
+\[
+                         \gcd(r,s,rs)=g.
+\]
+Its Smith form therefore gives (4.11).  Relations $rX_0=H$ and $sX_1=H$
+prove both gauge invariance and (4.12).  The three coefficients in (4.13)
+have greatest common divisor $1$, so $\kappa$ is onto.  Its finite kernel has
+order $g$, proving the last assertion.
+\end{proof}
+
+The torsion is already present in the smallest rank-drop example.  For
+\[
+ r=s=2,\qquad b_0=-1,\qquad \beta_0=\beta_1=1,                 \tag{4.14}
+\]
+one has $e=\Delta_{b_0}=0$, so the coarse transgression vanishes, whereas
+\[
+ \varepsilon=H-X_0-X_1=X_0-X_1
+\]
+is the nonzero element of order two in $\mathcal S_{2,2}$.  Thus a zero
+rational Euler number need not mean that the global Seifert class is zero.
+
+\begin{proposition}[Effectivization and rank drop]
+For formal local data $(r,m)$ and $(s,n)$, put
+\[
+ a_0=\gcd(r,m),\quad a_1=\gcd(s,n),\quad
+ R=\frac r{a_0},\quad S=\frac s{a_1},\quad h=\gcd(R,S).          \tag{4.15}
+\]
+Suppose the data arise from a rank-one Seifert construction after
+reducing the two local fractions. Its actual local orders are $R,S$.
+The primitive carrier is
+\[
+ Q=\operatorname{lcm}(R,S)=\frac{rs}{a_0a_1h},                  \tag{4.16}
+\]
+and
+\[
+       d_2^{0,1}(Qu)=\frac{\Delta_{b_0}}{a_0a_1h}\,\omega,
+       \qquad d_2^{0,1}(rsu)=\Delta_{b_0}\,\omega.              \tag{4.17}
+\]
+
+If the local pairs are effective and $\Delta_{b_0}=0$, then
+\[
+                 r=s,\qquad m+n=rb_0.                            \tag{4.18}
+\]
+For normalized pairs this says $b_0=-1$ and
+$\beta_0+\beta_1=r$. In this case $G_{b_0}\cong\mathbb Z$.
+\end{proposition}
+
+\begin{proof}
+The least positive integer $k$ for which $r\mid km$ and $s\mid kn$ is
+$\operatorname{lcm}(R,S)$, proving (4.16).  Writing
+$m=a_0M$ and $n=a_1N$ gives
+\[
+ Qe=\frac{\Delta_{b_0}}{a_0a_1h},
+ \qquad rs=(a_0a_1h)Q,
+\]
+which proves (4.17).  If the pairs are effective and $\Delta_{b_0}=0$, then
+reduction modulo $r$ gives $r\mid s$, and reduction modulo $s$ gives
+$s\mid r$.  This proves (4.18).  The normalized conclusion follows from
+$0<\beta_i<r$, and Theorem~3.1 gives the last assertion.
+\end{proof}
+
+\begin{remark}[Naturality, orientations, and scope]
+The naturality in Theorem~4.1 is the map of Leray spectral sequences induced
+by $Z\to Z/\mu_\ell$. The pullback of the ordinary fiber generator is
+$\ell u_K$.  More generally, a morphism of oriented Seifert bundles gives
+commuting Leray differentials.  If a base pullback has actual carrier $\ell'u'$ with $\ell'\mid\ell$,
+then $\ell u$ pulls back to $(\ell/\ell')\ell'u'$.
+Primitive numerical coefficients must be compared with this index.
+
+Reversing the fiber generator or the chosen generator
+$\omega$ reverses the displayed scalar.  Section gauges and interchange of
+the two labeled points preserve (4.7). The only changes of the oriented
+rank-one fiber basis are $u\mapsto\pm u$.
+
+This theorem is specific to the rank-one Seifert bundle (4.2).  An affine torus fibration has a higher-rank local system.
+Local multiplicities and a group presentation do not determine its
+extension across singular fibers or its rational transgression.  Transporting (4.7) to such a fibration would
+require an actual map over the base inducing the claimed morphism of
+constructible sheaves.  No such map is used below.
+\end{remark}
+
+\section{The Leray carrier in Engel's (3,4) case}
+
+For Engel's fibration, the invariant covector $\psi$ gives a section of
+the rank-four cohomology local system over $U$.
+Computing its transgression first requires determining which multiples
+extend across the singular fibers. This extension depends on the
+logarithmic transforms and the cusp gluing of the actual map
+$f:Y(u)\to\mathbb P^1$.
+We specify these data before applying Engel's integral calculation.
+
+Choose lifts of Engel's logarithmic-transform classes
+\[
+ a_0\in\tfrac13\Lambda^{T_0},\qquad
+ a_1\in\tfrac14\Lambda^{T_1},
+\]
+and put
+\[
+ v_0=3a_0,\qquad v_1=4a_1,\qquad
+ m=\psi(v_0),\qquad n=\psi(v_1),\qquad
+ p=12\psi(a_0+a_1)=4m+3n.                                        \tag{5.1}
+\]
+We require the local cyclic affine actions on the good-reduction tori to
+be free.  Their quotient fibers then have multiplicities $3$ and $4$.
+The condition $|p|=1$ used below implies this freeness.  Exact torsion
+order alone does not imply it.
+
+\begin{proposition}[A free-action criterion]\label{prop:affine-free}
+Let $d>0$ be an integer, let $T$ preserve a lattice $\Lambda$ with
+$T^d=I$, and let
+$a\in d^{-1}\Lambda^T$.  On the real torus
+$\Lambda_{\mathbb R}/\Lambda$, put $g_a(z)=Tz+a$.
+If $\theta\in\Lambda^\vee$ satisfies $\theta T=\theta$ and
+$\gcd(\theta(da),d)=1$, then the action generated by $g_a$ is free
+and has order $d$.  In the two markings above, both local actions are
+free if and only if $\gcd(m,3)=\gcd(n,4)=1$, equivalently
+$\gcd(p,12)=1$.
+\end{proposition}
+
+\begin{proof}
+Since $Ta=a$, one has $g_a^k(z)=T^kz+ka$ and $g_a^d=1$.
+A fixed point of $g_a^k$ would imply
+$(T^k-I)z+ka\in\Lambda$.  Applying the real extension of $\theta$
+would give $k\theta(da)/d\in\mathbb Z$.  The coprimality assumption
+therefore forces $d\mid k$.
+
+In the first marking, direct solution of $T_0v=v$ gives
+$3a_0=h\delta_0+me_4$ with $h\in\mathbb Z$.
+If $3\mid m$, then $z=-h(e_1+e_2)/3$ satisfies
+$(T_0-I)z+a_0=he_3+(m/3)e_4\in\Lambda$.
+In the second marking, similarly $4a_1=h'\delta_1+nf_4$.
+If $2\mid n$, then $z=-h'(f_1+f_2)/4$ satisfies
+$(T_1^2-I)z+2a_1=h'f_3+(n/2)f_4\in\Lambda$.
+
+These fixed points prove necessity.  Sufficiency follows from the
+first assertion with $\theta=\psi$.  The final equivalence follows
+from $p\equiv m\pmod3$ and $p\equiv-n\pmod4$.
+\end{proof}
+
+The class $a_0=\delta_0/3$ has exact order three, but its affine action
+fixes $z=-(e_1+e_2)/3$, since
+\[
+             (T_0-I)z+a_0=e_3\in\Lambda.
+\]
+Likewise $a_1=\delta_1/4$ has exact order four, but its square fixes
+$z=-(f_1+f_2)/4$, because
+\[
+             (T_1^2-I)z+2a_1=f_3\in\Lambda.
+\]
+These computations give the freeness criterion for the stated affine
+maps.
+
+A positively marked quotient also requires its actual deck
+transformation and the continuation of its origin section. For
+$a_0=e_4/3$, these are computed in
+Theorem~\ref{marked-local:thm:marked-native-filling}. Its action includes
+the central conormal translation and is free by the fourth coordinate.
+
+For the paired increment $a_1=-f_4/4$, Theorem~\ref{of:thm:geometry}
+constructs the marked order-four filling. Its original conormal
+translation is $-\delta_1/4$, and its positive marked relation is
+$\gamma_1^4=f_{1\#}(-f_4-\delta_1)$.
+
+The carrier of the transgression is the cohomological Leray spectral
+sequence of the specific map $f:Y(u)\to\mathbb P^1$,
+\[
+ E_2^{a,b}=H^a(\mathbb P^1,R^bf_*\mathbb Z)
+       \Longrightarrow H^{a+b}(Y(u),\mathbb Z).                   \tag{5.2}
+\]
+Over $U$, the restriction of $R^1f_*\mathbb Z$ is a local system with
+fiber $V=H^1(F,\mathbb Z)$ and monodromy $T_i^{-T}$.  Across the three
+singular values, $R^1f_*\mathbb Z$ is the corresponding constructible
+sheaf, not a local system.  The fibers of $f$ are connected, so
+$R^0f_*\mathbb Z\cong\mathbb Z_{\mathbb P^1}$.  Thus the first relevant
+differential is precisely
+\[
+ d_2^{0,1}:H^0(\mathbb P^1,R^1f_*\mathbb Z)
+       \longrightarrow H^2(\mathbb P^1,R^0f_*\mathbb Z).          \tag{5.3}
+\]
+
+\begin{theorem}[Engel's integral transgression]
+Assume $|p|=1$, as in Engel's integral-homology calculation, and choose the
+common orientation for which
+$H^2(\mathbb P^1,R^0f_*\mathbb Z)=\mathbb Z\omega$.  Then
+\[
+ H^0(\mathbb P^1,R^1f_*\mathbb Z)=12\mathbb Z\psi,
+ \qquad
+                  d_2^{0,1}(12\psi)=p\omega.                      \tag{5.4}
+\]
+\end{theorem}
+
+\begin{proof}
+The extension lattice in (5.4) is Engel's Lemma~7.5. The differential
+uses the invariant covector $\psi$: the local translation contributions
+have $\psi$-values $m$ and $n$. Their vector representatives depend on
+the marked section before passing to this covector. For example, with
+$a_0=e_4/3$, equation~\eqref{marked-local:eq:marked-meridian-relation}
+gives the positive local relation with vector $e_4-2\delta_0$.
+Since $\psi(\delta_0)=0$, it has the same $\psi$-value as $v_0=e_4$.
+
+Thus the oriented contributions to the obstruction for $12\psi$ are
+\[
+       \frac{12\psi(v_0)}3=4m,\qquad
+       \frac{12\psi(v_1)}4=3n.                                   \tag{5.5}
+\]
+The cusp gluing at infinity contributes zero in this marking.  Their sum is
+$p=4m+3n$, which is Engel's Lemma~7.6
+\cite[pp.~20--21]{Engel}.
+
+Reversing either generator in (5.4) reverses the
+corresponding sign. Simultaneous transport of the orientation preserves the
+identity.
+\end{proof}
+
+\begin{proposition}[The $(3,4)$ presentation]
+For the same geometric data,
+\[
+ \pi_1(Y(u))\cong
+ \langle c,x_0,x_1\mid c\text{ central},\ x_0x_1=1,
+          \ x_0^3=c^m,\ x_1^4=c^n\rangle.                         \tag{5.6}
+\]
+Consequently
+\[
+ \pi_1(Y(u))\cong
+ \begin{cases}
+  \mathbb Z/|p|\mathbb Z,&p\ne0,\\
+  \mathbb Z,&p=0.
+ \end{cases}                                                       \tag{5.7}
+\]
+In particular it is trivial when $|p|=1$.
+\end{proposition}
+
+\begin{proof}
+Engel's vanishing cycles at infinity kill $\ker\psi$ and leave the central
+class $c$ represented by $e_4$.  The two logarithmic fillings give (5.6)
+\cite[Proposition 6.1, pp.~15--16]{Engel}.  This is Theorem~3.1 with
+$(r,s;b_0)=(3,4;0)$, for which $d=1$ and $\Delta_0=p$.
+\end{proof}
+
+\subsection*{Comparison with the rank-one theorem}
+
+The two transgressions can be compared numerically after normalizing
+their integral data. For Engel's raw data
+$(r,s;b_0)=(3,4;0)$, the determinant is
+$\Delta_0=4m+3n=p$. Under the hypothesis $|p|=1$, reduction modulo
+$3$ and $4$ gives
+\[
+                  \gcd(3,m)=\gcd(4,n)=1.
+\]
+
+Choose normalized residues
+\[
+ 0<\beta_0<3,\qquad 0<\beta_1<4,\qquad
+ -\beta_0\equiv m\pmod3,\qquad
+ -\beta_1\equiv n\pmod4.
+\]
+They define faithful local characters. Put
+\[
+ k_0=\frac{-\beta_0-m}{3},\qquad
+ k_1=\frac{-\beta_1-n}{4},\qquad
+ b_0'=k_0+k_1.
+\]
+
+The section gauges (3.7) replace $(0,m,n)$ by
+$(b_0',-\beta_0,-\beta_1)$ and preserve the determinant.
+These normalized data therefore define an effective rank-one bundle
+of the form (4.2), with $\Delta_{b_0'}=p$.
+Since $g=1$ and $\ell=12$, its differential is
+\[
+                         d_2^{0,1}(12u)=p\omega.
+\]
+
+Engel's differential (5.4) has the same coefficient after the
+orientations are matched. Its source, however, comes from a different
+constructible sheaf. Engel's sheaf has generic rank four, nontrivial
+monodromy, and an additional singular value at infinity.
+
+A geometric comparison would require a map over the base inducing a
+morphism of the integral coefficient sheaves and compatible Leray
+differentials. On global sections it would have to compare
+$12u$ with $12\psi$, including their extension across every singular
+fiber. Such a comparison is not constructed by the normalization above.
+Engel's Lemmas~7.5--7.6 supply the carrier and differential in (5.4).
+
+The broader transgression problem for an affine torus fibration requires
+its full local system, specialization maps, global affine or Chern class,
+and orientations. The group presentation (3.1) supplies none of these
+sheaf maps by itself. Constructing their comparison with the rank-one
+bundle remains a geometric problem even when the numerical
+differentials agree.
+
+Finally, $\Lambda=H_1(F,\mathbb Z)$ is a fiber lattice. For the
+selected realization $Y^{\mathrm{ad}}(u)$ of
+Theorem~\ref{cmp:thm:comparison}, one has
+\[
+ H^j(Y^{\mathrm{ad}}(u),\mathbb Z)=0\qquad(0<j<6),
+\]
+Thus neither $\Lambda$ nor its discriminant group is ordinary
+positive-degree cohomology of the total space.
+
+\section{The integral extension of the two-fiber class}
+
+The coefficient $\Delta_{b_0}/g$ determines the coarse transgression.
+The total integral group can still be a nonsplit extension.  For example,
+$r=s=2$, $b_0=0$, and $m=n=-1$ give a cyclic group of order four,
+although both successive quotients have order two.
+
+Retain the group $\mathcal S_{r,s}$ in (4.9), for arbitrary $r,s>0$ and
+$m,n,b_0\in\mathbb Z$.  Write
+\[
+ g=\gcd(r,s),\qquad R=r/g,\qquad S=s/g,\qquad
+ \ell=gRS,\qquad k=\Delta_{b_0}/g.
+\]
+Choose integers $a,b$ with $aS+bR=1$, and put
+\begin{equation}\label{eq:seifert-split}
+ U=aX_0+bX_1,\qquad T=RX_0-SX_1,\qquad t=bm-an.
+\end{equation}
+Here $a,b$ denote B\'ezout coefficients.
+
+\begin{theorem}[Integral extension and splitting]\label{thm:extension}
+One has
+\begin{equation}\label{eq:class-coordinates}
+ \mathcal S_{r,s}=\mathbb ZU\oplus(\mathbb Z/g\mathbb Z)T,
+ \qquad H=\ell U,\qquad \varepsilon=kU+tT.
+\end{equation}
+Consequently, for $E=\mathcal S_{r,s}/\mathbb Z\varepsilon$,
+\begin{equation}\label{eq:extension-presentation}
+ E=\langle U,T\mid gT=0,\ kU+tT=0\rangle.
+\end{equation}
+If $k\ne0$, this gives an exact sequence
+\begin{equation}\label{eq:extension-sequence}
+ 0\longrightarrow\mathbb Z/g\mathbb Z
+ \mathrel{\mathop{\longrightarrow}^{1\mapsto T}}E
+ \mathrel{\mathop{\longrightarrow}^{U\mapsto1,\ T\mapsto0}}
+ \mathbb Z/|k|\mathbb Z\longrightarrow0.
+\end{equation}
+It splits if and only if $\gcd(g,k)$ divides $t$.
+
+Moreover, with $d=\gcd(r,s,m,n)$,
+\[
+ \gcd(g,k,t)=d,\qquad
+ E\cong
+ \begin{cases}
+ \mathbb Z/d\mathbb Z\oplus\mathbb Z/(|\Delta_{b_0}|/d)\mathbb Z,
+       &k\ne0,\\
+ \mathbb Z\oplus\mathbb Z/d\mathbb Z,&k=0.
+ \end{cases}
+\]
+Thus $E$ and $G_{b_0}$ have the same invariant factors.
+This assertion alone specifies no canonical isomorphism between their generators.
+\end{theorem}
+
+\begin{proof}
+Eliminate $H$ from (4.9).  The remaining relation is
+$g(RX_0-SX_1)=0$.  The change of generators in
+\eqref{eq:seifert-split} has determinant $-aS-bR=-1$, with inverse
+\[
+             X_0=SU+bT,\qquad X_1=RU-aT.
+\]
+It follows that $T$ has exact order $g$ and $H=rX_0=\ell U$.
+Substitution in (4.10) gives \eqref{eq:class-coordinates} and
+\eqref{eq:extension-presentation}.
+
+If $k\ne0$, no nonzero multiple of the relation $kU+tT$ lies in
+$\mathbb ZT$.  Thus the indicated cyclic subgroup injects, and the
+quotient is $\mathbb Z/|k|\mathbb Z$.  A lift of its generator has
+form $U+jT$ and is killed by $k$ precisely when
+$kj\equiv t\pmod g$.  This congruence is soluble exactly under the
+stated divisibility condition.
+
+The matrix sending $(m,n)$ to $(Sm+Rn,bm-an)$ is unimodular.
+Since $g\mid\ell$, this gives
+\[
+ \gcd(g,k,t)=\gcd(g,Sm+Rn,bm-an)=\gcd(g,m,n)=d.
+\]
+The relation matrix in \eqref{eq:extension-presentation} has nonzero
+entry $g$, determinant of absolute value $g|k|=|\Delta_{b_0}|$,
+and first determinantal divisor $d$.  Its Smith form proves both cases.
+\end{proof}
+
+Replacing $(a,b)$ by $(a+Rj,b-Sj)$ changes $U$ to $U+jT$ and changes
+$t$ to $t-jk$ modulo $g$.  The presentation and the splitting condition
+are therefore independent of the B\'ezout choice.
+The section gauges (3.7) change $t$ by a multiple of $g$ and leave $k$ fixed.
+
+\begin{proposition}[The coarse Leray extension]\label{prop:leray-extension}
+For the effective rank-one Seifert bundle (4.2), let $M$ be its oriented
+unit-circle subbundle.  If $k\ne0$, the integral Leray filtration gives
+\begin{equation}\label{eq:leray-extension}
+ 0\longrightarrow\mathbb Z/|k|\mathbb Z
+ \longrightarrow H^2(M,\mathbb Z)
+ \longrightarrow\mathbb Z/g\mathbb Z\longrightarrow0.
+\end{equation}
+Its middle group is cyclic of order $|\Delta_{b_0}|$.
+The extension splits if and only if $\gcd(g,k)=1$.
+For $k=0$, the middle group is $\mathbb Z$ and the sequence is
+$0\to\mathbb Z\xrightarrow{\,\pm g\,}\mathbb Z\to\mathbb Z/g\to0$.
+\end{proposition}
+
+\begin{proof}
+A neighborhood of each fiber retracts onto a circle, so
+$R^jq_*\mathbb Z=0$ for $j>1$.  The base has cohomological dimension
+two.  Hence the only terms contributing to total degree two are
+$E_\infty^{2,0}=\operatorname{coker}d_2^{0,1}$ and
+$E_\infty^{1,1}=\mathbb Z/g\mathbb Z$.  Equation (4.7) gives the
+left group in \eqref{eq:leray-extension}.  Radial contraction from $Z$
+to $M$ preserves the base and its Leray filtration.
+
+Effectiveness implies $d=1$.  Theorem~3.1 and abelianity give
+$H_1(M,\mathbb Z)=G_{b_0}$, and integral Poincar\'e duality gives
+$H^2(M,\mathbb Z)\cong H_1(M,\mathbb Z)$.
+If $k\ne0$, a direct sum of cyclic groups of orders $g$ and $|k|$ is
+cyclic exactly when those orders are coprime.  Conversely, a cyclic group
+of order $g|k|$ has complementary subgroups of these orders when they
+are coprime.  This proves the splitting assertion.
+
+If $k=0$, Theorem~3.1 gives the middle group $\mathbb Z$.
+Its subgroup with quotient $\mathbb Z/g\mathbb Z$ is $g\mathbb Z$.
+\end{proof}
+
+The algebraic sequence \eqref{eq:extension-sequence} places the two
+cyclic groups in the opposite order from \eqref{eq:leray-extension}.
+Their middle groups have the same invariant factors.  No identification
+of the two filtrations is asserted.
+
+For $r=s=2$, $m=n=-1$, choose $a=1,b=0$.  Then $t=1$ and
+$k=-2(b_0+1)$.  At $b_0=0$, both extensions have middle group
+$\mathbb Z/4\mathbb Z$ and do not split.
+At $b_0=-1$, the nonzero torsion class $\varepsilon=T$ has zero
+coarse coefficient, and quotienting by it leaves $E\cong\mathbb Z$.
+
+\section{The linking form of an effective filling}
+
+A group presentation determines the orders of cycles.  Their linking
+also uses the oriented filling slopes.  We retain this geometric data
+explicitly, without selecting a convention for naming lens spaces.
+
+Let $T^2$ have oriented basis $(x,c)$ with intersection $x\cdot c=1$.
+Set $\nu=n-sb_0$ and regard
+\begin{equation}\label{eq:filling-slopes}
+       \mu_0=rx-mc,\qquad \mu_1=sx+\nu c
+\end{equation}
+as curves on $T^2$.  Suppose
+$\gcd(r,m)=\gcd(s,n)=1$.  Both curves are then primitive.
+
+Take an oriented solid torus $V_0$ whose meridian is $\mu_0$, identifying
+$T^2$ with its boundary with the boundary orientation.
+Glue a second solid torus $V_1$ with meridian $\mu_1$ by an
+orientation-reversing boundary map.  Denote the resulting oriented
+closed manifold by $M_A$.
+
+The slope $c$ specifies its regular Seifert fiber.  The intersection
+numbers with the two meridians have absolute values $r,s$.
+The section relation $x_1=-x+b_0c$ identifies the second local
+relation with $-\mu_1$.  Thus these fillings realize the data of (3.1),
+with the stated orientation on $T^2$.
+The gluing description is the two-fiber case of the solid-torus
+construction in \cite[Section~2.1, pp.~25--27]{Hatcher}.
+
+For disjoint torsion cycles $z,w$ in an oriented closed three-manifold,
+our convention is
+\[
+ \lambda_M([z],[w])=\frac{C\cdot w}{N}\pmod{\mathbb Z},
+             \qquad \partial C=Nz,\quad N\ne0.
+\]
+This is the symmetric torsion linking pairing
+\cite[Section~1, pp.~2--3]{Hillman}.
+
+\begin{theorem}[Two-fiber linking coefficient]\label{thm:linking}
+Choose integers $\alpha,\beta$ with $m\alpha+r\beta=1$, and put
+\begin{equation}\label{eq:linking-coordinates}
+ \lambda_0=\alpha x+\beta c,\qquad
+ q=s\beta-\nu\alpha,\qquad \Delta=rn+sm-rsb_0.
+\end{equation}
+Then
+\[
+       \mu_1=q\mu_0+\Delta\lambda_0,\qquad
+       \gcd(q,\Delta)=1.
+\]
+If $\Delta\ne0$, the class $\gamma=[\lambda_0]$ generates
+$H_1(M_A,\mathbb Z)\cong\mathbb Z/|\Delta|\mathbb Z$, and
+\begin{equation}\label{eq:linking-formula}
+ \lambda_{M_A}(i\gamma,j\gamma)=-\frac{qij}{\Delta}
+            \pmod{\mathbb Z},\qquad
+ [x]=m\gamma,\qquad[c]=r\gamma.
+\end{equation}
+The pairing is nonsingular.  For $\Delta=0$, one has
+$H_1(M_A,\mathbb Z)\cong\mathbb Z$ and the torsion pairing is trivial.
+\end{theorem}
+
+\begin{proof}
+The columns $(\mu_0,\lambda_0)$ form a unimodular matrix of determinant
+$r\beta+m\alpha=1$.  Taking determinants in this basis gives
+\[
+ \mu_1=(s\beta-\nu\alpha)\mu_0+(r\nu+sm)\lambda_0.
+\]
+Primitivity of $\mu_1$ proves $\gcd(q,\Delta)=1$.
+The inverse change of basis is
+\[
+               x=\beta\mu_0+m\lambda_0,\qquad
+               c=-\alpha\mu_0+r\lambda_0.
+\]
+The two meridional disks kill $\mu_0$ and $\mu_1$ in first homology,
+so the resulting presentation has the single relation $\Delta\gamma=0$.
+
+Let $D_0,D_1$ be the oriented meridional disks with respective
+boundaries $\mu_0,\mu_1$.  On $T^2$, the cycle
+$\mu_1-q\mu_0-\Delta\lambda_0$ bounds an integral singular
+2-chain $B$, because its homology class is zero.  Consequently
+\[
+                   C=D_1-qD_0-B,\qquad
+                   \partial C=\Delta\lambda_0.
+\]
+
+Push a representative of $\lambda_0$ into the interior of $V_0$.
+It is disjoint from $D_1$ and $B$ and intersects $D_0$ with sign $+1$.
+The sign follows from the boundary orientation and
+$\mu_0\cdot\lambda_0=1$.  Therefore $C\cdot\lambda_0=-q$,
+which proves \eqref{eq:linking-formula}.
+
+Bilinearity gives all values.
+Since $q$ is a unit modulo $\Delta$, this pairing identifies the cyclic
+group with its character group.  If $\Delta=0$, its first homology
+is infinite cyclic and has no torsion.
+\end{proof}
+
+Replacing $(\alpha,\beta)$ by $(\alpha+rj,\beta-mj)$ replaces
+$\lambda_0$ by $\lambda_0+j\mu_0$ and $q$ by $q-j\Delta$.
+Thus neither $\gamma$ nor the linking value changes.
+Reversing the orientation of $M_A$ negates the pairing.
+A different cyclic generator multiplies its displayed coefficient by a
+unit square modulo $|\Delta|$.
+These rules state the full dependence on choices, including even orders.
+
+For $(r,s;m,n;b_0)=(2,2;-1,-1;0)$, take
+$(\alpha,\beta)=(-1,0)$.  Then $\Delta=-4$, $q=-1$, and
+$\lambda_{M_A}(\gamma,\gamma)=-1/4$.
+For $(r,s;m,n;b_0)=(2,3;1,1;0)$, take $(\alpha,\beta)=(1,0)$.
+Now $\Delta=5$, $q=-1$, and the value is $1/5$.
+The nonsingular symmetric form on $\mathbb Z/5\mathbb Z$ cannot
+be an alternating form: every alternating bilinear form on a cyclic
+group vanishes.  The next construction specifies the larger group
+on which an alternating form does exist.
+
+\section{Alternating doubles of the arithmetic presentation}
+
+Return to arbitrary $r,s>0$ and $m,n,b_0\in\mathbb Z$, without
+local coprimality assumptions.  Regard the actual relation matrix
+\[
+ A=\begin{pmatrix}r&s\\-m&n-sb_0\end{pmatrix}:\mathbb Z^2\to\mathbb Z^2
+\]
+as an integral map.  On $L_A=\mathbb Z^2\oplus\mathbb Z^2$, define
+\begin{equation}\label{eq:doubled-form}
+ \Omega_A((u,v),(u',v'))=u^TAv'-(u')^TAv,\qquad
+ [\Omega_A]=\begin{pmatrix}0&A\\-A^T&0\end{pmatrix}.
+\end{equation}
+This construction uses the full presentation matrix and both copies of
+$\mathbb Z^2$ as specified.  It is an alternating lattice associated
+with the presentation, independently of a geometric fiber lattice.
+
+\begin{theorem}[Arithmetic discriminant and its pairing]\label{thm:double}
+Put $d=\gcd(r,s,m,n)$ and $\Delta=\det A$.
+If $\Delta\ne0$, set $N=|\Delta|/d$.  Then
+\[
+ (L_A,\Omega_A)\cong (\mathbb Z^4,dJ\oplus NJ),\qquad
+ \mathcal D_A\cong(\mathbb Z/d\mathbb Z)^2
+                    \oplus(\mathbb Z/N\mathbb Z)^2.
+\]
+Here $\mathcal D_A=L_A^\vee/\Omega_A^\flat(L_A)$ and
+$\Omega_A^\flat(z)=\Omega_A(z,-)$.
+
+In the coordinates
+\[
+ \mathcal D_A=\operatorname{coker}A\oplus\operatorname{coker}A^T,
+\]
+its perfect alternating pairing is
+\begin{equation}\label{eq:arithmetic-pairing}
+ b_A((\bar x,\bar y),(\bar x',\bar y'))
+     =x^TA^{-T}y'-(x')^TA^{-T}y\pmod{\mathbb Z}.
+\end{equation}
+Its exponent is $N$ and its order is $\Delta^2$.
+If $\Delta=0$, the radical of $\Omega_A$ is primitive of rank two,
+and its quotient lattice has form $dJ$ and discriminant group
+$(\mathbb Z/d\mathbb Z)^2$.
+\end{theorem}
+
+\begin{proof}
+Choose unimodular matrices $P,Q$ with $PAQ=\operatorname{diag}(d,N)$
+when $\Delta\ne0$.  The change of basis
+$\operatorname{diag}(P^T,Q)$ in \eqref{eq:doubled-form}, followed by
+interleaving the two factors, gives $dJ\oplus NJ$.
+The integer $d$ divides $N$ because $d^2$ divides $\det A$.
+
+In the original coordinates the matrix of $\Omega_A^\flat$ is
+$-[\Omega_A]$.  Its inverse over $\mathbb Q$ is
+\[
+        \begin{pmatrix}0&A^{-T}\\-A^{-1}&0\end{pmatrix},
+\]
+which gives \eqref{eq:arithmetic-pairing} by (2.1).
+
+More explicitly, $x^TA^{-T}y$ is integral on either relation lattice:
+replace $x$ by $x+Az$ or $y$ by $y+A^Tw$.
+If it is integral for every integral $y$, then $A^{-1}x$ is integral,
+so $x\in A\mathbb Z^2$.  The same argument applies to $y$.
+This proves perfectness directly and determines the stated orders.
+
+If $\Delta=0$, the matrix $A$ has rank one since $r,s>0$.
+Its Smith form is $\operatorname{diag}(d,0)$, so the same change of
+basis gives $dJ\oplus0_2$.  The last summand is the radical and is a
+direct summand of $L_A$.  Taking its quotient proves the last assertion.
+The unreduced cokernel also has a free summand $\mathbb Z^2$.
+It is not the finite discriminant group of a nondegenerate lattice.
+\end{proof}
+
+Let $K=\operatorname{coker}A$ when $\Delta\ne0$.
+The character
+\[
+ \chi_{\bar y}(\bar x)=\exp(2\pi i x^TA^{-T}y)
+\]
+identifies $\operatorname{coker}A^T$ with $\widehat K$.
+Thus \eqref{eq:arithmetic-pairing} is the standard alternating pairing
+on $K\oplus\widehat K$.
+
+Define
+\[
+ H_A=\mu_N\times K\times\widehat K,\qquad
+ (z,u,\eta)(z',u',\eta')=(zz'\eta'(u),u+u',\eta\eta').
+\]
+On $\mathbb C[K]$, the formula
+\[
+                 [\rho(z,u,\eta)h](v)=z\eta(v)h(v+u)
+\]
+gives a representation of dimension $|\Delta|$.
+Its central character is tautological, its commutator is
+$\exp(2\pi i b_A)$, and its center is $\mu_N$.
+Indeed, perfectness forces any central element to have $u=0$ and
+$\eta=1$.
+
+Character averaging projects onto each delta-function,
+and translations act transitively on those functions.
+This proves irreducibility exactly as in Section~2, for every finite
+abelian $K$, including groups of even exponent.
+For $\Delta=0$, the nondegenerate quotient instead gives
+$K=\mathbb Z/d\mathbb Z$ and a representation of dimension $d$.
+
+For the non-effective data $(2,4;2,2;0)$, one has
+$d=2$, $\Delta=12$, and alternating elementary divisors $(2,6)$.
+Thus $\mathcal D_A\cong(\mathbb Z/2)^2\oplus(\mathbb Z/6)^2$,
+and the representation has dimension twelve and central order six.
+For $(2,4;2,-4;0)$, the radical has rank two and the quotient has
+form $2J$.  The resulting finite group is $(\mathbb Z/2)^2$.
+These are arithmetic constructions.  Nonprimitive filling slopes do
+not bound meridional disks of a solid torus, so Theorem~\ref{thm:linking}
+does not apply to these unreduced data.
+
+\begin{proposition}[Separation from the level-six fiber]\label{prop:separation}
+For effective two-fiber data with $(r,s)=(3,4)$ and $b_0=0$, the
+arithmetic double has elementary divisors $(1,|p|)$, and
+$\gcd(p,12)=1$.  In particular, it never has elementary divisors
+$(1,6)$.  When $|p|=1$, its discriminant group is zero, while the
+fiber lattice of Theorem~1.1 has discriminant group $(\mathbb Z/6)^2$.
+\end{proposition}
+
+\begin{proof}
+Here $d=1$ and $\Delta=p=4m+3n$.
+Effectiveness makes $m$ a unit modulo three and $n$ a unit modulo four.
+Reduction of $p$ modulo three and four proves $\gcd(p,12)=1$.
+Theorem~\ref{thm:double} now gives the result.
+\end{proof}
+
+The abstract data $(3,4;3,-2;0)$ do have $\Delta=6$ and $d=1$.
+Their doubled lattice is therefore isometric to $J\oplus6J$, but
+both local pairs are non-effective.  This is an equality of abstract
+lattice types.  It supplies no map to Engel's fiber or to its Leray sheaf.
+
+\input{higher-homology-product}
+\input{native-gluing}
+\input{marked-filling}
+\input{order-four}
+\input{common-chain}
+\input{toric-cusp}
+\input{cusp-attachment}
+\input{meridian-tori}
+\input{third-homology}
+
+\section{Holomorphic realization of the marked data}\label{sec:holomorphic-realization}
+
+The real attachment has been specified down to its boundary maps.
+To realize those maps holomorphically, we start with the divisor line
+on the elliptic surface. Its translation lift determines both the
+finite reductions and the degeneration at infinity. These local
+constructions must use the same lift and the same scalar parameter.
+
+\subsection{The elliptic surface and its divisor line}
+
+Let $\pi:S\to\mathbb P^1$ be the smooth relatively minimal resolution
+of
+\begin{equation}\label{hol:eq:surface}
+ y^2=x^3-3t^3(t-1)x+2t^4(t-1)^2,
+ \qquad P=(0,\sqrt2\,t^2(t-1)).
+\end{equation}
+Write $O$ for the section at infinity and
+$M=\mathcal O_S(P-O)$. Rationality follows directly from the
+coordinates
+\[
+ X=\frac{x}{t(t-1)},\qquad Y=\frac{y}{t^2(t-1)}.
+\]
+The equation becomes
+\[
+ Y^2=\frac{t-1}{t}X^3-3X+2,
+ \qquad
+ t=\frac{X^3}{X^3-Y^2-3X+2}.
+\]
+Together with $x=t(t-1)X$ and $y=t^2(t-1)Y$, these identities
+identify the function field with $\mathbb C(X,Y)$. In particular
+$S$ is a rational surface and $\chi(\mathcal O_S)=1$.
+
+The finite-chart discriminant is $1728t^8(t-1)^3$. At infinity,
+$q=1/t$, $x_\infty=q^2x$, and $y_\infty=q^3y$ give
+\[
+ y_\infty^2=x_\infty^3-3(1-q)x_\infty+2(1-q)^2,
+ \qquad \Delta_\infty=1728q(1-q)^3.
+\]
+The valuation triples of the coefficients of $x$, the constant
+coefficient, and the discriminant are respectively
+$(3,4,8)$, $(1,2,3)$, and $(0,0,1)$ at $0,1,\infty$.
+At each point the order of the coefficient of $x$ is less than
+four, so these Weierstrass equations are minimal in characteristic
+zero.
+We use the Kodaira classification for a smooth relatively minimal
+elliptic surface with section over a smooth complex curve: these
+triples give the types $IV^*,III,I_1$, with nonidentity component
+intersection matrices $-E_6,-A_1$, and no root component at the
+nodal fiber. The classification also gives the component
+multiplicities; the two nonidentity multiplicity-one vertices of
+$E_6$ are its two long-arm ends. The fiber and root-diagram
+conventions are those of \cite[\S2.1]{DolgachevMartin}.
+
+The conormal parameter $w=-x/y$ along $O$ satisfies
+$w=q w_\infty$, where $w_\infty=-x_\infty/y_\infty$.
+Its conormal class is nonzero on the finite chart and has one
+simple zero at infinity. Hence the conormal line of $O$ has
+degree one and $O^2=-1$.
+
+The two smooth reductions are
+\begin{equation}\label{hol:eq:reductions}
+\begin{array}{c|c|c}
+ &\text{coordinate substitution}&P'(s)\\ \hline
+0&t=s^3,\ x=s^4X,\ y=s^6Y&(0,\sqrt2(s^3-1))\\
+1&t=1+s^4,\ x=s^2X,\ y=s^3Y&(0,\sqrt2 s(1+s^4)^2).
+\end{array}
+\end{equation}
+Their equations are those used in the two finite fillings. The
+discriminants are $1728(s^3-1)^3$ and $1728(1+s^4)^8$, so their
+projective fibers are smooth on small root disks.
+
+The sections form the Mordell--Weil group, with addition on the
+generic elliptic fiber and identity $O$. To determine the divisor
+morphism, we need the intersection of a section with its translates.
+These intersections can be calculated by projecting away the fiber
+components. Let $F$ denote the fiber
+class, and let $C_{v,i}$ be the components at a reducible fiber $v$
+which are not met by $O$. Write $\mathsf C_v$ for their positive
+Cartan matrix, so that
+$C_{v,i}\cdot C_{v,j}=-(\mathsf C_v)_{ij}$. For a section $R$,
+put $r_{R,v}=(R\cdot C_{v,i})_i$. In the rational Picard space
+$\operatorname{Pic}(S)\otimes\mathbb Q$, define
+\begin{equation}\label{hol:eq:section-projection}
+ \begin{aligned}
+ D_R&=R-O-(R\cdot O+1)F
+       +\sum_{v,i}(\mathsf C_v^{-1}r_{R,v})_iC_{v,i},\\
+ \langle R,T\rangle&=-D_R\cdot D_T.
+ \end{aligned}
+\end{equation}
+The height of $R$ means $h(R)=\langle R,R\rangle$.
+This is the intersection definition of the Mordell--Weil height
+pairing \cite[\S3, (3.1)]{OguisoShioda}.
+The rational Picard space suffices for this definition; all
+sections and divisor morphisms below remain integral geometric
+objects.
+
+\begin{lemma}\label{hol:lem:section}
+The section $P$ generates the Mordell--Weil group of $S$ and has
+height $1/6$. It is disjoint from $O$. Its reduced values have exact
+orders three and two at the two finite punctures.
+\end{lemma}
+
+\begin{proof}
+Translation by a section extends to an automorphism of the smooth
+relatively minimal surface \cite[\S1.1]{DolgachevMartin}. Every section therefore has
+self-intersection $-1$.
+
+The subspace generated by $O,F$, and the nonidentity components is
+nondegenerate for the intersection form: the $O,F$ block has
+determinant $-1$, and the component blocks are negative definite.
+Using $R\cdot F=O\cdot F=1$ and $O\cdot C_{v,i}=0$ shows
+that $D_R$ is orthogonal to that subspace. Thus
+\eqref{hol:eq:section-projection} is its orthogonal projection
+of $R$.
+
+For two sections $R,T$, the divisor
+$(R\oplus T)-R-T+O$ is principal on the generic elliptic fiber.
+A rational function realizing this relation is a rational function
+on $S$; its remaining divisor is vertical. Every vertical divisor
+is a rational combination of $F$ and the nonidentity components.
+Projection kills it, and $D_O=0$, so
+$D_{R\oplus T}=D_R+D_T$. This proves additivity of the pairing.
+Expanding \eqref{hol:eq:section-projection} gives
+\begin{equation}\label{hol:eq:height-pairing}
+ \langle R,T\rangle
+ =1+R\cdot O+T\cdot O-R\cdot T
+    -\sum_v r_{R,v}^{t}\mathsf C_v^{-1}r_{T,v}.
+\end{equation}
+
+The section $P$ is affine also at infinity, where its coordinates
+are $(0,\sqrt2(1-q))$. Hence $P\cdot O=0$.
+At each finite singular fiber it passes through the singular point
+of the Weierstrass cubic. On the resolution the strict transform
+of the identity component meets the exceptional locus only at
+critical points of $\pi$. A section cannot meet a critical point,
+since the differential of its composite with $\pi$ is the identity.
+It must meet a multiplicity-one component. Thus $P$
+meets a nonidentity multiplicity-one component at each finite
+singular fiber.
+
+Number $E_6$ by the chain $0,1,2,3,4$ with vertex $5$ attached
+to $2$. Then
+\[
+ \mathsf C_0=
+ \begin{pmatrix}
+ 2&-1&0&0&0&0\\
+ -1&2&-1&0&0&0\\
+ 0&-1&2&-1&0&-1\\
+ 0&0&-1&2&-1&0\\
+ 0&0&0&-1&2&0\\
+ 0&0&-1&0&0&2
+ \end{pmatrix},
+ \qquad \mathsf C_1=(2).
+\]
+Solving $\mathsf C_0v=(1,0,0,0,0,0)^t$ gives
+$v=(4/3,5/3,2,4/3,2/3,1)^t$. Reflection of the chain gives
+the same diagonal inverse entry $4/3$ at vertex $4$.
+These are the two possible nonidentity multiplicity-one components;
+the $A_1$ correction is $1/2$. Equation~\eqref{hol:eq:height-pairing}
+therefore gives
+\[
+ h(P)=2-\frac43-\frac12=\frac16.
+\]
+For any section $R\ne O$, distinct effective curves have
+$R\cdot O\geq0$. Its corrections are either $0$ or $4/3$ at
+zero and either $0$ or $1/2$ at one. Consequently
+\begin{equation}\label{hol:eq:height-lower-bound}
+ h(R)=2+2R\cdot O
+       -\sum_v r_{R,v}^{t}\mathsf C_v^{-1}r_{R,v}
+       \geq\frac16.
+\end{equation}
+A nonzero torsion section would have $D_R=0$ by additivity,
+contradicting this inequality.
+
+For a rational elliptic surface the Picard lattice has rank ten
+and signature $(1,9)$ \cite[\S1.1.3]{DolgachevMartin}.
+The lattice $F^\perp/\mathbb ZF$ has rank eight. Restriction to
+the generic fiber identifies its quotient by the fiber root
+lattice with the group of sections
+\cite[Lemma~5.1]{DolgachevMartin}: a section is represented by
+$R-O$, and a class restricting to zero becomes a vertical divisor
+after subtracting a principal divisor. Modulo $F$, those vertical
+classes are generated by the nonidentity components. Here that
+lattice is $E_6\oplus A_1$, of rank seven. The section group is
+therefore finitely generated of rank one; it is torsion-free by
+\eqref{hol:eq:height-lower-bound}. If $P=nG$ for a generator $G$,
+then
+\[
+ \frac16=n^2h(G)\geq\frac{n^2}{6}.
+\]
+Thus $n=\pm1$, so $P$ generates the section group.
+
+At $s=0$ the first reduction gives $(0,-\sqrt2)$ on
+$Y^2=X^3+2$. Its horizontal tangent has triple contact, so twice
+this nonzero point is its negative; its order is exactly three.
+The second gives $(0,0)$ on $Y^2=X^3-3X$, a nonzero point fixed
+by inversion, of order exactly two.
+\end{proof}
+
+Put $Q=6P$. Translation by a section extends to an automorphism of
+the relatively minimal elliptic surface. Since the discriminant groups
+of the two nontrivial fiber root lattices have exponents three and two, Proposition~5.2(1)
+of \cite{DolgachevMartin}, applied with $d=6$, shows that $t_Q$
+preserves every fiber component. In particular $Q=t_Q(O)$ meets
+the identity components.
+We need a morphism in a particular direction.
+
+\begin{proposition}\label{hol:prop:lift}
+There is a morphism
+\[
+ \phi_0:t_Q^*M\longrightarrow M,
+ \qquad \operatorname{div}(\phi_0)=S_\infty,
+\]
+unique up to a nonzero scalar. On $M^\times$ over
+$S\setminus S_\infty$, it defines the invertible bundle map
+\begin{equation}\label{hol:eq:lift}
+ F_u(x,v)=\bigl(t_{-Q}x,\ u(\phi_0)_{t_{-Q}x}(v)\bigr),
+ \qquad u\ne0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The line $L=\operatorname{Hom}(t_Q^*M,M)$ is trivial on the generic
+elliptic fiber: the degree-zero divisors $P-O$ and
+$(P-Q)-(-Q)$ represent the same point of its Picard group.
+A rational trivializing section gives a vertical divisor $D$ for
+$L$. For each fiber component $C$,
+\[
+ D\cdot C=M\cdot C-M\cdot t_Q(C)=0.
+\]
+
+This implies integral descent to the base. Indeed, for a connected
+fiber $F=\sum m_iC_i$ and its intersection matrix $A$, the identity
+$Am=0$ gives
+\[
+ x^tAx=-\sum_{i<j}m_im_j(C_i\cdot C_j)
+       \left(\frac{x_i}{m_i}-\frac{x_j}{m_j}\right)^2.
+\]
+The kernel is spanned by $m$. A vertical divisor orthogonal to all
+components is therefore a rational multiple of $F$. The component
+met by $O$ has multiplicity one, so that multiple is integral.
+The assertion for an irreducible fiber is immediate.
+
+Consequently
+$L=\pi^*\mathcal O_{\mathbb P^1}(n)$ for some integer $n$.
+
+The section $Q$ meets only identity components. Its height and the
+mixed height pairing give
+\[
+ 6=\langle Q,Q\rangle=2+2Q\cdot O,
+ \qquad
+ 1=\langle P,Q\rangle=1+Q\cdot O-P\cdot Q.
+\]
+Thus $Q\cdot O=P\cdot Q=2$. Since $O^2=-1$,
+\[
+ n=(P-O)\cdot O-(P-O)\cdot Q=1.
+\]
+
+Pulling back a section of $\mathcal O(1)$ with simple zero at
+infinity gives $\phi_0$. Its value at $x$ maps $M_{x+Q}$ to $M_x$,
+which gives exactly \eqref{hol:eq:lift}.
+Finally $\pi_*\mathcal O_S=\mathcal O_{\mathbb P^1}$, since the
+fibers are connected. The section with this specified zero is
+therefore unique up to scalar.
+\end{proof}
+
+The reverse Hom line is $\pi^*\mathcal O(-1)$ and has no nonzero
+global section. Reversing the direction while keeping the positive
+zero divisor is thus a different, impossible requirement.
+
+\subsection{A proper quotient and its retained section}
+
+Fix the reference morphism $\phi_0$ once, and choose a smooth
+Hermitian metric on $M$. Let $B_S$ be the supremum on compact
+$S$ of the norm multiplier of the reference lift before multiplying
+by $u$. For $|u|B_S<1$, the map $F_u$ decreases every nonzero
+fiber norm by a factor at most $\kappa=|u|B_S<1$.
+Positive iterates tend to norm zero and negative iterates escape
+to infinity. Thus the cyclic action on
+$M^\times|_{S\setminus S_\infty}$ is free and properly
+discontinuous, and its quotient $X^\circ(u)$ is a Hausdorff smooth
+complex threefold.
+
+Properness over $\mathbb A^1$ follows from the same estimate with
+a lower bound. Over a compact base subset $K$, invertibility of
+$\phi_0$ gives a positive lower norm multiplier $\ell_K$ for each
+fixed $u\ne0$. Every orbit meets the compact annulus bundle
+\[
+ \{v\in M|_{S_K}:\ell_K\leq\|v\|\leq1\}:
+\]
+take the first forward iterate of norm at most one. This annulus
+surjects onto the quotient over $K$.
+
+On a smooth elliptic fiber, a rigidified degree-zero line bundle
+has complement a commutative complex Lie-group extension by
+$\mathbb C^*$. For example, a flat metric gives the presentation
+\[
+ (\mathbb C\times\mathbb C^*)/
+ ((z,w)\sim(z+\lambda,\chi(\lambda)w)).
+\]
+A fiber-linear holomorphic lift of an elliptic translation is a
+translation in this group. Compare it with translation by the image
+of the identity. Their ratio is holomorphic on the compact elliptic
+curve and hence constant.
+
+The further quotient by $F_u$ has
+universal cover $\mathbb C^2$. The proved proper discontinuity and
+compactness make its period subgroup a full real lattice. Therefore
+the regular fibers of $X^\circ(u)$ are complex two-tori.
+
+The section used to mark them comes from the conormal line of $O$.
+Because $P$ and $O$ are disjoint, $M|_O$ is that conormal line.
+The parameter $w=-x/y$ at $O$ gives a nonzero conormal class $e$
+over the finite base chart. At infinity,
+\begin{equation}\label{hol:eq:conormal-infinity}
+ w=q w_\infty,\qquad w_\infty=-x_\infty/y_\infty.
+\end{equation}
+Thus $e$ extends with a simple zero at infinity. Its quotient image
+is the holomorphic origin section on the regular family.
+
+\subsection{Extension across the two finite reductions}
+
+Let $S'\to\Delta_s$ be either smooth reduction
+\eqref{hol:eq:reductions}, and put $M'=\mathcal O_{S'}(P'-O')$.
+The coordinate substitution gives a rational map
+$p:S'\dashrightarrow S$, defined at the generic point of the
+central elliptic divisor because $S$ is proper. Over the punctured
+disk, the Cartier divisor sheaves have their canonical meromorphic
+identification $\alpha:p^*M\to M'$. It is algebraic, so it has a
+finite integral valuation along the central divisor.
+
+Write $f'=t_{-6P'}$. Transport the actual bundle map using
+\begin{equation}\label{hol:eq:transported-lift}
+ F'_x=\alpha_{f'x}(p^*F)_x\alpha_x^{-1}.
+\end{equation}
+At the generic point of the central divisor, write $\alpha=s^k v$
+with $v$ a unit. The middle factor is invertible there, and $f'$
+preserves $s$, so the valuation of \eqref{hol:eq:transported-lift}
+is $k-k=0$. The same argument applies to its inverse.
+
+Normality of
+$S'$ extends both rational maps across the remaining points. Their
+composites are the identity by density. This proves extension of the
+specified lift without changing its punctured identification.
+Uniqueness also proves commutation with the natural deck action on
+$\mathcal O(P'-O')$, since commutation holds on the punctured disk.
+
+Lemma~\ref{hol:lem:section} gives $6P'(0)=O'$. The central lift is
+therefore multiplication by a nonzero scalar on $M'|_{S'_0}$.
+Choose smooth Hermitian metrics on the two reduced divisor lines
+over smaller closed root disks. Extend the reference maps before
+multiplying by $u$, and let $B_0,B_1$ be the suprema of their norm
+multipliers there. These numbers are finite, since the reduced
+surfaces are proper over the closed disks. With
+\begin{equation}\label{hol:eq:common-bound}
+ B=\max(1,B_S,B_0,B_1),\qquad 0<|u|<\frac1{2B},
+\end{equation}
+all three lifts contract by a common factor less than $1/2$.
+The positive lower norm bounds on the reduced closed disks then
+give proper smooth two-torus quotients by the preceding annulus
+argument. Thus one nonzero parameter satisfies all three
+contraction requirements.
+
+The root coordinate changes give
+\[
+ e=s^{-2}e'\quad\text{at }0,\qquad
+ e=s^{-1}e'\quad\text{at }1.
+\]
+These are the conormal comparisons of the finite fillings, obtained
+from the same meromorphic divisor identification. An arbitrary
+holomorphic gauge on a punctured disk need not have a finite
+valuation, and would not justify the extension argument.
+
+\subsection{The actual periods at infinity}
+
+In the infinity chart the elliptic equation becomes
+\[
+ y_\infty^2=x_\infty^3-3(1-q)x_\infty+2(1-q)^2,
+ \qquad \Delta=1728q(1-q)^3,\qquad j=1728/q.
+\]
+Its central fiber is nodal and $P=(0,\sqrt2)$ is a smooth point
+distinct from $O$. Complex Tate uniformization gives a parameter
+$\mathfrak q(q)=q c_1(q)$, with $c_1$ a holomorphic unit
+\cite[pp.~1--7]{TateElliptic}.
+
+This is a family uniformization:
+invert the convergent series $1/j(\mathfrak q)=\mathfrak q+\cdots$,
+then match the two short Weierstrass equations. Their coefficients
+are units at zero. Equality of $j$ relates their fourth- and
+sixth-power scaling ratios. A holomorphic fourth root, with its
+value chosen to match the sixth-power ratio, gives an isomorphism
+over the whole disk.
+
+In the smooth locus of the central nodal
+cubic the multiplicative coordinate is a local parameter. Hence $P$
+lifts to a holomorphic unit $p(q)$ with $p(0)\ne1$, while $O$ lifts
+to $z=1$.
+
+The divisor line has a compatible frame on this cover. Define
+\[
+ \Theta_{\mathfrak q}(z)=(1-z)\prod_{n\geq1}
+ (1-\mathfrak q^n)(1-\mathfrak q^n z)(1-\mathfrak q^n z^{-1}),
+ \qquad R_p(z)=\frac{\Theta_{\mathfrak q}(z/p)}
+                         {\Theta_{\mathfrak q}(z)}.
+\]
+Normal convergence on compact subsets and reindexing give
+\[
+ \Theta_{\mathfrak q}(\mathfrak q z)=-z^{-1}\Theta_{\mathfrak q}(z),
+ \qquad R_p(\mathfrak q z)=pR_p(z)
+\]
+\cite[p.~15]{TateElliptic}. Dividing the canonical meromorphic
+section of $M$ by $R_p$ gives a holomorphic nonzero frame.
+
+There is no hidden vertical factor. At $q=0$, one has
+$R_p=(1-z/p)/(1-z)$. Canceling the divisor factors gives nonzero
+frame coefficients $-p/(p-1)$ at $O$ and $p(p-1)$ at $P$.
+In its fiber coordinate $w$, the first deck transformation is
+$(z,w)\mapsto(\mathfrak q z,pw)$.
+
+The lift \eqref{hol:eq:lift} covers $z\mapsto p^{-6}z$.
+Its fiber multiplier is independent of $z$, since its ratio with a
+constant-multiplier lift descends to a holomorphic function on the
+compact elliptic curve. Evaluate at a smooth central point and its
+translate, away from $O$ and $P$. The frame is a unit there and
+$\phi_0/q$ is invertible. The multiplier is consequently
+$u q b(q)$ with $b$ a holomorphic unit.
+
+The two actual generators are
+\begin{equation}\label{hol:eq:cusp-generators}
+ g_1=(q c_1,p),\qquad g_2=(p^{-6},u q b).
+\end{equation}
+They put the punctured family in the form
+\eqref{c26:eq:periods}, with four holomorphic units for fixed
+$u\ne0$.
+
+By \eqref{hol:eq:conormal-infinity}, the retained section has
+representative $(1,qw_0)$ with $w_0$ a unit. Applying the actual
+period $g_2^{-1}$ gives the unit representative
+\begin{equation}\label{hol:eq:unit-section}
+ (p^6,u^{-1}b^{-1}w_0).
+\end{equation}
+Thus the section satisfies the hypothesis of the toric filling.
+
+\subsection{The global integral marking}\label{hol:sec:global-marking}
+
+The finite periods must be compared by transporting actual cycles.
+The torsor cover of the regular quotient gives the primitive exact
+sequences
+\[
+ 0\longrightarrow\Lambda^\times\longrightarrow\Lambda
+   \xrightarrow{\psi}\mathbb Z\longrightarrow0,
+ \qquad
+ 0\longrightarrow\mathbb Z\delta\longrightarrow\Lambda^\times
+   \longrightarrow\Lambda_E\longrightarrow0.
+\]
+Here $\delta$ is the counterclockwise line-fiber circle, and a loop
+whose lift ends at $F_u$ of its starting point has $\psi=1$.
+The rank-two quotient $\Lambda_E$ is the actual elliptic homology.
+
+The two central divisor lines have exact orders three and two by
+Lemma~\ref{hol:lem:section}. The isogenies $1-\rho$ and $1-i$ of
+the corresponding elliptic curves trivialize them: the dual kernels
+are their fixed torsion subgroups. The degrees equal the exact
+orders, so these are the minimal trivializing covers. Their deck
+characters are primitive.
+
+Choose the initial horizontal coordinate
+sign so that the order-three kernel point with character $\rho$
+is $(2+\rho)/3$. At order two the kernel point is $(1+i)/2$.
+The full torus lattices are then (1.3), with
+\[
+ \delta_0=-2e_1-e_2+3e_3,\qquad
+ \delta_1=-f_1-f_2+2f_3,
+ \qquad \tau_i=\frac{\log\lambda_i(u)}{2\pi i}.
+\]
+
+The numbers $\lambda_i(u)$ are the actual central scalars of the
+extended original lift. Their norms are less than one, so
+$\operatorname{Im}\tau_i>0$. A logarithm branch changes a fourth
+period by an integral multiple of $\delta_i$.
+
+\begin{proposition}\label{hol:prop:global-marking}
+Fix a sufficiently small nonzero $u$.
+There are local coordinates and logarithm branches for which actual
+transport to a common regular fiber has change matrix
+\[
+ C=\begin{pmatrix}1&1&0&1\\0&1&0&0\\0&-1&1&0\\0&0&0&1\end{pmatrix}.
+\]
+The circle, quotient covector and positive transport conventions are
+the ones in Section~1. The selected increments are defined after
+these choices by $a_0=e_4/3$ and $a_1=-Cf_4/4$.
+\end{proposition}
+
+\begin{proof}
+Continue the central cycles through the proper smooth root families,
+through their punctured identifications, and along the chosen marking
+arcs. This constructs integral isomorphisms $\iota_0,\iota_1$ from
+the two local lattices to the same actual $\Lambda$. They preserve
+$\delta$ and $\psi$. Translations between the conormal origins do
+not change first homology. Choose the arcs with right-to-left path
+product $\gamma_0\gamma_1\gamma_\infty=1$. A positive finite
+meridian uses inverse deck identification, so its elliptic
+multipliers are $\rho$ and $-i$.
+
+The primitive oriented quotient bases are $([e_1],[e_3])$ and
+$([f_1],[f_3])$. Indeed $[e_2]=3[e_3]-2[e_1]$ and
+$[f_2]=2[f_3]-[f_1]$. In these bases the elliptic monodromies are
+\[
+ A_0=\begin{pmatrix}-2&-1\\3&1\end{pmatrix},\qquad
+ B_1=\begin{pmatrix}1&1\\-2&-1\end{pmatrix}.
+\]
+Write the actual order-four transport in the transported first
+basis as $J=\left(\begin{smallmatrix}r&s\\v&-r\end{smallmatrix}\right)$.
+It has determinant one.
+
+The actual nodal infinity fiber has
+primitive positive monodromy of trace two, hence
+$\operatorname{tr}(A_0J)=2$. These equations give
+\[
+ v=3s-3r-2,\qquad
+ (2r-3s)^2+3(s-4/3)^2=4/3.
+\]
+Thus $s$ is one or two, and the three possible matrices are
+\[
+ B_1,\qquad
+ \begin{pmatrix}2&1\\-5&-2\end{pmatrix},\qquad
+ \begin{pmatrix}3&2\\-5&-3\end{pmatrix}.
+\]
+
+They are $A_0^kB_1A_0^{-k}$ for $k=0,1,2$. The corresponding
+order-three rotations preserve the distinguished kernel point, its
+character, the circle, and the fourth period. Use one to make the
+actual $J$ equal to $B_1$.
+
+The remaining quotient change centralizes $B_1$. A commuting
+integral matrix has the form
+\[
+ H=\begin{pmatrix}d+2c&c\\-2c&d\end{pmatrix},\qquad
+ \det H=(d+c)^2+c^2.
+\]
+Determinant one gives exactly the four powers of $B_1$. They are
+the available square-lattice rotations, preserving its kernel
+point and the fourth period. After the inverse rotation, the
+actual quotient transport identifies
+\[
+ [f_1]=[e_1],\qquad[f_3]=[e_3],\qquad
+ [f_2]=[e_1+e_2-e_3].
+\]
+
+Put $C_{\mathrm{act}}=\iota_0^{-1}\iota_1$. The primitive kernels
+and the equation $C_{\mathrm{act}}\delta_1=\delta_0$ imply
+\begin{align*}
+ C_{\mathrm{act}}f_1&=e_1+a\delta_0,\\
+ C_{\mathrm{act}}f_2&=e_1+e_2-e_3+(2b-a)\delta_0,\\
+ C_{\mathrm{act}}f_3&=e_3+b\delta_0,\\
+ C_{\mathrm{act}}f_4&=e_4+r_1e_1+r_2e_2+r_3e_3
+\end{align*}
+for integers $a,b,r_1,r_2,r_3$. At infinity, the actual generators
+\eqref{hol:eq:cusp-generators} give
+\[
+ Nb_T=\nu,\qquad Nb_F=\delta,\qquad N\nu=N\delta=0,
+ \qquad\psi(b_T)=0,\quad\psi(b_F)=1,
+\]
+where $N=T_\infty-I$ and $\nu$ is the positive Tate circle.
+Their four periods form the full lattice. Thus $N^2=0$ and
+$\operatorname{im}N$ is primitive of rank two. More precisely,
+the simple positive zero of the bundle morphism gives the signed map
+\begin{equation}\label{hol:eq:signed-cusp}
+ \overline N:\Lambda/\Lambda^\times\longrightarrow
+ \operatorname{im}N/N\Lambda^\times,
+ \qquad +1\longmapsto[\delta].
+\end{equation}
+
+Compute $N=(T_0C_{\mathrm{act}}T_{1,f}C_{\mathrm{act}}^{-1})^{-1}-I$.
+Its first three squared columns are $N^2e_j=a\delta_0$, so $a=0$.
+The last is
+\[
+ N^2e_4=(3r_2+r_3)
+       ((1-4b)e_1-2be_2+(6b-1)e_3),
+\]
+so $r_3=-3r_2$.
+
+Put $m=r_1-2r_2$. The first three columns of $N$
+are then $(1-4b,-2b,6b-1,0)^t$, and the fourth is
+$m(4b,2b-1,1-6b,0)^t$. The gcd of their nonzero two-by-two minors
+is $|m(1-6b)|$. Rank two and primitivity force $b=0$ and $m=\pm1$.
+Thus
+\[
+ Ne_j=\alpha_1=e_1-e_3\quad(j=1,2,3),\qquad
+ Ne_4=m\alpha_2,
+ \quad\alpha_2=e_3-e_2.
+\]
+Since $N\Lambda^\times=\mathbb Z\alpha_1$ and
+$\delta_0=-2\alpha_1+\alpha_2$, the signed map
+\eqref{hol:eq:signed-cusp} forces $m=1$.
+
+The fourth column is consequently $e_4+e_1-r_2\delta_0$.
+Replace the initial logarithm by $\tau_0-r_2$, equivalently replace
+$e_4$ by $e_4-r_2\delta_0$. This is a logarithm of the same scalar.
+It preserves the local lattice, the circle, $\psi$, and the origin
+section.
+
+In the normalized basis $C_{\mathrm{act}}=C$ as claimed.
+All identifications were obtained by actual cycle continuation.
+Only now fix the two selected lifted increments.
+\end{proof}
+
+Changing that logarithm after an increment has already been fixed
+would change the increment by $-r_2\delta_0/3$. The normalization
+therefore precedes the choice of logarithmic filling. It does not
+identify arbitrary previously chosen lifts with these ones.
+
+\subsection{The fan adapted to the common marking}\label{hol:sec:adapted-fan}
+
+To use the common attachment, its angular circles and its deck
+periods must be those of the geometric family. Use the actual
+marking of Proposition~\ref{hol:prop:global-marking}, including its
+specified $\delta$ and $\psi$. Put
+\[
+ N=T_\infty-I,\qquad
+ \alpha_1=e_1-e_3=Ne_3,\qquad
+ \alpha_2=e_3-e_2=Ne_4.
+\]
+Let $\nu_1,\nu_2$ be the positive coordinate circles of $(z,w)$ in
+\eqref{hol:eq:cusp-generators}, and $b_1,b_2$ the two deck periods.
+Their valuation matrix is the identity, so
+$Nb_1=\nu_1$, $Nb_2=\nu_2$, and
+$K=\ker N=\operatorname{im}N$ is their angular lattice, integrally.
+
+The original line torsor identifies
+\[
+ \nu_2=\delta=-2\alpha_1+\alpha_2,
+ \qquad \psi(b_1)=0,\qquad\psi(b_2)=1.
+\]
+The quotient $\ker\psi/K$ is generated by $[e_3]$. Thus the primitive
+Tate deck period gives $\nu_1=\pm\alpha_1$.
+
+Inverting the Tate
+coordinate and its deck generator together selects the positive sign.
+The fan is transformed with the coordinate. We use that convention
+below.
+
+Write $g_1=(q c_1,c_2)$ and $g_2=(c_3,q c_4)$, and set
+\[
+ P_c=\begin{pmatrix}1&2\\0&1\end{pmatrix},\qquad Q_c=P_c^{-1}.
+\]
+Change both angular coordinates and deck generators:
+\begin{equation}\label{hol:eq:cusp-shear}
+ (\zeta_1,\zeta_2)=(z/w^2,w),\qquad
+ (h_1,h_2)=(g_1,g_1^2g_2).
+\end{equation}
+The angular basis becomes $(\alpha_1,\alpha_2)=(\nu_1,\delta)P_c$.
+The new periods are
+\[
+ h_1=(q c^{\mathrm{ad}}_1,c^{\mathrm{ad}}_2),\qquad
+ h_2=(c^{\mathrm{ad}}_3,q c^{\mathrm{ad}}_4),
+\]
+where
+\begin{equation}\label{hol:eq:adapted-units}
+ c^{\mathrm{ad}}_1=c_1c_2^{-2},\quad
+ c^{\mathrm{ad}}_2=c_2,\quad
+ c^{\mathrm{ad}}_3=c_1^2c_3c_2^{-4}c_4^{-2},\quad
+ c^{\mathrm{ad}}_4=c_2^2c_4.
+\end{equation}
+The valuation matrix is $Q_c I P_c=I$. Changing only the angular
+coordinates would leave an off-diagonal valuation $-2$.
+
+The classes of $h_1,h_2$ in $\Lambda/K$ are $[e_3],[e_4]$, because
+$N:\Lambda/K\to K$ is an integral isomorphism. Choose the four
+unit-logarithm branches so that their lifts are exactly $e_3,e_4$
+at a reference fiber. This is possible independently in each entry:
+adding $2\pi i$ times an integer adds that angular period to the
+corresponding deck lift. The difference is integral and locally
+constant, so the match persists on the logarithm cover. These choices
+give the full marking
+\[
+ (\alpha_1,\alpha_2,\beta_1,\beta_2)
+       =(e_1-e_3,e_3-e_2,e_3,e_4).
+\]
+
+For a retained section represented by $(z_0,qw_0)$, the period
+$g_2^{-1}$ changes its representative to
+$(c_3^{-1}z_0,c_4^{-1}w_0)$. In the coordinates
+\eqref{hol:eq:cusp-shear} this is the unit pair
+\[
+ \sigma=\left(\frac{z_0c_4^2}{c_3w_0^2},\frac{w_0}{c_4}\right).
+\]
+Dividing the two coordinates by $\sigma$ sends the original quotient
+section to $(1,1)$. This is a unit translation and extends on every
+toric chart.
+
+Let $\mathcal T$ be the triangulation used in
+Section~\ref{sec:toric-cusp}. In the original $(\nu_1,\delta)$
+coordinates choose the fan over $P_c\mathcal T$. The integral
+lattice map $(v,1)\mapsto(Q_cv,1)$ carries it to the fan over
+$\mathcal T$. Hence the monomial change
+\eqref{hol:eq:cusp-shear}, followed by the unit translation, extends
+to a toric isomorphism
+\begin{equation}\label{hol:eq:cusp-isomorphism}
+ J_\infty:\mathcal N^{\mathrm{ad}}_{u,\infty}
+             \xrightarrow{\ \sim\ }N_{c^{\mathrm{ad}}}.
+\end{equation}
+The simultaneous deck change makes this an isomorphism of the
+quotients. It preserves the base parameter and the retained section.
+
+Thus the adapted filling is smooth and proper by the toric
+construction, with its complete marked boundary. An identification
+with the unsheared fan would be a further relative filling problem.
+
+\subsection{The chosen logarithmic gluings}
+
+On the smooth root families, use the full period markings of the
+two finite fillings. Their period vectors are holomorphic sections
+of the Lie bundle. For the smooth Weierstrass reductions, integrate
+$dX/(2Y)$ over cycles represented by fixed paths avoiding the branch
+points. Their square-root lifts vary holomorphically on a smaller
+disk. The periods and their ratio are therefore holomorphic.
+
+Elliptic uniformization and the divisor theta frame then give
+holomorphic multipliers, whose logarithms can be chosen on the root
+disk. The resulting four periods span the full real lattice by
+properness of the quotient.
+
+Put
+\[
+ (d_0,d_1)=(3,4),\qquad v_0=e_4,\quad v_1=-f_4,
+ \qquad a_i=v_i/d_i.
+\]
+Let $A_i$ be the forward linear deck action and $\rho_i$ the
+original affine deck map. Its affine term is $\delta_0/3$ at zero
+and $-\delta_1/4$ at one. Adding $a_i$ gives the selected twisted
+map $\widetilde\rho_i$.
+
+On the punctured root disk define the holomorphic torus section
+\[
+ h_i(s)=\frac{\log s}{2\pi i}v_i(s)\pmod{\Lambda_s}.
+\]
+Changing the logarithm adds an integral period. Since the selected
+period is invariant, for $\zeta_i=\exp(2\pi i/d_i)$ one has
+\[
+ h_i(\zeta_i s)=A_i(s)h_i(s)+a_i(\zeta_i s).
+\]
+Translation $H_i(x,s)=(x+h_i(s),s)$ therefore satisfies
+$H_i\rho_i=\widetilde\rho_iH_i$. The original affine term is
+present on both sides of this equality. Translation by $-h_i$ is
+the inverse, so $H_i$ descends to a punctured biholomorphism.
+
+The conormal comparisons contribute $-2\delta_0\log s/(2\pi i)$
+and $-\delta_1\log s/(2\pi i)$. The retained section consequently
+follows the exact lifted boundary vectors
+\begin{equation}\label{hol:eq:boundary-vectors}
+ w_0=e_4-2\delta_0,\qquad w_1=-f_4-\delta_1.
+\end{equation}
+Replacing a lift by a congruent torsion point would not preserve
+these paths.
+
+Every nonidentity power of a twisted action translates the fourth
+real period coordinate by a nonintegral multiple of $1/3$ or
+$-1/4$. Thus both actions are free, also on their central fibers.
+Their finite quotients are smooth and proper over the base disks,
+with central multiplicities three and four.
+
+Choose disjoint disks about $0,1,\infty$. The two finite quotients
+glue to the original regular family by the biholomorphisms $H_i$.
+The adapted toric filling glues at infinity through
+\eqref{hol:eq:cusp-generators}.
+
+On these base neighborhoods there
+is one model over each exceptional point, and the annular overlaps
+are biholomorphic. The glued space is therefore Hausdorff and
+smooth. Its map to $\mathbb P^1$ is locally proper, hence proper.
+It is a compact complex threefold for every fixed sufficiently small
+nonzero $u$ and these selected lifts.
+
+The section is retained on the regular locus and extends through
+the cusp. It does not extend through either finite multiple fiber.
+Along such a section, a local base parameter would pull back with
+order divisible by the fiber multiplicity. But that parameter has
+order one on the base.
+
+\section{Comparison with the real attachment}\label{sec:geometric-comparison}
+
+The geometric and real constructions can now be compared on whole
+collars. The regular comparison comes from the group structure of a
+pointed torus, while the finite comparisons must retain the radial
+part of the logarithmic translations.
+
+\begin{lemma}\label{cmp:lem:period-family}
+Let $\mathscr J\to B$ be a proper smooth holomorphic family of
+complex tori with a section $e$, and let $\mathscr L$ be its integral
+first-homology local system. There is a canonical smooth
+origin-preserving group isomorphism
+\[
+ \mathscr L_{\mathbb R}/\mathscr L\xrightarrow{\ \sim\ }\mathscr J.
+\]
+It is determined by its full lattice map and its origin section.
+\end{lemma}
+
+\begin{proof}
+Choose smoothly varying Hermitian metrics in a local differentiable
+trivialization. The Dolbeault Laplacians on fiberwise $(1,0)$-forms
+have kernels of constant dimension equal to the torus dimension.
+A small spectral contour around zero gives a smooth projection onto
+these kernels. Elliptic regularity gives smooth local frames of
+holomorphic forms. Every such form is closed on a torus.
+
+Integrating these forms along locally constant integral cycles gives
+a smooth period lattice. Integration from $e(b)$ defines the
+fiberwise Abel--Jacobi map to the dual space of forms modulo that
+lattice. Changing a path adds a period.
+
+The map is smooth locally
+in the total space, and on every fiber it is the usual pointed torus
+uniformization. Its vertical derivative is invertible, so the
+inverse-function theorem gives a smooth inverse for the family.
+Transporting addition gives a smooth group law. Changes of the frame
+of forms cancel from this construction.
+
+If $\mathcal P_b$ denotes the real-linear period map, the asserted
+isomorphism is
+\[
+ [x]\longmapsto\exp_b(\mathcal P_bx).
+\]
+A real torus group homomorphism is determined by its lattice map:
+its differential is real linear and the lattice spans the Lie
+algebra. This proves uniqueness among origin-preserving group maps.
+\end{proof}
+
+\begin{theorem}[Marked geometric comparison]\label{cmp:thm:comparison}
+Fix a sufficiently small nonzero $u$, the selected integral lifts
+$a_0=e_4/3$, $a_1=-f_4/4$, and the adapted cusp fan of
+Section~\ref{hol:sec:adapted-fan}. Choose the actual common period
+marking and its logarithms as in
+Proposition~\ref{hol:prop:global-marking}, before fixing these
+increments. Then the
+constructed compact complex threefold $Y^{\mathrm{ad}}(u)$ admits
+an orientation-preserving diffeomorphism to the real attachment of
+Theorem~\ref{th:thm:real-sphere}. In particular its underlying smooth
+manifold is $S^6$.
+\end{theorem}
+
+\begin{proof}
+Let $\mathcal E_u$ be the regular piece over $\Sigma$. Its retained
+section supplies the origin in Lemma~\ref{cmp:lem:period-family}.
+On the universal path cover let
+$\kappa_p:\Lambda\to\mathscr L_b$ be continuation of the marking
+along $p$. With the right action of Section~\ref{sec:common-chain},
+\[
+ (x,p)\cdot\gamma=(\mu(\gamma)^{-1}x,p\gamma),\qquad
+ \kappa_{p\gamma}=\kappa_p\mu(\gamma).
+\]
+Consequently
+\begin{equation}\label{cmp:eq:regular}
+ \mathcal I([x,p])=\exp_b(\mathcal P_b\kappa_p x)
+\end{equation}
+is a well-defined smooth fiber-preserving diffeomorphism
+$E\to\mathcal E_u$. Put $\Phi_u=\mathcal I^{-1}$.
+
+At a finite puncture, write $d_i=3,4$, let $A_i=T_i^{-1}$ be the
+forward deck action, and put
+$\beta_i=w_i/d_i$, with $w_i$ from
+\eqref{hol:eq:boundary-vectors}. In the root family's origin $e'$
+and full period coordinates, the actual logarithmic gluing is
+\begin{equation}\label{cmp:eq:geometric-collar}
+ j_i^{\mathrm{geom}}\mathcal I(x,s^{d_i})=
+ \left[\exp_{i,s}\left(\mathcal P_{i,s}x+
+       \frac{\log s}{2\pi i}\mathcal P_{i,s}w_i\right),s\right].
+\end{equation}
+This includes the difference between the original section and $e'$.
+For $s=r\exp(2\pi iv/d_i)$,
+\begin{equation}\label{cmp:eq:radial-log}
+ \frac{\log s}{2\pi i}\mathcal P_{i,s}w_i
+ =\mathcal P_{i,s}(v\beta_i)
+   +\frac{\log r}{2\pi i}\mathcal P_{i,s}w_i.
+\end{equation}
+
+Choose a smooth radial function $\chi_i$ that is zero on an inner
+disk and equals $\log|s|$ on an outer annulus. Define the map from
+the affine quotient model to the geometric quotient by
+\begin{equation}\label{cmp:eq:finite}
+ F_i([x,s])=
+ \left[\exp_{i,s}\left(\mathcal P_{i,s}x+
+       \frac{\chi_i(s)}{2\pi i}\mathcal P_{i,s}w_i\right),s\right].
+\end{equation}
+It is smooth at zero because the added term vanishes there.
+
+If $\ell_s$ is the origin-preserving part of the geometric deck map,
+its complex-linear differential satisfies
+\[
+ \mathrm d\ell_s\,\mathcal P_{i,s}
+       =\mathcal P_{i,\zeta_i s}A_i.
+\]
+Since $A_iw_i=w_i$ and $\chi_i$ is radial, the added Lie-algebra
+section is equivariant. Including the affine term $\beta_i$ on both
+sides shows that \eqref{cmp:eq:finite} intertwines the full cyclic
+generator $(x,s)\mapsto(A_ix+\beta_i,\zeta_i s)$, and hence all its
+powers. Subtracting that section and taking real period coordinates
+gives its inverse.
+
+The affine collar is
+\[
+ j_i^{\mathrm{aff}}[x,v]
+       =[x+v\beta_i,r\exp(2\pi iv/d_i)].
+\]
+Equations \eqref{cmp:eq:geometric-collar} and
+\eqref{cmp:eq:radial-log} give exactly
+$F_i j_i^{\mathrm{aff}}=j_i^{\mathrm{geom}}\mathcal I$ on the
+whole outer collar. In particular the actual term $\log r$ has
+been retained.
+
+Compose $F_i^{-1}$ with the disk trivialization
+$D_i$ of \eqref{cc:eq:Phi}. The resulting
+$\Psi_i=D_iF_i^{-1}$ has target $G_i\times D^2$ and boundary map
+\eqref{th:eq:maps}, including its signs and normal-circle coordinate.
+After positive radial rescaling, the target base projections are
+\[
+ q_0=\varepsilon_0 e^{2\pi i\tau}z^3,\qquad
+ q_1=\varepsilon_1 e^{-2\pi i\tau}z^4,
+ \qquad\varepsilon_i>0.
+\]
+Thus these maps preserve the original base projections as well.
+
+At infinity use $N_c=N_{c^{\mathrm{ad}}}$ as the real cusp target.
+The map $J_\infty$ in \eqref{hol:eq:cusp-isomorphism} has its
+logarithm branches fixed by the full common lattice. If
+$a=L(\theta,\beta)^t$ and
+$\eta=\theta+\Omega_{\mathrm{ad}}(q)\beta$, its inverse on a
+punctured fiber is
+\begin{equation}\label{cmp:eq:cusp}
+ a\longmapsto
+ \left[\sigma_1\sigma_2^2 e^{2\pi i(\eta_1+2\eta_2)},
+       \sigma_2 e^{2\pi i\eta_2}\right].
+\end{equation}
+Here $\Omega_{\mathrm{ad}}$ is the period matrix formed from the
+units \eqref{hol:eq:adapted-units}.
+
+The monomial part is a group
+isomorphism, and the constant factor represents the retained
+section. Hence \eqref{cmp:eq:cusp} is an origin-preserving group
+map carrying the complete lattice. Uniqueness in
+Lemma~\ref{cmp:lem:period-family} identifies it with
+\eqref{cmp:eq:regular}.
+
+Its seam is
+$\Omega_{\mathrm{ad}}(v+1)=\Omega_{\mathrm{ad}}(v)+I$,
+which gives the specified positive $T_\infty$.
+With $\Psi_\infty=J_\infty$, all three identities are therefore
+\begin{equation}\label{cmp:eq:three-collars}
+ \Psi_i j_i^{\mathrm{geom}}=j_i\Phi_u,
+ \qquad i=0,1,\infty,
+\end{equation}
+on whole collars, with the original section and meridian paths.
+
+Use $\Phi_u$ on the regular piece and $\Psi_i$ on the fillings.
+Equation \eqref{cmp:eq:three-collars} glues them to a smooth
+diffeomorphism, whose inverse glues by the same identities.
+The complex orientation agrees with the common fiber orientation.
+The finite disk rotations and radial rescalings preserve orientation,
+and the cusp isomorphism is holomorphic. The diffeomorphism is
+therefore orientation preserving. Theorem~\ref{th:thm:real-sphere}
+determines its smooth target.
+\end{proof}
+
+\begin{proposition}\label{cmp:prop:parameter-monodromy}
+With the reference morphism fixed, counterclockwise continuation
+around $u=0$ acts on the common integral lattice by
+\[
+ \mathcal U_0=I+\delta_0\otimes\psi.
+\]
+It sends the selected torsion points to
+\[
+ a_0+\delta_0/3,\qquad a_1-\delta_0/4.
+\]
+Thus the integral marking and these labeled torsion points are
+not single valued on the punctured parameter disk.
+\end{proposition}
+
+\begin{proof}
+The central scalars are $\lambda_i(u)=u\lambda_i(1)$, where
+$\lambda_i(1)\ne0$ denotes the reference scalar and does not require
+contraction at $u=1$. A positive parameter loop adds $2\pi i$ to
+both logarithms. The horizontal and character periods remain fixed,
+while $e_4\mapsto e_4+\delta_0$ and
+$f_4\mapsto f_4+\delta_1$. Hence
+\[
+ \mathcal U_1=I+\delta_1\otimes f_4^*,\qquad
+ \mathcal U_0C=C\mathcal U_1.
+\]
+
+The common matrix stays compatible under continuation, and
+$\mathcal U_0$ commutes with the base monodromies because they fix
+$\delta_0$ and $\psi$. The two stated torsion shifts follow from
+the definitions of the increments. They are nonzero modulo
+$\Lambda$, since $\delta_0$ is primitive.
+\end{proof}
+
+The construction fixes the integral lifts and the adapted fan.
+Other affine increments require their own marked boundary maps or
+a comparison with these ones. Descent of the modified threefolds
+across the displayed parameter monodromy requires further
+identifications. A limit at $u=0$ and a relative comparison with
+the unsheared cusp fan are also separate questions.
+
+\section{Algebraic dimension and cotangent sections}\label{sec:algebraic-dimension}
+
+Write $Y=Y^{\mathrm{ad}}(u)$ for a threefold of
+Theorem~\ref{cmp:thm:comparison}, and let $f:Y\to\mathbb P^1$ be
+its holomorphic fibration. Its algebraic dimension is the
+transcendence degree of its field of meromorphic functions over
+$\mathbb C$. The torus fibers and the vanishing second cohomology
+determine that field. The nonnormal cusp then supplies an explicit
+distinction between ambient cotangent sections and differential
+forms on the normalization.
+
+\subsection{The algebraic reduction}
+
+\begin{proposition}\label{ad:prop:reduction}
+Every meromorphic function on $Y$ is pulled back from
+$\mathbb P^1$. Hence $a(Y)=1$ and $f$ is its algebraic reduction.
+Moreover, for every holomorphic line bundle $L$ on $Y$,
+\[
+ \int_Y c_3(Y)=2,\qquad \chi(Y,T_Y\otimes L)=1.
+\]
+\end{proposition}
+
+\begin{proof}
+Let $h$ be meromorphic on $Y$, with polar divisor $D$. Since
+$H^2(Y,\mathbb Z)=0$, the line $\mathcal O_Y(D)$ has zero Chern
+class. A generic smooth torus fiber $F$ is not contained in $D$.
+Its restriction $D|_F$ is an effective divisor of class zero. A
+complex torus is K\"ahler, and pairing with a K\"ahler form gives
+strictly positive area for every nonzero effective divisor.
+Therefore $D|_F$ is empty.
+
+The restriction of $h$ has no divisorial
+poles on $F$. Normality extends it across any indeterminacy points.
+It is holomorphic on compact $F$ and hence constant.
+
+Thus $h$ descends over the regular base. To extend the descended
+function at an exceptional value $c$, choose a local base parameter
+$q$. All poles above a small disk are vertical.
+
+Choose $N$ such that
+$N\operatorname{mult}_E(f^*c)$ is at least the pole order along
+each component $E$ of that fiber. Then $q^Nh$ has no divisorial
+poles on the smooth total space and is holomorphic there. Properness
+and connected fibers give $f_*\mathcal O_Y=\mathcal O_{\mathbb P^1}$,
+so $q^Nh=f^*g_N$ for a holomorphic function $g_N$ on the disk.
+The descended function is $q^{-N}g_N$, which is meromorphic across
+$c$.
+
+This proves equality of the meromorphic function fields.
+
+The smooth type gives $H^2(Y,\mathbb Z)=H^4(Y,\mathbb Z)=0$ and
+Euler characteristic two. Thus $c_1(Y)=c_2(Y)=c_1(L)=0$, and the
+Chern--Gauss--Bonnet formula gives $\int_Yc_3(Y)=2$.
+In degrees at most six,
+\[
+ \operatorname{ch}(T_Y\otimes L)=3+\tfrac12c_3(Y),
+ \qquad \operatorname{Td}(Y)=1.
+\]
+Hirzebruch--Riemann--Roch consequently gives the stated Euler
+characteristic.
+\end{proof}
+
+The two arguments need different hypotheses. More generally, let
+$f:X\to C$ be proper and surjective, with connected fibers, $X$
+a smooth compact threefold, and $C$ a smooth compact connected
+curve. Write $\mathcal M(X)$ for the meromorphic function field. If
+$H^2(X;\mathbb R)=0$ and the general smooth fibers are K\"ahler,
+the same polar argument gives $\mathcal M(X)=f^*\mathcal M(C)$.
+Indeed, the restriction of an effective polar divisor has zero
+real Chern class, whereas every nonzero effective divisor on a
+K\"ahler fiber pairs positively with a power of its K\"ahler form.
+All poles are therefore vertical. Multiplying by a sufficient
+power of a local base parameter clears them on the smooth total
+space, and connected-fiber descent extends the resulting
+meromorphic function across each exceptional base point.
+No assumption on a special fiber or its normalization enters this
+argument.
+
+The numerical Riemann--Roch conclusion also requires less than
+vanishing of $H^4(X;\mathbb Z)$. For a line bundle $L$ on $X$,
+assume $c_1(T_X)=c_1(L)=0$ in rational cohomology. Then, through
+degree six,
+\[
+ \operatorname{ch}(T_X\otimes L)=3-c_2(X)+\tfrac12c_3(X),
+ \qquad \operatorname{Td}(X)=1+\tfrac1{12}c_2(X).
+\]
+The degree-six product is $c_3(X)/2$. Thus
+$\chi(X,T_X\otimes L)=\tfrac12\int_Xc_3(X)$ under these weaker
+hypotheses. The value of that integral remains a separate
+topological input.
+
+\subsection{Monodromy and the number of fiber components}
+
+There is a second distinction in the topology of an algebraic
+reduction: a split fundamental-group extension still retains
+monodromy. Let $f:X\to C$ be a proper holomorphic map with connected
+fibers from a smooth compact complex threefold to a smooth curve
+of genus $g$. Assume $b_2(X)=0$. Remove $s>0$ points containing all
+critical values, put $C^\circ=C\setminus\{c_1,\ldots,c_s\}$ and
+$U=f^{-1}(C^\circ)$, and let $F$ be a smooth fiber. Write $r$ for
+the number of irreducible components of $X\setminus U$ and set
+\[
+ t'=\dim_{\mathbb Q}
+ H_1(F;\mathbb Q)_{\pi_1(C^\circ)}.
+\]
+The subscript denotes coinvariants for the monodromy action.
+
+\begin{proposition}\label{ad:prop:components}
+With these hypotheses,
+\[
+ b_1(U)=2g+s-1+t',\qquad
+ r=2g+s-1+t'-b_1(X).
+\]
+\end{proposition}
+
+\begin{proof}
+The punctured curve has the homotopy type of a graph, so its second
+homotopy group vanishes and its fundamental group is free. The
+fibration sequence gives a split extension
+\[
+ 1\longrightarrow\pi_1(F)\longrightarrow\pi_1(U)
+ \longrightarrow\pi_1(C^\circ)\longrightarrow1.
+\]
+For a semidirect product $K\rtimes Q$, abelianization kills both
+$[K,K]$ and the elements $qkq^{-1}k^{-1}$. Hence
+\[
+ (K\rtimes Q)_{\mathrm{ab}}
+   \cong (K_{\mathrm{ab}})_Q\oplus Q_{\mathrm{ab}}.
+\]
+Taking rational ranks proves the first formula.
+
+Put $D=X\setminus U$. Its top rational cohomology has dimension
+$r$, one generator for each irreducible surface component, and
+$H^5(D;\mathbb Q)=0$. Poincar\'e duality gives $H^4(X;\mathbb Q)=0$.
+The exact sequence of $(X,D)$ therefore contains
+\[
+ 0\longrightarrow H^4(D;\mathbb Q)
+ \longrightarrow H^5(X,D;\mathbb Q)
+ \longrightarrow H^5(X;\mathbb Q)\longrightarrow0.
+\]
+Poincar\'e--Lefschetz duality identifies the last two dimensions with
+$b_1(U)$ and $b_1(X)$. This proves the second formula.
+\end{proof}
+
+For the selected threefold $Y$, one has $g=0$, $s=3$, $b_1(Y)=0$
+and $t'=1$: the dual invariant space is generated by $\psi$ in
+(1.9). Thus the formula gives $r=3$, in agreement with the three
+irreducible reduced special fibers. Replacing $t'$ by
+$b_1(F)=4$ would give $r=6$. That replacement occurs after the
+split extension in \cite[Lemma~3.2, pp.~84--85]{CDP1998} and in
+\cite[Lemma~4.2, p.~684]{CDP2020}. A splitting does not remove the
+coinvariant relations. The resulting finite-index argument in
+\cite[proof of Theorem~3.1, p.~86]{CDP1998} therefore also requires
+additional control of monodromy.
+
+The source versions make different formulations of the ensuing
+surjectivity argument. The sentence invoking ``5.2(2)'' occurs
+in the preprint \cite[p.~13]{CDP1996}; the published argument is
+the rank and finite-index argument in \cite[p.~86]{CDP1998}.
+Both require the monodromy qualification above.
+In \cite[Corollary~5.2]{CDP2020}, restriction surjectivity concerns
+the general smooth fiber. The all-fiber assertion occurs later,
+in the proof of Proposition~5.6, after the nonnegative splitting
+claim of Proposition~5.5. Local freeness of $R^1f_*\mathcal O_X$
+alone proves neither generic generation nor either restriction
+surjectivity. An argument through invariant classes must still
+prove that their images span $H^1(F,\mathcal O_F)$; the corrected
+component count does not prove this spanning statement.
+
+\subsection{Descent through the conductor}
+
+More generally, let $Z$ be a connected, reduced compact normal-crossing
+fiber of a holomorphic map from a smooth complex threefold $V$ to
+a curve. Choose
+a local base parameter $q$ with $Z=(q=0)$, and let
+$\nu:\widetilde Z\to Z$ be its normalization. Denote the conductor
+subspace by $D$ and its inverse image by $\widetilde D$.
+Here the conductor is the ideal
+$\mathfrak c=\operatorname{Ann}_{\mathcal O_Z}(\nu_*\mathcal O_{\widetilde Z}/\mathcal O_Z)$,
+and $D$ and $\widetilde D$ have ideals $\mathfrak c$ and
+$\mathfrak c\mathcal O_{\widetilde Z}$, respectively.
+For the double and triple models these ideals on $Z$ are
+$(x,y)$ and $(xy,xz,yz)$. On the normalized branch $x=0$ they
+are respectively $(y)$ and $(yz)$.
+The sheaf $\Omega_V^1|_Z$ is locally free of rank three, whereas
+$\Omega_Z^1$ can have torsion supported on $D$.
+For a coherent sheaf on a reduced space, torsion means the kernel
+of localization at the non-zero-divisors. Equivalently, its
+sections vanish at every generic point. We use coherent analytic
+differentials, without formal completion.
+
+\begin{lemma}\label{ad:lem:conductor-section}
+Let $A$ be a line bundle on $Z$ whose pullback to $\widetilde Z$
+is trivial. Then
+\[
+ H^0(Z,\Omega_V^1|_Z\otimes A)\ne0.
+\]
+There is a nonzero section whose image in
+$(\Omega_Z^1/\mathrm{torsion})\otimes A$ is zero. If $A$ is
+nontrivial, this section does not come from a global section of
+the conormal line tensored with $A$.
+\end{lemma}
+
+\begin{proof}
+The conductor square gives the exact sequence
+\begin{equation}\label{ad:eq:conductor}
+ 0\longrightarrow\mathcal O_Z
+ \longrightarrow\nu_*\mathcal O_{\widetilde Z}\oplus\mathcal O_D
+ \longrightarrow\nu_*\mathcal O_{\widetilde D}
+ \longrightarrow0.
+\end{equation}
+The last map subtracts the two restrictions. This is visible in the
+local models: on $xy=0$, functions on the two branches descend
+exactly when their values on $x=y=0$ agree. On $xyz=0$, the three
+pairwise restrictions must agree. Inclusion--exclusion produces
+the descended function in the latter case. Tensoring
+\eqref{ad:eq:conductor} with a locally free sheaf preserves
+exactness and gives the same criterion for its sections.
+
+Choose a nowhere-zero section $e$ of $\nu^*A$. The pullback of
+$dq|_Z$ is a section of the pulled-back \emph{ambient} cotangent
+bundle. It is nonzero off the conductor and vanishes on
+$\widetilde D$. Indeed, on a branch of $xy=0$ it is $y\,dx$,
+and on a branch of $xyz=0$ it is $yz\,dx$. A holomorphic unit in
+the local equation does not change either property. Hence the pair
+\[
+ \bigl(\nu^*(dq|_Z)\otimes e,\ 0\bigr)
+\]
+descends by \eqref{ad:eq:conductor} to a nonzero section $s_A$ of
+$\Omega_V^1|_Z\otimes A$.
+
+On the smooth part of $Z$, the image of $dq$ in $\Omega_Z^1$ is
+zero. The image of $s_A$ is therefore supported on the conductor
+and is torsion. Its image in the torsion-free quotient is zero.
+The conormal line is $\mathcal O_Z$, since $q$ defines the fiber.
+If $s_A=dq\otimes a$ for a global section $a$ of $A$, pullback and
+comparison away from the conductor give $\nu^*a=e$. The section
+$a$ would be nowhere zero and would trivialize $A$.
+
+In fact $H^0(Z,A)=0$ when $A$ is nontrivial. A section pulls back
+to a constant multiple of $e$ on each compact normalization
+component. Nonzero and zero constants cannot meet on a connected
+fiber, and nonzero constants everywhere give a trivialization.
+This proves the final assertion.
+\end{proof}
+
+The conductor construction also appears in
+\cite[\S10, Lemma~10.3]{TorusConstruction}.
+At a double crossing, the distinction is explicit. In
+$R=\mathbb C\{x,y,z\}/(xy)$, put
+$\tau=[x\,dy]\in\Omega_R^1$. The relation
+$y\,dx+x\,dy=0$ gives
+\[
+ [y\,dx+2x\,dy]=\tau.
+\]
+This class is nonzero. Indeed, an equality
+$x\,dy=h(y\,dx+x\,dy)$ would require $hy=0$ and $hx=x$.
+The first condition gives $h\in(x)$, whereas the second gives
+$h-1\in(y)$, which is impossible on $D=(x=y=0)$.
+Moreover $x\tau=y\tau=0$. Every germ has a unique expression
+\[
+ h=h_0(z)+xh_x(x,z)+yh_y(y,z).
+\]
+The same coefficient comparison shows that $h_0(z)\tau=0$
+only when $h_0=0$. Thus
+\begin{equation}\label{ad:eq:node-torsion}
+ R\tau\simeq R/(x,y),\qquad
+ \operatorname{Ann}_R(\tau)=(x,y).
+\end{equation}
+In particular the non-zero-divisor $x+y$ annihilates $\tau$.
+For arbitrary analytic germs $a,b$,
+\[
+ [a y\,dx+b x\,dy]=(b-a)\tau
+\]
+is nonzero precisely when $(b-a)|_D$ is a nonzero germ.
+Unequal functions need not satisfy this condition: for
+$a=y+z$ and $b=x+z$,
+\[
+ a y\,dx+b x\,dy=(x+y+z)d(xy).
+\]
+The coefficients of an ordinary conormal section agree on the
+conductor; an ambient section with torsion intrinsic image need
+not have that agreement.
+
+\begin{theorem}\label{ad:thm:ambient-kernel}
+Let $Z=(q=0)$ be a reduced normal-crossings full fiber in a smooth
+complex threefold $V$. Set
+\[
+ E=\Omega_V^1|_Z,\qquad
+ \overline\Omega_Z^1=\Omega_Z^1/\operatorname{tors}\Omega_Z^1,
+ \qquad \mathcal K=\ker(E\longrightarrow\overline\Omega_Z^1).
+\]
+Multiplication by the ambient pullback of $dq|_Z$, followed by
+conductor descent, defines an isomorphism
+\begin{equation}\label{ad:eq:ambient-kernel}
+ \Phi_q:\nu_*\mathcal O_{\widetilde Z}\xrightarrow{\sim}\mathcal K.
+\end{equation}
+Under this isomorphism the ordinary conormal inclusion is
+$\mathcal O_Z\hookrightarrow\nu_*\mathcal O_{\widetilde Z}$.
+Consequently,
+\[
+ \operatorname{tors}\Omega_Z^1
+ \simeq\nu_*\mathcal O_{\widetilde Z}/\mathcal O_Z.
+\]
+For every holomorphic line bundle $A$ on $Z$, there are exact
+sequences
+\begin{align}
+ 0&\longrightarrow A\xrightarrow{dq}E\otimes A
+       \longrightarrow\Omega_Z^1\otimes A\longrightarrow0,
+       \label{ad:eq:conormal-twist}\\
+ 0&\longrightarrow\nu_*\nu^*A\xrightarrow{\Phi_{q,A}}E\otimes A
+       \longrightarrow\overline\Omega_Z^1\otimes A
+       \longrightarrow0,\label{ad:eq:kernel-twist}\\
+ 0&\longrightarrow A\longrightarrow\nu_*\nu^*A
+       \longrightarrow(\operatorname{tors}\Omega_Z^1)\otimes A
+       \longrightarrow0.\label{ad:eq:torsion-twist}
+\end{align}
+Neither compactness of $V$ nor rationality of the normalization
+is required.
+\end{theorem}
+
+\begin{proof}
+The differential map
+$\Omega_Z^1\to\nu_*\Omega_{\widetilde Z}^1$ is an isomorphism
+at every generic smooth point. Its target is torsion-free, so its
+kernel is exactly the torsion subsheaf. Thus $\mathcal K$ is the
+kernel of the ambient map to normalized intrinsic forms.
+
+First take $q=xy$. An ambient form
+$P\,dx+Q\,dy+T\,dz$ vanishes intrinsically on both normalized
+branches precisely when
+\[
+ P\in(y),\qquad Q\in(x),\qquad T\in(x)\cap(y)=0.
+\]
+Since $\operatorname{Ann}_R(y)=(x)$ and
+$\operatorname{Ann}_R(x)=(y)$, this gives
+\[
+ \mathcal K=(y)\,dx\oplus(x)\,dy
+ \simeq R/(x)\oplus R/(y).
+\]
+The isomorphism sends $(a,b)$ to $a y\,dx+b x\,dy$.
+Its two branch restrictions vanish on the actual conductor, so
+it is the descent map of the statement.
+
+For $q=xyz$, let $R=\mathbb C\{x,y,z\}/(xyz)$.
+Vanishing on all three normalized planes gives
+\[
+ P\in(y)\cap(z)=(yz),\quad
+ Q\in(x)\cap(z)=(xz),\quad
+ T\in(x)\cap(y)=(xy).
+\]
+The annihilators of $yz,xz,xy$ are respectively $(x),(y),(z)$.
+Hence
+\[
+ \mathcal K=(yz)\,dx\oplus(xz)\,dy\oplus(xy)\,dz
+ \simeq R/(x)\oplus R/(y)\oplus R/(z),
+\]
+with map
+\[
+ (a,b,c)\longmapsto a yz\,dx+b xz\,dy+c xy\,dz.
+\]
+To verify the conductor structure here, a function on the plane
+$x=0$ vanishes on both intersection axes exactly when it is
+divisible by $yz$. The three such branch conditions identify the
+conductor ideal with $(xy,xz,yz)$ in $R$. Descent requires agreement
+on each whole intersection axis, including their common origin.
+If $a(y,z),b(x,z),c(x,y)$ have those agreements, let their shared
+axis restrictions be $r_z(z),r_y(y),r_x(x)$, with common value $r_0$.
+Then their descended function is
+\[
+ a(y,z)+b(x,z)+c(x,y)-r_z(z)-r_y(y)-r_x(x)+r_0.
+\]
+This also proves that the conductor square uses the unions of axes
+with their scheme structures. No separation of the axes at the
+triple point is permitted.
+
+At a smooth point, $q=x$ gives $\mathcal K=\mathcal O_Z\,dx$.
+For a unit $u$ and $p=x,xy,$ or $xyz$, the equation $q=up$ gives
+$dq|_Z=u|_Z\,dp$. Multiplication by the pulled-back unit therefore
+gives the same isomorphism in every local model. Coordinate changes
+and branch permutations preserve it: both descriptions use the
+same ambient differential, and conductor descent is unique.
+
+The conormal sequence is left exact because $Z$ is reduced.
+Indeed, a coefficient annihilating $dq|_Z$ vanishes on the dense
+smooth locus of every component, hence vanishes on $Z$.
+For $a\in\mathcal O_Z$, one has $\Phi_q(\nu^*a)=a\,dq|_Z$.
+Quotienting $\mathcal K$ by this submodule proves the torsion
+identification. Tensoring by the invertible sheaf $A$ preserves
+exactness, and the finite-map projection formula gives
+\eqref{ad:eq:kernel-twist} and \eqref{ad:eq:torsion-twist}.
+\end{proof}
+
+The identifications depend on the trivialization of the conormal
+line. A second base parameter $q'=\varphi(q)$ multiplies $\Phi_q$
+by the nonzero scalar $\varphi'(0)$. More generally a defining
+equation $q'=v q$ multiplies it by the pulled-back unit $v|_Z$.
+The kernel sheaf and its ordinary conormal submodule do not depend
+on this choice.
+
+\begin{corollary}\label{ad:cor:exact-dimensions}
+Suppose $Z$ is compact and connected, and its normalization is the
+disjoint union of $k$ compact connected components $Z_i$.
+Assume $H^0(Z_i,\Omega_{Z_i}^1)=0$ and $\nu^*A|_{Z_i}\simeq\mathcal O_{Z_i}$
+for every $i$. Then
+\[
+ H^0(Z,\overline\Omega_Z^1\otimes A)=0,
+ \qquad h^0(Z,E\otimes A)=k.
+\]
+Moreover,
+\[
+ H^0(\widetilde Z,\nu^*A)\xrightarrow{\Phi_{q,A}}
+ H^0(Z,E\otimes A)
+\]
+is an isomorphism. Its composite with the intrinsic
+map has kernel $\nu^*H^0(Z,A)$ and image of dimension
+$k-h^0(Z,A)$, where
+\[
+ h^0(Z,A)=
+ \begin{cases}1,&A\simeq\mathcal O_Z,\\0,&A\not\simeq\mathcal O_Z.\end{cases}
+\]
+If also $H^1(Z_i,\mathcal O_{Z_i})=0$ for every $i$, then
+\begin{equation}\label{ad:eq:intrinsic-dimension}
+ h^0(Z,\Omega_Z^1\otimes A)
+   =k-h^0(Z,A)+h^1(Z,A).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+The injection
+$\overline\Omega_Z^1\hookrightarrow\nu_*\Omega_{\widetilde Z}^1$
+and the projection formula prove the first vanishing.
+Equation~\eqref{ad:eq:kernel-twist} then identifies ambient sections
+with $H^0(\widetilde Z,\nu^*A)=\mathbb C^k$.
+Equation~\eqref{ad:eq:conormal-twist} gives the kernel of the
+intrinsic map. A section of $A$ pulls back to constants on the
+normalization components. Since $Z$ is connected, those constants
+are either all zero or everywhere nonzero, as in
+Lemma~\ref{ad:lem:conductor-section}. In the latter case they
+trivialize $A$.
+
+The intrinsic sections are all torsion, by the first vanishing.
+The cohomology sequence of \eqref{ad:eq:torsion-twist} begins
+\[
+ \begin{aligned}
+ 0\longrightarrow H^0(Z,A)\longrightarrow\mathbb C^k
+ &\longrightarrow H^0(Z,\operatorname{tors}\Omega_Z^1\otimes A)\\
+ &\longrightarrow H^1(Z,A)
+ \longrightarrow H^1(\widetilde Z,\nu^*A).
+ \end{aligned}
+\]
+The last term is zero under the additional hypothesis, which proves
+\eqref{ad:eq:intrinsic-dimension}. Thus $H^1(Z,A)$ measures precisely
+the intrinsic torsion sections that have no global ambient lift.
+\end{proof}
+
+The dimension $k$ uses only the absence of holomorphic one-forms
+on the normalization. The separate $H^1(\mathcal O)$ hypothesis
+is needed for \eqref{ad:eq:intrinsic-dimension}, and later to infer
+holomorphic triviality from a zero Chern class. Rational
+normalization components satisfy both hypotheses.
+
+\begin{example}\label{ad:ex:nodal-nontorsion}
+A compact fiber can have a non-torsion normalization-trivial line
+bundle. Over a small disk $\Delta$, consider
+\[
+ \mathcal E=\{y^2z=x^3+x^2z+t z^3\}\subset\mathbb P^2\times\Delta.
+\]
+Its total surface is smooth near the central fiber. On $z=1$ the
+defining equation has $t$-derivative $-1$; at the point
+$[0:1:0]$ at infinity its $z$-derivative is $1$.
+The central curve $C_0$ has one node, with local equation $t=ab$,
+since the quadratic part $y^2-x^2$ is nondegenerate.
+Its normalization is $\mathbb P^1$, parametrized in the affine
+chart by
+\[
+ x=r^2-1,\qquad y=r(r^2-1).
+\]
+The two points over the node are $r=1$ and $r=-1$.
+Set $V=\mathcal E\times\mathbb P^1$ and
+$Z=C_0\times\mathbb P^1$. Then
+$\widetilde Z=\mathbb P^1\times\mathbb P^1$.
+
+Glue the trivial line along the two conductor preimages with
+multiplier $2$, and denote the descended line bundle by $A$.
+This descent is locally free: rescaling one branch frame makes
+its local gluing the identity. A global section would be a
+constant $c$ satisfying $c=2c$. The same argument for the
+$n$th tensor power uses $2^n\ne1$, so $A$ is non-torsion.
+Corollary~\ref{ad:cor:exact-dimensions} gives
+\[
+ H^0(Z,A)=H^0(Z,\overline\Omega_Z^1\otimes A)=0,
+ \qquad h^0(Z,E\otimes A)=1.
+\]
+The ambient section has a nonzero intrinsic torsion image.
+
+The line bundle extends to a neighborhood of $Z$ in $V$.
+Indeed, let $P,Q$ be the smooth points of $C_0$ with parameters
+$r=0,1/3$. For $g(r)=r/(r-1/3)$ one has
+$\operatorname{div}(g)=P-Q$ on the normalization and
+$g(1)/g(-1)=2$. Trivializing the pullback of
+$\mathcal O_{C_0}(P-Q)$ by its canonical rational section divided
+by $g$ gives precisely this conductor gluing.
+The smooth points $P,Q$ extend to local sections of
+$\mathcal E\to\Delta$ by the holomorphic implicit function theorem.
+Their difference is a Cartier divisor whose line bundle gives the
+extension, also after product with $\mathbb P^1$.
+Thus the non-torsion proviso does not force ambient vanishing on
+a compact fiber. The ambient $V$ is noncompact, and the pullback
+of $\mathcal O_{\mathbb P^1}(1)$ has nonzero Chern class. This
+example does not meet the global hypotheses of
+\cite[Theorem~2.2]{CDP2020}.
+\end{example}
+
+\begin{example}\label{ad:ex:two-component-gluing}
+The additional $H^1$ term in \eqref{ad:eq:intrinsic-dimension}
+already occurs with two rational normalization components.
+Make the base change $t=s^2$ in the preceding cubic family and
+resolve the resulting singularity $ab=s^2$.
+The resolution has charts
+\[
+ a=X,\quad s=XS,\quad b=XS^2,
+ \qquad
+ b=Y,\quad s=YT,\quad a=YT^2.
+\]
+On their overlap, $T=S^{-1}$ and $Y=XS^2$. They cover the
+exceptional conic, since $a=b=0$ is impossible in its projective
+equation $ab=s^2$. Both charts are smooth, with central equations
+$XS=0$ and $YT=0$.
+The exceptional $\mathbb P^1$ meets the strict transform of $C_0$
+at the distinct points $S=0$ and $T=0$.
+The strict transform is the normalization of $C_0$, hence is also
+$\mathbb P^1$. After taking the product with $\mathbb P^1$, the
+central fiber $Z$ has two normalization components
+$\mathbb P^1\times\mathbb P^1$ and two disjoint double curves
+$\mathbb P^1$.
+
+Put the trivial line on both components. Glue with multiplier $1$
+on the first double curve and $\lambda\in\mathbb C^*$ on the
+second, obtaining a line bundle $A_\lambda$.
+The normalization sequence for this line has map on constants
+\[
+ \Delta_\lambda:\mathbb C^2\longrightarrow\mathbb C^2,
+ \qquad
+ (a,b)\longmapsto(a-b,a-\lambda b),
+ \qquad
+ [\Delta_\lambda]=
+ \begin{pmatrix}1&-1\\1&-\lambda\end{pmatrix}.
+\]
+Both normalization components and both double curves have
+$H^1(\mathcal O)=0$. Thus
+$H^0(Z,A_\lambda)=\ker\Delta_\lambda$ and
+$H^1(Z,A_\lambda)=\operatorname{coker}\Delta_\lambda$.
+The torsion sheaf in \eqref{ad:eq:torsion-twist} restricts to the
+trivial line on each double curve, so its section space has
+dimension two. Consequently,
+\[
+\begin{array}{l|cc}
+ &\lambda=1&\lambda=2\\ \hline
+ h^0(Z,A_\lambda)&1&0\\
+ h^1(Z,A_\lambda)&1&0\\
+ h^0(Z,E\otimes A_\lambda)&2&2\\
+ \text{dimension of the intrinsic image}&1&2\\
+ h^0(Z,\Omega_Z^1\otimes A_\lambda)&2&2
+\end{array}
+\]
+The fourth row is the image of ambient global sections under the
+ordinary intrinsic differential map. At $\lambda=1$ one intrinsic
+torsion section has no global ambient lift; at $\lambda=2$ every
+intrinsic section lifts.
+The latter line is non-torsion, since replacing $\lambda$ by
+$\lambda^n$ leaves the determinant $1-2^n$ nonzero.
+The ambient section dimension stays equal to the number of
+normalization components in both cases.
+\end{example}
+
+\subsection{Top fiber cohomology and the toric fiber}
+
+The ambient cotangent calculation has a direct cohomological
+meaning. Let $f:V\to C$ be a proper holomorphic map of relative
+dimension two near $c$ on a smooth curve $C$, with $V$ smooth of
+dimension three. Let $Z=f^{-1}(c)$ be a reduced
+normal-crossings full fiber. Let $L$ be a line bundle on $V$ and put
+\[
+ \mathscr G=T_V\otimes L,\qquad A=(L^{-1}\otimes K_V)|_Z.
+\]
+Since $Z$ is a Cartier divisor, it is Cohen--Macaulay and
+Gorenstein. Adjunction and the trivial normal line give
+$\omega_Z=K_V|_Z$. Compact analytic Serre duality for a Gorenstein
+surface with locally free coefficients therefore identifies
+\begin{equation}\label{ad:eq:exact-duality}
+ H^2(Z,\mathscr G|_Z)^*
+ \simeq H^0(Z,\Omega_V^1|_Z\otimes A).
+\end{equation}
+The canonical-bundle factor is required for this fixed $L$.
+If $A$ satisfies Corollary~\ref{ad:cor:exact-dimensions}, the two
+spaces in \eqref{ad:eq:exact-duality} have dimension $k$.
+
+The same integer is the dimension of the top direct-image fiber.
+Write $i:Z\hookrightarrow V$ for the inclusion and choose a base
+parameter $q$ at $c$. Its pullback is a non-zero-divisor on the
+smooth total space, giving
+\[
+ 0\longrightarrow\mathscr G\xrightarrow{q}\mathscr G
+ \longrightarrow i_*(\mathscr G|_Z)\longrightarrow0.
+\]
+Proper analytic direct-image coherence and cohomological dimension
+two give $R^3f_*\mathscr G=0$. The resulting long exact sequence
+therefore gives the top base-change isomorphism
+\begin{equation}\label{ad:eq:top-base-change}
+ (R^2f_*\mathscr G)_c/q(R^2f_*\mathscr G)_c
+ \xrightarrow{\sim}H^2(Z,\mathscr G|_Z).
+\end{equation}
+Indeed, the direct image of $i_*(\mathscr G|_Z)$ in degree two is
+the skyscraper sheaf with this cohomology as its fiber.
+These analytic results require properness, unlike
+Theorem~\ref{ad:thm:ambient-kernel}. No local-freeness conclusion is
+used in \eqref{ad:eq:top-base-change}.
+
+In particular, if $(R^2f_*\mathscr G)_c$ is torsion over the local
+discrete valuation ring, its decomposition has the form
+\[
+ (R^2f_*\mathscr G)_c\simeq
+ \bigoplus_{j=1}^{k}\mathcal O_{C,c}/(q^{n_j}),\qquad n_j\ge1.
+\]
+Its fiber dimension is $k$, whereas its length is
+$\sum_j n_j\ge k$. The conductor theorem determines neither these
+exponents nor whether the direct image is torsion.
+
+Local freeness can fail even in a compact algebraic family.
+Blow up $\mathbb P^1\times\mathbb P^1$ at a point of one fiber of
+the first projection, and take the product with another
+$\mathbb P^1$. The resulting smooth threefold has general fiber
+$\mathbb P^1\times\mathbb P^1$ and a reduced special fiber with
+two such rational normalization components. For $L=K_V$ the twist
+$A$ is trivial. Equations~\eqref{ad:eq:exact-duality} and
+\eqref{ad:eq:top-base-change} give top direct-image fiber dimension
+one generally and two at the special point, so that sheaf is not
+locally free. Repeated blowups at smooth points of the reduced
+special fiber give any component number $k$, retaining
+multiplicity one. This does not satisfy the global cohomology
+hypotheses of \cite[Theorem~2.2]{CDP2020}; it distinguishes the
+valid top base-change statement from the general local-freeness
+claim in \cite[Lemma~1.5]{CDP1998}.
+
+For the toric fiber of $Y=Y^{\mathrm{ad}}(u)$, the normalization is
+the blowup of $\mathbb P^2$ at its three coordinate points.
+This surface has $H^1(\mathcal O)=0$ and no holomorphic one-forms.
+Blowing up a smooth point preserves $H^1(\mathcal O)$; a
+holomorphic one-form descends off the exceptional curve and extends
+across its image point. These facts reduce both vanishings to
+$\mathbb P^2$. Since $H^2(Y;\mathbb Z)=0$, the pullback of every
+line bundle $B$ on $Y$ has zero Chern class on the normalization.
+The exponential sequence and its $H^1(\mathcal O)=0$ then make that
+pullback holomorphically trivial.
+
+\begin{corollary}\label{ad:cor:ambient-nonvanishing}
+For the toric fiber $Z$ of the selected threefold $Y$ and every
+holomorphic line bundle $B$ on $Y$,
+\[
+ h^0(Z,\Omega_Y^1|_Z\otimes B|_Z)=1,\qquad
+ H^0(Z,\overline\Omega_Z^1\otimes B|_Z)=0.
+\]
+For every holomorphic line bundle $L$ on $Y$,
+\[
+ h^2\bigl(Z,(T_Y\otimes L)|_Z\bigr)=1,
+ \qquad
+ \dim_{\mathbb C}\bigl(R^2f_*(T_Y\otimes L)\otimes\mathbb C(\infty)\bigr)=1.
+\]
+\end{corollary}
+
+\begin{proof}
+Apply Corollary~\ref{ad:cor:exact-dimensions} with $k=1$ and then
+\eqref{ad:eq:exact-duality}--\eqref{ad:eq:top-base-change}, using
+the exact twist $A=(L^{-1}\otimes K_Y)|_Z$.
+\end{proof}
+
+The sufficient hypothesis $R^2f_*(T_Y\otimes L)=0$ in
+\cite[Proposition~2.4]{CDP2020} is therefore unavailable for every
+$L$ on this threefold. The passage to equation~(11) in
+\cite[\S7, p.~692]{CDP2020} replaces ambient cotangent vanishing
+by torsion-free intrinsic vanishing. The exact kernel that must
+also vanish is $\mathcal K$, not merely the ordinary conormal
+line. Example~\ref{ad:ex:nodal-nontorsion} shows that a non-torsion
+twist does not justify that replacement at a nonnormal fiber.
+It does not supply a compact ambient counterexample to the global
+theorem. For a fixed $L$, the duality expression also contains
+$K_Y$ as in \eqref{ad:eq:exact-duality}; suppressing this factor
+requires explicitly replacing $L$ by $L^{-1}\otimes K_Y$.
+
+\subsection{Direct-image lengths and the global conclusion}
+
+A smaller restriction hypothesis than simultaneous non-torsion
+on all fibers suffices to make the higher direct images torsion.
+The hypothesis still concerns a line bundle on the actual total
+space.
+
+\begin{proposition}\label{ad:prop:one-fiber-lengths}
+Let $f:X\to C$ be a proper holomorphic map with connected fibers
+from a smooth compact connected complex threefold to a smooth
+compact connected curve, and let $L$ be a line bundle on $X$.
+Suppose one smooth fiber $F$ is a complex two-torus and $M=L|_F$
+is nontrivial and topologically trivial. Then $f_*(T_X\otimes L)=0$, and
+$R^if_*(T_X\otimes L)$ has finite support for $i=1,2$.
+Writing its length as $\ell_i$, one has
+\[
+ \begin{gathered}
+ h^0(X,T_X\otimes L)=h^3(X,T_X\otimes L)=0,\\
+ h^1(X,T_X\otimes L)=\ell_1,\qquad
+ h^2(X,T_X\otimes L)=\ell_2.
+ \end{gathered}
+\]
+Thus $\chi(X,T_X\otimes L)=\ell_2-\ell_1$.
+\end{proposition}
+
+\begin{proof}
+A nontrivial topologically trivial holomorphic line bundle on a
+complex torus has zero cohomology in every degree. To recall why,
+choose a smooth trivialization and write its Dolbeault operator as
+$\bar\partial+\alpha$, with $\alpha$ a constant $(0,1)$-form after
+a smooth change of frame. Such a frame exists by the Fourier
+solution of the $\bar\partial$ equation on the torus: a closed
+$(0,1)$-form is its constant term plus a $\bar\partial$-exact form.
+The connection $d+\alpha-\overline\alpha$ is flat and unitary and
+has this Dolbeault operator. If its character were trivial, its
+parallel section would holomorphically trivialize the line.
+The flat torus metric and this connection give the Bochner
+identity for line-valued forms: a harmonic form is parallel.
+A nontrivial character permits no parallel form. Dolbeault--Hodge
+theory proves the asserted cohomology vanishing.
+
+The tangent sequence of the smooth fiber is
+\[
+ 0\longrightarrow\mathcal O_F^{\oplus2}
+ \longrightarrow T_X|_F\longrightarrow\mathcal O_F\longrightarrow0.
+\]
+After tensoring by $M$, its cohomology vanishes in every degree.
+The map $f$ is flat: multiplication by a nonzero base germ is
+injective on the smooth total space, and torsion-free modules over
+a discrete valuation ring are flat. The locally free sheaf
+$T_X\otimes L$ is consequently flat over $C$.
+Upper semicontinuity gives the same vanishing on a neighborhood of
+the base point, and Grauert's theorem makes every direct image
+zero there. A coherent sheaf on the connected curve that vanishes
+on a nonempty open set has rank zero and hence finite support.
+Furthermore $f_*(T_X\otimes L)$ is torsion-free: multiplication by
+a nonzero base germ is injective on the locally free sheaf upstairs.
+It is therefore zero. Finally, a sheaf with finite support has no
+higher cohomology on $C$, so the Leray spectral sequence gives
+all displayed equalities.
+\end{proof}
+
+Under the additional normalization hypotheses at a fiber with
+$k$ components, the conductor theorem gives $\ell_2\ge k$.
+It gives no comparison with $\ell_1$. In this setting the estimate
+needed for a nonpositive Euler characteristic is exactly
+$\ell_1\ge\ell_2$.
+Existence of an $L$ with the restriction required by
+Proposition~\ref{ad:prop:one-fiber-lengths} is a separate question
+about $\operatorname{Pic}(X)\to\operatorname{Pic}(F)$.
+Neither a normalization-trivial restriction at the toric fiber nor
+vanishing of $H^2(X;\mathbb Z)$ proves that existence.
+For the selected $Y$, Corollary~\ref{nf:cor:picard} below
+constructs such line bundles from its coherent restriction map
+and obtains $\ell_2=\ell_1+1$.
+
+For the selected $Y$, the holomorphic fibration and the smooth
+comparison of Theorem~\ref{cmp:thm:comparison}, with
+Theorem~\ref{th:thm:real-sphere}, give
+$H^1(Y;\mathbb Z)=H^2(Y;\mathbb Z)=0$ and
+$\int_Yc_3(Y)=2$.
+Proposition~\ref{ad:prop:reduction} consequently gives $a(Y)=1$
+and $\chi(Y,T_Y\otimes L)=1$ for every $L$.
+These geometric and topological premises yield the incompatibility
+with the conclusion of \cite[Theorem~2.2]{CDP2020}.
+The conductor theorem and the component formula identify distinct
+missing implications in its argument; neither supplies those
+independent premises. The conclusion here concerns precisely the
+fixed-parameter threefold, full marking and adapted collars in
+Theorem~\ref{cmp:thm:comparison}. An independently fixed set of old
+increments, the unsheared fan, or descent around a parameter loop
+requires the further comparisons stated in Section~\ref{sec:geometric-comparison}.
+
+
+\input{native-forms}
+\input{bott-chern}
+\input{courant}
+\input{tangent-curves}
+\input{chiral-operators}
+\input{classical-hamiltonian}
+
+\begin{thebibliography}{99}
+\raggedright
+
+\bibitem{Engel}
+P.~Engel,
+\emph{Complex structures on $S^6$},
+author's preprint, 2026,
+\href{https://philip-engel.github.io/S6.pdf}{philip-engel.github.io/S6.pdf}.
+
+\bibitem{Hatcher}
+A.~Hatcher,
+\emph{Notes on Basic $3$-Manifold Topology},
+\href{https://pi.math.cornell.edu/~hatcher/3M/3M.pdf}
+{pi.math.cornell.edu/$\sim$hatcher/3M/3M.pdf}.
+
+\bibitem{Kollar}
+J.~Koll\'ar,
+\emph{Seifert $\mathbb G_m$-bundles},
+arXiv:math/0404386v2, 2004,
+\href{https://arxiv.org/abs/math/0404386}{arXiv:math/0404386}.
+
+\bibitem{Hillman}
+J.~A.~Hillman,
+\emph{The linking pairings of orientable Seifert manifolds},
+arXiv:1004.0034, 2010,
+\href{https://arxiv.org/abs/1004.0034}{arXiv:1004.0034}.
+
+
+\bibitem{Wilkes}
+G.~Wilkes,
+\emph{Profinite rigidity for Seifert fibre spaces},
+Geom. Dedicata \textbf{188} (2017), 141--163,
+\href{https://doi.org/10.1007/s10711-016-0209-6}
+{doi:10.1007/s10711-016-0209-6}.
+
+\bibitem{CuspNO}
+C.~Nakayama and A.~Ogus,
+\emph{Relative rounding in toric and logarithmic geometry},
+Geometry \& Topology \textbf{14} (2010), 2189--2241,
+\href{https://doi.org/10.2140/gt.2010.14.2189}{doi:10.2140/gt.2010.14.2189},
+Theorem~5.1.
+
+\bibitem{MilnorHC}
+J.~Milnor,
+\emph{Lectures on the $h$-Cobordism Theorem},
+notes by L.~Siebenmann and J.~Sondow,
+Princeton Mathematical Notes, Princeton University Press, 1965.
+
+\bibitem{OguisoShioda}
+K.~Oguiso and T.~Shioda,
+\emph{The Mordell--Weil lattice of a rational elliptic surface},
+Commentarii Mathematici Universitatis Sancti Pauli \textbf{40} (1991), 83--99,
+\href{https://doi.org/10.14992/00009974}{doi:10.14992/00009974}.
+
+\bibitem{DolgachevMartin}
+I.~Dolgachev and G.~Martin,
+\emph{Automorphism groups of rational elliptic and quasi-elliptic
+surfaces in all characteristics},
+Advances in Mathematics \textbf{400} (2022), 108274,
+\href{https://doi.org/10.1016/j.aim.2022.108274}
+{doi:10.1016/j.aim.2022.108274}.
+
+\bibitem{TateElliptic}
+J.~Tate,
+\emph{A review of non-Archimedean elliptic functions},
+\href{https://web.ma.utexas.edu/users/voloch/Preprints/nonarch-ams.pdf}
+{author manuscript}.
+
+\bibitem{CDP1996}
+F.~Campana, J.-P.~Demailly, and T.~Peternell,
+\emph{The algebraic dimension of compact complex threefolds with
+vanishing second Betti number},
+arXiv:math/9607215v1, 1996,
+\href{https://arxiv.org/abs/math/9607215v1}{arXiv:math/9607215v1}.
+
+\bibitem{CDP1998}
+F.~Campana, J.-P.~Demailly, and T.~Peternell,
+\emph{The algebraic dimension of compact complex threefolds with
+vanishing second Betti number},
+Compositio Mathematica \textbf{112} (1998), 77--91,
+\href{https://doi.org/10.1023/A:1000313214795}
+{doi:10.1023/A:1000313214795}.
+
+\bibitem{CDP2020}
+F.~Campana, J.-P.~Demailly, and T.~Peternell,
+\emph{The algebraic dimension of compact complex threefolds with
+vanishing second Betti number},
+Compositio Mathematica \textbf{156} (2020), 679--696,
+\href{https://doi.org/10.1112/S0010437X19007802}
+{doi:10.1112/S0010437X19007802}.
+
+\bibitem{TorusConstruction}
+\emph{The $(3,4,\infty)$ modular family of $2$-tori, completed at
+its three special points, is a complex structure on $S^6$},
+manuscript, 2026,
+\href{https://alpo.ge/s6.pdf}{alpo.ge/s6.pdf}.
+
+\bibitem{GrauertDirect}
+H.~Grauert,
+\emph{Ein Theorem der analytischen Garbentheorie und die
+Modulr\"aume komplexer Strukturen},
+Publications Math\'ematiques de l'IH\'ES \textbf{5} (1960), 5--64,
+\href{https://www.numdam.org/item/PMIHES_1960__5__5_0/}
+{numdam.org/item/PMIHES\_1960\_\_5\_\_5\_0/}.
+
+\bibitem{GrauertCorrection}
+H.~Grauert,
+\emph{Berichtigung zu der Arbeit ``Ein Theorem der analytischen
+Garbentheorie und die Modulr\"aume komplexer Strukturen''},
+Publications Math\'ematiques de l'IH\'ES \textbf{16} (1963), 35--36,
+\href{https://www.numdam.org/item/PMIHES_1963__16__35_0/}
+{numdam.org/item/PMIHES\_1963\_\_16\_\_35\_0/}.
+
+\bibitem{RamisRugetVerdier}
+J.-P.~Ramis, G.~Ruget, and J.-L.~Verdier,
+\emph{Dualit\'e relative en g\'eom\'etrie analytique complexe},
+Inventiones Mathematicae \textbf{13} (1971), 261--283,
+\href{https://doi.org/10.1007/BF01406078}
+{doi:10.1007/BF01406078}.
+
+\bibitem{DemaillyHodge}
+J.-P.~Demailly,
+\emph{$L^2$ Hodge theory and vanishing theorems},
+Part~I of J.~Bertin, J.-P.~Demailly, L.~Illusie, and C.~Peters,
+\emph{Introduction to Hodge Theory},
+SMF/AMS Texts and Monographs \textbf{8}, 2002,
+\href{https://www-fourier.univ-grenoble-alpes.fr/~demailly/manuscripts/hodge-ams.pdf}
+{author's text}.
+
+\bibitem{StelzigDouble}
+J.~Stelzig,
+\emph{On the Structure of Double Complexes},
+arXiv:1812.00865v3, 2021,
+\href{https://arxiv.org/abs/1812.00865v3}{arXiv:1812.00865v3}.
+
+\bibitem{SchweitzerBC}
+M.~Schweitzer,
+\emph{Autour de la cohomologie de Bott--Chern},
+arXiv:0709.3528v1, 2007,
+\href{https://arxiv.org/abs/0709.3528v1}{arXiv:0709.3528v1}.
+
+\bibitem{GFJSCourant}
+M.~Garcia-Fernandez, J.~Jordan, and J.~Streets,
+\emph{Non-K\"ahler Calabi--Yau geometry and pluriclosed flow},
+arXiv:2106.13716v1, 2021,
+\href{https://arxiv.org/abs/2106.13716v1}{arXiv:2106.13716v1}.
+
+\bibitem{BSWCoherent}
+J.-M.~Bismut, S.~Shen, and Z.~Wei,
+\emph{Coherent sheaves, superconnections, and RRG},
+arXiv:2102.08129v2, 2021,
+\href{https://arxiv.org/abs/2102.08129v2}{arXiv:2102.08129v2}.
+
+\bibitem{GMSGerbes}
+V.~Gorbounov, F.~Malikov, and V.~Schechtman,
+\emph{Gerbes of chiral differential operators},
+Math. Res. Lett. \textbf{7} (2000), 55--66,
+\href{https://archive.intlpress.com/site/pub/files/_fulltext/journals/mrl/2000/0007/0001/MRL-2000-0007-0001-a005.pdf}
+{published article}.
+
+\bibitem{SaberiWilliamsConstraints}
+I.~Saberi and B.~R.~Williams,
+\emph{Constraints in the BV formalism: six-dimensional
+supersymmetry and its twists},
+arXiv:2009.07116v2, 2022,
+\href{https://arxiv.org/abs/2009.07116v2}{arXiv:2009.07116v2}.
+
+\bibitem{DLMFElliptic}
+National Institute of Standards and Technology,
+\emph{Digital Library of Mathematical Functions},
+\href{https://dlmf.nist.gov/19.4}{\S19.4},
+\href{https://dlmf.nist.gov/19.7}{\S19.7},
+\href{https://dlmf.nist.gov/23.6}{\S23.6}, and
+\href{https://dlmf.nist.gov/23.15}{\S23.15}.
+
+\end{thebibliography}
+
+\end{document}
